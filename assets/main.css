@@ -2,37 +2,46 @@ body {
     font-family: 'Dosis', sans-serif;
 /*    background-image: url("victoria copy.jpg");*/
 }
-#navbar {
+footer {
+    font-family: 'Montez', cursive;
+    text-align: center;
     width: 100%;
-    border: 2px dotted gray;
+    background: #4a484b;
+    color: #e6e3df;
     font-size: 20px;
+    padding: 10px;
+}
+#navbar {
+    border: 2px dotted gray;
+    font-size: 28px;
     word-spacing: 30px;
     text-align: center;
-    padding: 10 0;
+    padding: 10 20;
     position: fixed;
+    right: 10px;
 }
 #navbar a {
     color: black;
     text-decoration: none;
     transition: 0.7s;
+    font-family: 'Montez', cursive;
 }
 #navbar a:hover {
     color: white;
     transition: 0.7s;
 }
-#title-tiffany {
-    position: absolute;
-    top: 100px;
-    left: 50px;
-    font-size: 60px;
-    color: white;
+.container {
+    border: 1px solid gray;
+    margin: 20px;
+    padding: 10 50;
 }
-#title-qi {
-    position: absolute;
-    top: 160px;
-    left: 200px;
-    font-size: 60px;
-    color: white;
+.box {
+    border: 1px solid gray;
+    height: 200px;
+    width: 200px;
+    display: inline-block;
+    margin: 10px;
+    border-radius: 20%;
 }
 img {
     border: 1px solid gray;
@@ -41,4 +50,5 @@ h1 {
     text-align: center;
     text-decoration: underline;
     padding: 10px;
+    font-family: 'Montez', cursive;
 }

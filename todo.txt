@@ -1,0 +1,49 @@
+Format:
+    - single page
+    - tabs link to sections, fixed nav-bar
+
+Graphics:
+    - Circular self-portrait
+    - Wings extending outwards
+    - Mostly white background, some graphic on bottom right corner
+
+Format:
+    - About: text
+    - Education: seal, with a little text
+    - Experience: black icon with plain colored graphic, name and position appear when hovered over, description appears when clicked
+        - CSM (cog)
+        - mComm (hand)
+        - Intera (magnifying glass)
+        - uM (lightbulb)
+        - AdviceFromHaasMajor (pen)
+        - 61A (codetree?)
+        - SIS
+        - Art (paintbrush)
+    - Projects: screenshot icon, name appear when hovered over, description appears when clicked
+        - uM, Productivity, P5, AdviceFromHaasMajor
+    - Contact: social media icons, inline
+        - Email, GitHub, LinkedIn, DeviantArt, Medium, YouTube
+
+To-Do List:
+    Tabs:
+        - tiffanyQi (logo)
+        - About
+        - Education
+        - Experience
+        - Projects
+        - Contact
+    Graphics:
+        - Self-portrait
+        - White background
+        - Icons (200x200)
+            - Cog
+            - Hand
+            - Pen
+            - Paintbrush
+            - Magnifying glass
+            - Lightbulb
+            - CodeTree?
+    Animations:
+        - Boxes
+        - Hover
+        - Click
