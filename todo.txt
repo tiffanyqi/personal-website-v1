@@ -4,7 +4,6 @@ Format:
 
 Graphics:
     - Circular self-portrait
-    - Wings extending outwards
     - Mostly white background, some graphic on bottom right corner
 
 Format:
@@ -26,14 +25,12 @@ Format:
 
 To-Do List:
     Tabs:
-        - tiffanyQi (logo)
         - About
         - Education
         - Experience
         - Projects
         - Contact
     Graphics:
-        - Self-portrait
         - White background
         - Icons (200x200)
             - Cog

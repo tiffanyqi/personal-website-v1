@@ -1,54 +1,84 @@
-body {
-    font-family: 'Dosis', sans-serif;
-/*    background-image: url("victoria copy.jpg");*/
-}
-footer {
-    font-family: 'Montez', cursive;
-    text-align: center;
-    width: 100%;
-    background: #4a484b;
-    color: #e6e3df;
-    font-size: 20px;
-    padding: 10px;
-}
-#navbar {
-    border: 2px dotted gray;
+#title {
     font-size: 28px;
-    word-spacing: 30px;
-    text-align: center;
     padding: 10 20;
     position: fixed;
-    right: 10px;
+    width: 100%;
+    background: #4a484b;
+    top: 0;
+    left: 0;
 }
-#navbar a {
-    color: black;
+#title a {
+    color: #c5d3de;
     text-decoration: none;
     transition: 0.7s;
     font-family: 'Montez', cursive;
 }
+#title a:hover {
+    color: #ecece0;
+    transition: 0.7s;
+}
+#navbar {
+    border: 2px dotted #4a484b;
+    font-size: 25px;
+    word-spacing: 30px;
+    text-align: center;
+    position: fixed;
+    right: 0px;
+    top: 55px;
+    width: 100%;
+    background: #778fb5;
+    opacity: 0.9;
+}
+#navbar a {
+    color: #ecece0;
+    text-decoration: none;
+    transition: 0.7s;
+    font-family: 'Montez', cursive;
+    float: right;
+    margin: 10 20;
+}
 #navbar a:hover {
-    color: white;
+    color: #283347;
     transition: 0.7s;
 }
 .container {
     border: 1px solid gray;
-    margin: 20px;
-    padding: 10 50;
+    margin: 40px;
+    padding: 20 70;
 }
 .box {
     border: 1px solid gray;
     height: 200px;
     width: 200px;
     display: inline-block;
-    margin: 10px;
+/*     margin: 10px; */
     border-radius: 20%;
+    background: #4a484b;
+    color: #c5d3de;
+    margin-left: auto;
+    margin-right: auto;
 }
 img {
     border: 1px solid gray;
 }
 h1 {
     text-align: center;
-    text-decoration: underline;
     padding: 10px;
     font-family: 'Montez', cursive;
+    color: #778fb5;
+    font-size: 40px;
+}
+body {
+    font-family: 'Dosis', sans-serif;
+/*    background-image: url("victoria copy.jpg");*/
+}
+footer {
+    font-family: 'Dosis', sans-serif;
+    text-align: center;
+    width: 100%;
+    background: #4a484b;
+    color: #778fb5;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 100px;
 }
