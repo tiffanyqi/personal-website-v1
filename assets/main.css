@@ -1,6 +1,7 @@
+/*Navigation Bar Elements*/
 #title {
     font-size: 28px;
-    padding: 10 20;
+    padding: 0 20;
     position: fixed;
     width: 100%;
     background: #4a484b;
@@ -24,7 +25,7 @@
     text-align: center;
     position: fixed;
     right: 0px;
-    top: 55px;
+    top: 50px;
     width: 100%;
     background: #778fb5;
     opacity: 0.9;
@@ -35,16 +36,30 @@
     transition: 0.7s;
     font-family: 'Montez', cursive;
     float: right;
-    margin: 10 20;
+    margin: 0 20;
 }
 #navbar a:hover {
     color: #283347;
     transition: 0.7s;
 }
+
+#ed-seal {
+    float: left;
+    padding: 0 47 10 0;
+}
+
+/*Support*/
+body {
+    font-family: 'Dosis', sans-serif;
+/*    background-image: url(".jpg");*/
+    line-height: 1.8;
+    font-size: 17px;
+}
 .container {
     border: 1px solid gray;
     margin: 40px;
     padding: 20 70;
+    display: block;
 }
 .box {
     border: 1px solid gray;
@@ -58,20 +73,35 @@
     margin-left: auto;
     margin-right: auto;
 }
-img {
-    border: 1px solid gray;
-}
 h1 {
     text-align: center;
-    padding: 10px;
     font-family: 'Montez', cursive;
     color: #778fb5;
     font-size: 40px;
 }
-body {
-    font-family: 'Dosis', sans-serif;
-/*    background-image: url("victoria copy.jpg");*/
+h2 {
+    font-family: "Montez", cursive;
+    text-align: center;
 }
+h3 {
+    margin: 0 0 7 0;
+    font-family: "Montez", cursive;
+    font-size: 22px;
+}
+a {
+    text-decoration: none;
+    color: #778fb5;
+    transition: 0.7s;
+}
+a:hover {
+    transition: 0.7s;
+    color: #c5d3de;
+}
+td {
+    vertical-align: top;
+    line-height: 1.5;
+}
+
 footer {
     font-family: 'Dosis', sans-serif;
     text-align: center;
@@ -81,4 +111,8 @@ footer {
     font-size: 16px;
     padding: 10px;
     margin-top: 100px;
+}
+
+@media {
+    /*875px*/
 }

@@ -1,46 +1,17 @@
-Format:
-    - single page
-    - tabs link to sections, fixed nav-bar
+Write content
+    - About
+    - Education
+    - Experience
+    - Projects
 
-Graphics:
-    - Circular self-portrait
-    - Mostly white background, some graphic on bottom right corner
+JS
+    - Contact change image when hover
+    - Experience / Projects add text when hover
+    - Experience / Projects box when clicked
 
-Format:
-    - About: text
-    - Education: seal, with a little text
-    - Experience: black icon with plain colored graphic, name and position appear when hovered over, description appears when clicked
-        - CSM (cog)
-        - mComm (hand)
-        - Intera (magnifying glass)
-        - uM (lightbulb)
-        - AdviceFromHaasMajor (pen)
-        - 61A (codetree?)
-        - SIS
-        - Art (paintbrush)
-    - Projects: screenshot icon, name appear when hovered over, description appears when clicked
-        - uM, Productivity, P5, AdviceFromHaasMajor
-    - Contact: social media icons, inline
-        - Email, GitHub, LinkedIn, DeviantArt, Medium, YouTube
-
-To-Do List:
-    Tabs:
-        - About
-        - Education
-        - Experience
-        - Projects
-        - Contact
-    Graphics:
-        - White background
-        - Icons (200x200)
-            - Cog
-            - Hand
-            - Pen
-            - Paintbrush
-            - Magnifying glass
-            - Lightbulb
-            - CodeTree?
-    Animations:
-        - Boxes
-        - Hover
-        - Click
+Fiddling with...
+    - Box spacing and positioning
+    - Contact spacing and positioning
+    - Experience? boxes, or screenshot?
+    - Navbar and spacing
+    - Responsive design
