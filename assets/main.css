@@ -49,17 +49,13 @@
 #home {
     max-width: 100%;
     height: auto;
-    border: 6px solid #4a484b;
-    margin-left: -3px;
 }
 
 /* About */
 #about.container {
     background: #778fb5;
     color: #4a484b;
-    width: 75%;
-    border: 6px solid #778fb5;
-    margin-left: -3px;
+    max-width: 100%;
     padding: 50 100 100 100;
 }
 #about h1, h2 {
@@ -73,28 +69,39 @@
     opacity: 1;
     color: #4a484b;
 }
+#about p {
+    color: white;
+}
 
 /* Education */
+#education.container {
+    padding: 50 0;
+    margin-bottom: 60px;
+}
 #ed-seal {
     float: left;
-    padding: 0 47 10 0;
+    margin-left: 50;
+    padding: 10 70 50 0;
+}
+#education h1 {
+    text-shadow: 1px 1px #4a484b;
 }
 
 /* Involvements */
-#involvements {
+#involvements.container {
     text-align: center;
-/*     margin: 0px;
-    right: 0px;
-    border: 0;
-    padding: 0px; */
+    padding: 50 0;
+    background: #4a484b;
+}
+#involvements h1 {
+    color: #c5d3de;
+    text-shadow: 1px 1px #778fb5;
 }
 
 /* Contact */
-#contact {
-    text-align: center;
-}
 #contact.container {
-
+    padding-top: 50px;
+    text-align: center;
 }
 
 /*Support*/
@@ -102,13 +109,19 @@ body {
     font-family: 'Dosis', sans-serif;
     line-height: 1.8;
     font-size: 17px;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
-/* .container {
-    border: 1px dotted #4a484b;
+html {
+    overflow-x: hidden;
+}
+.container {
+/*     border: 1px dotted #4a484b;
     margin: 40px;
     padding: 20 70;
-    display: block;
-} */
+    display: block; */
+}
 .box {
     border: 1px solid gray;
     height: 200px;
@@ -129,6 +142,7 @@ h1 {
 }
 h2 {
     text-align: center;
+    font-size: 20px;
 }
 h3 {
     margin: 0 0 7 0;
@@ -156,10 +170,10 @@ footer {
     color: #778fb5;
     font-size: 16px;
     padding: 10px;
-    margin-top: 100px;
+    margin-top: 60px;
 }
 
-@media screen and (max-width: 800px) {
+/* @media screen and (max-width: 800px) {
     #about.container {
         background: #778fb5;
         color: #4a484b;
@@ -168,4 +182,4 @@ footer {
         margin-left: -3px;
         padding: 50 100 100 100;
     }
-}
+} */
