@@ -1,4 +1,4 @@
 personal
 ========
 
-Personal website, hosted at http://tiffanyqi.com
+Personal website, in-progress to be pushed to http://tiffanyqi.com upon completion.

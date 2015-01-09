@@ -15,3 +15,7 @@ Fiddling with...
     - Experience? boxes, or screenshot?
     - Navbar and spacing
     - Responsive design
+
+Graphics
+    - Make white background
+    - Other backgrounds

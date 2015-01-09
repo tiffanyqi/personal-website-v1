@@ -1,6 +1,6 @@
 /*Navigation Bar Elements*/
 #title {
-    font-size: 28px;
+    font-size: 30px;
     padding: 0 20;
     position: fixed;
     width: 100%;
@@ -20,12 +20,12 @@
 }
 #navbar {
     border: 2px dotted #4a484b;
-    font-size: 25px;
+    font-size: 30px;
     word-spacing: 30px;
     text-align: center;
     position: fixed;
     right: 0px;
-    top: 50px;
+    top: 53px;
     width: 100%;
     background: #778fb5;
     opacity: 0.9;
@@ -37,30 +37,78 @@
     font-family: 'Montez', cursive;
     float: right;
     margin: 0 20;
+    text-shadow: 2px 2px #4a484b;
 }
 #navbar a:hover {
     color: #283347;
     transition: 0.7s;
+    text-shadow: 0px 0px;
 }
 
+/* Heading */
+#home {
+    max-width: 100%;
+    height: auto;
+    border: 6px solid #4a484b;
+    margin-left: -3px;
+}
+
+/* About */
+#about.container {
+    background: #778fb5;
+    color: #4a484b;
+    width: 75%;
+    border: 6px solid #778fb5;
+    margin-left: -3px;
+    padding: 50 100 100 100;
+}
+#about h1, h2 {
+    color: white;
+    text-shadow: 2px 2px #4a484b;
+}
+#about a {
+    color: #c5d3de;
+}
+#about a:hover {
+    opacity: 1;
+    color: #4a484b;
+}
+
+/* Education */
 #ed-seal {
     float: left;
     padding: 0 47 10 0;
 }
 
+/* Involvements */
+#involvements {
+    text-align: center;
+/*     margin: 0px;
+    right: 0px;
+    border: 0;
+    padding: 0px; */
+}
+
+/* Contact */
+#contact {
+    text-align: center;
+}
+#contact.container {
+
+}
+
 /*Support*/
 body {
     font-family: 'Dosis', sans-serif;
-/*    background-image: url(".jpg");*/
     line-height: 1.8;
     font-size: 17px;
 }
-.container {
-    border: 1px solid gray;
+/* .container {
+    border: 1px dotted #4a484b;
     margin: 40px;
     padding: 20 70;
     display: block;
-}
+} */
 .box {
     border: 1px solid gray;
     height: 200px;
@@ -80,12 +128,10 @@ h1 {
     font-size: 40px;
 }
 h2 {
-    font-family: "Montez", cursive;
     text-align: center;
 }
 h3 {
     margin: 0 0 7 0;
-    font-family: "Montez", cursive;
     font-size: 22px;
 }
 a {
@@ -113,6 +159,13 @@ footer {
     margin-top: 100px;
 }
 
-@media {
-    /*875px*/
+@media screen and (max-width: 800px) {
+    #about.container {
+        background: #778fb5;
+        color: #4a484b;
+        width: 75%;
+        border: 6px solid #778fb5;
+        margin-left: -3px;
+        padding: 50 100 100 100;
+    }
 }
