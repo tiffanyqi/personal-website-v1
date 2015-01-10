@@ -1,6 +1,5 @@
 Write content
     - About
-    - Education
     - Experience
     - Projects
 
@@ -13,9 +12,4 @@ Fiddling with...
     - Box spacing and positioning
     - Contact spacing and positioning
     - Experience? boxes, or screenshot?
-    - Navbar and spacing
     - Responsive design
-
-Graphics
-    - Make white background
-    - Other backgrounds
