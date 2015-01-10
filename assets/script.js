@@ -8,31 +8,23 @@ $(document).ready(function() {
         });
     });
 
-    // Social Media Icon Hovers
-    $(".box-social").mouseover(function() {
-        var icon = this.hash.split(-)[1];
-        var image = "background: url('img/social-" + icon + "-hover.jpg'); ";
-        var speed = "transition: 0.5s;";
-        var imageAnimation = image + speed;
-        $(this.hash).css(imageAnimation);
+    // Social Media Icon Hovers-Color
+    // $(".box-social").hover(
+    //     function() {
+    //         this.src = "assets/img/" + this.id + "-hover.jpg"; 
+    //     }, function() {
+    //         this.src = "assets/img/" + this.id + ".jpg";
+    //     });
 
-        var hover = this + "-hover";
-        $(hover.hash).css(speed);
-        )};
+    // Social Media Icon Hovers-Opacity
+    $(".box-social").hover(
+        function() {
+            $(this).stop().fadeTo("slow", 1);
+        }, function() {
+            $(this).stop().fadeTo("slow", 0.4);
+    });
 });
 
 
 
 
-// #social-mail {
-//     height: 75px;
-//     width: 75px;
-//     background: url("img/social-mail.jpg");
-//     transition: 0.5s;
-// }
-// #social-mail:hover {
-//     height: 75px;
-//     width: 75px;
-//     background: url("img/social-mail-hover.jpg");
-//     transition: 0.5s;
-// }

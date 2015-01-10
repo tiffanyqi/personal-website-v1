@@ -102,10 +102,13 @@
 #contact.container {
     padding: 50 0 100 0;
     text-align: center;
-    display: inline-block;
 }
 #contact h1 {
     text-shadow: 1px 1px #4a484b;
+}
+.box-social {
+    display: inline-block;
+    opacity: 0.4;
 }
 #social-mail {
     height: 75px;
@@ -117,6 +120,66 @@
     height: 75px;
     width: 75px;
     background: url("img/social-mail-hover.jpg");
+    transition: 0.5s;
+}
+#social-linked {
+    height: 75px;
+    width: 75px;
+    background: url("img/social-linked.jpg");
+    transition: 0.5s;
+}
+#social-linked:hover {
+    height: 75px;
+    width: 75px;
+    background: url("img/social-linked-hover.jpg");
+    transition: 0.5s;
+}
+#social-git {
+    height: 75px;
+    width: 75px;
+    background: url("img/social-git.jpg");
+    transition: 0.5s;
+}
+#social-git:hover {
+    height: 75px;
+    width: 75px;
+    background: url("img/social-git-hover.jpg");
+    transition: 0.5s;
+}
+#social-deviant {
+    height: 75px;
+    width: 75px;
+    background: url("img/social-deviant.jpg");
+    transition: 0.5s;
+}
+#social-deviant:hover {
+    height: 75px;
+    width: 75px;
+    background: url("img/social-deviant-hover.jpg");
+    transition: 0.5s;
+}
+#social-medium {
+    height: 75px;
+    width: 75px;
+    background: url("img/social-medium.jpg");
+    transition: 0.5s;
+}
+#social-medium:hover {
+    height: 75px;
+    width: 75px;
+    background: url("img/social-medium-hover.jpg");
+    transition: 0.5s;
+}
+#social-youtube {
+    height: 75px;
+    width: 75px;
+    background: url("img/social-youtube.jpg");
+    transition: 0.5s;
+}
+#social-youtube:hover {
+    height: 75px;
+    width: 75px;
+    background: url("img/social-youtube-hover.jpg");
     transition: 0.5s;
 }
 
@@ -158,6 +221,9 @@ a:hover {
 td {
     vertical-align: top;
     line-height: 1.5;
+}
+.transition {
+    transition: 0.5s;
 }
 
 footer {
