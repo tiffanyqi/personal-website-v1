@@ -9,20 +9,20 @@ $(document).ready(function() {
     });
 
     // Social Media Icon Hovers-Color
-    // $(".box-social").hover(
-    //     function() {
-    //         this.src = "assets/img/" + this.id + "-hover.jpg"; 
-    //     }, function() {
-    //         this.src = "assets/img/" + this.id + ".jpg";
-    //     });
-
-    // Social Media Icon Hovers-Opacity
     $(".box-social").hover(
         function() {
-            $(this).stop().fadeTo("slow", 1);
+            this.src = "assets/img/" + this.id + "-hover.jpg"; 
         }, function() {
-            $(this).stop().fadeTo("slow", 0.4);
-    });
+            this.src = "assets/img/" + this.id + ".jpg";
+        });
+
+    // Social Media Icon Hovers-Opacity
+    // $(".box-social").hover(
+    //     function() {
+    //         $(this).stop().fadeTo("slow", 1);
+    //     }, function() {
+    //         $(this).stop().fadeTo("slow", 0.5);
+    // });
 });
 
 
