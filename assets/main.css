@@ -58,9 +58,8 @@
     max-width: 100%;
     padding: 50 100 100 100;
 }
-#about h1, h2 {
+#about h1, #about h2 {
     color: white;
-    text-shadow: 2px 2px #4a484b;
 }
 #about a {
     color: #4a484b;
@@ -82,14 +81,36 @@
     margin-left: 50;
     padding: 10 70 50 0;
 }
-#education h1 {
-    text-shadow: 1px 1px #4a484b;
-}
-#education-school {
-    margin-bottom: 150px;
-}
-#education-skills {
+
+/*Skills*/
+#skills.container {
+    padding: 50 50 500 50;
     text-align: center;
+    background: #c5d3de;
+}
+#skills li {
+    float: left;
+    background: #778fb5;
+    transition: 0.5s;
+    padding: 10px;
+    color: white;
+    margin: 2px;
+    border: 3px dotted #4a484b;
+    font-size: 18px;
+}
+#skills li:hover {
+    background: #4a484b;
+    transition: 0.5s;
+    color: #c5d3de;
+}
+#skills li strong {
+    font-size: 22px;
+    color: #4a484b;
+    transition: 0.5s;
+}
+#skills li strong:hover {
+    color: white;
+    transition; 0.5s;
 }
 .box-skill {
     height: 100px;
@@ -97,13 +118,13 @@
     display: inline-block;
 }
 
-/* Involvements */
-#involvements.container {
+/* Work */
+#work.container {
     text-align: center;
     padding: 50 0 200 0;
     background: #4a484b;
 }
-#involvements h1 {
+#work h1 {
     color: #c5d3de;
     text-shadow: 1px 1px #778fb5;
     padding-bottom: 50px;
@@ -114,8 +135,8 @@
     padding: 50 0 100 0;
     text-align: center;
 }
-#contact h1 {
-    text-shadow: 1px 1px #4a484b;
+#contact-content {
+    padding: 0 150 20 150;
 }
 .box-social {
     display: inline-block;
@@ -146,6 +167,7 @@ h1 {
     font-family: 'Montez', cursive;
     color: #778fb5;
     font-size: 40px;
+    text-shadow: 1px 1px #4a484b;
 }
 h2 {
     text-align: center;
