@@ -82,6 +82,8 @@
     float: left;
     margin-left: 50;
     padding: 10 70 50 0;
+    width: 200px;
+    height: 200px;
 }
 
 /*Skills*/
@@ -123,8 +125,9 @@
 /* Work */
 #work.container {
     text-align: center;
-    padding: 50 0;
+    padding: 50 70;
     background: #4a484b;
+    padding-bottom: 1350px;
 }
 #work h1 {
     color: #c5d3de;
@@ -134,12 +137,50 @@
 .box-work {
     opacity: 0.5;
     transition: 0.5s;
-    margin: -5 -1.5;
+    margin: 0px;
     border: 2px #778fb5;
+    float: left;
 }
 .box-work:hover {
     opacity: 1;
     transition: 0.5s;
+}
+#work-csm {
+    width: 37%;
+}
+#work-ursa {
+    width: 63%;
+}
+#work-calask {
+    width: 60%;
+}
+#work-mcomm {
+    width: 30%;
+}
+#work-61a {
+    width: 30%;
+}
+#work-intera {
+    width: 40%;
+    float: right;
+}
+#work-art {
+    width: 32%;
+}
+#work-yszx {
+    width: 68%;
+}
+#work-p5 {
+    width: 42%;
+}
+#work-go {
+    width: 26%;
+}
+#work-advice {
+    width: 59%;
+}
+#work-blog {
+    width: 41%;
 }
 
 /* Contact */
