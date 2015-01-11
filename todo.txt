@@ -1,15 +1,11 @@
 Write content
     - About
-    - Experience
-    - Projects
+    - Work
 
 JS
-    - Contact change image when hover
-    - Experience / Projects add text when hover
-    - Experience / Projects box when clicked
+    - Work: add text when hovered
+    - Work: add popup when clicked
 
 Fiddling with...
-    - Box spacing and positioning
-    - Contact spacing and positioning
-    - Experience? boxes, or screenshot?
+    - Work spacing
     - Responsive design

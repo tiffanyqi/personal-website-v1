@@ -9,15 +9,15 @@ $(document).ready(function() {
     });
 
     // Social Media Icon Hovers-Color
-    $(".box-social").hover(
+    $(".box-contact").hover(
         function() {
-            this.src = "assets/img/" + this.id + "-hover.jpg"; 
+            this.src = "assets/img/contact/" + this.id.split("-")[1] + "-hover.jpg"; 
         }, function() {
-            this.src = "assets/img/" + this.id + ".jpg";
+            this.src = "assets/img/contact/" + this.id.split("-")[1] + ".jpg";
         });
 
     // Social Media Icon Hovers-Opacity
-    // $(".box-social").hover(
+    // $(".box-contact").hover(
     //     function() {
     //         $(this).stop().fadeTo("slow", 1);
     //     }, function() {
