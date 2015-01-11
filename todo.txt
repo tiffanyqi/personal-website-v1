@@ -3,9 +3,7 @@ Write content
     - Work
 
 JS
-    - Work: add text when hovered
     - Work: add popup when clicked
 
 Fiddling with...
-    - Work spacing
     - Responsive design

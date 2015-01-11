@@ -112,14 +112,9 @@
     color: #4a484b;
     transition: 0.5s;
 }
-#skills li strong:hover {
+#skills li:hover strong {
     color: white;
     transition; 0.5s;
-}
-.box-skill {
-    height: 100px;
-    width: 100px;
-    display: inline-block;
 }
 
 /* Work */
@@ -127,23 +122,67 @@
     text-align: center;
     padding: 50 70;
     background: #4a484b;
-    padding-bottom: 1350px;
+    padding-bottom: 1300px;
 }
 #work h1 {
     color: #c5d3de;
     text-shadow: 1px 1px #778fb5;
-    padding-bottom: 50px;
+    padding-bottom: 110px;
 }
-.box-work {
+.work-box {
     opacity: 0.5;
     transition: 0.5s;
-    margin: 0px;
-    border: 2px #778fb5;
     float: left;
+    margin-top: -102px;
 }
-.box-work:hover {
+.work-box:hover {
     opacity: 1;
     transition: 0.5s;
+}
+.work-box .work-content {
+    position: relative;
+    bottom: 101px;
+    visibility: hidden;
+    text-align: center;
+    padding: 20 0 20 0;
+    color: white;
+    background: #4a484b;
+    opacity: 0;
+    -webkit-transition: visibility 0s linear 0.25s, 
+        opacity 0.25s linear;
+    font-size: 16px;
+    border: 3px dotted #778fb5;
+}
+.work-box:hover .work-content {
+    visibility: visible;
+    opacity: 0.9;
+    -webkit-transition-delay: 0s;
+}
+.work-content i {
+    color: #c5d3de;
+}
+.popup-window {
+    display: none;
+    background: #333;
+    padding: 10px;  
+    border: 1px solid #ff7a7a;
+    position: fixed;
+    top: 50%; left: 50%;
+    z-index: 2000;
+}
+.popup-overlay {
+    display: none;
+    background: #000; 
+    position: fixed; 
+    left: 0; 
+    top: 0; 
+    z-index: 1000;
+    width: 100%; 
+    height: 100%;
+    opacity: 0.6;
+}
+.work-box img {
+    width: 100%;
 }
 #work-csm {
     width: 37%;
@@ -191,14 +230,14 @@
 #contact-content {
     padding: 0 150 20 150;
 }
-.box-contact {
+.contact-box {
     display: inline-block;
     opacity: 0.5;
     height: 75px;
     width: 75px;
     transition: 1s;
 }
-.box-contact:hover {
+.contact-box:hover {
     transition: 1s;
     opacity: 1;
 }
