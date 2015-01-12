@@ -1,9 +1,0 @@
-Write content
-    - About
-    - Work
-
-JS
-    - Work: add popup when clicked
-
-Fiddling with...
-    - Responsive design
