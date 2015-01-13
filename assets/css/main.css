@@ -221,6 +221,16 @@
 #work-blog {
     width: 41%;
 }
+#work-more {
+    background: #778fb5;
+    width: 100%;
+    padding: 50 0;
+    color: white;
+    font-size: 30px;
+}
+#work-more:hover {
+    opacity: 0.8;
+}
 
 /* Contact */
 #contact.container {
@@ -294,7 +304,6 @@ footer {
 }
 
 /*Responsivity*/
-/* Small screens */
 @media screen and (max-width: 623px) {
     #education.container {
         display: block;
@@ -373,7 +382,16 @@ footer {
         text-align: center;
         padding: 50;
         background: #4a484b;
-        padding-bottom: 2450px;
+        padding-bottom: 2550px;
+        display: block;
+    }
+}
+@media screen and (min-width: 800px) {
+    #work.container {
+        text-align: center;
+        padding: 50;
+        background: #4a484b;
+        padding-bottom: 1700px;
         display: block;
     }
 }
@@ -400,16 +418,15 @@ footer {
         text-align: center;
         padding: 50 150;
         background: #4a484b;
-        padding-bottom: 1400px;
+        padding-bottom: 1500px;
     }
 }
-/* Large Browsers */
 @media screen and (min-width: 1037px) {
     #work.container {
         text-align: center;
         padding: 50 200;
         background: #4a484b;
-        padding-bottom: 1600px;
+        padding-bottom: 1700px;
     }
     #contact-content {
         padding: 0 300 20 300;
@@ -420,6 +437,6 @@ footer {
         text-align: center;
         padding: 50 200;
         background: #4a484b;
-        padding-bottom: 1900px;
+        padding-bottom: 2000px;
     }
 }
