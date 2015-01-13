@@ -1,0 +1,113 @@
+/*Navigation Bar Elements*/
+#title {
+    font-size: 30px;
+    padding: 0 20;
+    position: fixed;
+    width: 100%;
+    background: #4a484b;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+#title a {
+    color: #c5d3de;
+    text-decoration: none;
+    transition: 0.7s;
+    font-family: 'Montez', cursive;
+}
+#title a:hover {
+    color: white;
+    transition: 0.7s;
+}
+#navbar {
+    border: 2px dotted #4a484b;
+    font-size: 30px;
+    word-spacing: 30px;
+    text-align: center;
+    position: fixed;
+    right: 0px;
+    top: 53px;
+    width: 100%;
+    background: #778fb5;
+    opacity: 0.9;
+    z-index: 100;
+}
+#navbar a {
+    color: white;
+    text-decoration: none;
+    transition: 0.7s;
+    font-family: 'Montez', cursive;
+    float: right;
+    margin: 0 20;
+    text-shadow: 2px 2px #4a484b;
+}
+#navbar a:hover {
+    color: #283347;
+    transition: 0.7s;
+    text-shadow: 0px 0px;
+}
+
+/* Content */
+.container {
+    padding: 0 70;
+    margin-bottom: 100px;
+}
+
+/*Support*/
+body {
+    font-family: 'Dosis', sans-serif;
+    line-height: 1.8;
+    font-size: 17px;
+    margin: 0;
+    overflow-x: hidden;
+    position: absolute;
+    top: 150px;
+}
+html {
+    overflow-x: hidden;
+}
+h1 {
+    text-align: center;
+    font-family: 'Montez', cursive;
+    color: #778fb5;
+    font-size: 40px;
+    text-shadow: 1px 1px #4a484b;
+}
+h2 {
+    text-align: center;
+    font-size: 20px;
+}
+a {
+    text-decoration: none;
+    color: #778fb5;
+    transition: 0.7s;
+}
+a:hover {
+    transition: 0.7s;
+    color: #4a484b;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #4a484b;
+    margin-bottom: 20px;
+    display: block;
+    margin: 20 auto;
+}
+
+footer {
+    font-family: 'Dosis', sans-serif;
+    text-align: center;
+    width: 100%;
+    background: #4a484b;
+    color: #778fb5;
+    font-size: 16px;
+    padding: 10px;
+}
+
+/*Responsivity*/
+@media screen and (min-width: 950px) {
+    .container {
+        width: 70%;
+        margin: 0 auto 100 auto;
+}

@@ -26,25 +26,25 @@ $(document).ready(function() {
 
 
     // Work Pop-ups
-    $("a img.work-box").click(function() {
-        var textBox = $(this).attr("href");
+    // $("a img.work-box").click(function() {
+    //     var textBox = $(this).attr("href");
         
-        $(textBox).fadeIn(300);
-        $(textBox).css({ 
-            "margin-top": 0,
-            "margin-left": -100,
-        });
+    //     $(textBox).fadeIn(300);
+    //     $(textBox).css({ 
+    //         "margin-top": 0,
+    //         "margin-left": -100,
+    //     });
 
-        $("body").append('<div class="popup-overlay"></div>');
-        $(".popup-overlay").fadeIn(300);
+    //     $("body").append('<div class="popup-overlay"></div>');
+    //     $(".popup-overlay").fadeIn(300);
         
-        return false;
-    });
+    //     return false;
+    // });
     
-    $(".popup-overlay").live("click", function() { 
-      $(".popup-overlay, .popup-window").fadeOut(300, function() {
-        $(".popup-overlay").remove();  
-    }); 
-    return false;
-    });
+    // $(".popup-overlay").live("click", function() { 
+    //   $(".popup-overlay, .popup-window").fadeOut(300, function() {
+    //     $(".popup-overlay").remove();  
+    // }); 
+    // return false;
+    // });
 });

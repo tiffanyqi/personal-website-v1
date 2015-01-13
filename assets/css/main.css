@@ -161,7 +161,7 @@
 .work-content i {
     color: #c5d3de;
 }
-.popup-window {
+/*.popup-window {
     display: none;
     background: #333;
     padding: 10px;  
@@ -180,7 +180,7 @@
     width: 100%; 
     height: 100%;
     opacity: 0.6;
-}
+}*/
 .work-box img {
     width: 100%;
 }
@@ -308,8 +308,8 @@ footer {
     #education.container {
         display: block;
         margin-bottom: 60px;
-        text-align: center;
         padding: 20px;
+        text-align: center;
     }
     #ed-seal {
         width: 100%;
@@ -317,24 +317,14 @@ footer {
         margin-left: 0px;
     }
     #skills.container {
-        padding: 50 20 700 20;
+        padding: 50 20 800 20;
         text-align: center;
-        background: #c5d3de;
     }
     #skills li {
         width: 40%;
         background: #778fb5;
-        transition: 0.5s;
         padding: 5px;
-        color: white;
         margin: 2px;
-        border: 3px dotted #4a484b;
-        font-size: 18px;
-    }
-    #skills li strong {
-        font-size: 18px;
-        color: #4a484b;
-        transition: 0.5s;
     }
     #contact.container {
         padding: 50 0 150 0;
@@ -348,57 +338,35 @@ footer {
     }
     .contact-box {
         display: inline-block;
-        opacity: 0.5;
-        height: 75px;
-        width: 75px;
-        transition: 1s;
         margin: auto;
-    }
-    .contact-box:hover {
-        transition: 1s;
-        opacity: 1;
     }
 }
 @media screen and (max-width: 700px) {
     #about.container {
-        background: #778fb5;
-        color: #4a484b;
         padding: 50 40 100 40;
-        display: block;
     }
 }
 @media screen and (max-width: 787px) {
     #work-csm, #work-ursa, #work-calask, #work-intera, #work-mcomm, #work-61a, #work-art, #work-yszx, #work-p5, #work-go, #work-advice, #work-blog {
         width: 100%;
     }
-    .work-box {
-        opacity: 0.5;
-        transition: 0.5s;
-    }
     .work-box img {
         height: 200px;
     }
     #work.container {
-        text-align: center;
         padding: 50;
-        background: #4a484b;
         padding-bottom: 2550px;
         display: block;
     }
 }
 @media screen and (min-width: 800px) {
     #work.container {
-        text-align: center;
         padding: 50;
-        background: #4a484b;
         padding-bottom: 1700px;
-        display: block;
     }
 }
 @media screen and (min-width: 967px) {
     #about.container {
-        background: #778fb5;
-        color: #4a484b;
         margin: auto;
         padding: 50 170 100 170;
     }
@@ -406,26 +374,18 @@ footer {
         float: left;
         margin-left: 200;
         padding: 10 70 50 0;
-        width: 200px;
-        height: 200px;
     }
     #skills.container {
         padding: 50 50 400 50;
-        text-align: center;
-        background: #c5d3de;
     }
     #work.container {
-        text-align: center;
         padding: 50 150;
-        background: #4a484b;
         padding-bottom: 1500px;
     }
 }
 @media screen and (min-width: 1037px) {
     #work.container {
-        text-align: center;
         padding: 50 200;
-        background: #4a484b;
         padding-bottom: 1700px;
     }
     #contact-content {
@@ -434,9 +394,6 @@ footer {
 }
 @media screen and (min-width: 1300px) {
     #work.container {
-        text-align: center;
-        padding: 50 200;
-        background: #4a484b;
         padding-bottom: 2000px;
     }
 }
