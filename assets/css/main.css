@@ -88,9 +88,10 @@
 
 /*Skills*/
 #skills.container {
-    padding: 50 50 550 50;
+    padding: 50 50 100 50;
     text-align: center;
     background: #c5d3de;
+    display: inline-block;
 }
 #skills li {
     float: left;
@@ -120,9 +121,9 @@
 /* Work */
 #work.container {
     text-align: center;
-    padding: 50 70;
+    padding: 50 70 100 70;
     background: #4a484b;
-    padding-bottom: 1300px;
+    display: inline-block;
 }
 #work h1 {
     color: #c5d3de;
@@ -317,7 +318,7 @@ footer {
         margin-left: 0px;
     }
     #skills.container {
-        padding: 50 20 800 20;
+        padding: 50 20 100 20;
         text-align: center;
     }
     #skills li {
@@ -355,14 +356,13 @@ footer {
     }
     #work.container {
         padding: 100;
-        padding-bottom: 2550px;
         display: block;
+        padding-bottom: 2600px;
     }
 }
-@media screen and (min-width: 827px) {
+@media screen and (min-width: 828px) {
     #work.container {
-        padding: 50;
-        padding-bottom: 1700px;
+        padding: 50 50 100 50;
     }
 }
 @media screen and (min-width: 967px) {
@@ -375,25 +375,15 @@ footer {
         margin-left: 200;
         padding: 10 70 50 0;
     }
-    #skills.container {
-        padding: 50 50 400 50;
-    }
     #work.container {
-        padding: 50 100;
-        padding-bottom: 1800px;
+        padding: 50 100 150 100;
     }
 }
 @media screen and (min-width: 1140px) {
     #work.container {
-        padding: 50 200;
-        padding-bottom: 1700px;
+        padding: 50 200 200 200;
     }
     #contact-content {
         padding: 0 300 20 300;
-    }
-}
-@media screen and (min-width: 1300px) {
-    #work.container {
-        padding-bottom: 2000px;
     }
 }
