@@ -1,55 +1,51 @@
 /*Navigation Bar Elements*/
-#title {
-    font-size: 30px;
-    padding: 0 20;
-    position: fixed;
-    width: 100%;
-    background: #4a484b;
-    top: 0;
-    left: 0;
-    z-index: 100;
-}
-#title a {
-    color: #c5d3de;
-    text-decoration: none;
-    transition: 0.7s;
-    font-family: 'Montez', cursive;
-}
-#title a:hover {
-    color: white;
-    transition: 0.7s;
-}
 #navbar {
-    border: 2px dotted #4a484b;
+    border: 2px dotted #778fb5;
     font-size: 30px;
     word-spacing: 30px;
     text-align: center;
     position: fixed;
     right: 0px;
-    top: 53px;
+    top: 0px;
     width: 100%;
-    background: #778fb5;
+    background: #4a484b;
     opacity: 0.9;
     z-index: 100;
+    font-family: 'Montez', cursive;
 }
-#navbar a {
-    color: white;
+.navbar-item a{
+    color: #c5d3de;
     text-decoration: none;
     transition: 0.7s;
-    font-family: 'Montez', cursive;
     float: right;
     margin: 0 20;
     text-shadow: 2px 2px #4a484b;
 }
 #navbar a:hover {
-    color: #283347;
+    background: #778fb5;
     transition: 0.7s;
     text-shadow: 0px 0px;
+    padding: 5;
+}
+.navbar-item-home a {
+    float: left;
+    color: #c5d3de;
+}
+.navbar-item-logo {
+    padding: 15;
+    display: inline-block;
+    text-transform: uppercase;
+    transition: 0.7s;
+    float: left;
+}
+.navbar-item-logo:hover {
+    background: #266581;
+    transition: 0.7s;
 }
 
 /* Heading */
 #home {
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
