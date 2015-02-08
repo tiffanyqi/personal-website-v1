@@ -81,7 +81,7 @@
 }
 
 /* Work */
-#work.container {
+/*#work.container {
     text-align: center;
     padding: 50 70 100 70;
     background: #4a484b;
@@ -173,24 +173,29 @@
 }
 #work-more:hover {
     opacity: 0.8;
-}
+}*/
 
 /* Contact */
 #contact.container {
     padding: 50 0 100 0;
     text-align: center;
+    color: white;
+    text-shadow: 1px 1px 1px black;
 }
 #contact-content {
     padding: 0 150 20 150;
+}
 
 /*Support*/
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'PT Sans', sans-serif;
     line-height: 1.8;
     font-size: 17px;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    background: url("../img/victoria-island.jpg") no-repeat center center fixed;
+    background-size: 100% 100%;
 }
 html {
     overflow-x: hidden;
@@ -225,10 +230,10 @@ td {
 }
 
 footer {
-    font-family: 'Dosis', sans-serif;
+    font-family: 'PT Sans', sans-serif;
     text-align: center;
     width: 100%;
-    background: #4a484b;
+/*    background: #4a484b;*/
     color: #778fb5;
     font-size: 16px;
     padding: 10px;
@@ -249,7 +254,7 @@ footer {
         padding: 50 40 100 40;
     }
 }
-@media screen and (max-width: 827px) {
+/*@media screen and (max-width: 827px) {
     #work-csm, #work-ursa, #work-calask, #work-intera, #work-mcomm, #work-61a, #work-art, #work-yszx, #work-p5, #work-go, #work-advice, #work-blog {
         width: 100%;
     }
@@ -261,25 +266,25 @@ footer {
         display: block;
         padding-bottom: 2600px;
     }
-}
-@media screen and (min-width: 828px) {
+}*/
+/*@media screen and (min-width: 828px) {
     #work.container {
         padding: 50 50 100 50;
     }
-}
+}*/
 @media screen and (min-width: 967px) {
     #about.container {
         margin: auto;
         padding: 50 170 100 170;
     }
-    #work.container {
+/*    #work.container {
         padding: 50 100 150 100;
-    }
+    }*/
 }
 @media screen and (min-width: 1140px) {
-    #work.container {
+/*    #work.container {
         padding: 50 200 200 200;
-    }
+    }*/
     #contact-content {
         padding: 0 300 20 300;
     }
