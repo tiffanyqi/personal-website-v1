@@ -5,6 +5,7 @@
  */
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -13,6 +14,7 @@ html {
 body {
   margin: 0;
 }
+
 article,
 aside,
 details,
@@ -60,10 +62,10 @@ strong {
 dfn {
   font-style: italic;
 }
-h1 {
+/*h1 {
   margin: .67em 0;
   font-size: 2em;
-}
+}*/
 mark {
   color: #000;
   background: #ff0;
@@ -6048,6 +6050,7 @@ button.close {
 }
 .carousel {
   position: relative;
+  margin: 50px 0px;
 }
 .carousel-inner {
   position: relative;
@@ -6230,14 +6233,16 @@ button.close {
 .carousel-caption {
   position: absolute;
   right: 15%;
-  bottom: 20px;
   left: 15%;
+  bottom: 30px;
   z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
   text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+  color: white;
+  font-size: 20px;
+  background: #778fb5;
+  opacity: 0.8;
 }
 .carousel-caption .btn {
   text-shadow: none;
