@@ -70,114 +70,49 @@
 #about h1, #about h2 {
     color: white;
 }
-#about a {
-    color: #4a484b;
-}
-#about a:hover {
-    color: #c5d3de;
-}
 #about p {
     color: white;
 }
 
-/* Work */
-/*#work.container {
-    text-align: center;
-    padding: 50 70 100 70;
-    background: #4a484b;
-    display: inline-block;
+/*Experience*/
+#experience.container {
+    padding: 50 100;
+    background: white;
+    line-height: 1.5;
+    font-size: 20px;
 }
-#work h1 {
-    color: #c5d3de;
-    text-shadow: 1px 1px #778fb5;
-    padding-bottom: 110px;
+.exp-profile {
+    border: 4px dotted #c5d3de;
+    padding: 50px 100px;
+    margin: 20 0;
 }
-.work-box {
-    opacity: 0.5;
-    transition: 0.5s;
-    float: left;
-    margin-top: -102px;
-}
-.work-box:hover {
-    opacity: 1;
-    transition: 0.5s;
-}
-.work-box .work-content {
-    position: relative;
-    bottom: 101px;
-    visibility: hidden;
-    text-align: center;
-    padding: 20 0 20 0;
-    color: white;
-    background: #4a484b;
-    opacity: 0;
-    -webkit-transition: visibility 0s linear 0.25s, 
-        opacity 0.25s linear;
-    font-size: 16px;
-    border: 3px dotted #778fb5;
-}
-.work-box:hover .work-content {
-    visibility: visible;
-    opacity: 0.9;
-    -webkit-transition-delay: 0s;
-}
-.work-content i {
-    color: #c5d3de;
-}
-.work-box img {
-    width: 100%;
-}
-#work-csm {
-    width: 37%;
-}
-#work-ursa {
-    width: 63%;
-}
-#work-calask {
-    width: 60%;
-}
-#work-mcomm {
-    width: 30%;
-}
-#work-61a {
-    width: 30%;
-}
-#work-intera {
-    width: 40%;
-    float: right;
-}
-#work-art {
-    width: 32%;
-}
-#work-yszx {
-    width: 68%;
-}
-#work-p5 {
-    width: 42%;
-}
-#work-go {
-    width: 26%;
-}
-#work-advice {
-    width: 59%;
-}
-#work-blog {
-    width: 41%;
-}
-#work-more {
-    background: #778fb5;
-    width: 100%;
-    padding: 50 0;
-    color: white;
+.exp-title {
+    font-weight: 700;
     font-size: 30px;
 }
-#work-more:hover {
-    opacity: 0.8;
-}*/
+.exp-employer {
+    font-size: 24px;
+    font-style: italic;
+}
+.exp-time, .exp-location, .exp-skills {
+    padding: 3px 10px;
+    margin: 0px 5px 0px -7px;
+    background: #c5d3de;
+}
+.exp-description {
+    margin-left: 50px;
+}
+
+/* Work */
+#work.container {
+    padding: 50 100;
+    background: #4a484b;
+}
+
 
 /* Contact */
 #contact.container {
-    padding: 50 0 100 0;
+    padding: 50 0 200 0;
     text-align: center;
     color: white;
     text-shadow: 1px 1px 1px black;
@@ -185,12 +120,19 @@
 #contact-content {
     padding: 0 150 20 150;
 }
+#contact h2 {
+    text-align: center;
+    font-size: 20px;    
+}
+#contact a {
+    color: #778fb5;
+}
 
 /*Support*/
 body {
     font-family: 'PT Sans', sans-serif;
     line-height: 1.8;
-    font-size: 17px;
+    font-size: 20px;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -204,25 +146,21 @@ h1 {
     text-align: center;
     font-family: 'Montez', cursive;
     color: #778fb5;
-    font-size: 40px;
+    font-size: 60px;
     text-shadow: 1px 1px #4a484b;
-}
-h2 {
-    text-align: center;
-    font-size: 20px;
-}
-h3 {
-    margin: 0 0 7 0;
-    font-size: 22px;
 }
 a {
     text-decoration: none;
-    color: #778fb5;
     transition: 0.7s;
+    color: #4a484b;
 }
 a:hover {
     transition: 0.7s;
-    color: #4a484b;
+    color: #e18f77;
+}
+
+p {
+    font-size: 20px;
 }
 td {
     vertical-align: top;
@@ -233,7 +171,6 @@ footer {
     font-family: 'PT Sans', sans-serif;
     text-align: center;
     width: 100%;
-/*    background: #4a484b;*/
     color: #778fb5;
     font-size: 16px;
     padding: 10px;
@@ -254,37 +191,13 @@ footer {
         padding: 50 40 100 40;
     }
 }
-/*@media screen and (max-width: 827px) {
-    #work-csm, #work-ursa, #work-calask, #work-intera, #work-mcomm, #work-61a, #work-art, #work-yszx, #work-p5, #work-go, #work-advice, #work-blog {
-        width: 100%;
-    }
-    .work-box img {
-        height: 200px;
-    }
-    #work.container {
-        padding: 100;
-        display: block;
-        padding-bottom: 2600px;
-    }
-}*/
-/*@media screen and (min-width: 828px) {
-    #work.container {
-        padding: 50 50 100 50;
-    }
-}*/
 @media screen and (min-width: 967px) {
     #about.container {
         margin: auto;
         padding: 50 170 100 170;
     }
-/*    #work.container {
-        padding: 50 100 150 100;
-    }*/
 }
 @media screen and (min-width: 1140px) {
-/*    #work.container {
-        padding: 50 200 200 200;
-    }*/
     #contact-content {
         padding: 0 300 20 300;
     }

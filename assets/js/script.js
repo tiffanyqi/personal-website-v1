@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
     // Navbar Automatic Scrolling
-    $("#title a, #navbar a").click(function() {
-        var topHeight = $("#title").height() + $("#navbar").height()
+    $("#navbar-first a, #navbar-second a").click(function() {
+        var topHeight = $("#navbar-first").height() + $("#navbar-second").height()
         $("html, body").animate({
             scrollTop: $(this.hash).offset().top - topHeight
         });
