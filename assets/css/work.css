@@ -1,7 +1,6 @@
 /*Navigation Bar Elements*/
-#title {
+#navbar-first {
     font-size: 30px;
-    padding: 0 20;
     position: fixed;
     width: 100%;
     background: #4a484b;
@@ -9,39 +8,47 @@
     left: 0;
     z-index: 100;
 }
-#title a {
+#navbar-first a {
     color: #c5d3de;
     text-decoration: none;
     transition: 0.7s;
     font-family: 'Montez', cursive;
 }
-#title a:hover {
-    color: white;
+#navbar-first a:hover {
+    opacity: 0.5;
     transition: 0.7s;
 }
-#navbar {
+#title {
+    float: left;
+    padding: 10 30 5 30px;
+}
+.navbar-item-logo {
+    height: 50px;
+    padding: 18 3 0 3;
+}
+#navbar-second {
     border: 2px dotted #4a484b;
     font-size: 30px;
     word-spacing: 30px;
-    text-align: center;
     position: fixed;
     right: 0px;
-    top: 53px;
+    top: 65px;
     width: 100%;
     background: #778fb5;
     opacity: 0.9;
     z-index: 100;
+    display: inline-block;
 }
-#navbar a {
+#navbar-second a {
     color: white;
     text-decoration: none;
     transition: 0.7s;
     font-family: 'Montez', cursive;
-    float: right;
     margin: 0 20;
     text-shadow: 2px 2px #4a484b;
+    float: right;
 }
-#navbar a:hover {
+#navbar-second a:hover {
     color: #283347;
     transition: 0.7s;
     text-shadow: 0px 0px;
@@ -51,17 +58,19 @@
 .container {
     padding: 0 70;
     margin-bottom: 100px;
+    width: 100%;
 }
 
-/*Support*/
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'PT Sans', sans-serif;
     line-height: 1.8;
-    font-size: 17px;
+    font-size: 20px;
     margin: 0;
+    padding: 0;
     overflow-x: hidden;
-    position: absolute;
     top: 150px;
+    position: absolute;
+    width: 100%;
 }
 html {
     overflow-x: hidden;
@@ -70,9 +79,47 @@ h1 {
     text-align: center;
     font-family: 'Montez', cursive;
     color: #778fb5;
-    font-size: 40px;
+    font-size: 60px;
     text-shadow: 1px 1px #4a484b;
 }
+a {
+    text-decoration: none;
+    transition: 0.7s;
+    color: #4a484b;
+}
+a:hover, #experience a:hover {
+    transition: 0.7s;
+    color: #e18f77;
+}
+
+p {
+    font-size: 20px;
+}
+td {
+    vertical-align: top;
+    line-height: 1.5;
+}
+.container img {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #4a484b;
+    margin-bottom: 20px;
+    display: block;
+    margin: 20 auto;
+}
+
+footer {
+    font-family: 'PT Sans', sans-serif;
+    text-align: center;
+    width: 100%;
+    background: #4a484b;
+    color: #778fb5;
+    font-size: 16px;
+    padding: 10px;
+}
+
+/*Support*/
+/*
 h2 {
     text-align: center;
     font-size: 20px;
@@ -86,28 +133,5 @@ a:hover {
     transition: 0.7s;
     color: #4a484b;
 }
-img {
-    max-width: 100%;
-    height: auto;
-    border: 5px solid #4a484b;
-    margin-bottom: 20px;
-    display: block;
-    margin: 20 auto;
-}
 
-footer {
-    font-family: 'Dosis', sans-serif;
-    text-align: center;
-    width: 100%;
-    background: #4a484b;
-    color: #778fb5;
-    font-size: 16px;
-    padding: 10px;
-}
-
-/*Responsivity*/
-@media screen and (min-width: 950px) {
-    .container {
-        width: 70%;
-        margin: 0 auto 100 auto;
-}
+*/

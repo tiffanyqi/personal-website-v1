@@ -192,7 +192,19 @@ footer {
 }
 
 /*Responsivity*/
-/*@media screen and (max-width: 680px) {
+@media screen and (max-width: 900px) {
+    #about.container {
+        padding: 50 40 100 40;
+    }
+    #experience.container {
+        padding: 50 40 100 40;
+    }
+    .exp-profile {
+        padding: 20px;
+    }
+    #work.container {
+        padding: 50px;
+    }
     #contact.container {
         padding: 50 0 150 0;
         text-align: center;
@@ -201,20 +213,8 @@ footer {
         padding: 0 50;
     }
 }
-@media screen and (max-width: 700px) {
-    #about.container {
-        padding: 50 40 100 40;
-    }
-}
-@media screen and (min-width: 967px) {
-    #about.container {
-        margin: auto;
-        padding: 50 170 100 170;
-    }
-}
 @media screen and (min-width: 1140px) {
     #contact-content {
         padding: 0 300 20 300;
     }
-}*/
-
+}
