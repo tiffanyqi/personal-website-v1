@@ -55,9 +55,11 @@
 }
 
 /* Heading */
-#home {
-    max-width: 100%;
-    height: auto;
+#cover {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: url("../img/home/heading.jpg") no-repeat scroll 0px 100% / cover transparent;
 }
 
 /* About */
@@ -94,13 +96,21 @@
     font-size: 24px;
     font-style: italic;
 }
-.exp-time, .exp-location, .exp-skills {
+.exp-box {
     padding: 3px 10px;
     margin: 0px 5px 0px -7px;
     background: #c5d3de;
+    transition: 0.7s;
+}
+.exp-box:hover {
+    opacity: 0.7;
+    transition: 0.7s;
 }
 .exp-description {
-    margin-left: 50px;
+    margin: 10px 0px;
+}
+#experience a {
+    color: #778fb5;
 }
 
 /* Work */
@@ -154,7 +164,7 @@ a {
     transition: 0.7s;
     color: #4a484b;
 }
-a:hover {
+a:hover, #experience a:hover {
     transition: 0.7s;
     color: #e18f77;
 }
@@ -202,3 +212,4 @@ footer {
         padding: 0 300 20 300;
     }
 }
+
