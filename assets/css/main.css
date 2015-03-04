@@ -166,16 +166,18 @@ h1 {
 }
 a {
     text-decoration: none;
-    transition: 0.7s;
+    transition: 0.5s;
     color: #4a484b;
 }
 a:hover, #experience a:hover {
-    transition: 0.7s;
+    transition: 0.5s;
     color: #e18f77;
+    text-decoration: none;
 }
 
 p {
     font-size: 20px;
+    margin: 20px 0px;
 }
 td {
     vertical-align: top;
