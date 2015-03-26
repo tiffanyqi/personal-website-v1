@@ -1,4 +1,4 @@
-/*Navigation Bar Elements*/
+/* Navigation Bar Elements */
 #navbar-first {
     font-size: 30px;
     position: fixed;
@@ -127,6 +127,46 @@
     width: 100%;
 }
 
+/*Interests*/
+/*#interests.container {
+    padding: 50 100;
+    background: #c5d3de;
+    opacity: 0.9;
+    margin: 0px;
+    width: 100%;
+}
+.interest-item, .interest-item a {
+    position: relative;
+    display: inline-block;
+}
+
+.interest-pic {
+    height: 100px;
+    width: 100px;
+    margin: 0px;
+    border-radius: 10%;
+    position: absolute;
+    background: white;
+}
+.interest-comment {
+    height: 100px;
+    width: 100px;
+    border-radius: 10%;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    opacity: 0;
+    transition: 0.5s;
+    position: relative;
+    font-size: 16px;
+}
+.interest-comment:hover {
+    opacity: 1;
+    transition: 0.5s;
+}*/
+
 
 /* Contact */
 #contact.container {
@@ -213,6 +253,10 @@ footer {
     }
     #contact-content {
         padding: 0 50;
+    }
+    /* To prevent picture from going off screen on mobile */
+    #cover {
+        background: url("../img/home/heading2.jpg") no-repeat scroll 0px 100% / cover transparent;
     }
 }
 @media screen and (min-width: 1140px) {
