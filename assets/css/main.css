@@ -268,9 +268,9 @@ footer {
 @media only screen and (max-device-width: 700px) {
     /* To prevent picture from going off screen on mobile */
     #cover {
-        background: url("../img/home/heading2.jpg") no-repeat scroll -300px 100% / cover transparent;
+        background: url("../img/home/heading2.jpg") no-repeat scroll -200px 100% / cover transparent;
     }
-    
+
     /* Navigation Bar Elements */
     #navbar-first {
         font-size: 70px;
@@ -289,6 +289,9 @@ footer {
         word-spacing: 50px;
         top: 135px;
         width: 100%;
+    }
+    #body {
+        font-size: 30px;
     }
 }
 
