@@ -265,10 +265,29 @@ footer {
         padding: 0 300 20 300;
     }
 }
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-device-width: 700px) {
     /* To prevent picture from going off screen on mobile */
     #cover {
-        background: url("../img/home/heading2.jpg") no-repeat scroll 0px 100% / cover transparent;
+        background: url("../img/home/heading2.jpg") no-repeat scroll -300px 100% / cover transparent;
+    }
+    
+    /* Navigation Bar Elements */
+    #navbar-first {
+        font-size: 70px;
+        position: fixed;
+    }
+    #title {
+        float: left;
+        padding: 10 30 5 30px;
+    }
+    .navbar-item-logo {
+        height: 100px;
+        padding: 18 3 0 3;
+    }
+    #navbar-second {
+        font-size: 60px;
+        word-spacing: 50px;
+        top: 135px;
         width: 100%;
     }
 }
