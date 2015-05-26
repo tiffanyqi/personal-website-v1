@@ -196,6 +196,8 @@ body {
 }
 html {
     overflow-x: hidden;
+    height: 100%;
+    width: 100%;
 }
 h1 {
     text-align: center;
@@ -254,10 +256,6 @@ footer {
     #contact-content {
         padding: 0 50;
     }
-    /* To prevent picture from going off screen on mobile */
-    #cover {
-        background: url("../img/home/heading2.jpg") no-repeat scroll 0px 100% / cover transparent;
-    }
 }
 @media screen and (min-width: 1140px) {
     #about.container {
@@ -267,3 +265,11 @@ footer {
         padding: 0 300 20 300;
     }
 }
+@media only screen and (max-device-width: 480px) {
+    /* To prevent picture from going off screen on mobile */
+    #cover {
+        background: url("../img/home/heading2.jpg") no-repeat scroll 0px 100% / cover transparent;
+        width: 100%;
+    }
+}
+
