@@ -260,6 +260,9 @@ footer {
     }
 }
 @media screen and (min-width: 1140px) {
+    #about.container {
+        padding: 50px 200px 50px 200px;
+    }
     #contact-content {
         padding: 0 300 20 300;
     }
