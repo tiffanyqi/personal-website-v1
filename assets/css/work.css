@@ -90,6 +90,7 @@ a {
 a:hover, #experience a:hover {
     transition: 0.7s;
     color: #e18f77;
+    text-decoration: none;
 }
 
 p {
