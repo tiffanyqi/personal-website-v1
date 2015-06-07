@@ -61,17 +61,21 @@
 
 /* About */
 #about.container {
-    background: #778fb5;
-    color: #4a484b;
+/*    background: #778fb5;
+    color: #4a484b;*/
     padding: 50px 100px 100px 100px;
     margin: 0px;
     width: 100%;
-}
-#about h1, #about h2 {
-    color: white;
+    text-shadow: 1px 1px 1px black;
 }
 #about p {
     color: white;
+}
+#about a {
+    color: #e18f77;
+}
+#about a:hover {
+    color: #778fb5;
 }
 
 /*Experience*/
@@ -81,15 +85,33 @@
     font-size: 20px;
     margin: 0px;
     width: 100%;
-    padding: 20px;
+    padding: 150px 50px 50px 50px;
+}
+.filter-box {
+    padding: 5px 20px;
+    margin: 5px 5px 0px -7px;
+    background: #c5d3de;
+    font-size: 24px;
+    display: inline-block;
+}
+.filter-box:hover {
+    background: #e18f77;
+    color: white;
+}
+#filters {
+    margin: 20px auto;
+    text-align: center;
 }
 .exp-profile {
     border: 4px dotted #c5d3de;
     padding: 20px;
-    margin: 20px;
-    width: 45%;
+    margin: 10px;
+/*    width: 45%;*/
     display: inline-block;
     float: left;
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    column-break-inside: avoid;
 }
 .exp-profile:hover {
     border: 4px dotted #e18f77;
@@ -104,8 +126,9 @@
 }
 .exp-box {
     padding: 3px 10px;
-    margin: 0px 5px 0px -7px;
+    margin: 5px 5px 0px -7px;
     background: #c5d3de;
+    display: inline-block;
 }
 .exp-description {
     margin: 10px 0px;
@@ -129,8 +152,9 @@
 
 /* Work */
 #work.container {
-    padding: 50 100;
-    background: #4a484b;
+    padding: 150px 100px 50px 100px;
+    /*background: #4a484b;*/
+    background: white;
     margin: 0px;
     width: 100%;
 }
@@ -140,10 +164,14 @@
 
 /* Contact */
 #contact.container {
-    padding: 50 0 200 0;
+    padding: 150 0 200 0;
     text-align: center;
-    color: white;
-    text-shadow: 1px 1px 1px black;
+/*    color: white;
+    text-shadow: 1px 1px 1px black;*/
+    background: white;
+    margin: 0px;
+    width: 100%;
+    opacity: .85;
 }
 #contact-content {
     padding: 0 150 20 150;
@@ -203,32 +231,60 @@ footer {
     padding: 10px;
 }
 
+#columns {
+    -webkit-column-count: 2;
+    -webkit-column-gap: 10px;
+    -webkit-column-fill: auto;
+    -moz-column-count: 2;
+    -moz-column-gap: 10px;
+    -moz-column-fill: auto;
+    column-count: 2;
+    column-gap: 15px;
+    column-fill: auto;
+}
+
 /*Responsivity*/
 @media screen and (max-width: 900px) {
     #about.container {
         padding: 50 40 100 40;
     }
     #experience.container {
-        padding: 50 40 100 40;
+        padding: 150 50 50 50;
+    }
+    #filters {
+        margin-left: 20px;
     }
     .exp-profile {
         padding: 20px;
+        margin: 20px 0px;
         width: 100%;
     }
     #work.container {
-        padding: 50px;
+        padding: 150 50 50 50;
     }
     #contact.container {
-        padding: 50 0 150 0;
+        padding: 150 0 150 0;
         text-align: center;
     }
     #contact-content {
         padding: 0 50;
     }
+    #columns {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+
+}
+@media screen and (max-width: 750px) {
+    .filter-box {
+        width: 100%;
+        text-align: center;
+    }
 }
 @media screen and (min-width: 1140px) {
     #about.container {
-        padding: 50px 200px 50px 200px;
+        padding: 100px 200px 100px 200px;
     }
     #contact-content {
         padding: 0 300 20 300;
@@ -261,6 +317,10 @@ footer {
     }
     #body {
         font-size: 30px;
+    }
+    .filter-box {
+        width: 100%;
+        text-align: center;
     }
 }
 
