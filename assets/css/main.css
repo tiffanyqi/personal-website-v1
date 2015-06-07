@@ -11,12 +11,10 @@
 #navbar-first a {
     color: #c5d3de;
     text-decoration: none;
-    transition: 0.7s;
     font-family: 'Montez', cursive;
 }
 #navbar-first a:hover {
     opacity: 0.5;
-    transition: 0.7s;
 }
 #title {
     float: left;
@@ -42,7 +40,6 @@
 #navbar-second a {
     color: white;
     text-decoration: none;
-    transition: 0.7s;
     font-family: 'Montez', cursive;
     margin: 0 20;
     text-shadow: 2px 2px #4a484b;
@@ -50,7 +47,6 @@
 }
 #navbar-second a:hover {
     color: #283347;
-    transition: 0.7s;
     text-shadow: 0px 0px;
 }
 
@@ -79,17 +75,28 @@
 
 /*Experience*/
 #experience.container {
-    padding: 50 100;
+/*    padding: 50 100;*/
     background: white;
     line-height: 1.5;
     font-size: 20px;
     margin: 0px;
     width: 100%;
+
+    padding: 20px;
 }
 .exp-profile {
     border: 4px dotted #c5d3de;
-    padding: 50px 100px;
-    margin: 20 0;
+/*    padding: 50px 100px;
+    margin: 20px;*/
+
+    padding: 20px;
+    margin: 20px;
+    width: 45%;
+    display: inline-block;
+    float: left;
+}
+.exp-profile:hover {
+    border: 4px dotted #e18f77;
 }
 .exp-title {
     font-weight: 700;
@@ -103,17 +110,34 @@
     padding: 3px 10px;
     margin: 0px 5px 0px -7px;
     background: #c5d3de;
-    transition: 0.7s;
 }
-.exp-box:hover {
+/*.exp-box:hover {
     opacity: 0.7;
-    transition: 0.7s;
-}
+    background: #e18f77;
+}*/
 .exp-description {
     margin: 10px 0px;
 }
 #experience a {
     color: #778fb5;
+}
+.cat-box {
+    padding: 3px 10px;
+    margin: 0px 0px 0px 5px;
+    background: #c5d3de;
+    float: right;
+    /*transition: 0.7s;*/
+}
+/*.cat-box:hover {
+    opacity: 0.7;
+    transition: 0.7s;
+}*/
+.exp-profile:hover .exp-box {
+    background: #e18f77;
+}
+.exp-profile:hover .cat-box {
+    background: #e18f77;
+    color: white;
 }
 
 /* Work */
@@ -126,47 +150,6 @@
 .work-img {
     width: 100%;
 }
-
-/*Interests*/
-/*#interests.container {
-    padding: 50 100;
-    background: #c5d3de;
-    opacity: 0.9;
-    margin: 0px;
-    width: 100%;
-}
-.interest-item, .interest-item a {
-    position: relative;
-    display: inline-block;
-}
-
-.interest-pic {
-    height: 100px;
-    width: 100px;
-    margin: 0px;
-    border-radius: 10%;
-    position: absolute;
-    background: white;
-}
-.interest-comment {
-    height: 100px;
-    width: 100px;
-    border-radius: 10%;
-    background: rgba(0,0,0,0.6);
-    color: white;
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-    opacity: 0;
-    transition: 0.5s;
-    position: relative;
-    font-size: 16px;
-}
-.interest-comment:hover {
-    opacity: 1;
-    transition: 0.5s;
-}*/
-
 
 /* Contact */
 #contact.container {
@@ -208,11 +191,9 @@ h1 {
 }
 a {
     text-decoration: none;
-    transition: 0.5s;
     color: #4a484b;
 }
 a:hover, #experience a:hover {
-    transition: 0.5s;
     color: #e18f77;
     text-decoration: none;
 }
@@ -245,6 +226,7 @@ footer {
     }
     .exp-profile {
         padding: 20px;
+        width: 100%;
     }
     #work.container {
         padding: 50px;
