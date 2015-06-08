@@ -280,7 +280,7 @@ footer {
     #contact-content {
         padding: 0 50;
     }
-    #columns {
+    #exp-columns {
         -webkit-column-count: 1;
         -moz-column-count: 1;
         column-count: 1;
@@ -332,6 +332,11 @@ footer {
     .filter-box {
         width: 100%;
         text-align: center;
+    }
+    #exp-columns {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
     }
 }
 
