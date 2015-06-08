@@ -93,6 +93,7 @@
     background: #c5d3de;
     font-size: 24px;
     display: inline-block;
+    box-shadow: 0px 0px 0px;
 }
 .filter-box:hover {
     background: #e18f77;
@@ -106,7 +107,6 @@
     border: 4px dotted #c5d3de;
     padding: 20px;
     margin: 10px;
-/*    width: 45%;*/
     display: inline-block;
     float: left;
     -webkit-column-break-inside: avoid;
@@ -148,6 +148,11 @@
 .exp-profile:hover .cat-box {
     background: #e18f77;
     color: white;
+}
+.active {
+  background: #e18f77;
+  text-decoration: none;
+  color: white;
 }
 
 /* Work */
@@ -253,6 +258,9 @@ footer {
     }
     #filters {
         margin-left: 20px;
+    }
+    .filter-box {
+        font-size: 20px;
     }
     .exp-profile {
         padding: 20px;

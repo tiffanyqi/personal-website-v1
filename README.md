@@ -7,5 +7,4 @@ Made with HTML, CSS, and JavaScript. Carousel through bootstrap.
 
 Things to fix in the near future:
 - Connect github to hostgator
-- Filtering by people, product, engineering, etc
 - Add more stuff to projects

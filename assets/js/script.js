@@ -16,6 +16,24 @@ $(document).ready(function() {
             this.src = "assets/img/contact/" + this.id.split("-")[1] + ".jpg";
         });
 
+    // Filters for experience, slightly modified from
+    // http://codepen.io/terf/blog/jquery-filter-divs
+    var filter = $('.filter-box').click(function() {
+
+        // if want to show all
+        if (this.id == 'all') {
+            $('#columns > div').fadeIn(450);
+        // show a specific filter
+        } else {
+            var $el = $('.' + this.id).fadeIn(450);
+            $('#columns > div').not($el).hide();
+        }
+        // changes the active filter color
+        filter.removeClass('active');
+        $(this).addClass('active');
+
+    })
+
     // Social Media Icon Hovers-Opacity
     // $(".box-contact").hover(
     //     function() {
