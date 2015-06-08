@@ -11,7 +11,7 @@ $(document).ready(function() {
     // Navbar color stays if clicked, then removed
     var link = $("navbar-second a").click(function() {
         link.removeClass('nav-active');
-        link.addClass('nav-active');
+        $(this).addClass('nav-active');
     })
 
     // Social Media Icon Hovers-Color
