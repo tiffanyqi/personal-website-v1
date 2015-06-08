@@ -7,4 +7,11 @@ Made with HTML, CSS, and JavaScript. Carousel through bootstrap.
 
 Things to fix in the near future:
 - Connect github to hostgator
-- Add more stuff to projects
+- Change projects so that I have a tab for each fun thing:
+	- Pescetarian
+	- Baking
+	- Web Design
+	- Art / Graphic Design
+	- Blogging
+	- Music
+- Expand the about section

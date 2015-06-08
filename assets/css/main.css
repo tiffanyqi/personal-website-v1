@@ -49,6 +49,9 @@
     color: #283347;
     text-shadow: 0px 0px;
 }
+.nav-active {
+  color: #283347;
+}
 
 /* Heading */
 #cover {
@@ -111,7 +114,7 @@
     float: left;
     -webkit-column-break-inside: avoid;
     -moz-column-break-inside: avoid;
-    column-break-inside: avoid;
+    break-inside: avoid;
 }
 .exp-profile:hover {
     border: 4px dotted #e18f77;
@@ -149,7 +152,7 @@
     background: #e18f77;
     color: white;
 }
-.active {
+.exp-active {
   background: #e18f77;
   text-decoration: none;
   color: white;
@@ -236,7 +239,7 @@ footer {
     padding: 10px;
 }
 
-#columns {
+#exp-columns {
     -webkit-column-count: 2;
     -webkit-column-gap: 10px;
     -webkit-column-fill: auto;

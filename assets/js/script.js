@@ -8,6 +8,12 @@ $(document).ready(function() {
         });
     });
 
+    // Navbar color stays if clicked, then removed
+    var link = $("navbar-second a").click(function() {
+        link.removeClass('nav-active');
+        link.addClass('nav-active');
+    })
+
     // Social Media Icon Hovers-Color
     $(".contact-box").hover(
         function() {
@@ -22,15 +28,15 @@ $(document).ready(function() {
 
         // if want to show all
         if (this.id == 'all') {
-            $('#columns > div').fadeIn(450);
+            $('#exp-columns > div').fadeIn(450);
         // show a specific filter
         } else {
             var $el = $('.' + this.id).fadeIn(450);
-            $('#columns > div').not($el).hide();
+            $('#exp-columns > div').not($el).hide();
         }
         // changes the active filter color
-        filter.removeClass('active');
-        $(this).addClass('active');
+        filter.removeClass('exp-active');
+        $(this).addClass('exp-active');
 
     })
 
