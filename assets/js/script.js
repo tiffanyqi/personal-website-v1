@@ -22,17 +22,24 @@ $(document).ready(function() {
             this.src = "assets/img/contact/" + this.id.split("-")[1] + ".jpg";
         });
 
-    // Filters for experience, slightly modified from
+    // Filters for experience and projects, slightly modified from
     // http://codepen.io/terf/blog/jquery-filter-divs
     var filter = $('.filter-box').click(function() {
 
         // if want to show all
         if (this.id == 'all') {
             $('#exp-columns > div').fadeIn(450);
+            // $('#work-columns > div').fadeIn(450);
         // show a specific filter
         } else {
-            var $el = $('.' + this.id).fadeIn(450);
-            $('#exp-columns > div').not($el).hide();
+            var $selectedProfiles = $('.' + this.id).fadeIn(450);
+            $('#exp-columns > div').not($selectedProfiles).hide();
+
+            // figure out which method can be done with work
+            // var $selectedImages = $('.' + this.id).addClass('work-inactive');
+            // $(this).removeClass('work-inactive');
+            // $('.' + this.id).css('display', 'none');
+            // $('.' + this.id).css('display', 'inline-block')
         }
         // changes the active filter color
         filter.removeClass('exp-active');

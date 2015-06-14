@@ -191,6 +191,9 @@
     column-fill: auto;
     margin-top: 50px;
 }
+.work-inactive {
+    display: none;
+}
 .interests-img {
     border: 4px dotted #e18f77;
     padding: 10px;
@@ -298,6 +301,18 @@ footer {
     #work.container {
         padding: 150 50 50 50;
     }
+    #work-columns {
+        -webkit-column-count: 2;
+        -webkit-column-gap: 10px;
+        -webkit-column-fill: auto;
+        -moz-column-count: 2;
+        -moz-column-gap: 10px;
+        -moz-column-fill: auto;
+        column-count: 2;
+        column-gap: 10px;
+        column-fill: auto;
+        margin-top: 50px;
+    }
     #contact.container {
         padding: 150 0 150 0;
         text-align: center;
@@ -310,7 +325,6 @@ footer {
         -moz-column-count: 1;
         column-count: 1;
     }
-
 }
 @media screen and (max-width: 750px) {
     .filter-box {
