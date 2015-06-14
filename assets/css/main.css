@@ -357,9 +357,9 @@ footer {
         font-size: 30px;
     }
     .filter-box {
-        -webkit-column-count: 2;
-        -moz-column-count: 2;
-        column-count: 2;
+        width: 50%;
+        text-align: center;
+        /*float: left;*/
     }
     #exp-columns {
         -webkit-column-count: 1;
