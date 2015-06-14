@@ -64,8 +64,7 @@
 
 /* About */
 #about.container {
-/*    background: #778fb5;
-    color: #4a484b;*/
+    /*background: black;*/
     padding: 50px 100px 100px 100px;
     margin: 0px;
     width: 100%;
@@ -206,16 +205,19 @@
 #contact.container {
     padding: 150 0 200 0;
     text-align: center;
-    background: white;
     margin: 0px;
     width: 100%;
-    opacity: .85;
+    z-index: 2;
+    color: white;
 }
 #contact-content {
     padding: 0 150 20 150;
     line-height: 2;
 }
 #contact a {
+    color: #e18f77;
+}
+#contact a:hover {
     color: #778fb5;
 }
 
@@ -267,6 +269,10 @@ footer {
     color: #778fb5;
     font-size: 16px;
     padding: 10px;
+}
+#black {
+    background: black;
+    opacity: 0.7;
 }
 
 /*Responsivity*/
@@ -334,6 +340,9 @@ footer {
         float: left;
         padding: 10 30 5 30px;
     }
+    #experience.container, #work.container, #contact.container {
+        padding-top: 300px;
+    }
     .navbar-item-logo {
         height: 100px;
         padding: 18 3 0 3;
@@ -348,8 +357,9 @@ footer {
         font-size: 30px;
     }
     .filter-box {
-        width: 100%;
-        text-align: center;
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
     }
     #exp-columns {
         -webkit-column-count: 1;
