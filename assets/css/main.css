@@ -354,13 +354,12 @@ footer {
         top: 135px;
         width: 100%;
     }
-    #body {
+    body {
         font-size: 40px;
     }
     .filter-box {
-        width: 50%;
+        width: 100%;
         text-align: center;
-        float: left;
     }
     #exp-columns {
         -webkit-column-count: 1;
