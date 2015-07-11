@@ -9,3 +9,4 @@ Things to fix in the near future:
 - Connect github to hostgator
 - Change projects to add more interests, like in experience form
 - Shrink pictures
+- Add secret thoughts section
