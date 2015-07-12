@@ -152,10 +152,11 @@
     color: white;
 }
 .exp-active {
-  background: #e18f77;
-  text-decoration: none;
-  color: white;
+    background: #e18f77;
+    text-decoration: none;
+    color: white;
 }
+
 #exp-columns {
     -webkit-column-count: 2;
     -webkit-column-gap: 10px;
@@ -171,7 +172,6 @@
 /* Work */
 #work.container {
     padding: 150px 50px 50px 50px;
-    /*background: #4a484b;*/
     background: white;
     margin: 0px;
     width: 100%;
@@ -181,27 +181,54 @@
 }
 #work-columns {
     -webkit-column-count: 3;
-    -webkit-column-gap: 10px;
+    -webkit-column-gap: 20px;
     -webkit-column-fill: auto;
     -moz-column-count: 3;
-    -moz-column-gap: 10px;
+    -moz-column-gap: 20px;
     -moz-column-fill: auto;
     column-count: 3;
-    column-gap: 10px;
+    column-gap: 20px;
     column-fill: auto;
     margin-top: 50px;
 }
-.work-inactive {
-    display: none;
+.work-filter-box {
+    padding: 5px 20px;
+    margin: 5px 5px 0px -7px;
+    background: #c5d3de;
+    font-size: 24px;
+    display: inline-block;
+    box-shadow: 0px 0px 0px;
 }
+.work-filter-box:hover {
+    background: #e18f77;
+    color: white;
+}
+.work-description {
+    /*opacity: 0;*/
+    /*transition: .3s;*/
+    font-size: 18px;
+    text-align: center;
+    padding: 30px;
+    top: 0px;
+}
+/*.work-profile-box {
+}
+.work-profile-box:hover .work-description {
+    opacity: 1;
+    transition: .3s;
+    position: relative;
+    bottom: 250px;
+    left: 100px;
+    width: 100px;
+    height: 100px;
+    background: black;
+    color: white;
+}*/
 .interests-img {
+    width: 100%;
     border: 4px dotted #e18f77;
     padding: 10px;
-    width: 100%;
-    margin: 5px;
-}
-.interests-img:hover {
-    opacity: 0.7;
+    margin: 10px;
 }
 
 /* Contact */
@@ -303,15 +330,8 @@ footer {
     }
     #work-columns {
         -webkit-column-count: 2;
-        -webkit-column-gap: 10px;
-        -webkit-column-fill: auto;
         -moz-column-count: 2;
-        -moz-column-gap: 10px;
-        -moz-column-fill: auto;
         column-count: 2;
-        column-gap: 10px;
-        column-fill: auto;
-        margin-top: 50px;
     }
     #contact.container {
         padding: 150 0 150 0;
