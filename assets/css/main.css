@@ -211,6 +211,9 @@
     padding: 30px;
     top: 0px;
 }
+.work-description a {
+    color: #c5d3de;
+}
 /*.work-profile-box {
 }
 .work-profile-box:hover .work-description {
@@ -225,7 +228,8 @@
     color: white;
 }*/
 .interests-img {
-    width: 100%;
+    /*width: 100%;*/
+    width: 400px;
     border: 4px dotted #e18f77;
     padding: 10px;
     margin: 10px;
