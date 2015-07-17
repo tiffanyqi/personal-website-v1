@@ -206,7 +206,7 @@
 .work-description a {
     color: #c5d3de;
 }
-.work-profile-box .work-description {
+/*.work-profile-box .work-description {
     font-size: 18px;
     text-align: center;
     padding: 30px;
@@ -214,24 +214,48 @@
     bottom: 350px;
     left: 15px;
     visibility: hidden;
-    /*transition: 0.3s;*/
 }
 .work-profile-box:hover .work-description {
     visibility: visible;
     color: white;
     background: black;
     opacity: 0.7;
-    /*transition: 0.3s;*/
 }
 .interests-img {
     width: 100%;
-/*    width: 400px;*/
+}
+.work-profile-box:hover .interests-img {
+    border: 4px dotted #e18f77;
+}*/
+.work-profile-box, .work-profile-box a {
+    position: relative;
+    display: inline-block;
+}
+.interests-img {
+    height: 400px;
+    /*margin: 0px;*/
+    position: absolute;
     border: 4px dotted #c5d3de;
     padding: 10px;
     margin: 10px;
 }
-.work-profile-box:hover .interests-img {
-    border: 4px dotted #e18f77;
+.work-description {
+    height: 400px;
+    width: 400px;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    opacity: 0;
+    transition: 0.5s;
+    position: relative;
+    font-size: 18px;
+    padding: 30px;
+}
+.work-description:hover {
+    opacity: 1;
+    transition: 0.5s;
 }
 
 /* Contact */
