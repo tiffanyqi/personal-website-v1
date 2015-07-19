@@ -108,7 +108,7 @@
 .exp-profile {
     border: 4px dotted #c5d3de;
     padding: 20px;
-    margin: 10px;
+    margin: 10px 5px;
     display: inline-block;
     float: left;
     -webkit-column-break-inside: avoid;
@@ -200,7 +200,7 @@
     color: #c5d3de;
 }
 .work-profile-box {
-    margin: 10px;
+    margin: 10px 5px;
     margin-bottom: -350px;
 }
 .work-profile-box, .work-profile-box a {
