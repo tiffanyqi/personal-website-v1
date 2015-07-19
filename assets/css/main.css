@@ -158,6 +158,7 @@
 }
 
 #exp-columns {
+    margin-top: 50px;
     -webkit-column-count: 2;
     -webkit-column-gap: 10px;
     -webkit-column-fill: auto;
@@ -179,18 +180,6 @@
 .work-img {
     width: 100%;
 }
-#work-columns {
-    -webkit-column-count: 3;
-    -webkit-column-gap: 20px;
-    -webkit-column-fill: auto;
-    -moz-column-count: 3;
-    -moz-column-gap: 20px;
-    -moz-column-fill: auto;
-    column-count: 3;
-    column-gap: 20px;
-    column-fill: auto;
-    margin-top: 50px;
-}
 .work-filter-box {
     padding: 5px 20px;
     margin: 5px 5px 0px -7px;
@@ -203,59 +192,48 @@
     background: #e18f77;
     color: white;
 }
+#work-table {
+    margin-top: 50px;
+    text-align: center;
+}
 .work-description a {
     color: #c5d3de;
 }
-/*.work-profile-box .work-description {
-    font-size: 18px;
-    text-align: center;
-    padding: 30px;
-    position: relative;
-    bottom: 350px;
-    left: 15px;
-    visibility: hidden;
+.work-profile-box {
+    margin: 10px;
+    margin-bottom: -350px;
 }
-.work-profile-box:hover .work-description {
-    visibility: visible;
-    color: white;
-    background: black;
-    opacity: 0.7;
-}
-.interests-img {
-    width: 100%;
-}
-.work-profile-box:hover .interests-img {
-    border: 4px dotted #e18f77;
-}*/
 .work-profile-box, .work-profile-box a {
     position: relative;
     display: inline-block;
 }
 .interests-img {
-    height: 400px;
-    /*margin: 0px;*/
-    position: absolute;
+    height: 350px;
+    position: relative;
     border: 4px dotted #c5d3de;
     padding: 10px;
-    margin: 10px;
 }
 .work-description {
-    height: 400px;
-    width: 400px;
+    height: 350px;
+    width: 350px;
     background: rgba(0,0,0,0.6);
     color: white;
     display: table-cell;
     text-align: center;
     vertical-align: middle;
     opacity: 0;
-    transition: 0.5s;
+    transition: 0.3s;
     position: relative;
-    font-size: 18px;
+    font-size: 16px;
     padding: 30px;
+    top: -350px;
 }
 .work-description:hover {
     opacity: 1;
-    transition: 0.5s;
+    transition: 0.3s;
+}
+.work-profile-box:hover .interests-img {
+    border: 4px dotted #e18f77;
 }
 
 /* Contact */
@@ -277,25 +255,6 @@
 }
 #contact a:hover {
     color: #778fb5;
-}
-
-/*Thoughts*/
-#thoughts.container {
-    background: white;
-    padding: 150px 100px 100px 100px;
-    margin: 0px;
-    width: 100%;
-}
-.thought-box {
-    padding: 20px;
-    width: 100%;
-    border: 4px dotted #c5d3de;
-    padding: 20px;
-    margin: 10px 0px;
-    display: inline-block;
-}
-.thought-box:hover {
-    border: 4px dotted #e18f77;
 }
 
 /*Support*/
@@ -373,11 +332,6 @@ footer {
     }
     #work.container {
         padding: 150 50 50 50;
-    }
-    #work-columns {
-        -webkit-column-count: 2;
-        -moz-column-count: 2;
-        column-count: 2;
     }
     #contact.container {
         padding: 150 0 150 0;

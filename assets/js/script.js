@@ -45,11 +45,11 @@ $(document).ready(function() {
 
         // if want to show all
         if (this.id == 'all') {
-            $('#work-columns > div').fadeIn(450);
+            $('#work-table > div').fadeIn(450);
         // show a specific filter
         } else {
             var $selectedProfiles = $('.' + this.id).fadeIn(450);
-            $('#work-columns > div').not($selectedProfiles).hide();
+            $('#work-table > div').not($selectedProfiles).hide();
         }
         // changes the active filter color
         workFilter.removeClass('exp-active');

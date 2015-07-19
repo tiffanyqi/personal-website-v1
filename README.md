@@ -10,5 +10,3 @@ Made with HTML, CSS, and JavaScript.
 
 ### Interests section
 - Add interests, pictures, and their descriptions
-- Shrink pictures to 400px
-- Mouseover different sized pictures for overlayed description
