@@ -110,7 +110,6 @@
     padding: 20px;
     margin: 10px 5px;
     display: inline-block;
-    float: left;
     -webkit-column-break-inside: avoid;
     -moz-column-break-inside: avoid;
     break-inside: avoid;
@@ -156,7 +155,6 @@
     text-decoration: none;
     color: white;
 }
-
 #exp-columns {
     margin-top: 50px;
     -webkit-column-count: 2;
