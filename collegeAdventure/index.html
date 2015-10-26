@@ -20,15 +20,25 @@
     position: fixed;
     width: 100%;
     background: #083C85;
+    z-index: 100;
   }
   .topbar-title {
     float: left;
     padding: 20px;
+    transition: 1s;
   }
   .topbar-item {
     float: right;
     padding: 20px;
     text-align: right;
+    transition: 1s;
+  }
+  .topbar-item:hover, .topbar-title:hover {
+    transition: 1s;
+    background: black;
+  }
+  #benefits {
+    height: 68vh;
   }
   h1 {
     text-align: center;
@@ -43,6 +53,11 @@
     font-size: 30px;
     font-style: italic;
   }
+  h4 {
+    text-transform: uppercase;
+    font-size: 22px;
+    text-align: center;
+  }
   p, ol {
     font-size: 20px;
   }
@@ -50,18 +65,38 @@
     text-decoration: none;
     color: white;
   }
-  .inner-box {
+/*  .inner-box {
     height: 200px;
     width: 200px;
     border: 1px solid white;
     margin: auto;
     margin-bottom: 20px;
     text-align: center;
-  }
+  }*/
   .box {
     float: left;
-    width: 32.5%;
-
+    width: 25%;
+    height: 60%;
+    background: black;
+    opacity: .7;
+    margin: 5px;
+    padding: 30px;
+    transition: 1s;
+  }
+  .box:hover {
+    background: #083C85;
+    transition: 1s;
+  }
+  @media screen and (max-width: 1025px) {
+    .box {
+      float: none;
+      display: block;
+      height: auto;
+      width: 90%;
+    }
+    #benefits {
+      height: 300%;
+    }
   }
 </style>
 
@@ -98,35 +133,33 @@
   </div>
 
 
-  <div class="container" id="about">
+  <div class="container" id="about" style="height: 68vh">
     <h2>About</h2>
-    <p>
-    <p>Clear overview (paragraph) of the problem you are solving for the user in words that will resonate with them</p>
+    <p>In this day and age, choosing the perfect college is like an impossible task. As a high school student, objective factors such as finances, college size, major programs, and class sizes are important. However, more subjective factors such as community, actual class workload, and other such criteria are much more difficult to assess, but are just as important. <strong>CollegeAdventure targets this problem accurately by providing a current college student as mentor, and giving students a chance to shadow and live with mentors for a day.</strong></p>
   </div>
 
+  <!-- http://www.aiasandiego.org/wp-content/uploads/2013/11/Coastline-Community-College-Newport-Beach-Campus-1.jpg -->
+  <div class="container" id="benefits" style= "background: url('blue.jpg') no-repeat scroll 0px 100% / cover transparent; color: white;">
+    <h2 style="text-shadow: 2px 2px black;">How Can We Help?</h2>
+      <div class="box">
+        <h4>Connect</h4>
+        Choose and connect with current college students about their experiences. Build real relationships with mentors and their campuses.
+      </div>
+      
+      <div class="box">
+        <h4>Experience</h4>
+        Attend classes with your mentor. Explore all the special nooks and crannies of campus. Discover what your mentor does with his/her time; party, study, and work.
+      </div>
+      
+      <div class="box">
+        <h4>Discover</h4>
 
-  <div class="container" id="benefits" style="background: #040402; color: #B7BED8; text-align: center; height: 450px">
-    <h2>How Can We Help?</h2>
-      <div class="box">
-        <div class="inner-box">Choose and connect with current college students about their experiences</div>
-        
-      </div>
-      
-      <div class="box">
-        <div class="inner-box"></div>
-        Live a day in the life
-      </div>
-      
-      <div class="box">
-        <div class="inner-box"></div>
-        Establish real connections with mentors and their campuses
       </div>
   </div>
 
   <!-- https://thenypost.files.wordpress.com/2014/01/sisters.jpg -->
-  <div class="container" id="diff" style="background: white; height: 450px; text-align: center">
+  <div class="container" id="diff" style="height:450px">
     <h2>Why Are We Different?</h2>
-    <p>A section for why your product is differentiated from competitors</p>
 
     <div class="box">
       <div class="inner-box"></div>
