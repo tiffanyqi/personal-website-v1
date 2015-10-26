@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<head>
+  <title>CollegeAdventure</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700' rel='stylesheet' type='text/css'>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+</head>
+
+
+<style>
+  .container {
+    padding: 100px;
+    height: 100%;
+  }
+  body {
+    margin: 0px;
+    font-family: 'Open Sans', sans-serif;
+  }
+  #topbar {
+    position: fixed;
+    width: 100%;
+    background: #083C85;
+  }
+  .topbar-title {
+    float: left;
+    padding: 20px;
+  }
+  .topbar-item {
+    float: right;
+    padding: 20px;
+    text-align: right;
+  }
+  h1 {
+    text-align: center;
+    font-size: 60px;
+  }
+  h2 {
+    text-align: center;
+    font-size: 40px;
+  }
+  h3 {
+    text-align: center;
+    font-size: 30px;
+    font-style: italic;
+  }
+  p, ol {
+    font-size: 20px;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  .inner-box {
+    height: 200px;
+    width: 200px;
+    border: 1px solid white;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .box {
+    float: left;
+    width: 32.5%;
+
+  }
+</style>
+
+
+<body>
+
+  <div id="topbar">
+    <a href="#title"><div class="topbar-title">CollegeAdventure</div></a>
+    <a href="#contact"><div class="topbar-item">Contact</div></a>
+    <a href="#diff"><div class="topbar-item">Differentiators</div></a>
+    <a href="#benefits"><div class="topbar-item">Benefits</div></a>
+    <a href="#about"><div class="topbar-item">About</div></a>
+  </div>
+
+  <script>
+    // http://www.abeautifulsite.net/smoothly-scroll-to-an-element-without-a-jquery-plugin-2/
+    $('a[href^="#"]').on('click', function(event) {
+
+        var target = $( $(this).attr('href') );
+
+        if( target.length ) {
+            event.preventDefault();
+            $('html, body').animate({
+                scrollTop: target.offset().top
+            }, 700);
+        }
+    });
+  </script>
+
+  <!-- image source: http://i.huffpost.com/gen/1210630/images/o-SUPREME-COURT-AFFIRMATIVE-ACTION-UC-facebook.jpg -->
+  <div class="container" id="title" style= "background: url('home.jpg') no-repeat scroll 0px 100% / cover transparent; color: white; text-shadow: 2px 2px black; padding-top: 150px; height: 68vh">
+    <h1>CollegeAdventure</h1>
+    <h3>Adventure college before you go.</h3>
+  </div>
+
+
+  <div class="container" id="about">
+    <h2>About</h2>
+    <p>
+    <p>Clear overview (paragraph) of the problem you are solving for the user in words that will resonate with them</p>
+  </div>
+
+
+  <div class="container" id="benefits" style="background: #040402; color: #B7BED8; text-align: center; height: 450px">
+    <h2>How Can We Help?</h2>
+      <div class="box">
+        <div class="inner-box">Choose and connect with current college students about their experiences</div>
+        
+      </div>
+      
+      <div class="box">
+        <div class="inner-box"></div>
+        Live a day in the life
+      </div>
+      
+      <div class="box">
+        <div class="inner-box"></div>
+        Establish real connections with mentors and their campuses
+      </div>
+  </div>
+
+  <!-- https://thenypost.files.wordpress.com/2014/01/sisters.jpg -->
+  <div class="container" id="diff" style="background: white; height: 450px; text-align: center">
+    <h2>Why Are We Different?</h2>
+    <p>A section for why your product is differentiated from competitors</p>
+
+    <div class="box">
+      <div class="inner-box"></div>
+      Real advice in real situations (no fluff, just facts).
+    </div>
+    
+    <div class="box">
+      <div class="inner-box"></div>
+      Build real mentorships that last a lifetime.
+    </div>
+    
+    <div class="box">
+      <div class="inner-box"></div>
+      
+    </div>
+
+  </div>
+
+
+  <div class="container" id="contact" style="background: #B7BED8;">
+    <h2>Interested? Let's get started.</h2>
+    <p>Are you a <strong>high school student</strong>, interested in searching for your best fit university in the most authentic way?</p>
+    <p>Are you a <strong>college student</strong>, interested in helping high school students discover the best path for them?</p>
+    <p>Have any other questions?</p>
+    <br>
+    <p>Do not hesitate to contact us at <a href="mailto:hello@collegeAdventure.com" style="color: #083C85">hello@collegeAdventure.com</a>.</p>
+    <p>Let's get started.</p>
+  </div>
+
+
+	<!-- 
+		Notes:
+			- fixed header: about / benefits, differentiation, contact
+			- big title thing
+      - 
+
+		Content:
+			1. Name of the product  
+      2. A short “catchy” headline statement to catch the user’s interest  
+      3. Clear overview (paragraph) of the problem you are solving for the user in words that will resonate with them  
+      4. Three points summarizing the most important benefits to the user. These will be a restatement of your value proposition from the POA. The most common mistake here is  to confuse features with benefits... don’t list features but articulate the reasons why the  user will get value from the product.  
+      5. A section for why your product is differentiated from competitors  
+      6. A picture of, or diagram relevant to, the product  
+      7. Other language you deem helpful  
+      8. Your company logo and fake email address to learn more 
+	 -->
+</body>
+
+</html>
