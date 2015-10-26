@@ -37,8 +37,8 @@
     transition: 1s;
     background: black;
   }
-  #benefits {
-    height: 68vh;
+  #benefits, #diff {
+    height: 75vh;
   }
   h1 {
     text-align: center;
@@ -65,29 +65,31 @@
     text-decoration: none;
     color: white;
   }
-/*  .inner-box {
-    height: 200px;
-    width: 200px;
-    border: 1px solid white;
-    margin: auto;
-    margin-bottom: 20px;
-    text-align: center;
-  }*/
+  .box-2 {
+    float: left;
+    width: 20%;
+    height: 15%;
+    background: black;
+    opacity: .7;
+    margin: 10px;
+    padding: 50px 30px 50px 30px;
+    transition: 1s;
+  }
   .box {
     float: left;
     width: 25%;
     height: 60%;
     background: black;
     opacity: .7;
-    margin: 5px;
+    margin: 10px;
     padding: 30px;
     transition: 1s;
   }
-  .box:hover {
+  .box:hover, .box-2:hover {
     background: #083C85;
     transition: 1s;
   }
-  @media screen and (max-width: 1025px) {
+  @media screen and (max-width: 1160px) {
     .box {
       float: none;
       display: block;
@@ -134,7 +136,7 @@
 
 
   <div class="container" id="about" style="height: 68vh">
-    <h2>About</h2>
+    <h2>What's This About?</h2>
     <p>In this day and age, choosing the perfect college is like an impossible task. As a high school student, objective factors such as finances, college size, major programs, and class sizes are important. However, more subjective factors such as community, actual class workload, and other such criteria are much more difficult to assess, but are just as important. <strong>CollegeAdventure targets this problem accurately by providing a current college student as mentor, and giving students a chance to shadow and live with mentors for a day.</strong></p>
   </div>
 
@@ -152,28 +154,25 @@
       </div>
       
       <div class="box">
-        <h4>Discover</h4>
-
+        <h4>Compare</h4>
+        You have the chance to connect with multiple mentors, who will provide multiple experiences across multiple campuses. This is the best way to compare campuses firsthand to determine which is the best fit for you.
       </div>
   </div>
 
-  <!-- https://thenypost.files.wordpress.com/2014/01/sisters.jpg -->
-  <div class="container" id="diff" style="height:450px">
-    <h2>Why Are We Different?</h2>
+  <!-- http://www.communityempowermentcenter.com/HoldingHands1.jpg -->
+  <div class="container" id="diff" style= "background: url('hands.jpg') no-repeat scroll 0px 100% / cover transparent; color: white;">
+    <h2 style="text-shadow: 2px 2px black">How Are We Different?</h2>
 
-    <div class="box">
-      <div class="inner-box"></div>
-      Real advice in real situations (no fluff, just facts).
+    <div class="box-2">
+      Real advice and experiences, without the fluff in between.
     </div>
     
-    <div class="box">
-      <div class="inner-box"></div>
+    <div class="box-2">
       Build real mentorships that last a lifetime.
     </div>
     
-    <div class="box">
-      <div class="inner-box"></div>
-      
+    <div class="box-2">
+      More than just objective facts and figures.
     </div>
 
   </div>
