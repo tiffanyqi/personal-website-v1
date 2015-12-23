@@ -1,0 +1,108 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load('visualization', '1');
+
+      // draws the grade to percent graph
+      google.setOnLoadCallback(drawGradeVPercent);
+      function drawGradeVPercent() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'ScatterChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=0',
+          query: 'SELECT E,G',
+          options: {
+            'title': 'Grade Received vs. Percentage Received', 
+            'legend': 'none',
+            'hAxis': {'title': 'Grade Received (GPA)'},
+            'vAxis': {'title': 'Percentage Received'}
+          },
+          containerId: 'GradeVPercent'
+        });
+        wrapper.draw()
+      }
+
+      // draws the grade received vs. average time spent
+      google.setOnLoadCallback(drawGradeVAverage);
+      function drawGradeVAverage() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'ScatterChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=0',
+          query: 'SELECT E,L',
+          options: {
+            'title': 'Grade Received vs. Average Time Spent', 
+            'legend': 'none',
+            'hAxis': {'title': 'Grade Received (GPA)'},
+            'vAxis': {'title': 'Average Time Spent (hours)'}
+          },
+          containerId: 'GradeVAverage'
+        });
+        wrapper.draw()
+      }
+
+      // draws the grade received vs. homework
+      google.setOnLoadCallback(drawGradeVTotal);
+      function drawGradeVTotal() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'ScatterChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=0',
+          query: 'SELECT E,H',
+          options: {
+            'title': 'Grade Received vs. Time Spent on Homework', 
+            'legend': 'none',
+            'hAxis': {'title': 'Grade Received (GPA)'},
+            'vAxis': {'title': 'Homework (hours)'}
+          },
+          containerId: 'GradeVHomework'
+        });
+        wrapper.draw()
+      }
+
+      // draws the time spent on homework to average time
+      google.setOnLoadCallback(drawHomeworkVAverage);
+      function drawHomeworkVAverage() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'ScatterChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=0',
+          query: 'SELECT H,L',
+          options: {
+            'title': 'Time Spent on Homework to Average Time Spent on the Class', 
+            'legend': 'none',
+            'hAxis': {'title': 'Homework (hours)'},
+            'vAxis': {'title': 'Average time (hours)'}
+          },
+          containerId: 'HomeworkVAverage'
+        });
+        wrapper.draw()
+      }
+
+      // draws the grade received vs the class size
+      google.setOnLoadCallback(drawGradeVSize);
+      function drawGradeVSize() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'ScatterChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=0',
+          query: 'SELECT E,N',
+          options: {
+            'title': 'Grade Received vs. Class Size', 
+            'legend': 'none',
+            'hAxis': {'title': 'Grade Received (GPA)'},
+            'vAxis': {'title': 'Class size (enrollment figures)'}
+          },
+          containerId: 'GradeVSize'
+        });
+        wrapper.draw()
+      }
+
+    </script>
+  </head>
+
+  <body style="margin: auto">
+    <div id="GradeVPercent" style="width: 600px; height: 400px;"></div>
+    <div id="GradeVAverage" style="width: 600px; height: 400px;"></div>
+    <div id="GradeVHomework" style="width: 600px; height: 400px;"></div>
+    <div id="HomeworkVAverage" style="width: 600px; height: 400px;"></div>
+    <div id="GradeVSize" style="width: 600px; height: 400px;"></div>
+  </body>
+
+</html>

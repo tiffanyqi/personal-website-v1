@@ -7,6 +7,3 @@ Made with HTML, CSS, and JavaScript.
 
 ## Things to fix in the near future:
 - Connect github to hostgator
-
-### Interests section
-- Add interests, pictures, and their descriptions
