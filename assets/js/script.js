@@ -1,12 +1,27 @@
 $(document).ready(function() {
 
     // Navbar Automatic Scrolling
-    $("#navbar-first a, #navbar-second a").click(function() {
-        var topHeight = $("#navbar-first").height() + $("#navbar-second").height()
-        $("html, body").animate({
-            scrollTop: $(this.hash).offset().top - topHeight
-        });
+    // $("#navbar-first a, #navbar-second a").click(function() {
+    //     var topHeight = $("#navbar-first").height() + $("#navbar-second").height()
+    //     $("html, body").animate({
+    //         scrollTop: $(this.hash).offset().top - topHeight
+    //     });
+    // });
+
+
+    // http://www.abeautifulsite.net/smoothly-scroll-to-an-element-without-a-jquery-plugin-2/
+    $('a[href^="#"]').on('click', function(event) {
+
+        var target = $( $(this).attr('href') );
+
+        if( target.length ) {
+            event.preventDefault();
+            $('html, body').animate({
+                scrollTop: target.offset().top
+            }, 700);
+        }
     });
+  
 
     // Navbar color stays if clicked, then removed
     var link = $("navbar-second a").click(function() {
