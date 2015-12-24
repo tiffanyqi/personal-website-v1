@@ -28,6 +28,22 @@
 
     <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Montez' rel='stylesheet' type='text/css'>
+
+    <script>
+      // http://www.abeautifulsite.net/smoothly-scroll-to-an-element-without-a-jquery-plugin-2/
+      $('a[href^="#"]').on('click', function(event) {
+
+          var target = $( $(this).attr('href') );
+
+          if( target.length ) {
+              event.preventDefault();
+              $('html, body').animate({
+                  scrollTop: target.offset().top
+              }, 700);
+          }
+      });
+    </script>
+
   </head>
 
   <body>

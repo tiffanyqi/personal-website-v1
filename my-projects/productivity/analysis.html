@@ -1,6 +1,16 @@
 <html>
   <head>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  </head>
+
+  <body style="margin: auto">
+    <div id="GradeVPercent" style="width: 600px; height: 400px;"></div>
+    <div id="GradeVAverage" style="width: 600px; height: 400px;"></div>
+    <div id="GradeVHomework" style="width: 600px; height: 400px;"></div>
+    <div id="HomeworkVAverage" style="width: 600px; height: 400px;"></div>
+    <div id="GradeVSize" style="width: 600px; height: 400px;"></div>
+  </body>
+
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
       google.load('visualization', '1');
 
@@ -8,9 +18,9 @@
       google.setOnLoadCallback(drawGradeVPercent);
       function drawGradeVPercent() {
         var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
+          chartType: 'BubbleChart',
           dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=0',
-          query: 'SELECT E,G',
+          query: 'SELECT B,E,L,G',
           options: {
             'title': 'Grade Received vs. Percentage Received', 
             'legend': 'none',
@@ -95,14 +105,6 @@
       }
 
     </script>
-  </head>
 
-  <body style="margin: auto">
-    <div id="GradeVPercent" style="width: 600px; height: 400px;"></div>
-    <div id="GradeVAverage" style="width: 600px; height: 400px;"></div>
-    <div id="GradeVHomework" style="width: 600px; height: 400px;"></div>
-    <div id="HomeworkVAverage" style="width: 600px; height: 400px;"></div>
-    <div id="GradeVSize" style="width: 600px; height: 400px;"></div>
-  </body>
 
 </html>
