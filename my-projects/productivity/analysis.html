@@ -1,96 +1,195 @@
 <html>
   <head>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
 
     <style>
+      .calendar {
+        width: 100%;
+        border: 1px solid black;
+      }
+      .graph-tall, .graph-short {
+        text-align: center;
+        margin: auto;
+        padding: 15px;
+      }
+      .graph-tall {
+        width: 800px;
+        height: 500px;
+      }
+      .graph-short {
+        width: 700px;
+        height: 300px;
+      }      
+      #topbar {
+        margin-top: -50px;
+        padding: 10px;
+        position: fixed;
+        background: white;
+        opacity: 0.8;
+        width: 100%;
+        z-index: 100;
+      }
+      .topbar-item {
+        display: inline-block;
+        padding: 10px 50px;
+        transition: 0.5s;
+        text-align: center;
+        margin: auto;
+      }
+      .topbar-item:hover {
+        background: blue;
+        transition: 0.5s;
+      }
+      #topbar a {
+        text-decoration: none;
+      }
+      body {
+        margin: 50px 250px;
+        font-family: 'Raleway', sans-serif;
+        line-height: 1.7;
+      }
+      h1, h2 {
+        padding-top: 70px;
+      }
+      @media screen and (max-width: 1000px) {
+        body {
+          margin: 50px 50px;
+        }
+/*        .graph {
+          width: 500px;
+          height: 200px;
+        }*/
+      }
     </style>
-
   </head>
 
   <body>
-    <h1>Productivity</h1>
-    <p>Hi there, and welcome to my Productivity Project. My name is Tiffany Qi, and I study Business Administration at UC Berkeley. Since I started college, I have been tracking my productivity through Google Calendar, then migrating the data onto a spreadsheet through a calendar calculator application I built called <a href="https://github.com/tiffanyqi/calenTools">CalenTools</a> for the command line. With this information, I was able to pull up an analysis on how time management, grades, units, and class sizes all correlate using Google Charts. Check it out!</p>
 
-    <h2>My Diary: Getting Data</h2>
-    <p>I am a Google Calendar Super User, and I am quite proud of that fact. Since November 2012, I have consistenly logged my productive (and non-productive) moments of my life. As such, I am able to go back to any given day and reveal all the moments and feelings of that particular day. This improves my memory and gives me helpful insights along the way. Below are a couple of examples of a given week, one is of October 2014, while the other is more recent at December 2015, which also happened to be the week of final exams.</p>
+    <div id="topbar">
+      <a href="#top"><div class="topbar-item">About</div></a>
+      <a href="#dept"><div class="topbar-item">Department</div></a>
+      <a href="#time"><div class="topbar-item">Over Time</div></a>
+      <a href="#ind"><div class="topbar-item">Individual</div></a>
+    </div>
 
-    <img src="../../assets/img/work/oct14.png">
-    <img src="../../assets/img/work/dec15.png">
+    <h1 id="top">Correlations between Time, Grades, and More</h1>
+    <p>Hi there, and welcome to my Productivity Project. Since I started college at UC Berkeley, I have been tracking my productivity through Google Calendar, then migrating the data onto a spreadsheet through a calculator application I built called <a href="https://github.com/tiffanyqi/calenTools">CalenTools</a> for the command line. With this information, I thought it wold be fun to take all this data, analyze it, and make some conclusions about how time management, grades, units, and class sizes all correlate using Google Charts. Check it out!</p>
 
-    <p>Each week, I calculate how much time I spend in each given calendar, further calculating statistics about each class and activity that I pursue. As such, I have three years and counting worth of quantifiable data on my productivity.</p>
 
     <h2>About Me</h2>
-    <p>I thought it would be fun to take all this data, analyze it, and make some conclusions that could potentially be applied to students wondering whether time and grades are a thing. Hopefully this helps.</p>
-
-    <p>About me first: I primarily took classes in the Undergraduate Business department. There are two data points on some of the graphs that are clear outliers on the right; CS 61A (Structure and Interpretation of Computer Programs) and CS 61B (Data Structures), two very difficult classes for me. As such, I spent a lot of time (>300 hours for each) and received mediocre grades. This data is specialized (and biased) towards the classes and departments that I was a part of.</p>
+    <p>My name is <a href="../../../index">Tiffany Qi</a>, and I study Business Administration at UC Berkeley. I primarily took classes in the Undergraduate Business department, but have dabbled into language-related courses, psychology, and computer science. As such, this data hinges on those specific areas, and thus is not fully comprehensive.</p>
 
     <p>In particular, I am interested in these points:
       <ul>
         <li>whether time spent, units, or class size and grades have any correlation,</li>
+        <li>whether statistics within departments have any correlation,</li>
         <li>whether grade deflation is really a concept at Berkeley,</li>
+        <li>how my grades and academic time commitment change over time,</li>
         <li>and how my grades compare with the average grades of the class and of the department.</li>
       </ul>
     </p>
 
-    <p>Let's go!</p>
+    <p>As both time and grades are a part of every analysis, I have broken down my findings into three different pieces: <strong>Department</strong>, <strong>Time</strong>, and <strong>Individual</strong> results. Department refers more to comparisons within my, average class, and department statistics. Over Time, shows my individual statistics over time to see if there are any changes in habits, grades, or time spent. Finally Individual is where I throw everything else in the end and see what they look like. But first, let's look at how I compiled this data.</p>
 
-    <h2>Grades & Time</h2>
+    <h2>My Diary: Getting Data</h2>
+    <p>I am a Google Calendar Super User, and I am quite proud of that fact. Since November 2012, I have consistently logged my productive (and non-productive) moments of my life. As such, I am able to go back to any given day and reveal all the moments and feelings of that particular day. This improves my memory and gives me helpful insights along the way. Below are a couple of examples of a given week, one is of October 2014, while the other is more recent at December 2015, which also happened to be the week of final exams.</p>
 
-    <!-- <div id="DeptTime" style="width: 600px; height: 400px;"></div> -->
-    <div id="GradeVAverage" style="width: 600px; height: 400px;"></div>
-    <!-- <div id="thetitle" style="width: 600px; height: 400px;"></div> -->
+    <img class="calendar" src="../../assets/img/work/oct14.png">
+    <p>You can see that each category, class, homework, gaming, or hygiene is represented by a different color calendar. Usually I describe what I did during that period of time, and thus I am able to remember exactly what I did in a day.</p>
+
+    <p>Each week, I calculate how much time I spend in each given calendar, further calculating statistics about each class and activity that I pursue. As such, I have three years and counting worth of quantifiable data on my productivity.</p>
+    <img class="calendar" src="../../assets/img/work/dec15.png">
+
+
+    <h2 id="dept">Results Part 1: Departmental Conclusions</h2>
+    <p>In this section, I will be looking specifically at clumps of classes within specific departments, most of which are in UGBA, CS, Chinese, and Linguistics; the four departments with more than 3 classes in them.</p>
+
+    <div class="graph-tall" id="DeptTime"></div>
+    <p>As evidenced by this graph,</p>
+
+    <div class="graph-short" id="DeptGrade"></div>
+
+
+    <p>There are two data points that are clear outliers on the right; CS 61A (Structure and Interpretation of Computer Programs) and CS 61B (Data Structures), two very difficult classes for me. As such, I spent a lot of time (>300 hours for each) and received mediocre grades.</p>
+
+    <!-- <div class="graph" id="GradeVAverage"></div> -->
+    <!-- <div class="graph" id="thetitle"></div> -->
+
   </body>
 
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script type="text/javascript">
-      google.load('visualization', '1');
+      google.load("visualization", "1", {packages:["corechart"]})
 
-      //**Dept Spreadsheet
-      // time spent by dept, with OH, class time, and hw in a stacked bar chart
-      // average grades by dept, with my scores, class, and department grades, line
-
-      //**Semester Spreadsheet
-      // time shown over time, with OH, class, hw, and activities in a stacked bar
-      // semester GPA shown over time, with my scores mostly in a scatter
-
-      //**Aggregated Spreadsheet
-      //
-
-      // time spent by dept, with OH, class time, and hw in a stacked bar chart
-      // google.setOnLoadCallback(drawDeptTime);
-      // function drawDeptTime() {
-      //   var wrapper = new google.visualization.ChartWrapper({
-      //     chartType: 'BarChart',
-      //     dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=991005748',
-      //     query: 'SELECT A,H,I,J,O',
-      //     options: {
-      //       'title': 'Grade Received vs. Percentage Received', 
-      //       'legend': 'none',
-      //       'vAxis': {'title': 'Time Spent (Hours)'},
-      //       'hAxis': {'title': 'Department'}
-      //     },
-      //     isStacked: true,
-      //     containerId: 'DeptTime'
-      //   });
-      //   wrapper.draw()
-      // }
-
-      // draws the grade received vs. average time spent
-      google.setOnLoadCallback(drawGradeVAverage);
-      function drawGradeVAverage() {
+      // time spent by dept, with OH, class time, and hw in a stacked column chart
+      google.setOnLoadCallback(drawDeptTime);
+      function drawDeptTime() {
         var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=0',
-          query: 'SELECT M,E',
+          chartType: 'ColumnChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=991005748',
+          query: 'SELECT A,H,I,J,O',
           options: {
-            'title': 'Average Time Spent vs. Grade Received', 
-            'legend': 'none',
-            'hAxis': {'title': 'Average Time Spent (hours)'},
-            'vAxis': {'title': 'Grade Received (GPA)'}
+            'title': 'Time Spent on Classes by Department', 
+            'legend': {'position': 'top'},
+            'vAxis': {'title': 'Time Spent (Hours)'},
+            'hAxis': {'title': 'Department'},
+            'bar': {'groupWidth': '75%'},
+            'isStacked': 'true'
           },
-          containerId: 'GradeVAverage'
+          containerId: 'DeptTime'
         });
         wrapper.draw()
       }
+
+      //  in a stacked column chart
+      google.setOnLoadCallback(drawDeptGrade);
+      function drawDeptGrade() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'Line',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=991005748',
+          query: 'SELECT A,C,D,E',
+          containerId: 'DeptGrade'
+        });
+        wrapper.draw()
+      }
+
+    // function drawGID() {
+    //   var queryString = encodeURIComponent('SELECT A,H,I,J,O');
+
+    //   var query = new google.visualization.Query(
+    //       'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=991005748' + queryString);
+    //   query.send(handleQueryResponse);
+    // }
+
+    // function handleQueryResponse(response) {
+    //   if (response.isError()) {
+    //     alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+    //     return;
+    //   }
+
+    //   var data = response.getDataTable();
+    //   var chart = new google.visualization.ColumnChart(document.getElementById('DeptTime'));
+    //   chart.draw(data, { height: 400 });
+    // }
+
+      // draws the grade received vs. average time spent
+      // google.setOnLoadCallback(drawGradeVAverage);
+      // function drawGradeVAverage() {
+      //   var wrapper = new google.visualization.ChartWrapper({
+      //     chartType: 'ScatterChart',
+      //     dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=0',
+      //     query: 'SELECT M,E',
+      //     options: {
+      //       'title': 'Average Time Spent vs. Grade Received', 
+      //       'legend': 'none',
+      //       'hAxis': {'title': 'Average Time Spent (hours)'},
+      //       'vAxis': {'title': 'Grade Received (GPA)'}
+      //     },
+      //     containerId: 'GradeVAverage'
+      //   });
+      //   wrapper.draw()
+      // }
 
       // 
       // google.setOnLoadCallback(visfunction);
@@ -109,6 +208,19 @@
       //   });
       //   wrapper.draw()
       // }
+
+      // http://www.abeautifulsite.net/smoothly-scroll-to-an-element-without-a-jquery-plugin-2/
+      $('a[href^="#"]').on('click', function(event) {
+
+          var target = $( $(this).attr('href') );
+
+          if( target.length ) {
+              event.preventDefault();
+              $('html, body').animate({
+                  scrollTop: target.offset().top
+              }, 700);
+          }
+      });
 
     </script>
 
