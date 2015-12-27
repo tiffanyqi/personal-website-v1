@@ -1,36 +1,78 @@
 <html>
   <head>
+
+    <style>
+    </style>
+
   </head>
 
-  <body style="margin: auto">
-    <div id="GradeVPercent" style="width: 600px; height: 400px;"></div>
+  <body>
+    <h1>Productivity</h1>
+    <p>Hi there, and welcome to my Productivity Project. My name is Tiffany Qi, and I study Business Administration at UC Berkeley. Since I started college, I have been tracking my productivity through Google Calendar, then migrating the data onto a spreadsheet through a calendar calculator application I built called <a href="https://github.com/tiffanyqi/calenTools">CalenTools</a> for the command line. With this information, I was able to pull up an analysis on how time management, grades, units, and class sizes all correlate using Google Charts. Check it out!</p>
+
+    <h2>My Diary: Getting Data</h2>
+    <p>I am a Google Calendar Super User, and I am quite proud of that fact. Since November 2012, I have consistenly logged my productive (and non-productive) moments of my life. As such, I am able to go back to any given day and reveal all the moments and feelings of that particular day. This improves my memory and gives me helpful insights along the way. Below are a couple of examples of a given week, one is of October 2014, while the other is more recent at December 2015, which also happened to be the week of final exams.</p>
+
+    <img src="../../assets/img/work/oct14.png">
+    <img src="../../assets/img/work/dec15.png">
+
+    <p>Each week, I calculate how much time I spend in each given calendar, further calculating statistics about each class and activity that I pursue. As such, I have three years and counting worth of quantifiable data on my productivity.</p>
+
+    <h2>About Me</h2>
+    <p>I thought it would be fun to take all this data, analyze it, and make some conclusions that could potentially be applied to students wondering whether time and grades are a thing. Hopefully this helps.</p>
+
+    <p>About me first: I primarily took classes in the Undergraduate Business department. There are two data points on some of the graphs that are clear outliers on the right; CS 61A (Structure and Interpretation of Computer Programs) and CS 61B (Data Structures), two very difficult classes for me. As such, I spent a lot of time (>300 hours for each) and received mediocre grades. This data is specialized (and biased) towards the classes and departments that I was a part of.</p>
+
+    <p>In particular, I am interested in these points:
+      <ul>
+        <li>whether time spent, units, or class size and grades have any correlation,</li>
+        <li>whether grade deflation is really a concept at Berkeley,</li>
+        <li>and how my grades compare with the average grades of the class and of the department.</li>
+      </ul>
+    </p>
+
+    <p>Let's go!</p>
+
+    <h2>Grades & Time</h2>
+
+    <!-- <div id="DeptTime" style="width: 600px; height: 400px;"></div> -->
     <div id="GradeVAverage" style="width: 600px; height: 400px;"></div>
-    <div id="GradeVHomework" style="width: 600px; height: 400px;"></div>
-    <div id="HomeworkVAverage" style="width: 600px; height: 400px;"></div>
-    <div id="GradeVSize" style="width: 600px; height: 400px;"></div>
+    <!-- <div id="thetitle" style="width: 600px; height: 400px;"></div> -->
   </body>
 
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
       google.load('visualization', '1');
 
-      // draws the grade to percent graph
-      google.setOnLoadCallback(drawGradeVPercent);
-      function drawGradeVPercent() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'BubbleChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=0',
-          query: 'SELECT B,E,L,G',
-          options: {
-            'title': 'Grade Received vs. Percentage Received', 
-            'legend': 'none',
-            'hAxis': {'title': 'Grade Received (GPA)'},
-            'vAxis': {'title': 'Percentage Received'}
-          },
-          containerId: 'GradeVPercent'
-        });
-        wrapper.draw()
-      }
+      //**Dept Spreadsheet
+      // time spent by dept, with OH, class time, and hw in a stacked bar chart
+      // average grades by dept, with my scores, class, and department grades, line
+
+      //**Semester Spreadsheet
+      // time shown over time, with OH, class, hw, and activities in a stacked bar
+      // semester GPA shown over time, with my scores mostly in a scatter
+
+      //**Aggregated Spreadsheet
+      //
+
+      // time spent by dept, with OH, class time, and hw in a stacked bar chart
+      // google.setOnLoadCallback(drawDeptTime);
+      // function drawDeptTime() {
+      //   var wrapper = new google.visualization.ChartWrapper({
+      //     chartType: 'BarChart',
+      //     dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=991005748',
+      //     query: 'SELECT A,H,I,J,O',
+      //     options: {
+      //       'title': 'Grade Received vs. Percentage Received', 
+      //       'legend': 'none',
+      //       'vAxis': {'title': 'Time Spent (Hours)'},
+      //       'hAxis': {'title': 'Department'}
+      //     },
+      //     isStacked: true,
+      //     containerId: 'DeptTime'
+      //   });
+      //   wrapper.draw()
+      // }
 
       // draws the grade received vs. average time spent
       google.setOnLoadCallback(drawGradeVAverage);
@@ -38,71 +80,35 @@
         var wrapper = new google.visualization.ChartWrapper({
           chartType: 'ScatterChart',
           dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=0',
-          query: 'SELECT E,L',
+          query: 'SELECT M,E',
           options: {
-            'title': 'Grade Received vs. Average Time Spent', 
+            'title': 'Average Time Spent vs. Grade Received', 
             'legend': 'none',
-            'hAxis': {'title': 'Grade Received (GPA)'},
-            'vAxis': {'title': 'Average Time Spent (hours)'}
+            'hAxis': {'title': 'Average Time Spent (hours)'},
+            'vAxis': {'title': 'Grade Received (GPA)'}
           },
           containerId: 'GradeVAverage'
         });
         wrapper.draw()
       }
 
-      // draws the grade received vs. homework
-      google.setOnLoadCallback(drawGradeVTotal);
-      function drawGradeVTotal() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=0',
-          query: 'SELECT E,H',
-          options: {
-            'title': 'Grade Received vs. Time Spent on Homework', 
-            'legend': 'none',
-            'hAxis': {'title': 'Grade Received (GPA)'},
-            'vAxis': {'title': 'Homework (hours)'}
-          },
-          containerId: 'GradeVHomework'
-        });
-        wrapper.draw()
-      }
-
-      // draws the time spent on homework to average time
-      google.setOnLoadCallback(drawHomeworkVAverage);
-      function drawHomeworkVAverage() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=0',
-          query: 'SELECT H,L',
-          options: {
-            'title': 'Time Spent on Homework to Average Time Spent on the Class', 
-            'legend': 'none',
-            'hAxis': {'title': 'Homework (hours)'},
-            'vAxis': {'title': 'Average time (hours)'}
-          },
-          containerId: 'HomeworkVAverage'
-        });
-        wrapper.draw()
-      }
-
-      // draws the grade received vs the class size
-      google.setOnLoadCallback(drawGradeVSize);
-      function drawGradeVSize() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=0',
-          query: 'SELECT E,N',
-          options: {
-            'title': 'Grade Received vs. Class Size', 
-            'legend': 'none',
-            'hAxis': {'title': 'Grade Received (GPA)'},
-            'vAxis': {'title': 'Class size (enrollment figures)'}
-          },
-          containerId: 'GradeVSize'
-        });
-        wrapper.draw()
-      }
+      // 
+      // google.setOnLoadCallback(visfunction);
+      // function visfunction() {
+      //   var wrapper = new google.visualization.ChartWrapper({
+      //     chartType: 'ScatterChart',
+      //     dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=0',
+      //     query: 'SELECT thehaxis vs thevaxis',
+      //     options: {
+      //       'title': '', 
+      //       'legend': 'none',
+      //       'hAxis': {'title': 'thehaxis'},
+      //       'vAxis': {'title': 'thevaxis'}
+      //     },
+      //     containerId: 'thetitle'
+      //   });
+      //   wrapper.draw()
+      // }
 
     </script>
 
