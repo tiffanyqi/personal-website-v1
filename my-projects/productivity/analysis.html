@@ -32,9 +32,12 @@
         z-index: 100;
         background: #0057e7;
         text-align: center;
+        display: table;
       }
       .topbar-item {
-        display: inline-block;
+        display: table-cell;
+        float: none;
+        width: 1%; /* Why? */
         padding: 20px 70px;
         transition: 0.5s;
         text-align: center;
