@@ -9,8 +9,7 @@
       }
       .graph-tall, .graph-short {
         text-align: center;
-        margin: auto;
-        padding: 15px;
+        margin: 20px auto 5px auto;
       }
       .graph-tall {
         width: 800px;
@@ -22,26 +21,29 @@
       }      
       #topbar {
         margin-top: -50px;
-        padding: 10px;
+        margin-left: -250px;
         position: fixed;
-        background: white;
         opacity: 0.8;
         width: 100%;
         z-index: 100;
+        background: #0057e7;
+        text-align: center;
       }
       .topbar-item {
         display: inline-block;
-        padding: 10px 50px;
+        padding: 20px 70px;
         transition: 0.5s;
         text-align: center;
         margin: auto;
+        float: left;
       }
       .topbar-item:hover {
-        background: blue;
+        background: #d62d20;
         transition: 0.5s;
       }
       #topbar a {
         text-decoration: none;
+        color: white;
       }
       body {
         margin: 50px 250px;
@@ -54,6 +56,12 @@
       @media screen and (max-width: 1000px) {
         body {
           margin: 50px 50px;
+        }
+        #topbar {
+          margin-left: -50px;
+        }
+        .topbar-item {
+          padding: 20px 40px;
         }
 /*        .graph {
           width: 500px;
@@ -108,9 +116,7 @@
     <p>As evidenced by this graph,</p>
 
     <div class="graph-short" id="DeptGrade"></div>
-
-
-    <p>There are two data points that are clear outliers on the right; CS 61A (Structure and Interpretation of Computer Programs) and CS 61B (Data Structures), two very difficult classes for me. As such, I spent a lot of time (>300 hours for each) and received mediocre grades.</p>
+    <p>With this graph</p>
 
     <!-- <div class="graph" id="GradeVAverage"></div> -->
     <!-- <div class="graph" id="thetitle"></div> -->
