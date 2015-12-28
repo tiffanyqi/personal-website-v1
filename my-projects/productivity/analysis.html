@@ -1,5 +1,9 @@
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
   <head>
+
+    <title>Productivity Project :: Tiffany Qi</title>
+    <meta charset="UTF-8">
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
 
     <style>
@@ -18,7 +22,7 @@
       .graph-short {
         width: 700px;
         height: 300px;
-      }      
+      }
       #topbar {
         margin-top: -50px;
         margin-left: -250px;
@@ -49,6 +53,7 @@
         margin: 50px 250px;
         font-family: 'Raleway', sans-serif;
         line-height: 1.7;
+        text-align: justify;
       }
       h1, h2 {
         padding-top: 70px;
@@ -73,12 +78,12 @@
 
   <body>
 
-    <div id="topbar">
-      <a href="#top"><div class="topbar-item">About</div></a>
-      <a href="#dept"><div class="topbar-item">Department</div></a>
-      <a href="#time"><div class="topbar-item">Over Time</div></a>
-      <a href="#ind"><div class="topbar-item">Individual</div></a>
-    </div>
+    <nav id="topbar">
+      <a href="#top" class="topbar-item">About</a>
+      <a href="#dept" class="topbar-item">Department</a>
+      <a href="#time" class="topbar-item">Over Time</a>
+      <a href="#ind" class="topbar-item">Individual</a>
+    </nav>
 
     <h1 id="top">Correlations between Time, Grades, and More</h1>
     <p>Hi there, and welcome to my Productivity Project. Since I started college at UC Berkeley, I have been tracking my productivity through Google Calendar, then migrating the data onto a spreadsheet through a calculator application I built called <a href="https://github.com/tiffanyqi/calenTools">CalenTools</a> for the command line. With this information, I thought it wold be fun to take all this data, analyze it, and make some conclusions about how time management, grades, units, and class sizes all correlate using Google Charts. Check it out!</p>
@@ -87,26 +92,25 @@
     <h2>About Me</h2>
     <p>My name is <a href="../../../index">Tiffany Qi</a>, and I study Business Administration at UC Berkeley. I primarily took classes in the Undergraduate Business department, but have dabbled into language-related courses, psychology, and computer science. As such, this data hinges on those specific areas, and thus is not fully comprehensive.</p>
 
-    <p>In particular, I am interested in these points:
-      <ul>
-        <li>whether time spent, units, or class size and grades have any correlation,</li>
-        <li>whether statistics within departments have any correlation,</li>
-        <li>whether grade deflation is really a concept at Berkeley,</li>
-        <li>how my grades and academic time commitment change over time,</li>
-        <li>and how my grades compare with the average grades of the class and of the department.</li>
-      </ul>
-    </p>
+    <p>In particular, I am interested in these points:</p>
+    <ul>
+      <li>whether time spent, units, or class size and grades have any correlation,</li>
+      <li>whether statistics within departments have any correlation,</li>
+      <li>whether grade deflation is really a concept at Berkeley,</li>
+      <li>how my grades and academic time commitment change over time,</li>
+      <li>and how my grades compare with the average grades of the class and of the department.</li>
+    </ul>
 
     <p>As both time and grades are a part of every analysis, I have broken down my findings into three different pieces: <strong>Department</strong>, <strong>Time</strong>, and <strong>Individual</strong> results. Department refers more to comparisons within my, average class, and department statistics. Over Time, shows my individual statistics over time to see if there are any changes in habits, grades, or time spent. Finally Individual is where I throw everything else in the end and see what they look like. But first, let's look at how I compiled this data.</p>
 
     <h2>My Diary: Getting Data</h2>
     <p>I am a Google Calendar Super User, and I am quite proud of that fact. Since November 2012, I have consistently logged my productive (and non-productive) moments of my life. As such, I am able to go back to any given day and reveal all the moments and feelings of that particular day. This improves my memory and gives me helpful insights along the way. Below are a couple of examples of a given week, one is of October 2014, while the other is more recent at December 2015, which also happened to be the week of final exams.</p>
 
-    <img class="calendar" src="../../assets/img/work/oct14.png">
+    <img class="calendar" src="../../assets/img/work/oct14.png" alt="October 2014">
     <p>You can see that each category, class, homework, gaming, or hygiene is represented by a different color calendar. Usually I describe what I did during that period of time, and thus I am able to remember exactly what I did in a day.</p>
 
     <p>Each week, I calculate how much time I spend in each given calendar, further calculating statistics about each class and activity that I pursue. As such, I have three years and counting worth of quantifiable data on my productivity.</p>
-    <img class="calendar" src="../../assets/img/work/dec15.png">
+    <img class="calendar" src="../../assets/img/work/dec15.png" alt="December 2015">
 
 
     <h2 id="dept">Results Part 1: Departmental Conclusions</h2>
@@ -121,7 +125,6 @@
     <!-- <div class="graph" id="GradeVAverage"></div> -->
     <!-- <div class="graph" id="thetitle"></div> -->
 
-  </body>
 
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
@@ -136,7 +139,7 @@
           dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=991005748',
           query: 'SELECT A,H,I,J,O',
           options: {
-            'title': 'Time Spent on Classes by Department', 
+            'title': 'Time Spent on Classes by Department',
             'legend': {'position': 'top'},
             'vAxis': {'title': 'Time Spent (Hours)'},
             'hAxis': {'title': 'Department'},
@@ -187,7 +190,7 @@
       //     dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=0',
       //     query: 'SELECT M,E',
       //     options: {
-      //       'title': 'Average Time Spent vs. Grade Received', 
+      //       'title': 'Average Time Spent vs. Grade Received',
       //       'legend': 'none',
       //       'hAxis': {'title': 'Average Time Spent (hours)'},
       //       'vAxis': {'title': 'Grade Received (GPA)'}
@@ -197,7 +200,7 @@
       //   wrapper.draw()
       // }
 
-      // 
+      //
       // google.setOnLoadCallback(visfunction);
       // function visfunction() {
       //   var wrapper = new google.visualization.ChartWrapper({
@@ -205,7 +208,7 @@
       //     dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=0',
       //     query: 'SELECT thehaxis vs thevaxis',
       //     options: {
-      //       'title': '', 
+      //       'title': '',
       //       'legend': 'none',
       //       'hAxis': {'title': 'thehaxis'},
       //       'vAxis': {'title': 'thevaxis'}
@@ -230,5 +233,6 @@
 
     </script>
 
+  </body>
 
 </html>
