@@ -2,7 +2,7 @@
 <html lang="en-US">
   <head>
 
-    <title>Productivity Project | Tiffany Qi</title>
+    <title>Productivity | Tiffany Qi</title>
     <meta charset="UTF-8">
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
 
@@ -80,10 +80,10 @@
       <a href="#ind" class="topbar-item">Individual</a>
     </nav>
 
-    <h1 id="top">Correlations between Time, Grades, and More</h1>
-    <p>Hi there, and welcome to my Productivity Project. Since I started college at UC Berkeley, I have been tracking my productivity through Google Calendar, then migrating the data onto a spreadsheet through a calculator application I built called <a href="https://github.com/tiffanyqi/calenTools">CalenTools</a> for the command line. With this information, I thought it wold be fun to take all this data, analyze it, and make some conclusions about how time management, grades, units, and class sizes all correlate using Google Charts. Check it out!</p>
+    <h1 id="top">Correlations between Habits and Grades in College</h1>
+    <p>Hi there, and welcome to my Productivity Project. Since I started college at UC Berkeley, I have been tracking my productivity through Google Calendar, then migrating the data onto a spreadsheet through a calculator application I built called <a href="https://github.com/tiffanyqi/calenTools">CalenTools</a> for the command line. With this information, I thought it wold be fun to take all this data, analyze it, and make some conclusions about how time management, sleep, grades, units, and class sizes all correlate using Google Charts. Check it out!</p>
 
-    <p>Note: Each individual analysis isn't super in depth. My knowledge of data analysis comprises manipulation of spreadsheets and most basic statistics knowledge. As such, I am not an expert. For those who are experts and wish to buff these stats with more in-depth analyses, feel free to shoot me an <a href="mailto:hello@tiffanyqi.com">email</a>!</p>
+    <p>Note: Each individual analysis isn't super in depth. My knowledge of data analysis comprises manipulation of spreadsheets and most basic statistics knowledge. As such, I am not an expert. For those who are experts and wish to buff these stats with more in-depth analyses, feel free to shoot me an <a href="mailto:hello@tiffanyqi.com">email</a>! If you're curious how this looks code-wise (disclaimer: there's a lot of repeated code because charts), check out the <a href="https://github.com/tiffanyqi/tiffanyqi.github.io/blob/master/my-projects/productivity/analysis.html">code here</a>.</p>
 
 
     <h2>About Me</h2>
@@ -93,6 +93,8 @@
 
     <p>Something that you may not be able to see here is that I typically took heavy workloads throughout my college career, taking an average of 17.3 units at UC Berkeley per semester (where most students tend to take 15-16, or 4 classes). I took 5 classes a semester, and frequently tacked on Pass/No Pass classes (such as academic interning, computer science, breadth or teaching techniques) on top of that.</p>
 
+    <p>I spend a lot of my time on extra-curricular activities. It has now comprised approximately more than half of all my productive time. I'm somewhat of a workaholic, but I enjoy these activities considerably. Thus, even though I consider "fun" (shown later in the analysis) to be independent from my work, it is often blended together for me. For now, "fun" is defined as time set aside for something non-work related.</p>
+
     <p>I consider myself to be an above-average student. I did pretty well in the beginning of my college career, receiving GPAs well above 3.6, before I started to take my actual major requirements (where everything is curved), and my cumulative GPA has fallen consisently. However, the average GPA for a graduate at Haas is a 3.4, so my current GPA of 3.52 technically puts me above average.</p>
 
     <p>I am interested in these points:</p>
@@ -101,6 +103,7 @@
       <li>whether statistics within departments have any correlation,</li>
       <li>whether grade deflation is really a concept at Berkeley,</li>
       <li>how a student's grades and academic time commitment change over time,</li>
+      <li>how sleep factors into all of this,</li>
       <li>and how a student's grades compare with the average grades of the class and of the department.</li>
     </ul>
 
@@ -108,7 +111,7 @@
 
 
     <h2>My Diary: Getting Time Data</h2>
-    <p>I am a Google Calendar Super User, and I am quite proud of that fact. Since November 2012, I have consistently logged my productive (and non-productive) moments of my life. As such, I am able to go back to any given day and reveal all the moments and feelings of that particular day. This improves my memory and gives me helpful insights along the way. Below are a couple of examples of a given week, one is of October 2014, while the other is more recent at December 2015, which also happened to be the week of final exams.</p>
+    <p>I am a Google Calendar Super User, and I am quite proud of that fact. Since November 2012, I have consistently logged my productive (and non-productive) moments of my life. (So most of Fall 2012 is an estimate of time spent except for the last two weeks.) As such, I am able to go back to any given day and reveal all the moments and feelings of that particular day. This improves my memory and gives me helpful insights along the way. Below are a couple of examples of a given week, one is of October 2014, while the other is more recent at December 2015, which also happened to be the week of final exams.</p>
 
     <img class="calendar" src="../../assets/img/work/oct14.png" alt="October 2014">
     <p>You can see that each category, class, homework, gaming, or hygiene is represented by a different color calendar. Usually I describe what I did during that period of time, and thus I am able to remember exactly what I did in a day.</p>
@@ -118,12 +121,18 @@
       <li>Class</li>
       <li>Homework & Studying</li>
       <li>Jobs, Internships, & Activities</li>
+      <li>Job Searching</li>
+      <li>Sleep</li>
+      <li>Hobbies (a recent addition)</li>
+      <li>Games & Time Wasters</li>
+      <li>Social / Calls</li>
+      <li>Hearts Calendar</li>
     </ul>
-    <p>I split up each calendar and attributed it to each given category, which includes the specific class and activity. As such, I have three years and counting worth of quantifiable data on my productivity.</p>
+    <p>I split up each calendar and attributed it to each given category, which includes the specific class and activity. As such, I calculate productively strictly from the first four calendars. "Fun" is calcuated from hobbies, games & time wasters, social (which in itself is spending time talking or doing something with someone.), and the hearts calendar (self explanatory). I have three years and counting worth of quantifiable data on my productive (and not so productive) moments.</p>
     <img class="calendar" src="../../assets/img/work/dec15.png" alt="December 2015">
 
     <h2>Other Sources of Data</h2>
-    <p>In addition to time, I also calculate grades very closely. This is typically a spreadsheet with every assignment and their weights to either recreate the exact percentage received at the end, or to estimate a percentage. About half of the percentages here are likely estimates. I would prefer to keep how I calculate this data private.</p>
+    <p>In addition to time, I also calculate grades very closely. This is typically a spreadsheet with every assignment and their weights to either recreate the exact percentage received at the end, or to estimate a percentage. About half of the percentages here are likely estimates.</p>
 
     <p>I also have some average grades on the site as well. I went on <a href="http://schedulebuilder.berkeley.edu">Schedule Builder</a>, a UC Berkeley resource, to find the average grade associate with my class and its given semester. If a particular semester wasn't given, I took a look at previous semesters, and if was a constant grade average, I used that one. If it didn't exist, I estimated.</p>
 
@@ -132,7 +141,7 @@
 
     <!-- A NEW PART IS HERE -->
     <h2 id="time">Results Part 1: Productivity Over Time</h2>
-    <p>Let's tackle the fourth point first: <em>how does a student's grades and academic time commitment change over time</em>? Here, we'll be toggling grades, units, and time commitment.</p>
+    <p>Let's tackle the fourth point first: <em>how does a student's grades and academic time commitment, and overall college behaviors change over time</em>? Here, we'll be toggling grades, units, fun, sleep, and time commitment.</p>
 
     <div class="graph-short" id="SemVCumulative"></div>
     <p>Erm, I definitely started sucking later in my college career. Why though? Maybe we can see where I went wrong in later analyses.</p>
@@ -143,11 +152,25 @@
     <div class="graph-tall" id="SemTime"></div>
     <p>The above graph is a visual display of all the time I spent in each semester on HW (homework & studying outside of class), Class time, OH (office hours, or time asking for help), and Activities (extra-curriculars, jobs, internships--basically anything that wasn't class related). In Fall 2014, I was the least motivated academically but still spent more than half of my semester at my part-time job, tutoring, lab assisting, and spinning up a new student organization.</p>
 
-    <p>In terms of motivation, I peaked in Fall 2014 and tried the best I could to be a productive member of student body. I still don't know how I managed to spend 1000+ plus hours in a semester. For context, if each semester is 16 weeks long, each week having 7 days and 24 hours in one day, then the duration of one semester is 24 x 7 x 16 = <strong>2,688 hours</strong> long. According to these numbers, I spent over <strong>40%</strong> of my time productively. If one assumes one sleeps an average of 7 hours a day, the percentage of time I would have spent sleeping in one semester would be a little under 30% (the real number was actually 30.6%), <strong>I spent more time working than I did sleeping</strong>. to put this into perspective, a full time job (assuming 40 hours/week) would be approximately 24% of time spent. Throughout my college career, I was productive approximately 25% to 42% of the time.</p>
+    <p>In terms of motivation, I peaked in Fall 2014 and tried the best I could to be a productive member of student body. I still don't know how I managed to spend 1000+ plus hours in a semester. For context, if each semester is 16 weeks long, each week having 7 days and 24 hours in one day, then the duration of one semester is 24 x 7 x 16 = <strong>2,688 hours</strong> long. According to these numbers, I spent over <strong>40%</strong> of my time productively. If one assumes one sleeps an average of 7 hours a day, the percentage of time I would have spent sleeping in one semester would be a little under 30% (in reality, I slept 30.6% of the semester), <strong>I spent more time working than I did sleeping</strong>. To put this into perspective, a full time job (assuming 40 hours/week) would be approximately 24% of time spent. Throughout my college career, I was productive approximately 25% to 42% of the time. (The first calendar depicted a typical week in Fall 2014, you can see how it looked.)</p>
 
-    <p>So yeah, even though I was little crazy when it came to activities, the time I spent on my academics decreased. The most time I spent at all on my classes was in Spring 2013 (still a freshman in college), before steadily decreasing since. Let's compare this time commitment to academics directly to my grades then.</p>
+    <p>So yeah, even though I was little crazy when it came to activities, the time I spent on my academics decreased. The most time I spent on my classes was in Spring 2013 (still a freshman in college), before steadily decreasing since.</p>
 
-    
+    <p>I also calculated statistics for Fun and Sleep. Shown below:</p>
+
+    <div class="graph-short" id="SemOtherTime"></div>
+    <p>While sleep pretty much stayed the same, with marginal improvements as the semesters went by, I considerably enjoyed myself later throughout my college career.</p>
+
+    <div class="graph-tall" id="CumTimeVGPA"></div>
+    <p>Here is a line graph that correlates my semesterly time spent to my cumulative GPA (to give a backwards time progression effect, since my GPA lowered every semester since I started). There's a LOT going here, as I compared every possible time effect (as shown in the graph above this one) to my GPA. Each syncronous bend and endpoints in the lines show a semester.</p>
+
+    <p>As mentioned earlier, even though time spent on homework and classes decreased over time (the green line), overall total productivity (teal) increased over time with the boost in activities (purple). All this is going on while grades decrease slowly.</p>
+
+    <p>Where does sleep factor into this? Not surprisingly, it is right under total productivity. The only two times it ever overtook the total productivity line was in Fall 2012 and Fall 2015, two opposite sides of the spectrum.</p>
+
+    <p>Next, I think it would be interesting to take all of this data and compare it with each other on a semester basis.</p>
+
+    <div class="graph-tall" id="SemTimeVGPA"></div>
 
 
     <!-- A NEW PART IS HERE -->
@@ -166,6 +189,7 @@
 
     <p>Let's dive into this possibly more deeply with the following individual statistics.</p>
 
+
     <!-- <div class="graph" id="GradeVAverage"></div> -->
     <!-- <div class="graph" id="thetitle"></div> -->
 
@@ -175,12 +199,14 @@
     <script type="text/javascript">
       google.load("visualization", "1", {packages:["corechart"]})
 
+      // SEMESTER DATA
+
       // comparing semester and cumulative gpas
       google.setOnLoadCallback(drawSemVCumulative);
       function drawSemVCumulative() {
         var wrapper = new google.visualization.ChartWrapper({
           chartType: 'Line',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=0',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=868686859',
           query: 'SELECT A,G,F',
           containerId: 'SemVCumulative'
         });
@@ -192,22 +218,19 @@
       function drawUnitsVGPA() {
         var wrapper = new google.visualization.ChartWrapper({
           chartType: 'Line',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=0',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=868686859',
           query: 'SELECT A,G,E',
-          options: {
-            'trendlines': { 0: {} },
-          },
           containerId: 'UnitsVGPA'
         });
         wrapper.draw()
       }
 
-      // 
+      // looking at productive time commitment by semester
       google.setOnLoadCallback(drawSemTime);
       function drawSemTime() {
         var wrapper = new google.visualization.ChartWrapper({
           chartType: 'ColumnChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=0',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=868686859',
           query: 'SELECT A,H,I,J,N',
           options: {
             'title': 'Time Spent Productively by Semester',
@@ -222,12 +245,58 @@
         wrapper.draw()
       }
 
+      // looking at fun/sleep by semester
+      google.setOnLoadCallback(drawSemOtherTime);
+      function drawSemOtherTime() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'ColumnChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=868686859',
+          query: 'SELECT A,Q,R',
+          options: {
+            'title': 'Time Spent Sleeping and Pleasurly by Semester',
+            'legend': {'position': 'top'},
+            'hAxis': {'title': 'Semester'},
+            'vAxis': {'title': 'Time Spent (Hours)'},
+            'bar': {'groupWidth': '50%'},
+            'isStacked': 'true'
+          },
+          containerId: 'SemOtherTime'
+        });
+        wrapper.draw()
+      }
+
+      // comparing cumulative gpa and time
+      google.setOnLoadCallback(drawCumTimeVGPA);
+      function drawCumTimeVGPA() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'Line',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=868686859',
+          query: 'SELECT F,H,I,J,M,N,O,Q,R',
+          containerId: 'CumTimeVGPA'
+        });
+        wrapper.draw()
+      }
+
+      // comparing semester gpa and time
+      google.setOnLoadCallback(drawSemTimeVGPA);
+      function drawSemTimeVGPA() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'Scatter',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=868686859',
+          query: 'SELECT G,H,I,J,M,N,O,Q,R',
+          containerId: 'SemTimeVGPA'
+        });
+        wrapper.draw()
+      }
+
+      // DEPARTMENT DATA
+
       // time spent by dept, with OH, class time, and hw in a stacked column chart
       google.setOnLoadCallback(drawDeptTime);
       function drawDeptTime() {
         var wrapper = new google.visualization.ChartWrapper({
           chartType: 'ColumnChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=991005748',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1ywocquCiOLCOF3PpEXK7J1Frexu3UMAPkBXYfz9d2eg/edit#gid=0',
           query: 'SELECT A,H,I,J,O',
           options: {
             'title': 'Time Spent on Classes by Department',
@@ -242,12 +311,12 @@
         wrapper.draw()
       }
 
-      //  in a stacked column chart
+      // all sorts of grades in a line graph
       google.setOnLoadCallback(drawDeptGrade);
       function drawDeptGrade() {
         var wrapper = new google.visualization.ChartWrapper({
           chartType: 'Line',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=991005748',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1ywocquCiOLCOF3PpEXK7J1Frexu3UMAPkBXYfz9d2eg/edit#gid=0',
           query: 'SELECT A,C,D,E',
           containerId: 'DeptGrade'
         });
@@ -258,8 +327,8 @@
       // google.setOnLoadCallback(visfunction);
       // function visfunction() {
       //   var wrapper = new google.visualization.ChartWrapper({
-      //     chartType: 'ScatterChart',
-      //     dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=0',
+      //     chartType: '',
+      //     dataSourceUrl: '',
       //     query: 'SELECT ',
       //     options: {
       //       'title': 'thehaxis vs thevaxis',
@@ -271,6 +340,11 @@
       //   });
       //   wrapper.draw()
       // }
+
+      // for scatterChart
+        // options: {
+        //     'trendlines': { '0': {} }          
+        //   }
 
       // http://www.abeautifulsite.net/smoothly-scroll-to-an-element-without-a-jquery-plugin-2/
       $('a[href^="#"]').on('click', function(event) {
