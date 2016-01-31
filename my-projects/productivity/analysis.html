@@ -11,7 +11,7 @@
         width: 100%;
         border: 1px solid black;
       }
-      .graph-tall, .graph-short, .graph-square {
+      .graph-tall, .graph-short {
         text-align: center;
         margin: 20px auto 5px auto;
       }
@@ -24,8 +24,10 @@
         height: 300px;
       }
       .graph-square {
-        width: 500px;
-        height: 500px;
+        width: 400px;
+        height: 400px;
+        /*float: left;*/
+        margin: 20px auto 5px auto;
       }
       #topbar {
         top: 0;
@@ -72,6 +74,12 @@
           padding: 15px 40px;
         }
       }
+      table {
+        margin: auto;
+      }
+      td {
+        padding: 10px;
+      }
     </style>
   </head>
 
@@ -79,45 +87,47 @@
 
     <nav id="topbar">
       <a href="#top" class="topbar-item">About</a>
-      <a href="#time" class="topbar-item">Over Time</a>
-      <a href="#dept" class="topbar-item">Department</a>
-      <a href="#ind" class="topbar-item">Individual</a>
+      <a href="#time" class="topbar-item">Time</a>
+      <a href="#grades" class="topbar-item">Grades</a>
+      <a href="#timeGrades" class="topbar-item">Time & Grades</a>
     </nav>
 
     <h1 id="top">Correlations between Habits and Grades in College</h1>
       <p>Hi there, and welcome to my Productivity Project. Since I started college at UC Berkeley, I have been tracking my productivity through Google Calendar, then migrating the data onto a spreadsheet through a calculator application I built called <a href="https://github.com/tiffanyqi/calenTools">CalenTools</a> for the command line. With this information, I thought it would be fun to take all this data, analyze it, and make some conclusions about how time management, sleep, fun, grades, units, and class sizes all correlate using Google Charts.</p>
 
-      <p>As such, this project is one that is a project that is an analysis of <strong>one person's life</strong>, and many conclusions should not be seriously applied to others. I do make some observations about the department, but these are very few. Check out the project below!</p>
+      <p>As such, this project is an analysis of <strong>one person's life</strong>, and many conclusions should not be seriously applied elsewhere. I do make some observations about the department, but these are very few. Check out the project below!</p>
 
     <h3>About Me</h3>
-      <p>My name is <a href="../../../index">Tiffany Qi</a>, and I study Business Administration at UC Berkeley. I primarily took classes in the Undergraduate Business department, but have dabbled into language-related courses, psychology, and computer science. As such, this data hinges on those specific areas, and thus is not fully comprehensive of all departments at Berkeley.</p>
+      <p>My name is <a href="../../../index">Tiffany Qi</a>, and I study Business Administration at UC Berkeley. I primarily took classes in the Undergraduate Business Administration department, but have dabbled into language-related courses, psychology, and computer science. As such, this data hinges on those specific areas, and thus is not fully comprehensive of all departments at Berkeley.</p>
 
-      <p>I am an above-average student, as the average GPA for a graduate at Haas is 3.4, and I have a 3.52 GPA. I did pretty well in the beginning of my college career, receiving GPAs well above 3.6, before it fell pretty consistently to 3.52.</p>
+      <p>I am an above-average student, as the average GPA for a graduate at Haas is 3.4, and I have a 3.52 GPA. I did pretty well when I first started college with a 3.8 my first semester, before falling pretty consistently to 3.52.</p>
 
       <p>I took a <em>lot</em> of classes outside of my major, and I typically took heavy workloads throughout my college career. I took 39 letter-graded classes in total, 17 of which were in my major, which means more than half of the classes I took here were not business-related! Most of these classes did not fulfill general education requirements. This is an average of 17.3 units and around 5 classes per semester, whereas most students tend to take 15-16 units and around 4 classes. On top of letter-graded units, I frequently tacked on Pass/No Pass classes (such as academic interning, computer science, breadth or teaching techniques) on top of that.</p>
 
-      <p>I spend a lot of my time on extra-curricular activities. It has now comprised approximately more than half of all my productive time. I'm somewhat of a workaholic, but I enjoy these activities considerably. Thus, even though I consider "fun" (shown later in the analysis) to be independent from my work, it is often blended together for me. For now, "fun" is defined as time set aside for something non-work related.</p>
+      <p>I spend a lot of my time on extra-curricular activities. It has now comprised more than half of all my productive time. I'm somewhat of a workaholic, but I enjoy these activities considerably. Thus, even though I consider "fun" (shown later in the analysis) to be independent from my work, it is often blended together for me. For now, "fun" is defined as time set aside for something non-work related.</p>
 
       <p>I am interested in these points:</p>
         <ul>
+          <li>how a student's grades and academic time commitment change over time,</li>
           <li>whether time spent, units, specific tests, or class size and grades have any correlation,</li>
           <li>whether statistics within departments have any correlation,</li>
           <li>whether grade deflation is really a concept at Berkeley,</li>
-          <li>how a student's grades and academic time commitment change over time,</li>
-          <li>how sleep and fun factors into all of this,</li>
+          <li>how sleep and fun factor into all of this,</li>
           <li>and how a student's grades compare with the average grades of the class and of the department.</li>
         </ul>
 
-      <p>As both time and grades are a part of every analysis, I have broken down my findings into three different pieces: <strong>Over Time</strong>, <strong>Department</strong>, and <strong>Individual</strong> results. Over Time, shows my individual statistics over time to see if there are any changes in habits, grades, or time spent. Department refers more to comparisons within my, average class, and department statistics. Finally Individual is where I throw everything else in the end and see what they look like. But first, let's look at how I compiled this data.</p>
+      <p>I will do my best to deeply analyze grades and time through the eyes of one student.</p>
+
+<!--       <p>As both time and grades are a part of every analysis, I have broken down my findings into three different pieces: <strong>Over Time</strong>, <strong>Department</strong>, and <strong>Individual</strong> results. Over Time shows my individual statistics over time to see if there are any changes in habits, grades, or time spent. Department refers more to comparisons within my, average class, and department statistics. Finally Individual is where I throw everything else in the end and see what they look like. But first, let's look at how I compiled this data.</p> -->
 
 
     <h3>My Diary: Getting Time Data</h3>
-      <p>I am a Google Calendar Super User, and I am quite proud of that fact. Since November 2012, I have consistently logged my productive (and non-productive) moments of my life. (Most of Fall 2012 is an estimate of time spent except for the last two weeks.) As such, I am able to go back to any given day and reveal all the moments and feelings of that particular day. This improves my memory and gives me helpful insights along the way. Below are a couple of examples of a given week, one is of October 2014, while the other is more recent at December 2015, which also happened to be the week of final exams.</p>
+      <p>I am a Google Calendar Super User, and I am quite proud of that fact. Since November 2012, I have consistently logged my productive (and non-productive) moments of my life. (Most of Fall 2012 is an estimate of time spent except for the last two weeks.) As such, I am able to go back to any given day and reveal all the moments and feelings of the past. This improves my memory and gives me helpful insights along the way. Below are a couple of examples of a given week, one is of October 2014, while the other is more recent at December 2015, which also happened to be the week of final exams.</p>
 
       <img class="calendar" src="../../assets/img/work/oct14.png" alt="October 2014">
-      <p>You can see that each category is represented by a different color calendar. Usually I describe what I did during that period of time, and thus I am able to remember exactly what I did in a day.</p>
+      <p>You can see that each category is represented by a calendar of different colors. I describe each event and thus can recall the feelings and events of the day.</p>
 
-      <p>Each week, I calculate how much time I spend in each given calendar, further calculating statistics about each class and activity that I pursue. For this analysis, the calendar data I use are:</p>
+      <p>Each week, I calculate how much time I spend in each  calendar, further calculating statistics about each class and activity that I pursue. For this analysis, the calendar data I use are:</p>
       <ul>
         <li>Class</li>
         <li>Homework & Studying</li>
@@ -127,135 +137,151 @@
         <li>Hobbies (a recent addition)</li>
         <li>Games & Time Wasters</li>
         <li>Social / Calls</li>
-        <li>Hearts Calendar</li>
+        <li>♥♥♥</li>
       </ul>
-      <p>I split up each calendar and attributed it to each given category, which includes the specific class and activity. As such, I calculate productively strictly from the first four calendars. "Fun" is calcuated from hobbies, games & time wasters, social (spending time talking or doing something with someone), and the hearts calendar. I have three years and counting worth of quantifiable data on my productive (and not so productive) moments.</p>
+      <p>I split up each calendar and attributed it to each given category, which includes the specific class and activity. As such, I calculate productively strictly from the first four calendars. I have other things like "fun", which is calcuated from hobbies, games & time wasters, and social (spending time talking or doing something with someone not work-related). I have three years and counting worth of quantifiable data on my productive (and not so productive) moments.</p>
       <img class="calendar" src="../../assets/img/work/dec15.png" alt="December 2015">
 
     <h3>Other Sources of Data</h3>
-      <p>In addition to time, I also calculate grades very closely. This is typically a spreadsheet with every assignment and their weights to either recreate the exact percentage received at the end, or to estimate a percentage. I have lost specific test grades for the first four semesters. In addition, many classes do not release final exam grades, participation, or final grades, so about half of the percentages here are likely estimates.</p>
+      <p>In addition to time, I also calculate grades very closely. This is typically a spreadsheet with every assignment and their weights to either recreate the exact percentage received at the end, or to estimate a percentage. I have lost specific test grades for the first four semesters. In addition, many classes do not release final exam grades, participation, or final course grades, so about half of the percentages here are likely estimates.</p>
 
-      <p>I also have some average grades on the site as well. I went on <a href="http://schedulebuilder.berkeley.edu">Schedule Builder</a>, a UC Berkeley resource, to find the average grade associate with my class and its given semester. If a particular semester wasn't given, I took a look at previous semesters, and if was a constant grade average, I used that one. If it didn't exist, I estimated.</p>
+      <p>I also have some average grades on the site as well. I went on <a href="http://schedulebuilder.berkeley.edu">Schedule Builder</a>, a UC Berkeley resource, to find the average grade associate with my class and its given semester. If a particular semester wasn't given, I took a look at previous semesters, and if it was a constant grade average, I used that one. If it didn't exist, I estimated.</p>
 
       <p>As for units and class sizes, this information was obtained on <a href="http://schedule.berkeley.edu">Schedule of Classes</a>, another official UC Berkeley website.</p>
 
 
-    <h2 id="time">Results Part 1: Productivity Over Time</h2>
-      <p>Let's tackle the fourth point first: <em>how does a student's grades and academic time commitment, and overall college behaviors change over time</em>? Here, we'll be toggling grades, units, fun, sleep, and time commitment.</p>
+<!--      
+      GOALS     
+          <li>whether time spent, units, specific tests, or class size and grades have any correlation,</li>
+          <li>whether statistics within departments have any correlation,</li>
+          <li>whether grade deflation is really a concept at Berkeley,</li>
+          <li>how a student's grades and academic time commitment change over time,</li>
+          <li>how sleep and fun factor into all of this,</li>
+          <li>and how a student's grades compare with the average grades of the class and of the department.</li>
+        </ul> -->
 
-    <h3>Grades</h3>
-      <div class="graph-short" id="SemVCumulative"></div>
-      <p>Erm, I definitely started sucking later in my college career. Why though? Maybe we can see where I went wrong in later analyses.</p>
+      <h2 id="time">Time Analysis</h2>
+        <p>Let's tackle productivity over time first, and its various correlations with units, specific tests, class sizes, sleep, and fun.</p>
 
-      <div class="graph-short" id="UnitsVGPA"></div>
-      <p>In this graph, I compared the Semester GPAs with the numbers of units I took that semester (dividing it by 5 so that the overall trend fits on the GPA graph). Somewhow, there is slight a correlation between the semester GPA and the number of units taken in that semester.</p>
+        <h3>Introduction to My Time</h3>
+          <p>The below graph is a visual display of all the time I spent in each semester on HW (homework & studying outside of class), Class time, OH (office hours, or time asking for help), and Activities (extra-curriculars, jobs, internships--basically anything that wasn't class related). In Fall 2014, I was the least motivated academically but still spent more than half of my semester at my part-time job, tutoring, lab assisting, and spinning up a new student organization.</p>
+          <div class="graph-tall" id="SemTime"></div>
 
-    <h3>Time</h3>
-      <div class="graph-tall" id="SemTime"></div>
-      <p>The above graph is a visual display of all the time I spent in each semester on HW (homework & studying outside of class), Class time, OH (office hours, or time asking for help), and Activities (extra-curriculars, jobs, internships--basically anything that wasn't class related). In Fall 2014, I was the least motivated academically but still spent more than half of my semester at my part-time job, tutoring, lab assisting, and spinning up a new student organization.</p>
+          <p>In terms of motivation, I peaked in Fall 2014 and tried the best I could to be a productive member of student body. I still don't know how I managed to spend 1000+ plus hours in a semester. For context, if each semester is 16 weeks long, each week having 7 days and 24 hours in one day, then the duration of one semester is 24 x 7 x 16 = <strong>2,688 hours</strong> long. According to these numbers, I spent over <strong>40%</strong> of my time productively. I slept approximately 30.6% of my time sleeping, which is approximately 7 hours a day. <strong>I spent more time working than I did sleeping</strong>. To put this into perspective, a full time job (assuming 40 hours/week) would be approximately 24% of time spent. Throughout my college career, I was productive approximately 25% to 42% of the time. (The first calendar depicted a typical week in Fall 2014, you can see how it looked.)</p>
 
-      <p>In terms of motivation, I peaked in Fall 2014 and tried the best I could to be a productive member of student body. I still don't know how I managed to spend 1000+ plus hours in a semester. For context, if each semester is 16 weeks long, each week having 7 days and 24 hours in one day, then the duration of one semester is 24 x 7 x 16 = <strong>2,688 hours</strong> long. According to these numbers, I spent over <strong>40%</strong> of my time productively. I slept approximately 30.6% of my time sleeping, which is approximately 7 hours a day. <strong>I spent more time working than I did sleeping</strong>. To put this into perspective, a full time job (assuming 40 hours/week) would be approximately 24% of time spent. Throughout my college career, I was productive approximately 25% to 42% of the time. (The first calendar depicted a typical week in Fall 2014, you can see how it looked.)</p>
+          <p>So yeah, even though I was little crazy when it came to activities, the time I spent on my academics decreased. The most time I spent on my classes was in Spring 2013 (still a freshman in college), before steadily decreasing since.</p>
 
-      <p>So yeah, even though I was little crazy when it came to activities, the time I spent on my academics decreased. The most time I spent on my classes was in Spring 2013 (still a freshman in college), before steadily decreasing since.</p>
+        <h3>Departmental Conclusions</h3>
+          <p>Here, I will be looking specifically at clumps of classes within specific departments, most of which are in UGBA, CS, Chinese, and Linguistics; the four departments with more than 3 classes in them. The other classes only have one data point, and are thus not as useful (but fun to look at!).</p>
 
-      <p>I also calculated statistics for Fun and Sleep. Shown below:</p>
+          <div class="graph-tall" id="DeptTime"></div>
+          <p>This is a graph that breaks up the time I spent on an average class in each department into HW (Homework and out of class studying), Class, OH (Office Hours), and Extra Time (time I spent before the semester preparing for the class itself).</p>
 
-      <div class="graph-short" id="SemOtherTime"></div>
-      <p>While sleep pretty much stayed the same, with marginal improvements as the semesters went by, I considerably enjoyed myself later throughout my college career.</p>
+          <p>As you can see, when it came to departments in whose classes I took more frequently, most of my time was spent outside of class, doing homework or studying.</p>
 
-    <h3>Putting it all together</h3>
-      <div class="graph-tall" id="CumTimeVGPA"></div>
-      <p>Here is a line graph that correlates my semesterly time spent to my cumulative GPA (to give a backwards time progression effect, since my GPA lowered every semester since I started). There's a LOT going here, as I compared every possible time effect (as shown in the graph above this one) to my GPA. Each syncronous bend and endpoints in the lines show a semester.</p>
+        <h3>Time Spent on Classes and Studying</h3>
+          <div class="graph-square" id="HwVClass"></div>
+          <div class="graph-square" id="HwVAv"></div>
+          <div class="graph-square" id="HwVFinalTime"></div>
+          <div class="graph-square" id="AvTimeVClass"></div>
+          <div class="graph-square" id="AvTimeVFinalTime"></div>
 
-      <p>As mentioned earlier, even though time spent on homework and classes decreased over time (the green line), overall total productivity (teal) increased over time with the boost in activities (purple). All this is going on while grades decrease slowly.</p>
+        <h3>Time Spent, Units and Class Sizes</h3>
+          <div class="graph-square" id="HwVSize"></div>
+          <div class="graph-square" id="AvTimeVSize"></div>
+          <div class="graph-square" id="UnitsVHW"></div>
+          <div class="graph-square" id="UnitsVClass"></div>
+          <div class="graph-square" id="UnitsVAvTime"></div>
+          <div class="graph-square" id="UnitsVFinalTime"></div>
 
-      <p>Where does sleep factor into this? Not surprisingly, it is right under total productivity. The only two times it ever overtook the total productivity line was in Fall 2012 and Fall 2015, two opposite sides of the spectrum.</p>
+        <h3>Sleep & Fun</h3>
+          <p>I also calculated statistics for Fun and Sleep. Shown below:</p>
 
-      <p>As for "fun", it overtook almost everything in Fall 2015, which includes academic total and activities.</p>
+          <div class="graph-short" id="SemOtherTime"></div>
+          <p>While sleep pretty much stayed the same, with marginal improvements as the semesters went by, I considerably enjoyed myself later throughout my college career.</p>
 
-      <p>In conclusion, over time I spent less time on academics and spent more time on activities, jobs, and having fun; while my GPA steadily decreased. This shows that grades decreased when time spent on academics decreased. However, factors such as the specific classes and department trends are also important to evaluate. The next part will look at the overall departments and whether they had any effect.</p>
+      <h2 id="grades">Grade Analysis</h2>
+        <h3>Introduction to My Grades</h3>
+          <p>At UC Berkeley, we use a 4.0 grading scale. In my graphs, I frequently use number representations to present results visually. This is what the specific scale looks like:</p>
 
+          <table>
+            <tr>  <td>A+ : 4.0</td> <td>B+ : 3.3</td>  <td>C+ : 2.3</td>  <td>D+ : 1.3</td>  <td>F</td>  <td>0</td>   </tr>
+            <tr>  <td>A : 4.0</td>  <td>B : 3.0</td>    <td>C: 2.0</td>   <td>D : 1.0</td>                            </tr>
+            <tr>  <td>A- : 3.7</td> <td>B- : 2.7</td>  <td>C- : 1.7</td>  <td>D- : 0.7</td>                           </tr>
+          </table>
 
-    <h2 id="dept">Results Part 2: Departmental Conclusions</h2>
-      <p>In this section, I will be looking specifically at clumps of classes within specific departments, most of which are in UGBA, CS, Chinese, and Linguistics; the four departments with more than 3 classes in them. The other classes only have one data point, and are thus not as useful (but fun to look at!).</p>
+          <p>We also have Pass/No Pass grades, which is not represented in one's GPA. I took four classes P/NP, two of which I do not have grades for. These four grades, despite being in this data, is not calculated in my GPA.</p>
 
-      <div class="graph-tall" id="DeptTime"></div>
-      <p>This is a graph that breaks up the time I spent on an average class in each department into HW (Homework and out of class studying), Class, OH (Office Hours), and Extra Time (time I spent before the semester preparing for the class itself).</p>
+          <div class="graph-short" id="SemVCumulative"></div>
+          <p>Erm, I definitely started sucking later in my college career. Why though? Maybe we can see where I went wrong in later analyses.</p>
 
-      <p>As you can see, when it came to departments in whose classes I took more frequently, most of my time was spent outside of class, doing homework or studying. With the below graph:</p>
+          <div class="graph-short" id="UnitsVGPA"></div>
+          <p>In this graph, I compared the Semester GPAs with the numbers of units I took that semester (dividing it by 5 so that the overall trend fits on the GPA graph). Somewhow, there is slight a correlation between the semester GPA and the number of units taken in that semester.</p>
 
-      <div class="graph-short" id="DeptGrade"></div>
-      <p>Here, this is a plot of the average grade I received within a specific department, the average of all the classes I took's averages in that department, and the average of <em>all</em> the class averages in that department (source: <a href="http://projects.dailycal.org/grades/">Grade Distribution Analysis</a> by Ronald Kwan). Whew!</p>
+        <h3>Departmental Conclusions</h3>
+          <div class="graph-short" id="DeptGrade"></div>
+          <p>Here, this is a plot of the average grade I received within a specific department, the average of all the classes I took's averages in that department, and the average of <em>all</em> the class averages in that department (source: <a href="http://projects.dailycal.org/grades/">Grade Distribution Analysis</a> by Ronald Kwan). Whew!</p>
 
-      <p>Coupled with this graph below, this graph shows that I tend to do average with the class and the department in departments I took frequently, while my grades averaged wildly depending on what class it was for. I did better in Chinese, French, IEOR, Math, and Psych than I did in Anthro and ESPM (probably because they were both P/NP).</p>
+          <p>Coupled with this graph below, this graph shows that I tend to do average with the class and the department in departments I took frequently, while my grades averaged wildly depending on what class it was for. I did better in Chinese, French, IEOR, Math, and Psych than I did in Anthro and ESPM (probably because they were both P/NP).</p>
 
-      <p>Let's dive into this possibly more deeply with the following individual statistics.</p>
+        <h3>Grades and Percentages</h3>
+          <div class="graph-square" id="GradeVPercent"></div>
+          <!-- is there grade deflation like the rumors say? -->
+          <div class="graph-square" id="AvGradeVFinalPercent"></div>
+          <div class="graph-square" id="GradeVAverage"></div>
+          <!-- how do i do compared to the average in the class? -->
 
+        <h3>Grades and Tests</h3>
+          <div class="graph-square" id="GradeVFirst"></div>
+          <div class="graph-square" id="GradeVFinalGrade"></div>
+          <!-- is there a correlation to studying my ass off? numbers exclusively from finals and dead week -->
+          <div class="graph-square" id="FirstVFinal"></div>
 
-    <h2 id="ind">Results Part 3: Individual Conclusions</h2>
-
-      <p>Here's the part where I'll be directly comparing individual class habits with each other. This comprises <strong>grades, percentages, categorical time commitment, class size, and units</strong>, asking questions like: "What's the relationship between _____ and ______?". Let's see all the scatterplots.</p>
-
-    <h3>Grades</h3>
-      <div class="graph-square" id="GradeVAverage"></div>
-      <!-- how do i do compared to the average in the class? -->
-      <div class="graph-square" id="UnitsVGrade"></div>
-      <div class="graph-square" id="GradeVPercent"></div>
-      <!-- is there grade delfation like the rumors say? -->
-      <div class="graph-square" id="GradeVFirst"></div>
-      <div class="graph-square" id="GradeVFinalGrade"></div>
-      <!-- is there a correlation to studying my ass off? numbers exclusively from finals and dead week -->
-      <div class="graph-tall" id="GradeVFinalTime"></div>
-      <div class="graph-square" id="GradeVHW"></div>
-      <div class="graph-square" id="GradeVClass"></div>
-      <div class="graph-square" id="GradeVOH"></div>
-      <div class="graph-square" id="GradeVExtra"></div>
-      <div class="graph-square" id="GradeVAverageTime"></div>
-
-
-      <!-- ind scatterplots
-        // grades
-        - my grade vs class size, is there a correlation?
-
-        - average grade versus how many units, is there a correlation?
-        - average grade versus average time
-        - average grade vs. class size
-        - average grade vs. final % ?; is there a correlation?
-
-        - 1st test vs. final test percentage
-
-        // time
-        - homework time vs. class time
-        - homework time vs. average time
-        - homework time vs. class size
-        - homework time vs. final time prep
-        - homework time vs. final percentage
-        - homework time vs. first test percentage
-        
-        - average time vs. class size
-        - average time vs. class time
-        - average time vs. final time prep
-        - average time vs. final percentage
-        - average time vs. first test percentage
-
-        // units
-        - units vs. percentage received
-        - units vs. time on hw
-        - units vs. going to class
-        - units vs. average time spent
-        - units vs. final time prep
-
-       -->
+        <h3>Grades, Units and Class Sizes</h3>
+          <div class="graph-square" id="UnitsVGrade"></div>
+          <div class="graph-square" id="UnitsVAvGrade"></div>
+          <div class="graph-square" id="AvGradeVSize"></div>
+          <div class="graph-square" id="UnitsVPercent"></div>
+          <div class="graph-square" id="GradeVSize"></div>
 
 
-      <!-- <div class="graph" id="thetitle"></div> -->
+      <h2 id="timeGrades">Time and Grades</h3>
+        <p>Finally, we put time and grades together in this interesting analysis.</p>
+        <!-- is it possible to improve? -->
 
-    <!-- All graphs here:
-      // semester data, changes over time
-      - Semester GPA vs. Cumulative GPA (Line)
-      - Semester Units vs. Semester GPA (Line)
-      - 
-      -->
+        <h3>Introduction to Time and Grades</h3>
+          <div class="graph-tall" id="CumTimeVGPA"></div>
+          <p>Here is a line graph that correlates my semesterly time spent to my cumulative GPA (to give a backwards time progression effect, since my GPA lowered every semester since I started). There's a LOT going here, as I compared every possible time effect (as shown in the graph above this one) to my GPA. Each syncronous bend and endpoints in the lines show a semester.</p>
+
+          <p>As mentioned earlier, even though time spent on homework and classes decreased over time (the green line), overall total productivity (teal) increased over time with the boost in activities (purple). All this is going on while grades decrease slowly.</p>
+
+          <p>Where does sleep factor into this? Not surprisingly, it is right under total productivity. The only two times it ever overtook the total productivity line was in Fall 2012 and Fall 2015, two opposite sides of the spectrum.</p>
+
+          <p>As for "fun", it overtook almost everything in Fall 2015, which includes academic total and activities.</p>
+
+          <p>In conclusion, over time I spent less time on academics and spent more time on activities, jobs, and having fun; while my GPA steadily decreased. This shows that grades decreased when time spent on academics decreased. However, factors such as the specific classes and department trends are also important to evaluate. Let's compare each effect in detail.</p>
+
+        <h3>Time Spent and Testing Outcomes</h3>
+          <div class="graph-square" id="AvTimeVFinal"></div>
+          <div class="graph-square" id="AvTimeVFirst"></div>
+          <div class="graph-tall" id="GradeVFinalTime"></div>
+
+        <h3>Time Spent with Academics and Final Grade</h3>
+          <div class="graph-square" id="GradeVHW"></div>
+          <div class="graph-square" id="GradeVClass"></div>
+          <div class="graph-square" id="GradeVOH"></div>
+          <div class="graph-square" id="GradeVExtra"></div>
+
+        <h3>Average Time and Grades
+          <div class="graph-square" id="HwVFinalGrade"></div>
+          <div class="graph-square" id="GradeVAverageTime"></div>
+          <div class="graph-square" id="AvGradeVAverageTime"></div>
+
+      
+      <h2>What Can You Take Away From All This?</h2>
+        <p>While I have said at multiple points in time that this analysis is solely about <strong>my data</strong> and in no way should be concluded about everyone, there are some things to keep in mind when you get upset that you weren't able to study enough for a specific test, or got a certain grade in the class because you <em>think</em> it's because of this-or-this. It's okay. There aren't that many correlations in reality.</p>
+
+
 
 
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -375,6 +401,7 @@
       // INDIVIDUAL DATA
 
       var straightData = [ ['Grade1', 'Grade2'],
+                           [3.0, 3.0],
                            [3.3, 3.3],
                            [3.7, 3.7],
                            [4, 4] ];
@@ -490,7 +517,7 @@
             'hAxis': {'title': 'Grade Received (GPA)'},
             'vAxis': {'title': 'Final Exam Grade (%)'},
             'bubble': {'textStyle': {'color': 'transparent'}},
-            'colorAxis': 'null'
+            'colorAxis': 'null' // still looks weird
           },
           containerId: 'GradeVFinalGrade'
         });
@@ -508,7 +535,7 @@
             'hAxis': {'title': 'Time Spent Studying'},
             'vAxis': {'title': 'Final Exam Grade (%)'},
             'bubble': {'textStyle': {'color': 'transparent'}},
-            'colorAxis': 'null'
+            'colorAxis': 'null' // still looks weird
           },
           containerId: 'GradeVFinalTime'
         });
@@ -631,6 +658,510 @@
             // 'legend': 'none',
           },
           containerId: 'GradeVAverageTime'
+        });
+        wrapper.draw()
+      }
+
+      google.setOnLoadCallback(drawGradeVSize);
+      function drawGradeVSize() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'ScatterChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1jUdSt008mbfFvi1S20tWEWoNPJ28kOgvZRuLOoRDgYQ/edit#gid=0',
+          query: 'SELECT E,H',
+          options: {
+            'title': 'Grade Received vs. Class Size',
+            'hAxis': {'title': 'Grade Received (GPA)'},
+            'vAxis': {'title': 'Class Size (Enrollment)'},
+            'trendlines': { 
+              '0': {
+                'showR2': 'true',
+                // 'visibleInLegend': 'true'
+              },
+              '1': {}
+            },
+            // 'legend': 'none',
+          },
+          containerId: 'GradeVSize'
+        });
+        wrapper.draw()
+      }
+
+      google.setOnLoadCallback(drawUnitsVAvGrade);
+      function drawUnitsVAvGrade() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'ScatterChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1jUdSt008mbfFvi1S20tWEWoNPJ28kOgvZRuLOoRDgYQ/edit#gid=0',
+          query: 'SELECT G,F',
+          options: {
+            'title': 'Units in the Class vs. Average Grade',
+            'hAxis': {'title': 'Units'},
+            'vAxis': {'title': 'Average Grade (GPA)'},
+            'trendlines': { 
+              '0': {
+                'showR2': 'true',
+                // 'visibleInLegend': 'true'
+              },
+              '1': {}
+            },
+            // 'legend': 'none',
+          },
+          containerId: 'UnitsVAvGrade'
+        });
+        wrapper.draw()        
+      }
+
+      google.setOnLoadCallback(drawAvGradeVAverageTime);
+      function drawAvGradeVAverageTime() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'ScatterChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1jUdSt008mbfFvi1S20tWEWoNPJ28kOgvZRuLOoRDgYQ/edit#gid=0',
+          query: 'SELECT F,S',
+          options: {
+            'title': 'Average Grade vs. Average Time Spent on Academics',
+            'hAxis': {'title': 'Average Grade (GPA)'},
+            'vAxis': {'title': 'Time Spent (hours)'},
+            'trendlines': { 
+              '0': {
+                'showR2': 'true',
+                // 'visibleInLegend': 'true'
+              },
+              '1': {}
+            },
+            // 'legend': 'none',
+          },
+          containerId: 'AvGradeVAverageTime'
+        });
+        wrapper.draw()
+      }
+
+      google.setOnLoadCallback(drawAvGradeVSize);
+      function drawAvGradeVSize() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'ScatterChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1jUdSt008mbfFvi1S20tWEWoNPJ28kOgvZRuLOoRDgYQ/edit#gid=0',
+          query: 'SELECT F,H',
+          options: {
+            'title': 'Average Grade vs. Class Size',
+            'hAxis': {'title': 'Average Grade (GPA)'},
+            'vAxis': {'title': 'Class Size (Enrollment)'},
+            'trendlines': { 
+              '0': {
+                'showR2': 'true',
+                // 'visibleInLegend': 'true'
+              },
+              '1': {}
+            },
+            // 'legend': 'none',
+          },
+          containerId: 'AvGradeVSize'
+        });
+        wrapper.draw()
+      }
+
+      google.setOnLoadCallback(drawAvGradeVFinalPercent);
+      function drawAvGradeVFinalPercent() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'ScatterChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1jUdSt008mbfFvi1S20tWEWoNPJ28kOgvZRuLOoRDgYQ/edit#gid=0',
+          query: 'SELECT F,M',
+          options: {
+            'title': 'Average Grade vs. Percentage The Final is Worth',
+            'hAxis': {'title': 'Average Grade (GPA)'},
+            'vAxis': {'title': 'Percentage the Final is Worth'},
+            'trendlines': { 
+              '0': {
+                'showR2': 'true',
+                // 'visibleInLegend': 'true'
+              },
+              '1': {}
+            },
+            // 'legend': 'none',
+          },
+          containerId: 'AvGradeVFinalPercent'
+        });
+        wrapper.draw()
+      }
+
+      google.setOnLoadCallback(drawFirstVFinal);
+      function drawFirstVFinal() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'ScatterChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1jUdSt008mbfFvi1S20tWEWoNPJ28kOgvZRuLOoRDgYQ/edit#gid=0',
+          query: 'SELECT J,K',
+          options: {
+            'title': 'First Exam Grade vs. Final Exam Grade',
+            'hAxis': {'title': 'First Exam Grade (GPA)'},
+            'vAxis': {'title': 'Final Exam Grade (GPA)'},
+            'trendlines': { 
+              '0': {
+                'showR2': 'true',
+                // 'visibleInLegend': 'true'
+              },
+              '1': {}
+            },
+            // 'legend': 'none',
+          },
+          containerId: 'FirstVFinal'
+        });
+        wrapper.draw()
+      }
+
+      google.setOnLoadCallback(drawHwVClass);
+      function drawHwVClass() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'ScatterChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1jUdSt008mbfFvi1S20tWEWoNPJ28kOgvZRuLOoRDgYQ/edit#gid=0',
+          query: 'SELECT N,O',
+          options: {
+            'title': 'Time Spent on Homework & Studying vs. Time Spent Going to Class',
+            'hAxis': {'title': 'Homework & Studying (hours)'},
+            'vAxis': {'title': 'Class (hours)'},
+            'trendlines': { 
+              '0': {
+                'showR2': 'true',
+                // 'visibleInLegend': 'true'
+              },
+              '1': {}
+            },
+            // 'legend': 'none',
+          },
+          containerId: 'HwVClass'
+        });
+        wrapper.draw()        
+      }
+
+      google.setOnLoadCallback(drawHwVAverage);
+      function drawHwVAverage() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'ScatterChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1jUdSt008mbfFvi1S20tWEWoNPJ28kOgvZRuLOoRDgYQ/edit#gid=0',
+          query: 'SELECT N,S',
+          options: {
+            'title': 'Time Spent on Homework & Studying vs. Time Spent on Academics on Average',
+            'hAxis': {'title': 'Homework & Studying (hours)'},
+            'vAxis': {'title': 'Average (hours)'},
+            'trendlines': { 
+              '0': {
+                'showR2': 'true',
+                // 'visibleInLegend': 'true'
+              },
+              '1': {}
+            },
+            // 'legend': 'none',
+          },
+          containerId: 'HwVAv'
+        });
+        wrapper.draw()
+      }
+
+      google.setOnLoadCallback(drawHwVSize);
+      function drawHwVSize() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'ScatterChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1jUdSt008mbfFvi1S20tWEWoNPJ28kOgvZRuLOoRDgYQ/edit#gid=0',
+          query: 'SELECT N,H',
+          options: {
+            'title': 'Time Spent on Homework & Studying vs. Class Size',
+            'hAxis': {'title': 'Homework & Studying (hours)'},
+            'vAxis': {'title': 'Class Size (Enrollment)'},
+            'trendlines': { 
+              '0': {
+                'showR2': 'true',
+                // 'visibleInLegend': 'true'
+              },
+              '1': {}
+            },
+            // 'legend': 'none',
+          },
+          containerId: 'HwVSize'
+        });
+        wrapper.draw()
+      }
+
+      google.setOnLoadCallback(drawHwVFinalGrade);
+      function drawHwVFinalGrade() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'ScatterChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1jUdSt008mbfFvi1S20tWEWoNPJ28kOgvZRuLOoRDgYQ/edit#gid=0',
+          query: 'SELECT N,K',
+          options: {
+            'title': 'Time Spent on Homework & Studying vs. Final Exam Grade',
+            'hAxis': {'title': 'Homework & Studying (hours)'},
+            'vAxis': {'title': 'Final Exam Grade (GPA)'},
+            'trendlines': { 
+              '0': {
+                'showR2': 'true',
+                // 'visibleInLegend': 'true'
+              },
+              '1': {}
+            },
+            // 'legend': 'none',
+          },
+          containerId: 'HwVFinalGrade'
+        });
+        wrapper.draw()
+      }
+
+      google.setOnLoadCallback(drawHwVFinalTime);
+      function drawHwVFinalTime() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'ScatterChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1jUdSt008mbfFvi1S20tWEWoNPJ28kOgvZRuLOoRDgYQ/edit#gid=0',
+          query: 'SELECT N,L',
+          options: {
+            'title': 'Time Spent on Homework & Studying vs. Time Spent Studying for the Final',
+            'hAxis': {'title': 'Homework & Studying (hours)'},
+            'vAxis': {'title': 'Studying for the Final (hours)'},
+            'trendlines': { 
+              '0': {
+                'showR2': 'true',
+                // 'visibleInLegend': 'true'
+              },
+              '1': {}
+            },
+            // 'legend': 'none',
+          },
+          containerId: 'HwVFinalTime'
+        });
+        wrapper.draw()
+      }
+
+      google.setOnLoadCallback(drawAvTimeVSize);
+      function drawAvTimeVSize() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'ScatterChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1jUdSt008mbfFvi1S20tWEWoNPJ28kOgvZRuLOoRDgYQ/edit#gid=0',
+          query: 'SELECT S,H',
+          options: {
+            'title': 'Time Spent on Academics on Average vs. Class Size',
+            'hAxis': {'title': 'Average Time Spent (hours)'},
+            'vAxis': {'title': 'Class Size (Enrollment)'},
+            'trendlines': { 
+              '0': {
+                'showR2': 'true',
+                // 'visibleInLegend': 'true'
+              },
+              '1': {}
+            },
+            // 'legend': 'none',
+          },
+          containerId: 'AvTimeVSize'
+        });
+        wrapper.draw()
+      }
+
+      google.setOnLoadCallback(drawAvTimeVClass);
+      function drawAvTimeVClass() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'ScatterChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1jUdSt008mbfFvi1S20tWEWoNPJ28kOgvZRuLOoRDgYQ/edit#gid=0',
+          query: 'SELECT S,O',
+          options: {
+            'title': 'Time Spent on Academics on Average vs. Time Spent Going to Class',
+            'hAxis': {'title': 'Average Spent (hours)'},
+            'vAxis': {'title': 'Class (hours)'},
+            'trendlines': { 
+              '0': {
+                'showR2': 'true',
+                // 'visibleInLegend': 'true'
+              },
+              '1': {}
+            },
+            // 'legend': 'none',
+          },
+          containerId: 'AvTimeVClass'
+        });
+        wrapper.draw()        
+      }
+
+      google.setOnLoadCallback(drawAvTimeVFinalTime);
+      function drawAvTimeVFinalTime() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'ScatterChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1jUdSt008mbfFvi1S20tWEWoNPJ28kOgvZRuLOoRDgYQ/edit#gid=0',
+          query: 'SELECT S,L',
+          options: {
+            'title': 'Time Spent on Academics on Average vs. Time Spent Studying for the Final',
+            'hAxis': {'title': 'Average Time (hours)'},
+            'vAxis': {'title': 'Studying for the Final (hours)'},
+            'trendlines': { 
+              '0': {
+                'showR2': 'true',
+                // 'visibleInLegend': 'true'
+              },
+              '1': {}
+            },
+            // 'legend': 'none',
+          },
+          containerId: 'AvTimeVFinalTime'
+        });
+        wrapper.draw()
+      }
+
+      google.setOnLoadCallback(drawAvTimeVFirst);
+      function drawAvTimeVFirst() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'ScatterChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1jUdSt008mbfFvi1S20tWEWoNPJ28kOgvZRuLOoRDgYQ/edit#gid=0',
+          query: 'SELECT S,J',
+          options: {
+            'title': 'Average Time Spent on Academics vs. First Exam Grade',
+            'hAxis': {'title': 'Average Time (hours)'},
+            'vAxis': {'title': 'Grade (GPA)'},
+            'trendlines': { 
+              '0': {
+                'showR2': 'true',
+                // 'visibleInLegend': 'true'
+              },
+              '1': {}
+            },
+            // 'legend': 'none',
+          },
+          containerId: 'AvTimeVFirst'
+        });
+        wrapper.draw()
+      }
+
+      google.setOnLoadCallback(drawAvTimeVFinal);
+      function drawAvTimeVFinal() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'ScatterChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1jUdSt008mbfFvi1S20tWEWoNPJ28kOgvZRuLOoRDgYQ/edit#gid=0',
+          query: 'SELECT S,K',
+          options: {
+            'title': 'Average Time Spent on Academics vs. Final Exam Grade',
+            'hAxis': {'title': 'Average Time (hours)'},
+            'vAxis': {'title': 'Grade (GPA)'},
+            'trendlines': { 
+              '0': {
+                'showR2': 'true',
+                // 'visibleInLegend': 'true'
+              },
+              '1': {}
+            },
+            // 'legend': 'none',
+          },
+          containerId: 'AvTimeVFinal'
+        });
+        wrapper.draw()
+      }
+
+      google.setOnLoadCallback(drawUnitsVPercent);
+      function drawUnitsVPercent() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'ScatterChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1jUdSt008mbfFvi1S20tWEWoNPJ28kOgvZRuLOoRDgYQ/edit#gid=0',
+          query: 'SELECT G,I',
+          options: {
+            'title': 'Units vs. Percentage Received',
+            'hAxis': {'title': 'Units'},
+            'vAxis': {'title': 'Percentage Received (%)'},
+            'trendlines': { 
+              '0': {
+                'showR2': 'true',
+                // 'visibleInLegend': 'true'
+              },
+              '1': {}
+            },
+            // 'legend': 'none',
+          },
+          containerId: 'UnitsVPercent'
+        });
+        wrapper.draw()        
+      }
+
+      google.setOnLoadCallback(drawUnitsVHW);
+      function drawUnitsVHW() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'ScatterChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1jUdSt008mbfFvi1S20tWEWoNPJ28kOgvZRuLOoRDgYQ/edit#gid=0',
+          query: 'SELECT G,N',
+          options: {
+            'title': 'Units vs. Time Spent on Homework & Studying',
+            'hAxis': {'title': 'Units'},
+            'vAxis': {'title': 'Time Spent on Homework & Studying (hours)'},
+            'trendlines': { 
+              '0': {
+                'showR2': 'true',
+                // 'visibleInLegend': 'true'
+              },
+              '1': {}
+            },
+            // 'legend': 'none',
+          },
+          containerId: 'UnitsVHW'
+        });
+        wrapper.draw()        
+      }
+
+      google.setOnLoadCallback(drawUnitsVClass);
+      function drawUnitsVClass() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'ScatterChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1jUdSt008mbfFvi1S20tWEWoNPJ28kOgvZRuLOoRDgYQ/edit#gid=0',
+          query: 'SELECT G,O',
+          options: {
+            'title': 'Units vs. Time Spent Going to Class',
+            'hAxis': {'title': 'Units'},
+            'vAxis': {'title': 'Time Spent Going to Class (hours)'},
+            'trendlines': { 
+              '0': {
+                'showR2': 'true',
+                // 'visibleInLegend': 'true'
+              },
+              '1': {}
+            },
+            // 'legend': 'none',
+          },
+          containerId: 'UnitsVClass'
+        });
+        wrapper.draw()        
+      }
+
+      google.setOnLoadCallback(drawUnitsVAvTime);
+      function drawUnitsVAvTime() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'ScatterChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1jUdSt008mbfFvi1S20tWEWoNPJ28kOgvZRuLOoRDgYQ/edit#gid=0',
+          query: 'SELECT G,S',
+          options: {
+            'title': 'Units vs. Average Time Spent on Academics',
+            'hAxis': {'title': 'Units'},
+            'vAxis': {'title': 'Average Time Spent on Academics (hours)'},
+            'trendlines': { 
+              '0': {
+                'showR2': 'true',
+                // 'visibleInLegend': 'true'
+              },
+              '1': {}
+            },
+            // 'legend': 'none',
+          },
+          containerId: 'UnitsVAvTime'
+        });
+        wrapper.draw()        
+      }
+
+      google.setOnLoadCallback(drawUnitsVFinalTime);
+      function drawUnitsVFinalTime() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'ScatterChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1jUdSt008mbfFvi1S20tWEWoNPJ28kOgvZRuLOoRDgYQ/edit#gid=0',
+          query: 'SELECT G,L',
+          options: {
+            'title': 'Units vs. Time Spent Studying for the Final',
+            'hAxis': {'title': 'Units'},
+            'vAxis': {'title': 'Time Spent Studying for the Final (hours)'},
+            'trendlines': { 
+              '0': {
+                'showR2': 'true',
+                // 'visibleInLegend': 'true'
+              },
+              '1': {}
+            },
+            // 'legend': 'none',
+          },
+          containerId: 'UnitsVFinalTime'
         });
         wrapper.draw()        
       }
