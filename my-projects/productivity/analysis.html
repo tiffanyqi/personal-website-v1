@@ -294,13 +294,18 @@
     <h3>Activities</h3>
     <p>Activities were a big part of my college experience. While I classify it as productive time, they were largely a release of stress and another way I could have fun at college. I ask the same questions here as in fun and sleep.</p>
 
-    <p>I've written about <a href="https://advicefromahaasmajor.wordpress.com/2014/08/05/my-extracurriculars-and-past-affiliations/">my activities before Fall 2014</a>. After BCEC, BMC, and Perfect Fifth, I did a lot of teaching and tutoring in introductory computer science. I founded <a href="csmberkeley.github.io">Computer Science Mentors<a/>, an organization focused on group tutoring in all introductory computer science courses. In total, I spent 670 hours in three semesters, which is a significant portion of my activities here.</p>
+    <p>I've written about <a href="https://advicefromahaasmajor.wordpress.com/2014/08/05/my-extracurriculars-and-past-affiliations/">my activities before Fall 2014</a>. I also interned at Go Overseas and worked part-time at Intera Growth Partners. After BCEC, BMC, and Perfect Fifth, I did a lot of teaching and tutoring in introductory computer science. I founded <a href="csmberkeley.github.io">Computer Science Mentors<a/>, an organization focused on group tutoring in all introductory computer science courses. In total, I spent 670 hours in three semesters, which is a significant portion of my activities here.</p>
 
     <div class="graph-square" id="SemUnitsVActivities"></div>
-    <p>This graph shows </p>
+    <p>This graph shows the relationship between the units I took that semester and the time spent on my activities. With Fall 2014, the coefficient of determination jumps from 0.33 to 0.72. Thus, there's actually a strong negative correlation between units taken and time spent, which makes sense.</p>
 
     <div class="graph-square" id="SemGradeVActivities"></div>
+    <p>I also show the relationship between the GPA I earned per semester and the time spent on activities. There's an interesting strong linear correlation here, as the coefficient of determination jumps from 0.243 to 0.916 when Fall 2014 is removed. There would appear that the less I spent on activities, the better my grades became.</p>
+
     <div class="graph-square" id="ActivitiesVTotalAcademicTime"></div>
+    <p>This graph shows the relationship between the time spent on activities with the time spent on academics. Again, removing Fall 2014, the coefficient of determination decreases from 0.847 to 0.793, but with these points of data, the correlation is still strong. There's a negative linear relationship between how much time I spend on activities and my total academic time. This may be because I spent a good majority of my time on it, and thus it shifts it in this way.</p>
+
+    <p>In conclusion, <strong>having fun, dating and sleeping have no direct correlation with grades. Activities, however, have a strong negative linear relationship</strong>.</p>
 
 
     <!-- DEFLATION -->
@@ -1100,7 +1105,7 @@
         var wrapper = new google.visualization.ChartWrapper({
           chartType: 'ScatterChart',
           dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=868686859',
-          query: 'SELECT N,Q',
+          query: 'SELECT G,N',
           options: {
             'title': 'Semester GPA vs. Time on Activities',
             'hAxis': {'title': 'Semester GPA (GPA)'},
