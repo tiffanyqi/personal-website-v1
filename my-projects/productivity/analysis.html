@@ -165,7 +165,7 @@
 
     <table>
       <tr>  <td>A+ : 4.0</td> <td>B+ : 3.3</td>  <td>C+ : 2.3</td>  <td>D+ : 1.3</td>  <td>F</td>  <td>0</td>   </tr>
-      <tr>  <td>A : 4.0</td>  <td>B : 3.0</td>    <td>C: 2.0</td>   <td>D : 1.0</td>                            </tr>
+      <tr>  <td>A : 4.0</td>  <td>B : 3.0</td>   <td>C: 2.0</td>    <td>D : 1.0</td>                            </tr>
       <tr>  <td>A- : 3.7</td> <td>B- : 2.7</td>  <td>C- : 1.7</td>  <td>D- : 0.7</td>                           </tr>
     </table>
 
@@ -174,16 +174,14 @@
     <div class="graph-short" id="SemVCumulative"></div>
     <p>This graph compares my semester and cumulative GPAs. Over time, it appears that my GPA fell pretty consistently over time until my final semester, in which raised my cumulative GPA by a little bit. Sometimes, huge decreases in semester GPA does not affect cumulative GPA by that much. This of course, is due to the decrease in units taken for a letter grade, which is reflected in the below graph.</p>
 
-    <div class="graph-square" id="SemGradeVUnits"></div>
-
     <div class="graph-short" id="UnitsVGPA"></div>
     <p>In this graph, I compared the Semester GPAs with the total number of units I took that semester (including P/NP units, and dividing it by 5 so that the overall trend fits on the GPA graph). There is somewhat of a correlation, as the higher number of units I take, the higher the GPA.</p>
 
-    <p>This next section will show even more correlations.</p>
+    <p>In conclusion, my motivation peaked in Fall 2014, and fell throughout the consecutive semesters. This next section will show even more correlations.</p>
 
 
     <!-- CORRELATION -->
-    <h2 id="correlation">Correlation: How Everything is Connected</h2>
+    <h2 id="correlation">Academic Correlation: How Everything is Connected</h2>
     <p>I think many people would be interested in seeing whether studying for a test and working hard is actually meant to show results in the long run. I will be covering the following correlations:</p>
     <ul>
       <li>Correlations between time spent and grade received</li>
@@ -200,7 +198,7 @@
     <p>This graph illustrates the relationship between the grade received and the time spent on going to class. Through a strictly linear sense, it appears that the more I went to class, the lower my GPA was. However, since there is a significant dip in the data with additional outliers, with a correlation coefficient very close to 0, I would say there is no linear correlation here. It may be the case that the more I knew about a subject and didn't go, the higher I would score. If I didn't understand something and didn't go to class, then at that point my grade would suffer. Since both these phenomena happened, it wouldn't reflect in the data.</p>
 
     <div class="graph-square" id="GradeVHW"></div>
-    <p>This graph shows the relationship between the grade received and the time spent on studying and working on homework. Like in the previous case, it appears that the more I studied or did homework, the lower my grade was. However, there are significant outliers that skew this data. If the top two were removed, there is a slightly correlation coefficient of 0.014, and a positive correlation. The data is still pretty scattered however, so the above principle holds true. Thus, there is a very weak positive relationship between studying and grade received.</p>
+    <p>This graph shows the relationship between the grade received and the time spent on studying and working on homework. Like in the previous case, it appears that the more I studied or did homework, the lower my grade was. However, there are significant outliers that skew this data. If the top two were removed, there is a slightly higher correlation coefficient of 0.014, but still very weak. The data is still pretty scattered however, so the above principle holds true. Thus, there is a very weak positive relationship between studying and grade received.</p>
 
     <div class="graph-square" id="GradeVOH"></div>
     <p>This graph clearly illustrates the problem between grade received and office hours. There are two clear outliers here that misrepresent a highly negative correlation between the two. With those removed, there is again a slightly positive correlation.</p>
@@ -221,27 +219,59 @@
     <p>This data is interesting in terms of whether students are able to improve from the beginning to the end of the semester. Currently, the graph shows a positive correlation between the first and final exam with a 0.297 correlation coefficient, higher than most of our other data. However, when several outliers are removed from the cluster, it changes to a slight positive correlation and a considerably lower correlation coefficient.</p>
 
     <div class="graph-square" id="FinalVFinalTime"></div>
+    <p>This graph shows the relationship between how much I received on the final test and how much I spent studying for the final exam. The data is spread out everywhere, with no linear correlation in sight.</p>
+
     <div class="graph-square" id="GradeVFinalTime"></div>
+    <p>This shows the relationship between how much I studied for the final exam and how much I actually received in the class. The darker the color, the greater weight the exam held in final grade determination. Unfortunately, like in the previous graph, there doesn't seem to be a correlation between studying hard in one test and the grade received.</p>
+
     <div class="graph-square" id="GradeVFinalPercent"></div>
+    <p>Here shows the relationship between my grade and how much the final is worth. Doesn't seem to be a correlation.</p>
+
     <div class="graph-square" id="AvGradeVFinalPercent"></div>
+    <p>As for the relationship between the average grade of the course and how much the final is worth, there also doesn't seem to be a correlation.</p>
 
     <h3>Units, Class Sizes, & Grades</h3>
+    <p>The next set of factors include how many units the class offered, and how big the class was in determining the final grade.</p>
+
     <div class="graph-square" id="UnitsVGrade"></div>
+    <p>This graph represents units and the final grade. There doesn't seem to be any correlation.</p>
+
     <div class="graph-square" id="UnitsVAvGrade"></div>
+    <p>And with the average grade compared to units, again there doesn't seem to be any correlation.</p>
     
     <div class="graph-square" id="GradeVSize"></div>
+    <p>Class size data appears to be a bit more interesting. With the current data, it appears that there is a weak negative correlation between class sizes and the grade received, as when the bigger the class becomes, the lower the grade. When I remove all the points above 300 hours, the correlation coefficient increases from 0.168 to 0.17, which still unfortunately makes this hypothesis weak.</p>
+
     <div class="graph-square" id="AvGradeVSize"></div>
+    <p>This data just shows that most of the average grades, at least of the classes I have taken, are around 3.3. Not much correlation between average grade of the course and class size at all.</p>
     
     <div class="graph-square" id="UnitsVAvTime"></div>
+    <p>Here, I was curious whether there was a correlation between the units of a class and the average time I spent going to class, doing homework, and going to office hours for the class. Removing the top two outliers, the correlation coefficient went form 0.121 to 0.226, strengthening the relationship a little bit. However, there were roughly the same amount of 3 unit courses as 4 unit courses here, and so I wouldn't say that there is a strong correlation between average time spent and units here.</p>
+
+    <p>In conclusion, <strong>there is no strong correlation between grades, time spent, test results, units, and class sizes.</strong> There is potentially a split phenonmena when it comes to time spent: the more I study, the better I do, while paradoxically, the worse I do because I need to study harder to understand the material I didn't understand before. This also translates into individual midterm and final grades as well.</p>
 
 
     <!-- OTHER TIME -->
-    <h2 id="other-time">Other Time: How Fun & Sleep Affects Productivity and GPA</h2>
+    <h2 id="other-time">Other Time: How Fun & Sleep Affect Productivity and GPA</h2>
+    <p>Now that we've explored certain aspects of how our grades turn out based on chosen factors such as how many units we take, how big the class is, or how much time we study, what about the other more human factors like having fun and sleeping? I take each one in turn.</p>
 
     <h3>Fun</h3>
+    <p>I calculated "fun" as time spent on my hobbies like baking or doing jigsaw puzzles, hanging out with friends and family, hanging out with my boyfriend, and wasting time like playing games and watching TV. Each of these activities are logged in their respective calendars. I didn't start a "hobbies" or "fun" section in Fall 2012, which is why I do not have any data on it. I started dating my boyfriend in Spring 2015, which is why there is a sudden spike in this category from Fall 2014 to Spring 2015.</p>
+
+    <p>There are two questions I am interested here, and they are:</p>
+    <ul>
+      <li>Does spending time unproductively result in lower results?</li>
+      <li>Does having a significant other lower productivity and grades?</li>
+    </ul>
+    <p>I measure this mostly through the amount of time I spend. The upper three points represent the time I started dating. The following graph shows how much time I had fun in each semester.</p>
     <div class="graph-short" id="SemFun"></div>
+
     <div class="graph-square" id="SemUnitsVFun"></div>
+    <p>This graph compares how many units I take with how much time I spend not doing so. There seems to be somewhat of a negative correlation, and the times I dated are the three points in which are higher than the line, which shows that I spent more time not studying than not in the context of units. Other than that, there isn't much of a correlation.</p>
+
     <div class="graph-square" id="SemGradeVFun"></div>
+    <p></p>
+
     <div class="graph-square" id="FunVTotalAcademicTime"></div>
 
     <h3>Sleep</h3>
@@ -250,9 +280,16 @@
     <div class="graph-square" id="SemGradeVSleep"></div>
     <div class="graph-square" id="SleepVTotalAcademicTime"></div>
 
+    <h3>Activities</h3>
+    <p>Activities were a big part of my college experience. While I classify it as productive time, they were largely a release of stress and another way I could have fun at college. I ask the same questions here as in fun and sleep.</p>
+
+    <div class="graph-square" id="SemUnitsVActivities"></div>
+    <div class="graph-square" id="SemGradeVActivities"></div>
+    <div class="graph-square" id="ActivitiesVTotalAcademicTime"></div>
+
 
     <!-- DEFLATION -->
-    <h2 id="deflation">Grade Deflation: Does it Exist?</h3>
+    <h2 id="deflation">Grade Deflation: Does it Exist?</h2>
     <div class="graph-square" id="GradeVPercent"></div>
     <!-- is there grade deflation like the rumors say? -->
     <div class="graph-square" id="GradeVAverage"></div>
@@ -261,6 +298,8 @@
    
     <h2>What Can You Take Away From All This?</h2>
     <p>While I have said at multiple points in time that this analysis is solely about <strong>my data</strong> and in no way should be concluded about everyone, there are some things to keep in mind when you get upset that you weren't able to study enough for a specific test, or got a certain grade in the class because you <em>think</em> it's because of this-or-this. It's okay. There aren't that many correlations in reality.</p>
+
+    <p>There is one particular spot here that I didn't tackle that was a big part of my college experience, and that is my job search.</p>
 
   <!-- JAVASCRIPT TO MAKE THIS WORK -->
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -311,35 +350,6 @@
           containerId: 'SemVCumulative'
         });
         wrapper.draw()
-      }
-
-      /* Comparing units per semester and semester GPA
-       * Graph: Scatter
-       * D: Units per semester
-       * G: Semester GPA
-       */
-      google.setOnLoadCallback(drawSemGradeVUnits);
-      function drawSemGradeVUnits() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=868686859',
-          query: 'SELECT D,G',
-          options: {
-            'title': 'Units vs. Semester GPA',
-            'hAxis': {'title': 'Units'},
-            'vAxis': {'title': 'Semester GPA (GPA)'},
-            'trendlines': { 
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              },
-              '1': {}
-            },
-            // 'legend': 'none',
-          },
-          containerId: 'SemGradeVUnits'
-        });
-        wrapper.draw()        
       }
 
       /* Comparing semester GPA and units
@@ -1036,6 +1046,93 @@
         wrapper.draw()        
       }
 
+      /* Comparing units per semester and time spent on Activities
+       * Graph: Scatter
+       * D: Units per semester
+       * Q: Time on Activities
+       */
+      google.setOnLoadCallback(drawSemUnitsVActivities);
+      function drawSemUnitsVActivities() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'ScatterChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=868686859',
+          query: 'SELECT D,N',
+          options: {
+            'title': 'Units vs. Time Spent on Activities',
+            'hAxis': {'title': 'Units'},
+            'vAxis': {'title': 'Time Spent (hours)'},
+            'trendlines': { 
+              '0': {
+                'showR2': 'true',
+                'visibleInLegend': 'true'
+              },
+              '1': {}
+            },
+            // 'legend': 'none',
+          },
+          containerId: 'SemUnitsVActivities'
+        });
+        wrapper.draw()        
+      }
+
+      /* Comparing semester GPA and time on Activities
+       * Graph: Scatter
+       * G: Semester GPA
+       * Q: Time spent on Activities
+       */
+      google.setOnLoadCallback(drawSemGradeVActivities);
+      function drawSemGradeVActivities() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'ScatterChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=868686859',
+          query: 'SELECT N,Q',
+          options: {
+            'title': 'Semester GPA vs. Time on Activities',
+            'hAxis': {'title': 'Semester GPA (GPA)'},
+            'vAxis': {'title': 'Time Spent (hours)'},
+            'trendlines': { 
+              '0': {
+                'showR2': 'true',
+                'visibleInLegend': 'true'
+              },
+              '1': {}
+            },
+            // 'legend': 'none',
+          },
+          containerId: 'SemGradeVActivities'
+        });
+        wrapper.draw()        
+      }
+
+      /* Comparing time on Activities and total academic time
+       * Graph: Scatter
+       * Q: Time spent on Activities
+       * O: Time spent on total academic time
+       */
+      google.setOnLoadCallback(drawActivitiesVTotalAcademicTime);
+      function drawActivitiesVTotalAcademicTime() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'ScatterChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=868686859',
+          query: 'SELECT N,O',
+          options: {
+            'title': 'Time on Activities vs. Time on Academics',
+            'hAxis': {'title': 'Time Spent on Activities (hours)'},
+            'vAxis': {'title': 'Time Spent on Academics (hours)'},
+            'trendlines': { 
+              '0': {
+                'showR2': 'true',
+                'visibleInLegend': 'true'
+              },
+              '1': {}
+            },
+            // 'legend': 'none',
+          },
+          containerId: 'ActivitiesVTotalAcademicTime'
+        });
+        wrapper.draw()        
+      }
+
       // DEFLATION
 
       var straightData = [ ['Grade1', 'Grade2'],
@@ -1118,7 +1215,7 @@
           }
       });
 
-  </script>
+    </script>
 
   </body>
 </html>
