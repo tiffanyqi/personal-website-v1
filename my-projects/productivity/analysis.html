@@ -195,10 +195,10 @@
     <p>I have had the good fortune of documenting how much time I spent going to class, doing homework and studying, going to office hours, and studying before the semester. I went to most of my classes, as most of them were participation based. In addition, I only went to office hours diligently for my computer science classes, so there will be some bias there. Here, I'll provided some correlation between grade earned and each of these four factors.</p>
 
     <div class="graph-square" id="GradeVClass"></div>
-    <p>This graph illustrates the relationship between the grade received and the time spent on going to class. Through a strictly linear sense, it appears that the more I went to class, the lower my GPA was. However, since there is a significant dip in the data with additional outliers, with a correlation coefficient very close to 0, I would say there is no linear correlation here. It may be the case that the more I knew about a subject and didn't go, the higher I would score. If I didn't understand something and didn't go to class, then at that point my grade would suffer. Since both these phenomena happened, it wouldn't reflect in the data.</p>
+    <p>This graph illustrates the relationship between the grade received and the time spent on going to class. Through a strictly linear sense, it appears that the more I went to class, the lower my GPA was. However, since there is a significant dip in the data with additional outliers, with a coefficient of determination very close to 0, I would say there is no linear correlation here. It may be the case that the more I knew about a subject and didn't go, the higher I would score. If I didn't understand something and didn't go to class, then at that point my grade would suffer. Since both these phenomena happened, it wouldn't reflect in the data.</p>
 
     <div class="graph-square" id="GradeVHW"></div>
-    <p>This graph shows the relationship between the grade received and the time spent on studying and working on homework. Like in the previous case, it appears that the more I studied or did homework, the lower my grade was. However, there are significant outliers that skew this data. If the top two were removed, there is a slightly higher correlation coefficient of 0.014, but still very weak. The data is still pretty scattered however, so the above principle holds true. Thus, there is a very weak positive relationship between studying and grade received.</p>
+    <p>This graph shows the relationship between the grade received and the time spent on studying and working on homework. Like in the previous case, it appears that the more I studied or did homework, the lower my grade was. However, there are significant outliers that skew this data. If the top two were removed, there is a slightly higher coefficient of determination of 0.014, but still very weak. The data is still pretty scattered however, so the above principle holds true. Thus, there is a very weak positive relationship between studying and grade received.</p>
 
     <div class="graph-square" id="GradeVOH"></div>
     <p>This graph clearly illustrates the problem between grade received and office hours. There are two clear outliers here that misrepresent a highly negative correlation between the two. With those removed, there is again a slightly positive correlation.</p>
@@ -213,10 +213,10 @@
     <p>This first graph shows the relationship between the final grade received and the first test. There seems to be somewhat of a positive relationship here, as the better I do in the first test, the better I do in the class. When the bottom two points are removed, however, the line flattens considerably.</p>
 
     <div class="graph-square" id="GradeVFinalGrade"></div>
-    <p>Here is a bubble plot of the relationship between the final grade received and the final test. The darkness of the points represent how much of the final was worth in the calculation of the grade. There seems to be quite the positive correlation here with a correlation coefficient of 0.658, while the weight didn't seem to matter that much.</p>
+    <p>Here is a bubble plot of the relationship between the final grade received and the final test. The darkness of the points represent how much of the final was worth in the calculation of the grade. There seems to be quite the positive correlation here with a coefficient of determination of 0.658, while the weight didn't seem to matter that much.</p>
 
     <div class="graph-square" id="FirstVFinal"></div>
-    <p>This data is interesting in terms of whether students are able to improve from the beginning to the end of the semester. Currently, the graph shows a positive correlation between the first and final exam with a 0.297 correlation coefficient, higher than most of our other data. However, when several outliers are removed from the cluster, it changes to a slight positive correlation and a considerably lower correlation coefficient.</p>
+    <p>This data is interesting in terms of whether students are able to improve from the beginning to the end of the semester. Currently, the graph shows a positive correlation between the first and final exam with a 0.297 coefficient of determination, higher than most of our other data. However, when several outliers are removed from the cluster, it changes to a slight positive correlation and a considerably lower coefficient of determination.</p>
 
     <div class="graph-square" id="FinalVFinalTime"></div>
     <p>This graph shows the relationship between how much I received on the final test and how much I spent studying for the final exam. The data is spread out everywhere, with no linear correlation in sight.</p>
@@ -240,13 +240,13 @@
     <p>And with the average grade compared to units, again there doesn't seem to be any correlation.</p>
     
     <div class="graph-square" id="GradeVSize"></div>
-    <p>Class size data appears to be a bit more interesting. With the current data, it appears that there is a weak negative correlation between class sizes and the grade received, as when the bigger the class becomes, the lower the grade. When I remove all the points above 300 hours, the correlation coefficient increases from 0.168 to 0.17, which still unfortunately makes this hypothesis weak.</p>
+    <p>Class size data appears to be a bit more interesting. With the current data, it appears that there is a weak negative correlation between class sizes and the grade received, as when the bigger the class becomes, the lower the grade. When I remove all the points above 300 hours, the coefficient of determination increases from 0.168 to 0.17, which still unfortunately makes this hypothesis weak.</p>
 
     <div class="graph-square" id="AvGradeVSize"></div>
     <p>This data just shows that most of the average grades, at least of the classes I have taken, are around 3.3. Not much correlation between average grade of the course and class size at all.</p>
     
     <div class="graph-square" id="UnitsVAvTime"></div>
-    <p>Here, I was curious whether there was a correlation between the units of a class and the average time I spent going to class, doing homework, and going to office hours for the class. Removing the top two outliers, the correlation coefficient went form 0.121 to 0.226, strengthening the relationship a little bit. However, there were roughly the same amount of 3 unit courses as 4 unit courses here, and so I wouldn't say that there is a strong correlation between average time spent and units here.</p>
+    <p>Here, I was curious whether there was a correlation between the units of a class and the average time I spent going to class, doing homework, and going to office hours for the class. Removing the top two outliers, the coefficient of determination went form 0.121 to 0.226, strengthening the relationship a little bit. However, there were roughly the same amount of 3 unit courses as 4 unit courses here, and so I wouldn't say that there is a strong correlation between average time spent and units here.</p>
 
     <p>In conclusion, <strong>there is no strong correlation between grades, time spent, test results, units, and class sizes.</strong> There is potentially a split phenonmena when it comes to time spent: the more I study, the better I do, while paradoxically, the worse I do because I need to study harder to understand the material I didn't understand before. This also translates into individual midterm and final grades as well.</p>
 
@@ -254,6 +254,8 @@
     <!-- OTHER TIME -->
     <h2 id="other-time">Other Time: How Fun & Sleep Affect Productivity and GPA</h2>
     <p>Now that we've explored certain aspects of how our grades turn out based on chosen factors such as how many units we take, how big the class is, or how much time we study, what about the other more human factors like having fun and sleeping? I take each one in turn.</p>
+
+    <p>Note: There are only 8 data points here, so it's harder to make conclusions from sparse data.</p>
 
     <h3>Fun</h3>
     <p>I calculated "fun" as time spent on my hobbies like baking or doing jigsaw puzzles, hanging out with friends and family, hanging out with my boyfriend, and wasting time like playing games and watching TV. Each of these activities are logged in their respective calendars. I didn't start a "hobbies" or "fun" section in Fall 2012, which is why I do not have any data on it. I started dating my boyfriend in Spring 2015, which is why there is a sudden spike in this category from Fall 2014 to Spring 2015.</p>
@@ -270,20 +272,33 @@
     <p>This graph compares how many units I take with how much time I spend not doing so. There seems to be somewhat of a negative correlation, and the times I dated are the three points in which are higher than the line, which shows that I spent more time not studying than not in the context of units. Other than that, there isn't much of a correlation.</p>
 
     <div class="graph-square" id="SemGradeVFun"></div>
-    <p></p>
+    <p>The graph above shows the relationship between the semester grade and the time I spent on fun. There appears to be no linear correlation, with a kink in the graph. The top three points represent the times I dated, and so they were all above the trendline. All three had different GPAs, and so I wouldn't say that any of it has a correlation.</p>
 
     <div class="graph-square" id="FunVTotalAcademicTime"></div>
+    <p>This next graph relates the time spent on fun with the total academic time. Removing Fall 2012, the coefficient of determination increased from 0.01 to 0.723, which is a huge jump. As such, there is a strong negative linear correlation between time on academics and time having fun. Thus, the more I had fun, the less I spent time on academics, and that makes sense.</p>
 
     <h3>Sleep</h3>
+    
     <div class="graph-short" id="SemSleep"></div>
+    <p>According to this data, I slept pretty consistently throughout each semester from 800 to 900 hours of sleep. Let's look into the specifics.</p>
+
     <div class="graph-square" id="SemUnitsVSleep"></div>
+    <p>Here is a representation of the units taken in the semester and time sleeping. There doesn't seem to be a clear correlation since data is scattered.</p>
+
     <div class="graph-square" id="SemGradeVSleep"></div>
+    <p>Here's another representation of sleep, comparing to the overall grade in the semester. The data is pretty scattered again, and thus not much of a linear correlation.</p>
+
     <div class="graph-square" id="SleepVTotalAcademicTime"></div>
+    <p>Finally, this graph shows the relationship between total time sleeping and total time going to classes, studying, and going to office hours. The coefficient of determination is 0.42, which are higher than the other coefficient. This makes sense, as the more time sleeping, the less time studying.</p>
 
     <h3>Activities</h3>
     <p>Activities were a big part of my college experience. While I classify it as productive time, they were largely a release of stress and another way I could have fun at college. I ask the same questions here as in fun and sleep.</p>
 
+    <p>I've written about <a href="https://advicefromahaasmajor.wordpress.com/2014/08/05/my-extracurriculars-and-past-affiliations/">my activities before Fall 2014</a>. After BCEC, BMC, and Perfect Fifth, I did a lot of teaching and tutoring in introductory computer science. I founded <a href="csmberkeley.github.io">Computer Science Mentors<a/>, an organization focused on group tutoring in all introductory computer science courses. In total, I spent 670 hours in three semesters, which is a significant portion of my activities here.</p>
+
     <div class="graph-square" id="SemUnitsVActivities"></div>
+    <p>This graph shows </p>
+
     <div class="graph-square" id="SemGradeVActivities"></div>
     <div class="graph-square" id="ActivitiesVTotalAcademicTime"></div>
 
