@@ -44,7 +44,7 @@
         display: table-cell;
         float: none;
         width: 1%; /* Why? */
-        padding: 15px 70px;
+        padding: 10px 70px;
         transition: 0.5s;
         text-align: center;
         margin: auto;
@@ -58,13 +58,13 @@
         color: white;
       }
       body {
-        margin: 50px 250px;
+        margin: 50px 200px;
         font-family: 'Raleway', sans-serif;
         line-height: 1.7;
         text-align: justify;
       }
       h1, h2 {
-        padding-top: 70px;
+        padding-top: 50px;
       }
       @media screen and (max-width: 1000px) {
         body {
@@ -96,6 +96,7 @@
 
     <!-- ABOUT AND INTRODUCTION -->
     <h1 id="top">Correlations between Habits and Grades in College</h1>
+    <p>[WORK IN PROGRESS]</P>
     <p>Hi there, and welcome to my Productivity Project. Since I started college at UC Berkeley, I have been tracking my productivity through Google Calendar, then migrating the data onto a spreadsheet through a calculator application I built called <a href="https://github.com/tiffanyqi/calenTools">CalenTools</a> for the command line. With this information, I thought it would be fun to take all this data, analyze it, and make some conclusions about how time management, sleep, fun, grades, units, and class sizes all correlate using Google Charts.</p>
 
     <p>As such, this project is an analysis of <strong>one person's life</strong>, and many conclusions should not be seriously applied elsewhere. I do make some observations about the department, but these are very few. Check out the project below!</p>
@@ -310,10 +311,30 @@
 
     <!-- DEFLATION -->
     <h2 id="deflation">Grade Deflation: Does it Exist?</h2>
-    <div class="graph-square" id="GradeVPercent"></div>
-    <!-- is there grade deflation like the rumors say? -->
-    <div class="graph-square" id="GradeVAverage"></div>
-    <!-- how do i do compared to the average in the class? -->
+    <p>At UC Berkeley, grade deflation is a big thing that we stress over. The <a href="http://www.dailycal.org/2015/05/15/grade-deflation/">Daily Cal</a> wrote an article about it, and shows a graph that compares the average grades of Harvard, Yale, Stanford, and UC Berkeley. There, UC Berkeley's average grade has been consistently under their counterparts. Here, I'd like to take a different approach. <strong>Does Berkeley award lower grades than our percentages in the class?</strong> Are classes at Cal naturally more difficult? Or, do the other schools just curve everyone upwards? I can't speak very much to the last question, but I can provide my own data on the first one.</p>
+
+    <div class="graph-tall" id="GradeVPercent"></div>
+    <p>Here is a chart of all of my grades and the percentages I received from each grade. Some of them are estimated, but I did my best to ask each of my professors what I received in certain areas in case the numbers were not updated online. The blue trendline shows the correlation between these two aspects, and the coefficient of determination is 0.499, which is somewhat of a strong correlation. It is surprising that it is not stronger.</p>
+
+    <p>If there were no grade deflation or inflation, the line should be the thicker line you see here. This was calculated by assuming the minimum points for each grade are as follows:</p>
+    <ul>
+      <li>2.70 (B-) : 80%</li>
+      <li>3.00 (B)  : 82%</li>
+      <li>3.30 (B+) : 86%</li>
+      <li>3.70 (A-) : 90%</li>
+      <li>4.00 (A)  : 92%</li>
+    </ul>
+    <p>And the maximum grade are as follows:</p>
+    <ul>
+      <li>2.70 (B-) : 81.9%</li>
+      <li>3.00 (B)  : 85.9%</li>
+      <li>3.30 (B+) : 89.9%</li>
+      <li>3.70 (A-) : 91.9%</li>
+      <li>4.00 (A)  : 100%</li>
+    </ul>
+    <p>I took the average of these points and extended the thickness. Thus, the red line encapsulates all possible grades from their percentages received if grades were given on such scale. The red points are these averages.</p>
+
+    <p>As you can see, the majority of grades received falls under the red line, which shows that in reality, many grades are given out not by the hard set percentage, but perhaps from the curve in the class. Yes, these percentages are much lower, but classes purposefully give students a higher grade due to the difficulty of the class itself. <strong>Perhaps there isn't so much of a grade deflation as we make it to be, as professors purposefully increase grades to accomodate this.</strong></p>    
 
    
     <h2>What Can You Take Away From All This?</h2>
@@ -526,7 +547,7 @@
               },
               '1': {}
             },
-            // 'legend': 'none',
+            'legend': 'none',
           },
           containerId: 'GradeVFirst'
         });
@@ -580,7 +601,7 @@
               },
               '1': {}
             },
-            // 'legend': 'none',
+            'legend': 'none',
           },
           containerId: 'FirstVFinal'
         });
@@ -634,7 +655,7 @@
               },
               '1': {}
             },
-            // 'legend': 'none',
+            'legend': 'none',
           },
           containerId: 'FinalVFinalTime'
         });
@@ -663,7 +684,7 @@
               },
               '1': {}
             },
-            // 'legend': 'none',
+            'legend': 'none',
           },
           containerId: 'GradeVFinalPercent'
         });
@@ -692,7 +713,7 @@
               },
               '1': {}
             },
-            // 'legend': 'none',
+            'legend': 'none',
           },
           containerId: 'AvGradeVFinalPercent'
         });
@@ -721,7 +742,7 @@
               },
               '1': {}
             },
-            // 'legend': 'none',
+            'legend': 'none',
           },
           containerId: 'UnitsVGrade'
         });
@@ -750,7 +771,7 @@
               },
               '1': {}
             },
-            // 'legend': 'none',
+            'legend': 'none',
           },
           containerId: 'UnitsVAvGrade'
         });
@@ -779,7 +800,7 @@
               },
               '1': {}
             },
-            // 'legend': 'none',
+            'legend': 'none',
           },
           containerId: 'GradeVSize'
         });
@@ -808,7 +829,7 @@
               },
               '1': {}
             },
-            // 'legend': 'none',
+            'legend': 'none',
           },
           containerId: 'AvGradeVSize'
         });
@@ -837,7 +858,7 @@
               },
               '1': {}
             },
-            // 'legend': 'none',
+            'legend': 'none',
           },
           containerId: 'UnitsVAvTime'
         });
@@ -891,7 +912,7 @@
               },
               '1': {}
             },
-            // 'legend': 'none',
+            'legend': 'none',
           },
           containerId: 'SemUnitsVFun'
         });
@@ -920,7 +941,7 @@
               },
               '1': {}
             },
-            // 'legend': 'none',
+            'legend': 'none',
           },
           containerId: 'SemGradeVFun'
         });
@@ -949,7 +970,7 @@
               },
               '1': {}
             },
-            // 'legend': 'none',
+            'legend': 'none',
           },
           containerId: 'FunVTotalAcademicTime'
         });
@@ -1001,7 +1022,7 @@
               },
               '1': {}
             },
-            // 'legend': 'none',
+            'legend': 'none',
           },
           containerId: 'SemUnitsVSleep'
         });
@@ -1030,7 +1051,7 @@
               },
               '1': {}
             },
-            // 'legend': 'none',
+            'legend': 'none',
           },
           containerId: 'SemGradeVSleep'
         });
@@ -1059,7 +1080,7 @@
               },
               '1': {}
             },
-            // 'legend': 'none',
+            'legend': 'none',
           },
           containerId: 'SleepVTotalAcademicTime'
         });
@@ -1088,7 +1109,7 @@
               },
               '1': {}
             },
-            // 'legend': 'none',
+            'legend': 'none',
           },
           containerId: 'SemUnitsVActivities'
         });
@@ -1117,7 +1138,7 @@
               },
               '1': {}
             },
-            // 'legend': 'none',
+            'legend': 'none',
           },
           containerId: 'SemGradeVActivities'
         });
@@ -1155,71 +1176,33 @@
 
       // DEFLATION
 
-      var straightData = [ ['Grade1', 'Grade2'],
-                           [3.0, 3.0],
-                           [3.3, 3.3],
-                           [3.7, 3.7],
-                           [4, 4] ];
-
       /* Comparing grade received and percentage received
        * Graph: Scatter
        * E: Grade received
        * H: Percentage received
+       * V: Predicted percentage
        */
       google.setOnLoadCallback(drawGradeVPercent);
       function drawGradeVPercent() {
         var wrapper = new google.visualization.ChartWrapper({
           chartType: 'ScatterChart',
           dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1jUdSt008mbfFvi1S20tWEWoNPJ28kOgvZRuLOoRDgYQ/edit#gid=0',
-          query: 'SELECT E,H',
+          query: 'SELECT E,H,V',
           options: {
             'title': 'Grade Received vs. Percentage Received',
             'hAxis': {'title': 'Grade Received (GPA)'},
-            'vAxis': {'title': 'Percentage Received (%)'},
+            'vAxis': {'title': 'Percentage (%)'},
             'trendlines': { 
               '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
               },
-              '1': {}
+              '1': {
+                'lineWidth': 30,
+              }
             },
-            // 'legend': 'none',
           },
           containerId: 'GradeVPercent'
         });
         wrapper.draw()        
-      }
-
-      /* Comparing grade received and average grade in the course
-       * Graph: Scatter
-       * E: Grade received
-       * F: Average grade received
-       */
-      google.setOnLoadCallback(drawGradeVAverage);
-      function drawGradeVAverage() {
-        // var joinedData = google.visualization.data.join("https://docs.google.com/spreadsheets/d/1jUdSt008mbfFvi1S20tWEWoNPJ28kOgvZRuLOoRDgYQ/edit#gid=0", straightData, 'full', [[0, 0]], [1], [1]);
-
-
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1jUdSt008mbfFvi1S20tWEWoNPJ28kOgvZRuLOoRDgYQ/edit#gid=0',
-          query: 'SELECT E,F',
-          options: {
-            'title': 'Grade Received vs. Average Grade in the Class',
-            'hAxis': {'title': 'Grade Received (GPA)'},
-            'vAxis': {'title': 'Average Grade (GPA)'},
-            'trendlines': { 
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              },
-              '1': {}
-            },
-            // 'legend': 'none',
-          },
-          containerId: 'GradeVAverage'
-        });
-        wrapper.draw()
       }
 
       // http://www.abeautifulsite.net/smoothly-scroll-to-an-element-without-a-jquery-plugin-2/
@@ -1231,7 +1214,7 @@
               event.preventDefault();
               $('html, body').animate({
                   scrollTop: target.offset().top
-              }, 700);
+              }, 650);
           }
       });
 
