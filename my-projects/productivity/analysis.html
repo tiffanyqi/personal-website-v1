@@ -176,10 +176,10 @@
     <h2 id="time">Time: How a Student's Grades and Time Commitment Change Over Time</h2>
 
     <h3>My Time</h3>
-    <p>The below graph is a visual display of all the time I spent in each semester on HW (homework & studying outside of class), Class time, OH (office hours, or time asking for help), Activities (extra-curriculars, jobs, internships--basically anything that wasn't class related), and Planning (Academic, Life, etc.). In Fall 2014, I was the least motivated academically but still spent more than half of my semester at my part-time job, tutoring, lab assisting, and spinning up a new student organization.</p>
+    <p>The below graph is a visual display of all the time I spent in each semester on HW (homework & studying outside of class), Class time, OH (office hours, or time asking for help), Activities (extra-curriculars, jobs, internships--basically anything that wasn't class related), Planning (academic, life, etc.), and Job Hunting (searching, interviewing, etc). In Fall 2014, I was the least motivated academically but still spent more than half of my semester at my part-time job, tutoring, lab assisting, and spinning up a new student organization.</p>
     <div class="graph-tall" id="SemTime"></div>
 
-    <p>In terms of motivation, I peaked in Fall 2014 and tried my best to be a productive member of the student body. I still don't know how I managed to spend 1000+ hours in a semester. For context, if each semester is 16 weeks long, each week having 7 days and 24 hours in one day, then the duration of one semester is 24 x 7 x 16 = <strong>2,688 hours</strong> long. According to these numbers, I spent over <strong>40%</strong> of my time productively. I spent 30.6% of my time sleeping, which is approximately 7 hours a day. <strong>I spent more time working than I did sleeping</strong>. To put this into perspective, a full time job (assuming 40 hours/week) would be 24% of time spent. Throughout my college career, I was productive about 25% to 42% of the time. (The first calendar depicted a typical week in Fall 2014.)</p>
+    <p>In terms of motivation, I peaked in Fall 2014 and tried my best to be a productive member of the student body. I still don't know how I managed to spend 1000+ hours in a semester. For context, if each semester is 16 weeks long, each week having 7 days and 24 hours in one day, then the duration of one semester is 24 x 7 x 16 = <strong>2,688 hours</strong> long. According to these numbers, I spent over <strong>40%</strong> of my time productively. I spent 30.6% of my time sleeping, which is approximately 7 hours a day. <strong>I spent more time working than I did sleeping</strong>. To put this into perspective, a full time job (assuming 40 hours/week) would be 24% of time spent. Throughout my college career, I was productive about 28% to 47% of the time. (The first calendar depicted a typical week in Fall 2014.)</p>
 
     <p>So yeah, even though I was little crazy when it came to activities, the time I spent on my academics decreased. The most time I spent on my classes was in Spring 2013 (still a freshman in college).</p>
 
@@ -337,7 +337,19 @@
     <div class="graph-square" id="SemGradeVPlan"></div>
     <p>This graph shows the relationship between the grade I received and how much time I planned. Even if the point 3.8, 48.3 were higher, there would still have been a very weak correlation between these two.</p>
 
-    <p>In conclusion, <strong>having fun, dating, sleeping, and planning have no direct correlation with grades. Activities, however, have a strong negative linear relationship</strong>.</p>
+    <h3>Jobs</h3>
+
+    <p>The potential lack of job after graduation weighed on my mind throughout college, and so I attempted to gain more experience by applying to internships, and full time opportunities my senior year. This was one of my most stressful experiences throughout college, and would like to showcase it here as well.</p>
+
+    <div class="graph-short" id="SemJobs"></div>
+    <p>Clearly I spent more time job hunting as time went on, as I felt more pressure to succeed.</p>
+
+    <div class="graph-square" id="SemGradeVJobs"></div>
+    <p>Here presents the time spent preparing for jobs and the grade I received at the end of the semester. With the top outlier removed, the coefficient of determination increases from 0.05 to 0.23, but in the opposite direction. Thus, there is a weak negative relationship between these two.</p>
+
+    <h3>Putting it all Together</h3>
+    <div class="graph-square" id="SemGradeVOtherTime"></div>
+    <p>Instead of isolating each piece, now I'm curious about whether all of the time I don't spend studying combined affects grades. with the outlier removed, the treadline gooes in the opposite direction, suggesting a weak positive relationship between grade earned and the collective sum of sleep, activities, fun, jobs, and planning. As a result, I conclude that <strong>having fun, dating, sleeping, planning, and job hunting have no direct correlation with grades. Activities, however, have a strong negative linear relationship</strong>.</p>
 
 
     <!-- DEFLATION -->
@@ -392,14 +404,15 @@
       <li><strong>Tests and grades.</strong> In general, there is no direct correlation between specific test or assignment results and the final grade in the class.</li>
       <li><strong>Units, class sizes, and grades.</strong> There is no linear correlation between grades and units, grades and class sizes.</li>
       <li><strong>Fun, dating, and grades.</strong> There was no correlation between time spent having fun and grades. Nor did dating affect my GPA.</li>
-      <li><strong>Sleeping and grades.</strong> There was no correlation between time spent sleeping and grades. The more I slept, the less time I spent studying though.</li>
+      <li><strong>Sleeping and grades.</strong> There was no correlation between time spent sleeping and the grade received. The more I slept, the less time I spent studying though.</li>
+      <li><strong>Planning and grades.</strong>There was no correlation between how much time I planned and the grade received.</li>
+      <li><strong>Job hunting and grades.</strong>There was no correlation between how much time I spent preparing for jobs and the grade received.</li>
       <li><strong>Grade deflation.</strong> The majority of my grades received were frequently higher than the percentages received, but not lower.</li>
     </ul>
 
     <p>These results display only a 2-way relationship between factors and grades. Again, <strong>all of these factors impact the final grades.</strong> All I can do is isolate the findings and compare them against each other.</p>
 
     <h3>Concluding Remarks</h3>
-    <p>There is one particular spot here that I didn't tackle that was a big part of my college experience, and that is my job search. Throughout my college career, I have spent 248 hours applying, preparing and interviewing. I included them as productive time, but did not give its own separate category.</p> 
 
   <!-- JAVASCRIPT TO MAKE THIS WORK -->
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -417,13 +430,14 @@
        * J: OH
        * N: Activities
        * S: Planning
+       * T: Job Preparing
        */
       google.setOnLoadCallback(drawSemTime);
       function drawSemTime() {
         var wrapper = new google.visualization.ChartWrapper({
           chartType: 'ColumnChart',
           dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=868686859',
-          query: 'SELECT A,H,I,J,N,S',
+          query: 'SELECT A,H,I,J,N,S,T',
           options: {
             'title': 'Time Spent Productively by Semester',
             'hAxis': {'title': 'Semester'},
@@ -1305,6 +1319,87 @@
             'legend': 'none',
           },
           containerId: 'SemGradeVPlan'
+        });
+        wrapper.draw()        
+      }
+
+      /* Looking at time spent job hunting by semester
+       * Graph: Scatter
+       * A: Semester
+       * S: Time job hunting
+       */
+      google.setOnLoadCallback(drawSemJobs);
+      function drawSemJobs() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'ColumnChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=868686859',
+          query: 'SELECT A,T',
+          options: {
+            'title': 'Time Spent Job Hunting by Semester',
+            'hAxis': {'title': 'Semester'},
+            'vAxis': {'title': 'Time Spent (Hours)'},
+            'bar': {'groupWidth': '50%'},
+            'legend': 'none'
+          },
+          containerId: 'SemJobs'
+        });
+        wrapper.draw()
+      }
+
+      /* Comparing semester GPA and time job hunting
+       * Graph: Scatter
+       * G: Semester GPA
+       * T: Time job hunting
+       */
+      google.setOnLoadCallback(drawSemGradeVJobs);
+      function drawSemGradeVJobs() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'ScatterChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=868686859',
+          query: 'SELECT G,T',
+          options: {
+            'title': 'Semester GPA vs. Time Job Hunting',
+            'hAxis': {'title': 'Semester GPA (GPA)'},
+            'vAxis': {'title': 'Time Spent (hours)'},
+            'trendlines': { 
+              '0': {
+                'showR2': 'true',
+                'visibleInLegend': 'true'
+              },
+              '1': {}
+            },
+            'legend': 'none',
+          },
+          containerId: 'SemGradeVJobs'
+        });
+        wrapper.draw()        
+      }
+
+      /* Comparing semester GPA and other time
+       * Graph: Scatter
+       * G: Semester GPA
+       * U: Other time
+       */
+      google.setOnLoadCallback(drawSemGradeVOthertime);
+      function drawSemGradeVOthertime() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'ScatterChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=868686859',
+          query: 'SELECT G,U',
+          options: {
+            'title': 'Semester GPA vs. Other Time',
+            'hAxis': {'title': 'Semester GPA (GPA)'},
+            'vAxis': {'title': 'Time Spent (hours)'},
+            'trendlines': { 
+              '0': {
+                'showR2': 'true',
+                'visibleInLegend': 'true'
+              },
+              '1': {}
+            },
+            'legend': 'none',
+          },
+          containerId: 'SemGradeVOtherTime'
         });
         wrapper.draw()        
       }
