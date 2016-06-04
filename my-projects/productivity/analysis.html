@@ -96,38 +96,39 @@
 
     <!-- ABOUT AND INTRODUCTION -->
     <h1 id="top">Correlations between Habits and Grades in College</h1>
-    <p>[WORK IN PROGRESS]</P>
+    <p><strong>[WORK IN PROGRESS]</strong></p>
     <p>Hi there, and welcome to my Productivity Project. Since I started college at UC Berkeley, I have been tracking my productivity through Google Calendar, then migrating the data onto a spreadsheet through a calculator application I built called <a href="https://github.com/tiffanyqi/calenTools">CalenTools</a> for the command line. With this information, I thought it would be fun to take all this data, analyze it, and make some conclusions about how time management, sleep, fun, grades, units, and class sizes all correlate using Google Charts.</p>
 
-    <p>As such, this project is an analysis of <strong>one person's life</strong>, and many conclusions should not be seriously applied elsewhere. I do make some observations about the department, but these are very few. Check out the project below!</p>
+    <p>As such, this project is an analysis of <strong>one person's life</strong>, and should not be taken as absolute fact. I found this data interesting to share, and hope that it helps you when you think that one test can make or break your grade. Check out the project below!</p>
 
     <h3>About Me</h3>
-    <p>My name is <a href="../../../index">Tiffany Qi</a>, and I study Business Administration at UC Berkeley. I primarily took classes in the Undergraduate Business Administration department, but have dabbled into language-related courses, psychology, and computer science. As such, this data hinges on those specific areas, and thus is not fully comprehensive of all departments at Berkeley.</p>
+    <p>My name is <a href="../../../index">Tiffany Qi</a>, and I just graduated from UC Berkeley, studying Business Administration. I primarily took classes in the Undergraduate Business Administration department, but have dabbled into language-related courses, psychology, and computer science. As such, this data hinges on those specific areas, and thus is not fully comprehensive of all departments at Berkeley.</p>
 
-    <p>I am an above-average student, as the average GPA for a graduate at Haas is 3.4, and I have a 3.55 GPA. I did pretty well when I first started college with a 3.8 my first semester, before falling pretty consistently to 3.52 my second to last semester, before raising to 3.55.</p>
+    <p>I was an above-average student with a final GPA of 3.55. The average GPA at Haas is a 3.4. I did pretty well when I first started college and received a 3.8 my first semester, then it fell pretty consistently to 3.52 until my last semester.</p>
 
-    <p>I took a <em>lot</em> of classes outside of my major, and I typically took heavy workloads throughout my college career. I took 42 letter-graded classes in total, 20 of which were in my major, which means more than half of the classes I took here were not business-related! Most of these classes did not fulfill general education requirements. This is an average of 17.3 units and around 5 classes per semester, whereas most students tend to take 15-16 units and around 4 classes. On top of letter-graded units, I frequently tacked on Pass/No Pass classes (such as academic interning, computer science, breadth or teaching techniques) on top of that.</p>
+    <p>I studied a <em>lot</em> of classes outside of my major, and I typically took on heavy workloads throughout my college career. I did 42 letter-graded classes in total, 20 of which were in my major, which means more than half of the classes I took here were not business-related! Most of these classes did not fulfill general education requirements. This is an average of 17.3 units and around 5 classes per semester, whereas most students tend to take 15-16 units and around 4 classes. On top of letter-graded units, I frequently tacked on Pass/No Pass classes (such as academic interning, computer science, breadth or teaching techniques) on top of that.</p>
 
-    <p>I spend a lot of my time on extra-curricular activities. It has now comprised more than half of all my productive time. I'm somewhat of a workaholic, but I enjoy these activities considerably. Thus, even though I consider "fun" (shown later in the analysis) to be independent from my work, it is often blended together for me. For now, "fun" is defined as time set aside for something non-work related.</p>
+    <p>I spent a lot of my time on extra-curricular activities, and comprised more than half of all my productive time. I was somewhat of a workaholic, but I enjoyed these activities considerably. Thus, while I highly enjoy my activities, I classified it in my calendar as work and productivie time. For now, "fun" is defined as time set aside for something non-work related.</p>
 
     <p>I am interested in these points:</p>
       <ul>
         <li><strong>Time:</strong> how a student's grades and academic time commitment change over time,</li>
         <li><strong>Correlation:</strong> whether time spent, units, specific tests, or class size and the grades received in the class have any correlation,</li>
-        <li><strong>Fun: </strong>whether having non-productive time affects GPA,</li>
-        <li><strong>Sleep: </strong> how sleep factors into all of this,</li>
+        <li><strong>Others: </strong>whether time spent having fun, sleeping, and on activities affects GPA,</li>
         <li><strong> Deflation: </strong> and whether grade deflation is really a concept at Berkeley.</li>
       </ul>
+
+    <p>While I took basic statistics in high school and in college, I do not have a background in data science or analysis. Thus, my analysis is limited to the lens of linear correlations and timescales. If you'd like to play with my data, feel free to <a href="mailto:tiffany19qi@gmail.com">contact me.</a></p>
 
     <p>I will do my best to deeply analyze the data through the eyes of one student.</p>
 
     <h3>My Diary: Getting Time Data</h3>
-    <p>I am a Google Calendar Super User, and I am quite proud of that fact. Since November 2012, I have consistently logged my productive (and non-productive) moments of my life. (Most of Fall 2012 is an estimate of time spent except for the last two weeks.) As such, I am able to go back to any given day and reveal all the moments and feelings of the past. This improves my memory and gives me helpful insights along the way. Below are a couple of examples of a given week, one is of October 2014, while the other is more recent at December 2015, which also happened to be the week of final exams.</p>
+    <p>I am a Google Calendar Super User, and I am quite proud of that fact. Since November 2012, I have consistently logged my productive (and non-productive) moments of my life. (Most of Fall 2012 is an estimate of time spent except for the last two weeks of the semester.) As such, I am able to go back to any given day and reveal all the moments and feelings of the past. This improves my memory and gives me helpful insights along the way. Below are a couple of examples of a given week: one is of October 2014, while the other is slightly more recent at December 2015, which also happened to be the week of final exams.</p>
 
     <img class="calendar" src="../../assets/img/work/oct14.png" alt="October 2014">
-    <p>You can see that each category is represented by a calendar of different colors. I describe each event and thus can recall the feelings and events of the day.</p>
+    <p>You can see that each category is represented by a calendar of different colors. I describe each event with some description. Some are more obvious, such as sleep, and so many events have "No Title".</p>
 
-    <p>Each week, I calculate how much time I spend in each  calendar, further calculating statistics about each class and activity that I pursue. For this analysis, the calendar data I use are:</p>
+    <p>Each week, I calculate how much time I spend in each calendar, further calculating statistics about each class and activity I pursue. For this analysis, the calendar data I use are:</p>
     <ul>
       <li>Class</li>
       <li>Homework & Studying</li>
@@ -139,29 +140,14 @@
       <li>Social / Calls</li>
       <li>♥♥♥</li>
     </ul>
-    <p>I split up each calendar and attributed it to each given category, which includes the specific class and activity. As such, I calculate productively strictly from the first four calendars. I have other things like "fun", which is calcuated from hobbies, games & time wasters, and social (spending time talking or doing something with someone not work-related), and love. I have three years and counting worth of quantifiable data on my productive (and not so productive) moments.</p>
+    <p>I split up each calendar and attribute it to each given category, which includes the specific class and activity. As such, I calculate productivity strictly from the first four calendars. I have other things like "fun", which is calcuated from hobbies, games & time wasters, and social (spending time talking or doing something with someone not work-related), and love. I have more than three years worth of quantifiable data on my productive (and not so productive) moments.</p>
     <img class="calendar" src="../../assets/img/work/dec15.png" alt="December 2015">
 
     <h3>Other Sources of Data</h3>
     <p>In addition to time, I also calculate grades very closely. This is typically a spreadsheet with every assignment and their weights to either recreate the exact percentage received at the end, or to estimate a percentage. I have lost specific test grades for the first four semesters. In addition, many classes do not release final exam grades, participation, or final course grades, so about half of the percentages here are likely estimates.</p>
 
-    <p>I also have some average grades on the site as well. I went on <a href="http://schedulebuilder.berkeley.edu">Schedule Builder</a>, a UC Berkeley resource, to find the average grade associate with my class and its given semester. If a particular semester wasn't given, I took a look at previous semesters, and if it was a constant grade average, I used that one. If it didn't exist, I estimated.</p>
+    <p>I also have some average grades on the site as well. I went on <a href="http://schedulebuilder.berkeley.edu">Schedule Builder</a>, a UC Berkeley resource, to find the average grade associated with my class and its given semester. If a particular semester wasn't given, I took a look at previous semesters, and if it was a constant grade average, I used that one. If it didn't exist, I estimated.</p>
 
-    <p>As for units and class sizes, this information was obtained on <a href="http://schedule.berkeley.edu">Schedule of Classes</a>, another official UC Berkeley website.</p>
-
-
-    <!-- OVER TIME CALCULATIONS -->
-    <h2 id="time">Time: How a Student's Grades and Time Commitment Change Over Time</h2>
-
-    <h3>My Time</h3>
-    <p>The below graph is a visual display of all the time I spent in each semester on HW (homework & studying outside of class), Class time, OH (office hours, or time asking for help), and Activities (extra-curriculars, jobs, internships--basically anything that wasn't class related). In Fall 2014, I was the least motivated academically but still spent more than half of my semester at my part-time job, tutoring, lab assisting, and spinning up a new student organization.</p>
-    <div class="graph-tall" id="SemTime"></div>
-
-    <p>In terms of motivation, I peaked in Fall 2014 and tried the best I could to be a productive member of student body. I still don't know how I managed to spend 1000+ plus hours in a semester. For context, if each semester is 16 weeks long, each week having 7 days and 24 hours in one day, then the duration of one semester is 24 x 7 x 16 = <strong>2,688 hours</strong> long. According to these numbers, I spent over <strong>40%</strong> of my time productively. I slept approximately 30.6% of my time sleeping, which is approximately 7 hours a day. <strong>I spent more time working than I did sleeping</strong>. To put this into perspective, a full time job (assuming 40 hours/week) would be approximately 24% of time spent. Throughout my college career, I was productive approximately 25% to 42% of the time. (The first calendar depicted a typical week in Fall 2014, you can see how it looked.)</p>
-
-    <p>So yeah, even though I was little crazy when it came to activities, the time I spent on my academics decreased. The most time I spent on my classes was in Spring 2013 (still a freshman in college), before steadily decreasing since.</p>
-
-    <h3>My Grades</h3>
     <p>At UC Berkeley, we use a 4.0 grading scale. In my graphs, I frequently use number representations to present results visually. This is what the specific scale looks like:</p>
 
     <table>
@@ -172,28 +158,56 @@
 
     <p>We also have Pass/No Pass grades, which is not represented in the GPA. I took six classes P/NP, three of which I do not have grades for. These six grades, despite being in this data, is not calculated in my GPA.</p>
 
+    <p>As for units and class sizes, this information was obtained on <a href="http://schedule.berkeley.edu">Schedule of Classes</a>, another official UC Berkeley website.</p>
+
+    <h3>Terminology</h3>
+    <p>There are a few statistics and college terms I use throughout the project. I define them below in case something doesn't make sense:</p>
+    <ul>
+      <li><strong>Coefficient of Determination:</strong></li>
+      <li><strong>GPA:</strong> stands for "grade point average". It is a way for schools to average a student's academic achievement in a single number. The maximum GPA a student may receive at Berkeley is a 4.0</li>
+      <li><strong>P/NP:</strong> stands for "pass/no pass". These grades do not factor into GPA, and students must receive at least a C- to pass the class. If a student receives a NP on a graduation requirement, he or she must retake the class. It is difficult to receive a "NP".</li>
+      <li><strong>:</strong></li>
+    </ul>
+
+    <p>Let's get started.</p>
+
+
+    <!-- OVER TIME CALCULATIONS -->
+    <h2 id="time">Time: How a Student's Grades and Time Commitment Change Over Time</h2>
+
+    <h3>My Time</h3>
+    <p>The below graph is a visual display of all the time I spent in each semester on HW (homework & studying outside of class), Class time, OH (office hours, or time asking for help), Activities (extra-curriculars, jobs, internships--basically anything that wasn't class related), and Planning (Academic, Life, etc.). In Fall 2014, I was the least motivated academically but still spent more than half of my semester at my part-time job, tutoring, lab assisting, and spinning up a new student organization.</p>
+    <div class="graph-tall" id="SemTime"></div>
+
+    <p>In terms of motivation, I peaked in Fall 2014 and tried my best to be a productive member of the student body. I still don't know how I managed to spend 1000+ hours in a semester. For context, if each semester is 16 weeks long, each week having 7 days and 24 hours in one day, then the duration of one semester is 24 x 7 x 16 = <strong>2,688 hours</strong> long. According to these numbers, I spent over <strong>40%</strong> of my time productively. I spent 30.6% of my time sleeping, which is approximately 7 hours a day. <strong>I spent more time working than I did sleeping</strong>. To put this into perspective, a full time job (assuming 40 hours/week) would be 24% of time spent. Throughout my college career, I was productive about 25% to 42% of the time. (The first calendar depicted a typical week in Fall 2014.)</p>
+
+    <p>So yeah, even though I was little crazy when it came to activities, the time I spent on my academics decreased. The most time I spent on my classes was in Spring 2013 (still a freshman in college).</p>
+
+    <h3>My Grades</h3>
+    <p>Note: these graphs related to grades show up occasionally. If one or the other does not appear, please try refreshing.</p>
+
     <div class="graph-short" id="SemVCumulative"></div>
-    <p>This graph compares my semester and cumulative GPAs. Over time, it appears that my GPA fell pretty consistently over time until my final semester, in which raised my cumulative GPA by a little bit. Sometimes, huge decreases in semester GPA does not affect cumulative GPA by that much. This of course, is due to the decrease in units taken for a letter grade, which is reflected in the below graph.</p>
+    <p>This graph compares my semester and cumulative GPAs. Over time, it appears that my GPA fell pretty consistently until my final semester. Sometimes, huge decreases in semester GPA does not affect cumulative GPA by that much. This is due to the decrease in units taken for a letter grade, which is reflected in the below graph.</p>
 
     <div class="graph-short" id="UnitsVGPA"></div>
-    <p>In this graph, I compared the Semester GPAs with the total number of units I took that semester (including P/NP units, and dividing it by 5 so that the overall trend fits on the GPA graph). There is somewhat of a correlation, as the higher number of units I take, the higher the GPA.</p>
+    <p>In this graph, I compared the Semester GPAs with the total number of units I took that semester (including P/NP units, and dividing it by 5 so that the overall trend fits on the GPA graph). There is somewhat of a correlation, as the more number of units I take, the higher the GPA.</p>
 
-    <p>In conclusion, my motivation peaked in Fall 2014, and fell throughout the consecutive semesters. This next section will show even more correlations.</p>
+    <p>In conclusion, my motivation peaked in Fall 2014, and fell throughout consecutive semesters. Units and grades were also slightly positively correlated. This next section will show even more correlations.</p>
 
 
     <!-- CORRELATION -->
     <h2 id="correlation">Academic Correlation: How Everything is Connected</h2>
-    <p>I think many people would be interested in seeing whether studying for a test and working hard is actually meant to show results in the long run. I will be covering the following correlations:</p>
+    <p>I will be covering the following correlations:</p>
     <ul>
-      <li>Correlations between time spent and grade received</li>
-      <li>Correlations between test results and grade received</li>
-      <li>Correlations between number of units and grade received</li>
-      <li>Correlations between class sizes and grade received</li>
+      <li>Time spent and grade received</li>
+      <li>Test results and grade received</li>
+      <li>Number of units and grade received</li>
+      <li>Class sizes and grade received</li>
     </ul>
     <p>Let's begin!</p>
 
     <h3>Time & Grades</h3>
-    <p>I have had the good fortune of documenting how much time I spent going to class, doing homework and studying, going to office hours, and studying before the semester. I went to most of my classes, as most of them were participation based. In addition, I only went to office hours diligently for my computer science classes, so there will be some bias there. Here, I'll provided some correlation between grade earned and each of these four factors.</p>
+    <p>I have had the good fortune of documenting how much time I spent going to class, doing homework and studying, going to office hours, and studying before the semester. I went to most of my classes, as most were participation based. In addition, I only went to office hours diligently for my computer science classes, so there will be some bias there. Here, I'll provide some pictorials of grade earned and each of these four factors.</p>
 
     <div class="graph-square" id="GradeVClass"></div>
     <p>This graph illustrates the relationship between the grade received and the time spent on going to class. Through a strictly linear sense, it appears that the more I went to class, the lower my GPA was. However, since there is a significant dip in the data with additional outliers, with a coefficient of determination very close to 0, I would say there is no linear correlation here. It may be the case that the more I knew about a subject and didn't go, the higher I would score. If I didn't understand something and didn't go to class, then at that point my grade would suffer. Since both these phenomena happened, it wouldn't reflect in the data.</p>
@@ -208,7 +222,7 @@
     <p>Again, CS 61A! Always the outlier. The graph shows the same problem as with the previous ones between grade received and extra time spent before the semester preparing. Removing the outlier, there is again a slightly positive correlation.</p>
 
     <h3>Tests & Grades</h3>
-    <p>Next, I'd like to explore the relationship between test results and the grades received in the class. I classified "First Test" with either the first midterm, quiz, assignment, or essay. Some classes didn't have any of these, so those I left blank. "Final Test" was either the final exam, presentation, or paper. I avoided using a final quiz if there was one, as that may have been just a normal exam. Is there a correlation between studying your ass off and getting a good grade? Let's see if there is one.</p>
+    <p>Next, I'd like to explore the relationship between test results and the grades received in the class. I classified "First Test" with either the first midterm, quiz, assignment, or essay. Some classes didn't have any of these, so those I left blank. "Final Test" was either the final exam, presentation, or paper. I avoided using a final quiz if there was one, as that may have been just a normal exam. Is there a correlation between studying your ass off and getting a good grade? Let's see.</p>
 
     <div class="graph-square" id="GradeVFirst"></div>
     <p>This first graph shows the relationship between the final grade received and the first test. There seems to be somewhat of a positive relationship here, as the better I do in the first test, the better I do in the class. When the bottom two points are removed, however, the line flattens considerably.</p>
@@ -217,7 +231,7 @@
     <p>Here is a bubble plot of the relationship between the final grade received and the final test. The darkness of the points represent how much of the final was worth in the calculation of the grade. There seems to be quite the positive correlation here with a coefficient of determination of 0.658, while the weight didn't seem to matter that much.</p>
 
     <div class="graph-square" id="FirstVFinal"></div>
-    <p>This data is interesting in terms of whether students are able to improve from the beginning to the end of the semester. Currently, the graph shows a positive correlation between the first and final exam with a 0.297 coefficient of determination, higher than most of our other data. However, when several outliers are removed from the cluster, it changes to a slight positive correlation and a considerably lower coefficient of determination.</p>
+    <p>This data is interesting in terms of whether students are able to improve from the beginning to the end of the semester. Currently, the graph shows a positive correlation between the first and final exam with a 0.297 coefficient of determination, higher than most of our other data. However, when several outliers are removed from the cluster, it lowers the coefficient of determination significantly.</p>
 
     <div class="graph-square" id="FinalVFinalTime"></div>
     <p>This graph shows the relationship between how much I received on the final test and how much I spent studying for the final exam. The data is spread out everywhere, with no linear correlation in sight.</p>
@@ -241,20 +255,22 @@
     <p>And with the average grade compared to units, again there doesn't seem to be any correlation.</p>
     
     <div class="graph-square" id="GradeVSize"></div>
-    <p>Class size data appears to be a bit more interesting. With the current data, it appears that there is a weak negative correlation between class sizes and the grade received, as when the bigger the class becomes, the lower the grade. When I remove all the points above 300 hours, the coefficient of determination increases from 0.168 to 0.17, which still unfortunately makes this hypothesis weak.</p>
+    <p>It appears that there is a weak negative correlation between class sizes and the grade received, as when the bigger the class becomes, the lower the grade. When I remove all the points above 300 hours, the coefficient of determination increases from 0.168 to 0.17, which still unfortunately makes this hypothesis weak.</p>
 
     <div class="graph-square" id="AvGradeVSize"></div>
     <p>This data just shows that most of the average grades, at least of the classes I have taken, are around 3.3. Not much correlation between average grade of the course and class size at all.</p>
     
     <div class="graph-square" id="UnitsVAvTime"></div>
-    <p>Here, I was curious whether there was a correlation between the units of a class and the average time I spent going to class, doing homework, and going to office hours for the class. Removing the top two outliers, the coefficient of determination went form 0.121 to 0.226, strengthening the relationship a little bit. However, there were roughly the same amount of 3 unit courses as 4 unit courses here, and so I wouldn't say that there is a strong correlation between average time spent and units here.</p>
+    <p>At Berkeley, there is a saying that students must spend about 4 times as many units of the class. Thus, if one class was 4 units, then students should spend about 16 hours a week studying, going to class, office hours, etc. If this was the case, then my data should show a strong positive correlation between these two points.</p>
 
-    <p>In conclusion, <strong>there is no strong correlation between grades, time spent, test results, units, and class sizes.</strong> There is potentially a split phenonmena when it comes to time spent: the more I study, the better I do, while paradoxically, the worse I do because I need to study harder to understand the material I didn't understand before. This also translates into individual midterm and final grades as well.</p>
+    <p>Removing the top two outliers, the coefficient of determination went form 0.121 to 0.226, strengthening the relationship a little bit. However, there were roughly the same amount of 3 unit courses as 4 unit courses here, and so I wouldn't say that there is a strong correlation between average time spent and units. Some 4 unit classes will be harder than others, and so there should be more time spent there.</p>
+
+    <p>In conclusion, <strong>there is no strong correlation between grades, time spent, test results, units, and class sizes.</strong> There is potentially a split phenonmena when it comes to time spent: the more I study, the better I do, while paradoxically, the worse I do because I need to study harder to understand the material I didn't understand before. This also translates into individual midterm and final grades as well. However, there is <strong>a slight positive correlation between extra time spent preparing for a class before the semester starts and the grade in that class, as well as between final test results and the final grade in the class.</strong></p>
 
 
     <!-- OTHER TIME -->
     <h2 id="other-time">Other Time: How Fun & Sleep Affect Productivity and GPA</h2>
-    <p>Now that we've explored certain aspects of how our grades turn out based on chosen factors such as how many units we take, how big the class is, or how much time we study, what about the other more human factors like having fun and sleeping? I take each one in turn.</p>
+    <p>Now that we've explored certain aspects of how our grades turn out based on chosen factors such as how many units we take, how big the class is, or how much time we study; what about the other more human factors like having fun, sleeping, and participating in activities? I take each one in turn.</p>
 
     <p>Note: There are only 8 data points here, so it's harder to make conclusions from sparse data.</p>
 
@@ -265,6 +281,7 @@
     <ul>
       <li>Does spending time unproductively result in lower results?</li>
       <li>Does having a significant other lower productivity and grades?</li>
+      <li>Does "work hard, play hard" actually hold true?</li>
     </ul>
     <p>I measure this mostly through the amount of time I spend. The upper three points represent the time I started dating. The following graph shows how much time I had fun in each semester.</p>
     <div class="graph-short" id="SemFun"></div>
@@ -276,7 +293,7 @@
     <p>The graph above shows the relationship between the semester grade and the time I spent on fun. There appears to be no linear correlation, with a kink in the graph. The top three points represent the times I dated, and so they were all above the trendline. All three had different GPAs, and so I wouldn't say that any of it has a correlation.</p>
 
     <div class="graph-square" id="FunVTotalAcademicTime"></div>
-    <p>This next graph relates the time spent on fun with the total academic time. Removing Fall 2012, the coefficient of determination increased from 0.01 to 0.723, which is a huge jump. As such, there is a strong negative linear correlation between time on academics and time having fun. Thus, the more I had fun, the less I spent time on academics, and that makes sense.</p>
+    <p>This next graph relates the time spent on fun with the total academic time. Removing Fall 2012, the coefficient of determination increased from 0.01 to 0.723, which is a huge jump. As such, there is a strong negative linear correlation between time on academics and time having fun. Thus, the more I had fun, the less I spent time on academics, which seemingly debunks the "word hard, play hard" mentality.</p>
 
     <h3>Sleep</h3>
     
@@ -293,10 +310,12 @@
     <p>Finally, this graph shows the relationship between total time sleeping and total time going to classes, studying, and going to office hours. The coefficient of determination is 0.42, which are higher than the other coefficient. This makes sense, as the more time sleeping, the less time studying.</p>
 
     <h3>Activities</h3>
+
     <p>Activities were a big part of my college experience. While I classify it as productive time, they were largely a release of stress and another way I could have fun at college. I ask the same questions here as in fun and sleep.</p>
 
     <p>I've written about <a href="https://advicefromahaasmajor.wordpress.com/2014/08/05/my-extracurriculars-and-past-affiliations/">my activities before Fall 2014</a>. I also interned at Go Overseas and worked part-time at Intera Growth Partners. After BCEC, BMC, and Perfect Fifth, I did a lot of teaching and tutoring in introductory computer science. I founded <a href="csmberkeley.github.io">Computer Science Mentors<a/>, an organization focused on group tutoring in all introductory computer science courses. In total, I spent 670 hours in three semesters, which is a significant portion of my activities here.</p>
 
+    <div class="graph-short" id="SemActivities"></div>
     <div class="graph-square" id="SemUnitsVActivities"></div>
     <p>This graph shows the relationship between the units I took that semester and the time spent on my activities. With Fall 2014, the coefficient of determination jumps from 0.33 to 0.72. Thus, there's actually a strong negative correlation between units taken and time spent, which makes sense.</p>
 
@@ -306,7 +325,19 @@
     <div class="graph-square" id="ActivitiesVTotalAcademicTime"></div>
     <p>This graph shows the relationship between the time spent on activities with the time spent on academics. Again, removing Fall 2014, the coefficient of determination decreases from 0.847 to 0.793, but with these points of data, the correlation is still strong. There's a negative linear relationship between how much time I spend on activities and my total academic time. This may be because I spent a good majority of my time on it, and thus it shifts it in this way.</p>
 
-    <p>In conclusion, <strong>having fun, dating and sleeping have no direct correlation with grades. Activities, however, have a strong negative linear relationship</strong>.</p>
+    <h3>Planning</h3>
+
+    <p>I'm really big on planning. I would frequently plan out my four year schedule, tear them down, and make new ones, as well as figure out best ways to represent data on Google Calendar and my multiple spreadsheets. The question is here, would it have been more effective to use this time to study more rather than to plan?</p>
+
+    <div class="graph-short" id="SemPlanning"></div>
+    <p>As shown, I frequently spent more time planning in the beginning of my academic career than the end. The Fall 2012 number is actually only the last three weeks, and so I am sure I planned more throughout that semester.</p>
+
+    <p>Perhaps this worked out this way because I was more uncertain about my future at UC Berkeley or what my records of spreadsheets would like like than later semesters when I honed my craft. Now, I automate and use the same tools, which drastically reduces the amount of time to make them.</p>
+
+    <div class="graph-square" id="SemGradeVPlan"></div>
+    <p>This graph shows the relationship between the grade I received and how much time I planned. Even if the point 3.8, 48.3 were higher, there would still have been a very weak correlation between these two.</p>
+
+    <p>In conclusion, <strong>having fun, dating, sleeping, and planning have no direct correlation with grades. Activities, however, have a strong negative linear relationship</strong>.</p>
 
 
     <!-- DEFLATION -->
@@ -338,9 +369,37 @@
 
    
     <h2>What Can You Take Away From All This?</h2>
-    <p>While I have said at multiple points in time that this analysis is solely about <strong>my data</strong> and in no way should be concluded about everyone, there are some things to keep in mind when you get upset that you weren't able to study enough for a specific test, or got a certain grade in the class because you <em>think</em> it's because of this-or-this. It's okay. There aren't that many correlations in reality.</p>
+    <p>Once again, this is solely about my data, and cannot be concluded about everyone. However, a certain grade in the class isn't just because of this-or-this, there is a wide variety of factors that play into a final grade, like how much time you study, and sleep. It's about the combination of points that create a final product. From my data, there are only some linear correlations between all these factors. And it's okay if you didn't do well on one test, it's always possible to bounce back.</p>
 
-    <p>There is one particular spot here that I didn't tackle that was a big part of my college experience, and that is my job search.</p>
+    <h3>Findings</h3>
+    <p>TLDR; here are the results of my research.</p>
+
+    <p>Factors that did have a correlation:</p>
+    <ul>
+      <li><strong>Units and grades.</strong> The more units I took, the higher my grade. This doesn't appear to be a normal case and should not be taken seriously without experimentation.</li>
+      <li><strong>Time and productivity.</strong> The longer I was at Berkeley, the less productive I was. My most productive moments peaked at Fall 2014, and continued to decrease.</li>
+      <li><strong>Duration and grades.</strong> As time went on, the more my grades fell.</li>
+      <li><strong>Extra time and grades.</strong> There is a slight positive correlation between extra time spent preparing for a class before the semester starts and the grade in that class.</li>
+      <li><strong>Finals and final grades.</strong> There is somewhat of a positive correlation between the final test results and the final grade in the class.</li>
+      <li><strong>Fun and productivity.</strong> The more time I had fun, the less time I spent studying. "Work hard, play hard" didn't hold true for me.</li>
+      <li><strong>Activities and grades.</strong> There is a strong negative correlation between time spent on activities and semester GPA. The less I did activities, the better my GPA was. The less I did activities, the more units I took.</li>
+      <li><strong>Activities and productivity.</strong> The more time I spent on activities, the less time I spent studying or going to class.</li>
+    </ul>
+
+    <p>Factors that did <strong>not</strong> have a correlation: </p>
+    <ul>
+      <li><strong>Time and grades.</strong> There is no direct linear correlation between time spent and the grade received. It is possible that since I spent more time on a class because it was harder, and thus I didn't do as well, or that I spent more time and thus did better. Since both outcomes were possible, there was a very weak correlation between the two.</li>
+      <li><strong>Tests and grades.</strong> In general, there is no direct correlation between specific test or assignment results and the final grade in the class.</li>
+      <li><strong>Units, class sizes, and grades.</strong> There is no linear correlation between grades and units, grades and class sizes.</li>
+      <li><strong>Fun, dating, and grades.</strong> There was no correlation between time spent having fun and grades. Nor did dating affect my GPA.</li>
+      <li><strong>Sleeping and grades.</strong> There was no correlation between time spent sleeping and grades. The more I slept, the less time I spent studying though.</li>
+      <li><strong>Grade deflation.</strong> The majority of my grades received were frequently higher than the percentages received, but not lower.</li>
+    </ul>
+
+    <p>These results display only a 2-way relationship between factors and grades. Again, <strong>all of these factors impact the final grades.</strong> All I can do is isolate the findings and compare them against each other.</p>
+
+    <h3>Concluding Remarks</h3>
+    <p>There is one particular spot here that I didn't tackle that was a big part of my college experience, and that is my job search. Throughout my college career, I have spent 248 hours applying, preparing and interviewing. I included them as productive time, but did not give its own separate category.</p> 
 
   <!-- JAVASCRIPT TO MAKE THIS WORK -->
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -357,13 +416,14 @@
        * I: Class
        * J: OH
        * N: Activities
+       * S: Planning
        */
       google.setOnLoadCallback(drawSemTime);
       function drawSemTime() {
         var wrapper = new google.visualization.ChartWrapper({
           chartType: 'ColumnChart',
           dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=868686859',
-          query: 'SELECT A,H,I,J,N',
+          query: 'SELECT A,H,I,J,N,S',
           options: {
             'title': 'Time Spent Productively by Semester',
             'hAxis': {'title': 'Semester'},
@@ -883,7 +943,7 @@
             'hAxis': {'title': 'Semester'},
             'vAxis': {'title': 'Time Spent (Hours)'},
             'bar': {'groupWidth': '50%'},
-            'isStacked': 'true'
+            'legend': 'none'
           },
           containerId: 'SemFun'
         });
@@ -993,7 +1053,7 @@
             'hAxis': {'title': 'Semester'},
             'vAxis': {'title': 'Time Spent (Hours)'},
             'bar': {'groupWidth': '50%'},
-            'isStacked': 'true'
+            'legend': 'none'
           },
           containerId: 'SemSleep'
         });
@@ -1087,6 +1147,29 @@
         wrapper.draw()        
       }
 
+      /* Looking at time spent doing activities by semester
+       * Graph: Scatter
+       * A: Semester
+       * N: Time doing activities
+       */
+      google.setOnLoadCallback(drawSemActivities);
+      function drawSemActivities() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'ColumnChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=868686859',
+          query: 'SELECT A,N',
+          options: {
+            'title': 'Time Spent Doing Activities by Semester',
+            'hAxis': {'title': 'Semester'},
+            'vAxis': {'title': 'Time Spent (Hours)'},
+            'bar': {'groupWidth': '50%'},
+            'legend': 'none'
+          },
+          containerId: 'SemActivities'
+        });
+        wrapper.draw()
+      }
+
       /* Comparing units per semester and time spent on Activities
        * Graph: Scatter
        * D: Units per semester
@@ -1167,9 +1250,61 @@
               },
               '1': {}
             },
-            // 'legend': 'none',
+            'legend': 'none',
           },
           containerId: 'ActivitiesVTotalAcademicTime'
+        });
+        wrapper.draw()        
+      }
+
+      /* Looking at time spent planning by semester
+       * Graph: Scatter
+       * A: Semester
+       * S: Time planning
+       */
+      google.setOnLoadCallback(drawSemPlanning);
+      function drawSemPlanning() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'ColumnChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=868686859',
+          query: 'SELECT A,S',
+          options: {
+            'title': 'Time Spent Planning by Semester',
+            'hAxis': {'title': 'Semester'},
+            'vAxis': {'title': 'Time Spent (Hours)'},
+            'bar': {'groupWidth': '50%'},
+            'legend': 'none'
+          },
+          containerId: 'SemPlanning'
+        });
+        wrapper.draw()
+      }
+
+      /* Comparing semester GPA and time planning
+       * Graph: Scatter
+       * G: Semester GPA
+       * S: Time planning
+       */
+      google.setOnLoadCallback(drawSemGradeVPlan);
+      function drawSemGradeVPlan() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'ScatterChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1sFFCTozc-m_YaMDsj6KWg0dFsLdbznXArn7kooNSSXQ/edit#gid=868686859',
+          query: 'SELECT G,S',
+          options: {
+            'title': 'Semester GPA vs. Time planning',
+            'hAxis': {'title': 'Semester GPA (GPA)'},
+            'vAxis': {'title': 'Time Spent (hours)'},
+            'trendlines': { 
+              '0': {
+                'showR2': 'true',
+                'visibleInLegend': 'true'
+              },
+              '1': {}
+            },
+            'legend': 'none',
+          },
+          containerId: 'SemGradeVPlan'
         });
         wrapper.draw()        
       }
