@@ -20,19 +20,28 @@
 
     <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Montez' rel='stylesheet' type='text/css'>
+
+    <!-- start Mixpanel --><script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+      0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+      for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+      mixpanel.init("0514432afbe696a2dcaa51b5c0aa857e");</script><!-- end Mixpanel -->
+    <script>
+      mixpanel.track("Page View", {"Page": "Experience"});
+    </script>
+
   </head>
 
   <body>
 
     <!-- Navigation -->
     <div id="navbar-first">
-      <div id="title"><a href="index.html#cover">Tiffany Qi</a></div>
-      <a href="mailto:hello@tiffanyqi.com"><img class="navbar-item-logo" src="assets/img/contact/mail.jpg"></a>
-      <a href="http://www.linkedin.com/in/tiffanyqi"><img class="navbar-item-logo" src="assets/img/contact/linked.jpg"></a>
-      <a href="http://www.github.com/tiffanyqi"><img class="navbar-item-logo" src="assets/img/contact/git.jpg"></a>
-      <a href="http://sabakuwood.deviantart.com"><img class="navbar-item-logo" src="assets/img/contact/deviant.jpg"></a>
-      <a href="http://medium.com/@tiffanyqi"><img class="navbar-item-logo" src="assets/img/contact/medium.jpg"></a>
-      <a href="http://www.youtube.com/user/sabakuxsae/featured"><img class="navbar-item-logo" src="assets/img/contact/youtube.jpg"></a>
+      <div id="title"><a id ="navbar-item-title" href="index.html#cover">Tiffany Qi</a></div>
+      <a id="navbar-item-mail" href="mailto:hello@tiffanyqi.com"><img class="navbar-item-logo" src="assets/img/contact/mail.jpg"></a>
+      <a id="navbar-item-linkedin" href="http://www.linkedin.com/in/tiffanyqi"><img class="navbar-item-logo" src="assets/img/contact/linked.jpg"></a>
+      <a id="navbar-item-git" href="http://www.github.com/tiffanyqi"><img class="navbar-item-logo" src="assets/img/contact/git.jpg"></a>
+      <a id="navbar-item-deviantart" href="http://sabakuwood.deviantart.com"><img class="navbar-item-logo" src="assets/img/contact/deviant.jpg"></a>
+      <a id="navbar-item-medium" href="http://medium.com/@tiffanyqi"><img class="navbar-item-logo" src="assets/img/contact/medium.jpg"></a>
+      <a id="navbar-item-youtube" href="http://www.youtube.com/user/sabakuxsae/featured"><img class="navbar-item-logo" src="assets/img/contact/youtube.jpg"></a>
     </div>
     <div id="navbar-second">
       <div class="navbar-item"><a href="contact">contact</a></div>
@@ -59,12 +68,12 @@
       <div id="exp-columns">
 
         <!-- Mixpanel -->
-        <div class="exp-profile ux eng p">
+        <div class="exp-profile ux eng p" id="Mixpanel">
           <span class="cat-box">Engineering</span>
           <span class="cat-box">UX & Product</span>
           <span class="cat-box">People & Operations</span>
           <div class="exp-title">Support Engineer</div>
-          <div class="exp-employer"><a href="http://www.mixpanel.com/">Mixpanel</a></div>
+          <div class="exp-employer"><a id="link-experience-mixpanel" href="https://www.mixpanel.com">Mixpanel</a></div>
           <span class="exp-box">October 2016 - Present</span>
           <span class="exp-box">San Francisco, CA</span>
           <div class="exp-description">
@@ -78,11 +87,11 @@
         </div>
 
         <!-- SIS -->
-        <div class="exp-profile ux eng">
+        <div class="exp-profile ux eng" id="PM-SIS">
           <span class="cat-box">Engineering</span>
           <span class="cat-box">UX & Product</span>
           <div class="exp-title">Product Manager and Developer Intern</div>
-          <div class="exp-employer"><a href="http://sisproject.berkeley.edu/">Student Information Systems Project</a>, University of California Berkeley</div>
+          <div class="exp-employer"><a id="link-experience-sis" href="http://sisproject.berkeley.edu/">Student Information Systems Project</a>, University of California Berkeley</div>
           <span class="exp-box">June 2016 - October 2016</span>
           <span class="exp-box">Berkeley, CA</span>
           <div class="exp-description">
@@ -97,10 +106,10 @@
         </div>
 
         <!-- TA -->
-        <div class="exp-profile p">
+        <div class="exp-profile p" id="61A">
           <span class="cat-box">People & Operations</span>
           <div class="exp-title">Teaching Assistant, Hiring & Grading</div>
-          <div class="exp-employer"><a href="http://cs61a.org">CS 61A</a>, University of California Berkeley</div>
+          <div class="exp-employer"><a id="link-experience-61a" href="http://cs61a.org">CS 61A</a>, University of California Berkeley</div>
           <span class="exp-box">July 2015 - December 2015 </span>
           <span class="exp-box">Berkeley, CA</span>
           <div class="exp-description">
@@ -111,10 +120,10 @@
         </div>
 
         <!-- CSM -->
-        <div class="exp-profile p">
+        <div class="exp-profile p" id="CSM">
           <span class="cat-box">People & Operations</span>
           <div class="exp-title">Co-Founder & President</div>
-          <div class="exp-employer"><a href="http://csmberkeley.github.io/">Computer Science Mentors</a></div>
+          <div class="exp-employer"><a id="link-experience-csm" href="http://csmberkeley.github.io/">Computer Science Mentors</a></div>
           <span class="exp-box">November 2014 - December 2015</span>
           <span class="exp-box">Berkeley, CA</span>
           <div class="exp-description">
@@ -129,12 +138,12 @@
 
 
         <!-- Autodesk -->
-        <div class="exp-profile pr eng p ux">
+        <div class="exp-profile pr eng p ux" id="Autodesk">
           <span class="cat-box">Engineering</span>
           <span class="cat-box">People & Operations</span>
           <span class="cat-box">UX & Product</span>
           <div class="exp-title">MAGIC Mentorship for Interns Program Manager</div>
-          <div class="exp-employer"><a href="http://autodesk.com">Autodesk</a></div>
+          <div class="exp-employer"><a id="link-experience-autodesk" href="http://autodesk.com">Autodesk</a></div>
           <span class="exp-box">June 2015 - August 2015</span>
           <span class="exp-box">San Francisco, CA</span>
           <div class="exp-description">
@@ -152,10 +161,10 @@
         </div>
 
         <!-- SIS -->
-        <div class="exp-profile ux">
+        <div class="exp-profile ux" id="UX-SIS">
           <span class="cat-box">UX & Product</span>
           <div class="exp-title">User Experience Student Outreach and Research Assistant</div>
-          <div class="exp-employer"><a href="http://sisproject.berkeley.edu/">Student Information Systems Project</a>, University of California Berkeley</div>
+          <div class="exp-employer"><a id="link-experience-sis" href="http://sisproject.berkeley.edu/">Student Information Systems Project</a>, University of California Berkeley</div>
           <span class="exp-box">February 2015 - May 2015</span>
           <span class="exp-box">Berkeley, CA</span>
           <div class="exp-description">
@@ -169,13 +178,13 @@
         </div>
 
         <!-- web design -->
-        <div class="exp-profile pr eng ux">
+        <div class="exp-profile pr eng ux" id="Web">
           <span class="cat-box">Engineering</span>
           <span class="cat-box">UX & Product</span>
           <div class="exp-title">Web Designer</div>
           <span class="exp-box">May 2014 - Present</span>
           <div class="exp-description">
-            I dabble in a bit of web design, and am self-taught. Projects include <a href="http://csmberkeley.github.io">Computer Science Mentors</a>, <a href="http://mcomm.berkeley.edu">Marketing Community at Berkeley</a>, <a href="http://perfectfifth.berkeley.edu">Perfect Fifth</a>, Autodesk's Mentorship landing page, and this one.
+            I dabble in a bit of web design, and am self-taught. Projects include <a id="link-experience-csm" href="http://csmberkeley.github.io">Computer Science Mentors</a>, <a id="link-experience-mcomm" href="http://mcomm.berkeley.edu">Marketing Community at Berkeley</a>, <a id="link-experience-pfifth" href="http://perfectfifth.berkeley.edu">Perfect Fifth</a>, Autodesk's Mentorship landing page, and this one.
           </div>
           <span class="exp-box">HTML</span>
           <span class="exp-box">CSS</span>
@@ -186,14 +195,14 @@
         </div>
 
         <!-- Intera -->
-        <div class="exp-profile p">
+        <div class="exp-profile p" id="Intera">
           <span class="cat-box">People & Operations</span>
           <div class="exp-title">Assistant Recruiter and Office Manager</div>
-          <div class="exp-employer"><a href="http://www.interagrowthpartners.com">Intera Growth Partners</a></div>
+          <div class="exp-employer"><a id="link-experience-intera" href="http://www.interagrowthpartners.com">Intera Growth Partners</a></div>
           <span class="exp-box">June 2014 - December 2014</span>
           <span class="exp-box">San Francisco, CA</span>
           <div class="exp-description">
-            Intera is a technical recruiting agency connecting high performing canddiates with small to mid-sized companies in the Bay Area. My role focused on <strong>building relationships and evaluating the skill levels of 1000+ software engineers</strong>, front-end developers, UI/UX designers, product managers, and system administrators through university relations, rekindles, and job boards. In totality, I onboarded 6 candidates as a part-time employee, which translated into $100k+ in revenue.
+            Intera is a technical recruiting agency connecting high performing candidates with small to mid-sized companies in the Bay Area. My role focused on <strong>building relationships and evaluating the skill levels of 1000+ software engineers</strong>, front-end developers, UI/UX designers, product managers, and system administrators through university relations, rekindles, and job boards. In totality, I onboarded 6 candidates as a part-time employee, which translated into $100k+ in revenue.
           </div>
           <span class="exp-box">MaxHire CRM Software</span>
           <span class="exp-box">Recruiting</span>
@@ -201,27 +210,11 @@
           <span class="exp-box">Mandarin Chinese</span>
         </div>
 
-        <!-- Lab assisting -->
-        <div class="exp-profile eng p">
-          <span class="cat-box">Engineering</span>
-          <span class="cat-box">People & Operations</span>
-          <div class="exp-title">Academic Intern</div>
-          <div class="exp-employer"><a href="http://cs61a.org">Electrical Engineering and Computer Science Department</a>, University of California Berkeley</div>
-          <span class="exp-box">August 2014 - July 2015</span>
-          <span class="exp-box">Berkeley, CA</span>
-          <div class="exp-description">
-            I provide academic support to students in the introductory computer science courses through <strong>tutoring sessions, concept generation, and teaching fundamental concepts</strong> such as recursion and higher order functions. To date, I have supported 100+ students in ensuring their academic success.
-          </div>
-          <span class="exp-box">Python</span>
-          <span class="exp-box">Java</span>
-          <span class="exp-box">Tutoring</span>
-        </div>
-
         <!-- ursaMajor -->
-        <div class="exp-profile p">
+        <div class="exp-profile p" id="ursaMajor">
           <span class="cat-box">People & Operations</span>
           <div class="exp-title">Co-Founder & Product Manager</div>
-          <div class="exp-employer"><a href="https://github.com/ursamajor/ursaMajor">ursaMajor</a></div>
+          <div class="exp-employer"><a id="link-experience-ursa" href="https://github.com/ursamajor/ursaMajor">ursaMajor</a></div>
           <span class="exp-box">January 2013 - December 2014</span>
           <span class="exp-box">Berkeley, CA</span>
           <div class="exp-description">
@@ -233,10 +226,10 @@
         </div>
 
         <!-- Go Overseas -->
-        <div class="exp-profile m">
+        <div class="exp-profile m" id="Go Overseas">
           <span class="cat-box">Marketing</span>
           <div class="exp-title">Internet Marketing Intern</div>
-          <div class="exp-employer"><a href="http://www.gooverseas.com">Go Overseas</a></div>
+          <div class="exp-employer"><a id="link-experience-go" href="http://www.gooverseas.com">Go Overseas</a></div>
           <span class="exp-box">September 2013 - December 2013</span>
           <span class="exp-box">Berkeley, CA</span>
           <div class="exp-description">
@@ -262,7 +255,33 @@
         </div> 
       -->
 
-    </div></div>
+      </div>
+    </div>
+
+    <script>
+      $("#navbar-first a").on("click", function(event){
+        link_id = String("#" + this.id);
+        mixpanel.track("Pressed Navbar Item", {
+         "Page": link_id.split("-")[2],
+         "Source": "Experience"
+        })
+      })
+
+      $(".exp-profile a").on("click", function(event){
+        mixpanel.track("External Link View", {
+          "Page": event.target.text,
+          "Source": "Experience"
+        });
+      });
+
+      $("#filters .filter-box").on("click", function(event){
+        box_id = event.target.id;
+        mixpanel.track("Pressed Sort", {
+          "Button": box_id,
+          "Source": "Experience"
+        })
+      })
+    </script>
 
   </body>
 
