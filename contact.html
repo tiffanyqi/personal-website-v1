@@ -55,14 +55,14 @@
     <div id="contact" class="container">
       <h1>Contact Me</h1>
         <div id="contact-content">
-          <p>Are you a recruiter looking for an innovator? A student looking for advice? A wanderer passing by? Do not hesitate to get in <a href="mailto:hello@tiffanyqi.com">contact</a> with me!</p>
+          <p>Are you a recruiter looking for an innovator? A student looking for advice? A wanderer passing by? Do not hesitate to get in <a id="link-contact-mail" href="mailto:hello@tiffanyqi.com">contact</a> with me!</p>
         </div>
 
         <div>
-          <h3>Check out the code on <a href="https://github.com/tiffanyqi/personal">Github</a></h4>
+          <h3>Check out the code on <a id="link-contact-github" href="https://github.com/tiffanyqi/personal">Github</a></h4>
         </div>
-
     </div>
+
     <script>
       $("#navbar-first a").on("click", function(event){
         link_id = String("#" + this.id);
@@ -71,6 +71,15 @@
          "Source": "Contact"
         });
       });
+
+      $("#contact a").on("click", function(event){
+        link_id = String("#" + this.id);
+        mixpanel.track("External Link View", {
+          "Page": link_id.split("-")[2],
+          "Source": "Contact"
+        });
+      });
+
     </script>
 
   </body>

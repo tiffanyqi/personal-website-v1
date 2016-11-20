@@ -264,12 +264,13 @@
         mixpanel.track("Pressed Navbar Item", {
          "Page": link_id.split("-")[2],
          "Source": "Experience"
-        })
-      })
+        });
+      });
 
       $(".exp-profile a").on("click", function(event){
+        link_id = String("#" + this.id);
         mixpanel.track("External Link View", {
-          "Page": event.target.text,
+          "Page": link_id.split("-")[2],
           "Source": "Experience"
         });
       });
@@ -279,8 +280,8 @@
         mixpanel.track("Pressed Sort", {
           "Button": box_id,
           "Source": "Experience"
-        })
-      })
+        });
+      });
     </script>
 
   </body>
