@@ -6,4 +6,4 @@ Personal website, which can be found on http://tiffanyqi.com and http://tiffanyq
 Made with HTML, CSS, and JavaScript.
 
 ## Things to fix in the near future:
-- Connect github to hostgator
+- Use Jenkins
