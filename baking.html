@@ -1,20 +1,12 @@
 <! DOCTYPE html>
 <html>
   <head>
-    <title>Tiffany Qi</title>
+    <title>Tiffany Qi | Baking</title>
 
     <meta charset="UTF-8">
     <meta name="author" content="Tiffany Qi">
-    <meta name="description" content="I'm Tiffany Qi, and welcome to my page!">
+    <meta name="description" content="Welcome to Tiffany Qi's personal website.">
     <meta name="keywords" content="tiffany qi, uc berkeley">
-    <!-- <meta name="image" content="assets/img/home/heading.jpeg" /> -->
-
-    <!-- Open Graph data -->
-    <meta property="og:title" content="Tiffany Qi" />
-    <meta property="og:type" content="personal website" />
-    <meta property="og:url" content="http://tiffanyqi.com/" />
-    <meta property="og:image" content="assets/img/home/heading.jpeg" />
-    <meta property="og:description" content="I'm Tiffany Qi, and welcome to my page!" />
 
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
@@ -33,25 +25,14 @@
       0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
       for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
       mixpanel.init("0514432afbe696a2dcaa51b5c0aa857e");</script><!-- end Mixpanel -->
-
     <script>
-      // http://www.abeautifulsite.net/smoothly-scroll-to-an-element-without-a-jquery-plugin-2/
-      $('a[href^="#"]').on('click', function(event) {
-        var target = $( $(this).attr('href') );
-        if( target.length ) {
-          event.preventDefault();
-          $('html, body').animate({
-            scrollTop: target.offset().top
-          }, 700);
-        }
-      });
-
-      mixpanel.track("Page View", {"Page": "Index"});
+      mixpanel.track("Page View", {"Page": "Baking"});
     </script>
 
   </head>
 
   <body>
+
     <!-- Navigation -->
     <div id="navbar-first">
       <div id="title"><a id ="navbar-item-title" href="index.html#cover">Tiffany Qi</a></div>
@@ -70,24 +51,52 @@
       <div class="navbar-item"><a href="index#about">about</a></div>
     </div>
 
-    <!-- Heading -->
-    <div id="cover"></div>
+    <!-- Work -->
+    <div id="baking" class="container">
+      <h1>Weekly Baking</h1>
 
-    <!-- Content -->
-    <div id="black">
-      <div id="about" class="container">
-        <h1>Hi! I'm Tiffany.</h1>
-
-        <h2><a href="http://www.berkeley.edu">UC Berkeley Grad</a>,</h2>
-        <h2>Software Engineer at <a href="http://www.mixpanel.com/">Mixpanel</a>.</h2>
-        <h2>I'm a <a href="experience">workaholic</a>, and also enjoy <a href="projects">building things</a>, <a href="https://www.instagram.com/tiffany19qi/">aerial silks</a>, and <a href="interests">baking</a>.</h2>
-
-        <h2><i>My mission is to affect positive change so that current and future generations can enjoy a more productive, comfortable, and sustainable life.</i></h2>
-
-        <h2>I will be <strong>healthy</strong>, so that I can serve those around me with confidence. I will hold my body with utmost respect. I will dedicate my life to healthy eating, consistent exercise and meditation, positivity, and thanks-giving.</h2>
-        <h2>I will be <strong>skilled</strong>, so that I can use my gifts for others to enact transformational growth. I will exercise my brain and constantly learn new things to keep my body limber mentally.</h2>
-        <h2>I will be <strong>understanding</strong>, so that I can be inclusive and supportive of all people without judgment. I will strive to listen to understand, and open my heart and mind completely, regardless of the purpose.</h2>
+      <div id="filters">
+        <div class="work-filter-box active" id="all">Show All</div>
+        <div class="work-filter-box" id="baking">Baking & Cooking</div>
+        <div class="work-filter-box" id="blogging">Blogging</div>
+        <div class="work-filter-box" id="art">Art</div>
+        <div class="work-filter-box" id="aerials">Aerial Silks</div>
+        <!-- <div class="work-filter-box" id="m">Music</div> -->
+        <br>
+        <div class="work-filter-box" id="18">2018</div>
+        <div class="work-filter-box" id="17">2017</div>
+        <div class="work-filter-box" id="16">2016</div>
+        <div class="work-filter-box" id="15">2015</div>
+        <div class="work-filter-box" id="14">2014</div>
+        <div class="work-filter-box" id="13">2013</div>
+        <div class="work-filter-box" id="12">2012</div>
       </div>
+
+      <div id="work-table">
+
+        <!-- ongoing -->
+        <div class="work-profile-box baking 18">
+          <img class="interests-img" src="assets/img/work/" alt="">
+          <div class="work-description">
+            <a id="link-interests-ongoing" href="https://www.instagram.com/p/BhFN6iyB3AG/?taken-by=tiffany19qi">
+            <strong>Weekly Baking Project, February 2018-Present</strong>
+            </a><br>
+            Every week, I'm going to bake something new. It could be for a friend, it could be something from the Great British Bake Off, it could be something I've been dying to try! I'll keep tabs on my progress here.
+          </div>
+        </div>
+<!--    
+        <div class="work-profile-box">
+          <img class="interests-img" src="assets/img/work/" alt="">
+          <div class="work-description">
+            <a href="">
+            <strong></strong>
+            </a><br>
+          </div>
+        </div>
+
+         -->
+
+     </div>
     </div>
 
     <script>
@@ -95,18 +104,27 @@
         link_id = String("#" + this.id);
         mixpanel.track("Pressed Navbar Item", {
          "Page": link_id.split("-")[2],
-         "Source": "Index"
+         "Source": "Interests"
         });
       });
 
-      $("h2 a").on("click", function(event){
+      $(".work-profile-box a").on("click", function(event){
         link_id = String("#" + this.id);
         mixpanel.track("External Link View", {
           "Page": link_id.split("-")[2],
-          "Source": "Index"
+          "Source": "Interests"
+        });
+      });
+
+      $("#filters .work-filter-box").on("click", function(event){
+        box_id = event.target.id;
+        mixpanel.track("Pressed Sort", {
+          "Button": box_id,
+          "Source": "Interests"
         });
       });
     </script>
+
   </body>
 
   <footer>&copy; Tiffany Qi 2015 &middot; All Rights Reserved</footer>
