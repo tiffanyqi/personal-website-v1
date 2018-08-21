@@ -3,33 +3,60 @@
     <title>Mixbies</title>
     <style>
       h1 {
+        color: white;
         text-align: center;
       }
       body, html {
         margin: 0px;
       }
       .header p {
+        color: white;
         text-align: center;
       }
       .header {
-        background: red;
+        background-image: url("../assets/img/work/mixed-grid.JPEG");
+        background-size: cover;
       }
-      .section, .header {
-        border: 1px solid black;
+      .header {
         padding: 50px;
       }
+      .section-break {
+        background-color: blue;
+        height: 50px;
+      }
       .section {
+        display: flex;
+        margin: 0px;
         min-height: 60%;
+      }
+      .section-content {
+        padding: 50px;
+      }
+      .section-image {
+        max-height: 50%;
       }
       .grid {
         display: flex;
       }
       .grid-image {
-        border: 1px solid black;
         height: 200px;
+        margin: 10px;
         width: 200px;
       }
-
+      .grid-label {
+        height: 200px;
+        margin-left: 10px;
+        margin-top: 10px;
+        opacity: 0;
+        position: absolute;
+        text-align: center;
+        transition: 0.3s;
+        width: 200px;
+      }
+      .grid-container:hover .grid-label {
+        opacity: 1;
+        transition: 0.3s;
+      }
     </style>
   </head>
   <body>
@@ -38,53 +65,59 @@
         <h1>Mixbies</h1>
         <p>Cookies delivered to you!</p>
       </div>
+
+      <div class="section-break"></div>
     
       <div class="section">
-        <h2>About</h2>
-        <div class="section-image"></div>
+        <img class="section-image" src="../assets/img/work/chocolate-chip-grid.jpeg"></img>
         <div class="section-content">
+            <h2>About</h2>
           <p>At Mixpanel, we were so sad that our favorite cookie delivery company went out of business. In July 2018, I set out on a mission to create cookies that were just as delicious, more convenient and at a fraction of the price. Fellow coworkers and friends A/B tested the recipes, and finally after much trial and error, they were ready.</p>
         </div>
       </div>
 
       <div class="section">
-        <h2>How it works</h2>
         <div class="section-content">
-          <p>Getting cookies to you is simple. Order <a href="http://tiny.cc/mixbies">online</a>, select the cookies of your choice, and that morning freshly baked cookies will arrive at your desk!</p>
+          <h2>How it works</h2>
+          <p>Getting cookies to you is simple. Order <a href="http://bit.do/mixbies">online</a>, select the cookies of your choice, and that morning freshly baked cookies will arrive at your desk!</p>
           <p>Use Mixbies for celebrations, catering, QA sessions, tech talks, or whenever you just want a cookie.</p>
           <p>Please note that I accept deliveries for Monday, Wednesday, and Friday, and do not do same day deliveries at this time.</p>
         </div>
-        <div class="section-image"></div>
+        <img class="section-image" src="../assets/img/work/chocolate-chip-stack.jpeg"></img>
       </div>
+
+      <div class="section-break"></div>
 
       <div class="section">
         <h2>Menu</h2>
         <div class="grid">
           <div class="grid-container">
             <div class="grid-label">Chocolate chip sea salt</div>
-            <div class="grid-image"></div>
+            <img class="grid-image" src="../assets/img/work/chocolate-chip-single.JPG"></img>
           </div>
           <div class="grid-container">
             <div class="grid-label">Confetti</div>
-            <div class="grid-image"></div>
+            <img class="grid-image" src="../assets/img/work/confetti-single.JPG"></img>
           </div>
           <div class="grid-container">
             <div class="grid-label">More recipes in the oven!</div>
-            <div class="grid-image"></div>
+            <img class="grid-image" src="../assets/img/work/question-icon.jpg"></img>
           </div>
         </div>
-
       </div>
 
+      <div class="section-break"></div>
+
       <div class="section">
-        <h2>Interested? Order</h2>
+        <div class="section-image"></div>
         <div class="section-content">
-          <button href=http://tiny.cc/mixbies>Order now</button>
+          <h2>Interested? Order</h2>
+          <button href=http://bit.do/mixbies>Order now</button>
           <button href=https://docs.google.com/forms/d/1XqJrYvKFF9vkAVFPSbCF8tmLc70AY0kz47blu4LHbp8/edit>Send Feedback</button>
         </div>
       </div>
 
-      <div class="section">
+      <!-- <div class="section">
         <h2>Follow me</h2>
         <div class="grid">
           <div class="grid-container">
@@ -112,7 +145,7 @@
             <div class="grid-image"></div>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <div class="section">
         <h2>Contact</h2>
