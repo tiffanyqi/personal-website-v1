@@ -3,6 +3,18 @@
     <title>Mixbies</title>
     <link href="https://fonts.googleapis.com/css?family=Overlock:900|Sawarabi+Gothic" rel="stylesheet">
     <style>
+      .container, .parallax {
+        background-attachment: fixed;
+        background-image: url("assets/img/work/mixed-grid.JPEG");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 60%;
+      }
+      .parallax {
+        height: 70%;
+        opacity: 0.7;
+      }
       h1 {
         color: white;
         font-family: 'Overlock', cursive;
@@ -32,10 +44,6 @@
         text-align: center;
       }
       .header {
-        background-image: url("assets/img/work/mixed-grid.JPEG");
-        background-size: cover;
-      }
-      .header {
         padding: 50px;
       }
       .section-break {
@@ -49,6 +57,7 @@
       }
       .section-content {
         padding: 50px;
+        width: 50%;
       }
       .section-image {
         height: 60%;
@@ -57,19 +66,21 @@
         display: flex;
       }
       .grid-image {
-        height: 200px;
+        height: 350px;
         margin: 10px;
-        width: 200px;
+        width: 350px;
       }
       .grid-label {
-        height: 200px;
+        font-size: 26px;
+        height: 350px;
         margin-left: 10px;
         margin-top: 10px;
         opacity: 0;
+        padding: 0px 5px;
         position: absolute;
         text-align: center;
         transition: 0.3s;
-        width: 200px;
+        width: 340px;
       }
       .grid-container:hover .grid-label {
         border: 1px solid #394340;
@@ -117,7 +128,7 @@
           <p>Getting cookies to you is simple. Order <a href="https://docs.google.com/forms/d/e/1FAIpQLSfohr_0d70H0iDBx5lknJz6ZAkyvRonPdAJygyxkcv4b12f6Q/viewform">online</a>, select the cookies of your choice, and that morning freshly baked cookies will arrive at your desk!</p>
           <p>Use Mixbies for celebrations, catering, QA sessions, tech talks, or whenever you just want a cookie.</p>
           <p>Please note that I accept deliveries for Monday, Wednesday, and Friday, and do not do same day deliveries at this time.</p>
-          <button href=https://docs.google.com/forms/d/e/1FAIpQLSfohr_0d70H0iDBx5lknJz6ZAkyvRonPdAJygyxkcv4b12f6Q/viewform>Order now</button>
+          <a href=https://docs.google.com/forms/d/e/1FAIpQLSfohr_0d70H0iDBx5lknJz6ZAkyvRonPdAJygyxkcv4b12f6Q/viewform><button>Order now</button></a>
         </div>
         <img class="section-image" src="assets/img/work/chocolate-chip-stack.jpeg"></img>
       </div>
@@ -174,15 +185,14 @@
         </div>
       </div> -->
 
-      <div class="section">
-        <div class="section-content">
+      <div class="section parallax">
+        <div class="section-content" style="background-color: white">
           <h2>Contact</h2>
           <p>Hi there!</p>
           <p>Are you a Mixpaneler? Slack me.</p>
-          <p>You're not a Mixpaneler? I currently deliver to Mixpanel employees, but <a href="mailto:hello@tiffanyqi.com">let's talk</a>.</p>
+          <p>You're not a Mixpaneler? I currently deliver to Mixpanel employees, but <a href="mailto:tiffany19qi@gmail.com">let's talk</a>.</p>
           <p>Have something to say? <a href=https://docs.google.com/forms/d/1XqJrYvKFF9vkAVFPSbCF8tmLc70AY0kz47blu4LHbp8/edit>Send Feedback</a>.</p>
         </div>
-        <img class="section-image" src="assets/img/work/chocolate-chip-pyramid.JPG"></img>
       </div>
 
       <div class="footer">&copy; Tiffany Qi 2018 &middot; All Rights Reserved</div>
