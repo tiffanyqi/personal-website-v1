@@ -56,7 +56,6 @@
       }
       .section {
         display: flex;
-        height: 100%;
         margin: 0px;
       }
       .section-content, .section-content-right {
@@ -68,18 +67,22 @@
       .section-content-right {
         margin-left: auto;
       }
+      .grid-wrapper {
+        padding: 50px;
+      }
       .grid {
         display: flex;
+        flex-wrap: wrap;
       }
       .grid-image {
-        height: 350px;
+        height: 270px;
         margin: 10px;
-        width: 350px;
+        width: 270px;
       }
       .grid-label {
         font-family: 'Overlock', cursive;
-        font-size: 26px;
-        height: 350px;
+        font-size: 24px;
+        height: 250px;
         margin-left: 10px;
         margin-top: 10px;
         opacity: 0;
@@ -87,18 +90,12 @@
         position: absolute;
         text-align: center;
         transition: 0.3s;
-        width: 340px;
+        width: 250px;
       }
       .grid-container:hover .grid-label {
         border: 10px solid #394340;
         opacity: 1;
         transition: 0.3s;
-      }
-      .grid-container:hover .grid-image {
-        height: 370px;
-        opacity: 1;
-        transition: 0.3s;
-        width: 360px;
       }
       button {
         background-color: #9D3834;
@@ -126,14 +123,14 @@
       </div>
 
       <div class="section-break"></div>
-      <div class="section parallax" style="background-image: url('assets/img/work/confetti-grid.JPG')">
+      <div class="section parallax" style="background-image: url('assets/img/work/confetti-grid.JPG'); height: 100%">
         <div class="section-content-right">
           <h2>About</h2>
           <p>At Mixpanel, we were so sad that our favorite cookie delivery company went out of business. In July 2018, I set out on a mission to create cookies that were just as delicious, more convenient and at a fraction of the price. Fellow coworkers and friends A/B tested the recipes, and finally after much trial and error, they were ready.</p>
         </div>
       </div>
       <div class="section-break-thin"></div>
-      <div class="section parallax" style="background-image: url('assets/img/work/chocolate-chip-stack.jpeg');">
+      <div class="section parallax" style="background-image: url('assets/img/work/chocolate-chip-stack.jpeg'); height: 100%">
         <div class="section-content">
           <h2>How it works</h2>
           <p>Getting cookies to you is simple. Order <a href="https://docs.google.com/forms/d/e/1FAIpQLSfohr_0d70H0iDBx5lknJz6ZAkyvRonPdAJygyxkcv4b12f6Q/viewform">online</a>, select the cookies of your choice, and that morning cookies will arrive at your desk!</p>
@@ -144,7 +141,7 @@
       </div>
       <div class="section-break-thin"></div>
       <div class="section">
-        <div class="section-content">
+        <div class="grid-wrapper">
           <h2>Cookies</h2>
           <div class="grid">
             <div class="grid-container">
@@ -192,7 +189,7 @@
           </div>
         </div>
       </div> -->
-      <div class="section parallax" style="background-image: url('assets/img/work/chocolate-chip-pyramid.jpg');">
+      <div class="section parallax" style="background-image: url('assets/img/work/chocolate-chip-pyramid.jpg'); background-position-x: -50px; height: 100%; right: 100px">
         <div class="section-content-right">
           <h2>Contact</h2>
           <p>Hi there!</p>
