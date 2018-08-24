@@ -13,7 +13,7 @@
       }
       .parallax {
         height: 70%;
-        opacity: 0.7;
+        opacity: 0.9;
       }
       h1 {
         color: white;
@@ -34,7 +34,7 @@
       h2 {
         color: #22BD92;
         font-family: 'Overlock', cursive;
-        font-size: 30px;
+        font-size: 40px;
       }
       body, html {
         font-family: 'Sawarabi Gothic', sans-serif;
@@ -50,17 +50,23 @@
         background-color: #394340;
         height: 50px;
       }
+      .section-break-thin {
+        background-color: #394340;
+        height: 20px;
+      }
       .section {
-        border: 1px solid #394340;
         display: flex;
+        height: 100%;
         margin: 0px;
       }
-      .section-content {
+      .section-content, .section-content-right {
+        background-color: white;
+        max-width: 50%;
         padding: 50px;
-        width: 50%;
+        width: auto;
       }
-      .section-image {
-        height: 60%;
+      .section-content-right {
+        margin-left: auto;
       }
       .grid {
         display: flex;
@@ -71,6 +77,7 @@
         width: 350px;
       }
       .grid-label {
+        font-family: 'Overlock', cursive;
         font-size: 26px;
         height: 350px;
         margin-left: 10px;
@@ -83,9 +90,15 @@
         width: 340px;
       }
       .grid-container:hover .grid-label {
-        border: 1px solid #394340;
+        border: 10px solid #394340;
         opacity: 1;
         transition: 0.3s;
+      }
+      .grid-container:hover .grid-image {
+        height: 370px;
+        opacity: 1;
+        transition: 0.3s;
+        width: 360px;
       }
       button {
         background-color: #9D3834;
@@ -109,32 +122,27 @@
     <div class="container">
       <div class="header">
         <h1>mixbies</h1>
-        <p class="subtitle">Quality cookies delivered to you!</p>
+        <p class="subtitle">Yummy cookies delivered to you!</p>
       </div>
 
       <div class="section-break"></div>
-
-      <div class="section">
-        <img class="section-image" src="assets/img/work/chocolate-chip-mm.jpeg"></img>
-        <div class="section-content">
+      <div class="section parallax" style="background-image: url('assets/img/work/confetti-grid.JPG')">
+        <div class="section-content-right">
           <h2>About</h2>
           <p>At Mixpanel, we were so sad that our favorite cookie delivery company went out of business. In July 2018, I set out on a mission to create cookies that were just as delicious, more convenient and at a fraction of the price. Fellow coworkers and friends A/B tested the recipes, and finally after much trial and error, they were ready.</p>
         </div>
       </div>
-
-      <div class="section">
+      <div class="section-break-thin"></div>
+      <div class="section parallax" style="background-image: url('assets/img/work/chocolate-chip-stack.jpeg');">
         <div class="section-content">
           <h2>How it works</h2>
-          <p>Getting cookies to you is simple. Order <a href="https://docs.google.com/forms/d/e/1FAIpQLSfohr_0d70H0iDBx5lknJz6ZAkyvRonPdAJygyxkcv4b12f6Q/viewform">online</a>, select the cookies of your choice, and that morning freshly baked cookies will arrive at your desk!</p>
+          <p>Getting cookies to you is simple. Order <a href="https://docs.google.com/forms/d/e/1FAIpQLSfohr_0d70H0iDBx5lknJz6ZAkyvRonPdAJygyxkcv4b12f6Q/viewform">online</a>, select the cookies of your choice, and that morning cookies will arrive at your desk!</p>
           <p>Use Mixbies for celebrations, catering, QA sessions, tech talks, or whenever you just want a cookie.</p>
           <p>Please note that I accept deliveries for Monday, Wednesday, and Friday, and do not do same day deliveries at this time.</p>
           <a href=https://docs.google.com/forms/d/e/1FAIpQLSfohr_0d70H0iDBx5lknJz6ZAkyvRonPdAJygyxkcv4b12f6Q/viewform><button>Order now</button></a>
         </div>
-        <img class="section-image" src="assets/img/work/chocolate-chip-stack.jpeg"></img>
       </div>
-
-      <div class="section-break"></div>
-
+      <div class="section-break-thin"></div>
       <div class="section">
         <div class="section-content">
           <h2>Cookies</h2>
@@ -154,7 +162,7 @@
           </div>
         </div>
       </div>
-
+      <div class="section-break-thin"></div>
       <!-- <div class="section">
         <h2>Follow me</h2>
         <div class="grid">
@@ -184,9 +192,8 @@
           </div>
         </div>
       </div> -->
-
-      <div class="section parallax">
-        <div class="section-content" style="background-color: white">
+      <div class="section parallax" style="background-image: url('assets/img/work/chocolate-chip-pyramid.jpg');">
+        <div class="section-content-right">
           <h2>Contact</h2>
           <p>Hi there!</p>
           <p>Are you a Mixpaneler? Slack me.</p>
