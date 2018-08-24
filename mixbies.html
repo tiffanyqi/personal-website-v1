@@ -2,6 +2,10 @@
   <head>
     <title>Mixbies</title>
     <link href="https://fonts.googleapis.com/css?family=Overlock:900|Sawarabi+Gothic" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
     <style>
       .container, .parallax {
         background-attachment: fixed;
@@ -114,6 +118,16 @@
         text-align: center;
       }
     </style>
+
+    <!-- start Mixpanel --><script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+      0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+      for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+      mixpanel.init("0514432afbe696a2dcaa51b5c0aa857e");</script><!-- end Mixpanel -->
+
+    <script>
+      mixpanel.track("Page View", {"Page": "Mixbies"});
+    </script>
+    
   </head>
   <body>
     <div class="container">
@@ -133,10 +147,10 @@
       <div class="section parallax" style="background-image: url('assets/img/work/chocolate-chip-stack.jpeg'); height: 100%">
         <div class="section-content">
           <h2>How it works</h2>
-          <p>Getting cookies to you is simple. Order <a href="https://docs.google.com/forms/d/e/1FAIpQLSfohr_0d70H0iDBx5lknJz6ZAkyvRonPdAJygyxkcv4b12f6Q/viewform">online</a>, select the cookies of your choice, and that morning cookies will arrive at your desk!</p>
+          <p>Getting cookies to you is simple. Order <a id="mixbies-order-form" href="https://docs.google.com/forms/d/e/1FAIpQLSfohr_0d70H0iDBx5lknJz6ZAkyvRonPdAJygyxkcv4b12f6Q/viewform">online</a>, select the cookies of your choice, and that morning cookies will arrive at your desk!</p>
           <p>Use Mixbies for celebrations, catering, QA sessions, tech talks, or whenever you just want a cookie.</p>
           <p>Please note that I accept deliveries for Monday, Wednesday, and Friday, and do not do same day deliveries at this time.</p>
-          <a href=https://docs.google.com/forms/d/e/1FAIpQLSfohr_0d70H0iDBx5lknJz6ZAkyvRonPdAJygyxkcv4b12f6Q/viewform><button>Order now</button></a>
+          <a id="mixbies-order-button" href=https://docs.google.com/forms/d/e/1FAIpQLSfohr_0d70H0iDBx5lknJz6ZAkyvRonPdAJygyxkcv4b12f6Q/viewform><button>Order now</button></a>
         </div>
       </div>
       <div class="section-break-thin"></div>
@@ -160,46 +174,26 @@
         </div>
       </div>
       <div class="section-break-thin"></div>
-      <!-- <div class="section">
-        <h2>Follow me</h2>
-        <div class="grid">
-          <div class="grid-container">
-            <div class="grid-label"></div>
-            <div class="grid-image"></div>
-          </div>
-          <div class="grid-container">
-            <div class="grid-label"></div>
-            <div class="grid-image"></div>
-          </div>
-          <div class="grid-container">
-            <div class="grid-label"></div>
-            <div class="grid-image"></div>
-          </div>
-          <div class="grid-container">
-            <div class="grid-label"></div>
-            <div class="grid-image"></div>
-          </div>
-          <div class="grid-container">
-            <div class="grid-label"></div>
-            <div class="grid-image"></div>
-          </div>
-          <div class="grid-container">
-            <div class="grid-label"></div>
-            <div class="grid-image"></div>
-          </div>
-        </div>
-      </div> -->
       <div class="section parallax" style="background-image: url('assets/img/work/chocolate-chip-pyramid.jpg'); background-position-x: -50px; height: 100%; right: 100px">
         <div class="section-content-right">
           <h2>Contact</h2>
           <p>Hi there!</p>
           <p>Are you a Mixpaneler? Slack me.</p>
-          <p>You're not a Mixpaneler? I currently deliver to Mixpanel employees, but <a href="mailto:tiffany19qi@gmail.com">let's talk</a>.</p>
-          <p>Have something to say? <a href=https://docs.google.com/forms/d/1XqJrYvKFF9vkAVFPSbCF8tmLc70AY0kz47blu4LHbp8/edit>Send Feedback</a>.</p>
+          <p>You're not a Mixpaneler? I currently deliver to Mixpanel employees, but <a id="mixbies=email" href="mailto:tiffany19qi@gmail.com">let's talk</a>.</p>
+          <p>Have something to say? <a id="mixbies-feedback-form" href=https://docs.google.com/forms/d/1XqJrYvKFF9vkAVFPSbCF8tmLc70AY0kz47blu4LHbp8/edit>Send Feedback</a>.</p>
         </div>
       </div>
 
       <div class="footer">&copy; Tiffany Qi 2018 &middot; All Rights Reserved</div>
     </div>
+    <script>
+      $("a").on("click", function(event){
+        mixpanel.track("External Link View", {
+          "Page": this.id,
+          "Source": "Mixbies"
+        });
+      });
+    </script>
+
   </body>
 </html>
