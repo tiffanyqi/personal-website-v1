@@ -211,6 +211,12 @@
     border: 4px dotted #c5d3de;
     padding: 10px;
 }
+.photo-box {
+    height: 350px;
+    width: 350px;
+    position: relative;
+    margin-bottom: 5px;
+}
 .work-description {
     height: 350px;
     width: 350px;
