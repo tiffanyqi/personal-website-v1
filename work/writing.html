@@ -1,7 +1,7 @@
 <! DOCTYPE html>
 <html>
   <head>
-    <title>Tiffany Qi | Photography</title>
+    <title>Tiffany Qi | Writing</title>
 
     <meta charset="UTF-8">
     <meta name="author" content="Tiffany Qi">
@@ -51,9 +51,9 @@
       <div class="navbar-item"><a href="../experience">experience</a></div>
     </div>
 
-    <!-- Photography -->
-    <div id="Photography" class="container">
-      <h1>Photography</h1>
+    <!-- Writing -->
+    <div id="writing" class="container">
+      <h1>Writing</h1>
 
       <div id="work-table">
 
@@ -99,7 +99,7 @@
         link_id = String("#" + this.id);
         mixpanel.track("Pressed Navbar Item", {
          "Page": link_id.split("-")[2],
-         "Source": "Photography"
+         "Source": "Writing"
         });
       });
 
@@ -107,7 +107,7 @@
         link_id = String("#" + this.id);
         mixpanel.track("External Link View", {
           "Page": link_id.split("-")[2],
-          "Source": "Photography"
+          "Source": "Writing"
         });
       });
     </script>
