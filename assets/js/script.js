@@ -1,14 +1,5 @@
 $(document).ready(function() {
 
-    // Navbar Automatic Scrolling
-    // $("#navbar-first a, #navbar-second a").click(function() {
-    //     var topHeight = $("#navbar-first").height() + $("#navbar-second").height()
-    //     $("html, body").animate({
-    //         scrollTop: $(this.hash).offset().top - topHeight
-    //     });
-    // });
-  
-
     // Navbar color stays if clicked, then removed
     var link = $("navbar-second a").click(function() {
         link.removeClass('nav-active');
@@ -56,41 +47,5 @@ $(document).ready(function() {
         workFilter.removeClass('exp-active');
         $(this).addClass('exp-active');
 
-    }) 
-
-
-    // mouseover show text for interests
-
-
-    // Social Media Icon Hovers-Opacity
-    // $(".box-contact").hover(
-    //     function() {
-    //         $(this).stop().fadeTo("slow", 1);
-    //     }, function() {
-    //         $(this).stop().fadeTo("slow", 0.5);
-    // });
-
-
-    // Work Pop-ups
-    // $("a img.work-box").click(function() {
-    //     var textBox = $(this).attr("href");
-        
-    //     $(textBox).fadeIn(300);
-    //     $(textBox).css({ 
-    //         "margin-top": 0,
-    //         "margin-left": -100,
-    //     });
-
-    //     $("body").append('<div class="popup-overlay"></div>');
-    //     $(".popup-overlay").fadeIn(300);
-        
-    //     return false;
-    // });
-    
-    // $(".popup-overlay").live("click", function() { 
-    //   $(".popup-overlay, .popup-window").fadeOut(300, function() {
-    //     $(".popup-overlay").remove();  
-    // }); 
-    // return false;
-    // });
+    })
 });

@@ -64,7 +64,6 @@
 
 /* About */
 #about.container {
-    /*background: black;*/
     padding: 50px 100px 100px 100px;
     margin: 0px;
     width: 100%;
@@ -238,27 +237,6 @@
 }
 .work-profile-box:hover .interests-img {
     border: 4px dotted #e18f77;
-}
-
-/* Contact */
-#contact.container {
-    padding: 150 0 200 0;
-    text-align: center;
-    margin: 0px;
-    width: 100%;
-    z-index: 2;
-    color: white;
-    text-shadow: 0px 0px 3px black;
-}
-#contact-content {
-    padding: 0 150 20 150;
-    line-height: 2;
-}
-#contact a {
-    color: #e18f77;
-}
-#contact a:hover {
-    color: #778fb5;
 }
 
 /*Support*/
