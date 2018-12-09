@@ -6,14 +6,6 @@ $(document).ready(function() {
         $(this).addClass('nav-active');
     })
 
-    // Social Media Icon Hovers-Color
-    $(".contact-box").hover(
-        function() {
-            this.src = "assets/img/contact/" + this.id.split("-")[1] + "-hover.jpg"; 
-        }, function() {
-            this.src = "assets/img/contact/" + this.id.split("-")[1] + ".jpg";
-        });
-
     // Filters for experience, slightly modified from
     // http://codepen.io/terf/blog/jquery-filter-divs
     var expFilter = $('.filter-box').click(function() {

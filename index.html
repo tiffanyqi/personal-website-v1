@@ -17,6 +17,7 @@
 
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css" />
 
     <link rel="shortcut icon" href="assets/img/msc/favicon.ico" type="image/x-icon">
     <link rel="icon" href="assets/img/msc/favicon.ico" type="image/x-icon">
@@ -34,17 +35,6 @@
       mixpanel.init("0514432afbe696a2dcaa51b5c0aa857e");</script><!-- end Mixpanel -->
 
     <script>
-      // http://www.abeautifulsite.net/smoothly-scroll-to-an-element-without-a-jquery-plugin-2/
-      $('a[href^="#"]').on('click', function(event) {
-        var target = $( $(this).attr('href') );
-        if( target.length ) {
-          event.preventDefault();
-          $('html, body').animate({
-            scrollTop: target.offset().top
-          }, 700);
-        }
-      });
-
       mixpanel.track("Page View", {"Page": "Index"});
     </script>
 
