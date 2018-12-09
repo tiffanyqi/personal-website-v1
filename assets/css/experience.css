@@ -1,0 +1,70 @@
+#experience.container {
+  background: white;
+  line-height: 1.5;
+  font-size: 20px;
+  margin: 0px;
+  width: 100%;
+  padding: 150px 50px 50px 50px;
+}
+.exp-profile {
+  border: 4px dotted #c5d3de;
+  padding: 20px;
+  margin: 10px 5px;
+  display: inline-block;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  break-inside: avoid;
+}
+.exp-profile:hover {
+  border: 4px dotted #e18f77;
+}
+.exp-title {
+  font-weight: 700;
+  font-size: 30px;
+}
+.exp-employer {
+  font-size: 24px;
+  font-style: italic;
+}
+.exp-box {
+  padding: 3px 10px;
+  margin: 5px 5px 0px -7px;
+  background: #c5d3de;
+  display: inline-block;
+}
+.exp-description {
+  margin: 10px 0px;
+}
+#experience a {
+  color: #778fb5;
+}
+.cat-box {
+  padding: 3px 10px;
+  margin: 5px 5px 0px 0px;
+  background: #c5d3de;
+  float: right;
+}
+.exp-profile:hover .exp-box {
+  background: #e18f77;
+}
+.exp-profile:hover .cat-box {
+  background: #e18f77;
+  color: white;
+}
+.exp-active {
+  background: #e18f77;
+  text-decoration: none;
+  color: white;
+}
+#exp-columns {
+  margin-top: 50px;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 10px;
+  -webkit-column-fill: auto;
+  -moz-column-count: 2;
+  -moz-column-gap: 10px;
+  -moz-column-fill: auto;
+  column-count: 2;
+  column-gap: 15px;
+  column-fill: auto;
+}
