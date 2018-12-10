@@ -1,11 +1,5 @@
 $(document).ready(function() {
 
-    // Navbar color stays if clicked, then removed
-    var link = $("navbar-second a").click(function() {
-        link.removeClass('nav-active');
-        $(this).addClass('nav-active');
-    })
-
     // Filters for experience, slightly modified from
     // http://codepen.io/terf/blog/jquery-filter-divs
     var expFilter = $('.filter-box').click(function() {
@@ -41,3 +35,28 @@ $(document).ready(function() {
 
     })
 });
+
+// tracking
+const externalLinkView = "External Link View";
+const pageView = "Page View";
+const pressedNavItem = "Pressed Navbar Item";
+const pressedSort = "Pressed Sort";
+
+function trackPageView(pageName) {
+    mixpanel.track(pageView, {"Page": pageName});
+}
+
+function trackClick(eventName, navId, pageName) {
+    link_id = String("#" + navId);
+    mixpanel.track(eventName, {
+        "Page": link_id.split("-")[2],
+        "Source": pageName,
+    });
+}
+
+function trackSort(boxId, pageName) {
+    mixpanel.track(pressedSort, {
+        "Button": boxId,
+        "Source": pageName,
+    });
+}

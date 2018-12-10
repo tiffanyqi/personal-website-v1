@@ -34,10 +34,6 @@
       for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
       mixpanel.init("0514432afbe696a2dcaa51b5c0aa857e");</script><!-- end Mixpanel -->
 
-    <script>
-      mixpanel.track("Page View", {"Page": "Index"});
-    </script>
-
   </head>
 
   <body>
@@ -75,20 +71,13 @@
     </div>
 
     <script>
+      const pageName = "Index";
+      trackPageView(pageName);
       $("#navbar-first a").on("click", function(event){
-        link_id = String("#" + this.id);
-        mixpanel.track("Pressed Navbar Item", {
-         "Page": link_id.split("-")[2],
-         "Source": "Index"
-        });
+        trackClick(pressedNavItem, this.id, pageName);
       });
-
       $("h2 a").on("click", function(event){
-        link_id = String("#" + this.id);
-        mixpanel.track("External Link View", {
-          "Page": link_id.split("-")[2],
-          "Source": "Index"
-        });
+        trackClick(externalLinkView, this.id, pageName);
       });
     </script>
   </body>
