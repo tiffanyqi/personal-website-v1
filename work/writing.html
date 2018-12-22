@@ -9,7 +9,7 @@
     <meta name="keywords" content="tiffany qi, uc berkeley, mixpanel">
 
     <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="../assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/common.css" />
 
     <link rel="shortcut icon" href="../assets/img/msc/favicon.ico" type="image/x-icon">
     <link rel="icon" href="../assets/img/msc/favicon.ico" type="image/x-icon">
@@ -25,9 +25,6 @@
       0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
       for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
       mixpanel.init("0514432afbe696a2dcaa51b5c0aa857e");</script><!-- end Mixpanel -->
-    <script>
-      mixpanel.track("Page View", {"Page": "Photography"});
-    </script>
 
   </head>
 
@@ -52,7 +49,7 @@
     </div>
 
     <!-- Writing -->
-    <div id="writing" class="container">
+    <div id="writing" class="work-container">
       <h1>Writing</h1>
 
       <div id="work-table">
@@ -93,25 +90,18 @@
     </div> -->
 
     <script>
-      $("#navbar-first a").on("click", function(event){
-        link_id = String("#" + this.id);
-        mixpanel.track("Pressed Navbar Item", {
-         "Page": link_id.split("-")[2],
-         "Source": "Writing"
+        const pageName = "Writing";
+        trackPageView(pageName);
+        $("#navbar-first a").on("click", function(event){
+          trackClick(pressedNavItem, this.id, pageName);
         });
-      });
-
-      $(".work-profile-box a").on("click", function(event){
-        link_id = String("#" + this.id);
-        mixpanel.track("External Link View", {
-          "Page": link_id.split("-")[2],
-          "Source": "Writing"
+        $(".work-profile-box a").on("click", function(event){
+          trackClick(externalLinkView, this.id, pageName);
         });
-      });
-    </script>
+      </script>
     
 
   </body>
 
-  <footer>&copy; Tiffany Qi 2015 &middot; All Rights Reserved</footer>
+  <footer>&copy; Tiffany Qi 2019 &middot; All Rights Reserved</footer>
 </html>
