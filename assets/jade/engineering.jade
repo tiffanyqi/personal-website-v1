@@ -1,0 +1,124 @@
+include mixins.jade
+extends base.jade
+
+block append head
+  title Tiffany Qi | Engineering
+
+block content
+  #Projects.work-container
+    h1 My Projects
+      #work-table
+        .work-profile-box
+          img.interests-img(src='assets/img/work/tablefortwo.png', alt='')
+          .work-description
+            a#link-work-table(href='https://github.com/tiffanyqi/table-for-two')
+              strong Table for Two, Apr '17 - Nov '17
+            br
+            | A Django application hosted on Heroku that allows Mixpanelers to meet others from other departments once a month. Used by a quarter of the whole company.
+        .work-profile-box
+          img.interests-img(src='assets/img/work/onboarding.png', alt='')
+          .work-description
+            a#link-work-onboarding(href='https://github.com/tiffanyqi/mp-onboarding')
+              strong Mixpanel Onboarding, Nov '16 - Dec '16
+            br
+            | A Django application hosted on Heroku that allows new support engineers to onboard quicker and more efficiently than just using a 20 page Google doc.
+        .work-profile-box
+          img.interests-img(src='assets/img/work/', alt='')
+          .work-description
+            a#link-work-calendar(href='https://github.com/maxfangx/calendar-analytics')
+              strong Calendar Analytics, Jun '16 - Dec '16
+            br
+            | An incomplete Django application I joined to allow every heavy calendar user to analyze their productivity.
+        .work-profile-box
+          img.interests-img(src='assets/img/work/debate.png', alt='')
+          .work-description
+            a#link-work-debate(href='http://cs169-apds.herokuapp.com')
+              strong Debate Society of Berkeley, Feb '16 - Apr '16
+            br
+            | Ruby on Rails application that allows the Debate team to edit their home page without code, discuss topics on a forum, and sign up for mock debates.
+        .work-profile-box
+          img.interests-img(src='assets/img/work/scheduler.png', alt='')
+          .work-description
+            a#link-work-csmscheduler(href='http://csmscheduler.herokuapp.com')
+              strong CSM Scheduler, Aug'15-Jan'16
+            br
+            | Ruby on Rails application that scheduled 300+ students into group tutoring sections for introductory computer science classes. Built with Ruby On Rails. Acting as product owner, suggesting new requirements, and made sure application was going smoothly, met first launch deadline, and test for errors.
+        .work-profile-box
+          img.interests-img(src='assets/img/work/karate-kit-poster.png', alt='')
+          .work-description
+            strong Karate Kit, December 2015
+            br
+            | Final project for User Interface Design, another Android mobile and smartwatch application written in Java and XML. This utilizes the smartwatch sensor technology by allowing users to view their punches graphically and quantitatively to improve their Karate skills. Check out the 
+            a#link-work-karatekit(href='https://github.com/alextriana/amigos') Karate Kit code
+            |  or a 
+            a#link-work-karatekittrailer(href='https://www.youtube.com/watch?v=tKDI6M1HxVE') Karate Kit trailer
+            | .
+        .work-profile-box
+          img.interests-img(src='assets/img/work/calentools-1.png', alt='')
+          .work-description
+            a#link-work-calentools(href='https://github.com/tiffanyqi/calenTools')
+              strong calenTools, November 2015
+            br
+            | Side project whose current functionality allows users to run many tools on their list of calendars on Google Calendar from the command line. Soon, will create a web application that will allow anyone to integrate their Google calendars, and run multiple functions on the site. Currently written in Java and uses Gradle, but planning to redo it in Flask and put v2 accessible.
+        .work-profile-box
+          img.interests-img(src='assets/img/work/collegestay.png', alt='')
+          .work-description
+            a#link-work-collegestay(href='my-projects/collegeStay/index')
+              strong CollegeStay, November 2015
+            br
+            | Marketing collateral / website for my Product Management class. The goal is to allow high school students choose their prospective colleges better by showing them more authentic information via hosting program.
+        .work-profile-box
+          img.interests-img(src='assets/img/work/yourfault.png', alt='')
+          .work-description
+            a#link-work-yourfault(href='https://www.youtube.com/watch?v=0qkyZGFr-1s')
+              strong YourFault, October 2015
+            br
+            | An Android mobile and smartwatch application written in Java and XML, which allows users to interact with earthquakes as they happen around the world. My first real stab at Android.
+        .work-profile-box
+          img.interests-img(src='assets/img/work/convene-1.png', alt='')
+          .work-description
+            a#link-work-convene(href='https://github.com/CalHacks-Meetup/calhacks-meetup.github.io')
+              strong Convene, October 2015
+            br
+            | A hackathon project, which will allow users to set up more quickly and simply through Google Calendar and iCal integration. This was how the idea is conceived, but it will be fully functional later on!
+        .work-profile-box
+          img.interests-img(src='assets/img/work/csm1.png', alt='Computer Science Mentors Berkeley Web Design')
+          .work-description
+            a#link-work-csmwebsite(href='http://csmentors.berkeley.edu')
+              strong Computer Science Mentors Website, February 2015
+            br
+            | Tried my hand at 
+            a#link-work-(href='http://csmentors.berkeley.edu') CSM
+            | 's website, version 1.
+        .work-profile-box
+          img.interests-img(src='assets/img/work/mcomm.png', alt='Marketing Community at Berkeley Remake')
+          .work-description
+            a#link-work-mcomm(href='http://mcomm.berkeley.edu')
+              strong Marketing Community at Berkeley Website, January 2015
+            br
+            | Soon after I made my first website, I decided to redo 
+            a#link-work-(href='http://mcomm.berkeley.edu') MComm
+            | 's as well! This one was designed to be single page.
+        .work-profile-box
+          img.interests-img(src='assets/img/work/p5r.jpg', alt='Perfect Fifth Remake')
+          .work-description
+            a#link-work-p5(href='http://perfectfifth.berkeley.edu')
+              strong Perfect Fifth Website, December 2014
+            br
+            | Right after I learned web design, I decided to try my hand at the real thing by remaking 
+            a#link-work-(href='http://perfectfifth.berkeley.edu') Perfect Fifth
+            | 's website! It was fun, so I kept going.
+
+block scripts
+  script.
+    const pageName = "Projects";
+    trackPageView(pageName);
+    $("#navbar-first a").on("click", function(event){
+      trackClick(pressedNavItem, this.id, pageName);
+    });
+    $(".work-profile-box a").on("click", function(event){
+      trackClick(externalLinkView, this.id, pageName);
+    });
+    $("#filters .filter-box").on("click", function(event){
+      trackSort(event.target.id, pageName);
+    });
