@@ -1,0 +1,54 @@
+// DOCTYPE html
+html
+  head
+    block head
+      meta(charset='UTF-8')
+      meta(name='author', content='Tiffany Qi')
+      meta(name='description', content="I'm Tiffany Qi, and welcome to my page!")
+      meta(name='keywords', content='tiffany qi, uc berkeley, mixpanel')
+      // Open Graph data
+      meta(property='og:title', content='Tiffany Qi')
+      meta(property='og:type', content='personal website')
+      meta(property='og:url', content='http://tiffanyqi.com/')
+      meta(property='og:description', content="I'm Tiffany Qi, and welcome to my page!")
+      link(rel='stylesheet', type='text/css', href='assets/css/bootstrap.css')
+      link(rel='stylesheet', type='text/css', href='assets/css/common.css')
+      link(rel='shortcut icon', href='assets/img/msc/favicon.ico', type='image/x-icon')
+      link(rel='icon', href='assets/img/msc/favicon.ico', type='image/x-icon')
+      script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+      script(src='assets/js/bootstrap.min.js')
+      script(src='assets/js/mixpanel.js')
+      script(src='assets/js/script.js')
+      link(href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic', rel='stylesheet', type='text/css')
+      link(href='http://fonts.googleapis.com/css?family=Montez', rel='stylesheet', type='text/css')
+  body
+    // Navigation
+    #navbar-first
+      #title
+        a#navbar-item-title(href='index') Tiffany Qi
+      a#navbar-item-linkedin(href='mailto:hello@tiffanyqi.com')
+        img.navbar-item-logo(src='assets/img/contact/mail.jpg')
+      a#navbar-item-linkedin(href='http://www.linkedin.com/in/tiffanyqi')
+        img.navbar-item-logo(src='assets/img/contact/linked.jpg')
+      a#navbar-item-git(href='http://www.github.com/tiffanyqi')
+        img.navbar-item-logo(src='assets/img/contact/git.jpg')
+      a#navbar-item-instagram(href='https://www.instagram.com/aerial_baker/')
+        img.navbar-item-logo(src='assets/img/contact/instagram.png')
+      a#navbar-item-deviantart(href='http://sabakuwood.deviantart.com')
+        img.navbar-item-logo(src='assets/img/contact/deviant.jpg')
+      a#navbar-item-medium(href='http://medium.com/@tiffanyqi')
+        img.navbar-item-logo(src='assets/img/contact/medium.jpg')
+      a#navbar-item-youtube(href='http://www.youtube.com/user/sabakuxsae/featured')
+        img.navbar-item-logo(src='assets/img/contact/youtube.jpg')
+    #navbar-second
+      .navbar-item
+        a(href='work/writing') writing
+      .navbar-item
+        a(href='work/photography') photography
+      .navbar-item
+        a(href='work/engineering') engineering
+      .navbar-item
+        a(href='experience') experience
+    block content
+    block scripts
+    footer © Tiffany Qi 2019 · All Rights Reserved
