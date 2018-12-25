@@ -6,12 +6,12 @@ block append head
   link(rel='stylesheet', type='text/css', href='assets/css/photography.css')
 
 block content
-  #Photography.work-container
+  .photography-container
     h1 Photography
     .picture-container
       - const imgSrc = 'assets/img/reel/';
       +linkedPicture('aerial-silks', imgSrc + 'aerials-half-moon.jpg', 'Aerial Silks')
-      +linkedPicture('bakes', imgSrc + 'homemade-choco-chip.jpg', 'Homemade Bakes')
+      +linkedPicture('baking', imgSrc + 'homemade-choco-chip.jpg', 'Homemade Bakes')
       +linkedPicture('photography', imgSrc + 'japan-nara.jpg', 'Japan')
       +linkedPicture('work/writing', imgSrc + 'mexico-friendship.jpg', 'Other Travel')
       +linkedPicture('work/engineering', imgSrc + 'sf-tartine-croissant.jpg', 'San Francisco')
