@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "jade": "^1.11.0",
+    "pug": "^2.0.3"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-jade": "^1.1.0"
+  },
+  "scripts": {
+    "gulp": "gulp jade"
+  }
+}
