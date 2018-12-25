@@ -1,0 +1,37 @@
+extends base.jade
+
+block append head
+  link(rel='stylesheet', type='text/css', href='assets/css/index.css')
+
+block content
+  #cover Tiffany Qi
+  .home-container
+    a.index-container(href='experience')
+      img.index-picture(src='assets/img/reel/me-and-poogle.jpeg')
+      .index-text About & Experience
+    a.index-container(href='work/photography')
+      img.index-picture(src='assets/img/reel/japan-miyajima-tori.jpg')
+      .index-text Travel & Photography
+    a.index-container(href='work/photography')
+      img.index-picture(src='assets/img/reel/aerials-katniss.jpg')
+      .index-text Aerial Silks
+    a.index-container(href='work/photography')
+      img.index-picture(src='assets/img/reel/sf-honey-toast.jpg')
+      .index-text Food
+    a.index-container(href='work/writing')
+      img.index-picture(src='assets/img/work/productivity.png')
+      .index-text Writing
+    a.index-container(href='work/engineering')
+      img.index-picture(src='assets/img/work/tablefortwo.png')
+      .index-text Engineering
+
+block scripts
+  script.
+    const pageName = "Index";
+    trackPageView(pageName);
+    $("#navbar-first a").on("click", function(event){
+    trackClick(pressedNavItem, this.id, pageName);
+    });
+    $("h2 a").on("click", function(event){
+    trackClick(externalLinkView, this.id, pageName);
+    });
