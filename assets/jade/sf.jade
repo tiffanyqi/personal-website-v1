@@ -1,0 +1,32 @@
+include mixins.jade
+extends base.jade
+
+block append head
+  title Tiffany Qi | San Francisco
+  link(rel='stylesheet', type='text/css', href='assets/css/photography.css')
+
+block content
+  .photography-container
+    h1 San Francisco
+    .picture-container
+      - const imgSrc = 'assets/img/reel/sf-';
+      +largePicture(imgSrc + 'tartine-croissant.jpg', 'Croissant, Tartine')
+      +largePicture(imgSrc + 'sushi.jpg', 'Omakase selection, Kusakabe')
+      +largePicture(imgSrc + 'tiramisu.jpg', 'Tiramisu french toast, Griddle Fresh')
+      +largePicture(imgSrc + 'egg-buns.jpg', 'Phoenix buns, Mama Ji')
+      +largePicture(imgSrc + 'embarcadero.jpg', 'The Embarcadero')
+      +largePicture(imgSrc + 'honey-toast.jpg', 'Thai tea honey toast, UDessert Story')
+      +largePicture(imgSrc + 'charcoal-egg-tarts.jpg', 'Charcoal egg tarts, WoKitchen, 50 Shades of Charcoal')
+      +largePicture(imgSrc + 'egg.jpg', 'Pork belly eggs benedict, Griddle Fresh')
+      +largePicture(imgSrc + 'fumi-curry.jpg', 'Chicken katsua teppan curry, Fumi Curry and Ramen')
+      +largePicture(imgSrc + 'pancakes.jpg', 'Lemon ricotta pancakes, Griddle Fresh')
+      +largePicture(imgSrc + 'point-reyes.jpg', 'Point Reyes')
+      +largePicture(imgSrc + 'salmon.jpg', 'Miso glazed salmon spaghetti, Kitchen Story')
+
+block scripts
+  script.
+    const pageName = "San Francisco";
+    trackPageView(pageName);
+    $("#navbar-first a").on("click", function(event){
+      trackClick(pressedNavItem, this.id, pageName);
+    });
