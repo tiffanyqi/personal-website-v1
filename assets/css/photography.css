@@ -1,6 +1,23 @@
-.photo-box {
-    height: 350px;
-    width: 350px;
+.photography.display-picture {
+    margin: 10px;
+    visibility: visible;
+    width: 400px;
+}
+
+.large-picture-container {
+    margin: 0 10px 40px 10px;
+}
+.large-picture {
+    height: 100%;
+}
+.picture-caption {
+    color: white;
+    font-size: 15px;
+    margin-left: 30px;
+    margin-top: -50px;
     position: relative;
-    margin-bottom: 5px;
+}
+
+#aerial-silks {
+    margin-top: 150px;
 }
