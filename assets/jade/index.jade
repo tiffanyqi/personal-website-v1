@@ -1,3 +1,4 @@
+include mixins.jade
 extends base.jade
 
 block append head
@@ -7,24 +8,13 @@ block append head
 block content
   #cover Tiffany Qi
   .picture-container
-    a.hover-picture-container(href='experience')
-      img.display-picture.index(src='assets/img/reel/me-and-poogle.jpeg')
-      .display-description About & Experience
-    a.hover-picture-container(href='photography')
-      img.display-picture.index(src='assets/img/reel/japan-miyajima-tori.jpg')
-      .display-description Travel & Photography
-    a.hover-picture-container(href='photography')
-      img.display-picture.index(src='assets/img/reel/aerials-katniss.jpg')
-      .display-description Aerial Silks
-    a.hover-picture-container(href='aerial-silks')
-      img.display-picture.index(src='assets/img/reel/sf-honey-toast.jpg')
-      .display-description Food
-    a.hover-picture-container(href='work/writing')
-      img.display-picture.index(src='assets/img/work/productivity.png')
-      .display-description Writing
-    a.hover-picture-container(href='work/engineering')
-      img.display-picture.index(src='assets/img/work/tablefortwo.png')
-      .display-description Engineering
+    - const imgSrc = 'assets/img/'
+    +linkedPicture('experience', imgSrc + 'reel/me-and-poogle.jpeg', 'About & Experience', 'index')
+    +linkedPicture('photography', imgSrc + 'reel/japan-miyajima-tori.jpg', 'Travel & Photography', 'index')
+    +linkedPicture('photography', imgSrc + 'reel/aerials-katniss.jpg', 'Aerial Silks', 'index')
+    +linkedPicture('aerial-silks', imgSrc + 'reel/sf-honey-toast.jpg', 'Food', 'index')
+    +linkedPicture('work/writing', imgSrc + '/work/productivity.png', 'Writing', 'index')
+    +linkedPicture('work/engineering', imgSrc + '/work/tablefortwo.png', 'Engineering', 'index')
 
 block scripts
   script.

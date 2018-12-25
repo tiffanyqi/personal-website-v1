@@ -78,13 +78,13 @@
     justify-content: center;
     padding: 20px 0;
 }
-.hover-picture-container {
+.linked-picture-container {
     visibility: hidden;
 }
-.hover-picture-container:hover {
+.linked-picture-container:hover {
     visibility: visible;
 }
-.display-description {
+.linked-description {
     font-family: 'Montez', cursive;
     font-size: 40px;
     margin-left: 50px;
@@ -92,7 +92,7 @@
     position: relative;
     text-decoration: none;
 }
-.display-picture:hover {
+.linked-picture:hover {
     opacity: 0.6;
 }
 
@@ -212,7 +212,7 @@ footer {
 
 /*Responsivity*/
 @media screen and (max-width: 900px) {
-    .display-picture {
+    .linked-picture {
         height: inherit;
         width: 400px;
     }

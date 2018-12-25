@@ -1,3 +1,4 @@
+include mixins.jade
 extends base.jade
 
 block append head
@@ -8,21 +9,12 @@ block content
   #Photography.work-container
     h1 Photography
     .picture-container
-      a.hover-picture-container(href='aerial-silks')
-        img.display-picture.photography(src='assets/img/reel/aerials-half-moon.jpg')
-        .display-description Aerial Silks
-      a.hover-picture-container(href='bakes')
-        img.display-picture.photography(src='assets/img/reel/homemade-choco-chip.jpg')
-        .display-description Homemade Bakes
-      a.hover-picture-container(href='photography')
-        img.display-picture.photography(src='assets/img/reel/japan-nara.jpg')
-        .display-description Japan
-      a.hover-picture-container(href='work/writing')
-        img.display-picture.photography(src='assets/img/reel/mexico-friendship.jpg')
-        .display-description Other Travel
-      a.hover-picture-container(href='work/engineering')
-        img.display-picture.photography(src='assets/img/reel/sf-tartine-croissant.jpg')
-        .display-description San Francisco
+      - const imgSrc = 'assets/img/reel/';
+      +linkedPicture('aerial-silks', imgSrc + 'aerials-half-moon.jpg', 'Aerial Silks')
+      +linkedPicture('bakes', imgSrc + 'homemade-choco-chip.jpg', 'Homemade Bakes')
+      +linkedPicture('photography', imgSrc + 'japan-nara.jpg', 'Japan')
+      +linkedPicture('work/writing', imgSrc + 'mexico-friendship.jpg', 'Other Travel')
+      +linkedPicture('work/engineering', imgSrc + 'sf-tartine-croissant.jpg', 'San Francisco')
 
 block scripts
   script.
