@@ -74,7 +74,6 @@
 /* Work */
 .work-container {
     padding: 150px 50px 50px 50px;
-    background: white;
     margin: 0px;
     width: 100%;
 }
@@ -145,8 +144,6 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background: url("../img/victoria.jpg") no-repeat center center fixed;
-    background-size: 100% 100%;
 }
 html {
     overflow-x: hidden;
@@ -179,6 +176,7 @@ td {
 }
 
 footer {
+    background-color: black;
     font-family: 'PT Sans', sans-serif;
     text-align: center;
     width: 100%;
@@ -186,17 +184,14 @@ footer {
     font-size: 16px;
     padding: 10px;
 }
-#black {
-    background: black;
-    opacity: 0.7;
-}
-#about h2 {
-    color: white;
-}
 
 /*Responsivity*/
 @media screen and (max-width: 900px) {
-    #about.container, #thoughts.container {
+    .index-picture {
+        height: inherit;
+        width: 400px;
+    }
+    #thoughts.container {
         padding: 50 40 100 40;
     }
     #experience.container {
@@ -244,11 +239,6 @@ footer {
     }
 }
 @media only screen and (max-device-width: 700px) {
-    /* To prevent picture from going off screen on mobile */
-    #cover {
-        background: url("../img/home/heading2.jpg") no-repeat scroll -200px 100% / cover transparent;
-    }
-
     /* Navigation Bar Elements */
     #navbar-first {
         font-size: 70px;

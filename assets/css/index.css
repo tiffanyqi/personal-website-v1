@@ -1,23 +1,42 @@
 #cover {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  background: url("../img/home/heading.jpg") 
+  align-items: center;
+  background: url("../img/reel/japan-borderless-lanturns.jpg") 	
           no-repeat scroll 0px 100% / cover transparent;
-}
-
-#about.container {
-  padding: 50px 100px 100px 100px;
-  margin: 0px;
-  width: 100%;
-  text-shadow: 1px 1px 1px black;
-}
-#about p {
   color: white;
+  font-family: 'Montez', cursive;
+  font-size: 180px;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  opacity: 0.8;
+  position: relative;
+  width: 100%;
 }
-#about a {
-  color: #e18f77;
+.home-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px 0;
 }
-#about a:hover {
-  color: #778fb5;
+.index-container {
+  visibility: hidden;
+}
+.index-container:hover {
+  visibility: visible;
+}
+.index-text {
+  font-family: 'Montez', cursive;
+  font-size: 40px;
+  margin-left: 50px;
+  margin-top: -80px;
+  position: relative;
+  text-decoration: none;
+}
+.index-picture {
+  height: 300px;
+  margin: 10px;
+  visibility: visible;
+}
+.index-picture:hover {
+  opacity: 0.6;
 }
