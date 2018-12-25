@@ -1,3 +1,9 @@
 .gitignore
+
+# npm packaging
 node_modules/
 package-lock.json
+
+# results after jade
+base.html
+mixins.html
