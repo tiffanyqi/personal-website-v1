@@ -12,31 +12,8 @@
   position: relative;
   width: 100%;
 }
-.home-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 20px 0;
-}
-.index-container {
-  visibility: hidden;
-}
-.index-container:hover {
-  visibility: visible;
-}
-.index-text {
-  font-family: 'Montez', cursive;
-  font-size: 40px;
-  margin-left: 50px;
-  margin-top: -80px;
-  position: relative;
-  text-decoration: none;
-}
-.index-picture {
+.index.display-picture {
   height: 300px;
   margin: 10px;
   visibility: visible;
-}
-.index-picture:hover {
-  opacity: 0.6;
 }

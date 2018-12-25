@@ -71,6 +71,31 @@
     text-align: center;
 }
 
+ /* Pictures */
+ .picture-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 0;
+}
+.hover-picture-container {
+    visibility: hidden;
+}
+.hover-picture-container:hover {
+    visibility: visible;
+}
+.display-description {
+    font-family: 'Montez', cursive;
+    font-size: 40px;
+    margin-left: 50px;
+    margin-top: -80px;
+    position: relative;
+    text-decoration: none;
+}
+.display-picture:hover {
+    opacity: 0.6;
+}
+
 /* Work */
 .work-container {
     padding: 150px 50px 50px 50px;
@@ -187,7 +212,7 @@ footer {
 
 /*Responsivity*/
 @media screen and (max-width: 900px) {
-    .index-picture {
+    .display-picture {
         height: inherit;
         width: 400px;
     }
