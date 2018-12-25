@@ -10,7 +10,7 @@ mixin linkedPicture(link, src, caption, classModifier='photography')
 
 mixin commentedPicture(src, id, link, caption, description)
   .work-profile-box
-    img.interests-img(src=src, alt='')
+    img.interests-img(src=src)
     .work-description
       a(id=id href=link)
         strong= caption
