@@ -12,6 +12,7 @@
 }
 .large-picture {
     height: 100%;
+    margin: 10px;
 }
 .picture-caption {
     background-color: grey;
