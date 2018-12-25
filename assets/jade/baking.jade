@@ -1,0 +1,35 @@
+include mixins.jade
+extends base.jade
+
+block append head
+  title Tiffany Qi | Baking
+  link(rel='stylesheet', type='text/css', href='assets/css/photography.css')
+
+block content
+  .photography-container
+    h1 Baking
+    .picture-container
+      - const imgSrc = 'assets/img/reel/homemade-';
+      +largePicture(imgSrc + 'choco-chip.jpg', 'Chocolate chip sea salt cookies, Mixbies')
+      +largePicture(imgSrc + 'meringue.jpg', 'Lemon meringue pie')
+      +largePicture(imgSrc + 'macaron.jpg', 'Birthday macarons with chocolate ganache')
+      +largePicture(imgSrc + 'rainbow-cake.jpg', 'Sponge cake with rainbow buttercream')
+      +largePicture(imgSrc + 'smores.jpg', 'Smores bars')
+      +largePicture(imgSrc + 'moon-cookies.jpg', 'Matcha white chocolate and chocolate chip cookie dough')
+      +largePicture(imgSrc + 'cinnamon-roll-cookies.jpg', 'Cinnamon roll cookies')
+      +largePicture(imgSrc + 'coffee-swirl.jpg', 'Iced coffee swirl cookies, Mixbies')
+      +largePicture(imgSrc + 'confetti.jpg', 'Confetti cookies, Mixbies')
+      +largePicture(imgSrc + 'crepe-cake.jpg', 'Matcha crêpe cake with orange cream')
+      +largePicture(imgSrc + 'bbq-buns.jpg', 'Barbeque pork buns')
+      +largePicture(imgSrc + 'meringue-pie.jpg', 'Pomelo meringue pie')
+      +largePicture(imgSrc + 'moon-cakes.jpg', 'Moon cakes with walnut and date filling')
+      +largePicture(imgSrc + 'pomelo-roulade.jpg', 'Pomelo meringue roulade')
+      +largePicture(imgSrc + 'shortbread.jpg', 'Shortbread cookies')
+
+block scripts
+  script.
+    const pageName = "Baking";
+    trackPageView(pageName);
+    $("#navbar-first a").on("click", function(event){
+      trackClick(pressedNavItem, this.id, pageName);
+    });

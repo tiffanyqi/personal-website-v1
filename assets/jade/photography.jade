@@ -1,0 +1,25 @@
+include mixins.jade
+extends base.jade
+
+block append head
+  title Tiffany Qi | Photography
+  link(rel='stylesheet', type='text/css', href='assets/css/photography.css')
+
+block content
+  .photography-container
+    h1 Photography
+    .picture-container
+      - const imgSrc = 'assets/img/reel/';
+      +linkedPicture('aerial-silks', imgSrc + 'aerials-half-moon.jpg', 'Aerial Silks')
+      +linkedPicture('baking', imgSrc + 'homemade-choco-chip.jpg', 'Homemade Bakes')
+      +linkedPicture('japan', imgSrc + 'japan-nara.jpg', 'Japan')
+      +linkedPicture('travel', imgSrc + 'mexico-friendship.jpg', 'Other Travel')
+      +linkedPicture('sf', imgSrc + 'sf-tartine-croissant.jpg', 'San Francisco')
+
+block scripts
+  script.
+    const pageName = "Photography";
+    trackPageView(pageName);
+    $("#navbar-first a").on("click", function(event){
+      trackClick(pressedNavItem, this.id, pageName);
+    });

@@ -1,0 +1,27 @@
+include mixins.jade
+extends base.jade
+
+block append head
+  title Tiffany Qi | Aerial Silks
+  link(rel='stylesheet', type='text/css', href='assets/css/photography.css')
+
+block content
+  .photography-container
+    h1 Aerial Silks
+    .picture-container
+      - const imgSrc = 'assets/img/reel/aerials-';
+      +largePicture(imgSrc + 'crossback.jpg', 'Crossback straddle - Aerial Artique 2018 Winter Showcase')
+      +largePicture(imgSrc + 'belay.jpg', 'Belay')
+      +largePicture(imgSrc + 'half-moon.jpg', 'Half moon')
+      +largePicture(imgSrc + 'katniss.jpg', 'Vertical splits')
+      +largePicture(imgSrc + 'flip-hang.jpg', 'Flip after waterfall drop')
+      +largePicture(imgSrc + 'flip.jpg', 'Flip during waterfall drop')
+      +largePicture(imgSrc + 'ankle-hang.jpg', 'Ankle hang')
+
+block scripts
+  script.
+    const pageName = "Aerial Silks";
+    trackPageView(pageName);
+    $("#navbar-first a").on("click", function(event){
+      trackClick(pressedNavItem, this.id, pageName);
+    });

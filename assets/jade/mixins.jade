@@ -1,0 +1,9 @@
+mixin largePicture(src, caption)
+  .large-picture-container
+    img.large-picture(src=src)
+    .picture-caption= caption
+
+mixin linkedPicture(link, src, caption, classModifier='photography')
+  a.linked-picture-container(href=link)
+    img.linked-picture(class=classModifier src=src)
+    .linked-description= caption

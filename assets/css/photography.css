@@ -1,6 +1,25 @@
-.photo-box {
-    height: 350px;
-    width: 350px;
-    position: relative;
-    margin-bottom: 5px;
+.photography-container {
+    margin-top: 150px;
+}
+.photography.linked-picture {
+    margin: 10px;
+    visibility: visible;
+    width: 400px;
+}
+
+.large-picture-container {
+    margin: 0 10px 40px 10px;
+}
+.large-picture {
+    height: 100%;
+}
+.picture-caption {
+    background-color: grey;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    margin-left: 30px;
+    margin-top: -50px;
+    opacity: 0.6;
+    padding-left: 10px;
 }
