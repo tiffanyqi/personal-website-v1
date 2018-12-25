@@ -187,7 +187,11 @@ footer {
 
 /*Responsivity*/
 @media screen and (max-width: 900px) {
-    #about.container, #thoughts.container {
+    .index-picture {
+        height: inherit;
+        width: 400px;
+    }
+    #thoughts.container {
         padding: 50 40 100 40;
     }
     #experience.container {
