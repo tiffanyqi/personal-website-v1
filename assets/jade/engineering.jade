@@ -5,16 +5,11 @@ block append head
   title Tiffany Qi | Engineering
 
 block content
-  #Projects.work-container
+  .work-container
     h1 My Projects
       #work-table
-        .work-profile-box
-          img.interests-img(src='assets/img/work/tablefortwo.png', alt='')
-          .work-description
-            a#link-work-table(href='https://github.com/tiffanyqi/table-for-two')
-              strong Table for Two, Apr '17 - Nov '17
-            br
-            | A Django application hosted on Heroku that allows Mixpanelers to meet others from other departments once a month. Used by a quarter of the whole company.
+        - const imgSrc = 'assets/img/work/'
+        +commentedPicture(imgSrc + 'tablefortwo.png', 'table', 'https://github.com/tiffanyqi/table-for-two', "Table for Two, Apr '17 - Nov '17", "A Django application hosted on Heroku that allows Mixpanelers to meet others from other departments once a month. Used by a quarter of the whole company.")
         .work-profile-box
           img.interests-img(src='assets/img/work/onboarding.png', alt='')
           .work-description
@@ -118,7 +113,4 @@ block scripts
     });
     $(".work-profile-box a").on("click", function(event){
       trackClick(externalLinkView, this.id, pageName);
-    });
-    $("#filters .filter-box").on("click", function(event){
-      trackSort(event.target.id, pageName);
     });

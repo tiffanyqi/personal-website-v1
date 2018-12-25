@@ -7,3 +7,12 @@ mixin linkedPicture(link, src, caption, classModifier='photography')
   a.linked-picture-container(href=link)
     img.linked-picture(class=classModifier src=src)
     .linked-description= caption
+
+mixin commentedPicture(src, id, link, caption, description)
+  .work-profile-box
+    img.interests-img(src=src, alt='')
+    .work-description
+      a(id=id href=link)
+        strong= caption
+      br
+      = description

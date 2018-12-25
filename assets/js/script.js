@@ -28,9 +28,12 @@ function trackPageView(pageName) {
 }
 
 function trackClick(eventName, navId, pageName) {
-    link_id = String("#" + navId);
+    let link_id = navId;
+    if (link_id.split("-").length > 1) {
+        link_id = link_id.split("-")[2];
+    }
     mixpanel.track(eventName, {
-        "Page": link_id.split("-")[2],
+        "Page": link_id,
         "Source": pageName,
     });
 }
