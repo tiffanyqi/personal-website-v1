@@ -1,0 +1,39 @@
+extends base.jade
+
+block append head
+  title Tiffany Qi | Aerial Silks
+  link(rel='stylesheet', type='text/css', href='assets/css/photography.css')
+
+block content
+  #aerial-silks
+    h1 Aerial Silks
+    .picture-container
+      .large-picture-container
+        img.large-picture(src='assets/img/reel/aerials-crossback.jpg')
+        .picture-caption Crossback straddle - Aerial Artique 2018 Winter Showcase
+      .large-picture-container
+        img.large-picture(src='assets/img/reel/aerials-belay.jpg')
+        .picture-caption Belay
+      .large-picture-container
+        img.large-picture(src='assets/img/reel/aerials-half-moon.jpg')
+        .picture-caption Half moon
+      .large-picture-container
+        img.large-picture(src='assets/img/reel/aerials-katniss.jpg')
+        .picture-caption Vertical splits
+      .large-picture-container
+        img.large-picture(src='assets/img/reel/aerials-flip-hang.jpg')
+        .picture-caption Flip after waterfall drop
+      .large-picture-container
+        img.large-picture(src='assets/img/reel/aerials-flip.jpg')
+        .picture-caption Flip during waterfall drop
+      .large-picture-container
+        img.large-picture(src='assets/img/reel/aerials-ankle-hang.jpg')
+        .picture-caption Ankle hang
+
+block scripts
+  script.
+    const pageName = "Aerial Silks";
+    trackPageView(pageName);
+    $("#navbar-first a").on("click", function(event){
+      trackClick(pressedNavItem, this.id, pageName);
+    });
