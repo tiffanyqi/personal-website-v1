@@ -71,6 +71,10 @@
     text-align: center;
 }
 
+.work-container {
+    margin-top: 150px;
+}
+
  /* Pictures */
  .picture-container {
     display: flex;

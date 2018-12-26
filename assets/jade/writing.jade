@@ -3,25 +3,15 @@ extends base.jade
 
 block append head
   title Tiffany Qi | Writing
+  link(rel='stylesheet', type='text/css', href='assets/css/writing.css')
 
 block content
-  #writing.work-container
+  .work-container
     h1 Writing
-    #work-table
-      .work-profile-box
-        img.interests-img(src='assets/img/work/productivity.png', alt='')
-        .work-description
-          a#link-work-productivity(href='my-projects/college-productivity.html')
-            strong My Productivity Analysis, December 2015
-          br
-          | A display and analysis of my productivity throughout my years at UC Berkeley, includes time spent and grades earned. Received 30,000 views and over 2000 likes on social media in the first five days upon release.
-      .work-profile-box
-        img.interests-img(src='assets/img/work/learnings.png', alt='')
-        .work-description
-          a#link-interests-writing(href='https://medium.com/@tiffanyqi/learnings-of-four-years-at-uc-berkeley-97964632444f#.fg5pqrkpx')
-            strong Learnings of Four Years, June 2016
-          br
-          | Every now and then, I'd write down something that's been on my mind. Take a look at some of my work on Medium.
+      .picture-container
+        - const imgSrc = 'assets/img/work/'
+        +linkedPicture('my-projects/college-productivity.html', imgSrc + 'productivity.png', "My Productivity Analysis, Dec 2015", 'productivity', 'writing')
+        +linkedPicture('https://medium.com/@tiffanyqi/learnings-of-four-years-at-uc-berkeley-97964632444f#.fg5pqrkpx', imgSrc + 'learnings.png', "Learnings of Four Years, June 2016", 'learnings', 'writing')
 
 block scripts
   script.
@@ -30,6 +20,6 @@ block scripts
     $("#navbar-first a").on("click", function(event){
       trackClick(pressedNavItem, this.id, pageName);
     });
-    $(".work-profile-box a").on("click", function(event){
+    $(".linked-picture-container").on("click", function(event){
       trackClick(externalLinkView, this.id, pageName);
     });
