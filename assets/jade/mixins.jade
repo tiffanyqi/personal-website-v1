@@ -3,7 +3,7 @@ mixin largePicture(src, caption)
     img.large-picture(src=src)
     .picture-caption= caption
 
-mixin linkedPicture(link, src, caption, classModifier='photography')
-  a.linked-picture-container(href=link)
+mixin linkedPicture(link, src, caption, id, classModifier='photography')
+  a.linked-picture-container(href=link id=id)
     img.linked-picture(class=classModifier src=src)
-    .linked-description= caption
+    .linked-description(class=classModifier)= caption

@@ -1,0 +1,10 @@
+.writing.linked-picture {
+  margin: 10px;
+  visibility: visible;
+  width: 350px;
+}
+.writing.linked-description {
+  font-size: 30px;
+  height: 80px;
+  width: 300px;
+}

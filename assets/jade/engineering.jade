@@ -1,0 +1,36 @@
+include mixins.jade
+extends base.jade
+
+block append head
+  title Tiffany Qi | Engineering
+  link(rel='stylesheet', type='text/css', href='assets/css/engineering.css')
+
+block content
+  .work-container
+    h1 My Projects
+      .picture-container
+        - const imgSrc = 'assets/img/work/'
+        +linkedPicture('https://github.com/tiffanyqi/table-for-two', imgSrc + 'tablefortwo.png', "Table for Two, Apr '17 - Nov '17", 'table', 'engineering')
+        +linkedPicture('https://github.com/tiffanyqi/mp-onboarding', imgSrc + 'onboarding.png', "Mixpanel Onboarding, Nov '16 - Dec '16", 'onboarding', 'engineering')
+        +linkedPicture('https://github.com/maxfangx/calendar-analytics', '',  "Calendar Analytics, Jun '16 - Dec '16", 'calendar', 'engineering')
+        +linkedPicture('http://cs169-apds.herokuapp.com', imgSrc + 'debate.png', "Debate Society of Berkeley, Feb '16 - Apr '16", 'debate', 'engineering')
+        +linkedPicture('http://csmscheduler.herokuapp.com', imgSrc + 'scheduler.png', "CSM Scheduler, Aug'15-Jan'16", 'csmscheduler', 'engineering')
+        +linkedPicture('https://github.com/alextriana/amigos', imgSrc + 'karate-kit-poster.png', "Karate Kit, Dec 2015", 'karatekit', 'engineering')
+        +linkedPicture('https://github.com/tiffanyqi/calenTools', imgSrc + 'calentools-1.png', "calenTools, Nov 2015", 'calentools', 'engineering')
+        +linkedPicture('my-projects/collegeStay/index', imgSrc + 'collegestay.png', "CollegeStay, Nov 2015", 'collegestay', 'engineering')
+        +linkedPicture('https://www.youtube.com/watch?v=0qkyZGFr-1s', imgSrc + 'yourfault.png', "YourFault, Oct 2015", 'yourfault', 'engineering')
+        +linkedPicture('https://github.com/CalHacks-Meetup/calhacks-meetup.github.io', imgSrc + 'convene-1.png', "Convene, Oct 2015", 'convene', 'engineering')
+        +linkedPicture('http://csmentors.berkeley.edu', imgSrc + 'csm1.png', 'Computer Science Mentors Website, Jan 2015', 'csm', 'engineering')
+        +linkedPicture('http://mcomm.berkeley.edu', imgSrc + 'mcomm.png', "Marketing Community at Berkeley Website, Jan 2015", 'mcomm', 'engineering')
+        +linkedPicture('http://perfectfifth.berkeley.edu', imgSrc + 'p5r.jpg', 'Perfect Fifth Website, Dec 2014', 'p5', 'engineering')
+
+block scripts
+  script.
+    const pageName = "Projects";
+    trackPageView(pageName);
+    $("#navbar-first a").on("click", function(event){
+      trackClick(pressedNavItem, this.id, pageName);
+    });
+    $(".linked-picture-container").on("click", function(event){
+      trackClick(externalLinkView, this.id, pageName);
+    });
