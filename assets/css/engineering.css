@@ -1,0 +1,13 @@
+.work-container {
+  margin-top: 150px;
+}
+.engineering.linked-picture {
+  margin: 10px;
+  visibility: visible;
+  width: 350px;
+}
+.engineering.linked-description {
+  font-size: 30px;
+  height: 80px;
+  width: 300px;
+}

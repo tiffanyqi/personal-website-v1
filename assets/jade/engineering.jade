@@ -3,25 +3,26 @@ extends base.jade
 
 block append head
   title Tiffany Qi | Engineering
+  link(rel='stylesheet', type='text/css', href='assets/css/engineering.css')
 
 block content
   .work-container
     h1 My Projects
-      #work-table
+      .picture-container
         - const imgSrc = 'assets/img/work/'
-        +commentedPicture(imgSrc + 'tablefortwo.png', 'table', 'https://github.com/tiffanyqi/table-for-two', "Table for Two, Apr '17 - Nov '17", "A Django application hosted on Heroku that allows Mixpanelers to meet others from other departments once a month. Used by a quarter of the whole company.")
-        +commentedPicture(imgSrc + 'onboarding.png', 'onboarding', 'https://github.com/tiffanyqi/mp-onboarding', "Mixpanel Onboarding, Nov '16 - Dec '16", "A Django application hosted on Heroku that allows new support engineers to onboard quicker and more efficiently than just using a 20 page Google doc.")
-        +commentedPicture('', 'calendar', 'https://github.com/maxfangx/calendar-analytics', "Calendar Analytics, Jun '16 - Dec '16", "An incomplete Django application I joined to allow every heavy calendar user to analyze their productivity.")
-        +commentedPicture(imgSrc + 'debate.png', 'debate', 'http://cs169-apds.herokuapp.com', "Debate Society of Berkeley, Feb '16 - Apr '16", "Ruby on Rails application that allows the Debate team to edit their home page without code, discuss topics on a forum, and sign up for mock debates.")
-        +commentedPicture(imgSrc + 'scheduler.png', 'csmscheduler', 'http://csmscheduler.herokuapp.com', "CSM Scheduler, Aug'15-Jan'16", "Ruby on Rails application that scheduled 300+ students into group tutoring sections for introductory computer science classes. Built with Ruby On Rails. Acting as product owner, suggesting new requirements, and made sure application was going smoothly, met first launch deadline, and test for errors.")
-        +commentedPicture(imgSrc + 'karate-kit-poster.png', 'karatekit', 'https://github.com/alextriana/amigos', "Karate Kit, December 2015", "Final project for User Interface Design, another Android mobile and smartwatch application written in Java and XML. This utilizes the smartwatch sensor technology by allowing users to view their punches graphically and quantitatively to improve their Karate skills.")
-        +commentedPicture(imgSrc + 'calentools-1.png', 'calentools', 'https://github.com/tiffanyqi/calenTools', "calenTools, November 2015", "Side project whose current functionality allows users to run many tools on their list of calendars on Google Calendar from the command line. Soon, will create a web application that will allow anyone to integrate their Google calendars, and run multiple functions on the site. Currently written in Java and uses Gradle, but planning to redo it in Flask and put v2 accessible.")
-        +commentedPicture(imgSrc + 'collegestay.png', 'collegestay', 'my-projects/collegeStay/index', "CollegeStay, November 2015", "Marketing collateral / website for my Product Management class. The goal is to allow high school students choose their prospective colleges better by showing them more authentic information via hosting program.")
-        +commentedPicture(imgSrc + 'yourfault.png', 'yourfault', 'https://www.youtube.com/watch?v=0qkyZGFr-1s', "YourFault, October 2015", "An Android mobile and smartwatch application written in Java and XML, which allows users to interact with earthquakes as they happen around the world. My first real stab at Android.")
-        +commentedPicture(imgSrc + 'convene-1.png', 'convene', 'https://github.com/CalHacks-Meetup/calhacks-meetup.github.io', "Convene, October 2015", "A hackathon project, which will allow users to set up more quickly and simply through Google Calendar and iCal integration. This was how the idea is conceived, but it will be fully functional later on!")
-        +commentedPicture(imgSrc + 'csm1.png', 'csm', 'http://csmentors.berkeley.edu', "Computer Science Mentors Website, February 2015", "Tried my hand at CSM's website, version 1.")
-        +commentedPicture(imgSrc + 'mcomm.png', 'mcomm', 'http://mcomm.berkeley.edu', "Marketing Community at Berkeley Website, January 2015", "Soon after I made my first website, I decided to redo MComm's as well! This one was designed to be single page.")
-        +commentedPicture(imgSrc + 'p5r.jpg', 'p5', 'http://perfectfifth.berkeley.edu', 'Perfect Fifth Website, December 2014', "Right after I learned web design, I decided to try my hand at the real thing by remaking Perfect Fifth's website! It was fun, so I kept going.")
+        +linkedPicture('https://github.com/tiffanyqi/table-for-two', imgSrc + 'tablefortwo.png', "Table for Two, Apr '17 - Nov '17", 'table', 'engineering')
+        +linkedPicture('https://github.com/tiffanyqi/mp-onboarding', imgSrc + 'onboarding.png', "Mixpanel Onboarding, Nov '16 - Dec '16", 'onboarding', 'engineering')
+        +linkedPicture('https://github.com/maxfangx/calendar-analytics', '',  "Calendar Analytics, Jun '16 - Dec '16", 'calendar', 'engineering')
+        +linkedPicture('http://cs169-apds.herokuapp.com', imgSrc + 'debate.png', "Debate Society of Berkeley, Feb '16 - Apr '16", 'debate', 'engineering')
+        +linkedPicture('http://csmscheduler.herokuapp.com', imgSrc + 'scheduler.png', "CSM Scheduler, Aug'15-Jan'16", 'csmscheduler', 'engineering')
+        +linkedPicture('https://github.com/alextriana/amigos', imgSrc + 'karate-kit-poster.png', "Karate Kit, Dec 2015", 'karatekit', 'engineering')
+        +linkedPicture('https://github.com/tiffanyqi/calenTools', imgSrc + 'calentools-1.png', "calenTools, Nov 2015", 'calentools', 'engineering')
+        +linkedPicture('my-projects/collegeStay/index', imgSrc + 'collegestay.png', "CollegeStay, Nov 2015", 'collegestay', 'engineering')
+        +linkedPicture('https://www.youtube.com/watch?v=0qkyZGFr-1s', imgSrc + 'yourfault.png', "YourFault, Oct 2015", 'yourfault', 'engineering')
+        +linkedPicture('https://github.com/CalHacks-Meetup/calhacks-meetup.github.io', imgSrc + 'convene-1.png', "Convene, Oct 2015", 'convene', 'engineering')
+        +linkedPicture('http://csmentors.berkeley.edu', imgSrc + 'csm1.png', 'Computer Science Mentors Website, Jan 2015', 'csm', 'engineering')
+        +linkedPicture('http://mcomm.berkeley.edu', imgSrc + 'mcomm.png', "Marketing Community at Berkeley Website, Jan 2015", 'mcomm', 'engineering')
+        +linkedPicture('http://perfectfifth.berkeley.edu', imgSrc + 'p5r.jpg', 'Perfect Fifth Website, Dec 2014', 'p5', 'engineering')
 
 block scripts
   script.
@@ -30,6 +31,6 @@ block scripts
     $("#navbar-first a").on("click", function(event){
       trackClick(pressedNavItem, this.id, pageName);
     });
-    $(".work-profile-box a").on("click", function(event){
+    $(".linked-picture-container a").on("click", function(event){
       trackClick(externalLinkView, this.id, pageName);
     });
