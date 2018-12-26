@@ -168,16 +168,6 @@ footer {
         margin: 20px 0px;
         width: 100%;
     }
-    #work.container {
-        padding: 150 50 50 50;
-    }
-    #contact.container {
-        padding: 150 0 150 0;
-        text-align: center;
-    }
-    #contact-content {
-        padding: 0 50;
-    }
     #exp-columns {
         -webkit-column-count: 1;
         -moz-column-count: 1;
