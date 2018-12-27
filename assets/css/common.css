@@ -27,8 +27,9 @@
 #title {
     margin-right: auto;
 }
-.work-container {
-    margin-top: 150px;
+
+.container {
+    margin-top: 50px;
 }
 
  /* Pictures */
@@ -36,7 +37,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 20px 0;
+    margin-bottom: 20px;
 }
 .linked-picture-container {
     visibility: hidden;
@@ -71,11 +72,10 @@ html {
     width: 100%;
 }
 h1 {
-    text-align: center;
-    font-family: 'Montez', cursive;
     color: #778fb5;
+    font-family: 'Montez', cursive;
     font-size: 60px;
-    text-shadow: 1px 1px #4a484b;
+    text-align: center;
 }
 a {
     text-decoration: none;
