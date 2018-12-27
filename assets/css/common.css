@@ -75,7 +75,11 @@ h1 {
     color: #778fb5;
     font-family: 'Montez', cursive;
     font-size: 60px;
+    line-height: 1;
     text-align: center;
+}
+h2 {
+    line-height: 1;
 }
 a {
     text-decoration: none;
@@ -108,7 +112,7 @@ footer {
 /*Responsivity*/
 @media screen and (max-width: 900px) {
     .linked-picture {
-        height: inherit;
+        height: initial;
         width: 400px;
     }
 }

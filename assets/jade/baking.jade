@@ -6,7 +6,7 @@ block append head
   link(rel='stylesheet', type='text/css', href='assets/css/photography.css')
 
 block content
-  .photography-container
+  .container
     h1 Baking
     .picture-container
       - const imgSrc = 'assets/img/reel/homemade-';
@@ -22,7 +22,7 @@ block content
       +largePicture(imgSrc + 'crepe-cake.jpg', 'Matcha crêpe cake with orange cream')
       +largePicture(imgSrc + 'bbq-buns.jpg', 'Barbeque pork buns')
       +largePicture(imgSrc + 'meringue-pie.jpg', 'Pomelo meringue pie')
-      +largePicture(imgSrc + 'moon-cakes.jpg', 'Moon cakes with walnut and date filling')
+      +largePicture(imgSrc + 'mooncakes.jpg', 'Moon cakes with walnut and date filling')
       +largePicture(imgSrc + 'pomelo-roulade.jpg', 'Pomelo meringue roulade')
       +largePicture(imgSrc + 'shortbread.jpg', 'Shortbread cookies')
 
