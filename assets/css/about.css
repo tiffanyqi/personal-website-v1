@@ -37,7 +37,7 @@
 .combined-box .stats-box {
   background: #c5d3de;
   margin: 0 10px;
-  padding: 10px;
+  padding: 20px;
   width: 100%;
 }
 .stats-box {
@@ -51,4 +51,16 @@
 .stats-box-text {
   font-size: 16px;
   padding: 10px;
+}
+
+@media screen and (max-width: 1050px) {
+  .info-box {
+    flex-direction: column;
+  }
+  .combined-box {
+    flex-direction: column;
+  }
+  .combined-box .stats-box {
+    margin: 10px 0;
+  }
 }
