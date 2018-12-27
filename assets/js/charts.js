@@ -9,16 +9,18 @@ const barOptions = {
     groupWidth: '90%',
   },
   bars: 'horizontal',
-  height: 400,
+  chartArea: {
+    height: 400,
+  },
   fontName: 'PT Sans',
   fontSize: 16,
   legend: {
     position: 'none',
   },
+  titlePosition: 'none',
   tooltip: {
     isHtml: true,
   },
-  width: 500,
 }
 
 function drawHumanLanguagesChart() {
