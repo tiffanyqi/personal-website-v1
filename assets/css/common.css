@@ -53,24 +53,6 @@
   color: #283347;
 }
 
-/* Filters */
-.filter-box {
-    padding: 5px 20px;
-    margin: 5px 5px 0px -7px;
-    background: #c5d3de;
-    font-size: 24px;
-    display: inline-block;
-    box-shadow: 0px 0px 0px;
-}
-.filter-box:hover {
-    background: #e18f77;
-    color: white;
-}
-#filters {
-    margin: 20px auto;
-    text-align: center;
-}
-
 .work-container {
     margin-top: 150px;
 }
@@ -155,42 +137,6 @@ footer {
         height: inherit;
         width: 400px;
     }
-    #thoughts.container {
-        padding: 50 40 100 40;
-    }
-    #experience.container {
-        padding: 150 50 50 50;
-    }
-    #filters {
-        margin-left: 20px;
-    }
-    .filter-box {
-        font-size: 20px;
-    }
-    .exp-profile {
-        padding: 20px;
-        margin: 20px 0px;
-        width: 100%;
-    }
-    #exp-columns {
-        -webkit-column-count: 1;
-        -moz-column-count: 1;
-        column-count: 1;
-    }
-}
-@media screen and (max-width: 750px) {
-    .filter-box {
-        width: 100%;
-        text-align: center;
-    }
-}
-@media screen and (min-width: 1140px) {
-    #about.container, #thoughts.container {
-        padding: 100px 200px 100px 200px;
-    }
-    #contact-content {
-        padding: 0 300 20 300;
-    }
 }
 @media only screen and (max-device-width: 700px) {
     /* Navigation Bar Elements */
@@ -201,9 +147,6 @@ footer {
     #title {
         float: left;
         padding: 10 30 5 30px;
-    }
-    #experience.container, #work.container, #contact.container {
-        padding-top: 300px;
     }
     .navbar-item-logo {
         height: 100px;
@@ -218,14 +161,4 @@ footer {
     body {
         font-size: 40px;
     }
-    .filter-box {
-        width: 100%;
-        text-align: center;
-    }
-    #exp-columns {
-        -webkit-column-count: 1;
-        -moz-column-count: 1;
-        column-count: 1;
-    }
 }
-

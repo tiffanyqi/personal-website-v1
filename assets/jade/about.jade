@@ -1,0 +1,56 @@
+include mixins.jade
+extends base.jade
+
+block append head
+  title Tiffany Qi
+  link(rel='stylesheet', type='text/css', href='assets/css/about.css')
+  script(src='https://www.gstatic.com/charts/loader.js')
+  script(src='assets/js/charts.js')
+
+block content
+  .work-container
+    h1 About
+    .info-box
+      img.info-box-image(src='assets/img/work/self.png')
+      .info-box-text
+        h2 Tiffany Qi, Software Engineer at Mixpanel
+        p
+          | Hello! I'm Tiffany. I started engineering halfway in my college studies in 2014, graduated from UC Berkeley in 2016, and became a software engineer at Mixpanel in 2018. I was featured on Hacker News for my piece on
+          a(href="my-projects/college-productivity")  college productivity
+          | . Other than
+          a(href="engineering")  programming
+          | , I
+          a(href="baking")  love to bake
+          | , study languages,
+          a(href="writing")  write
+          | ,
+          a(href="photography")  take pictures of food and travels
+          | , and
+          a(href="aerial-silks")  rangle with aerial silks
+          | . My mission is to create ventures that bring good to the world.
+    .combined-box
+      .stats-box
+        h2 Human Languages
+        .stats-box-text I love to learn languages! I started when I was about 8 with Japanese, then moved on to Korean and French in high school. Unfortunately, I don't consider myself fluent in any language (far from it for most). Currently, I'm focusing on improving my Mandarin Chinese and Japanese proficiency.
+        #human-languages-proficiency
+      .stats-box
+        h2 Programming Languages
+        .stats-box-text Below is my language proficiency with a variety of back-end and front-end languages along with frameworks. I started coding in 2014, and have learning ever since. I don't believe anyone can be 100% fluent in any programming language: there's always something more to learn!
+        #programming-languages-proficiency
+    .stats-box
+      h2 How I spend my week
+      #time-spent
+      .stats-box-text
+        | Interested in how I crunched the numbers? Take a look at 
+        a(href="my-projects/college-productivity")  my college productivity analysis.
+
+block scripts
+  script.
+    const pageName = "About";
+    trackPageView(pageName);
+    $("#navbar-first a").on("click", function(event){
+    trackClick(pressedNavItem, this.id, pageName);
+    });
+    $(".info-box-text a").on("click", function(event){
+      trackClick(externalLinkView, this.id, pageName);
+    });

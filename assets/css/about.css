@@ -1,0 +1,66 @@
+.info-box h2, .stats-box h2 {
+  color: #778fb5;
+  font-family: 'Montez', cursive;
+  font-size: 40px;
+  text-shadow: 1px 1px #4a484b;
+}
+.stats-box h2 {
+  text-align: center;
+}
+.info-box {
+  align-items: center;
+  border: 5px dotted #778fb5;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px 50px;
+  padding: 10px;
+}
+.info-box-image {
+  width: 50%;
+}
+.info-box-text {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+}
+.info-box-text a, .stats-box a {
+  color: #e18f77;
+}
+
+.combined-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 20px 50px;
+}
+.combined-box .stats-box {
+  background: #c5d3de;
+  margin: 0 10px;
+  padding: 20px;
+  width: 100%;
+}
+.stats-box {
+  align-items: center;
+  background: #c5d3de;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 50px;
+  padding: 10px;
+}
+.stats-box-text {
+  font-size: 16px;
+  padding: 10px;
+}
+
+@media screen and (max-width: 1050px) {
+  .info-box {
+    flex-direction: column;
+  }
+  .combined-box {
+    flex-direction: column;
+  }
+  .combined-box .stats-box {
+    margin: 10px 0;
+  }
+}
