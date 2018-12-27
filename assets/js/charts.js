@@ -1,24 +1,30 @@
-google.charts.load('current', {packages: ['corechart', 'bar']});
+google.charts.load('current', {packages: ['corechart']});
 google.charts.setOnLoadCallback(drawHumanLanguagesChart);
 google.charts.setOnLoadCallback(drawProgrammingLanguagesChart);
 google.charts.setOnLoadCallback(drawTimeSpentChart);
 
 const barOptions = {
+  backgroundColor: '#c5d3de',
   bars: 'horizontal',
-  legend: {position: 'none'},
+  legend: {
+    position: 'none',
+  },
+  tooltip: {
+    isHtml: true,
+  },
 }
 
 function drawHumanLanguagesChart() {
   var data = google.visualization.arrayToDataTable([
-    ['', 'Proficiency'],
-    ['English', 100],
-    ['Mandarin Chinese', 60],
-    ['Shanghainese', 70],
-    ['Japanese', 20],
-    ['French', 15],
-    ['Korean', 10],
+    ['', 'Proficiency', {role: 'tooltip'}],
+    ['English', 100, 'Born and raised in the US.'],
+    ['Shanghainese', 70, 'Raised in a Mandarin/Shanghainese bilingual household. Can speak and listen conversationally.'],
+    ['Mandarin Chinese', 60, 'Raised in a Mandarin/Shanghainese bilingual household. Can speak and listen conversationally, and read 40% of characters'],
+    ['French', 25, 'Took 4 years in high school and 1 semester in college. Still remembers how to conjugate, speak, and read.'],
+    ['Japanese', 20, 'Self taught Genki 1. Can read hiragana, katakana, and 15% kanji, speaking and listening skills lacking. Could pass the JLPT N5.'],
+    ['Korean', 10, 'Self taught. Can read characters, rudimentary knowledge of grammar and knows some words.'],
   ]);
-  var chart = new google.charts.Bar(document.getElementById('human-languages-proficiency'));
+  var chart = new google.visualization.BarChart(document.getElementById('human-languages-proficiency'));
   chart.draw(data, barOptions);
 }
 
@@ -34,7 +40,7 @@ function drawProgrammingLanguagesChart() {
     ['Ruby', 40],
     ['Java', 20],
   ]);
-  var chart = new google.charts.Bar(document.getElementById('programming-languages-proficiency'));
+  var chart = new google.visualization.BarChart(document.getElementById('programming-languages-proficiency'));
   chart.draw(data, barOptions);
 }
 
@@ -54,6 +60,7 @@ function drawTimeSpentChart() {
     ['Other', 13.50],
   ]);
   var options = {
+    backgroundColor: '#c5d3de',
     chartArea: {
       height: 350,
     },
@@ -62,9 +69,12 @@ function drawTimeSpentChart() {
       alignment: 'center',
       position: 'labeled',
       textStyle: {
-        fontName: 'Montez',
-        fontSize: 22,
+        fontName: 'PT Sans',
       },
+    },
+    pieHole: 0.25,
+    pieSliceTextStyle: {
+      fontName: 'PT Sans',
     },
     slices: {
       0: {color: '#ea9999'}, // coding

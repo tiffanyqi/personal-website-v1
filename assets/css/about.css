@@ -5,7 +5,6 @@
   text-shadow: 1px 1px #4a484b;
 }
 .stats-box h2 {
-  color: white;
   text-align: center;
 }
 .info-box {
@@ -25,7 +24,7 @@
   flex-direction: column;
   margin: 0 20px;
 }
-.info-box-text a {
+.info-box-text a, .stats-box a {
   color: #e18f77;
 }
 
@@ -36,14 +35,14 @@
   margin: 20px 50px;
 }
 .combined-box .stats-box {
-  background: #778fb5;
+  background: #c5d3de;
   margin: 0 10px;
   padding: 10px;
   width: 100%;
 }
 .stats-box {
   align-items: center;
-  background: #778fb5;
+  background: #c5d3de;
   display: flex;
   flex-direction: column;
   margin: 20px 50px;
