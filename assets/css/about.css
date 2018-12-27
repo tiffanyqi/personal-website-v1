@@ -1,6 +1,8 @@
 .info-box h2, .stats-box h2 {
+  color: #778fb5;
   font-family: 'Montez', cursive;
   font-size: 40px;
+  text-shadow: 1px 1px #4a484b;
 }
 .stats-box h2 {
   color: white;
