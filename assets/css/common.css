@@ -1,60 +1,35 @@
 /* Navigation Bar Elements */
-#navbar-first {
+.navbar {
+    display: flex;
+    flex-direction: row;
     font-size: 30px;
+    justify-content: space-between;
     position: fixed;
-    width: 100%;
-    background: #4a484b;
-    top: 0;
     left: 0;
+    text-shadow: 1px 1px #4a484b;
+    top: 0;
+    width: 100%;
     z-index: 100;
 }
-#navbar-first a {
-    color: #c5d3de;
+.navbar a {
+    color: #778fb5;
     text-decoration: none;
     font-family: 'Montez', cursive;
 }
-#navbar-first a:hover {
-    opacity: 0.5;
+.navbar-items {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.navbar-item {
+    margin: 0 10px;
 }
 #title {
-    float: left;
-    padding: 10 30 5 30px;
-}
-.navbar-item-logo {
-    height: 50px;
-    padding: 18 3 0 3;
-}
-#navbar-second {
-    border: 2px dotted #4a484b;
-    font-size: 30px;
-    word-spacing: 30px;
-    position: fixed;
-    right: 0px;
-    top: 65px;
-    width: 100%;
-    background: #778fb5;
-    opacity: 0.9;
-    z-index: 100;
-    display: inline-block;
-}
-#navbar-second a {
-    color: white;
-    text-decoration: none;
-    font-family: 'Montez', cursive;
-    margin: 0 20;
-    text-shadow: 2px 2px #4a484b;
-    float: right;
-}
-#navbar-second a:hover {
-    color: #283347;
-    text-shadow: 0px 0px;
-}
-.nav-active {
-  color: #283347;
+    margin-right: auto;
 }
 
-.work-container {
-    margin-top: 150px;
+.container {
+    margin-top: 50px;
 }
 
  /* Pictures */
@@ -62,7 +37,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 20px 0;
+    margin-bottom: 20px;
 }
 .linked-picture-container {
     visibility: hidden;
@@ -97,11 +72,14 @@ html {
     width: 100%;
 }
 h1 {
-    text-align: center;
-    font-family: 'Montez', cursive;
     color: #778fb5;
+    font-family: 'Montez', cursive;
     font-size: 60px;
-    text-shadow: 1px 1px #4a484b;
+    line-height: 1;
+    text-align: center;
+}
+h2 {
+    line-height: 1;
 }
 a {
     text-decoration: none;
@@ -134,7 +112,7 @@ footer {
 /*Responsivity*/
 @media screen and (max-width: 900px) {
     .linked-picture {
-        height: inherit;
+        height: initial;
         width: 400px;
     }
 }
