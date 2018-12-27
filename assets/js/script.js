@@ -1,7 +1,6 @@
 // tracking
 const externalLinkView = "External Link View";
 const pageView = "Page View";
-const pressedNavItem = "Pressed Navbar Item";
 
 function trackPageView(pageName) {
     mixpanel.track(pageView, {"Page": pageName});

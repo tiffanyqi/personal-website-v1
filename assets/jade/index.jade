@@ -20,9 +20,6 @@ block scripts
   script.
     const pageName = "Index";
     trackPageView(pageName);
-    $("#navbar-first a").on("click", function(event){
-    trackClick(pressedNavItem, this.id, pageName);
-    });
     $("h2 a").on("click", function(event){
     trackClick(externalLinkView, this.id, pageName);
     });

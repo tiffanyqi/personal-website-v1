@@ -28,9 +28,6 @@ block scripts
   script.
     const pageName = "Projects";
     trackPageView(pageName);
-    $("#navbar-first a").on("click", function(event){
-      trackClick(pressedNavItem, this.id, pageName);
-    });
     $(".linked-picture-container").on("click", function(event){
       trackClick(externalLinkView, this.id, pageName);
     });

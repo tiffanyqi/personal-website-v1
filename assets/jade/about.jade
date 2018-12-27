@@ -48,9 +48,6 @@ block scripts
   script.
     const pageName = "About";
     trackPageView(pageName);
-    $("#navbar-first a").on("click", function(event){
-    trackClick(pressedNavItem, this.id, pageName);
-    });
     $(".info-box-text a").on("click", function(event){
       trackClick(externalLinkView, this.id, pageName);
     });
