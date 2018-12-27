@@ -9,7 +9,7 @@ block content
   #cover Tiffany Qi
   .picture-container
     - const imgSrc = 'assets/img/'
-    +linkedPicture('experience', imgSrc + 'reel/me-and-poogle.jpeg', 'About & Experience', 'experience', 'index')
+    +linkedPicture('about', imgSrc + 'reel/me-and-poogle.jpeg', 'About', 'about', 'index')
     +linkedPicture('photography', imgSrc + 'reel/japan-miyajima-tori.jpg', 'Travel & Photography', 'photography', 'index')
     +linkedPicture('aerial-silks', imgSrc + 'reel/aerials-katniss.jpg', 'Aerial Silks', 'aerial-silks', 'index')
     +linkedPicture('baking', imgSrc + 'reel/sf-honey-toast.jpg', 'Food', 'baking', 'index')
@@ -20,9 +20,6 @@ block scripts
   script.
     const pageName = "Index";
     trackPageView(pageName);
-    $("#navbar-first a").on("click", function(event){
-    trackClick(pressedNavItem, this.id, pageName);
-    });
     $("h2 a").on("click", function(event){
     trackClick(externalLinkView, this.id, pageName);
     });
