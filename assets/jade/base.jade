@@ -23,32 +23,30 @@ html
       link(href='http://fonts.googleapis.com/css?family=Montez', rel='stylesheet', type='text/css')
   body
     // Navigation
-    #navbar-first
+    .navbar
       #title
-        a#navbar-item-title(href='index') Tiffany Qi
-      a#navbar-item-linkedin(href='mailto:hello@tiffanyqi.com')
-        img.navbar-item-logo(src='assets/img/contact/mail.jpg')
-      a#navbar-item-linkedin(href='http://www.linkedin.com/in/tiffanyqi')
-        img.navbar-item-logo(src='assets/img/contact/linked.jpg')
-      a#navbar-item-git(href='http://www.github.com/tiffanyqi')
-        img.navbar-item-logo(src='assets/img/contact/git.jpg')
-      a#navbar-item-instagram(href='https://www.instagram.com/aerial_baker/')
-        img.navbar-item-logo(src='assets/img/contact/instagram.png')
-      a#navbar-item-deviantart(href='http://sabakuwood.deviantart.com')
-        img.navbar-item-logo(src='assets/img/contact/deviant.jpg')
-      a#navbar-item-medium(href='http://medium.com/@tiffanyqi')
-        img.navbar-item-logo(src='assets/img/contact/medium.jpg')
-      a#navbar-item-youtube(href='http://www.youtube.com/user/sabakuxsae/featured')
-        img.navbar-item-logo(src='assets/img/contact/youtube.jpg')
-    #navbar-second
-      .navbar-item
-        a(href='writing') writing
-      .navbar-item
-        a(href='photography') photography
-      .navbar-item
-        a(href='engineering') engineering
-      .navbar-item
-        a(href='about') about
+        .navbar-item
+          a(href='index' id='index') Tiffany Qi
+      .navbar-items
+        .navbar-item
+          a(href='about' id='about') about
+        .navbar-item
+          a(href='engineering' id='engineering') engineering
+        .navbar-item
+          a(href='photography' id='photography') photography
+        .navbar-item
+          a(href='writing' id='writing') writing
+
     block content
     block scripts
-    footer © Tiffany Qi 2019 · All Rights Reserved
+    footer
+      .text © Tiffany Qi 2019 · All Rights Reserved
+      .social-container
+        a.footer-item(href='mailto:hello@tiffanyqi.com' id="email") Email
+        a.footer-item(href='http://www.linkedin.com/in/tiffanyqi' id="linkedin") LinkedIn
+        a.footer-item(href='http://www.github.com/tiffanyqi' id="git") Github
+        a.footer-item(href='https://www.instagram.com/aerial_baker/' id="instagram") Instagram
+        a.footer-item(href='http://sabakuwood.deviantart.com' id="deviantart") DeviantArt
+        a.footer-item(href='http://medium.com/@tiffanyqi' id="medium") Medium
+        a.footer-item(href='http://www.youtube.com/user/sabakuxsae/featured' id="youtube") Youtube
+
