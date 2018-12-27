@@ -1,0 +1,50 @@
+include mixins.jade
+extends base.jade
+
+block append head
+  title Tiffany Qi
+  link(rel='stylesheet', type='text/css', href='assets/css/about.css')
+  script(src='https://www.gstatic.com/charts/loader.js')
+  script(src='assets/js/charts.js')
+
+block content
+  .work-container
+    h1 About
+    .info-box
+      img.info-box-image(src='assets/img/work/self.png')
+      .info-box-text
+        h2 Tiffany Qi, Product Engineer at Mixpanel
+        p
+          | Hello! I'm Tiffany. I started engineering halfway in my college studies in 2014, graduate from UC Berkeley in 2016, and became a software engineer at Mixpanel in 2018. Other than programming, I
+          a(href="baking")  love to bake
+          | , study languages,
+          a(href="my-projects/college-productivity")  dabble with data
+          | ,
+          a(href="photography")  take pictures of food and travels
+          | , and
+          a(href="aerial-silks")  rangle with aerial silks
+          | . My mission is to everything in my power to help those in need.
+    .combined-box
+      .stats-box
+        h2 Human Languages
+        #human-languages-proficiency
+      .stats-box
+        h2 Programming Languages
+        #programming-languages-proficiency
+    .stats-box
+      h2 How I spend my week
+      #time-spent
+      p
+        | Interested in how I got this? Take a look at 
+        a(href="my-projects/college-productivity")  my college productivity analysis
+
+block scripts
+  script.
+    const pageName = "About";
+    trackPageView(pageName);
+    $("#navbar-first a").on("click", function(event){
+    trackClick(pressedNavItem, this.id, pageName);
+    });
+    $(".info-box-text a").on("click", function(event){
+      trackClick(externalLinkView, this.id, pageName);
+    });
