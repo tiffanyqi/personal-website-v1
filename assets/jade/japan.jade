@@ -1,11 +1,10 @@
 include mixins.jade
-extends base.jade
+extends photography-base.jade
 
 block append head
   title Tiffany Qi | Japan
-  link(rel='stylesheet', type='text/css', href='assets/css/photography.css')
 
-block content
+block append content
   .container
     h1 Japan
     .picture-container
@@ -31,7 +30,7 @@ block content
       +largePicture(imgSrc + 'sushi.jpg', 'Salmon, Genki Sushi')
       +largePicture(imgSrc + 'ueno.jpg', 'Tsukiji River, Tokyo')
 
-block scripts
+block append scripts
   script.
     const pageName = "Japan";
     trackPageView(pageName);
