@@ -6,10 +6,11 @@ block append head
   link(rel='stylesheet', type='text/css', href='assets/css/photography.css')
 
 block content
+  .btn-container
+    button#gridButton.btn Grid
+    button#largeButton.btn Full
   .container
     h1 Aerial Silks
-    button#gridButton convert to grid
-    button#largeButton convert to full size
     .picture-container
       - const imgSrc = 'assets/img/reel/aerials-';
       +largePicture(imgSrc + 'crossback.jpg', 'Crossback straddle - Aerial Artique 2018 Winter Showcase')
@@ -24,9 +25,9 @@ block scripts
   script.
     const pageName = "Aerial Silks";
     trackPageView(pageName);
-    $('#gridButton').on('click', function(ev) {
-      return convertToGrid(ev);
+    $('#gridButton').on('click', function() {
+      return convertToGrid();
     });
-    $('#largeButton').on('click', function(ev) {
-      return convertToLarge(ev);
+    $('#largeButton').on('click', function() {
+      return convertToLarge();
     })

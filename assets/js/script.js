@@ -14,17 +14,17 @@ function trackClick(eventName, navId, pageName) {
 }
 
 // other picture functions
-function convertToGrid(ev) {
+function convertToGrid() {
     const images = window.document.images;
     for (var i=0; i<images.length; i++) {
         const image = images[i];
         const caption = image.nextSibling;
-        $(image).addClass('grid-picture');
-        $(caption).addClass('grid-caption');
+        $(image).toggleClass('grid-picture');
+        $(caption).toggleClass('grid-caption');
     }
 }
 
-function convertToLarge(ev) {
+function convertToLarge() {
     const images = window.document.images;
     for (var i=0; i<images.length; i++) {
         const image = images[i];
