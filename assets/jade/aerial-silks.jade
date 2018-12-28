@@ -1,14 +1,10 @@
 include mixins.jade
-extends base.jade
+extends photography-base.jade
 
 block append head
   title Tiffany Qi | Aerial Silks
-  link(rel='stylesheet', type='text/css', href='assets/css/photography.css')
 
-block content
-  .btn-container
-    button#gridButton.btn Grid
-    button#largeButton.btn Full
+block append content
   .container
     h1 Aerial Silks
     .picture-container
@@ -21,13 +17,7 @@ block content
       +largePicture(imgSrc + 'flip.jpg', 'Flip during waterfall drop')
       +largePicture(imgSrc + 'ankle-hang.jpg', 'Ankle hang')
 
-block scripts
+block append scripts
   script.
     const pageName = "Aerial Silks";
     trackPageView(pageName);
-    $('#gridButton').on('click', function() {
-      return convertToGrid();
-    });
-    $('#largeButton').on('click', function() {
-      return convertToLarge();
-    })
