@@ -1,11 +1,11 @@
 include mixins.jade
-extends base.jade
+extends photography-base.jade
 
 block append head
   title Tiffany Qi | Travel
   link(rel='stylesheet', type='text/css', href='assets/css/photography.css')
 
-block content
+block append content
   .container
     h1 Travel
     .picture-container
@@ -22,7 +22,7 @@ block content
       +largePicture(imgSrc + 'hk-matcha-cake.jpg', 'Matcha cake, Via Tokyo, Hong Kong')
       +largePicture(imgSrc + 'wedding-steps.jpg', 'Wedding Steps, Willow Pond Bed and Breakfast, Weyauwega')
 
-block scripts
+block append scripts
   script.
     const pageName = "Travel";
     trackPageView(pageName);

@@ -4,6 +4,16 @@
     width: 400px;
 }
 
+.btn-container {
+    position: fixed;
+    top: 60px;
+}
+.btn {
+    background: #778fb5;
+    border: none;
+    margin-left: 10px;
+    padding: 10px;
+}
 .large-picture-container {
     margin: 0 10px 40px 10px;
 }
@@ -22,6 +32,15 @@
     padding-left: 10px;
     width: calc(100% - 70px);
 }
+.grid-picture {
+    width: 300px;
+}
+.grid-caption {
+    font-size: 10px;
+    margin-left: 15px;
+    padding-left: 5px;
+    width: calc(100% - 85px);
+}
 
 @media screen and (max-width: 1000px) {
     .large-picture {
@@ -29,6 +48,15 @@
     }
     .picture-caption {
         font-size: 14px;
+    }
+    .grid-picture {
+        width: 300px;
+    }
+    .grid-caption {
+        font-size: 10px;
+        margin-left: 15px;
+        padding-left: 5px;
+        width: calc(100% - 85px);
     }
 }
 
@@ -38,6 +66,15 @@
     }
     .picture-caption {
         font-size: 14px;
+    }
+    .grid-picture {
+        width: 300px;
+    }
+    .grid-caption {
+        font-size: 10px;
+        margin-left: 15px;
+        padding-left: 5px;
+        width: calc(100% - 85px);
     }
 }
 

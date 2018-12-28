@@ -1,11 +1,11 @@
 include mixins.jade
-extends base.jade
+extends photography-base.jade
 
 block append head
   title Tiffany Qi | San Francisco
   link(rel='stylesheet', type='text/css', href='assets/css/photography.css')
 
-block content
+block append content
   .container
     h1 San Francisco
     .picture-container
@@ -23,7 +23,7 @@ block content
       +largePicture(imgSrc + 'point-reyes.jpg', 'Point Reyes')
       +largePicture(imgSrc + 'salmon.jpg', 'Miso glazed salmon spaghetti, Kitchen Story')
 
-block scripts
+block append scripts
   script.
     const pageName = "San Francisco";
     trackPageView(pageName);

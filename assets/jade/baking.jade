@@ -1,11 +1,10 @@
 include mixins.jade
-extends base.jade
+extends photography-base.jade
 
 block append head
   title Tiffany Qi | Baking
-  link(rel='stylesheet', type='text/css', href='assets/css/photography.css')
 
-block content
+block append content
   .container
     h1 Baking
     .picture-container
@@ -26,7 +25,7 @@ block content
       +largePicture(imgSrc + 'pomelo-roulade.jpg', 'Pomelo meringue roulade')
       +largePicture(imgSrc + 'shortbread.jpg', 'Shortbread cookies')
 
-block scripts
+block append scripts
   script.
     const pageName = "Baking";
     trackPageView(pageName);

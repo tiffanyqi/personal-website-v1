@@ -7,3 +7,4 @@ package-lock.json
 # results after jade
 base.html
 mixins.html
+photography-base.html

@@ -1,0 +1,19 @@
+include mixins.jade
+extends base.jade
+
+block append head
+  link(rel='stylesheet', type='text/css', href='assets/css/photography.css')
+
+block content
+  .btn-container
+    button#gridButton.btn Grid
+    button#largeButton.btn Full
+
+block scripts
+  script.
+    $('#gridButton').on('click', function() {
+      return convertToGrid();
+    });
+    $('#largeButton').on('click', function() {
+      return convertToLarge();
+    })
