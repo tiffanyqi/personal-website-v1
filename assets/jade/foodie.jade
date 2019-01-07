@@ -1,0 +1,36 @@
+include mixins.jade
+extends photography-base.jade
+
+block append head
+  title Tiffany Qi | San Francisco
+  link(rel='stylesheet', type='text/css', href='assets/css/photography.css')
+
+block append content
+  .container
+    h1 San Francisco
+    .picture-container
+      - const imgSrc = 'assets/img/reel/';
+      +largePicture(imgSrc + 'sf-tartine-croissant.jpg', 'Croissant, Tartine, San Francisco')
+      +largePicture(imgSrc + 'sf-sushi.jpg', 'Omakase selection, Kusakabe, San Francisco')
+      +largePicture(imgSrc + 'sf-tiramisu.jpg', 'Tiramisu french toast, Griddle Fresh, San Francisco')
+      +largePicture(imgSrc + 'sf-egg-buns.jpg', 'Phoenix buns, Mama Ji, San Francisco')
+      +largePicture(imgSrc + 'sf-honey-toast.jpg', 'Thai tea honey toast, UDessert Story, San Francisco')
+      +largePicture(imgSrc + 'sf-charcoal-egg-tarts.jpg', 'Charcoal egg tarts, WoKitchen, 50 Shades of Charcoal, San Francisco')
+      +largePicture(imgSrc + 'sf-egg.jpg', 'Pork belly eggs benedict, Griddle Fresh, San Francisco')
+      +largePicture(imgSrc + 'sf-fumi-curry.jpg', 'Chicken katsua teppan curry, Fumi Curry and Ramen, San Francisco')
+      +largePicture(imgSrc + 'sf-pancakes.jpg', 'Lemon ricotta pancakes, Griddle Fresh, San Francisco')
+      +largePicture(imgSrc + 'sf-salmon.jpg', 'Miso glazed salmon spaghetti, Kitchen Story, San Francisco')
+      +largePicture(imgSrc + 'irvine-pork.jpg', 'House special braised pork belly, Rice Yummy, Rosemead')
+      +largePicture(imgSrc + 'irvine-meat.JPG', 'Pork belly, All That Barbeque, Irvine')
+      +largePicture(imgSrc + 'irvine-road.jpeg', 'Jeffrey Open Trail, Irvine')
+      +largePicture(imgSrc + 'irvine-sunset.jpeg', 'Sunset, Jeffrey Open Trail, Irvine')
+      +largePicture(imgSrc + 'irvine-baekjong.jpg', 'Beef brisket, Kang Ho Dong Baekjong, Irvine')
+      +largePicture(imgSrc + 'hk-station.jpg', 'West Kowloon Station, Hong Kong')
+      +largePicture(imgSrc + 'hk-chestnut-shaved-ice.jpg', 'Chestnut shaved ice, Via Tokyo, Hong Kong')
+      +largePicture(imgSrc + 'japan-steak.jpg', 'A11 Wagyu Steak, Kobe Beef Kaiseki 511, Tokyo')
+      +largePicture(imgSrc + 'japan-sushi.jpg', 'Salmon, Genki Sushi, Tokyo')
+
+block append scripts
+  script.
+    const pageName = "San Francisco";
+    trackPageView(pageName);
