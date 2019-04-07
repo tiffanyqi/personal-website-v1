@@ -116,13 +116,13 @@
     <p>
         Sometimes pre-review time also includes time redoing a PR when a reviewer lets me know that I either created the wrong feature or to change the overall approach to account for an extra detail. In this way the wording of this section is a little misleading--my primary goal for this ratio is to determine how much time it takes to refactor or address the comments of others on coding style or existing behavior, and if I started on the wrong foot or did not include something, I don’t feel that’s completely accurate in that representation. However, I do admit that moving some PRs’ post-review time into the pre-review time fudges the numbers a bit, and thus I advise to take this section with a grain of salt.
     </p>
-    <div class="graph-tall" id="SemTime">
+    <div class="graph-tall" id="prpr-graph-av-pre-and-post">
         [Average time spent on pre-review and post-review graph]
     </div>
     <p>
         In general, you’ll see that the hours spent during pre-review has gone down from its peak of 7.05 in Eng Path/KEEP to L2/AL of 3.9, as well as for post-review from its peak of 7.8 in Eng Path/KEEP to 1.45 in L2/AL. Average workdays during the pre-review has remained steady at around 2 days, while post-review has gone down from 2.91 in Eng Path/KEEP to 0.96 in L2/AL. In addition, if we compare Eng Path/KEEP to L1/KEEP and L1/D2 to L2/D2, we’ll see that average hours and workdays decreased considerably.
     </p>
-    <div class="graph-tall" id="SemTime">
+    <div class="graph-tall" id="prpr-graph-pre-hours-vs-post-hours">
         [Hours of pre-review vs. hours of post-review graph]
     </div>
     <p>
@@ -134,7 +134,7 @@
     <p>
         These numbers represent the PR that obtained the most number of hours during pre-review and post-review for each section. Both pre-review and post-review are decreasing, albeit post-review decreasing a bit more unstably. However, if we compare Eng Path/KEEP to L1/KEEP and L1/D2 to L2/D2, max post-review hours have definitely decreased.
     </p>
-    <div class="graph-tall" id="SemTime">
+    <div class="graph-tall" id="prpr-graph-pre-post-ratio">
         [% Pre-Review vs. % Post-Review graph]
     </div>
     <p>
@@ -352,17 +352,30 @@
 
 
   <!-- JAVASCRIPT TO MAKE THIS WORK -->
-  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript" src='https://www.gstatic.com/charts/loader.js'></script>
   <script type="text/javascript" src="../assets/js/graphs.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script type="text/javascript">
-        google.load("visualization", "1", {packages:["corechart"]});
+        google.charts.load('current');
         const RAW_DATA_URL = 'https://docs.google.com/spreadsheets/d/1PtHdOUadiaUj5RuRNTUY8912LzDZBlODD9jr7U7QAgI/edit#gid=0';
-        const SUMMARY_DATA_URL = 'https://docs.google.com/spreadsheets/d/1PtHdOUadiaUj5RuRNTUY8912LzDZBlODD9jr7U7QAgI/edit#gid=34086219';
+        const SUMMARY_DATA_URL = 'https://docs.google.com/spreadsheets/d/1UWoxJr9I7AWL3IOlXJunp6DPnr9vA5QyZkbuEVSOhdk/edit#gid=34086219';
+
+        // VISUALIZE CHARTS
+        google.charts.setOnLoadCallback(drawAvTimeOnPreReviewPostReview);
+        google.charts.setOnLoadCallback(drawMaxHoursPreReviewPostReview);
+        google.charts.setOnLoadCallback(drawHoursPreReviewVsPostReview);
+        google.charts.setOnLoadCallback(drawPreReviewPostReviewRatio);
 
         // PRE-REVIEW AND POST-REVIEW
-        google.setOnLoadCallback(drawMaxHoursPreReviewVsPostReview);
-        function drawMaxHoursPreReviewVsPostReview() {
+        function drawAvTimeOnPreReviewPostReview() {
+            drawLineChart({
+                containerId: 'prpr-graph-av-pre-and-post',
+                query: 'SELECT A,B,C,D,E',
+                title: 'Average Time Spent on Pre-Review and Post-Review',
+                url: SUMMARY_DATA_URL,
+            })
+        }
+        function drawMaxHoursPreReviewPostReview() {
             drawColumnChart({
                 containerId: 'prpr-graph-max-hours',
                 isStacked: 'false',
@@ -371,6 +384,23 @@
                 url: SUMMARY_DATA_URL,
             });
         };
+        function drawHoursPreReviewVsPostReview() {
+            drawScatterChart({
+                containerId: 'prpr-graph-pre-hours-vs-post-hours',
+                query: 'SELECT C,D',
+                title: 'Hours of Pre-Review vs Hours of Post-Review per PR',
+                url: RAW_DATA_URL,
+            });
+        };
+        function drawPreReviewPostReviewRatio() {
+            drawAreaChart({
+                containerId: 'prpr-graph-pre-post-ratio',
+                isStacked: 'percent',
+                query: 'SELECT B,E,F',
+                title: 'Pre-Review vs Post-Review Ratio Change Over Time',
+                url: RAW_DATA_URL,
+            })
+        }
 
         // http://www.abeautifulsite.net/smoothly-scroll-to-an-element-without-a-jquery-plugin-2/
         $('a[href^="#"]').on('click', function(event) {
