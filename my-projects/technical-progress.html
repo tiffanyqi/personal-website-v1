@@ -217,7 +217,7 @@
     <p>
         We’ll take a look at PR cadence, PR code type, and the number of large PRs.
     </p>
-    <div class="graph-tall" id="SemTime">
+    <div class="graph-tall" id="prs-graph-percent-large-prs">
         [large prs percentage graph]
     </div>
     <p>
@@ -226,13 +226,13 @@
     <p>
         In this above graph, you’ll see that the number of these large PRs have decreased over time, from 18.18% in Eng Path/KEEP to 5.77% in L2/AL.
     </p>
-    <div class="graph-tall" id="SemTime">
+    <div class="graph-tall" id="prs-graph-cadence">
         [pr every x day graph]
     </div>
     <p>
         In addition, the cadence of PR has decreased from a PR every 4 days in Eng Path/SRFE to a PR every 1.35 days in L2/AL.PRs are being deployed quicker.  Again, I did not receive deploy access until L1, and so that could also be the reason for longer PR times in L1. This time if we compare Eng Path/KEEP to L1/KEEP and L1/D2 to L2/D2, we’ll see that the cadence lengthens slightly within projects.
     </p>
-    <div class="graph-tall" id="SemTime">
+    <div class="graph-tall" id="prs-graph-type">
         [prs by type graph]
     </div>
     <p>
@@ -246,19 +246,19 @@
     <p>
         And now for contribution to our code base: how much code am I adding? Generally speaking, more lines of code is more productivity. Again, this should have been lines of code modified (both added and removed) that purely added, since removed code is also considered productive (if not better than adding code).
     </p>
-    <div class="graph-tall" id="SemTime">
+    <div class="graph-tall" id="code-graph-av-lines-code-day">
         [average lines of code added per day graph]
     </div>
     <p>
         I’m adding more code per day on average, from 15.79 in L1/KEEP to 38.26 in L2/AL. Again, during my Eng Path I worked 50/50, so this number shouldn’t be as high as the others.
     </p>
-    <div class="graph-tall" id="SemTime">
+    <div class="graph-tall" id="code-graph-max-lines-code-pr">
         [max lines of code added in pr graph]
     </div>
     <p>
         This graph mimics the average lines of code per day graph very closely. It could be that the few larger PRs were outliers that influenced the number lines added on average as well. 785 lines in a single PR in L1/D1?? I remember that PR being stressful from wrangling multiple features, which is why it existed. The 556 lined PR in L2/AL wasn’t as bad since it was mostly test code and written in python, while the other max PRs represented here are all written in Javascript. Overall, the max lines of code are increasing. Again, if we compare Eng Path/KEEP to L1/KEEP and L1/D2 to L2/D2, the lines of code do decrease within projects for both graphs.
     </p>
-    <div class="graph-tall" id="SemTime">
+    <div class="graph-tall" id="code-graph-av-lines-code-pr">
         [average different lines of code of pr graph]
     </div>
     <p>
@@ -365,6 +365,14 @@
 
             drawHoursWorkedVsComments,
             drawAvCommentsMostComments,
+
+            drawPercentLargePRs,
+            drawPRCadence,
+            drawPRType,
+
+            drawAvLinesCodeInPR,
+            drawAvLinesCodePerDay,
+            drawMaxLinesCodeInPR,
             drawHoursWorkedVsCode,
             drawCodeVsComments,
         ];
@@ -452,7 +460,6 @@
             });
         };
 
-
         // COMMENTS
         function drawHoursWorkedVsComments() {
             drawScatterChart({
@@ -472,7 +479,58 @@
             });
         };
 
+        // NUMBER OF PRS
+        function drawPercentLargePRs() {
+            drawColumnChart({
+                containerId: 'prs-graph-percent-large-prs',
+                query: 'SELECT A,X',
+                title: 'Percentage of Large PRs',
+                url: SUMMARY_DATA_URL,
+            });
+        };
+        function drawPRCadence() {
+            drawColumnChart({
+                containerId: 'prs-graph-cadence',
+                query: 'SELECT A,Y',
+                title: 'PR Every X Day',
+                url: SUMMARY_DATA_URL,
+            });
+        };
+        function drawPRType() {
+            drawColumnChart({
+                containerId: 'prs-graph-type',
+                isStacked: 'true',
+                query: 'SELECT A,Z,AA,AB',
+                title: 'PR Types',
+                url: SUMMARY_DATA_URL,
+            });
+        };
+
         // CODE ADDED
+        function drawAvLinesCodePerDay() {
+            drawColumnChart({
+                containerId: 'code-graph-av-lines-code-day',
+                query: 'SELECT A,AC',
+                title: 'Average Lines of Code Added per Day',
+                url: SUMMARY_DATA_URL,
+            });
+        };
+        function drawMaxLinesCodeInPR() {
+            drawColumnChart({
+                containerId: 'code-graph-max-lines-code-pr',
+                query: 'SELECT A,AD',
+                title: 'Max Lines of Code Added in a PR',
+                url: SUMMARY_DATA_URL,
+            });
+        };
+        function drawAvLinesCodeInPR() {
+            drawColumnChart({
+                containerId: 'code-graph-av-lines-code-pr',
+                query: 'SELECT A,AE',
+                title: 'Average Different Lines of Code in PR',
+                url: SUMMARY_DATA_URL,
+            });
+        };
         function drawHoursWorkedVsCode() {
             drawScatterChart({
                 containerId: 'code-graph-hours-worked-vs-code-added',

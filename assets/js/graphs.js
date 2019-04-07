@@ -26,7 +26,7 @@ function formatOptions({hAxisTitle=null, title, vAxisTitle=null, specialChartOpt
 /* Area Chart, extra options
  * {String} isStacked: stacked options, could be true, false, percent, relative
  */
-function drawAreaChart({containerId, hAxisTitle=null, isStacked, query, title, vAxisTitle=null, url}) {
+function drawAreaChart({containerId, hAxisTitle=null, isStacked='false', query, title, vAxisTitle=null, url}) {
   const options = formatOptions({hAxisTitle, title, vAxisTitle, specialChartOptions: {
     isStacked,
   }});
@@ -41,10 +41,10 @@ function drawAreaChart({containerId, hAxisTitle=null, isStacked, query, title, v
 /* Column Chart, extra options
  * {String} isStacked: stacked options, could be true, false, percent, relative
  */
-function drawColumnChart({containerId, hAxisTitle=null, isStacked, query, title, url, vAxisTitle=null}) {
+function drawColumnChart({containerId, hAxisTitle=null, isStacked='false', query, title, url, vAxisTitle=null}) {
   const options = formatOptions({hAxisTitle, title, vAxisTitle, specialChartOptions: {
     'bar': {'groupWidth': '50%'},
-    'isStacked': isStacked,
+    isStacked,
   }});
   drawChart({
     ...arguments[0],
