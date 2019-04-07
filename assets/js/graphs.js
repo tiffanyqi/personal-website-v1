@@ -40,12 +40,19 @@ function drawAreaChart({containerId, hAxisTitle=null, isStacked='false', query, 
 
 /* Column Chart, extra options
  * {String} isStacked: stacked options, could be true, false, percent, relative
+ * {Boolean} showLegend: whether to show the legend at all
  */
-function drawColumnChart({containerId, hAxisTitle=null, isStacked='false', query, title, url, vAxisTitle=null}) {
-  const options = formatOptions({hAxisTitle, title, vAxisTitle, specialChartOptions: {
+function drawColumnChart({containerId, hAxisTitle=null, isStacked='false', query, showLegend=null, title, url, vAxisTitle=null}) {
+  let options = formatOptions({hAxisTitle, title, vAxisTitle, specialChartOptions: {
     'bar': {'groupWidth': '50%'},
     isStacked,
   }});
+  if (showLegend === false) {
+    options = {
+      ...options,
+      legend: 'none',
+    }
+  }
   drawChart({
     ...arguments[0],
     chartType: 'ColumnChart',
