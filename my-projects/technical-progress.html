@@ -3,15 +3,11 @@
   <head>
     <title>Technical Progress | Tiffany Qi</title>
     <meta charset="UTF-8">
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700" rel="stylesheet">
     <link href='../assets/css/blog.css' rel='stylesheet' type='text/css'>
-
-    <!-- start Mixpanel --><script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
-      0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
-      for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
-      mixpanel.init("0514432afbe696a2dcaa51b5c0aa857e");</script><!-- end Mixpanel -->
+    <script type="text/javascript" src="../assets/js/mixpanel.js"></script>
     <script>
-    //   mixpanel.track("Project View", {"Project": "Technical Proguress"});
+    //   mixpanel.track("Project View", {"Project": "Technical Progress"});
     </script>
   </head>
 
@@ -38,7 +34,7 @@
         <div class="date">April 7, 2019</div>
 
         <p>
-            I’ve officially been a software engineer at Mixpanel for one year! For the full year, I’ve been tracking my progress via Github and thought I’d share my results since then.
+            I’ve officially been a software engineer at Mixpanel for one year! For the full year, I’ve been tracking my progress via Github and thought I’d share my results since then. You can skip the background and methodology if you wish by going directly to the <a href="#data">Data</a> or the <a href="#findings">Findings</a>.
         </p>
         <p>
             Some background: I started programming in 2014 in my junior year at UC Berkeley. While I was at school, I took a couple of courses in theory (CS 61A, CS 61B, CS 160, and CS 169), and outside of class I taught myself basic web development and worked on side projects (largely on my own). As one does when they first start out, my method of programming was to hack things together via StackOverflow until it worked.
@@ -47,7 +43,7 @@
             While at Mixpanel, I realized I wanted to work full time as a software engineer. In January 2018, I was the first to go through an official path to engineering, and in April 2018 I became a full fledged software engineer.
         </p>
         <p>
-            I had a lot to learn as an engineer for a company, and I still do. For one, the method I used for 4 years, hacking things together until they worked, doesn’t work for people who have worked on a relatively stable and mature codebase and know how to best write software for that codebase. I had to get rid of my JQuery habit, navigate the Panel Javascript framework for our new features, and learn how to write clean code that others would approve of.
+            I had a lot to learn as an engineer for a company, and I still do. For one, the method I used for 4 years, hacking things together until they worked, doesn’t work for people who have worked on a relatively stable and mature codebase and know how to best write software for that codebase. I had to get rid of my JQuery habit, navigate <a href="https://github.com/mixpanel/panel">Panel</a>, a Javascript framework built by Mixpanel, for our new features, and learn how to write clean code that others would approve of.
         </p>
         <p>
             To ensure I was on the right track, I wanted to track my progress, and I figured the most straightforward way to do so would be to record time spent and statistics from Github pull requests (PRs) of different projects.
@@ -56,36 +52,36 @@
         <h3 id="methodology">Methodology</h2>
         <p>After each PR was complete, I collected the following information in a Google Spreadsheet:</p>
         <ul>
-            <li><strong>Date information</strong> (month started PR, date started PR, date reviewed PR, date pushed PR)</li>
-            <li><strong>Time spent</strong> hours and workdays spent on pre-review, post-review, total number of workdays, total hours worked, and the total number of hours per day)</li>
+            <li><strong>Date information:</strong> month started PR, date started PR, date reviewed PR, date pushed PR</li>
+            <li><strong>Time spent:</strong> hours and workdays spent on pre-review, post-review, total number of workdays, total hours worked, and the total number of hours per day</li>
             <li><strong>Ratio of pre-review vs post-review</strong></li>
-            <li><strong>Differing lines of code</strong> (lines of code added minus number of lines removed, in hindsight I should have added the two rather than subtract)</li> 
+            <li><strong>Differing lines of code:</strong> lines of code added minus number of lines removed</li> 
             <li><strong>Number of comments</strong></li>
-            <li><strong>Project information</strong> (project number, component, title, stack, framework used)</li> 
+            <li><strong>Project information: </strong> project number, component, title, stack, framework used</li> 
         </ul>
         <p>
-            Afterwards, I synthesized the data by taking these values and aggregating them into data by period, which is categorized by my engineering level and the project working on at the time.
+            Afterwards, I synthesized the data by taking these values and aggregating them into data by period, which is categorized by my engineering level and the project working on at the time, as well as by month.
         </p>
         <p>
-            I calculated the time spent in hours by using Google Calendar and recording the time in which I started and stopped working on a certain PR. You can read more specifically on my method in my <a href="http://tiffanyqi.github.io/my-projects/college-productivity">Productivity Analysis</a>. I used a single calendar called “coding”, and each event title constituted a PR. I included the typing of code, research, and brainstorms with coworkers into the time spent calculation for each PR. I also have other calendars, such as my main calendar (scheduling events with other coworkers), and tasks (includes writing documentation, doing HR tasks, deploying code, code reviews, etc).
+            I calculated the time spent in hours by using Google Calendar and recording the time in which I started and stopped working on a certain PR. You can read more specifically on my method in my <a href="college-productivity">Productivity Analysis</a>. I used a single calendar called “coding”, and each event title constituted a PR. I included the typing of code, research, and brainstorms with coworkers into the time spent calculation for each PR. I also have other calendars, such as my main calendar (scheduling events with other coworkers), and tasks (includes writing documentation, doing HR tasks, deploying code, code reviews, etc).
         </p>
         <img class="calendar" src="../assets/img/work/work-calendar.png" alt="March 2019, Mixpanel">
         <p>
             A typical week from March 2019.
         </p>
         <p>
-            Note that one data point that would have been useful to include is the difficulty of a task. I have not included them here in this calculation because that’s not something that we estimate on the task quantiatively before we begin (unlike some other companies do). Thus, there would be some bias if I were to include the actual difficulty afterwards, and there is also some subjectivity in determining this as well.
+            Note that one data point that would have been useful to include is the difficulty of a task. I have not included them here in this calculation because we don't estimate it on the task quantiatively before we begin (unlike some other companies do). Thus, there would be some bias if I were to include the actual difficulty afterwards, and there is also some subjectivity in determining this as well.
         </p>
         <p>
-            The following are the different periods of my engineering:
+            The following are the different periods of my engineering, the first being my level and the second being the team or project:
         </p>
         <ul>
             <li><strong>Engineering path & SRFE: </strong>20 work days, 1 month. Worked on small bug fixes before starting on my assigned task.</li>
-            <li><strong>Engineering path & KEEP: </strong>38 work days, 2 months. Joined a team where each member worked on separate projects not belonging to any particular feature. I worked primarily in Backbone JS during this time.</li>
+            <li><strong>Engineering path & KEEP: </strong>38 work days, 2 months. Joined a team where each member worked on separate unrelated projects. I worked primarily in Backbone during this time.</li>
             <li><strong>L1 & KEEP: </strong>43 work days, 2.5 months. After officially becoming a software engineer, I continued on the same team. L1 is a level reserved for internal transfers.</li>
-            <li><strong>L1 & D2: </strong>77 work days, 4 months. Our team transitioned to work on a single product: dashboards. I worked primarily in Panel JS.</li> 
+            <li><strong>L1 & D2: </strong>77 work days, 4 months. Our team transitioned to work on a single product: dashboards. I worked primarily in Panel.</li> 
             <li><strong>L2 & D2: </strong>27 work days, 2 months. I transitioned to L2 (new grad status) and continued to work on dashboards.</li> 
-            <li><strong>L2 & AL: </strong>70 work days (as of 3/27/2019), 3.5 months. Our team broadened scope, and I began working on a new product. I worked again primarily in Panel JS and python. The screenshot of the calendar above would fit into this period of time.</li>
+            <li><strong>L2 & AL: </strong>70 work days (as of 3/27/2019), 3.5 months. Our team broadened scope, and I began working on a new product. I worked again primarily in Panel and python. The screenshot of the calendar above would fit into this period of time.</li>
         </ul>
 
         <h3 id="dream">The Dream</h3>
@@ -133,11 +129,25 @@
         <p>
             In general, you’ll see that the hours spent during pre-review has gone down from its peak of 7.05 in Eng Path/KEEP to L2/AL of 3.9, as well as for post-review from its peak of 7.8 in Eng Path/KEEP to 1.45 in L2/AL. Average workdays during the pre-review has remained steady at around 2 days, while post-review has gone down from 2.91 in Eng Path/KEEP to 0.96 in L2/AL. In addition, if we compare Eng Path/KEEP to L1/KEEP and L1/D2 to L2/D2, we’ll see that average hours and workdays decreased considerably.
         </p>
+        <!-- TODO -->
+        <div class="graph-tall" id="prpr-graph-month-av-pre-and-post">
+            [Average time spent on pre-review and post-review per month graph]
+        </div>
+        <p>
+            Here's the same graph but instead broken up in chunks of 20 workday cycles.
+        </p>
         <div class="graph-square" id="prpr-graph-pre-hours-vs-post-hours">
             [Hours of pre-review vs. hours of post-review graph]
         </div>
         <p>
-            Is there a correlation between the hours of pre-review and post-review? Plotting all the data on a single graph, the coefficient of determination is 0.346, which suggests a positive moderate correlation between the two. Of course there are many outliers on this graph, as the majority of the data lies between 0-10 hours of pre-review and 0-5 hours of post-review. The dot highest on post-review was a PR from Eng Path/KEEP, while the one with the highest pre-review was from L1/KEEP.
+            Is there a correlation between the hours of pre-review and post-review? Plotting all the data on a single graph, the coefficient of determination is 0.346, which suggests a positive moderate correlation between the two. Of course there are many outliers on this graph, such as the dot highest on post-review was a PR from Eng Path/KEEP and the one with the highest pre-review was from L1/KEEP.
+        </p>
+        <!-- TODO -->
+        <div class="graph-square" id="prpr-graph-no-outliers-pre-hours-vs-post-hours">
+            [Hours of pre-review vs. hours of post-review graph with no outliers]
+        </div>
+        <p>
+            Here's the same graph with the outliers removed. I define an outlier through an IQR calculation, in which is any point that has one or both points passed the lower or higher threshold of 1.5*IQR (Q3 - Q1). This means that I've removed any PR with a pre-review greater than 12.6 hours and a post-review of 3.75 hours.
         </p>
         <div class="graph-short" id="prpr-graph-max-hours">
             [Max hours of pre-review vs. max hours of post-review graph]
@@ -220,6 +230,13 @@
         <p>
             I also plot the number of hours worked per PR with the number of comments to see if there is a correlation between the two. The coefficient of determination is 0.598, which does suggest somewhat of a linear correlation between the two. Of course there are many outliers on this graph, as the majority of the data lies between 0-10 hours worked and 0-20 comments. The dot in the top right hand corner was a PR from Eng Path/KEEP. However, in general perhaps if I spend more time on a PR, the fewer comments I could get in general.
         </p>
+        <!-- TODO -->
+        <div class="graph-square" id="comments-graph-no-outliers-hours-worked-vs-comments">
+            [hours worked vs comments graph without outliers]
+        </div>
+        <p>
+            Here's the same graph with the outliers removed. I've removed any PR with total hours worked that's more than 16 hours and more than 21 comments.
+        </p>
         <p>
             <strong>In summary: </strong>the number of comments is decreasing in general and within projects, which does suggest somewhat of an improvement. The amount of time and number of comments are somewhat linearly correlated as well.
         </p>
@@ -281,11 +298,25 @@
         <p>
             The coefficient of determination here is 0.555, which suggests that the total hours worked and the amount of lines of code added is leaning towards strongly linearly correlated. Again there are more outliers, such as the 785 lined PR that took 53.5 hours to complete from L1/D2, and the 556 lined PR took 17.25 hours to complete from L2/AL.
         </p>
+        <!-- TODO -->
+        <div class="graph-square" id="code-graph-no-outliers-hours-worked-vs-code-added">
+            [total hours worked per PR vs different lines of code graph no outliers]
+        </div>
+        <p>
+            hours above 16 and code between -66 and 114
+        </p>
         <div class="graph-square" id="code-graph-code-added-vs-comments">
-            [lines of code vs comments graph]
+            [lines of code per PR vs comments per PR graph]
         </div>
         <p>
             Out of curiosity, I also plotted the lines of code with the comments per PR. The coefficient of determination is 0.211, which suggests a moderate linear correlation. If we remove the obvious outlier of 99 comments from Eng Path/KEEP, it decreases to 0.21.
+        </p>
+        <!-- TODO -->
+        <div class="graph-square" id="code-graph-no-outliers-code-added-vs-comments">
+            [lines of code per PR vs comments per PR graph no outliers]
+        </div>
+        <p>
+            code between -66 and 114 and comments above 21
         </p>
         <p>
             <strong>In summary: </strong>the lines of code added are also increasing in general and in projects. There is also a stronger linear correlation between the number of hours worked and the lines of code added, and a weaker correlation between amount of comments and lines of code added.
@@ -361,6 +392,7 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script type="text/javascript">
         google.charts.load('current');
+        const MONTH_DATA_URL = 'https://docs.google.com/spreadsheets/d/1snVaG2XNltJHeJpsBj6ugGoX8Y-3xpqSNIBXdedl_Yg/edit#gid=0';
         const RAW_DATA_URL = 'https://docs.google.com/spreadsheets/d/1PtHdOUadiaUj5RuRNTUY8912LzDZBlODD9jr7U7QAgI/edit#gid=0';
         const SUMMARY_DATA_URL = 'https://docs.google.com/spreadsheets/d/1UWoxJr9I7AWL3IOlXJunp6DPnr9vA5QyZkbuEVSOhdk/edit#gid=34086219';
 
@@ -368,6 +400,7 @@
             drawAvTimeOnPreReviewPostReview,
             drawMaxHoursPreReviewPostReview,
             drawHoursPreReviewVsPostReview,
+            drawHoursPreReviewVsPostReviewNoOutliers,
             drawPreReviewPostReviewRatio,
             drawAveragePreReviewPostReview,
             drawMaxPreReviewPostReviewRatio,
@@ -377,6 +410,7 @@
             drawAvHoursProductivePerDay,
 
             drawHoursWorkedVsComments,
+            drawHoursWorkedVsCommentsNoOutliers,
             drawAvCommentsMostComments,
 
             drawPercentLargePRs,
@@ -387,7 +421,9 @@
             drawAvLinesCodePerDay,
             drawMaxLinesCodeInPR,
             drawHoursWorkedVsCode,
+            drawHoursWorkedVsCodeNoOutliers,
             drawCodeVsComments,
+            drawCodeVsCommentsNoOutliers,
         ];
         GRAPH_FUNCTIONS.forEach(f => google.charts.setOnLoadCallback(f));
 
@@ -414,6 +450,14 @@
                 containerId: 'prpr-graph-pre-hours-vs-post-hours',
                 query: 'SELECT C,D',
                 title: 'Hours of Pre-Review vs Hours of Post-Review per PR',
+                url: RAW_DATA_URL,
+            });
+        };
+        function drawHoursPreReviewVsPostReviewNoOutliers() {
+            drawScatterChart({
+                containerId: 'prpr-graph-no-outliers-pre-hours-vs-post-hours',
+                query: 'SELECT C,D WHERE C < 12.625 AND D < 3.75',
+                title: 'Hours of Pre-Review vs Hours of Post-Review per PR without Outliers',
                 url: RAW_DATA_URL,
             });
         };
@@ -480,6 +524,14 @@
                 containerId: 'comments-graph-hours-worked-vs-comments',
                 query: 'SELECT H,K',
                 title: 'Hours of Worked per PR vs Comments per PR',
+                url: RAW_DATA_URL,
+            });
+        }
+        function drawHoursWorkedVsCommentsNoOutliers() {
+            drawScatterChart({
+                containerId: 'comments-graph-no-outliers-hours-worked-vs-comments',
+                query: 'SELECT H,K WHERE H < 16 and K < 21',
+                title: 'Hours of Worked per PR vs Comments per PR without Outliers',
                 url: RAW_DATA_URL,
             });
         }
@@ -558,10 +610,26 @@
                 url: RAW_DATA_URL,
             });
         }
+        function drawHoursWorkedVsCodeNoOutliers() {
+            drawScatterChart({
+                containerId: 'code-graph-no-outliers-hours-worked-vs-code-added',
+                query: 'SELECT H,J WHERE H < 16 AND J < 114 AND J > -66',
+                title: 'Hours of Worked per PR vs Code Added per PR',
+                url: RAW_DATA_URL,
+            });
+        }
         function drawCodeVsComments() {
             drawScatterChart({
                 containerId: 'code-graph-code-added-vs-comments',
                 query: 'SELECT J,K',
+                title: 'Code Added per PR vs Comments',
+                url: RAW_DATA_URL,
+            });
+        }
+        function drawCodeVsCommentsNoOutliers() {
+            drawScatterChart({
+                containerId: 'code-graph-no-outliers-code-added-vs-comments',
+                query: 'SELECT J,K WHERE J < 114 AND J > -66 AND K < 21',
                 title: 'Code Added per PR vs Comments',
                 url: RAW_DATA_URL,
             });
