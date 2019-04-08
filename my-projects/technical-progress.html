@@ -14,7 +14,7 @@
   <body>
 
     <div id="navbar">
-      <a href="#top" class="navbar-item">Introduction</a>
+      <a href="#top" class="navbar-item active">Introduction</a>
       <a href="#methodology" class="navbar-sub-item">Methodology</a>
       <a href="#dream" class="navbar-sub-item">The Dream</a>
       <a href="#data" class="navbar-item">The Data</a>
@@ -23,9 +23,6 @@
       <a href="#data-number-of-comments" class="navbar-sub-item">Number of Comments</a>
       <a href="#data-number-of-prs" class="navbar-sub-item">Number of PRs</a>
       <a href="#data-lines-of-code" class="navbar-sub-item">Lines of Code</a>
-      <a href="#data-sleep" class="navbar-sub-item">Sleep and Progress</a>
-      <a href="#data-exercise" class="navbar-sub-item">Exercise and Progress</a>
-      <a href="#data-vacation" class="navbar-sub-item">Vacation and Progress</a>
       <a href="#findings" class="navbar-item">Findings</a>
       <a href="#conclusion" class="navbar-sub-item">Conclusion</a>
       <a href="#acknowledgements" class="navbar-sub-item">Acknowledgements</a>
@@ -46,7 +43,7 @@
             While at Mixpanel, I realized I wanted to work full time as a software engineer. In January 2018, I was the first to go through an official path to engineering, and in April 2018 I became a full fledged software engineer.
         </p>
         <p>
-            I had a lot to learn as an engineer for a company, and I still do. For one, the method I used for 4 years, hacking things together until they worked, doesn’t work for people who have worked on a relatively stable and mature codebase and know how to best write software for that codebase. I had to get rid of my JQuery habit, navigate <a href="https://github.com/mixpanel/panel">Panel</a>, a Javascript framework built by Mixpanel, for our new features, and learn how to write clean code that others would approve of.
+            I had a lot to learn as an engineer for a company, and I still do. For one, the method I used for 4 years, hacking things together until they worked, doesn’t work for people who have worked on a relatively stable and mature codebase and know how to best write software for that codebase. I had to get rid of my JQuery habit, navigate <a href="https://github.com/mixpanel/panel">Panel</a> (a Javascript framework built by Mixpanel) for our new features, and learn how to write clean code that others would approve of.
         </p>
         <p>
             To ensure I was on the right track, I wanted to track my progress, and I figured the most straightforward way to do so would be to record time spent and statistics from Github pull requests (PRs) of different projects.
@@ -55,15 +52,15 @@
         <h3 id="methodology">Methodology</h2>
         <p>After each PR was complete, I collected the following information in a Google Spreadsheet:</p>
         <ul>
-            <li><strong>Date information:</strong> month started PR, date started PR, date reviewed PR, date pushed PR</li>
+            <li><strong>Date information:</strong> month started, date started, date reviewed, and date pushed per PR</li>
             <li><strong>Time spent:</strong> hours and workdays spent on pre-review, post-review, total number of workdays, total hours worked, and the total number of hours per day</li>
             <li><strong>Ratio of pre-review vs post-review</strong></li>
-            <li><strong>Differing lines of code:</strong> lines of code added minus number of lines removed</li> 
+            <li><strong>Differing lines of code:</strong> lines of code added minus number of lines removed, or the total lines modified</li> 
             <li><strong>Number of comments</strong></li>
             <li><strong>Project information: </strong> project number, component, title, stack, framework used</li> 
         </ul>
         <p>
-            Afterwards, I synthesized the data by taking these values and aggregating them into data by period, which is categorized by my engineering level and the project working on at the time, as well as by month.
+            Afterwards, I synthesized the data by taking these values and aggregating them into data by period, which is categorized by my engineering level and the project working on at the time, and by month.
         </p>
         <p>
             I calculated the time spent in hours by using Google Calendar and recording the time in which I started and stopped working on a certain PR. You can read more specifically on my method in my <a href="college-productivity">Productivity Analysis</a>. I used a single calendar called “coding”, and each event title constituted a PR. I included the typing of code, research, and brainstorms with coworkers into the time spent calculation for each PR. I also have other calendars, such as my main calendar (scheduling events with other coworkers), and tasks (includes writing documentation, doing HR tasks, deploying code, code reviews, etc).
@@ -360,10 +357,6 @@
             <strong>In summary: </strong>the lines of code added are also increasing in general and in projects. There is also a stronger linear correlation between the number of hours worked and the lines of code added, and a weaker correlation between amount of comments and lines of code added.
         </p>
 
-        <h3 id="data-sleep">Sleep and Progress</h3>
-        <h3 id="data-exercise">Exercise and Progress</h3>
-        <h3 id="data-vacation">Vacation and Progress</h3>
-
         <!-- FINDINGS -->
         <h2 id="findings">Findings</h2>
         <p>
@@ -429,9 +422,10 @@
 
 
   <!-- JAVASCRIPT TO MAKE THIS WORK -->
-  <script type="text/javascript" src='https://www.gstatic.com/charts/loader.js'></script>
-  <script type="text/javascript" src="../assets/js/graphs.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src='https://www.gstatic.com/charts/loader.js'></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="../assets/js/graphs.js"></script>
+    <script type="text/javascript" src="../assets/js/blog.js"></script>
     <script type="text/javascript">
         google.charts.load('current');
         const MONTH_DATA_URL = 'https://docs.google.com/spreadsheets/d/1snVaG2XNltJHeJpsBj6ugGoX8Y-3xpqSNIBXdedl_Yg/edit#gid=374449975';
@@ -735,17 +729,6 @@
                 url: RAW_DATA_URL,
             });
         }
-
-        // http://www.abeautifulsite.net/smoothly-scroll-to-an-element-without-a-jquery-plugin-2/
-        $('a[href^="#"]').on('click', function(event) {
-            var target = $( $(this).attr('href') );
-            if (target.length) {
-                event.preventDefault();
-                $('html, body').animate({
-                    scrollTop: target.offset().top
-                }, 650);
-            }
-        });
     </script>
   </body>
 </html>

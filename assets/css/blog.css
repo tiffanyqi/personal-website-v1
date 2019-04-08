@@ -44,6 +44,9 @@
 .navbar-sub-item {
   margin-left: 10px;
 }
+.active {
+  font-weight: bold;
+}
 
 
 body {
@@ -57,6 +60,7 @@ body {
   text-align: justify;
 }
 .date {
+  font-style: italic;
   text-align: right;
   width: 100%;
 }
