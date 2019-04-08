@@ -63,14 +63,14 @@
             Afterwards, I synthesized the data by taking these values and aggregating them into data by period, which is categorized by my engineering level and the project working on at the time, and by month.
         </p>
         <p>
-            I calculated the time spent in hours by using Google Calendar and recording the time in which I started and stopped working on a certain PR. You can read more specifically on my method in my <a href="college-productivity">Productivity Analysis</a>. I used a single calendar called “coding”, and each event title constituted a PR. I included the typing of code, research, and brainstorms with coworkers into the time spent calculation for each PR. I also have other calendars, such as my main calendar (scheduling events with other coworkers), and tasks (includes writing documentation, doing HR tasks, deploying code, code reviews, etc).
+            I calculated the time spent in hours by using Google Calendar and recorded the time in which I started and stopped working on a certain PR. You can read more specifically on my method in my <a href="college-productivity">College Productivity Analysis</a>. I used a single calendar called “coding”, and each event title constituted a PR. I included the typing of code, research, and brainstorms with coworkers into the time spent calculation for each PR. I also have other calendars, such as my main calendar (scheduling events with other coworkers), and tasks (writing documentation, doing HR tasks, deploying code, code reviews, etc).
         </p>
         <img class="calendar" src="../assets/img/work/work-calendar.png" alt="March 2019, Mixpanel">
         <p>
             A typical week from March 2019.
         </p>
         <p>
-            Note that one data point that would have been useful to include is the difficulty of a task. I have not included them here in this calculation because we don't estimate it on the task quantiatively before we begin (unlike some other companies do). Thus, there would be some bias if I were to include the actual difficulty afterwards, and there is also some subjectivity in determining this as well.
+            Note that one piece of information that would have been useful to include is the difficulty of a task. I have not included them here in this calculation because we don't estimate it on the task quantiatively before we begin (unlike some other companies do). Thus, since evaluating difficulty post-mortem is subjective and biased, I did not want to include it in this analysis.
         </p>
         <p>
             The following are the different periods of my engineering, the first being my level and the second being the team or project:
@@ -121,20 +121,19 @@
             “Pre-review” is the period of time in which I spend on beginning research and coding before asking others to review, while “post-review” is that which I spend incorporating comments and feedback from others before shipping code to production. Deploy time is not added to the post-review unless I needed to revise something that came up during staging.
         </p>
         <p>
-            Sometimes pre-review time also includes time redoing a PR when a reviewer lets me know that I either created the wrong feature or to change the overall approach to account for an extra detail. In this way the wording of this section is a little misleading--my primary goal for this ratio is to determine how much time it takes to refactor or address the comments of others on coding style or existing behavior, and if I started on the wrong foot or did not include something, I don’t feel that’s completely accurate in that representation. However, I do admit that moving some PRs’ post-review time into the pre-review time fudges the numbers a bit, and thus I advise to take this section with a grain of salt.
+            Sometimes pre-review time also includes time redoing a PR when a reviewer lets me know that I either created the wrong feature or have to change the overall approach to account for an extra detail. In this way the wording of this section is a little misleading--my primary goal for this ratio is to determine how much time it takes to refactor or address the comments of others on coding style or existing behavior, and if I started on the wrong foot or did not include something, I don’t feel that’s completely accurate in that representation. However, I do admit that moving some PRs’ post-review time into the pre-review time fudges the numbers a bit, and thus I advise to take this section with a grain of salt.
         </p>
         <div class="graph-tall" id="prpr-graph-av-pre-and-post">
-            [Average time spent on pre-review and post-review graph]
+            [Average hours spent on pre-review and post-review graph]
         </div>
         <p>
             In general, you’ll see that the hours spent during pre-review has gone down from its peak of 7.05 in Eng Path/KEEP to L2/AL of 3.9, as well as for post-review from its peak of 7.8 in Eng Path/KEEP to 1.45 in L2/AL. Average workdays during the pre-review has remained steady at around 2 days, while post-review has gone down from 2.91 in Eng Path/KEEP to 0.96 in L2/AL. In addition, if we compare Eng Path/KEEP to L1/KEEP and L1/D2 to L2/D2, we’ll see that average hours and workdays decreased considerably.
         </p>
-        <!-- TODO -->
         <div class="graph-tall" id="prpr-graph-month-av-pre-and-post">
-            [Average time spent on pre-review and post-review per month graph]
+            [Average hours spent on pre-review and post-review per month graph]
         </div>
         <p>
-            Here's the same graph but instead broken up in chunks of 20 workday cycles.
+            Here's the same graph but instead broken up in chunks of 20 workday cycles. Overall it follows the path as shown by the previous graph, except it's more obvious where the peaks are. For example, the highest post-review period that overtook the pre-review in March 2018 was during Eng Path/KEEP. A second high post-review time was in August 2018, which was during L1/D2.
         </p>
         <div class="graph-square" id="prpr-graph-pre-hours-vs-post-hours">
             [Hours of pre-review vs. hours of post-review graph]
@@ -142,12 +141,14 @@
         <p>
             Is there a correlation between the hours of pre-review and post-review? Plotting all the data on a single graph, the coefficient of determination is 0.346, which suggests a positive moderate correlation between the two. Of course there are many outliers on this graph, such as the dot highest on post-review was a PR from Eng Path/KEEP and the one with the highest pre-review was from L1/KEEP.
         </p>
-        <!-- TODO -->
         <div class="graph-square" id="prpr-graph-no-outliers-pre-hours-vs-post-hours">
             [Hours of pre-review vs. hours of post-review graph with no outliers]
         </div>
         <p>
-            Here's the same graph with the outliers removed. I define an outlier through an IQR calculation, in which is any point that has one or both points passed the lower or higher threshold of 1.5*IQR (Q3 - Q1). This means that I've removed any PR with a pre-review greater than 12.6 hours and a post-review of 3.75 hours.
+            Here's the same graph with the outliers removed. I define an outlier through the interquartile ratio (IQR), the traditional way of calculating outliers. If any point is outside the lower and higher boundaries of the IQR*1.5 of Q1 and Q3, it is considered an outlier. This means that I've removed any PR with a pre-review greater than 12.6 hours and a post-review of 3.75 hours.
+        </p>
+        <p>
+            With these outliers excluded, the data is much more scattered with a coefficient of determination of 0.156. There's a weak positive correlation between pre-review and post-review hours spent on a PR.
         </p>
         <div class="graph-short" id="prpr-graph-max-hours">
             [Max hours of pre-review vs. max hours of post-review graph]
@@ -159,7 +160,7 @@
             [% Pre-Review vs. % Post-Review graph]
         </div>
         <p>
-            Here’s a graph of the ratio between pre-review and post-review for every PR deployed in sequential order. With the treadline, you’ll see that the pre-review ratio is increasing slightly. However, a lot more PRs in the “AL” section look like the ratio is lower than the D2 section. Looking within each section (KEEP, D2, AL), you can see that the lines are trending upwards.
+            Here’s a graph of the ratio between pre-review and post-review for every PR deployed in sequential order. If we drew a trendline for just KEEP and D2, you'd notice that the treadline trends upwards, suggesting an increasing pre-review ratio. As for AL, the line may be even, perhaps even trending downwards.
         </p>
         <div class="graph-short" id="prpr-graph-av-pre-post">
             [Average review slices graph]
@@ -167,45 +168,38 @@
         <p>
             In terms of the ratio between pre-review and post-review, on average you’ll see that the ratio is increasing in favor of larger pre-review (58.71% in Eng Path/KEEP to 87.2% in L2/D2). Currently that number is 75.6% in L2/AL. It’s also increasing within KEEP (Eng Path to L1) and D2 (L1 to L2).
         </p>
-        <!-- TODO -->
         <div class="graph-short" id="prpr-graph-month-av-pre-post">
             [Average review slices graph by month]
         </div>
         <p>
-            Here's the same graph broken up by 20 workday cycles.
-        </p>
-        <div class="graph-short" id="prpr-graph-max-pre-post-ratio">
-            [Max % pre-review and max % post-review graph]
-        </div>
-        <p>
-            These numbers represent the PR that obtained the highest pre-review and post-review percentage for each period. It looks like the post-review percentage is actually increasing. And again, post-review is decreasing within KEEP and D2.
+            Here's the same graph broken up by 20 workday cycles. Here we can see a clear delineation whenever a new period or project was started. In June 2018, I began D2, and continued to rise until the start of a new project in December 2018. From there, my ratio dropped to an average of 72%, and gradually increased again to 82%. Of course the numbers within Eng Path is lowest given I first started my assign tasks.
         </p>
         <p>
-            <strong>In summary: </strong> I spent fewer hours and workdays on both pre-review and post-review on average per PR (except post-review workdays remained steady). There is a weak correlation between the two as well.  In addition, while it seems that I’m spending more time on pre-review than post-review for each PR in general, it does seem like there are some PRs that are more tricky and have lead me to spend more time on post-review lately as the max post-review percentage is increasing. However, within projects I spend less time and have a decreasing pre-review to post-review ratio, which does suggest an improvement.
+            <strong>In summary: </strong>
+            I spent fewer hours and workdays on both pre-review and post-review on average per PR (except post-review workdays remained steady). There is a weak positive linear correlation between the two as well. A start of a new project causes the pre-review to post-review ratio to decrease, but over time within that project it gradually increases, which does suggest an improvement.
         </p>
 
         <h3 id="data-average-working-time">Average Working Time</h3>
         <p>
-            Here, I’m curious how long I’m spending per PR and in general, as well as whether they have any correlation.
+            Here, I’m curious how long I’m spending per PR and in general, as well as whether they have any correlation. Note that items such as meetings, lunch, and non-coding projects are included in an average day but not on the “hours spent” number. Vacations and offsites are removed from the “day” number.
         </p>
         <div class="graph-tall" id="time-graph-av-hours-pr-day">
             [Average total hours worked per PR vs average hours per day spent on PR graph]
         </div>
         <p>
-            I have decreased the amount of hours worked per PR on average from 14.84 in Eng Path/KEEP to 5.35 in L2/AL, and also decreased slightly the amount of workdays from 2.12 in Eng Path/KEEP to 1.81 workdays per PR on average.
+            I have decreased the amount of hours worked per PR on average from 14.84 in Eng Path/KEEP to 5.35 in L2/AL, and also decreased slightly the amount of workdays from 2.12 in Eng Path/KEEP to 1.81 workdays in L2/AL per PR on average.
         </p>
         <div class="graph-short" id="time-graph-av-hours-coding">
             [average hours coding per day graph]
         </div>
         <p>
-            In terms of the hours spent per day on PRs, I spent the most at L2/D2 of 5.08 hours per day, while L2/AL was 3.98 hours per day. I was working 50/50 during the Eng path, which explains why the number is low on average for Eng Path/SRFE (1.23). I must have pushed myself really hard during Eng Path/KEEP (and maybe neglected other duties) to achieve an average per day of 4.23 hours! Note that items such as meetings, lunch, and non-coding projects are included in an average day but not on the “hours spent” number. Vacations and offsites are removed from the “day” number. Overall the numbers have fluctuated and there’s not a clear pattern.
+            In terms of the hours spent per day on PRs, I spent the most at L2/D2 of 5.06 hours per day, while L2/AL was 3.98 hours per day. I was working 50/50 during the Eng path, which explains why the number is low on average for Eng Path/SRFE (1.23). I must have pushed myself really hard during Eng Path/KEEP (and maybe neglected other duties) to achieve an average per day of 4.24 hours! Gradually I've increased the time spent on PRs, although the time in L2/AL is below trend.
         </p>
-        <!-- TODO -->
         <div class="graph-short" id="time-graph-month-av-hours-coding">
             [average hours coding per day graph by month]
         </div>
         <p>
-            Here's the above graph by 20 workday cycles
+            Here's the same graph broken out up 20 workday cycles. Interestingly, the same logic earlier applies to here: the start of a project shows a trough in time spent coding (July and December 2018), and then gradually increases. This could also be explained by the holiday season as well.
         </p>
         <p>
             So, what did I spend my time on? I did some extra calculations and found the following:
@@ -225,7 +219,8 @@
             Thus, I went from spending on average 5.16 hours per day in L1/KEEP to 6.52 hours per day in L2/D2, so overall the time I’m spending is increasing, especially through code reviews, other projects, deployment, and soon as opslead.
         </p>
         <p>
-            <strong>In summary: </strong>the amount of time spent on PRs and per day has decreased over time, but the amount of time I’m spending on average on work activities is increasing. In addition, the total hours worked and the number of days spent per PR is strongly linearly correlated, which makes sense.
+            <strong>In summary: </strong>
+            the amount of time spent on PRs and per day has decreased over time, but the amount of time I’m spending on average on work activities is increasing. Again the time spent on coding initially is low when starting a new project (July 2018, December 2018), but gradually increases.
         </p>
 
         <h3 id="data-number-of-comments">Number of Comments</h3>
@@ -238,40 +233,45 @@
         <p>
             It looks like both the average number of comments per PR and the most comments in a single PR is decreasing, from 22.09 in Eng Path/KEEP to 7.37 in L2/AL, and from a whopping 99 in Eng Path/KEEP to 36 in L2/AL. If we compare Eng Path/KEEP to L1/KEEP and L1/D2 to L2/D2, we’ll see that average comments are decreasing as well.
         </p>
-        <!-- TODO -->
         <div class="graph-short" id="comments-graph-month-av-comments">
             [average comments per pr graph by month]
         </div>
         <p>
-            average comments per pr by 20 weekday periods
+            Here is the same graph broken up by 20 weekday periods. Again, it's clear that the average comments decrease within projects. Interestingly there are more comments in July and August 2018, and in AL (December 2018 to March 2019) the comments continue to increase.
+        </p>
+        <div class="graph-square" id="comments-graph-month-av-hours-vs-av-comments">
+            [average hours worked in PR vs average comments per pr graph by month]
+        </div>
+        <p>
+            Out of curiosity, here's the plot between the average hours worked in PR and average comments per PR broken up by 20 weekday periods. The correlation of determination is 0.682, which suggests that the data is strongly positively linearly correlated.
         </p>
         <div class="graph-square" id="comments-graph-hours-worked-vs-comments">
             [hours worked vs comments graph]
         </div>
         <p>
-            I also plot the number of hours worked per PR with the number of comments to see if there is a correlation between the two. The coefficient of determination is 0.598, which does suggest somewhat of a linear correlation between the two. Of course there are many outliers on this graph, as the majority of the data lies between 0-10 hours worked and 0-20 comments. The dot in the top right hand corner was a PR from Eng Path/KEEP. However, in general perhaps if I spend more time on a PR, the fewer comments I could get in general.
+            I also plot the number of hours worked per PR with the number of comments to see if there is a correlation between the two. The coefficient of determination is 0.598, which does suggest somewhat of a positive linear correlation between the two. There are still outliers here, such as the dot highest on post-review that was a PR from Eng Path/KEEP and the one with the highest pre-review was from L1/KEEP.
         </p>
-        <!-- TODO -->
         <div class="graph-square" id="comments-graph-no-outliers-hours-worked-vs-comments">
             [hours worked vs comments graph without outliers]
         </div>
         <p>
-            Here's the same graph with the outliers removed. I've removed any PR with total hours worked that's more than 16 hours and more than 21 comments.
+            Here's the same graph with the outliers removed. I've removed any PR with total hours worked that's more than 16 hours and more than 21 comments. The coefficient of determination again has decreased to 0.363, which still suggests a bit of a positive linear correlation but definitely not as strong as with the outliers.
         </p>
         <p>
-            <strong>In summary: </strong>the number of comments is decreasing in general and within projects, which does suggest somewhat of an improvement. The amount of time and number of comments are somewhat linearly correlated as well.
+            <strong>In summary: </strong>
+            the number of comments is decreasing in general and within projects, which does suggest somewhat of an improvement (except in L2/AL). The amount of time and number of comments are somewhat linearly correlated as well, but averaged by month the numbers are strongly correlated.
         </p>
 
         <h3 id="data-number-of-prs">Number of PRs</h3>
         <p>
             We’ll take a look at PR cadence, PR code type, and the number of large PRs.
         </p>
-        <div class="graph-short" id="prs-graph-percent-large-prs">
-            [large prs percentage graph]
-        </div>
         <p>
             I define “large” PRs rather loosely: it must have more than 100 lines of code, but after that it’s a bit more subjective. For example, if I wrote a lot of test code to go with it, I don’t consider it a large PR. If for Javascript there’s a lot of comments or adding of a type.ts file for type checking purposes or much copy and pasting of code, I don’t consider it a large PR.
         </p>
+        <div class="graph-short" id="prs-graph-percent-large-prs">
+            [large prs percentage graph]
+        </div>
         <p>
             In this above graph, you’ll see that the number of these large PRs have decreased over time, from 18.18% in Eng Path/KEEP to 5.77% in L2/AL.
         </p>
@@ -279,28 +279,40 @@
             [pr every x day graph]
         </div>
         <p>
-            In addition, the cadence of PR has decreased from a PR every 4 days in Eng Path/SRFE to a PR every 1.35 days in L2/AL.PRs are being deployed quicker.  Again, I did not receive deploy access until L1, and so that could also be the reason for longer PR times in L1. This time if we compare Eng Path/KEEP to L1/KEEP and L1/D2 to L2/D2, we’ll see that the cadence lengthens slightly within projects.
+            In addition, the cadence of PR has decreased from a PR every 4 days in Eng Path/SRFE to a PR every 1.35 days in L2/AL.PRs are being deployed quicker.  Again, I did not receive deploy access until L1, and so that could also be the reason for longer PR times in Eng Path. This time if we compare Eng Path/KEEP to L1/KEEP and L1/D2 to L2/D2, we’ll see that the cadence lengthens slightly within projects.
         </p>
-        <!-- TODO -->
         <div class="graph-short" id="prs-graph-month-cadence">
             [pr every x day graph by month]
         </div>
         <p>
-            Same graph but by 20 workday periods
+            Here's the same graph broken out up 20 workday cycles. This graph looks almost just like the comments graph, as the cadence decrease within projects but that it takes longer to deploy in July and August 2018 and in AL (December 2018 to March 2019).
+        </p>
+        <div class="graph-square" id="prs-graph-month-cadence-vs-comments">
+            [pr every x day vs comments graph by month]
+        </div>
+        <p>
+            Since the cadence graph and the comments graph broken up by 20 workday cycles looked so similar, I wanted to see what they look like together. The coefficient of determination is 0.259, which is considered weak. But, I'm not convinced.
+        </p>
+        <div class="graph-square" id="prs-graph-no-outliers-month-cadence-vs-comments">
+            [pr every x day vs comments graph by month without outliers]
+        </div>
+        <p>
+            Here's the graph again without the January 2018 data point of 1.5 comments. The coefficient of determination is 0.931, which suggests that the number of comments and the larger the PR averaged out within a month is strongly positively correlated.
         </p>
         <div class="graph-short" id="prs-graph-type">
             [prs by type graph]
         </div>
         <p>
-            The type of PR could also have an influence as well. I first learned Panel, Mixpanel’s homegrown Javascript framework, in Eng Path/KEEP. Since then, I have many more PRs than during my Eng Path, much of which is written in Panel.
+            The type of PR could also have an influence as well. I first learned Panel in Eng Path/KEEP, which took me a while to grasp. Since then, I have had many more PRs over time, much of which is written in Panel.
         </p>
         <p>
-            <strong>In summary: </strong>I have deployed more PRs per week and fewer large PRs over time and within projects I also coded more in Panel JS and less in Backbone.
+            <strong>In summary: </strong>
+            I have deployed more PRs per week and fewer large PRs over time. In addition, the cadence between PRs and the number of comments within that PR are strongly positively correlated. I've also coded more in Panel and less in Backbone.
         </p>
 
         <h3 id="data-lines-of-code">Lines of Code</h3>
         <p>
-            And now for contribution to our code base: how much code am I adding? Generally speaking, more lines of code is more productivity. Again, this should have been lines of code modified (both added and removed) that purely added, since removed code is also considered productive (if not better than adding code).
+            And now for contribution to our code base: how much code am I adding? Generally speaking, more lines of code is more productivity. Again the calculation is the number of lines added minus the number of lines removed. I understand that this could have been the number of lines added <i>plus</i> the number of lines removed, since removed code is also considered productive (if not better than adding code), however this would mean that lines with even the most miniscule changes (such as tabs) would count as double, which I don't believe should be considered productive. Thus, I figured subtracting the two would be sufficient.
         </p>
         <div class="graph-short" id="code-graph-av-lines-code-day">
             [average lines of code added per day graph]
@@ -308,12 +320,11 @@
         <p>
             I’m adding more code per day on average, from 15.79 in L1/KEEP to 38.26 in L2/AL. Again, during my Eng Path I worked 50/50, so this number shouldn’t be as high as the others.
         </p>
-        <!-- TODO -->
         <div class="graph-short" id="code-graph-month-av-lines-code-day">
             [average lines of code added per day graph by month]
         </div>
         <p>
-            like above but by 20 workday periods
+            Here again is a graph of the above broken up into 20 workday cycles. Lines of code is gradually increased over time, and again during projects (June 2018 and December 2018).
         </p>
         <div class="graph-short" id="code-graph-max-lines-code-pr">
             [max lines of code added in pr graph]
@@ -331,30 +342,29 @@
             [total hours worked vs different lines of code graph]
         </div>
         <p>
-            The coefficient of determination here is 0.555, which suggests that the total hours worked and the amount of lines of code added is leaning towards strongly linearly correlated. Again there are more outliers, such as the 785 lined PR that took 53.5 hours to complete from L1/D2, and the 556 lined PR took 17.25 hours to complete from L2/AL.
+            The coefficient of determination here is 0.555, which suggests that the total hours worked per PR and the amount of lines of code added is leaning towards strongly linearly correlated. Again there are more outliers, such as the 785 lined PR that took 53.5 hours to complete from L1/D2, and the 556 lined PR took 17.25 hours to complete from L2/AL.
         </p>
-        <!-- TODO -->
         <div class="graph-square" id="code-graph-no-outliers-hours-worked-vs-code-added">
             [total hours worked per PR vs different lines of code graph no outliers]
         </div>
         <p>
-            hours above 16 and code between -66 and 114
+            Here's the same graph with the outliers removed. Outliers are defined as the number of hours worked are above 16 and code added is fewer than -66 and more than 114. The coefficient of determination is 0.409, which suggests that the total hours worked per PR and the amount of lines of coded added are still moderately linearly correlated, but not as strong as thought.
         </p>
         <div class="graph-square" id="code-graph-code-added-vs-comments">
             [lines of code per PR vs comments per PR graph]
         </div>
         <p>
-            Out of curiosity, I also plotted the lines of code with the comments per PR. The coefficient of determination is 0.211, which suggests a moderate linear correlation. If we remove the obvious outlier of 99 comments from Eng Path/KEEP, it decreases to 0.21.
+            Out of curiosity, I also plotted the lines of code with the comments per PR. The coefficient of determination is 0.211, which suggests a moderate linear correlation.
         </p>
-        <!-- TODO -->
         <div class="graph-square" id="code-graph-no-outliers-code-added-vs-comments">
             [lines of code per PR vs comments per PR graph no outliers]
         </div>
         <p>
-            code between -66 and 114 and comments above 21
+            If we remove all the outliers, which is the lines of code fewer than -66 and more than 114 and the number of comments is above 21, the coefficient of determination is 0.175, which is even less correlated than with the outliers.
         </p>
         <p>
-            <strong>In summary: </strong>the lines of code added are also increasing in general and in projects. There is also a stronger linear correlation between the number of hours worked and the lines of code added, and a weaker correlation between amount of comments and lines of code added.
+            <strong>In summary: </strong>
+            the lines of code added are also increasing in general and in projects. There is also a moderate positive linear correlation between the number of hours worked and the lines of code added, and a much weaker correlation between amount of comments and lines of code added.
         </p>
 
         <!-- FINDINGS -->
@@ -363,22 +373,22 @@
             <strong>Smaller PRs equal higher productivity.</strong> I shifted from containing all code into a single PR for a feature to breaking up a single feature into smaller iterative PRs. This single shift was largely responsible for a decrease in time spent per PR (pre-review, post-review, average working time), decrease in comments per PR, and increase in number of PRs deployed. Breaking PRs up into smaller chunks allows reviewers to understand a larger whole piece by piece and catch things that might have otherwise be missed on a larger PR. This is a common practice at Mixpanel and something that we encourage all of our engineers to do.
         </p>
         <p>
-            <strong>I improved, probably.</strong> Comparing Eng Path data to now, it’s clear that there are fewer comments, more PRs deployed, and a higher ratio of pre-review to post-review, which does appear to be closer to the “LGTM” state and progress. Even though L2/AL appears to show the opposite of improvement (more comments than L2/D2, lower pre-review ratio, and higher max post-review percentage), that doesn’t necessarily mean that I’ve taken a step back. For example, this is a completely new project with its different set of challenges more fitting of my level than of previous projects as on the eng path or L1. We can see that within KEEP and D2, L1/KEEP and L2/D2 are both lower in comments and post-review percentages than its Eng Path/KEEP and L1/D2 counterparts. However, tying in a difficulty component to each project would confirm this.
+            <strong>I improved, probably.</strong> Comparing Eng Path data to now and within projects (KEEP and D2), it’s clear that there are fewer comments, more PRs deployed, and a higher ratio of pre-review to post-review, which does appear to be closer to the “LGTM” state. Even though L2/AL seems to show a slight lower PR deploy cadence and more comments when breaking apart by month, that doesn’t necessarily mean that I’ve taken a step back. For example, AL is a completely new project with its different set of challenges more fitting of my level than of previous projects as on the eng path or L1. However, tying in a difficulty component to each project would confirm this.
         </p>
         <p>
-            <strong>I spent less time fixing my devbox than I thought.</strong> When something breaks in my devbox, it feels almost like the end of the world sometimes and that it’s such a time sink. However, it looks like right now I only spend about 14 minutes per day fixing issues or improving my environment, which is about an hour per week. This is less than my predicted 2 hours per week.
+            <strong>Starting new projects at first will look less productive than usual. </strong> When I start a new project, within that month I average more comments per PR, less time spent, a lower pre-review ratio, and less code added to production. Perhaps this is because I'm researching or still figuring things out, which leads to PRs that have more comments and more non-PR work. However, over time when I'm in the zone or know what's going on, these numbers all trend towards the positive.
         </p>
         <p>
-            <strong>I spend more time deploying code than I thought.</strong> Deployment at Mixpanel involves pushing changes to staging (which can take time waiting in line to get the staging locks as well as running all necessary successful deployment pieces for staging), to testing the change on staging, to actually deploying code (which can take more time for the whole cron to complete). And with the increase in the number of PRs deployed, so does the amount of time it takes to go through with the deployment process. I spend 26 minutes per day (2 hours per week), which is even more than fixing my devbox!
+            <strong>I spend less time fixing my devbox than I thought.</strong> When something breaks in my devbox, it feels like the end of the world sometimes. However, it looks like right now I only spend about 14 minutes per day fixing issues or improving my environment, which is about an hour per week. This is less than my predicted 2 hours per week.
+        </p>
+        <p>
+            <strong>I spend more time deploying code than I thought.</strong> Deployment at Mixpanel involves pushing changes to staging (which can take time waiting in line to get the staging locks and running all necessary successful deployment pieces for staging), testing the change on staging, and actually deploying code (which can take more time for the whole cron to complete). And with the increase in the number of PRs deployed, so does the amount of time it takes to go through with the deployment process. I spend 26 minutes per day (2 hours per week), which is even more than fixing my devbox!
         </p>    
         <p>
-            <strong>I spend on average 5.68 hours per day productively, 4.50 on PRs.</strong> The PR number has decreased lately, while the productive number has increased over time. That means in a typical 8 hour day, 73.3% is spent productively, which...isn’t totally a bad number?
+            <strong>I spend on average 5.68 hours per day productively, 4.50 on PRs.</strong> The PR number has decreased lately, while the number of productive hours has increased over time. That means in a typical 8 hour day, 73.3% is spent productively, which...isn’t totally a bad number?
         </p>
         <p>
-            <strong>There’s a positive moderate linear correlation between the hours spent on pre-review and on post-review.</strong> Just because I spend a lot of time on the pre-review doesn’t necessarily mean I’ll spend less time on the post-review, but it does help to spend more time on it.
-        </p>
-        <p>
-            <strong>There’s a positive moderate linear correlation between the hours worked on a PR and the number of comments, and a higher linear positive correlation between hours and amount of code added.</strong> The larger the PR, the more comments and the more time it takes to create it. 
+            <strong>The average cadence between PRs, average hours spent per PR, and the average number of comments per PR per month are strongly positively correlated. </strong>This implies that the larger or more complicated the PR (as it takes longer to deploy), the more comments are left, which makes sense. What's interesting is that when we look at the raw numbers rather than the averages by month, the correlations between these three factors and the hours it takes to produce are weak to moderate at best.
         </p>
 
         <h2 id="conclusion">Conclusion</h2>
@@ -441,7 +451,6 @@
             drawPreReviewPostReviewRatio,
             drawAveragePreReviewPostReview,
             drawAveragePreReviewPostReviewMonth,
-            drawMaxPreReviewPostReviewRatio,
 
             drawAvHoursPerPRAvHoursPerDay,
             drawAvHoursCodingPerDay,
@@ -452,10 +461,13 @@
             drawHoursWorkedVsCommentsNoOutliers,
             drawAvCommentsMostComments,
             drawAvCommentsMonth,
+            drawAvHoursVsAvCommentsMonth,
 
             drawPercentLargePRs,
             drawPRCadence,
             drawPRCadenceMonth,
+            drawPRCadenceVsComments,
+            drawPRCadenceVsCommentsNoOutliers,
             drawPRType,
 
             drawAvLinesCodeInPR,
@@ -474,16 +486,18 @@
             drawColumnChart({
                 containerId: 'prpr-graph-av-pre-and-post',
                 query: 'SELECT A,B,C,D,E',
-                title: 'Average Time Spent on Pre-Review and Post-Review',
+                title: 'Average Hours Spent on Pre-Review and Post-Review',
                 url: SUMMARY_DATA_URL,
+                vAxisTitle: 'Hours',
             });
         }
         function drawAvTimeOnPreReviewPostReviewMonth() {
             drawLineChart({
                 containerId: 'prpr-graph-month-av-pre-and-post',
                 query: 'SELECT A,C,D,E,F',
-                title: 'Average Time Spent on Pre-Review and Post-Review by Month',
+                title: 'Average Hours Spent on Pre-Review and Post-Review by Month',
                 url: MONTH_DATA_URL,
+                vAxisTitle: 'Hours',
             });
         }
         function drawMaxHoursPreReviewPostReview() {
@@ -538,15 +552,6 @@
                 url: MONTH_DATA_URL,
             });
         };
-        function drawMaxPreReviewPostReviewRatio() {
-            drawColumnChart({
-                containerId: 'prpr-graph-max-pre-post-ratio',
-                isStacked: 'false',
-                query: 'SELECT A,J,K',
-                title: 'Max Pre-Review and Post-Review Ratio',
-                url: SUMMARY_DATA_URL,
-            });
-        }
 
         // WORKING TIME
         function drawAvHoursPerPRAvHoursPerDay() {
@@ -570,7 +575,7 @@
         function drawAvHoursCodingPerDayMonth() {
             drawLineChart({
                 containerId: 'time-graph-month-av-hours-coding',
-                query: 'SELECT A,K',
+                query: 'SELECT A,R',
                 showLegend: false,
                 title: 'Average Hours Spent on PRs per Day by Month',
                 url: MONTH_DATA_URL,
@@ -621,6 +626,14 @@
                 url: MONTH_DATA_URL,
             });
         };
+        function drawAvHoursVsAvCommentsMonth() {
+            drawScatterChart({
+                containerId: 'comments-graph-month-av-hours-vs-av-comments',
+                query: 'SELECT J,M',
+                title: 'Average Hours Worked vs Average Comments by Month',
+                url: MONTH_DATA_URL,
+            });
+        };
 
         // NUMBER OF PRS
         function drawPercentLargePRs() {
@@ -647,6 +660,22 @@
                 query: 'SELECT A,P',
                 showLegend: false,
                 title: 'PR Every X Day by Month',
+                url: MONTH_DATA_URL,
+            });
+        };
+        function drawPRCadenceVsComments() {
+            drawScatterChart({
+                containerId: 'prs-graph-month-cadence-vs-comments',
+                query: 'SELECT P,M',
+                title: 'PR Every X Day vs Comments by Month',
+                url: MONTH_DATA_URL,
+            });
+        };
+        function drawPRCadenceVsCommentsNoOutliers() {
+            drawScatterChart({
+                containerId: 'prs-graph-no-outliers-month-cadence-vs-comments',
+                query: 'SELECT P,M WHERE M > 1.5',
+                title: 'PR Every X Day vs Comments by Month without Outliers',
                 url: MONTH_DATA_URL,
             });
         };
