@@ -1,3 +1,4 @@
+/* Images and graphs */
 .calendar {
   width: 100%;
   border: 1px solid black;
@@ -19,6 +20,8 @@
   height: 400px;
   margin: 20px auto 5px auto;
 }
+
+/* Nav */
 #navbar {
   border-right: 1px solid black;
   display: flex;
@@ -47,9 +50,9 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 .container {
-  margin: 50px 10%;
-  margin-left: 220px;
   line-height: 1.7;
+  padding: 50px 10%;
+  padding-left: 220px;
   text-align: justify;
 }
 .date {
@@ -59,20 +62,25 @@ body {
 h1, h2, h3 {
   padding-top: 20px;
 }
-@media screen and (max-width: 1054px) {
-  body {
-    margin: 50px 5%;
-  }
-  .stats-square, .graph-square {
-    margin: 0 auto;
-  }
-  .navbar-item {
-    padding: 15px 40px;
-  }
-}
 table {
   margin: auto;
 }
 td {
   padding: 10px;
+}
+
+@media screen and (max-width: 1054px) {
+  .stats-square, .graph-square {
+    margin: 0 auto;
+  }
+}
+
+/* Phones */
+@media screen and (max-width: 680px) {
+  #navbar {
+    visibility: hidden;
+  }
+  .container {
+    padding-left: 50px;
+  }
 }
