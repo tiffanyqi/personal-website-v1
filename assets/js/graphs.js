@@ -14,13 +14,20 @@ function drawChart({chartType, containerId, dataSourceUrl, query, options}) {
  * {String} title: title of the graph
  * {String} vAxisTitle: title of the vertical axis
  */
-function formatOptions({hAxisTitle=null, title, vAxisTitle=null, specialChartOptions=null}) {
-  return {
+function formatOptions({hAxisTitle=null, showLegend, title, vAxisTitle=null, specialChartOptions=null}) {
+  let options = {
     ...specialChartOptions,
     'hAxis': {'title': hAxisTitle},
     title,
     'vAxis': {'title': vAxisTitle},
   };
+  if (showLegend === false) {
+    options = {
+      ...options,
+      legend: 'none',
+    }
+  }
+  return options;
 }
 
 /* Area Chart, extra options
@@ -43,16 +50,10 @@ function drawAreaChart({containerId, hAxisTitle=null, isStacked='false', query, 
  * {Boolean} showLegend: whether to show the legend at all
  */
 function drawColumnChart({containerId, hAxisTitle=null, isStacked='false', query, showLegend=null, title, url, vAxisTitle=null}) {
-  let options = formatOptions({hAxisTitle, title, vAxisTitle, specialChartOptions: {
+  let options = formatOptions({hAxisTitle, showLegend, title, vAxisTitle, specialChartOptions: {
     'bar': {'groupWidth': '50%'},
     isStacked,
   }});
-  if (showLegend === false) {
-    options = {
-      ...options,
-      legend: 'none',
-    }
-  }
   drawChart({
     ...arguments[0],
     chartType: 'ColumnChart',
@@ -63,8 +64,8 @@ function drawColumnChart({containerId, hAxisTitle=null, isStacked='false', query
 
 /* Line Chart
  */
-function drawLineChart({containerId, hAxisTitle=null, query, title, vAxisTitle=null, url}) {
-  const options = formatOptions({hAxisTitle, title, vAxisTitle, specialChartOptions: {
+function drawLineChart({containerId, hAxisTitle=null, query, showLegend=null, title, vAxisTitle=null, url}) {
+  const options = formatOptions({hAxisTitle, showLegend, title, vAxisTitle, specialChartOptions: {
     'curveType': 'function'
   }});
   drawChart({

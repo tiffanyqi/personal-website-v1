@@ -23,6 +23,9 @@
       <a href="#data-number-of-comments" class="navbar-sub-item">Number of Comments</a>
       <a href="#data-number-of-prs" class="navbar-sub-item">Number of PRs</a>
       <a href="#data-lines-of-code" class="navbar-sub-item">Lines of Code</a>
+      <a href="#data-sleep" class="navbar-sub-item">Sleep and Progress</a>
+      <a href="#data-exercise" class="navbar-sub-item">Exercise and Progress</a>
+      <a href="#data-vacation" class="navbar-sub-item">Vacation and Progress</a>
       <a href="#findings" class="navbar-item">Findings</a>
       <a href="#conclusion" class="navbar-sub-item">Conclusion</a>
       <a href="#acknowledgements" class="navbar-sub-item">Acknowledgements</a>
@@ -167,6 +170,13 @@
         <p>
             In terms of the ratio between pre-review and post-review, on average you’ll see that the ratio is increasing in favor of larger pre-review (58.71% in Eng Path/KEEP to 87.2% in L2/D2). Currently that number is 75.6% in L2/AL. It’s also increasing within KEEP (Eng Path to L1) and D2 (L1 to L2).
         </p>
+        <!-- TODO -->
+        <div class="graph-short" id="prpr-graph-month-av-pre-post">
+            [Average review slices graph by month]
+        </div>
+        <p>
+            Here's the same graph broken up by 20 workday cycles.
+        </p>
         <div class="graph-short" id="prpr-graph-max-pre-post-ratio">
             [Max % pre-review and max % post-review graph]
         </div>
@@ -192,6 +202,13 @@
         </div>
         <p>
             In terms of the hours spent per day on PRs, I spent the most at L2/D2 of 5.08 hours per day, while L2/AL was 3.98 hours per day. I was working 50/50 during the Eng path, which explains why the number is low on average for Eng Path/SRFE (1.23). I must have pushed myself really hard during Eng Path/KEEP (and maybe neglected other duties) to achieve an average per day of 4.23 hours! Note that items such as meetings, lunch, and non-coding projects are included in an average day but not on the “hours spent” number. Vacations and offsites are removed from the “day” number. Overall the numbers have fluctuated and there’s not a clear pattern.
+        </p>
+        <!-- TODO -->
+        <div class="graph-short" id="time-graph-month-av-hours-coding">
+            [average hours coding per day graph by month]
+        </div>
+        <p>
+            Here's the above graph by 20 workday cycles
         </p>
         <p>
             So, what did I spend my time on? I did some extra calculations and found the following:
@@ -223,6 +240,13 @@
         </div>
         <p>
             It looks like both the average number of comments per PR and the most comments in a single PR is decreasing, from 22.09 in Eng Path/KEEP to 7.37 in L2/AL, and from a whopping 99 in Eng Path/KEEP to 36 in L2/AL. If we compare Eng Path/KEEP to L1/KEEP and L1/D2 to L2/D2, we’ll see that average comments are decreasing as well.
+        </p>
+        <!-- TODO -->
+        <div class="graph-short" id="comments-graph-month-av-comments">
+            [average comments per pr graph by month]
+        </div>
+        <p>
+            average comments per pr by 20 weekday periods
         </p>
         <div class="graph-square" id="comments-graph-hours-worked-vs-comments">
             [hours worked vs comments graph]
@@ -260,6 +284,13 @@
         <p>
             In addition, the cadence of PR has decreased from a PR every 4 days in Eng Path/SRFE to a PR every 1.35 days in L2/AL.PRs are being deployed quicker.  Again, I did not receive deploy access until L1, and so that could also be the reason for longer PR times in L1. This time if we compare Eng Path/KEEP to L1/KEEP and L1/D2 to L2/D2, we’ll see that the cadence lengthens slightly within projects.
         </p>
+        <!-- TODO -->
+        <div class="graph-short" id="prs-graph-month-cadence">
+            [pr every x day graph by month]
+        </div>
+        <p>
+            Same graph but by 20 workday periods
+        </p>
         <div class="graph-short" id="prs-graph-type">
             [prs by type graph]
         </div>
@@ -279,6 +310,13 @@
         </div>
         <p>
             I’m adding more code per day on average, from 15.79 in L1/KEEP to 38.26 in L2/AL. Again, during my Eng Path I worked 50/50, so this number shouldn’t be as high as the others.
+        </p>
+        <!-- TODO -->
+        <div class="graph-short" id="code-graph-month-av-lines-code-day">
+            [average lines of code added per day graph by month]
+        </div>
+        <p>
+            like above but by 20 workday periods
         </p>
         <div class="graph-short" id="code-graph-max-lines-code-pr">
             [max lines of code added in pr graph]
@@ -321,6 +359,10 @@
         <p>
             <strong>In summary: </strong>the lines of code added are also increasing in general and in projects. There is also a stronger linear correlation between the number of hours worked and the lines of code added, and a weaker correlation between amount of comments and lines of code added.
         </p>
+
+        <h3 id="data-sleep">Sleep and Progress</h3>
+        <h3 id="data-exercise">Exercise and Progress</h3>
+        <h3 id="data-vacation">Vacation and Progress</h3>
 
         <!-- FINDINGS -->
         <h2 id="findings">Findings</h2>
@@ -392,33 +434,39 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script type="text/javascript">
         google.charts.load('current');
-        const MONTH_DATA_URL = 'https://docs.google.com/spreadsheets/d/1snVaG2XNltJHeJpsBj6ugGoX8Y-3xpqSNIBXdedl_Yg/edit#gid=0';
+        const MONTH_DATA_URL = 'https://docs.google.com/spreadsheets/d/1snVaG2XNltJHeJpsBj6ugGoX8Y-3xpqSNIBXdedl_Yg/edit#gid=374449975';
         const RAW_DATA_URL = 'https://docs.google.com/spreadsheets/d/1PtHdOUadiaUj5RuRNTUY8912LzDZBlODD9jr7U7QAgI/edit#gid=0';
         const SUMMARY_DATA_URL = 'https://docs.google.com/spreadsheets/d/1UWoxJr9I7AWL3IOlXJunp6DPnr9vA5QyZkbuEVSOhdk/edit#gid=34086219';
 
         const GRAPH_FUNCTIONS = [
             drawAvTimeOnPreReviewPostReview,
+            drawAvTimeOnPreReviewPostReviewMonth,
             drawMaxHoursPreReviewPostReview,
             drawHoursPreReviewVsPostReview,
             drawHoursPreReviewVsPostReviewNoOutliers,
             drawPreReviewPostReviewRatio,
             drawAveragePreReviewPostReview,
+            drawAveragePreReviewPostReviewMonth,
             drawMaxPreReviewPostReviewRatio,
 
             drawAvHoursPerPRAvHoursPerDay,
             drawAvHoursCodingPerDay,
+            drawAvHoursCodingPerDayMonth,
             drawAvHoursProductivePerDay,
 
             drawHoursWorkedVsComments,
             drawHoursWorkedVsCommentsNoOutliers,
             drawAvCommentsMostComments,
+            drawAvCommentsMonth,
 
             drawPercentLargePRs,
             drawPRCadence,
+            drawPRCadenceMonth,
             drawPRType,
 
             drawAvLinesCodeInPR,
             drawAvLinesCodePerDay,
+            drawAvLinesCodePerDayMonth,
             drawMaxLinesCodeInPR,
             drawHoursWorkedVsCode,
             drawHoursWorkedVsCodeNoOutliers,
@@ -429,11 +477,19 @@
 
         // PRE-REVIEW AND POST-REVIEW
         function drawAvTimeOnPreReviewPostReview() {
-            drawLineChart({
+            drawColumnChart({
                 containerId: 'prpr-graph-av-pre-and-post',
                 query: 'SELECT A,B,C,D,E',
                 title: 'Average Time Spent on Pre-Review and Post-Review',
                 url: SUMMARY_DATA_URL,
+            });
+        }
+        function drawAvTimeOnPreReviewPostReviewMonth() {
+            drawLineChart({
+                containerId: 'prpr-graph-month-av-pre-and-post',
+                query: 'SELECT A,C,D,E,F',
+                title: 'Average Time Spent on Pre-Review and Post-Review by Month',
+                url: MONTH_DATA_URL,
             });
         }
         function drawMaxHoursPreReviewPostReview() {
@@ -479,6 +535,15 @@
                 url: SUMMARY_DATA_URL,
             });
         };
+        function drawAveragePreReviewPostReviewMonth() {
+            drawAreaChart({
+                containerId: 'prpr-graph-month-av-pre-post',
+                isStacked: 'true',
+                query: 'SELECT A,G,H',
+                title: 'Average Pre-Review and Post-Review Hours by Month',
+                url: MONTH_DATA_URL,
+            });
+        };
         function drawMaxPreReviewPostReviewRatio() {
             drawColumnChart({
                 containerId: 'prpr-graph-max-pre-post-ratio',
@@ -491,7 +556,7 @@
 
         // WORKING TIME
         function drawAvHoursPerPRAvHoursPerDay() {
-            drawLineChart({
+            drawColumnChart({
                 containerId: 'time-graph-av-hours-pr-day',
                 query: 'SELECT A,L,M',
                 title: 'Average Total Hours Worked on PR and Average Hours Spent Per Day on PR',
@@ -506,6 +571,15 @@
                 showLegend: false,
                 title: 'Average Hours Spent on PRs per Day',
                 url: SUMMARY_DATA_URL,
+            });
+        };
+        function drawAvHoursCodingPerDayMonth() {
+            drawLineChart({
+                containerId: 'time-graph-month-av-hours-coding',
+                query: 'SELECT A,K',
+                showLegend: false,
+                title: 'Average Hours Spent on PRs per Day by Month',
+                url: MONTH_DATA_URL,
             });
         };
         function drawAvHoursProductivePerDay() {
@@ -544,6 +618,15 @@
                 url: SUMMARY_DATA_URL,
             });
         };
+        function drawAvCommentsMonth() {
+            drawLineChart({
+                containerId: 'comments-graph-month-av-comments',
+                query: 'SELECT A,M',
+                showLegend: false,
+                title: 'Average Comments in PR by Month',
+                url: MONTH_DATA_URL,
+            });
+        };
 
         // NUMBER OF PRS
         function drawPercentLargePRs() {
@@ -564,6 +647,15 @@
                 url: SUMMARY_DATA_URL,
             });
         };
+        function drawPRCadenceMonth() {
+            drawLineChart({
+                containerId: 'prs-graph-month-cadence',
+                query: 'SELECT A,P',
+                showLegend: false,
+                title: 'PR Every X Day by Month',
+                url: MONTH_DATA_URL,
+            });
+        };
         function drawPRType() {
             drawColumnChart({
                 containerId: 'prs-graph-type',
@@ -582,6 +674,15 @@
                 showLegend: false,
                 title: 'Average Lines of Code Added per Day',
                 url: SUMMARY_DATA_URL,
+            });
+        };
+        function drawAvLinesCodePerDayMonth() {
+            drawLineChart({
+                containerId: 'code-graph-month-av-lines-code-day',
+                query: 'SELECT A,O',
+                showLegend: false,
+                title: 'Average Lines of Code Added per Day by Month',
+                url: MONTH_DATA_URL,
             });
         };
         function drawMaxLinesCodeInPR() {
