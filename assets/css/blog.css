@@ -1,3 +1,4 @@
+/* Images and graphs */
 .calendar {
   width: 100%;
   border: 1px solid black;
@@ -19,57 +20,71 @@
   height: 400px;
   margin: 20px auto 5px auto;
 }
-#topbar {
-  top: 0;
-  left: 0;
+
+/* Nav */
+#navbar {
+  border-right: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  left: 20px;
   position: fixed;
-  opacity: 0.8;
-  width: 100%;
-  z-index: 100;
-  background: #0057e7;
-  text-align: center;
-  display: table;
+  top: 70px;
+  width: 170px;
 }
-.topbar-item {
-  display: table-cell;
-  float: none;
-  width: 1%; /* Why? */
-  padding: 10px 70px;
-  transition: 0.5s;
-  text-align: center;
-  margin: auto;
-}
-.topbar-item:hover {
-  background: #d62d20;
-  transition: 0.5s;
-}
-#topbar a {
+#navbar a {
+  color: black;
   text-decoration: none;
-  color: white;
 }
+#navbar a:hover {
+  text-decoration: underline;
+}
+.navbar-item, .navbar-sub-item {
+  padding-bottom: 10px;
+}
+.navbar-sub-item {
+  margin-left: 10px;
+}
+.active {
+  font-weight: bold;
+}
+
+
 body {
-  margin: 50px 10%;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Lora', serif;
+}
+.container {
   line-height: 1.7;
+  padding: 50px 10%;
+  padding-left: 220px;
   text-align: justify;
 }
-h1, h2 {
-  padding-top: 50px;
+.date {
+  font-style: italic;
+  text-align: right;
+  width: 100%;
 }
-@media screen and (max-width: 1054px) {
-  body {
-    margin: 50px 5%;
-  }
-  .stats-square, .graph-square {
-    margin: 0 auto;
-  }
-  .topbar-item {
-    padding: 15px 40px;
-  }
+h1, h2, h3 {
+  padding-top: 20px;
 }
 table {
   margin: auto;
 }
 td {
   padding: 10px;
+}
+
+@media screen and (max-width: 1054px) {
+  .stats-square, .graph-square {
+    margin: 0 auto;
+  }
+}
+
+/* Phones */
+@media screen and (max-width: 680px) {
+  #navbar {
+    visibility: hidden;
+  }
+  .container {
+    padding-left: 50px;
+  }
 }
