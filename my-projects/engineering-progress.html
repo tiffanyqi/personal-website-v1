@@ -136,13 +136,13 @@
         <p>
             Here's the same graph but instead broken up in chunks of 20 workday cycles. Overall it follows the path as shown by the previous graph, except it's more obvious where the peaks are. For example, the highest post-review period that overtook the pre-review in March 2018 was during Eng Path/KEEP. A second high post-review time was in August 2018, which was during L1/D2.
         </p>
-        <div class="graph-square" id="prpr-graph-pre-hours-vs-post-hours">
+        <div class="graph-short" id="prpr-graph-pre-hours-vs-post-hours">
             [Hours of pre-review vs. hours of post-review graph]
         </div>
         <p>
             Is there a correlation between the hours of pre-review and post-review? Plotting all the data on a single graph, the coefficient of determination is 0.346, which suggests a positive moderate correlation between the two. Of course there are many outliers on this graph, such as the dot highest on post-review was a PR from Eng Path/KEEP and the one with the highest pre-review was from L1/KEEP.
         </p>
-        <div class="graph-square" id="prpr-graph-no-outliers-pre-hours-vs-post-hours">
+        <div class="graph-short" id="prpr-graph-no-outliers-pre-hours-vs-post-hours">
             [Hours of pre-review vs. hours of post-review graph with no outliers]
         </div>
         <p>
@@ -240,19 +240,19 @@
         <p>
             Here is the same graph broken up by 20 weekday periods. Again, it's clear that the average comments decrease within projects. Interestingly there are more comments in July and August 2018, and in AL (December 2018 to March 2019) the comments continue to increase.
         </p>
-        <div class="graph-square" id="comments-graph-month-av-hours-vs-av-comments">
+        <div class="graph-short" id="comments-graph-month-av-hours-vs-av-comments">
             [average hours worked in PR vs average comments per pr graph by month]
         </div>
         <p>
             Out of curiosity, here's the plot between the average hours worked in PR and average comments per PR broken up by 20 weekday periods. The correlation of determination is 0.682, which suggests that the data is strongly positively linearly correlated.
         </p>
-        <div class="graph-square" id="comments-graph-hours-worked-vs-comments">
+        <div class="graph-short" id="comments-graph-hours-worked-vs-comments">
             [hours worked vs comments graph]
         </div>
         <p>
             I also plot the number of hours worked per PR with the number of comments to see if there is a correlation between the two. The coefficient of determination is 0.598, which does suggest somewhat of a positive linear correlation between the two. There are still outliers here, such as the dot highest on post-review that was a PR from Eng Path/KEEP and the one with the highest pre-review was from L1/KEEP.
         </p>
-        <div class="graph-square" id="comments-graph-no-outliers-hours-worked-vs-comments">
+        <div class="graph-short" id="comments-graph-no-outliers-hours-worked-vs-comments">
             [hours worked vs comments graph without outliers]
         </div>
         <p>
@@ -288,13 +288,13 @@
         <p>
             Here's the same graph broken out up 20 workday cycles. This graph looks almost just like the comments graph, as the cadence decrease within projects but that it takes longer to deploy in July and August 2018 and in AL (December 2018 to March 2019).
         </p>
-        <div class="graph-square" id="prs-graph-month-cadence-vs-comments">
+        <div class="graph-short" id="prs-graph-month-cadence-vs-comments">
             [pr every x day vs comments graph by month]
         </div>
         <p>
             Since the cadence graph and the comments graph broken up by 20 workday cycles looked so similar, I wanted to see what they look like together. The coefficient of determination is 0.259, which is considered weak. But, I'm not convinced.
         </p>
-        <div class="graph-square" id="prs-graph-no-outliers-month-cadence-vs-comments">
+        <div class="graph-short" id="prs-graph-no-outliers-month-cadence-vs-comments">
             [pr every x day vs comments graph by month without outliers]
         </div>
         <p>
@@ -339,25 +339,25 @@
         <p>
             Again, this graph is pretty similar to the above two, most likely as a result from the larger PRs that bumped up the amount of code.
         </p>
-        <div class="graph-square" id="code-graph-hours-worked-vs-code-added">
+        <div class="graph-short" id="code-graph-hours-worked-vs-code-added">
             [total hours worked vs different lines of code graph]
         </div>
         <p>
             The coefficient of determination here is 0.555, which suggests that the total hours worked per PR and the amount of lines of code added is leaning towards strongly linearly correlated. Again there are more outliers, such as the 785 lined PR that took 53.5 hours to complete from L1/D2, and the 556 lined PR took 17.25 hours to complete from L2/AL.
         </p>
-        <div class="graph-square" id="code-graph-no-outliers-hours-worked-vs-code-added">
+        <div class="graph-short" id="code-graph-no-outliers-hours-worked-vs-code-added">
             [total hours worked per PR vs different lines of code graph no outliers]
         </div>
         <p>
             Here's the same graph with the outliers removed. Outliers are defined as the number of hours worked are above 16 and code added is fewer than -66 and more than 114. The coefficient of determination is 0.409, which suggests that the total hours worked per PR and the amount of lines of coded added are still moderately linearly correlated, but not as strong as thought.
         </p>
-        <div class="graph-square" id="code-graph-code-added-vs-comments">
+        <div class="graph-short" id="code-graph-code-added-vs-comments">
             [lines of code per PR vs comments per PR graph]
         </div>
         <p>
             Out of curiosity, I also plotted the lines of code with the comments per PR. The coefficient of determination is 0.211, which suggests a moderate linear correlation.
         </p>
-        <div class="graph-square" id="code-graph-no-outliers-code-added-vs-comments">
+        <div class="graph-short" id="code-graph-no-outliers-code-added-vs-comments">
             [lines of code per PR vs comments per PR graph no outliers]
         </div>
         <p>
@@ -487,7 +487,7 @@
             drawColumnChart({
                 containerId: 'prpr-graph-av-pre-and-post',
                 query: 'SELECT A,B,C,D,E',
-                title: 'Average Hours Spent on Pre-Review and Post-Review',
+                title: 'Average Hours Spent on Pre-Review and Post-Review per PR over Time',
                 url: SUMMARY_DATA_URL,
                 vAxisTitle: 'Hours',
             });
@@ -496,7 +496,7 @@
             drawLineChart({
                 containerId: 'prpr-graph-month-av-pre-and-post',
                 query: 'SELECT A,C,D,E,F',
-                title: 'Average Hours Spent on Pre-Review and Post-Review by Month',
+                title: 'Average Hours Spent on Pre-Review and Post-Review per PR by Month',
                 url: MONTH_DATA_URL,
                 vAxisTitle: 'Hours',
             });
@@ -506,24 +506,29 @@
                 containerId: 'prpr-graph-max-hours',
                 isStacked: 'false',
                 query: 'SELECT A,F,G',
-                title: 'Max Hours of Pre-Review and Post-Review in PR',
+                title: 'Max Hours of Pre-Review and Post-Review in PR over Time',
                 url: SUMMARY_DATA_URL,
+                vAxisTitle: 'Hours',
             });
         };
         function drawHoursPreReviewVsPostReview() {
             drawScatterChart({
                 containerId: 'prpr-graph-pre-hours-vs-post-hours',
+                hAxisTitle: 'Hours of Pre-Review per PR',
                 query: 'SELECT C,D',
                 title: 'Hours of Pre-Review vs Hours of Post-Review per PR',
                 url: RAW_DATA_URL,
+                vAxisTitle: 'Hours of Post-Review per PR',
             });
         };
         function drawHoursPreReviewVsPostReviewNoOutliers() {
             drawScatterChart({
                 containerId: 'prpr-graph-no-outliers-pre-hours-vs-post-hours',
+                hAxisTitle: 'Hours of Pre-Review per PR',
                 query: 'SELECT C,D WHERE C < 12.625 AND D < 3.75',
                 title: 'Hours of Pre-Review vs Hours of Post-Review per PR without Outliers',
                 url: RAW_DATA_URL,
+                vAxisTitle: 'Hours of Post-Review per PR',
             });
         };
         function drawPreReviewPostReviewRatio() {
@@ -531,7 +536,7 @@
                 containerId: 'prpr-graph-pre-post-ratio',
                 isStacked: 'percent',
                 query: 'SELECT B,E,F',
-                title: 'Pre-Review vs Post-Review Ratio Change Over Time',
+                title: 'Pre-Review vs Post-Review Ratio per PR Change Over Time',
                 url: RAW_DATA_URL,
             });
         }
@@ -540,7 +545,7 @@
                 containerId: 'prpr-graph-av-pre-post',
                 isStacked: 'true',
                 query: 'SELECT A,H,I',
-                title: 'Average Pre-Review and Post-Review Hours',
+                title: 'Average Pre-Review and Post-Review Hours per PR over Time',
                 url: SUMMARY_DATA_URL,
             });
         };
@@ -549,7 +554,7 @@
                 containerId: 'prpr-graph-month-av-pre-post',
                 isStacked: 'true',
                 query: 'SELECT A,G,H',
-                title: 'Average Pre-Review and Post-Review Hours by Month',
+                title: 'Average Pre-Review and Post-Review Hours per PR by Month',
                 url: MONTH_DATA_URL,
             });
         };
@@ -559,8 +564,9 @@
             drawColumnChart({
                 containerId: 'time-graph-av-hours-pr-day',
                 query: 'SELECT A,L,M',
-                title: 'Average Total Hours Worked on PR and Average Hours Spent Per Day on PR',
+                title: 'Average Total Hours Worked on PR and Average Hours Spent Per Day on PR over Time',
                 url: SUMMARY_DATA_URL,
+                vAxisTitle: 'Hours',
             });
         }
         function drawAvHoursCodingPerDay() {
@@ -569,8 +575,9 @@
                 isStacked: 'false',
                 query: 'SELECT A,N',
                 showLegend: false,
-                title: 'Average Hours Spent on PRs per Day',
+                title: 'Average Hours Spent on PRs per Day over Time',
                 url: SUMMARY_DATA_URL,
+                vAxisTitle: 'Hours',
             });
         };
         function drawAvHoursCodingPerDayMonth() {
@@ -580,6 +587,7 @@
                 showLegend: false,
                 title: 'Average Hours Spent on PRs per Day by Month',
                 url: MONTH_DATA_URL,
+                vAxisTitle: 'Hours',
             });
         };
         function drawAvHoursProductivePerDay() {
@@ -587,8 +595,9 @@
                 containerId: 'time-graph-av-hours-productive',
                 isStacked: 'true',
                 query: 'SELECT A,O,P,Q,R,S,T,U',
-                title: 'Average Hours Spent on Productive Work Per Day',
+                title: 'Average Hours Spent on Productive Work Per Day over Time',
                 url: SUMMARY_DATA_URL,
+                vAxisTitle: 'Hours',
             });
         };
 
@@ -596,17 +605,21 @@
         function drawHoursWorkedVsComments() {
             drawScatterChart({
                 containerId: 'comments-graph-hours-worked-vs-comments',
+                hAxisTitle: 'Hours',
                 query: 'SELECT H,K',
-                title: 'Hours of Worked per PR vs Comments per PR',
+                title: 'Hours Worked per PR vs Number of Comments per PR',
                 url: RAW_DATA_URL,
+                vAxisTitle: 'Number of Comments',
             });
         }
         function drawHoursWorkedVsCommentsNoOutliers() {
             drawScatterChart({
                 containerId: 'comments-graph-no-outliers-hours-worked-vs-comments',
+                hAxisTitle: 'Hours',
                 query: 'SELECT H,K WHERE H < 16 and K < 21',
-                title: 'Hours of Worked per PR vs Comments per PR without Outliers',
+                title: 'Hours Worked per PR vs Number of Comments per PR without Outliers',
                 url: RAW_DATA_URL,
+                vAxisTitle: 'Number of Comments',
             });
         }
         function drawAvCommentsMostComments() {
@@ -614,8 +627,9 @@
                 containerId: 'comments-graph-av-most-comments',
                 isStacked: 'false',
                 query: 'SELECT A,V,W',
-                title: 'Average Comments per PR and Most Comments in PR',
+                title: 'Average Comments per PR and Most Comments in PR over Time',
                 url: SUMMARY_DATA_URL,
+                vAxisTitle: 'Number of Comments',
             });
         };
         function drawAvCommentsMonth() {
@@ -625,14 +639,17 @@
                 showLegend: false,
                 title: 'Average Comments in PR by Month',
                 url: MONTH_DATA_URL,
+                vAxisTitle: 'Number of Comments',
             });
         };
         function drawAvHoursVsAvCommentsMonth() {
             drawScatterChart({
                 containerId: 'comments-graph-month-av-hours-vs-av-comments',
+                hAxisTitle: 'Hours',
                 query: 'SELECT J,M',
-                title: 'Average Hours Worked vs Average Comments by Month',
+                title: 'Average Hours Worked per PR vs Average Comments per PR by Month',
                 url: MONTH_DATA_URL,
+                vAxisTitle: 'Number of Comments',
             });
         };
 
@@ -642,7 +659,7 @@
                 containerId: 'prs-graph-percent-large-prs',
                 query: 'SELECT A,X',
                 showLegend: false,
-                title: 'Percentage of Large PRs',
+                title: 'Percentage of Large PRs over Time',
                 url: SUMMARY_DATA_URL,
             });
         };
@@ -651,8 +668,9 @@
                 containerId: 'prs-graph-cadence',
                 query: 'SELECT A,Y',
                 showLegend: false,
-                title: 'PR Every X Day',
+                title: 'PR Every X Day over Time',
                 url: SUMMARY_DATA_URL,
+                vAxisTitle: 'Days',
             });
         };
         function drawPRCadenceMonth() {
@@ -662,22 +680,27 @@
                 showLegend: false,
                 title: 'PR Every X Day by Month',
                 url: MONTH_DATA_URL,
+                vAxisTitle: 'Days',
             });
         };
         function drawPRCadenceVsComments() {
             drawScatterChart({
                 containerId: 'prs-graph-month-cadence-vs-comments',
+                hAxisTitle: 'Days',
                 query: 'SELECT P,M',
                 title: 'PR Every X Day vs Comments by Month',
                 url: MONTH_DATA_URL,
+                vAxisTitle: 'Number of Comments',
             });
         };
         function drawPRCadenceVsCommentsNoOutliers() {
             drawScatterChart({
                 containerId: 'prs-graph-no-outliers-month-cadence-vs-comments',
+                hAxisTitle: 'Days',
                 query: 'SELECT P,M WHERE M > 1.5',
                 title: 'PR Every X Day vs Comments by Month without Outliers',
                 url: MONTH_DATA_URL,
+                vAxisTitle: 'Number of Comments',
             });
         };
         function drawPRType() {
@@ -685,8 +708,9 @@
                 containerId: 'prs-graph-type',
                 isStacked: 'true',
                 query: 'SELECT A,Z,AA,AB',
-                title: 'PR Types',
+                title: 'PR Types over Time',
                 url: SUMMARY_DATA_URL,
+                vAxisTitle: 'Number of PRs',
             });
         };
 
@@ -696,8 +720,9 @@
                 containerId: 'code-graph-av-lines-code-day',
                 query: 'SELECT A,AC',
                 showLegend: false,
-                title: 'Average Lines of Code Added per Day',
+                title: 'Average Lines of Code Added per Day over Time',
                 url: SUMMARY_DATA_URL,
+                vAxisTitle: 'Lines of Code',
             });
         };
         function drawAvLinesCodePerDayMonth() {
@@ -707,6 +732,7 @@
                 showLegend: false,
                 title: 'Average Lines of Code Added per Day by Month',
                 url: MONTH_DATA_URL,
+                vAxisTitle: 'Lines of Code',
             });
         };
         function drawMaxLinesCodeInPR() {
@@ -714,8 +740,9 @@
                 containerId: 'code-graph-max-lines-code-pr',
                 query: 'SELECT A,AD',
                 showLegend: false,
-                title: 'Max Lines of Code Added in a PR',
+                title: 'Max Lines of Code Added in a PR over Time',
                 url: SUMMARY_DATA_URL,
+                vAxisTitle: 'Lines of Code',
             });
         };
         function drawAvLinesCodeInPR() {
@@ -723,40 +750,49 @@
                 containerId: 'code-graph-av-lines-code-pr',
                 query: 'SELECT A,AE',
                 showLegend: false,
-                title: 'Average Different Lines of Code in PR',
+                title: 'Average Different Lines of Code per PR over Time',
                 url: SUMMARY_DATA_URL,
+                vAxisTitle: 'Lines of Code',
             });
         };
         function drawHoursWorkedVsCode() {
             drawScatterChart({
                 containerId: 'code-graph-hours-worked-vs-code-added',
+                hAxisTitle: 'Hours',
                 query: 'SELECT H,J',
                 title: 'Hours of Worked per PR vs Code Added per PR',
                 url: RAW_DATA_URL,
+                vAxisTitle: 'Lines of Code',
             });
         }
         function drawHoursWorkedVsCodeNoOutliers() {
             drawScatterChart({
                 containerId: 'code-graph-no-outliers-hours-worked-vs-code-added',
+                hAxisTitle: 'Hours',
                 query: 'SELECT H,J WHERE H < 16 AND J < 114 AND J > -66',
                 title: 'Hours of Worked per PR vs Code Added per PR',
                 url: RAW_DATA_URL,
+                vAxisTitle: 'Lines of Code',
             });
         }
         function drawCodeVsComments() {
             drawScatterChart({
                 containerId: 'code-graph-code-added-vs-comments',
+                hAxisTitle: 'Lines of Code',
                 query: 'SELECT J,K',
-                title: 'Code Added per PR vs Comments',
+                title: 'Code Added per PR vs Comments per PR',
                 url: RAW_DATA_URL,
+                vAxisTitle: 'Number of Comments',
             });
         }
         function drawCodeVsCommentsNoOutliers() {
             drawScatterChart({
                 containerId: 'code-graph-no-outliers-code-added-vs-comments',
+                hAxisTitle: 'Lines of Code',
                 query: 'SELECT J,K WHERE J < 114 AND J > -66 AND K < 21',
-                title: 'Code Added per PR vs Comments',
+                title: 'Code Added per PR vs Comments per PR',
                 url: RAW_DATA_URL,
+                vAxisTitle: 'Number of Comments',
             });
         }
     </script>
