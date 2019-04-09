@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>How many Pidgeys have been transferred to Professor Willow? | Tiffany Qi</title>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700" rel="stylesheet">
+    <link href='../assets/css/blog.css' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="../assets/js/mixpanel.js"></script>
+    <script>
+    //   mixpanel.track("Project View", {"Project": "How many Pidgeys have been transferred to Professor Willow?"});
+    </script>
+  </head>
+
+  <body>
+
+    <div id="navbar">
+      <a href="#top" class="navbar-item active">Introduction</a>
+      <a href="#users" class="navbar-item">Number of Unique Users</a>
+      <a href="#pidgey" class="navbar-item">Number of Caught Pidgey</a>
+      <a href="#pidgey-frequency" class="navbar-sub-item">Frequency of Specific Pokemon Spawns and Location</a>
+      <a href="#pidgey-spawn" class="navbar-sub-item">Type of Spawns</a>
+      <a href="#pidgey-validation" class="navbar-sub-item">Does this make sense?</a>
+      <a href="#results" class="navbar-item">All Pidgeys in the US</a>
+    </div>
+
+    <div class="container">
+        <h1 id="top">How many Pidgeys have been transferred to Professor Willow?</h1>
+        <div class="date">August 2016</div>
+        <div class="date">
+            Note: this was kept in my Medium drafts for a long time. Given it's been two and a half years since I've written this (when Pokemon Go was at its peak) and much has changed since then, I didn't want to publish this officially. The writing shall live here.
+        </div>
+        
+        <p>
+            Everywhere you look, Pokemon Go is there. And Pidgeys, Pidgeys are everywhere. Thus begs an interesting question: "How many pidgeys have been transferred to Professor Willow?" Here's a <a href="https://docs.google.com/spreadsheets/d/1VxR1Kv5_ACN7XAPN3fpUXim1PGBTUByUpW3ClI26BrE/edit">spreadsheet</a> with all the math if you'd like to follow along.
+        </p>
+        <p>
+            There are a couple of different ways to solve this problem. The way I'll be tackling it is by calculating <strong>number of unique users * average number of Pidgey caught / user * time since Pokemon Go has been released</strong>. I'll start with the US numbers since there is more statistics on that, before extrapolating to the rest of the world.
+        </p>
+        <p>
+            TL;DR: 5.3 billion Pidgeys have been caught and transferred to Professor Willow. Analysis below:
+        </p>
+        <img class="calendar" src="../assets/img/work/pokemon-go-pidgey-800x450.png">
+
+        <h2 id="users">Number of Unique Users</h2>
+        <p>
+            Before diving into the process, allow me to lay down my assumptions first:
+        </p>
+        <ol>
+            <li>
+                I'll assume that 2015 numbers are about the same as 2016 numbers.
+            </li>
+            <li>
+                I'll assume that this game is played about equally for all races and genders (although sometimes it's not, take a look at this piece about how privilege is involved, even with a worldwide sensation like Pokemon Go).
+            </li>
+        </ol>
+        <p>
+            This was done by taking the estimated total number of smartphone users in 2015 in the US and splitting them up into five demographics: 0–18, 18–29, 30–49, 50–64, and 65+. According to <a href="https://www.statista.com/statistics/201182/forecast-of-smartphone-users-in-the-us/">Statistica</a>, there is about 190 million smartphone users in the US, and according to <a href="https://www.census.gov/quickfacts/fact/table/US/PST045218">US Census for 2015</a>, there were 22.9% of people under 18 years, and 14.9% of people above 65 years. I split the remainder of percentages equally with the other age groups, which is 20.7% for 18–29, 30–49, and 50–64. According to <a href="https://www.marketingcharts.com/digital-60669">Marketing Charts</a>, the percentages of Americans who own smartphones are 86% from 18–29,83% 30–49, 58% from 50–64, and 30% in 65+. I estimate about 20% of those under 18 years of age own smartphones, since typically only high-income earning households can afford to get a smartphone for their children, and typically it would be for children over 10 years old, which is half the children.
+        </p>
+        <p>
+            Next, it's time to estimate the actual number of Pokemon Go users in the US. I take each of these demographics and estimate the percent of users who would play in each category. 
+        </p>
+        <ul>
+            <li>
+                I assume 70% of 0–18 year olds play Pokemon Go. The reason this number is so high, is because if these children's parents can afford a smartphone for children, they are very likely to join the bandwagon and go out Pokemon hunting.
+            </li>
+            <li>
+                50% for 18–29 year old smartphone holders play Pokemon Go. This age demographic includes college students, recent graduates, and very young families. In addition, this is the demographic that actually played Pokemon when they were younger, and most likely to relive their childhood by playing this game. I chose 50% (and not 100% as it seems like), because there are still some barriers to entry in playing this game regularly. Some 1) do not have smartphones that allow data or the data usage of the game is too high to afford playing the game, 2) never played Pokemon when they were younger, and 3) don't want to join the bandwagon. Thus, 50% seems to be a conservative estimate.
+            </li>
+            <li>
+                30% for 30–49 year olds play Pokemon Go. I include 30% because a significant portion of this population would have children who would want to play, and so they would accompany their children. Some individuals would play this as well, giving an estimate of 30%.
+            </li>
+            <li>
+                5% for 50+ year olds play Pokemon Go. I figure some subset of this population would play, and 5% seems small enough to include individuals and parents who join their children.
+            </li>
+        </ul>
+        <p>
+            Finally, we get the number of Pokemon Go users in the United States by summing the products of the number of smartphone users by the percentage for each demographic by the percentage who would play the game. This number turns out to be <strong>34 million</strong>, or 18.11% of the population. This number seems to be about right, as there are many estimates for the daily active number of users in the US, which is around 10–21 million according to <a href="https://www.recode.net/2016/7/13/12181614/pokemon-go-number-active-users">Recode</a>. Thus, it makes sense that the total number of users would be much higher than that.
+        </p>
+        <p>
+            Now that we've established the total number of users, I've decided to split these users up into three types of users: light (people who played every once in a while, or about 1hr/wk), medium (people who ), and heavy (people who are bent on conquering all the gyms and catch all the pokemon, or spend about 15hrs/wk). I estimate the majority of these to be light users (60%), fewer to be medium (35%), and even fewer to be heavy (5%). Later, we'll multiply these types of users by the frequency of Pokemon spawns, the location type, and finally by the hours these users play per total to give us our final answer.
+        </p>
+        <p>
+            According to <a href="https://techcrunch.com/2016/07/13/pokemon-go-tops-twitters-daily-users-sees-more-engagement-than-facebook/">TechCrunch</a>, a user plays Pokemon Go about 30 minutes on average, which is 3.5 hours per week. Thus, I ensured that the expected value between the light, medium, and heavy users came out to be 3.5 hours per week. This brings 22 million light users, 10 million medium users, and 2 million heavy users.
+         </p>
+
+        <h2 id="pidgey">Number of Caught Pidgey</h2>
+        <p>
+            Here are some more assumptions to keep in mind:
+        </p>
+        <ol>
+            <li>
+                For the sake of argument, I will assume users will first transfer Pidgey before evolving. In addition, evolved Pidgeotto will also count as a "transferred Pidgey".
+            </li>
+            <li>
+                The original question was how many Pidgey were "transferred" to Professor Willow. There are two ways to transfer Pidgey: catch and transfer, and hatch and transfer. The only way to hatch a Pidgey is by walking a 2km egg, which is a choice from 2km, 5km, and 10km eggs. In addition, many types of Pokemon can hatch from a 2km egg, rendering a very low probability of Pidgey that actually hatch from eggs. Thus, I will assume the number of Pidgey that the average user holds onto is about the same as the number of Pidgey that hatches from eggs, which means that these are not transferred.
+            </li>
+            <li>
+                Approximately 80% of seen Pidgey are actually caught.
+            </li>
+        </ol>
+        <p>
+            As mentioned earlier, the rest of the calculations specifically about Pidgey relate to the frequency of Pokemon spawns, location type, and hours by user. 
+        </p>
+
+        <h3 id="pidgey-frequency">Frequency of Specific Pokemon Spawns and Location</h3>
+        <p>
+            If you've played any kind of Pokemon Go, you'll know that the four most common types of Pokemon that come out are Pidgey, Weedle, and Rattata. It's much more exciting if there are any other Pokemon you encounter outside. Thus, I estimate that 20% of all Pokemon caught are Pidgey, 15% are Rattata, 15% Weedle, and 50% everything else.
+        </p>
+        <p>
+            However, when you visit a coast, there are so much more water type pokemon and much fewer Pidgey, Rattata, and Weedle. Thus, we cannot say that all spawns contain 15%/20%; we should modify the numbers a bit to account for this phenomenon. As such, I predict 85% of Pokemon on the coast are not these, and 5% of each are.
+        </p>
+
+        <h3 id="pidgey-spawns">Types of Spawns</h3>
+        <p>
+            Along with the light, medium, and heavy user idea, I introduce two different types of location spawns: light and heavy. To be a heavy user, it would make sense that the location users are at is extremely heavy with Pokemon, otherwise it would be difficult to play and catch Pidgey. Thus, I pair light spawns with light and medium users, and heavy spawns with medium and heavy users. You are more likely to play more if there are more Pokemon Go activity in your area.
+        </p>
+        <p>
+            When I walk along this specific stretch of land in downtown Berkeley or in El Cerrito, I get about 1 Pokemon every 5 minutes. When I went to San Francisco, it's buzzing with activity. While Pokemon show up about once a minute (or fewer) it takes about a minute (and more, for more reluctant Pokemon) for the user to catch the Pokemon and watch the cutscene.
+        </p>
+        
+        <h3 id="pidgey-validation">Does this make sense?</h3>
+        <p>
+            With the Pokedex feature in Pokemon Go, it's quite easy to see how many Pidgey each user have caught or seen. I myself have caught 156 Pidgey and have seen 172. I have played about 40 hours, which puts me in the level of a medium user. The majority of my environment is in the grass, so I'll take the grass component, multiply it by the medium user hours level, and multiply it by the light spawn, I should have seen around 84 Pidgey. If I try multiplying it by the heavy spawn, it is 252 Pidgey. My spawns are in between light and heavy, so my estimates make sense here. In addition, if we assume that 80% Pidgey are caught, then I should have caught anywhere between 67 to 200. It holds!
+        </p>
+
+        <h2 id="results">All Pidgeys in the US</h3>
+        <p>
+            With all of these factors in place, it's time to make the final calculations. I take each type of user (light, medium, and heavy) and multiply the number of users by the type of spawn it's associated with, multiplied by location. In the end, I make sure each user (light, medium, and heavy) are represented equally, and so I make some adjustments to the numbers I've calculated (halving or quartering the numbers depending on how many different factors are involved, etc).
+        </p>
+        <p>
+            In the US, the total number of Pidgey seen is approximately 1.8 billion! If we apply the assumption that 80% of Pidgey are caught, then approximately 1.4 billion Pidgey have been caught (and transferred) to Professor Willow in the US.
+        </p>
+        <p>
+            According to <a href="https://techcrunch.com/2016/08/01/pokemon-go-passed-100-million-installs-over-the-weekend/?ncid=rss">TechCrunch</a>, Pokemon Go reached 100 million installs worldwide by the beginning of August. Only one week previous, it reached 75 million installs. Thus, as the popularity of the game tapers off, I estimate that there are about 125 downloads worldwide. This makes American users to comprise 27% of the global market. While this number looks low, according to SimilarWeb, many European countries have actually surpassed the US in terms of the percentage of their country to download the game on their Android device.
+        </p>
+        <p>
+            Multiplying the total number of Pidgey caught in the US by the inverse of the % of the world who come from the US gives us 5.325 billion Pidgey caught in the world and transferred; which gives us our answer!
+        </p>
+    </div>
+  </body>
+</html>
