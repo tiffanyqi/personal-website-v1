@@ -5,24 +5,33 @@
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700" rel="stylesheet">
     <link href='../assets/css/blog.css' rel='stylesheet' type='text/css'>
-
-    <!-- start Mixpanel --><script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
-      0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
-      for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
-      mixpanel.init("0514432afbe696a2dcaa51b5c0aa857e");</script><!-- end Mixpanel -->
+    <script type="text/javascript" src="../assets/js/mixpanel.js"></script>
     <script>
-      mixpanel.track("Project View", {"Project": "Productivity Project"});
+      // mixpanel.track("Project View", {"Project": "Productivity Project"});
     </script>
   </head>
 
   <body>
 
     <nav id="navbar">
-      <a href="#top" class="navbar-item">About</a>
+      <a href="#top" class="navbar-item active">About</a>
+      <a href="#about-methodology" class="navbar-sub-item">My Diary: Getting Time Data</a>
+      <a href="#about-terminology" class="navbar-sub-item">Terminology</a>
+      <a href="#about-other" class="navbar-sub-item">Other Sources of Data</a>
       <a href="#time" class="navbar-item">Time</a>
-      <a href="#correlation" class="navbar-item">Academic</a>
-      <a href="#other-time" class="navbar-item">Non-Academic</a>
-      <a href="#deflation" class="navbar-item">Deflation</a>
+      <a href="#time-grades" class="navbar-sub-item">My Grades</a>
+      <a href="#correlation" class="navbar-item">Academic Correlation</a>
+      <a href="#correlation-time" class="navbar-sub-item">Time and Grades</a>
+      <a href="#correlation-tests" class="navbar-sub-item">Tests and Grades</a>
+      <a href="#correlation-units" class="navbar-sub-item">Units, Class Sizes and Grades</a>
+      <a href="#other-time" class="navbar-item">Non-Academic Correlation</a>
+      <a href="#other-time-sleep" class="navbar-sub-item">Sleep</a>
+      <a href="#other-time-activities" class="navbar-sub-item">Activities</a>
+      <a href="#other-time-planning" class="navbar-sub-item">Planning</a>
+      <a href="#other-time-jobs" class="navbar-sub-item">Jobs</a>
+      <a href="#other-time-summary" class="navbar-sub-item">Putting it all together</a>
+      <a href="#deflation" class="navbar-item">Grade Deflation</a>
+      <a href="#findings" class="navbar-item">Findings</a>
     </nav>
 
     <div class="container">
@@ -55,7 +64,7 @@
 
       <p>I will do my best to deeply analyze the data through the eyes of one student.</p>
 
-      <h3>My Diary: Getting Time Data</h3>
+      <h3 id="about-methodology">My Diary: Getting Time Data</h3>
       <p>I am a Google Calendar Super User, and I am quite proud of that fact. Since November 2012, I have consistently logged my productive (and non-productive) moments of my life. (Most of Fall 2012 is an estimate of time spent except for the last two weeks of the semester.) As such, I am able to go back to any given day and reveal all the moments and feelings of the past. This improves my memory and gives me helpful insights along the way. Below are a couple of examples of a given week: one is of October 2014, while the other is slightly more recent at December 2015, which also happened to be the week of final exams.</p>
 
       <img class="calendar" src="../assets/img/work/oct14.png" alt="October 2014">
@@ -76,7 +85,7 @@
       <p>I split up each calendar and attribute it to each given category, which includes the specific class and activity. As such, I calculate productivity strictly from the first four calendars. I have other things like "fun", which is calcuated from hobbies, games & time wasters, and social (spending time talking or doing something with someone not work-related), and time with my significant other. I have more than three years worth of quantifiable data on my productive (and not so productive) moments.</p>
       <img class="calendar" src="../assets/img/work/dec15.png" alt="December 2015">
 
-      <h3>Terminology</h3>
+      <h3 id="about-terminology">Terminology</h3>
       <p>There are a few statistics and college terms I use throughout the project. I define them below in case something doesn't make sense:</p>
       <ul>
         <li><strong>Coefficient of Correlation (R):</strong> a statistical measure of the linear strength of two sets of data. 0-0.1 means no correlation, 0.1-0.3 means weak correlation, 0.3-0.5 means moderate correlation, and 0.5+ means a strong correlation (<a href="https://explorable.com/statistical-correlation">source</a>).</li>
@@ -86,7 +95,7 @@
         <li><strong>Semester:</strong> period of academic study. UC Berkeley has two required semesters: fall (August to December) and spring (January to May). Each semester is approximately 16 weeks long. Students have a week long break to study between their final week of classes and final exams.</li>
       </ul>
 
-      <h3>Other Sources of Data</h3>
+      <h3 id="about-other">Other Sources of Data</h3>
       <p>In addition to time, I also calculate grades very closely. This is typically a spreadsheet with every assignment and their weights to either recreate the exact percentage received at the end, or to estimate a percentage. I have lost specific test grades for the first four semesters. In addition, many classes do not release final exam grades, participation, or final course grades, so about half of the percentages here are likely estimates.</p>
 
       <p>I also have some average grades on the site as well. I went on <a href="http://schedulebuilder.berkeley.edu">Schedule Builder</a>, a UC Berkeley resource, to find the average grade associated with my class and its given semester. If a particular semester wasn't given, I took a look at previous semesters, and if it was a constant grade average, I used that one. If it didn't exist, I estimated.</p>
@@ -119,7 +128,7 @@
 
       <p>So yeah, even though I was little crazy when it came to activities, the time I spent on my academics decreased. The most time I spent on my classes was in Spring 2013 (still a freshman in college).</p>
 
-      <h3>My Grades</h3>
+      <h3 id="time-grades">My Grades</h3>
       <p><em>Note: these graphs related to grades show up occasionally. If one or the other does not appear, please try refreshing until the other appears.</em></p>
 
       <div class="graph-short" id="SemVCumulative"></div>
@@ -142,7 +151,7 @@
       </ul>
       <p>Let's begin!</p>
 
-      <h3>Time & Grades</h3>
+      <h3 id="correlation-time">Time & Grades</h3>
       <p>I have had the good fortune of documenting how much time I spent going to class, doing homework and studying, going to office hours, and studying before the semester. I went to most of my classes, as most were participation based. In addition, I only went to office hours diligently for my computer science classes, so there will be some bias there. Here, I'll provide some pictorials of grade earned and each of these four factors.</p>
 
       <div class="graph-square" id="GradeVClass"></div>
@@ -192,7 +201,7 @@
       <p>One reason for the consistent lack of linear correlation may be because there were two conflicting factors at play. One may be because although I may have went to class, studied, etc more, I had to in order to understand the material and my grade was still lower than the others. Another may be because I understood the material well, and as a result did not go to class. Since both phenomena happened, bimodal correlations wouldn't reflect in the data. <strong>Overall, there is no linear correlation between spending time in the class before the semester, studying, going to class, or going to office hours.</strong></p>
 
 
-      <h3>Tests & Grades</h3>
+      <h3 id="correlation-tests">Tests & Grades</h3>
       <p>Next, I'd like to explore the relationship between test results and the grades received in the class. I classified "First Test" with either the first midterm, quiz, assignment, or essay. Some classes didn't have any of these, so those I left blank. "Final Test" was either the final exam, presentation, or paper. I avoided using a final quiz if there was one, as that may have been just a normal exam. Is there a correlation between studying your ass off and getting a good grade? Let's see.</p>
 
       <div class="graph-square" id="GradeVFirst"></div>
@@ -269,7 +278,7 @@
       <p>However, it appears that there is a moderate positive correlation between the first and final test scores, which seems to suggest that I did not improve too much between tests. In addition, there is a strong positive linear correlation between the grade received and the final grade, which shows that the <strong>final grade is still an extremely important factor in the final grade distributions</strong>. It makes sense that students continue to study a lot to do well on their final. And in some sense, <strong>their overall grade can improve if they do well on the final</strong>.</p>
 
 
-      <h3>Units, Class Sizes, & Grades</h3>
+      <h3 id="correlation-units">Units, Class Sizes, & Grades</h3>
       <p>The next set of factors include how many units the class offered, and how big the class was in determining the final grade.</p>
 
       <div class="graph-square" id="UnitsVGrade"></div>
@@ -330,7 +339,7 @@
 
       <p>Note: There are only 8 data points here, so it's harder to make conclusions from sparse data.</p>
 
-      <h3>Fun</h3>
+      <h3 id="other-time-fun">Fun</h3>
       <p>I calculated "fun" as time spent on my hobbies like baking or doing jigsaw puzzles, hanging out with friends and family, hanging out with my boyfriend, and wasting time like playing games and watching TV. Each of these activities are logged in their respective calendars. </p>
 
       <p>There are two questions I am interested here, and they are:</p>
@@ -385,7 +394,7 @@
       </ul>
       
 
-      <h3>Sleep</h3>
+      <h3 id="other-time-sleep">Sleep</h3>
 
       <div class="graph-short" id="SemSleep"></div>
       <p>According to this data, I slept pretty consistently throughout each semester from 800 to 900 hours of sleep. Let's look into the specifics.</p>
@@ -422,7 +431,7 @@
       <p>While there doesn't appear to be a linear correlation between how many units I take and how much I sleep, as well as between how much time I spend on academics and sleep, the grade received and how much I sleep is moderately correlated. <strong>Thus, it's important to sleep consistently, and it may have an effect on grades!</strong></p>
 
 
-      <h3>Activities</h3>
+      <h3 id="other-time-activities">Activities</h3>
 
       <p>Activities were a big part of my college experience. While I classify it as productive time, they were largely a release of stress and another way I could have fun at college. I ask the same questions here as in fun and sleep.</p>
 
@@ -465,7 +474,7 @@
       <p>However, I also want to point out that there was a reason that a semester like Fall 2014 exists. It was one of my favorite semesters, and while it was the most crazy, I did not receive a low GPA or a lower unit count, as a result. Thus, we cannot explain all these outcomes as a result to activities. In addition, I would not turn back the time and spend less time on activities, as this was one of my favorite parts of college.</p>
 
 
-      <h3>Planning</h3>
+      <h3 id="other-time-planning">Planning</h3>
 
       <p>I'm really big on planning. I would frequently plan out my four year schedule, tear them down, and make new ones, as well as figure out best ways to represent data on Google Calendar and my multiple spreadsheets. The question is here, would it have been more effective to use this time to study more rather than to plan?</p>
 
@@ -484,7 +493,7 @@
       </ul>
       <p>I've been told (and criticized) for the time I spent planning, and whether I would have been better off doing something else with that time. Well, there clearly isn't a linear correlation, so I think I'm in the clear.</p>
 
-      <h3>Jobs</h3>
+      <h3 id="other-time-jobs">Jobs</h3>
 
       <p>The potential lack of job after graduation weighed on my mind throughout college, and so I attempted to gain more experience by applying to internships, and full time opportunities my senior year. This was one of my most stressful experiences throughout college, and would like to showcase it here as well.</p>
 
@@ -502,7 +511,7 @@
 
       <p>There's a weak positive linear correlation between the grade received and this time. I don't have a great logical reason as to why this is the case, perhaps it's a coincidence.</p>
 
-      <h3>Putting it all Together</h3>
+      <h3 id="other-time-summary">Putting it all Together</h3>
       <div class="graph-square" id="SemGradeVOtherTime"></div>
       <ul>
         <li><strong>Relationship</strong>: Grade vs total time spent on non-academic activities</li>
@@ -547,7 +556,7 @@
       <p>One thing I want to connect to this analysis is class size. Above, I mention that small class sizes is one of the factors that Ivys boast about, and here we've discovered that there is a moderate negative correlation between the two. <strong>Perhaps one of the reasons UC Berkeley is known for "grade deflation" because the schools we are compared to are those with small class sizes?</strong> Just a thought.</p>
 
 
-      <h2>What Can You Take Away From All This?</h2>
+      <h2 id="findings">What Can You Take Away From All This?</h2>
       <p>Once again, this is solely about my data, and cannot be concluded about everyone. However, a certain grade in the class isn't just because of this-or-this, there is a wide variety of factors that play into a final grade, like how much time you study, and sleep. It's about the combination of points that create a final product.</p>
 
       <h3>Findings</h3>
@@ -595,7 +604,9 @@
   <!-- JAVASCRIPT TO MAKE THIS WORK -->
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script type="text/javascript">
+  <script type="text/javascript" src="../assets/js/graphs.js"></script>
+  <script type="text/javascript" src="../assets/js/blog.js"></script>
+  <script type="text/javascript">
       google.load("visualization", "1", {packages:["corechart"]})
 
       // OVER TIME
