@@ -7,7 +7,7 @@
     <link href='../assets/css/blog.css' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="../assets/js/mixpanel.js"></script>
     <script>
-      // mixpanel.track("Project View", {"Project": "Productivity Project"});
+      mixpanel.track("Project View", {"Project": "Productivity Project"});
     </script>
   </head>
 
@@ -154,7 +154,7 @@
       <h3 id="correlation-time">Time & Grades</h3>
       <p>I have had the good fortune of documenting how much time I spent going to class, doing homework and studying, going to office hours, and studying before the semester. I went to most of my classes, as most were participation based. In addition, I only went to office hours diligently for my computer science classes, so there will be some bias there. Here, I'll provide some pictorials of grade earned and each of these four factors.</p>
 
-      <div class="graph-square" id="GradeVClass"></div>
+      <div class="graph-short" id="GradeVClass"></div>
       <ul>
         <li><strong>Relationship</strong>: Grade received vs. time going to class</li>
         <li><strong>Why it matters</strong>: Is grade influenced by how much you go to class?</li>
@@ -165,7 +165,7 @@
         <li><strong>Conclusion</strong>: No linear correlation</li>
       </ul>
 
-      <div class="graph-square" id="GradeVHW"></div>
+      <div class="graph-short" id="GradeVHW"></div>
       <ul>
         <li><strong>Relationship</strong>: Grade received vs. time on homework and studying</li>
         <li><strong>Why it matters</strong>: Is grade influenced by how much you study?</li>
@@ -176,7 +176,7 @@
         <li><strong>Conclusion</strong>: No linear correlation</li>
       </ul>
 
-      <div class="graph-square" id="GradeVOH"></div>
+      <div class="graph-short" id="GradeVOH"></div>
       <ul>
         <li><strong>Relationship</strong>: Grade received vs. time spent going to office hours</li>
         <li><strong>Why it matters</strong>: Is grade influenced by how much you go to office hours to clarify questions?</li>
@@ -187,7 +187,7 @@
         <li><strong>Conclusion</strong>: No linear correlation</li>
       </ul>
 
-      <div class="graph-square" id="GradeVExtra"></div>
+      <div class="graph-short" id="GradeVExtra"></div>
       <ul>
         <li><strong>Relationship</strong>: Grade received vs. extra time spent before the semester began</li>
         <li><strong>Why it matters</strong>: Is grade influenced by how much you spend in the beginning of the semester to prepare?</li>
@@ -204,7 +204,7 @@
       <h3 id="correlation-tests">Tests & Grades</h3>
       <p>Next, I'd like to explore the relationship between test results and the grades received in the class. I classified "First Test" with either the first midterm, quiz, assignment, or essay. Some classes didn't have any of these, so those I left blank. "Final Test" was either the final exam, presentation, or paper. I avoided using a final quiz if there was one, as that may have been just a normal exam. Is there a correlation between studying your ass off and getting a good grade? Let's see.</p>
 
-      <div class="graph-square" id="GradeVFirst"></div>
+      <div class="graph-short" id="GradeVFirst"></div>
       <ul>
         <li><strong>Relationship</strong>: Grade received vs. First Test Score</li>
         <li><strong>Why it matters</strong>: Is the first test outcome a strong indicator on what you get at the very end?</li>
@@ -215,7 +215,7 @@
         <li><strong>Conclusion</strong>: Weak positive linear correlation</li>
       </ul>
 
-      <div class="graph-square" id="GradeVFinalGrade"></div>
+      <div class="graph-short" id="GradeVFinalGrade"></div>
       <ul>
         <li><strong>Relationship</strong>: Grade received vs. Final Grade, with weights on how much the final was worth in the calculation of the grade</li>
         <li><strong>Why it matters</strong>: Is the grade received heavily affected by the final test score?</li>
@@ -224,7 +224,7 @@
         <li><strong>Conclusion</strong>: Strong positive linear correlation</li>
       </ul>
 
-      <div class="graph-square" id="FirstVFinal"></div>
+      <div class="graph-short" id="FirstVFinal"></div>
       <ul>
         <li><strong>Relationship</strong>: First Grade vs. Final Grade</li>
         <li><strong>Why it matters</strong>: Can you improve later on in the semester?</li>
@@ -235,7 +235,7 @@
         <li><strong>Conclusion</strong>: Moderate positive correlation</li>
       </ul>
 
-      <div class="graph-square" id="FinalVFinalTime"></div>
+      <div class="graph-short" id="FinalVFinalTime"></div>
       <ul>
         <li><strong>Relationship</strong>: Final Test Grade vs. Time Spent on the Final</li>
         <li><strong>Why it matters</strong>: Does the time spent studying for a test relate to the grade you get on that test?</li>
@@ -246,7 +246,7 @@
         <li><strong>Conclusion</strong>: No linear correlation</li>
       </ul>
 
-      <div class="graph-square" id="GradeVFinalTime"></div>
+      <div class="graph-short" id="GradeVFinalTime"></div>
       <ul>
         <li><strong>Relationship</strong>: Grade Received vs. Time Spent on the Final, with weights the exam held in final grade determination</li>
         <li><strong>Why it matters</strong>: Does the time spent studying for the final test relate to the grade you received at the end of the semester? (Does it really matter if you study your butt of during Dead Week?)</li>
@@ -255,7 +255,7 @@
         <li><strong>Conclusion</strong>: Weak negative linear correlation</li>
       </ul>
 
-      <div class="graph-square" id="GradeVFinalPercent"></div>
+      <div class="graph-short" id="GradeVFinalPercent"></div>
       <ul>
         <li><strong>Relationship</strong>: Grade Received vs. Final Percentage</li>
         <li><strong>Why it matters</strong>: Does the grade received correlate to percentage the final is worth?</li>
@@ -264,7 +264,7 @@
         <li><strong>Conclusion</strong>: No linear correlation</li>
       </ul>
 
-      <div class="graph-square" id="AvGradeVFinalPercent"></div>
+      <div class="graph-short" id="AvGradeVFinalPercent"></div>
       <ul>
         <li><strong>Relationship</strong>: Average Grade Received vs. Percentage the Final is Worth</li>
         <li><strong>Why it matters</strong>: Is the average grade received in a class correlated to the percentage the final is actually worth?</li>
@@ -281,7 +281,7 @@
       <h3 id="correlation-units">Units, Class Sizes, & Grades</h3>
       <p>The next set of factors include how many units the class offered, and how big the class was in determining the final grade.</p>
 
-      <div class="graph-square" id="UnitsVGrade"></div>
+      <div class="graph-short" id="UnitsVGrade"></div>
       <ul>
         <li><strong>Relationship</strong>: Units in the class vs. Grade received</li>
         <li><strong>R</strong>: 0.077</li>
@@ -289,7 +289,7 @@
         <li><strong>Conclusion</strong>: No linear correlation</li>
       </ul>
 
-      <div class="graph-square" id="UnitsVAvGrade"></div>
+      <div class="graph-short" id="UnitsVAvGrade"></div>
       <ul>
         <li><strong>Relationship</strong>: Units in the class vs. the average grade received</li>
         <li><strong>R</strong>: -0.06</li>
@@ -297,7 +297,7 @@
         <li><strong>Conclusion</strong>: No linear correlation</li>
       </ul>
 
-      <div class="graph-square" id="UnitsVAvTime"></div>
+      <div class="graph-short" id="UnitsVAvTime"></div>
       <ul>
         <li><strong>Relationship</strong>: Units vs. the average time I spent in the class</li>
         <li><strong>Why it matters</strong>: At Berkeley, there is a saying that students must spend about 4 times as many units of the class. Thus, if one class was 4 units, then students should spend about 16 hours a week studying, going to class, office hours, etc. Is this true?</li>
@@ -308,7 +308,7 @@
         <li><strong>Conclusion</strong>: Moderate positive linear correlation</li>
       </ul>
 
-      <div class="graph-square" id="GradeVSize"></div>
+      <div class="graph-short" id="GradeVSize"></div>
       <ul>
         <li><strong>Relationship</strong>: Grade received vs the class size</li>
         <li><strong>Why it matters</strong>: One of the major plusses of other colleges is the fact that there is a "low student to faculty ratio". Because Berkeley is such a bigger school, do class sizes have an impact on grade ratio?</li>
@@ -319,7 +319,7 @@
         <li><strong>Conclusion</strong>: Moderate negative linear correlation</li>
       </ul>
 
-      <div class="graph-square" id="AvGradeVSize"></div>
+      <div class="graph-short" id="AvGradeVSize"></div>
       <ul>
         <li><strong>Relationship</strong>: Average grade received vs the class size</li>
         <li><strong>Why it matters</strong>: One of the major plusses of other colleges is the fact that there is a "low student to faculty ratio". Because Berkeley is such a bigger school, do class sizes have an impact on grade ratio? In the context of averages.</li>
@@ -353,7 +353,7 @@
       <div class="graph-short" id="SemFun"></div>
       <p>Here's all the time I spent on fun. I didn't start a "hobbies" or "fun" section in Fall 2012, which is why I do not have any data on it. I started dating my boyfriend in Spring 2015, which is why there is a sudden spike in this category from Spring 2015 to Spring 2016.</p>
 
-      <div class="graph-square" id="SemUnitsVFun"></div>
+      <div class="graph-short" id="SemUnitsVFun"></div>
       <ul>
         <li><strong>Relationship</strong>: Units taken per semester vs. Time spent on fun</li>
         <li><strong>Why it matters</strong>: Does units correlate with how much time I decide to have fun?</li>
@@ -364,7 +364,7 @@
         <li><strong>Conclusion</strong>: Moderate negative linear correlation, relationship removed weakens correlation</li>
       </ul>
 
-      <div class="graph-square" id="SemGradeVFun"></div>
+      <div class="graph-short" id="SemGradeVFun"></div>
       <ul>
         <li><strong>Relationship</strong>: Grade received vs. time spent on fun</li>
         <li><strong>Why it matters</strong>: Does the grade received relate to fun in any way?</li>
@@ -375,7 +375,7 @@
         <li><strong>Conclusion</strong>: No linear correlation, relationship removed created a strong negative linear correlation</li>
       </ul>
 
-      <div class="graph-square" id="FunVTotalAcademicTime"></div>
+      <div class="graph-short" id="FunVTotalAcademicTime"></div>
       <ul>
         <li><strong>Relationship</strong>: How much time spent on fun vs. how much time spent on academics total</li>
         <li><strong>Why it matters</strong>: Does fun and academic time vary?</li>
@@ -399,7 +399,7 @@
       <div class="graph-short" id="SemSleep"></div>
       <p>According to this data, I slept pretty consistently throughout each semester from 800 to 900 hours of sleep. Let's look into the specifics.</p>
 
-      <div class="graph-square" id="SemUnitsVSleep"></div>
+      <div class="graph-short" id="SemUnitsVSleep"></div>
       <ul>
         <li><strong>Relationship</strong>: Units per semester vs. time slept</li>
         <li><strong>Why it matters</strong>: Do units, or how much coursework you have, relate to how much you sleep?</li>
@@ -408,7 +408,7 @@
         <li><strong>Conclusion</strong>: No linear correlation</li>
       </ul>
 
-      <div class="graph-square" id="SemGradeVSleep"></div>
+      <div class="graph-short" id="SemGradeVSleep"></div>
       <ul>
         <li><strong>Relationship</strong>: Grade received vs. time slept</li>
         <li><strong>Why it matters</strong>: Is the grade outcome related to how much time you sleep?</li>
@@ -417,7 +417,7 @@
         <li><strong>Conclusion</strong>: Moderate positive linear correlation</li>
       </ul>
 
-      <div class="graph-square" id="SleepVTotalAcademicTime"></div>
+      <div class="graph-short" id="SleepVTotalAcademicTime"></div>
       <ul>
         <li><strong>Relationship</strong>: Time slept vs. time spent on academics</li>
         <li><strong>Why it matters</strong>: Is sleeping related to how much time spent on academics?</li>
@@ -438,7 +438,7 @@
       <div class="graph-short" id="SemActivities"></div>
       <p>I've written about <a href="https://advicefromahaasmajor.wordpress.com/2014/08/05/my-extracurriculars-and-past-affiliations/">my activities before Fall 2014</a>. I also interned at Go Overseas and worked part-time at Intera Growth Partners. After BCEC, BMC, and Perfect Fifth, I did a lot of teaching and tutoring in introductory computer science. I founded <a href="csmberkeley.github.io">Computer Science Mentors<a/>, an organization focused on group tutoring in all introductory computer science courses. In total, I spent 670 hours in three semesters, which is a significant portion of my activities here.</p>
 
-      <div class="graph-square" id="SemUnitsVActivities"></div>
+      <div class="graph-short" id="SemUnitsVActivities"></div>
       <ul>
         <li><strong>Relationship</strong>: Units per semester vs time spent on activities</li>
         <li><strong>Why it matters</strong>: Do units, or how much coursework you have, relate to how much you spend on activities?</li>
@@ -449,7 +449,7 @@
         <li><strong>Conclusion</strong>: Strong negative linear correlation</li>
       </ul>
 
-      <div class="graph-square" id="SemGradeVActivities"></div>
+      <div class="graph-short" id="SemGradeVActivities"></div>
       <ul>
         <li><strong>Relationship</strong>: Grade vs time spent on activities</li>
         <li><strong>Why it matters</strong>: Is the grade outcome related to how much time you spend on activities?</li>
@@ -460,7 +460,7 @@
         <li><strong>Conclusion</strong>: Strong negative linear correlation</li>
       </ul>
 
-      <div class="graph-square" id="ActivitiesVTotalAcademicTime"></div>
+      <div class="graph-short" id="ActivitiesVTotalAcademicTime"></div>
       <ul>
         <li><strong>Relationship</strong>: Time spent on activities vs. time spent on academics</li>
         <li><strong>Why it matters</strong>: Is activity time spent related to how much time spent on academics?</li>
@@ -483,7 +483,7 @@
 
       <p>Perhaps this worked out this way because I was more uncertain about my future at UC Berkeley or what my records of spreadsheets would like like than later semesters when I honed my craft. Now, I automate and use the same tools, which drastically reduces the amount of time to make them.</p>
 
-      <div class="graph-square" id="SemGradeVPlan"></div>
+      <div class="graph-short" id="SemGradeVPlan"></div>
       <ul>
         <li><strong>Relationship</strong>: Grade vs. time spent planning</li>
         <li><strong>Why it matters</strong>: Do these two factors relate?</li>
@@ -500,7 +500,7 @@
       <div class="graph-short" id="SemJobs"></div>
       <p>Clearly I spent more time job hunting as time went on, as I felt more pressure to succeed.</p>
 
-      <div class="graph-square" id="SemGradeVJobs"></div>
+      <div class="graph-short" id="SemGradeVJobs"></div>
       <ul>
         <li><strong>Relationship</strong>: Grade received vs. time spent on job hunting</li>
         <li><strong>Why it matters</strong>: Do these two factors relate?</li>
@@ -512,7 +512,7 @@
       <p>There's a weak positive linear correlation between the grade received and this time. I don't have a great logical reason as to why this is the case, perhaps it's a coincidence.</p>
 
       <h3 id="other-time-summary">Putting it all Together</h3>
-      <div class="graph-square" id="SemGradeVOtherTime"></div>
+      <div class="graph-short" id="SemGradeVOtherTime"></div>
       <ul>
         <li><strong>Relationship</strong>: Grade vs total time spent on non-academic activities</li>
         <li><strong>Why it matters</strong>: Are non-academic activities important for the grade?</li>
@@ -794,11 +794,9 @@
           query: 'SELECT A,E,R,T',
           title: 'Grade Received vs. Final Exam Grade w/ % Weights',
           hAxisTitle: 'Grade Received (GPA)',
-          vAxis: {
-            'bubble': {'textStyle': {'color': 'transparent'}},
-            'colorAxis': 'null', // still looks weird
-            'title': 'Final Exam Grade (%)',
-          },
+          vAxisTitle: 'Final Exam Grade (%)',
+          'bubble': {'textStyle': {'color': 'transparent'}},
+          'colorAxis': 'null', // still looks weird
           containerId: 'GradeVFinalGrade'
         });
       }
@@ -830,11 +828,9 @@
           query: 'SELECT A,E,S,T',
           title: 'Grade Received w/ GPA Weights vs. Time Spent Studying on the Final',
           hAxisTitle: 'Grade Received (GPA)',
-          vAxis: {
-            'bubble': {'textStyle': {'color': 'transparent'}},
-            'colorAxis': 'null', // still looks weird
-            title: 'Time Spent Studying',
-          },
+          vAxisTitle: 'Time Spent Studying',
+          'bubble': {'textStyle': {'color': 'transparent'}},
+          'colorAxis': 'null', // still looks weird
           containerId: 'GradeVFinalTime'
         });
       }

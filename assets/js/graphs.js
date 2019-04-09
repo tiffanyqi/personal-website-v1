@@ -24,10 +24,7 @@ function formatOptions({hAxisTitle=null, showLegend=true, title, vAxisTitle=null
     'hAxis': {'title': hAxisTitle},
     legend: showLegend ? 'right' : 'none',
     title,
-    'vAxis': {
-      ...specialChartOptions.vAxis,
-      'title': vAxisTitle
-    },
+    'vAxis': {'title': vAxisTitle},
   };
 }
 
@@ -47,11 +44,13 @@ function drawAreaChart({containerId, hAxisTitle=null, isStacked='false', query, 
 }
 
 /* Bubble Chart, extra options
- * {String} vAxis: vaxis options
+ * {String} bubble: bubble options
+ * {String} colorAxis: color of the axis
  */
-function drawBubbleChart({containerId, hAxisTitle=null, query, title, vAxis, vAxisTitle=null, url}) {
+function drawBubbleChart({bubble, colorAxis, containerId, hAxisTitle=null, query, title, vAxisTitle=null, url}) {
   const options = formatOptions({hAxisTitle, title, vAxisTitle, specialChartOptions: {
-    vAxis,
+    bubble,
+    colorAxis,
   }});
   drawChart({
     ...arguments[0],
