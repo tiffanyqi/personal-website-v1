@@ -5,11 +5,7 @@
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700" rel="stylesheet">
     <link href='../assets/css/blog.css' rel='stylesheet' type='text/css'>
-
-    <!-- start Mixpanel --><script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
-      0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
-      for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
-      mixpanel.init("0514432afbe696a2dcaa51b5c0aa857e");</script><!-- end Mixpanel -->
+    <script type="text/javascript" src="../assets/js/mixpanel.js"></script>
     <script>
       mixpanel.track("Project View", {"Project": "Productivity Project"});
     </script>
@@ -18,18 +14,31 @@
   <body>
 
     <nav id="navbar">
-      <a href="#top" class="navbar-item">About</a>
+      <a href="#top" class="navbar-item active">About</a>
+      <a href="#about-methodology" class="navbar-sub-item">My Diary: Getting Time Data</a>
+      <a href="#about-terminology" class="navbar-sub-item">Terminology</a>
+      <a href="#about-other" class="navbar-sub-item">Other Sources of Data</a>
       <a href="#time" class="navbar-item">Time</a>
-      <a href="#correlation" class="navbar-item">Academic</a>
-      <a href="#other-time" class="navbar-item">Non-Academic</a>
-      <a href="#deflation" class="navbar-item">Deflation</a>
+      <a href="#time-grades" class="navbar-sub-item">My Grades</a>
+      <a href="#correlation" class="navbar-item">Academic Correlation</a>
+      <a href="#correlation-time" class="navbar-sub-item">Time and Grades</a>
+      <a href="#correlation-tests" class="navbar-sub-item">Tests and Grades</a>
+      <a href="#correlation-units" class="navbar-sub-item">Units, Class Sizes and Grades</a>
+      <a href="#other-time" class="navbar-item">Non-Academic Correlation</a>
+      <a href="#other-time-sleep" class="navbar-sub-item">Sleep</a>
+      <a href="#other-time-activities" class="navbar-sub-item">Activities</a>
+      <a href="#other-time-planning" class="navbar-sub-item">Planning</a>
+      <a href="#other-time-jobs" class="navbar-sub-item">Jobs</a>
+      <a href="#other-time-summary" class="navbar-sub-item">Putting it all together</a>
+      <a href="#deflation" class="navbar-item">Grade Deflation</a>
+      <a href="#findings" class="navbar-item">Findings</a>
     </nav>
 
     <div class="container">
 
       <!-- ABOUT AND INTRODUCTION -->
       <h1 id="top">Correlations between Habits and Grades in College</h1>
-      <div class="date">June 14, 2016</div>
+      <div class="date">June 2016</div>
       <p>Hi there, and welcome to my Productivity Project. Since I started college at UC Berkeley, I have been tracking my productivity through Google Calendar, then migrating the data onto a spreadsheet through a calculator application I built called <a href="https://github.com/tiffanyqi/calenTools">CalenTools</a> for the command line. With this information, I thought it would be fun to take all this data, analyze it, and make some conclusions about how time management and grades all correlate using Google Charts.</p>
 
       <p>As such, this project is an analysis of <strong>one person's life</strong>, and should not be taken as absolute fact. I found this data interesting to share, and hope that it helps you when you think that one test can make or break your grade. Here is the data, and if you're interested in a high level overview, feel free to check out my <a href="https://medium.com/@tiffanyqi/a-college-students-individual-analysis-of-productivity-of-four-years-e51e5ec3af6">post</a>.</p>
@@ -55,7 +64,7 @@
 
       <p>I will do my best to deeply analyze the data through the eyes of one student.</p>
 
-      <h3>My Diary: Getting Time Data</h3>
+      <h3 id="about-methodology">My Diary: Getting Time Data</h3>
       <p>I am a Google Calendar Super User, and I am quite proud of that fact. Since November 2012, I have consistently logged my productive (and non-productive) moments of my life. (Most of Fall 2012 is an estimate of time spent except for the last two weeks of the semester.) As such, I am able to go back to any given day and reveal all the moments and feelings of the past. This improves my memory and gives me helpful insights along the way. Below are a couple of examples of a given week: one is of October 2014, while the other is slightly more recent at December 2015, which also happened to be the week of final exams.</p>
 
       <img class="calendar" src="../assets/img/work/oct14.png" alt="October 2014">
@@ -76,7 +85,7 @@
       <p>I split up each calendar and attribute it to each given category, which includes the specific class and activity. As such, I calculate productivity strictly from the first four calendars. I have other things like "fun", which is calcuated from hobbies, games & time wasters, and social (spending time talking or doing something with someone not work-related), and time with my significant other. I have more than three years worth of quantifiable data on my productive (and not so productive) moments.</p>
       <img class="calendar" src="../assets/img/work/dec15.png" alt="December 2015">
 
-      <h3>Terminology</h3>
+      <h3 id="about-terminology">Terminology</h3>
       <p>There are a few statistics and college terms I use throughout the project. I define them below in case something doesn't make sense:</p>
       <ul>
         <li><strong>Coefficient of Correlation (R):</strong> a statistical measure of the linear strength of two sets of data. 0-0.1 means no correlation, 0.1-0.3 means weak correlation, 0.3-0.5 means moderate correlation, and 0.5+ means a strong correlation (<a href="https://explorable.com/statistical-correlation">source</a>).</li>
@@ -86,7 +95,7 @@
         <li><strong>Semester:</strong> period of academic study. UC Berkeley has two required semesters: fall (August to December) and spring (January to May). Each semester is approximately 16 weeks long. Students have a week long break to study between their final week of classes and final exams.</li>
       </ul>
 
-      <h3>Other Sources of Data</h3>
+      <h3 id="about-other">Other Sources of Data</h3>
       <p>In addition to time, I also calculate grades very closely. This is typically a spreadsheet with every assignment and their weights to either recreate the exact percentage received at the end, or to estimate a percentage. I have lost specific test grades for the first four semesters. In addition, many classes do not release final exam grades, participation, or final course grades, so about half of the percentages here are likely estimates.</p>
 
       <p>I also have some average grades on the site as well. I went on <a href="http://schedulebuilder.berkeley.edu">Schedule Builder</a>, a UC Berkeley resource, to find the average grade associated with my class and its given semester. If a particular semester wasn't given, I took a look at previous semesters, and if it was a constant grade average, I used that one. If it didn't exist, I estimated.</p>
@@ -119,7 +128,7 @@
 
       <p>So yeah, even though I was little crazy when it came to activities, the time I spent on my academics decreased. The most time I spent on my classes was in Spring 2013 (still a freshman in college).</p>
 
-      <h3>My Grades</h3>
+      <h3 id="time-grades">My Grades</h3>
       <p><em>Note: these graphs related to grades show up occasionally. If one or the other does not appear, please try refreshing until the other appears.</em></p>
 
       <div class="graph-short" id="SemVCumulative"></div>
@@ -142,10 +151,10 @@
       </ul>
       <p>Let's begin!</p>
 
-      <h3>Time & Grades</h3>
+      <h3 id="correlation-time">Time & Grades</h3>
       <p>I have had the good fortune of documenting how much time I spent going to class, doing homework and studying, going to office hours, and studying before the semester. I went to most of my classes, as most were participation based. In addition, I only went to office hours diligently for my computer science classes, so there will be some bias there. Here, I'll provide some pictorials of grade earned and each of these four factors.</p>
 
-      <div class="graph-square" id="GradeVClass"></div>
+      <div class="graph-short" id="GradeVClass"></div>
       <ul>
         <li><strong>Relationship</strong>: Grade received vs. time going to class</li>
         <li><strong>Why it matters</strong>: Is grade influenced by how much you go to class?</li>
@@ -156,7 +165,7 @@
         <li><strong>Conclusion</strong>: No linear correlation</li>
       </ul>
 
-      <div class="graph-square" id="GradeVHW"></div>
+      <div class="graph-short" id="GradeVHW"></div>
       <ul>
         <li><strong>Relationship</strong>: Grade received vs. time on homework and studying</li>
         <li><strong>Why it matters</strong>: Is grade influenced by how much you study?</li>
@@ -167,7 +176,7 @@
         <li><strong>Conclusion</strong>: No linear correlation</li>
       </ul>
 
-      <div class="graph-square" id="GradeVOH"></div>
+      <div class="graph-short" id="GradeVOH"></div>
       <ul>
         <li><strong>Relationship</strong>: Grade received vs. time spent going to office hours</li>
         <li><strong>Why it matters</strong>: Is grade influenced by how much you go to office hours to clarify questions?</li>
@@ -178,7 +187,7 @@
         <li><strong>Conclusion</strong>: No linear correlation</li>
       </ul>
 
-      <div class="graph-square" id="GradeVExtra"></div>
+      <div class="graph-short" id="GradeVExtra"></div>
       <ul>
         <li><strong>Relationship</strong>: Grade received vs. extra time spent before the semester began</li>
         <li><strong>Why it matters</strong>: Is grade influenced by how much you spend in the beginning of the semester to prepare?</li>
@@ -192,10 +201,10 @@
       <p>One reason for the consistent lack of linear correlation may be because there were two conflicting factors at play. One may be because although I may have went to class, studied, etc more, I had to in order to understand the material and my grade was still lower than the others. Another may be because I understood the material well, and as a result did not go to class. Since both phenomena happened, bimodal correlations wouldn't reflect in the data. <strong>Overall, there is no linear correlation between spending time in the class before the semester, studying, going to class, or going to office hours.</strong></p>
 
 
-      <h3>Tests & Grades</h3>
+      <h3 id="correlation-tests">Tests & Grades</h3>
       <p>Next, I'd like to explore the relationship between test results and the grades received in the class. I classified "First Test" with either the first midterm, quiz, assignment, or essay. Some classes didn't have any of these, so those I left blank. "Final Test" was either the final exam, presentation, or paper. I avoided using a final quiz if there was one, as that may have been just a normal exam. Is there a correlation between studying your ass off and getting a good grade? Let's see.</p>
 
-      <div class="graph-square" id="GradeVFirst"></div>
+      <div class="graph-short" id="GradeVFirst"></div>
       <ul>
         <li><strong>Relationship</strong>: Grade received vs. First Test Score</li>
         <li><strong>Why it matters</strong>: Is the first test outcome a strong indicator on what you get at the very end?</li>
@@ -206,7 +215,7 @@
         <li><strong>Conclusion</strong>: Weak positive linear correlation</li>
       </ul>
 
-      <div class="graph-square" id="GradeVFinalGrade"></div>
+      <div class="graph-short" id="GradeVFinalGrade"></div>
       <ul>
         <li><strong>Relationship</strong>: Grade received vs. Final Grade, with weights on how much the final was worth in the calculation of the grade</li>
         <li><strong>Why it matters</strong>: Is the grade received heavily affected by the final test score?</li>
@@ -215,7 +224,7 @@
         <li><strong>Conclusion</strong>: Strong positive linear correlation</li>
       </ul>
 
-      <div class="graph-square" id="FirstVFinal"></div>
+      <div class="graph-short" id="FirstVFinal"></div>
       <ul>
         <li><strong>Relationship</strong>: First Grade vs. Final Grade</li>
         <li><strong>Why it matters</strong>: Can you improve later on in the semester?</li>
@@ -226,7 +235,7 @@
         <li><strong>Conclusion</strong>: Moderate positive correlation</li>
       </ul>
 
-      <div class="graph-square" id="FinalVFinalTime"></div>
+      <div class="graph-short" id="FinalVFinalTime"></div>
       <ul>
         <li><strong>Relationship</strong>: Final Test Grade vs. Time Spent on the Final</li>
         <li><strong>Why it matters</strong>: Does the time spent studying for a test relate to the grade you get on that test?</li>
@@ -237,7 +246,7 @@
         <li><strong>Conclusion</strong>: No linear correlation</li>
       </ul>
 
-      <div class="graph-square" id="GradeVFinalTime"></div>
+      <div class="graph-short" id="GradeVFinalTime"></div>
       <ul>
         <li><strong>Relationship</strong>: Grade Received vs. Time Spent on the Final, with weights the exam held in final grade determination</li>
         <li><strong>Why it matters</strong>: Does the time spent studying for the final test relate to the grade you received at the end of the semester? (Does it really matter if you study your butt of during Dead Week?)</li>
@@ -246,7 +255,7 @@
         <li><strong>Conclusion</strong>: Weak negative linear correlation</li>
       </ul>
 
-      <div class="graph-square" id="GradeVFinalPercent"></div>
+      <div class="graph-short" id="GradeVFinalPercent"></div>
       <ul>
         <li><strong>Relationship</strong>: Grade Received vs. Final Percentage</li>
         <li><strong>Why it matters</strong>: Does the grade received correlate to percentage the final is worth?</li>
@@ -255,7 +264,7 @@
         <li><strong>Conclusion</strong>: No linear correlation</li>
       </ul>
 
-      <div class="graph-square" id="AvGradeVFinalPercent"></div>
+      <div class="graph-short" id="AvGradeVFinalPercent"></div>
       <ul>
         <li><strong>Relationship</strong>: Average Grade Received vs. Percentage the Final is Worth</li>
         <li><strong>Why it matters</strong>: Is the average grade received in a class correlated to the percentage the final is actually worth?</li>
@@ -269,10 +278,10 @@
       <p>However, it appears that there is a moderate positive correlation between the first and final test scores, which seems to suggest that I did not improve too much between tests. In addition, there is a strong positive linear correlation between the grade received and the final grade, which shows that the <strong>final grade is still an extremely important factor in the final grade distributions</strong>. It makes sense that students continue to study a lot to do well on their final. And in some sense, <strong>their overall grade can improve if they do well on the final</strong>.</p>
 
 
-      <h3>Units, Class Sizes, & Grades</h3>
+      <h3 id="correlation-units">Units, Class Sizes, & Grades</h3>
       <p>The next set of factors include how many units the class offered, and how big the class was in determining the final grade.</p>
 
-      <div class="graph-square" id="UnitsVGrade"></div>
+      <div class="graph-short" id="UnitsVGrade"></div>
       <ul>
         <li><strong>Relationship</strong>: Units in the class vs. Grade received</li>
         <li><strong>R</strong>: 0.077</li>
@@ -280,7 +289,7 @@
         <li><strong>Conclusion</strong>: No linear correlation</li>
       </ul>
 
-      <div class="graph-square" id="UnitsVAvGrade"></div>
+      <div class="graph-short" id="UnitsVAvGrade"></div>
       <ul>
         <li><strong>Relationship</strong>: Units in the class vs. the average grade received</li>
         <li><strong>R</strong>: -0.06</li>
@@ -288,7 +297,7 @@
         <li><strong>Conclusion</strong>: No linear correlation</li>
       </ul>
 
-      <div class="graph-square" id="UnitsVAvTime"></div>
+      <div class="graph-short" id="UnitsVAvTime"></div>
       <ul>
         <li><strong>Relationship</strong>: Units vs. the average time I spent in the class</li>
         <li><strong>Why it matters</strong>: At Berkeley, there is a saying that students must spend about 4 times as many units of the class. Thus, if one class was 4 units, then students should spend about 16 hours a week studying, going to class, office hours, etc. Is this true?</li>
@@ -299,7 +308,7 @@
         <li><strong>Conclusion</strong>: Moderate positive linear correlation</li>
       </ul>
 
-      <div class="graph-square" id="GradeVSize"></div>
+      <div class="graph-short" id="GradeVSize"></div>
       <ul>
         <li><strong>Relationship</strong>: Grade received vs the class size</li>
         <li><strong>Why it matters</strong>: One of the major plusses of other colleges is the fact that there is a "low student to faculty ratio". Because Berkeley is such a bigger school, do class sizes have an impact on grade ratio?</li>
@@ -310,7 +319,7 @@
         <li><strong>Conclusion</strong>: Moderate negative linear correlation</li>
       </ul>
 
-      <div class="graph-square" id="AvGradeVSize"></div>
+      <div class="graph-short" id="AvGradeVSize"></div>
       <ul>
         <li><strong>Relationship</strong>: Average grade received vs the class size</li>
         <li><strong>Why it matters</strong>: One of the major plusses of other colleges is the fact that there is a "low student to faculty ratio". Because Berkeley is such a bigger school, do class sizes have an impact on grade ratio? In the context of averages.</li>
@@ -330,7 +339,7 @@
 
       <p>Note: There are only 8 data points here, so it's harder to make conclusions from sparse data.</p>
 
-      <h3>Fun</h3>
+      <h3 id="other-time-fun">Fun</h3>
       <p>I calculated "fun" as time spent on my hobbies like baking or doing jigsaw puzzles, hanging out with friends and family, hanging out with my boyfriend, and wasting time like playing games and watching TV. Each of these activities are logged in their respective calendars. </p>
 
       <p>There are two questions I am interested here, and they are:</p>
@@ -344,7 +353,7 @@
       <div class="graph-short" id="SemFun"></div>
       <p>Here's all the time I spent on fun. I didn't start a "hobbies" or "fun" section in Fall 2012, which is why I do not have any data on it. I started dating my boyfriend in Spring 2015, which is why there is a sudden spike in this category from Spring 2015 to Spring 2016.</p>
 
-      <div class="graph-square" id="SemUnitsVFun"></div>
+      <div class="graph-short" id="SemUnitsVFun"></div>
       <ul>
         <li><strong>Relationship</strong>: Units taken per semester vs. Time spent on fun</li>
         <li><strong>Why it matters</strong>: Does units correlate with how much time I decide to have fun?</li>
@@ -355,7 +364,7 @@
         <li><strong>Conclusion</strong>: Moderate negative linear correlation, relationship removed weakens correlation</li>
       </ul>
 
-      <div class="graph-square" id="SemGradeVFun"></div>
+      <div class="graph-short" id="SemGradeVFun"></div>
       <ul>
         <li><strong>Relationship</strong>: Grade received vs. time spent on fun</li>
         <li><strong>Why it matters</strong>: Does the grade received relate to fun in any way?</li>
@@ -366,7 +375,7 @@
         <li><strong>Conclusion</strong>: No linear correlation, relationship removed created a strong negative linear correlation</li>
       </ul>
 
-      <div class="graph-square" id="FunVTotalAcademicTime"></div>
+      <div class="graph-short" id="FunVTotalAcademicTime"></div>
       <ul>
         <li><strong>Relationship</strong>: How much time spent on fun vs. how much time spent on academics total</li>
         <li><strong>Why it matters</strong>: Does fun and academic time vary?</li>
@@ -385,12 +394,12 @@
       </ul>
       
 
-      <h3>Sleep</h3>
+      <h3 id="other-time-sleep">Sleep</h3>
 
       <div class="graph-short" id="SemSleep"></div>
       <p>According to this data, I slept pretty consistently throughout each semester from 800 to 900 hours of sleep. Let's look into the specifics.</p>
 
-      <div class="graph-square" id="SemUnitsVSleep"></div>
+      <div class="graph-short" id="SemUnitsVSleep"></div>
       <ul>
         <li><strong>Relationship</strong>: Units per semester vs. time slept</li>
         <li><strong>Why it matters</strong>: Do units, or how much coursework you have, relate to how much you sleep?</li>
@@ -399,7 +408,7 @@
         <li><strong>Conclusion</strong>: No linear correlation</li>
       </ul>
 
-      <div class="graph-square" id="SemGradeVSleep"></div>
+      <div class="graph-short" id="SemGradeVSleep"></div>
       <ul>
         <li><strong>Relationship</strong>: Grade received vs. time slept</li>
         <li><strong>Why it matters</strong>: Is the grade outcome related to how much time you sleep?</li>
@@ -408,7 +417,7 @@
         <li><strong>Conclusion</strong>: Moderate positive linear correlation</li>
       </ul>
 
-      <div class="graph-square" id="SleepVTotalAcademicTime"></div>
+      <div class="graph-short" id="SleepVTotalAcademicTime"></div>
       <ul>
         <li><strong>Relationship</strong>: Time slept vs. time spent on academics</li>
         <li><strong>Why it matters</strong>: Is sleeping related to how much time spent on academics?</li>
@@ -422,14 +431,14 @@
       <p>While there doesn't appear to be a linear correlation between how many units I take and how much I sleep, as well as between how much time I spend on academics and sleep, the grade received and how much I sleep is moderately correlated. <strong>Thus, it's important to sleep consistently, and it may have an effect on grades!</strong></p>
 
 
-      <h3>Activities</h3>
+      <h3 id="other-time-activities">Activities</h3>
 
       <p>Activities were a big part of my college experience. While I classify it as productive time, they were largely a release of stress and another way I could have fun at college. I ask the same questions here as in fun and sleep.</p>
 
       <div class="graph-short" id="SemActivities"></div>
       <p>I've written about <a href="https://advicefromahaasmajor.wordpress.com/2014/08/05/my-extracurriculars-and-past-affiliations/">my activities before Fall 2014</a>. I also interned at Go Overseas and worked part-time at Intera Growth Partners. After BCEC, BMC, and Perfect Fifth, I did a lot of teaching and tutoring in introductory computer science. I founded <a href="csmberkeley.github.io">Computer Science Mentors<a/>, an organization focused on group tutoring in all introductory computer science courses. In total, I spent 670 hours in three semesters, which is a significant portion of my activities here.</p>
 
-      <div class="graph-square" id="SemUnitsVActivities"></div>
+      <div class="graph-short" id="SemUnitsVActivities"></div>
       <ul>
         <li><strong>Relationship</strong>: Units per semester vs time spent on activities</li>
         <li><strong>Why it matters</strong>: Do units, or how much coursework you have, relate to how much you spend on activities?</li>
@@ -440,7 +449,7 @@
         <li><strong>Conclusion</strong>: Strong negative linear correlation</li>
       </ul>
 
-      <div class="graph-square" id="SemGradeVActivities"></div>
+      <div class="graph-short" id="SemGradeVActivities"></div>
       <ul>
         <li><strong>Relationship</strong>: Grade vs time spent on activities</li>
         <li><strong>Why it matters</strong>: Is the grade outcome related to how much time you spend on activities?</li>
@@ -451,7 +460,7 @@
         <li><strong>Conclusion</strong>: Strong negative linear correlation</li>
       </ul>
 
-      <div class="graph-square" id="ActivitiesVTotalAcademicTime"></div>
+      <div class="graph-short" id="ActivitiesVTotalAcademicTime"></div>
       <ul>
         <li><strong>Relationship</strong>: Time spent on activities vs. time spent on academics</li>
         <li><strong>Why it matters</strong>: Is activity time spent related to how much time spent on academics?</li>
@@ -465,7 +474,7 @@
       <p>However, I also want to point out that there was a reason that a semester like Fall 2014 exists. It was one of my favorite semesters, and while it was the most crazy, I did not receive a low GPA or a lower unit count, as a result. Thus, we cannot explain all these outcomes as a result to activities. In addition, I would not turn back the time and spend less time on activities, as this was one of my favorite parts of college.</p>
 
 
-      <h3>Planning</h3>
+      <h3 id="other-time-planning">Planning</h3>
 
       <p>I'm really big on planning. I would frequently plan out my four year schedule, tear them down, and make new ones, as well as figure out best ways to represent data on Google Calendar and my multiple spreadsheets. The question is here, would it have been more effective to use this time to study more rather than to plan?</p>
 
@@ -474,7 +483,7 @@
 
       <p>Perhaps this worked out this way because I was more uncertain about my future at UC Berkeley or what my records of spreadsheets would like like than later semesters when I honed my craft. Now, I automate and use the same tools, which drastically reduces the amount of time to make them.</p>
 
-      <div class="graph-square" id="SemGradeVPlan"></div>
+      <div class="graph-short" id="SemGradeVPlan"></div>
       <ul>
         <li><strong>Relationship</strong>: Grade vs. time spent planning</li>
         <li><strong>Why it matters</strong>: Do these two factors relate?</li>
@@ -484,14 +493,14 @@
       </ul>
       <p>I've been told (and criticized) for the time I spent planning, and whether I would have been better off doing something else with that time. Well, there clearly isn't a linear correlation, so I think I'm in the clear.</p>
 
-      <h3>Jobs</h3>
+      <h3 id="other-time-jobs">Jobs</h3>
 
       <p>The potential lack of job after graduation weighed on my mind throughout college, and so I attempted to gain more experience by applying to internships, and full time opportunities my senior year. This was one of my most stressful experiences throughout college, and would like to showcase it here as well.</p>
 
       <div class="graph-short" id="SemJobs"></div>
       <p>Clearly I spent more time job hunting as time went on, as I felt more pressure to succeed.</p>
 
-      <div class="graph-square" id="SemGradeVJobs"></div>
+      <div class="graph-short" id="SemGradeVJobs"></div>
       <ul>
         <li><strong>Relationship</strong>: Grade received vs. time spent on job hunting</li>
         <li><strong>Why it matters</strong>: Do these two factors relate?</li>
@@ -502,8 +511,8 @@
 
       <p>There's a weak positive linear correlation between the grade received and this time. I don't have a great logical reason as to why this is the case, perhaps it's a coincidence.</p>
 
-      <h3>Putting it all Together</h3>
-      <div class="graph-square" id="SemGradeVOtherTime"></div>
+      <h3 id="other-time-summary">Putting it all Together</h3>
+      <div class="graph-short" id="SemGradeVOtherTime"></div>
       <ul>
         <li><strong>Relationship</strong>: Grade vs total time spent on non-academic activities</li>
         <li><strong>Why it matters</strong>: Are non-academic activities important for the grade?</li>
@@ -547,7 +556,7 @@
       <p>One thing I want to connect to this analysis is class size. Above, I mention that small class sizes is one of the factors that Ivys boast about, and here we've discovered that there is a moderate negative correlation between the two. <strong>Perhaps one of the reasons UC Berkeley is known for "grade deflation" because the schools we are compared to are those with small class sizes?</strong> Just a thought.</p>
 
 
-      <h2>What Can You Take Away From All This?</h2>
+      <h2 id="findings">What Can You Take Away From All This?</h2>
       <p>Once again, this is solely about my data, and cannot be concluded about everyone. However, a certain grade in the class isn't just because of this-or-this, there is a wide variety of factors that play into a final grade, like how much time you study, and sleep. It's about the combination of points that create a final product.</p>
 
       <h3>Findings</h3>
@@ -595,13 +604,60 @@
   <!-- JAVASCRIPT TO MAKE THIS WORK -->
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]})
+  <script type="text/javascript" src="../assets/js/graphs.js"></script>
+  <script type="text/javascript" src="../assets/js/blog.js"></script>
+  <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+
+      const SEMESTER_DATA_URL = 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0';
+      const INDIVIDUAL_DATA_URL = 'https://docs.google.com/spreadsheets/d/1Lj1mwa9xA3SgPuOISCVY_TReWmf0ecMpHj31NxQRE4s/edit#gid=0';
+
+      [
+        drawSemTime,
+        drawSemVCumulative,
+        drawUnitsVGPA,
+
+        drawGradeVClass,
+        drawGradeVHw,
+        drawGradeVOH,
+        drawGradeVExtra,
+        drawGradeVFirst,
+        drawGradeVFinalGrade,
+        drawFirstVFinal,
+        drawGradeVFinalTime,
+        drawFinalVFinalTime,
+        drawGradeVFinalPercent,
+        drawAvGradeVFinalPercent,
+        drawUnitsVGrade,
+        drawUnitsVAvGrade,
+        drawGradeVSize,
+        drawAvGradeVSize,
+        drawUnitsVAvTime,
+
+        drawSemFun,
+        drawSemUnitsVFun,
+        drawSemGradeVFun,
+        drawFunVTotalAcademicTime,
+        drawSemSleep,
+        drawSemUnitsVSleep,
+        drawSemGradeVSleep,
+        drawSleepVTotalAcademicTime,
+        drawSemActivities,
+        drawSemUnitsVActivities,
+        drawSemGradeVActivities,
+        drawActivitiesVTotalAcademicTime,
+        drawSemPlanning,
+        drawSemGradeVPlan,
+        drawSemJobs,
+        drawSemGradeVJobs,
+        drawSemGradeVOtherTime,
+
+        drawGradeVPercent,
+      ].forEach(f => google.setOnLoadCallback(f));
 
       // OVER TIME
 
       /* Looking at the productive time commitment by semester
-       * Graph: Column with the following bars
        * A: Semester, horizontal axis
        * H: HW
        * I: Class
@@ -610,960 +666,574 @@
        * S: Planning
        * T: Job Preparing
        */
-      google.setOnLoadCallback(drawSemTime);
       function drawSemTime() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ColumnChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+        drawColumnChart({
+          containerId: 'SemTime',
+          'hAxisTitle': 'Semester',
+          'isStacked': 'true',
           query: 'SELECT A,H,I,J,N,S,T',
-          options: {
-            'title': 'Time Spent Productively by Semester',
-            'hAxis': {'title': 'Semester'},
-            'vAxis': {'title': 'Time Spent (Hours)'},
-            'bar': {'groupWidth': '50%'},
-            'isStacked': 'true'
-          },
-          containerId: 'SemTime'
+          'title': 'Time Spent Productively by Semester',
+          url: SEMESTER_DATA_URL,
+          vAxisTitle: 'Time Spent (Hours)',
         });
-        wrapper.draw()
       }
 
       /* Comparing semester and cumulative gpas by semester
-       * Graph: Line
        * A: Semester, cluster
        * G: Semester GPA
        * F: Cumulative GPA
        */
-      google.setOnLoadCallback(drawSemVCumulative);
       function drawSemVCumulative() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'Line',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+        drawLineChart({
+          url: SEMESTER_DATA_URL,
           query: 'SELECT A,G,F',
-          containerId: 'SemVCumulative'
+          containerId: 'SemVCumulative',
         });
-        wrapper.draw()
       }
 
       /* Comparing semester GPA and units
-       * Graph: Line
        * A: Semester, cluster
        * G: Semester GPA
        * E: Units (divided by 5)
        */
-      google.setOnLoadCallback(drawUnitsVGPA);
       function drawUnitsVGPA() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'Line',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+        drawLineChart({
+          url: SEMESTER_DATA_URL,
           query: 'SELECT A,G,E',
-          containerId: 'UnitsVGPA'
+          containerId: 'UnitsVGPA',
         });
-        wrapper.draw()
       }
 
 
       // CORRELATION
 
       /* Comparing the grade and time spent on class
-       * Graph: Scatter
        * E: Grade received
        * J: Going to class
        */
-      google.setOnLoadCallback(drawGradeVClass);
       function drawGradeVClass() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1Lj1mwa9xA3SgPuOISCVY_TReWmf0ecMpHj31NxQRE4s/edit#gid=0',
+        drawScatterChart({
+          url: INDIVIDUAL_DATA_URL,
           query: 'SELECT E,J',
-          options: {
-            'title': 'Grade Received vs. Time Spent Going to Class',
-            'hAxis': {'title': 'Grade Received (GPA)'},
-            'vAxis': {'title': 'Time Spent (hours)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Grade Received vs. Time Spent Going to Class',
+          hAxisTitle: 'Grade Received (GPA)',
+          vAxisTitle: 'Time Spent (hours)',
           containerId: 'GradeVClass'
         });
-        wrapper.draw()
       }
 
       /* Comparing the grade and time spent on homework
-       * Graph: Scatter
        * E: Grade received
        * I: Going to homework
        */
-      google.setOnLoadCallback(drawGradeVHw);
       function drawGradeVHw() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1Lj1mwa9xA3SgPuOISCVY_TReWmf0ecMpHj31NxQRE4s/edit#gid=0',
+        drawScatterChart({
+          url: INDIVIDUAL_DATA_URL,
           query: 'SELECT E,I',
-          options: {
-            'title': 'Grade Received vs. Time Spent on Homework',
-            'hAxis': {'title': 'Grade Received (GPA)'},
-            'vAxis': {'title': 'Time Spent (hours)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              },
-              '1': {}
-            },
-          },
-          containerId: 'GradeVHW'
+          title: 'Grade Received vs. Time Spent on Homework',
+          hAxisTitle: 'Grade Received (GPA)',
+          vAxisTitle: 'Time Spent (hours)',
+          containerId: 'GradeVHW',
         });
-        wrapper.draw()
       }
 
       /* Comparing the grade and time spent on office hours
-       * Graph: Scatter
        * E: Grade received
        * K: Going to office hours
        */
-      google.setOnLoadCallback(drawGradeVOH);
       function drawGradeVOH() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1Lj1mwa9xA3SgPuOISCVY_TReWmf0ecMpHj31NxQRE4s/edit#gid=0',
+        drawScatterChart({
+          url: INDIVIDUAL_DATA_URL,
           query: 'SELECT E,K',
-          options: {
-            'title': 'Grade Received vs. Time Spent Going to Office Hours',
-            'hAxis': {'title': 'Grade Received (GPA)'},
-            'vAxis': {'title': 'Time Spent (hours)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Grade Received vs. Time Spent Going to Office Hours',
+          hAxisTitle: 'Grade Received (GPA)',
+          vAxisTitle: 'Time Spent (hours)',
           containerId: 'GradeVOH'
         });
-        wrapper.draw()
       }
 
       /* Comparing the grade and time spent on extra time
-       * Graph: Scatter
        * E: Grade received
        * P: Going to extra time
        */
-      google.setOnLoadCallback(drawGradeVExtra);
       function drawGradeVExtra() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1Lj1mwa9xA3SgPuOISCVY_TReWmf0ecMpHj31NxQRE4s/edit#gid=0',
+        drawScatterChart({
+          url: INDIVIDUAL_DATA_URL,
           query: 'SELECT E,P',
-          options: {
-            'title': 'Grade Received vs. Time Spent Before the Semester to Prepare',
-            'hAxis': {'title': 'Grade Received (GPA)'},
-            'vAxis': {'title': 'Time Spent (hours)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Grade Received vs. Time Spent Before the Semester to Prepare',
+          hAxisTitle: 'Grade Received (GPA)',
+          vAxisTitle: 'Time Spent (hours)',
           containerId: 'GradeVExtra'
         });
-        wrapper.draw()
       }
 
       /* Comparing the grade and the first exam grade
-       * Graph: Scatter
        * E: Grade received
        * Q: First exam grade received
        */
-      google.setOnLoadCallback(drawGradeVFirst);
       function drawGradeVFirst() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1Lj1mwa9xA3SgPuOISCVY_TReWmf0ecMpHj31NxQRE4s/edit#gid=0',
+        drawScatterChart({
+          url: INDIVIDUAL_DATA_URL,
           query: 'SELECT E,Q',
-          options: {
-            'title': 'Grade Received vs. First Exam Grade',
-            'hAxis': {'title': 'Grade Received (GPA)'},
-            'vAxis': {'title': 'First Exam Grade (%)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Grade Received vs. First Exam Grade',
+          hAxisTitle: 'Grade Received (GPA)',
+          vAxisTitle: 'First Exam Grade (%)',
           containerId: 'GradeVFirst'
         });
-        wrapper.draw()
       }
 
       /* Comparing the grade and the Final exam grade
-       * Graph: Bubble
        * A: Class
        * E: Grade received, horizontal axis
        * R: Final exam grade, vertical axis
        * T: Percent the final is worth
        */
-      google.setOnLoadCallback(drawGradeVFinalGrade);
       function drawGradeVFinalGrade() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'BubbleChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1Lj1mwa9xA3SgPuOISCVY_TReWmf0ecMpHj31NxQRE4s/edit#gid=0',
+        drawBubbleChart({
+          url: INDIVIDUAL_DATA_URL,
           query: 'SELECT A,E,R,T',
-          options: {
-            'title': 'Grade Received vs. Final Exam Grade w/ % Weights',
-            'hAxis': {'title': 'Grade Received (GPA)'},
-            'vAxis': {'title': 'Final Exam Grade (%)'},
-            'bubble': {'textStyle': {'color': 'transparent'}},
-            'colorAxis': 'null' // still looks weird
-          },
+          title: 'Grade Received vs. Final Exam Grade w/ % Weights',
+          hAxisTitle: 'Grade Received (GPA)',
+          vAxisTitle: 'Final Exam Grade (%)',
+          'bubble': {'textStyle': {'color': 'transparent'}},
+          'colorAxis': 'null', // still looks weird
           containerId: 'GradeVFinalGrade'
         });
-        wrapper.draw()
       }
 
       /* Comparing the first exam grade and the final exam grade
-       * Graph: Scatter
        * Q: First exam grade received
        * R: Final exam grade received
        */
-      google.setOnLoadCallback(drawFirstVFinal);
       function drawFirstVFinal() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1Lj1mwa9xA3SgPuOISCVY_TReWmf0ecMpHj31NxQRE4s/edit#gid=0',
+        drawScatterChart({
+          url: INDIVIDUAL_DATA_URL,
           query: 'SELECT Q, R',
-          options: {
-            'title': 'First Exam Grade vs. Final Exam Grade',
-            'hAxis': {'title': 'First Exam Grade (GPA)'},
-            'vAxis': {'title': 'Final Exam Grade (GPA)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'First Exam Grade vs. Final Exam Grade',
+          hAxisTitle: 'First Exam Grade (GPA)',
+          vAxisTitle: 'Final Exam Grade (GPA)',
           containerId: 'FirstVFinal'
         });
-        wrapper.draw()
       }
 
       /* Comparing the grade and the final exam grade
-       * Graph: Bubble
        * A: Class
        * E: Grade, horizontal axis
        * S: Time studying for the final, vertical axis
        * T: Percent the final is worth
        */
-      google.setOnLoadCallback(drawGradeVFinalTime);
       function drawGradeVFinalTime() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'BubbleChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1Lj1mwa9xA3SgPuOISCVY_TReWmf0ecMpHj31NxQRE4s/edit#gid=0',
+        drawBubbleChart({
+          url: INDIVIDUAL_DATA_URL,
           query: 'SELECT A,E,S,T',
-          options: {
-            'title': 'Grade Received w/ GPA Weights vs. Time Spent Studying on the Final',
-            'hAxis': {'title': 'Grade Received (GPA)'},
-            'vAxis': {'title': 'Time Spent Studying'},
-            'bubble': {'textStyle': {'color': 'transparent'}},
-            'colorAxis': 'null' // still looks weird
-          },
+          title: 'Grade Received w/ GPA Weights vs. Time Spent Studying on the Final',
+          hAxisTitle: 'Grade Received (GPA)',
+          vAxisTitle: 'Time Spent Studying',
+          'bubble': {'textStyle': {'color': 'transparent'}},
+          'colorAxis': 'null', // still looks weird
           containerId: 'GradeVFinalTime'
         });
-        wrapper.draw()
       }
 
       /* Comparing the first exam grade and the final exam grade
-       * Graph: Scatter
        * R: Final exam grade received
        * S: Time spent studying for the final
        */
-      google.setOnLoadCallback(drawFinalVFinalTime);
       function drawFinalVFinalTime() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1Lj1mwa9xA3SgPuOISCVY_TReWmf0ecMpHj31NxQRE4s/edit#gid=0',
+        drawScatterChart({
+          url: INDIVIDUAL_DATA_URL,
           query: 'SELECT R,S',
-          options: {
-            'title': 'Final Test Grade Received vs. Time Spent Studying for the Final',
-            'hAxis': {'title': 'Final Test Grade (%)'},
-            'vAxis': {'title': 'Time Spent Studying for the Final (hours)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Final Test Grade Received vs. Time Spent Studying for the Final',
+          hAxisTitle: 'Final Test Grade (%)',
+          vAxisTitle: 'Time Spent Studying for the Final (hours)',
           containerId: 'FinalVFinalTime'
         });
-        wrapper.draw()
       }
 
       /* Comparing the grade received and the final the percentage is worth
-       * Graph: Scatter
        * E: Grade received
        * T: Percentage the final is worth
        */
-      google.setOnLoadCallback(drawGradeVFinalPercent);
       function drawGradeVFinalPercent() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1Lj1mwa9xA3SgPuOISCVY_TReWmf0ecMpHj31NxQRE4s/edit#gid=0',
+        drawScatterChart({
+          url: INDIVIDUAL_DATA_URL,
           query: 'SELECT E,T',
-          options: {
-            'title': 'Grade Received vs. Percentage The Final is Worth',
-            'hAxis': {'title': 'Grade Received (GPA)'},
-            'vAxis': {'title': 'Percentage the Final is Worth'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Grade Received vs. Percentage The Final is Worth',
+          hAxisTitle: 'Grade Received (GPA)',
+          vAxisTitle: 'Percentage the Final is Worth',
           containerId: 'GradeVFinalPercent'
         });
-        wrapper.draw()
       }
 
       /* Comparing the average grade of the class and the final the percentage is worth
-       * Graph: Scatter
        * F: Average grade received
        * T: Percentage the final is worth
        */
-      google.setOnLoadCallback(drawAvGradeVFinalPercent);
       function drawAvGradeVFinalPercent() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1Lj1mwa9xA3SgPuOISCVY_TReWmf0ecMpHj31NxQRE4s/edit#gid=0',
+        drawScatterChart({
+          url: INDIVIDUAL_DATA_URL,
           query: 'SELECT F,T',
-          options: {
-            'title': 'Average Grade vs. Percentage The Final is Worth',
-            'hAxis': {'title': 'Average Grade (GPA)'},
-            'vAxis': {'title': 'Percentage the Final is Worth'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Average Grade vs. Percentage The Final is Worth',
+          hAxisTitle: 'Average Grade (GPA)',
+          vAxisTitle: 'Percentage the Final is Worth',
           containerId: 'AvGradeVFinalPercent'
         });
-        wrapper.draw()
       }
 
       /* Comparing the units and the grade received
-       * Graph: Scatter
        * G: Units
        * E: Grade received
        */
-      google.setOnLoadCallback(drawUnitsVGrade);
       function drawUnitsVGrade() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1Lj1mwa9xA3SgPuOISCVY_TReWmf0ecMpHj31NxQRE4s/edit#gid=0',
+        drawScatterChart({
+          url: INDIVIDUAL_DATA_URL,
           query: 'SELECT G,E',
-          options: {
-            'title': 'Units in the Class vs. Grade Received',
-            'hAxis': {'title': 'Units'},
-            'vAxis': {'title': 'Grade Received (GPA)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Units in the Class vs. Grade Received',
+          hAxisTitle: 'Units',
+          vAxisTitle: 'Grade Received (GPA)',
           containerId: 'UnitsVGrade'
         });
-        wrapper.draw()
       }
 
       /* Comparing the units and the average grade of the class
-       * Graph: Scatter
        * G: Units
        * F: Average grade of the class
        */
-      google.setOnLoadCallback(drawUnitsVAvGrade);
       function drawUnitsVAvGrade() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1Lj1mwa9xA3SgPuOISCVY_TReWmf0ecMpHj31NxQRE4s/edit#gid=0',
+        drawScatterChart({
+          url: INDIVIDUAL_DATA_URL,
           query: 'SELECT G,F',
-          options: {
-            'title': 'Units in the Class vs. Average Grade',
-            'hAxis': {'title': 'Units'},
-            'vAxis': {'title': 'Average Grade (GPA)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Units in the Class vs. Average Grade',
+          hAxisTitle: 'Units',
+          vAxisTitle: 'Average Grade (GPA)',
           containerId: 'UnitsVAvGrade'
         });
-        wrapper.draw()
       }
 
       /* Comparing the units and the size of the class
-       * Graph: Scatter
        * G: Units
        * O: Size of the class
        */
-      google.setOnLoadCallback(drawGradeVSize);
       function drawGradeVSize() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1Lj1mwa9xA3SgPuOISCVY_TReWmf0ecMpHj31NxQRE4s/edit#gid=0',
+        drawScatterChart({
+          url: INDIVIDUAL_DATA_URL,
           query: 'SELECT E,O',
-          options: {
-            'title': 'Grade Received vs. Class Size',
-            'hAxis': {'title': 'Grade Received (GPA)'},
-            'vAxis': {'title': 'Class Size (Enrollment)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Grade Received vs. Class Size',
+          hAxisTitle: 'Grade Received (GPA)',
+          vAxisTitle: 'Class Size (Enrollment)',
           containerId: 'GradeVSize'
         });
-        wrapper.draw()
       }
 
       /* Comparing the units and the grade received
-       * Graph: Scatter
        * F: Average grade of the class
        * O: Size of the class
        */
-      google.setOnLoadCallback(drawAvGradeVSize);
       function drawAvGradeVSize() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1Lj1mwa9xA3SgPuOISCVY_TReWmf0ecMpHj31NxQRE4s/edit#gid=0',
+        drawScatterChart({
+          url: INDIVIDUAL_DATA_URL,
           query: 'SELECT F,O',
-          options: {
-            'title': 'Average Grade vs. Class Size',
-            'hAxis': {'title': 'Average Grade (GPA)'},
-            'vAxis': {'title': 'Class Size (Enrollment)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Average Grade vs. Class Size',
+          hAxisTitle: 'Average Grade (GPA)',
+          vAxisTitle: 'Class Size (Enrollment)',
           containerId: 'AvGradeVSize'
         });
-        wrapper.draw()
       }
 
       /* Comparing the units and the average time spent on each
-       * Graph: Scatter
        * G: Units
        * M: Average time spent on the class
        */
-      google.setOnLoadCallback(drawUnitsVAvTime);
       function drawUnitsVAvTime() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1Lj1mwa9xA3SgPuOISCVY_TReWmf0ecMpHj31NxQRE4s/edit#gid=0',
+        drawScatterChart({
+          url: INDIVIDUAL_DATA_URL,
           query: 'SELECT G,M',
-          options: {
-            'title': 'Units vs. Average Time Spent on the Course',
-            'hAxis': {'title': 'Units'},
-            'vAxis': {'title': 'Time Spent (hours)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Units vs. Average Time Spent on the Course',
+          hAxisTitle: 'Units',
+          vAxisTitle: 'Time Spent (hours)',
           containerId: 'UnitsVAvTime'
         });
-        wrapper.draw()
       }
 
       // OTHER TIME
 
       /* Looking at time spent having fun by semester
-       * Graph: Scatter
        * A: Semester
        * R: Time having fun
        */
-      google.setOnLoadCallback(drawSemFun);
       function drawSemFun() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ColumnChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+        drawColumnChart({
+          url: SEMESTER_DATA_URL,
           query: 'SELECT A,R',
-          options: {
-            'title': 'Time Spent Pleasurely by Semester',
-            'hAxis': {'title': 'Semester'},
-            'vAxis': {'title': 'Time Spent (Hours)'},
-            'bar': {'groupWidth': '50%'},
-            'legend': 'none'
-          },
+          title: 'Time Spent Pleasurely by Semester',
+          hAxisTitle: 'Semester',
+          vAxisTitle: 'Time Spent (Hours)',
+          showLegend: false,
           containerId: 'SemFun'
         });
-        wrapper.draw()
       }
 
       /* Comparing units per semester and time spent having fun
-       * Graph: Scatter
        * D: Units per semester
        * R: Time having fun
        */
-      google.setOnLoadCallback(drawSemUnitsVFun);
       function drawSemUnitsVFun() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+        drawScatterChart({
+          url: SEMESTER_DATA_URL,
           query: 'SELECT D,R',
-          options: {
-            'title': 'Units vs. Time Spent Having Fun',
-            'hAxis': {'title': 'Units'},
-            'vAxis': {'title': 'Time Spent (hours)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Units vs. Time Spent Having Fun',
+          hAxisTitle: 'Units',
+          vAxisTitle: 'Time Spent (hours)',
           containerId: 'SemUnitsVFun'
         });
-        wrapper.draw()
       }
 
       /* Comparing semester GPA and time having fun
-       * Graph: Scatter
        * G: Semester GPA
        * R: Time spent having fun
        */
-      google.setOnLoadCallback(drawSemGradeVFun);
       function drawSemGradeVFun() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+        drawScatterChart({
+          url: SEMESTER_DATA_URL,
           query: 'SELECT G,R',
-          options: {
-            'title': 'Semester GPA vs. Time having Fun',
-            'hAxis': {'title': 'Semester GPA (GPA)'},
-            'vAxis': {'title': 'Time Spent (hours)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Semester GPA vs. Time having Fun',
+          hAxisTitle: 'Semester GPA (GPA)',
+          vAxisTitle: 'Time Spent (hours)',
           containerId: 'SemGradeVFun'
         });
-        wrapper.draw()
       }
 
       /* Comparing time having fun and total academic time
-       * Graph: Scatter
        * R: Time spent having fun
        * M: Time spent on total academic time
        */
-      google.setOnLoadCallback(drawFunVTotalAcademicTime);
       function drawFunVTotalAcademicTime() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+        drawScatterChart({
+          url: SEMESTER_DATA_URL,
           query: 'SELECT M,O',
-          options: {
-            'title': 'Time Having Fun vs. Time on Academics',
-            'hAxis': {'title': 'Time Spent on Fun (hours)'},
-            'vAxis': {'title': 'Time Spent on Academics (hours)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Time Having Fun vs. Time on Academics',
+          hAxisTitle: 'Time Spent on Fun (hours)',
+          vAxisTitle: 'Time Spent on Academics (hours)',
           containerId: 'FunVTotalAcademicTime'
         });
-        wrapper.draw()
       }
 
       /* Looking at time spent sleeping by semester
-       * Graph: Scatter
        * A: Semester
        * R: Time sleeping
        */
-      google.setOnLoadCallback(drawSemSleep);
       function drawSemSleep() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ColumnChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+        drawColumnChart({
+          url: SEMESTER_DATA_URL,
           query: 'SELECT A,Q',
-          options: {
-            'title': 'Time Spent Sleeping by Semester',
-            'hAxis': {'title': 'Semester'},
-            'vAxis': {'title': 'Time Spent (Hours)'},
-            'bar': {'groupWidth': '50%'},
-            'legend': 'none'
-          },
+          title: 'Time Spent Sleeping by Semester',
+          hAxisTitle: 'Semester',
+          vAxisTitle: 'Time Spent (Hours)',
+          showLegend: false,
           containerId: 'SemSleep'
         });
-        wrapper.draw()
       }
 
       /* Comparing units per semester and time spent sleeping
-       * Graph: Scatter
        * D: Units per semester
        * Q: Time sleeping
        */
-      google.setOnLoadCallback(drawSemUnitsVSleep);
       function drawSemUnitsVSleep() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+        drawScatterChart({
+          url: SEMESTER_DATA_URL,
           query: 'SELECT D,Q',
-          options: {
-            'title': 'Units vs. Time Spent Sleeping',
-            'hAxis': {'title': 'Units'},
-            'vAxis': {'title': 'Time Spent (hours)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Units vs. Time Spent Sleeping',
+          hAxisTitle: 'Units',
+          vAxisTitle: 'Time Spent (hours)',
           containerId: 'SemUnitsVSleep'
         });
-        wrapper.draw()
       }
 
       /* Comparing semester GPA and time sleeping
-       * Graph: Scatter
        * G: Semester GPA
        * Q: Time spent sleeping
        */
-      google.setOnLoadCallback(drawSemGradeVSleep);
       function drawSemGradeVSleep() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+        drawScatterChart({
+          url: SEMESTER_DATA_URL,
           query: 'SELECT G,Q',
-          options: {
-            'title': 'Semester GPA vs. Time Sleeping',
-            'hAxis': {'title': 'Semester GPA (GPA)'},
-            'vAxis': {'title': 'Time Spent (hours)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Semester GPA vs. Time Sleeping',
+          hAxisTitle: 'Semester GPA (GPA)',
+          vAxisTitle: 'Time Spent (hours)',
           containerId: 'SemGradeVSleep'
         });
-        wrapper.draw()
       }
 
       /* Comparing time sleeping and total academic time
-       * Graph: Scatter
        * Q: Time spent sleeping
        * M: Time spent on total academic time
        */
-      google.setOnLoadCallback(drawSleepVTotalAcademicTime);
       function drawSleepVTotalAcademicTime() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+        drawScatterChart({
+          url: SEMESTER_DATA_URL,
           query: 'SELECT Q,M',
-          options: {
-            'title': 'Time Sleeping vs. Time on Academics',
-            'hAxis': {'title': 'Time Spent on Sleep (hours)'},
-            'vAxis': {'title': 'Time Spent on Academics (hours)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Time Sleeping vs. Time on Academics',
+          hAxisTitle: 'Time Spent on Sleep (hours)',
+          vAxisTitle: 'Time Spent on Academics (hours)',
           containerId: 'SleepVTotalAcademicTime'
         });
-        wrapper.draw()
       }
 
       /* Looking at time spent doing activities by semester
-       * Graph: Scatter
        * A: Semester
        * N: Time doing activities
        */
-      google.setOnLoadCallback(drawSemActivities);
       function drawSemActivities() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ColumnChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+        drawColumnChart({
+          url: SEMESTER_DATA_URL,
           query: 'SELECT A,N',
-          options: {
-            'title': 'Time Spent Doing Activities by Semester',
-            'hAxis': {'title': 'Semester'},
-            'vAxis': {'title': 'Time Spent (Hours)'},
-            'bar': {'groupWidth': '50%'},
-            'legend': 'none'
-          },
+          title: 'Time Spent Doing Activities by Semester',
+          hAxisTitle: 'Semester',
+          vAxisTitle: 'Time Spent (Hours)',
+          showLegend: false,
           containerId: 'SemActivities'
         });
-        wrapper.draw()
       }
 
       /* Comparing units per semester and time spent on Activities
-       * Graph: Scatter
        * D: Units per semester
        * Q: Time on Activities
        */
-      google.setOnLoadCallback(drawSemUnitsVActivities);
       function drawSemUnitsVActivities() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+        drawScatterChart({
+          url: SEMESTER_DATA_URL,
           query: 'SELECT D,N',
-          options: {
-            'title': 'Units vs. Time Spent on Activities',
-            'hAxis': {'title': 'Units'},
-            'vAxis': {'title': 'Time Spent (hours)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Units vs. Time Spent on Activities',
+          hAxisTitle: 'Units',
+          vAxisTitle: 'Time Spent (hours)',
           containerId: 'SemUnitsVActivities'
         });
-        wrapper.draw()
       }
 
       /* Comparing semester GPA and time on Activities
-       * Graph: Scatter
        * G: Semester GPA
        * Q: Time spent on Activities
        */
-      google.setOnLoadCallback(drawSemGradeVActivities);
       function drawSemGradeVActivities() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+        drawScatterChart({
+          url: SEMESTER_DATA_URL,
           query: 'SELECT G,N',
-          options: {
-            'title': 'Semester GPA vs. Time on Activities',
-            'hAxis': {'title': 'Semester GPA (GPA)'},
-            'vAxis': {'title': 'Time Spent (hours)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Semester GPA vs. Time on Activities',
+          hAxisTitle: 'Semester GPA (GPA)',
+          vAxisTitle: 'Time Spent (hours)',
           containerId: 'SemGradeVActivities'
         });
-        wrapper.draw()
       }
 
       /* Comparing time on Activities and total academic time
-       * Graph: Scatter
        * Q: Time spent on Activities
        * M: Time spent on total academic time
        */
-      google.setOnLoadCallback(drawActivitiesVTotalAcademicTime);
       function drawActivitiesVTotalAcademicTime() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+        drawScatterChart({
+          url: SEMESTER_DATA_URL,
           query: 'SELECT N,M',
-          options: {
-            'title': 'Time on Activities vs. Time on Academics',
-            'hAxis': {'title': 'Time Spent on Activities (hours)'},
-            'vAxis': {'title': 'Time Spent on Academics (hours)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Time on Activities vs. Time on Academics',
+          hAxisTitle: 'Time Spent on Activities (hours)',
+          vAxisTitle: 'Time Spent on Academics (hours)',
           containerId: 'ActivitiesVTotalAcademicTime'
         });
-        wrapper.draw()
       }
 
       /* Looking at time spent planning by semester
-       * Graph: Scatter
        * A: Semester
        * S: Time planning
        */
-      google.setOnLoadCallback(drawSemPlanning);
       function drawSemPlanning() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ColumnChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+        drawColumnChart({
+          url: SEMESTER_DATA_URL,
           query: 'SELECT A,S',
-          options: {
-            'title': 'Time Spent Planning by Semester',
-            'hAxis': {'title': 'Semester'},
-            'vAxis': {'title': 'Time Spent (Hours)'},
-            'bar': {'groupWidth': '50%'},
-            'legend': 'none'
-          },
+          title: 'Time Spent Planning by Semester',
+          hAxisTitle: 'Semester',
+          vAxisTitle: 'Time Spent (Hours)',
+          showLegend: false,
           containerId: 'SemPlanning'
         });
-        wrapper.draw()
       }
 
       /* Comparing semester GPA and time planning
-       * Graph: Scatter
        * G: Semester GPA
        * S: Time planning
        */
-      google.setOnLoadCallback(drawSemGradeVPlan);
       function drawSemGradeVPlan() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+        drawScatterChart({
+          url: SEMESTER_DATA_URL,
           query: 'SELECT G,S',
-          options: {
-            'title': 'Semester GPA vs. Time planning',
-            'hAxis': {'title': 'Semester GPA (GPA)'},
-            'vAxis': {'title': 'Time Spent (hours)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Semester GPA vs. Time planning',
+          hAxisTitle: 'Semester GPA (GPA)',
+          vAxisTitle: 'Time Spent (hours)',
           containerId: 'SemGradeVPlan'
         });
-        wrapper.draw()
       }
 
       /* Looking at time spent job hunting by semester
-       * Graph: Scatter
        * A: Semester
        * S: Time job hunting
        */
-      google.setOnLoadCallback(drawSemJobs);
       function drawSemJobs() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ColumnChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+        drawColumnChart({
+          url: SEMESTER_DATA_URL,
           query: 'SELECT A,T',
-          options: {
-            'title': 'Time Spent Job Hunting by Semester',
-            'hAxis': {'title': 'Semester'},
-            'vAxis': {'title': 'Time Spent (Hours)'},
-            'bar': {'groupWidth': '50%'},
-            'legend': 'none'
-          },
+          title: 'Time Spent Job Hunting by Semester',
+          hAxisTitle: 'Semester',
+          vAxisTitle: 'Time Spent (Hours)',
+          showLegend: false,
           containerId: 'SemJobs'
         });
-        wrapper.draw()
       }
 
       /* Comparing semester GPA and time job hunting
-       * Graph: Scatter
        * G: Semester GPA
        * T: Time job hunting
        */
-      google.setOnLoadCallback(drawSemGradeVJobs);
       function drawSemGradeVJobs() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+        drawScatterChart({
+          url: SEMESTER_DATA_URL,
           query: 'SELECT G,T',
-          options: {
-            'title': 'Semester GPA vs. Time Job Hunting',
-            'hAxis': {'title': 'Semester GPA (GPA)'},
-            'vAxis': {'title': 'Time Spent (hours)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Semester GPA vs. Time Job Hunting',
+          hAxisTitle: 'Semester GPA (GPA)',
+          vAxisTitle: 'Time Spent (hours)',
           containerId: 'SemGradeVJobs'
         });
-        wrapper.draw()
       }
 
       /* Comparing semester GPA and other time
-       * Graph: Scatter
        * G: Semester GPA
        * U: Other time
        */
-      google.setOnLoadCallback(drawSemGradeVOthertime);
-      function drawSemGradeVOthertime() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+      function drawSemGradeVOtherTime() {
+        drawScatterChart({
+          url: SEMESTER_DATA_URL,
           query: 'SELECT G,U',
-          options: {
-            'title': 'Semester GPA vs. Other Time',
-            'hAxis': {'title': 'Semester GPA (GPA)'},
-            'vAxis': {'title': 'Time Spent (hours)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Semester GPA vs. Other Time',
+          hAxisTitle: 'Semester GPA (GPA)',
+          vAxisTitle: 'Time Spent (hours)',
           containerId: 'SemGradeVOtherTime'
         });
-        wrapper.draw()
       }
 
       // DEFLATION
 
       /* Comparing grade received and percentage received
-       * Graph: Scatter
        * E: Grade received
        * H: Percentage received
        * V: Predicted percentage
        */
-      google.setOnLoadCallback(drawGradeVPercent);
       function drawGradeVPercent() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1Lj1mwa9xA3SgPuOISCVY_TReWmf0ecMpHj31NxQRE4s/edit#gid=0',
+        drawScatterChart({
+          url: INDIVIDUAL_DATA_URL,
           query: 'SELECT E,H,V',
-          options: {
-            'title': 'Grade Received vs. Percentage Received',
-            'hAxis': {'title': 'Grade Received (GPA)'},
-            'vAxis': {'title': 'Percentage (%)'},
-            'trendlines': {
-              '0': {
-              },
-              '1': {
-                'lineWidth': 30,
-              }
-            },
-          },
+          title: 'Grade Received vs. Percentage Received',
+          hAxisTitle: 'Grade Received (GPA)',
+          vAxisTitle: 'Percentage (%)',
+          extraTrendline: {'lineWidth': 30},
           containerId: 'GradeVPercent'
         });
-        wrapper.draw()
       }
 
       // http://www.abeautifulsite.net/smoothly-scroll-to-an-element-without-a-jquery-plugin-2/

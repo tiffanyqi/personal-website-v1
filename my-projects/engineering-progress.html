@@ -31,7 +31,7 @@
     <div class="container">
         <!-- INTRODUCTION AND METHODOLOGY -->
         <h1 id="top">A Study in Software Engineering Progress</h1>
-        <div class="date">April 7, 2019</div>
+        <div class="date">April 2019</div>
 
         <p>
             I’ve officially been a software engineer at Mixpanel for one year! For the full year, I’ve been tracking my progress via Github and thought I’d share my results since then. You can skip the background and methodology if you wish by going directly to the <a href="#data">Data</a> or the <a href="#findings">Findings</a>.
@@ -136,13 +136,13 @@
         <p>
             Here's the same graph but instead broken up in chunks of 20 workday cycles. Overall it follows the path as shown by the previous graph, except it's more obvious where the peaks are. For example, the highest post-review period that overtook the pre-review in March 2018 was during Eng Path/KEEP. A second high post-review time was in August 2018, which was during L1/D2.
         </p>
-        <div class="graph-square" id="prpr-graph-pre-hours-vs-post-hours">
+        <div class="graph-short" id="prpr-graph-pre-hours-vs-post-hours">
             [Hours of pre-review vs. hours of post-review graph]
         </div>
         <p>
             Is there a correlation between the hours of pre-review and post-review? Plotting all the data on a single graph, the coefficient of determination is 0.346, which suggests a positive moderate correlation between the two. Of course there are many outliers on this graph, such as the dot highest on post-review was a PR from Eng Path/KEEP and the one with the highest pre-review was from L1/KEEP.
         </p>
-        <div class="graph-square" id="prpr-graph-no-outliers-pre-hours-vs-post-hours">
+        <div class="graph-short" id="prpr-graph-no-outliers-pre-hours-vs-post-hours">
             [Hours of pre-review vs. hours of post-review graph with no outliers]
         </div>
         <p>
@@ -240,19 +240,19 @@
         <p>
             Here is the same graph broken up by 20 weekday periods. Again, it's clear that the average comments decrease within projects. Interestingly there are more comments in July and August 2018, and in AL (December 2018 to March 2019) the comments continue to increase.
         </p>
-        <div class="graph-square" id="comments-graph-month-av-hours-vs-av-comments">
+        <div class="graph-short" id="comments-graph-month-av-hours-vs-av-comments">
             [average hours worked in PR vs average comments per pr graph by month]
         </div>
         <p>
             Out of curiosity, here's the plot between the average hours worked in PR and average comments per PR broken up by 20 weekday periods. The correlation of determination is 0.682, which suggests that the data is strongly positively linearly correlated.
         </p>
-        <div class="graph-square" id="comments-graph-hours-worked-vs-comments">
+        <div class="graph-short" id="comments-graph-hours-worked-vs-comments">
             [hours worked vs comments graph]
         </div>
         <p>
             I also plot the number of hours worked per PR with the number of comments to see if there is a correlation between the two. The coefficient of determination is 0.598, which does suggest somewhat of a positive linear correlation between the two. There are still outliers here, such as the dot highest on post-review that was a PR from Eng Path/KEEP and the one with the highest pre-review was from L1/KEEP.
         </p>
-        <div class="graph-square" id="comments-graph-no-outliers-hours-worked-vs-comments">
+        <div class="graph-short" id="comments-graph-no-outliers-hours-worked-vs-comments">
             [hours worked vs comments graph without outliers]
         </div>
         <p>
@@ -288,13 +288,13 @@
         <p>
             Here's the same graph broken out up 20 workday cycles. This graph looks almost just like the comments graph, as the cadence decrease within projects but that it takes longer to deploy in July and August 2018 and in AL (December 2018 to March 2019).
         </p>
-        <div class="graph-square" id="prs-graph-month-cadence-vs-comments">
+        <div class="graph-short" id="prs-graph-month-cadence-vs-comments">
             [pr every x day vs comments graph by month]
         </div>
         <p>
             Since the cadence graph and the comments graph broken up by 20 workday cycles looked so similar, I wanted to see what they look like together. The coefficient of determination is 0.259, which is considered weak. But, I'm not convinced.
         </p>
-        <div class="graph-square" id="prs-graph-no-outliers-month-cadence-vs-comments">
+        <div class="graph-short" id="prs-graph-no-outliers-month-cadence-vs-comments">
             [pr every x day vs comments graph by month without outliers]
         </div>
         <p>
@@ -339,25 +339,25 @@
         <p>
             Again, this graph is pretty similar to the above two, most likely as a result from the larger PRs that bumped up the amount of code.
         </p>
-        <div class="graph-square" id="code-graph-hours-worked-vs-code-added">
+        <div class="graph-short" id="code-graph-hours-worked-vs-code-added">
             [total hours worked vs different lines of code graph]
         </div>
         <p>
             The coefficient of determination here is 0.555, which suggests that the total hours worked per PR and the amount of lines of code added is leaning towards strongly linearly correlated. Again there are more outliers, such as the 785 lined PR that took 53.5 hours to complete from L1/D2, and the 556 lined PR took 17.25 hours to complete from L2/AL.
         </p>
-        <div class="graph-square" id="code-graph-no-outliers-hours-worked-vs-code-added">
+        <div class="graph-short" id="code-graph-no-outliers-hours-worked-vs-code-added">
             [total hours worked per PR vs different lines of code graph no outliers]
         </div>
         <p>
             Here's the same graph with the outliers removed. Outliers are defined as the number of hours worked are above 16 and code added is fewer than -66 and more than 114. The coefficient of determination is 0.409, which suggests that the total hours worked per PR and the amount of lines of coded added are still moderately linearly correlated, but not as strong as thought.
         </p>
-        <div class="graph-square" id="code-graph-code-added-vs-comments">
+        <div class="graph-short" id="code-graph-code-added-vs-comments">
             [lines of code per PR vs comments per PR graph]
         </div>
         <p>
             Out of curiosity, I also plotted the lines of code with the comments per PR. The coefficient of determination is 0.211, which suggests a moderate linear correlation.
         </p>
-        <div class="graph-square" id="code-graph-no-outliers-code-added-vs-comments">
+        <div class="graph-short" id="code-graph-no-outliers-code-added-vs-comments">
             [lines of code per PR vs comments per PR graph no outliers]
         </div>
         <p>
@@ -371,36 +371,39 @@
         <!-- FINDINGS -->
         <h2 id="findings">Findings</h2>
         <p>
-            <strong>Smaller PRs equal higher productivity.</strong> I shifted from containing all code into a single PR for a feature to breaking up a single feature into smaller iterative PRs. This single shift was largely responsible for a decrease in time spent per PR (pre-review, post-review, average working time), decrease in comments per PR, and increase in number of PRs deployed. Breaking PRs up into smaller chunks allows reviewers to understand a larger whole piece by piece and catch things that might have otherwise be missed on a larger PR. This is a common practice at Mixpanel and something that we encourage all of our engineers to do.
-        </p>
-        <p>
-            <strong>I improved, probably.</strong> Comparing Eng Path data to now and within projects (KEEP and D2), it’s clear that there are fewer comments, more PRs deployed, and a higher ratio of pre-review to post-review, which does appear to be closer to the “LGTM” state. Even though L2/AL seems to show a slight lower PR deploy cadence and more comments when breaking apart by month, that doesn’t necessarily mean that I’ve taken a step back. For example, AL is a completely new project with its different set of challenges more fitting of my level than of previous projects as on the eng path or L1. However, tying in a difficulty component to each project would confirm this.
-        </p>
-        <p>
-            <strong>Starting new projects at first will look less productive than usual. </strong> When I start a new project, within that month I average more comments per PR, less time spent, a lower pre-review ratio, and less code added to production. Perhaps this is because I'm researching or still figuring things out, which leads to PRs that have more comments and more non-PR work. However, over time when I'm in the zone or know what's going on, these numbers all trend towards the positive.
-        </p>
-        <p>
-            <strong>I spend less time fixing my devbox than I thought.</strong> This surprised me. Our devboxes often error, and it seems like the end of the world when the normal mechanisms of rebooting them don't work. However, it looks like right now I only spend about 14 minutes per day fixing issues or improving my environment, which is about an hour per week. This is less than my predicted 2 hours per week.
-        </p>
-        <p>
-            <strong>I spend more time deploying code than I thought.</strong> Deployment at Mixpanel involves pushing changes to staging (which can take time waiting in line to get the staging locks and running all necessary successful deployment pieces for staging), testing the change on staging, and actually deploying code (which can take more time for the whole cron to complete). And with the increase in the number of PRs deployed, so does the amount of time it takes to go through with the deployment process. I spend 26 minutes per day (2 hours per week), which is even more than fixing my devbox!
-        </p>    
-        <p>
             <strong>I spend on average 5.68 hours per day productively, 4.50 on PRs.</strong> The PR number has decreased lately, while the number of productive hours has increased over time. That means in a typical 8 hour day, 73.3% is spent productively, which...isn’t totally a bad number?
         </p>
         <p>
-            <strong>The average cadence between PRs, average hours spent per PR, and the average number of comments per PR per month are strongly positively correlated. </strong>This implies that the larger or more complicated the PR (as it takes longer to deploy), the more comments are left, which makes sense. What's interesting is that when we look at the raw numbers rather than the averages by month, the correlations between these three factors and the hours it takes to produce are weak to moderate at best.
+            <strong>Did I improve?</strong> Probably. It's clear that there are fewer comments, more PRs deployed, and a higher ratio of pre-review to post-review in general and within projects, which does appear to be closer to the LGTM state. There were some fluctuations in accordance with the start of a new project, which suggests…
+        </p>
+        <p>
+            <strong>Starting new projects at first will look less productive than usual. </strong>When I start a new project, within that month I average more comments per PR, less time spent, a lower pre-review ratio, and less code added to production. Perhaps this is because I'm researching or still figuring things out, which leads to PRs that have more comments and more non-PR work. However, over time when I'm in the zone or know what's going on, these numbers all trend towards the positive.
+        </p>
+        <p>
+            <strong>There's a weak positive correlation between hours of pre-review and post-review per PR.</strong> Just because I spend more time on a PR before submitting for review doesn't necessarily mean that that PR will have a lower post-review time.
+        </p>
+        <p>
+            <strong>Simple PRs on average get code out faster.</strong> This seems obvious, but the data does prove it. Average cadence between PRs, average hours spent per PR, and the average number of comments per PR per month are strongly positive correlated, which implies that (averaged out over a month) the more complicated the PR (as it takes longer to deploy), the more comments are left, and the longer it takes to work on. However…
+        </p>
+        <p>
+            <strong>"Simple PRs" doesn't necessarily mean "small PRs".</strong> When we look at the raw numbers rather than the averages by month from the above, the correlations between these amount of comments, lines of code, and hours spent per PR are weak to moderate at best, which suggests that it's hard to define quantitatively what it means for a PR to be "simple". However, there's a higher chance of simplicity if we break PRs up into smaller chunks, which allows reviewers to understand a larger whole piece by piece and catch things that might have otherwise be missed on a larger PR. This is a common practice at Mixpanel and something that we encourage all of our engineers to do.
+        </p>
+        <p>
+            <strong>I spend more time deploying than fixing my devbox.</strong> This surprised me. Our devboxes often error, and it seems like the end of the world when the normal mechanisms of rebooting them don't work. However it looks like I spend on average 14 minutes per day fixing my devbox (which is less than expected) and on average 26 minutes deploying code to production per day (which is more than expected).
         </p>
 
         <h2 id="conclusion">Conclusion</h2>
         <p>
-            I’ve learned a lot about software engineering over the past year, and there’s a lot more that I have to learn. I definitely have a long way to go before I can create a significant PR with LGTM, but for now I’m happy that I no longer have to see 99 comments on a single PR: fingers crossed.
+            I've learned a lot about software engineering over the past year, and there's always more to learn. I definitely have a long way to go before I can create a significant PR with LGTM, but for now I'm pleased with the fact that there is progress.
         </p>
         <p>
-            I plan to continue breaking up larger features into smaller PRs and spending more time on the pre-review stage (ensuring the methodology is correct and doing research). In addition, I should find some way to decrease the deployment time and increase the amount of productive and coding time.
+            This analysis raised more questions than answers, especially about how to show that productivity has increased. Does it mean that time spent should be increased? Does it mean deploying more PRs (or complete more JIRA tasks), or contributing more lines of code? Each have their pros and cons. For example, increasing time spent could also mean that it takes me longer to produce the same code (thus being not as productive). Deploying more PRs could mean something as small as a one line change or it could mean creating more PRs to fix more bugs, which also isn't good. Contributing more lines of code could just mean more line breaks or comments, and sometimes removing more code is better than creating more of it. Maybe it's a combination of all three?
         </p>
         <p>
-            What do you think about this data and the conclusions I’ve presented here? I encourage all comments and look forward to an open discussion. I welcome anyone who'd like to discuss further about my results to comment and read about more feelings here.
+            For now, I plan to continue breaking up larger features into smaller PRs to decrease the complexity of the overall whole. While the data doesn't necessarily suggest this, I do plan to spend more time on the pre-review stage (ensuring the methodology is correct and doing research) since that doesn't hurt. I'll also continue to ruminate on how to track productivity, and when I figure it out, I'll compare it to all sorts of factors that I happen to have on hand.
+        </p>
+        <p>
+            What do you think about this data and the conclusions I've presented here? How would you define productivity or success quantitatively? Happy to discuss!
         </p>
 
         <h2 id="acknowledgements">Acknowledgements</h2>
@@ -487,7 +490,7 @@
             drawColumnChart({
                 containerId: 'prpr-graph-av-pre-and-post',
                 query: 'SELECT A,B,C,D,E',
-                title: 'Average Hours Spent on Pre-Review and Post-Review',
+                title: 'Average Hours Spent on Pre-Review and Post-Review per PR over Time',
                 url: SUMMARY_DATA_URL,
                 vAxisTitle: 'Hours',
             });
@@ -496,7 +499,7 @@
             drawLineChart({
                 containerId: 'prpr-graph-month-av-pre-and-post',
                 query: 'SELECT A,C,D,E,F',
-                title: 'Average Hours Spent on Pre-Review and Post-Review by Month',
+                title: 'Average Hours Spent on Pre-Review and Post-Review per PR by Month',
                 url: MONTH_DATA_URL,
                 vAxisTitle: 'Hours',
             });
@@ -506,24 +509,29 @@
                 containerId: 'prpr-graph-max-hours',
                 isStacked: 'false',
                 query: 'SELECT A,F,G',
-                title: 'Max Hours of Pre-Review and Post-Review in PR',
+                title: 'Max Hours of Pre-Review and Post-Review in PR over Time',
                 url: SUMMARY_DATA_URL,
+                vAxisTitle: 'Hours',
             });
         };
         function drawHoursPreReviewVsPostReview() {
             drawScatterChart({
                 containerId: 'prpr-graph-pre-hours-vs-post-hours',
+                hAxisTitle: 'Hours of Pre-Review per PR',
                 query: 'SELECT C,D',
                 title: 'Hours of Pre-Review vs Hours of Post-Review per PR',
                 url: RAW_DATA_URL,
+                vAxisTitle: 'Hours of Post-Review per PR',
             });
         };
         function drawHoursPreReviewVsPostReviewNoOutliers() {
             drawScatterChart({
                 containerId: 'prpr-graph-no-outliers-pre-hours-vs-post-hours',
+                hAxisTitle: 'Hours of Pre-Review per PR',
                 query: 'SELECT C,D WHERE C < 12.625 AND D < 3.75',
                 title: 'Hours of Pre-Review vs Hours of Post-Review per PR without Outliers',
                 url: RAW_DATA_URL,
+                vAxisTitle: 'Hours of Post-Review per PR',
             });
         };
         function drawPreReviewPostReviewRatio() {
@@ -531,7 +539,7 @@
                 containerId: 'prpr-graph-pre-post-ratio',
                 isStacked: 'percent',
                 query: 'SELECT B,E,F',
-                title: 'Pre-Review vs Post-Review Ratio Change Over Time',
+                title: 'Pre-Review vs Post-Review Ratio per PR Change Over Time',
                 url: RAW_DATA_URL,
             });
         }
@@ -540,7 +548,7 @@
                 containerId: 'prpr-graph-av-pre-post',
                 isStacked: 'true',
                 query: 'SELECT A,H,I',
-                title: 'Average Pre-Review and Post-Review Hours',
+                title: 'Average Pre-Review and Post-Review Hours per PR over Time',
                 url: SUMMARY_DATA_URL,
             });
         };
@@ -549,7 +557,7 @@
                 containerId: 'prpr-graph-month-av-pre-post',
                 isStacked: 'true',
                 query: 'SELECT A,G,H',
-                title: 'Average Pre-Review and Post-Review Hours by Month',
+                title: 'Average Pre-Review and Post-Review Hours per PR by Month',
                 url: MONTH_DATA_URL,
             });
         };
@@ -559,8 +567,9 @@
             drawColumnChart({
                 containerId: 'time-graph-av-hours-pr-day',
                 query: 'SELECT A,L,M',
-                title: 'Average Total Hours Worked on PR and Average Hours Spent Per Day on PR',
+                title: 'Average Total Hours Worked on PR and Average Hours Spent Per Day on PR over Time',
                 url: SUMMARY_DATA_URL,
+                vAxisTitle: 'Hours',
             });
         }
         function drawAvHoursCodingPerDay() {
@@ -569,8 +578,9 @@
                 isStacked: 'false',
                 query: 'SELECT A,N',
                 showLegend: false,
-                title: 'Average Hours Spent on PRs per Day',
+                title: 'Average Hours Spent on PRs per Day over Time',
                 url: SUMMARY_DATA_URL,
+                vAxisTitle: 'Hours',
             });
         };
         function drawAvHoursCodingPerDayMonth() {
@@ -580,6 +590,7 @@
                 showLegend: false,
                 title: 'Average Hours Spent on PRs per Day by Month',
                 url: MONTH_DATA_URL,
+                vAxisTitle: 'Hours',
             });
         };
         function drawAvHoursProductivePerDay() {
@@ -587,8 +598,9 @@
                 containerId: 'time-graph-av-hours-productive',
                 isStacked: 'true',
                 query: 'SELECT A,O,P,Q,R,S,T,U',
-                title: 'Average Hours Spent on Productive Work Per Day',
+                title: 'Average Hours Spent on Productive Work Per Day over Time',
                 url: SUMMARY_DATA_URL,
+                vAxisTitle: 'Hours',
             });
         };
 
@@ -596,17 +608,21 @@
         function drawHoursWorkedVsComments() {
             drawScatterChart({
                 containerId: 'comments-graph-hours-worked-vs-comments',
+                hAxisTitle: 'Hours',
                 query: 'SELECT H,K',
-                title: 'Hours of Worked per PR vs Comments per PR',
+                title: 'Hours Worked per PR vs Number of Comments per PR',
                 url: RAW_DATA_URL,
+                vAxisTitle: 'Number of Comments',
             });
         }
         function drawHoursWorkedVsCommentsNoOutliers() {
             drawScatterChart({
                 containerId: 'comments-graph-no-outliers-hours-worked-vs-comments',
+                hAxisTitle: 'Hours',
                 query: 'SELECT H,K WHERE H < 16 and K < 21',
-                title: 'Hours of Worked per PR vs Comments per PR without Outliers',
+                title: 'Hours Worked per PR vs Number of Comments per PR without Outliers',
                 url: RAW_DATA_URL,
+                vAxisTitle: 'Number of Comments',
             });
         }
         function drawAvCommentsMostComments() {
@@ -614,8 +630,9 @@
                 containerId: 'comments-graph-av-most-comments',
                 isStacked: 'false',
                 query: 'SELECT A,V,W',
-                title: 'Average Comments per PR and Most Comments in PR',
+                title: 'Average Comments per PR and Most Comments in PR over Time',
                 url: SUMMARY_DATA_URL,
+                vAxisTitle: 'Number of Comments',
             });
         };
         function drawAvCommentsMonth() {
@@ -625,14 +642,17 @@
                 showLegend: false,
                 title: 'Average Comments in PR by Month',
                 url: MONTH_DATA_URL,
+                vAxisTitle: 'Number of Comments',
             });
         };
         function drawAvHoursVsAvCommentsMonth() {
             drawScatterChart({
                 containerId: 'comments-graph-month-av-hours-vs-av-comments',
+                hAxisTitle: 'Hours',
                 query: 'SELECT J,M',
-                title: 'Average Hours Worked vs Average Comments by Month',
+                title: 'Average Hours Worked per PR vs Average Comments per PR by Month',
                 url: MONTH_DATA_URL,
+                vAxisTitle: 'Number of Comments',
             });
         };
 
@@ -642,7 +662,7 @@
                 containerId: 'prs-graph-percent-large-prs',
                 query: 'SELECT A,X',
                 showLegend: false,
-                title: 'Percentage of Large PRs',
+                title: 'Percentage of Large PRs over Time',
                 url: SUMMARY_DATA_URL,
             });
         };
@@ -651,8 +671,9 @@
                 containerId: 'prs-graph-cadence',
                 query: 'SELECT A,Y',
                 showLegend: false,
-                title: 'PR Every X Day',
+                title: 'PR Every X Day over Time',
                 url: SUMMARY_DATA_URL,
+                vAxisTitle: 'Days',
             });
         };
         function drawPRCadenceMonth() {
@@ -662,22 +683,27 @@
                 showLegend: false,
                 title: 'PR Every X Day by Month',
                 url: MONTH_DATA_URL,
+                vAxisTitle: 'Days',
             });
         };
         function drawPRCadenceVsComments() {
             drawScatterChart({
                 containerId: 'prs-graph-month-cadence-vs-comments',
+                hAxisTitle: 'Days',
                 query: 'SELECT P,M',
                 title: 'PR Every X Day vs Comments by Month',
                 url: MONTH_DATA_URL,
+                vAxisTitle: 'Number of Comments',
             });
         };
         function drawPRCadenceVsCommentsNoOutliers() {
             drawScatterChart({
                 containerId: 'prs-graph-no-outliers-month-cadence-vs-comments',
+                hAxisTitle: 'Days',
                 query: 'SELECT P,M WHERE M > 1.5',
                 title: 'PR Every X Day vs Comments by Month without Outliers',
                 url: MONTH_DATA_URL,
+                vAxisTitle: 'Number of Comments',
             });
         };
         function drawPRType() {
@@ -685,8 +711,9 @@
                 containerId: 'prs-graph-type',
                 isStacked: 'true',
                 query: 'SELECT A,Z,AA,AB',
-                title: 'PR Types',
+                title: 'PR Types over Time',
                 url: SUMMARY_DATA_URL,
+                vAxisTitle: 'Number of PRs',
             });
         };
 
@@ -696,8 +723,9 @@
                 containerId: 'code-graph-av-lines-code-day',
                 query: 'SELECT A,AC',
                 showLegend: false,
-                title: 'Average Lines of Code Added per Day',
+                title: 'Average Lines of Code Added per Day over Time',
                 url: SUMMARY_DATA_URL,
+                vAxisTitle: 'Lines of Code',
             });
         };
         function drawAvLinesCodePerDayMonth() {
@@ -707,6 +735,7 @@
                 showLegend: false,
                 title: 'Average Lines of Code Added per Day by Month',
                 url: MONTH_DATA_URL,
+                vAxisTitle: 'Lines of Code',
             });
         };
         function drawMaxLinesCodeInPR() {
@@ -714,8 +743,9 @@
                 containerId: 'code-graph-max-lines-code-pr',
                 query: 'SELECT A,AD',
                 showLegend: false,
-                title: 'Max Lines of Code Added in a PR',
+                title: 'Max Lines of Code Added in a PR over Time',
                 url: SUMMARY_DATA_URL,
+                vAxisTitle: 'Lines of Code',
             });
         };
         function drawAvLinesCodeInPR() {
@@ -723,40 +753,49 @@
                 containerId: 'code-graph-av-lines-code-pr',
                 query: 'SELECT A,AE',
                 showLegend: false,
-                title: 'Average Different Lines of Code in PR',
+                title: 'Average Different Lines of Code per PR over Time',
                 url: SUMMARY_DATA_URL,
+                vAxisTitle: 'Lines of Code',
             });
         };
         function drawHoursWorkedVsCode() {
             drawScatterChart({
                 containerId: 'code-graph-hours-worked-vs-code-added',
+                hAxisTitle: 'Hours',
                 query: 'SELECT H,J',
-                title: 'Hours of Worked per PR vs Code Added per PR',
+                title: 'Hours Worked per PR vs Code Added per PR',
                 url: RAW_DATA_URL,
+                vAxisTitle: 'Lines of Code',
             });
         }
         function drawHoursWorkedVsCodeNoOutliers() {
             drawScatterChart({
                 containerId: 'code-graph-no-outliers-hours-worked-vs-code-added',
+                hAxisTitle: 'Hours',
                 query: 'SELECT H,J WHERE H < 16 AND J < 114 AND J > -66',
-                title: 'Hours of Worked per PR vs Code Added per PR',
+                title: 'Hours Worked per PR vs Code Added per PR Without Outliers',
                 url: RAW_DATA_URL,
+                vAxisTitle: 'Lines of Code',
             });
         }
         function drawCodeVsComments() {
             drawScatterChart({
                 containerId: 'code-graph-code-added-vs-comments',
+                hAxisTitle: 'Lines of Code',
                 query: 'SELECT J,K',
-                title: 'Code Added per PR vs Comments',
+                title: 'Code Added per PR vs Comments per PR',
                 url: RAW_DATA_URL,
+                vAxisTitle: 'Number of Comments',
             });
         }
         function drawCodeVsCommentsNoOutliers() {
             drawScatterChart({
                 containerId: 'code-graph-no-outliers-code-added-vs-comments',
+                hAxisTitle: 'Lines of Code',
                 query: 'SELECT J,K WHERE J < 114 AND J > -66 AND K < 21',
-                title: 'Code Added per PR vs Comments',
+                title: 'Code Added per PR vs Comments per PR without Outliers',
                 url: RAW_DATA_URL,
+                vAxisTitle: 'Number of Comments',
             });
         }
     </script>
