@@ -24,7 +24,10 @@ function formatOptions({hAxisTitle=null, showLegend=true, title, vAxisTitle=null
     'hAxis': {'title': hAxisTitle},
     legend: showLegend ? 'right' : 'none',
     title,
-    'vAxis': {'title': vAxisTitle},
+    'vAxis': {
+      ...specialChartOptions.vAxis,
+      'title': vAxisTitle
+    },
   };
 }
 
@@ -38,6 +41,21 @@ function drawAreaChart({containerId, hAxisTitle=null, isStacked='false', query, 
   drawChart({
     ...arguments[0],
     chartType: 'AreaChart',
+    dataSourceUrl: url,
+    options,
+  });
+}
+
+/* Bubble Chart, extra options
+ * {String} vAxis: vaxis options
+ */
+function drawBubbleChart({containerId, hAxisTitle=null, query, title, vAxis, vAxisTitle=null, url}) {
+  const options = formatOptions({hAxisTitle, title, vAxisTitle, specialChartOptions: {
+    vAxis,
+  }});
+  drawChart({
+    ...arguments[0],
+    chartType: 'BubbleChart',
     dataSourceUrl: url,
     options,
   });
@@ -75,14 +93,20 @@ function drawLineChart({containerId, hAxisTitle=null, query, showLegend=true, ti
 }
 
 /* Scatter Chart, extra options
+ * {Object} extraTrendline: display an extra trendline with the options passed in
  * {String} showR2: whether to display the r2 value, true/false
  * {String} visibleInLegend: whether to display the r2 value in the legend, true/false
  */
-function drawScatterChart({containerId, hAxisTitle=null, query, showR2='true', title, vAxisTitle=null, visibleInLegend='true', url}) {
+function drawScatterChart({containerId, extraTrendline=null, hAxisTitle=null, query, showR2='true', title, vAxisTitle=null, visibleInLegend='true', url}) {
+  let trendlines = {'0': {showR2, visibleInLegend}};
+  if (extraTrendline) {
+    trendlines = {
+      ...trendlines,
+      '1': extraTrendline,
+    }
+  }
   const options = formatOptions({hAxisTitle, title, vAxisTitle, specialChartOptions: {
-    'trendlines': {
-      '0': {showR2, visibleInLegend},
-    },
+    trendlines,
   }});
   drawChart({
     ...arguments[0],

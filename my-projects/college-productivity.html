@@ -607,12 +607,57 @@
   <script type="text/javascript" src="../assets/js/graphs.js"></script>
   <script type="text/javascript" src="../assets/js/blog.js"></script>
   <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]})
+      google.load("visualization", "1", {packages:["corechart"]});
+
+      const SEMESTER_DATA_URL = 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0';
+      const INDIVIDUAL_DATA_URL = 'https://docs.google.com/spreadsheets/d/1Lj1mwa9xA3SgPuOISCVY_TReWmf0ecMpHj31NxQRE4s/edit#gid=0';
+
+      [
+        drawSemTime,
+        drawSemVCumulative,
+        drawUnitsVGPA,
+
+        drawGradeVClass,
+        drawGradeVHw,
+        drawGradeVOH,
+        drawGradeVExtra,
+        drawGradeVFirst,
+        drawGradeVFinalGrade,
+        drawFirstVFinal,
+        drawGradeVFinalTime,
+        drawFinalVFinalTime,
+        drawGradeVFinalPercent,
+        drawAvGradeVFinalPercent,
+        drawUnitsVGrade,
+        drawUnitsVAvGrade,
+        drawGradeVSize,
+        drawAvGradeVSize,
+        drawUnitsVAvTime,
+
+        drawSemFun,
+        drawSemUnitsVFun,
+        drawSemGradeVFun,
+        drawFunVTotalAcademicTime,
+        drawSemSleep,
+        drawSemUnitsVSleep,
+        drawSemGradeVSleep,
+        drawSleepVTotalAcademicTime,
+        drawSemActivities,
+        drawSemUnitsVActivities,
+        drawSemGradeVActivities,
+        drawActivitiesVTotalAcademicTime,
+        drawSemPlanning,
+        drawSemGradeVPlan,
+        drawSemJobs,
+        drawSemGradeVJobs,
+        drawSemGradeVOtherTime,
+
+        drawGradeVPercent,
+      ].forEach(f => google.setOnLoadCallback(f));
 
       // OVER TIME
 
       /* Looking at the productive time commitment by semester
-       * Graph: Column with the following bars
        * A: Semester, horizontal axis
        * H: HW
        * I: Class
@@ -621,960 +666,578 @@
        * S: Planning
        * T: Job Preparing
        */
-      google.setOnLoadCallback(drawSemTime);
       function drawSemTime() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ColumnChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+        drawColumnChart({
+          containerId: 'SemTime',
+          'hAxisTitle': 'Semester',
+          'isStacked': 'true',
           query: 'SELECT A,H,I,J,N,S,T',
-          options: {
-            'title': 'Time Spent Productively by Semester',
-            'hAxis': {'title': 'Semester'},
-            'vAxis': {'title': 'Time Spent (Hours)'},
-            'bar': {'groupWidth': '50%'},
-            'isStacked': 'true'
-          },
-          containerId: 'SemTime'
+          'title': 'Time Spent Productively by Semester',
+          url: SEMESTER_DATA_URL,
+          vAxisTitle: 'Time Spent (Hours)',
         });
-        wrapper.draw()
       }
 
       /* Comparing semester and cumulative gpas by semester
-       * Graph: Line
        * A: Semester, cluster
        * G: Semester GPA
        * F: Cumulative GPA
        */
-      google.setOnLoadCallback(drawSemVCumulative);
       function drawSemVCumulative() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'Line',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+        drawLineChart({
+          url: SEMESTER_DATA_URL,
           query: 'SELECT A,G,F',
-          containerId: 'SemVCumulative'
+          containerId: 'SemVCumulative',
         });
-        wrapper.draw()
       }
 
       /* Comparing semester GPA and units
-       * Graph: Line
        * A: Semester, cluster
        * G: Semester GPA
        * E: Units (divided by 5)
        */
-      google.setOnLoadCallback(drawUnitsVGPA);
       function drawUnitsVGPA() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'Line',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+        drawLineChart({
+          url: SEMESTER_DATA_URL,
           query: 'SELECT A,G,E',
-          containerId: 'UnitsVGPA'
+          containerId: 'UnitsVGPA',
         });
-        wrapper.draw()
       }
 
 
       // CORRELATION
 
       /* Comparing the grade and time spent on class
-       * Graph: Scatter
        * E: Grade received
        * J: Going to class
        */
-      google.setOnLoadCallback(drawGradeVClass);
       function drawGradeVClass() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1Lj1mwa9xA3SgPuOISCVY_TReWmf0ecMpHj31NxQRE4s/edit#gid=0',
+        drawScatterChart({
+          url: INDIVIDUAL_DATA_URL,
           query: 'SELECT E,J',
-          options: {
-            'title': 'Grade Received vs. Time Spent Going to Class',
-            'hAxis': {'title': 'Grade Received (GPA)'},
-            'vAxis': {'title': 'Time Spent (hours)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Grade Received vs. Time Spent Going to Class',
+          hAxisTitle: 'Grade Received (GPA)',
+          vAxisTitle: 'Time Spent (hours)',
           containerId: 'GradeVClass'
         });
-        wrapper.draw()
       }
 
       /* Comparing the grade and time spent on homework
-       * Graph: Scatter
        * E: Grade received
        * I: Going to homework
        */
-      google.setOnLoadCallback(drawGradeVHw);
       function drawGradeVHw() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1Lj1mwa9xA3SgPuOISCVY_TReWmf0ecMpHj31NxQRE4s/edit#gid=0',
+        drawScatterChart({
+          url: INDIVIDUAL_DATA_URL,
           query: 'SELECT E,I',
-          options: {
-            'title': 'Grade Received vs. Time Spent on Homework',
-            'hAxis': {'title': 'Grade Received (GPA)'},
-            'vAxis': {'title': 'Time Spent (hours)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              },
-              '1': {}
-            },
-          },
-          containerId: 'GradeVHW'
+          title: 'Grade Received vs. Time Spent on Homework',
+          hAxisTitle: 'Grade Received (GPA)',
+          vAxisTitle: 'Time Spent (hours)',
+          containerId: 'GradeVHW',
         });
-        wrapper.draw()
       }
 
       /* Comparing the grade and time spent on office hours
-       * Graph: Scatter
        * E: Grade received
        * K: Going to office hours
        */
-      google.setOnLoadCallback(drawGradeVOH);
       function drawGradeVOH() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1Lj1mwa9xA3SgPuOISCVY_TReWmf0ecMpHj31NxQRE4s/edit#gid=0',
+        drawScatterChart({
+          url: INDIVIDUAL_DATA_URL,
           query: 'SELECT E,K',
-          options: {
-            'title': 'Grade Received vs. Time Spent Going to Office Hours',
-            'hAxis': {'title': 'Grade Received (GPA)'},
-            'vAxis': {'title': 'Time Spent (hours)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Grade Received vs. Time Spent Going to Office Hours',
+          hAxisTitle: 'Grade Received (GPA)',
+          vAxisTitle: 'Time Spent (hours)',
           containerId: 'GradeVOH'
         });
-        wrapper.draw()
       }
 
       /* Comparing the grade and time spent on extra time
-       * Graph: Scatter
        * E: Grade received
        * P: Going to extra time
        */
-      google.setOnLoadCallback(drawGradeVExtra);
       function drawGradeVExtra() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1Lj1mwa9xA3SgPuOISCVY_TReWmf0ecMpHj31NxQRE4s/edit#gid=0',
+        drawScatterChart({
+          url: INDIVIDUAL_DATA_URL,
           query: 'SELECT E,P',
-          options: {
-            'title': 'Grade Received vs. Time Spent Before the Semester to Prepare',
-            'hAxis': {'title': 'Grade Received (GPA)'},
-            'vAxis': {'title': 'Time Spent (hours)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Grade Received vs. Time Spent Before the Semester to Prepare',
+          hAxisTitle: 'Grade Received (GPA)',
+          vAxisTitle: 'Time Spent (hours)',
           containerId: 'GradeVExtra'
         });
-        wrapper.draw()
       }
 
       /* Comparing the grade and the first exam grade
-       * Graph: Scatter
        * E: Grade received
        * Q: First exam grade received
        */
-      google.setOnLoadCallback(drawGradeVFirst);
       function drawGradeVFirst() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1Lj1mwa9xA3SgPuOISCVY_TReWmf0ecMpHj31NxQRE4s/edit#gid=0',
+        drawScatterChart({
+          url: INDIVIDUAL_DATA_URL,
           query: 'SELECT E,Q',
-          options: {
-            'title': 'Grade Received vs. First Exam Grade',
-            'hAxis': {'title': 'Grade Received (GPA)'},
-            'vAxis': {'title': 'First Exam Grade (%)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Grade Received vs. First Exam Grade',
+          hAxisTitle: 'Grade Received (GPA)',
+          vAxisTitle: 'First Exam Grade (%)',
           containerId: 'GradeVFirst'
         });
-        wrapper.draw()
       }
 
       /* Comparing the grade and the Final exam grade
-       * Graph: Bubble
        * A: Class
        * E: Grade received, horizontal axis
        * R: Final exam grade, vertical axis
        * T: Percent the final is worth
        */
-      google.setOnLoadCallback(drawGradeVFinalGrade);
       function drawGradeVFinalGrade() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'BubbleChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1Lj1mwa9xA3SgPuOISCVY_TReWmf0ecMpHj31NxQRE4s/edit#gid=0',
+        drawBubbleChart({
+          url: INDIVIDUAL_DATA_URL,
           query: 'SELECT A,E,R,T',
-          options: {
-            'title': 'Grade Received vs. Final Exam Grade w/ % Weights',
-            'hAxis': {'title': 'Grade Received (GPA)'},
-            'vAxis': {'title': 'Final Exam Grade (%)'},
+          title: 'Grade Received vs. Final Exam Grade w/ % Weights',
+          hAxisTitle: 'Grade Received (GPA)',
+          vAxis: {
             'bubble': {'textStyle': {'color': 'transparent'}},
-            'colorAxis': 'null' // still looks weird
+            'colorAxis': 'null', // still looks weird
+            'title': 'Final Exam Grade (%)',
           },
           containerId: 'GradeVFinalGrade'
         });
-        wrapper.draw()
       }
 
       /* Comparing the first exam grade and the final exam grade
-       * Graph: Scatter
        * Q: First exam grade received
        * R: Final exam grade received
        */
-      google.setOnLoadCallback(drawFirstVFinal);
       function drawFirstVFinal() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1Lj1mwa9xA3SgPuOISCVY_TReWmf0ecMpHj31NxQRE4s/edit#gid=0',
+        drawScatterChart({
+          url: INDIVIDUAL_DATA_URL,
           query: 'SELECT Q, R',
-          options: {
-            'title': 'First Exam Grade vs. Final Exam Grade',
-            'hAxis': {'title': 'First Exam Grade (GPA)'},
-            'vAxis': {'title': 'Final Exam Grade (GPA)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'First Exam Grade vs. Final Exam Grade',
+          hAxisTitle: 'First Exam Grade (GPA)',
+          vAxisTitle: 'Final Exam Grade (GPA)',
           containerId: 'FirstVFinal'
         });
-        wrapper.draw()
       }
 
       /* Comparing the grade and the final exam grade
-       * Graph: Bubble
        * A: Class
        * E: Grade, horizontal axis
        * S: Time studying for the final, vertical axis
        * T: Percent the final is worth
        */
-      google.setOnLoadCallback(drawGradeVFinalTime);
       function drawGradeVFinalTime() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'BubbleChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1Lj1mwa9xA3SgPuOISCVY_TReWmf0ecMpHj31NxQRE4s/edit#gid=0',
+        drawBubbleChart({
+          url: INDIVIDUAL_DATA_URL,
           query: 'SELECT A,E,S,T',
-          options: {
-            'title': 'Grade Received w/ GPA Weights vs. Time Spent Studying on the Final',
-            'hAxis': {'title': 'Grade Received (GPA)'},
-            'vAxis': {'title': 'Time Spent Studying'},
+          title: 'Grade Received w/ GPA Weights vs. Time Spent Studying on the Final',
+          hAxisTitle: 'Grade Received (GPA)',
+          vAxis: {
             'bubble': {'textStyle': {'color': 'transparent'}},
-            'colorAxis': 'null' // still looks weird
+            'colorAxis': 'null', // still looks weird
+            title: 'Time Spent Studying',
           },
           containerId: 'GradeVFinalTime'
         });
-        wrapper.draw()
       }
 
       /* Comparing the first exam grade and the final exam grade
-       * Graph: Scatter
        * R: Final exam grade received
        * S: Time spent studying for the final
        */
-      google.setOnLoadCallback(drawFinalVFinalTime);
       function drawFinalVFinalTime() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1Lj1mwa9xA3SgPuOISCVY_TReWmf0ecMpHj31NxQRE4s/edit#gid=0',
+        drawScatterChart({
+          url: INDIVIDUAL_DATA_URL,
           query: 'SELECT R,S',
-          options: {
-            'title': 'Final Test Grade Received vs. Time Spent Studying for the Final',
-            'hAxis': {'title': 'Final Test Grade (%)'},
-            'vAxis': {'title': 'Time Spent Studying for the Final (hours)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Final Test Grade Received vs. Time Spent Studying for the Final',
+          hAxisTitle: 'Final Test Grade (%)',
+          vAxisTitle: 'Time Spent Studying for the Final (hours)',
           containerId: 'FinalVFinalTime'
         });
-        wrapper.draw()
       }
 
       /* Comparing the grade received and the final the percentage is worth
-       * Graph: Scatter
        * E: Grade received
        * T: Percentage the final is worth
        */
-      google.setOnLoadCallback(drawGradeVFinalPercent);
       function drawGradeVFinalPercent() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1Lj1mwa9xA3SgPuOISCVY_TReWmf0ecMpHj31NxQRE4s/edit#gid=0',
+        drawScatterChart({
+          url: INDIVIDUAL_DATA_URL,
           query: 'SELECT E,T',
-          options: {
-            'title': 'Grade Received vs. Percentage The Final is Worth',
-            'hAxis': {'title': 'Grade Received (GPA)'},
-            'vAxis': {'title': 'Percentage the Final is Worth'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Grade Received vs. Percentage The Final is Worth',
+          hAxisTitle: 'Grade Received (GPA)',
+          vAxisTitle: 'Percentage the Final is Worth',
           containerId: 'GradeVFinalPercent'
         });
-        wrapper.draw()
       }
 
       /* Comparing the average grade of the class and the final the percentage is worth
-       * Graph: Scatter
        * F: Average grade received
        * T: Percentage the final is worth
        */
-      google.setOnLoadCallback(drawAvGradeVFinalPercent);
       function drawAvGradeVFinalPercent() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1Lj1mwa9xA3SgPuOISCVY_TReWmf0ecMpHj31NxQRE4s/edit#gid=0',
+        drawScatterChart({
+          url: INDIVIDUAL_DATA_URL,
           query: 'SELECT F,T',
-          options: {
-            'title': 'Average Grade vs. Percentage The Final is Worth',
-            'hAxis': {'title': 'Average Grade (GPA)'},
-            'vAxis': {'title': 'Percentage the Final is Worth'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Average Grade vs. Percentage The Final is Worth',
+          hAxisTitle: 'Average Grade (GPA)',
+          vAxisTitle: 'Percentage the Final is Worth',
           containerId: 'AvGradeVFinalPercent'
         });
-        wrapper.draw()
       }
 
       /* Comparing the units and the grade received
-       * Graph: Scatter
        * G: Units
        * E: Grade received
        */
-      google.setOnLoadCallback(drawUnitsVGrade);
       function drawUnitsVGrade() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1Lj1mwa9xA3SgPuOISCVY_TReWmf0ecMpHj31NxQRE4s/edit#gid=0',
+        drawScatterChart({
+          url: INDIVIDUAL_DATA_URL,
           query: 'SELECT G,E',
-          options: {
-            'title': 'Units in the Class vs. Grade Received',
-            'hAxis': {'title': 'Units'},
-            'vAxis': {'title': 'Grade Received (GPA)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Units in the Class vs. Grade Received',
+          hAxisTitle: 'Units',
+          vAxisTitle: 'Grade Received (GPA)',
           containerId: 'UnitsVGrade'
         });
-        wrapper.draw()
       }
 
       /* Comparing the units and the average grade of the class
-       * Graph: Scatter
        * G: Units
        * F: Average grade of the class
        */
-      google.setOnLoadCallback(drawUnitsVAvGrade);
       function drawUnitsVAvGrade() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1Lj1mwa9xA3SgPuOISCVY_TReWmf0ecMpHj31NxQRE4s/edit#gid=0',
+        drawScatterChart({
+          url: INDIVIDUAL_DATA_URL,
           query: 'SELECT G,F',
-          options: {
-            'title': 'Units in the Class vs. Average Grade',
-            'hAxis': {'title': 'Units'},
-            'vAxis': {'title': 'Average Grade (GPA)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Units in the Class vs. Average Grade',
+          hAxisTitle: 'Units',
+          vAxisTitle: 'Average Grade (GPA)',
           containerId: 'UnitsVAvGrade'
         });
-        wrapper.draw()
       }
 
       /* Comparing the units and the size of the class
-       * Graph: Scatter
        * G: Units
        * O: Size of the class
        */
-      google.setOnLoadCallback(drawGradeVSize);
       function drawGradeVSize() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1Lj1mwa9xA3SgPuOISCVY_TReWmf0ecMpHj31NxQRE4s/edit#gid=0',
+        drawScatterChart({
+          url: INDIVIDUAL_DATA_URL,
           query: 'SELECT E,O',
-          options: {
-            'title': 'Grade Received vs. Class Size',
-            'hAxis': {'title': 'Grade Received (GPA)'},
-            'vAxis': {'title': 'Class Size (Enrollment)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Grade Received vs. Class Size',
+          hAxisTitle: 'Grade Received (GPA)',
+          vAxisTitle: 'Class Size (Enrollment)',
           containerId: 'GradeVSize'
         });
-        wrapper.draw()
       }
 
       /* Comparing the units and the grade received
-       * Graph: Scatter
        * F: Average grade of the class
        * O: Size of the class
        */
-      google.setOnLoadCallback(drawAvGradeVSize);
       function drawAvGradeVSize() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1Lj1mwa9xA3SgPuOISCVY_TReWmf0ecMpHj31NxQRE4s/edit#gid=0',
+        drawScatterChart({
+          url: INDIVIDUAL_DATA_URL,
           query: 'SELECT F,O',
-          options: {
-            'title': 'Average Grade vs. Class Size',
-            'hAxis': {'title': 'Average Grade (GPA)'},
-            'vAxis': {'title': 'Class Size (Enrollment)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Average Grade vs. Class Size',
+          hAxisTitle: 'Average Grade (GPA)',
+          vAxisTitle: 'Class Size (Enrollment)',
           containerId: 'AvGradeVSize'
         });
-        wrapper.draw()
       }
 
       /* Comparing the units and the average time spent on each
-       * Graph: Scatter
        * G: Units
        * M: Average time spent on the class
        */
-      google.setOnLoadCallback(drawUnitsVAvTime);
       function drawUnitsVAvTime() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1Lj1mwa9xA3SgPuOISCVY_TReWmf0ecMpHj31NxQRE4s/edit#gid=0',
+        drawScatterChart({
+          url: INDIVIDUAL_DATA_URL,
           query: 'SELECT G,M',
-          options: {
-            'title': 'Units vs. Average Time Spent on the Course',
-            'hAxis': {'title': 'Units'},
-            'vAxis': {'title': 'Time Spent (hours)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Units vs. Average Time Spent on the Course',
+          hAxisTitle: 'Units',
+          vAxisTitle: 'Time Spent (hours)',
           containerId: 'UnitsVAvTime'
         });
-        wrapper.draw()
       }
 
       // OTHER TIME
 
       /* Looking at time spent having fun by semester
-       * Graph: Scatter
        * A: Semester
        * R: Time having fun
        */
-      google.setOnLoadCallback(drawSemFun);
       function drawSemFun() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ColumnChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+        drawColumnChart({
+          url: SEMESTER_DATA_URL,
           query: 'SELECT A,R',
-          options: {
-            'title': 'Time Spent Pleasurely by Semester',
-            'hAxis': {'title': 'Semester'},
-            'vAxis': {'title': 'Time Spent (Hours)'},
-            'bar': {'groupWidth': '50%'},
-            'legend': 'none'
-          },
+          title: 'Time Spent Pleasurely by Semester',
+          hAxisTitle: 'Semester',
+          vAxisTitle: 'Time Spent (Hours)',
+          showLegend: false,
           containerId: 'SemFun'
         });
-        wrapper.draw()
       }
 
       /* Comparing units per semester and time spent having fun
-       * Graph: Scatter
        * D: Units per semester
        * R: Time having fun
        */
-      google.setOnLoadCallback(drawSemUnitsVFun);
       function drawSemUnitsVFun() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+        drawScatterChart({
+          url: SEMESTER_DATA_URL,
           query: 'SELECT D,R',
-          options: {
-            'title': 'Units vs. Time Spent Having Fun',
-            'hAxis': {'title': 'Units'},
-            'vAxis': {'title': 'Time Spent (hours)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Units vs. Time Spent Having Fun',
+          hAxisTitle: 'Units',
+          vAxisTitle: 'Time Spent (hours)',
           containerId: 'SemUnitsVFun'
         });
-        wrapper.draw()
       }
 
       /* Comparing semester GPA and time having fun
-       * Graph: Scatter
        * G: Semester GPA
        * R: Time spent having fun
        */
-      google.setOnLoadCallback(drawSemGradeVFun);
       function drawSemGradeVFun() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+        drawScatterChart({
+          url: SEMESTER_DATA_URL,
           query: 'SELECT G,R',
-          options: {
-            'title': 'Semester GPA vs. Time having Fun',
-            'hAxis': {'title': 'Semester GPA (GPA)'},
-            'vAxis': {'title': 'Time Spent (hours)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Semester GPA vs. Time having Fun',
+          hAxisTitle: 'Semester GPA (GPA)',
+          vAxisTitle: 'Time Spent (hours)',
           containerId: 'SemGradeVFun'
         });
-        wrapper.draw()
       }
 
       /* Comparing time having fun and total academic time
-       * Graph: Scatter
        * R: Time spent having fun
        * M: Time spent on total academic time
        */
-      google.setOnLoadCallback(drawFunVTotalAcademicTime);
       function drawFunVTotalAcademicTime() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+        drawScatterChart({
+          url: SEMESTER_DATA_URL,
           query: 'SELECT M,O',
-          options: {
-            'title': 'Time Having Fun vs. Time on Academics',
-            'hAxis': {'title': 'Time Spent on Fun (hours)'},
-            'vAxis': {'title': 'Time Spent on Academics (hours)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Time Having Fun vs. Time on Academics',
+          hAxisTitle: 'Time Spent on Fun (hours)',
+          vAxisTitle: 'Time Spent on Academics (hours)',
           containerId: 'FunVTotalAcademicTime'
         });
-        wrapper.draw()
       }
 
       /* Looking at time spent sleeping by semester
-       * Graph: Scatter
        * A: Semester
        * R: Time sleeping
        */
-      google.setOnLoadCallback(drawSemSleep);
       function drawSemSleep() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ColumnChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+        drawColumnChart({
+          url: SEMESTER_DATA_URL,
           query: 'SELECT A,Q',
-          options: {
-            'title': 'Time Spent Sleeping by Semester',
-            'hAxis': {'title': 'Semester'},
-            'vAxis': {'title': 'Time Spent (Hours)'},
-            'bar': {'groupWidth': '50%'},
-            'legend': 'none'
-          },
+          title: 'Time Spent Sleeping by Semester',
+          hAxisTitle: 'Semester',
+          vAxisTitle: 'Time Spent (Hours)',
+          showLegend: false,
           containerId: 'SemSleep'
         });
-        wrapper.draw()
       }
 
       /* Comparing units per semester and time spent sleeping
-       * Graph: Scatter
        * D: Units per semester
        * Q: Time sleeping
        */
-      google.setOnLoadCallback(drawSemUnitsVSleep);
       function drawSemUnitsVSleep() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+        drawScatterChart({
+          url: SEMESTER_DATA_URL,
           query: 'SELECT D,Q',
-          options: {
-            'title': 'Units vs. Time Spent Sleeping',
-            'hAxis': {'title': 'Units'},
-            'vAxis': {'title': 'Time Spent (hours)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Units vs. Time Spent Sleeping',
+          hAxisTitle: 'Units',
+          vAxisTitle: 'Time Spent (hours)',
           containerId: 'SemUnitsVSleep'
         });
-        wrapper.draw()
       }
 
       /* Comparing semester GPA and time sleeping
-       * Graph: Scatter
        * G: Semester GPA
        * Q: Time spent sleeping
        */
-      google.setOnLoadCallback(drawSemGradeVSleep);
       function drawSemGradeVSleep() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+        drawScatterChart({
+          url: SEMESTER_DATA_URL,
           query: 'SELECT G,Q',
-          options: {
-            'title': 'Semester GPA vs. Time Sleeping',
-            'hAxis': {'title': 'Semester GPA (GPA)'},
-            'vAxis': {'title': 'Time Spent (hours)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Semester GPA vs. Time Sleeping',
+          hAxisTitle: 'Semester GPA (GPA)',
+          vAxisTitle: 'Time Spent (hours)',
           containerId: 'SemGradeVSleep'
         });
-        wrapper.draw()
       }
 
       /* Comparing time sleeping and total academic time
-       * Graph: Scatter
        * Q: Time spent sleeping
        * M: Time spent on total academic time
        */
-      google.setOnLoadCallback(drawSleepVTotalAcademicTime);
       function drawSleepVTotalAcademicTime() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+        drawScatterChart({
+          url: SEMESTER_DATA_URL,
           query: 'SELECT Q,M',
-          options: {
-            'title': 'Time Sleeping vs. Time on Academics',
-            'hAxis': {'title': 'Time Spent on Sleep (hours)'},
-            'vAxis': {'title': 'Time Spent on Academics (hours)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Time Sleeping vs. Time on Academics',
+          hAxisTitle: 'Time Spent on Sleep (hours)',
+          vAxisTitle: 'Time Spent on Academics (hours)',
           containerId: 'SleepVTotalAcademicTime'
         });
-        wrapper.draw()
       }
 
       /* Looking at time spent doing activities by semester
-       * Graph: Scatter
        * A: Semester
        * N: Time doing activities
        */
-      google.setOnLoadCallback(drawSemActivities);
       function drawSemActivities() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ColumnChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+        drawColumnChart({
+          url: SEMESTER_DATA_URL,
           query: 'SELECT A,N',
-          options: {
-            'title': 'Time Spent Doing Activities by Semester',
-            'hAxis': {'title': 'Semester'},
-            'vAxis': {'title': 'Time Spent (Hours)'},
-            'bar': {'groupWidth': '50%'},
-            'legend': 'none'
-          },
+          title: 'Time Spent Doing Activities by Semester',
+          hAxisTitle: 'Semester',
+          vAxisTitle: 'Time Spent (Hours)',
+          showLegend: false,
           containerId: 'SemActivities'
         });
-        wrapper.draw()
       }
 
       /* Comparing units per semester and time spent on Activities
-       * Graph: Scatter
        * D: Units per semester
        * Q: Time on Activities
        */
-      google.setOnLoadCallback(drawSemUnitsVActivities);
       function drawSemUnitsVActivities() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+        drawScatterChart({
+          url: SEMESTER_DATA_URL,
           query: 'SELECT D,N',
-          options: {
-            'title': 'Units vs. Time Spent on Activities',
-            'hAxis': {'title': 'Units'},
-            'vAxis': {'title': 'Time Spent (hours)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Units vs. Time Spent on Activities',
+          hAxisTitle: 'Units',
+          vAxisTitle: 'Time Spent (hours)',
           containerId: 'SemUnitsVActivities'
         });
-        wrapper.draw()
       }
 
       /* Comparing semester GPA and time on Activities
-       * Graph: Scatter
        * G: Semester GPA
        * Q: Time spent on Activities
        */
-      google.setOnLoadCallback(drawSemGradeVActivities);
       function drawSemGradeVActivities() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+        drawScatterChart({
+          url: SEMESTER_DATA_URL,
           query: 'SELECT G,N',
-          options: {
-            'title': 'Semester GPA vs. Time on Activities',
-            'hAxis': {'title': 'Semester GPA (GPA)'},
-            'vAxis': {'title': 'Time Spent (hours)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Semester GPA vs. Time on Activities',
+          hAxisTitle: 'Semester GPA (GPA)',
+          vAxisTitle: 'Time Spent (hours)',
           containerId: 'SemGradeVActivities'
         });
-        wrapper.draw()
       }
 
       /* Comparing time on Activities and total academic time
-       * Graph: Scatter
        * Q: Time spent on Activities
        * M: Time spent on total academic time
        */
-      google.setOnLoadCallback(drawActivitiesVTotalAcademicTime);
       function drawActivitiesVTotalAcademicTime() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+        drawScatterChart({
+          url: SEMESTER_DATA_URL,
           query: 'SELECT N,M',
-          options: {
-            'title': 'Time on Activities vs. Time on Academics',
-            'hAxis': {'title': 'Time Spent on Activities (hours)'},
-            'vAxis': {'title': 'Time Spent on Academics (hours)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Time on Activities vs. Time on Academics',
+          hAxisTitle: 'Time Spent on Activities (hours)',
+          vAxisTitle: 'Time Spent on Academics (hours)',
           containerId: 'ActivitiesVTotalAcademicTime'
         });
-        wrapper.draw()
       }
 
       /* Looking at time spent planning by semester
-       * Graph: Scatter
        * A: Semester
        * S: Time planning
        */
-      google.setOnLoadCallback(drawSemPlanning);
       function drawSemPlanning() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ColumnChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+        drawColumnChart({
+          url: SEMESTER_DATA_URL,
           query: 'SELECT A,S',
-          options: {
-            'title': 'Time Spent Planning by Semester',
-            'hAxis': {'title': 'Semester'},
-            'vAxis': {'title': 'Time Spent (Hours)'},
-            'bar': {'groupWidth': '50%'},
-            'legend': 'none'
-          },
+          title: 'Time Spent Planning by Semester',
+          hAxisTitle: 'Semester',
+          vAxisTitle: 'Time Spent (Hours)',
+          showLegend: false,
           containerId: 'SemPlanning'
         });
-        wrapper.draw()
       }
 
       /* Comparing semester GPA and time planning
-       * Graph: Scatter
        * G: Semester GPA
        * S: Time planning
        */
-      google.setOnLoadCallback(drawSemGradeVPlan);
       function drawSemGradeVPlan() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+        drawScatterChart({
+          url: SEMESTER_DATA_URL,
           query: 'SELECT G,S',
-          options: {
-            'title': 'Semester GPA vs. Time planning',
-            'hAxis': {'title': 'Semester GPA (GPA)'},
-            'vAxis': {'title': 'Time Spent (hours)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Semester GPA vs. Time planning',
+          hAxisTitle: 'Semester GPA (GPA)',
+          vAxisTitle: 'Time Spent (hours)',
           containerId: 'SemGradeVPlan'
         });
-        wrapper.draw()
       }
 
       /* Looking at time spent job hunting by semester
-       * Graph: Scatter
        * A: Semester
        * S: Time job hunting
        */
-      google.setOnLoadCallback(drawSemJobs);
       function drawSemJobs() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ColumnChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+        drawColumnChart({
+          url: SEMESTER_DATA_URL,
           query: 'SELECT A,T',
-          options: {
-            'title': 'Time Spent Job Hunting by Semester',
-            'hAxis': {'title': 'Semester'},
-            'vAxis': {'title': 'Time Spent (Hours)'},
-            'bar': {'groupWidth': '50%'},
-            'legend': 'none'
-          },
+          title: 'Time Spent Job Hunting by Semester',
+          hAxisTitle: 'Semester',
+          vAxisTitle: 'Time Spent (Hours)',
+          showLegend: false,
           containerId: 'SemJobs'
         });
-        wrapper.draw()
       }
 
       /* Comparing semester GPA and time job hunting
-       * Graph: Scatter
        * G: Semester GPA
        * T: Time job hunting
        */
-      google.setOnLoadCallback(drawSemGradeVJobs);
       function drawSemGradeVJobs() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+        drawScatterChart({
+          url: SEMESTER_DATA_URL,
           query: 'SELECT G,T',
-          options: {
-            'title': 'Semester GPA vs. Time Job Hunting',
-            'hAxis': {'title': 'Semester GPA (GPA)'},
-            'vAxis': {'title': 'Time Spent (hours)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Semester GPA vs. Time Job Hunting',
+          hAxisTitle: 'Semester GPA (GPA)',
+          vAxisTitle: 'Time Spent (hours)',
           containerId: 'SemGradeVJobs'
         });
-        wrapper.draw()
       }
 
       /* Comparing semester GPA and other time
-       * Graph: Scatter
        * G: Semester GPA
        * U: Other time
        */
-      google.setOnLoadCallback(drawSemGradeVOthertime);
-      function drawSemGradeVOthertime() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/18hPB3_g7A_tC4RAvK6LbLyZYf8tilpum0lSdysCawzI/edit#gid=0',
+      function drawSemGradeVOtherTime() {
+        drawScatterChart({
+          url: SEMESTER_DATA_URL,
           query: 'SELECT G,U',
-          options: {
-            'title': 'Semester GPA vs. Other Time',
-            'hAxis': {'title': 'Semester GPA (GPA)'},
-            'vAxis': {'title': 'Time Spent (hours)'},
-            'trendlines': {
-              '0': {
-                'showR2': 'true',
-                'visibleInLegend': 'true'
-              }
-            },
-          },
+          title: 'Semester GPA vs. Other Time',
+          hAxisTitle: 'Semester GPA (GPA)',
+          vAxisTitle: 'Time Spent (hours)',
           containerId: 'SemGradeVOtherTime'
         });
-        wrapper.draw()
       }
 
       // DEFLATION
 
       /* Comparing grade received and percentage received
-       * Graph: Scatter
        * E: Grade received
        * H: Percentage received
        * V: Predicted percentage
        */
-      google.setOnLoadCallback(drawGradeVPercent);
       function drawGradeVPercent() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'ScatterChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1Lj1mwa9xA3SgPuOISCVY_TReWmf0ecMpHj31NxQRE4s/edit#gid=0',
+        drawScatterChart({
+          url: INDIVIDUAL_DATA_URL,
           query: 'SELECT E,H,V',
-          options: {
-            'title': 'Grade Received vs. Percentage Received',
-            'hAxis': {'title': 'Grade Received (GPA)'},
-            'vAxis': {'title': 'Percentage (%)'},
-            'trendlines': {
-              '0': {
-              },
-              '1': {
-                'lineWidth': 30,
-              }
-            },
-          },
+          title: 'Grade Received vs. Percentage Received',
+          hAxisTitle: 'Grade Received (GPA)',
+          vAxisTitle: 'Percentage (%)',
+          extraTrendline: {'lineWidth': 30},
           containerId: 'GradeVPercent'
         });
-        wrapper.draw()
       }
 
       // http://www.abeautifulsite.net/smoothly-scroll-to-an-element-without-a-jquery-plugin-2/
