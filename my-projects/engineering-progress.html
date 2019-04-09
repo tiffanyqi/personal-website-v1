@@ -31,7 +31,7 @@
     <div class="container">
         <!-- INTRODUCTION AND METHODOLOGY -->
         <h1 id="top">A Study in Software Engineering Progress</h1>
-        <div class="date">April 7, 2019</div>
+        <div class="date">April 2019</div>
 
         <p>
             I’ve officially been a software engineer at Mixpanel for one year! For the full year, I’ve been tracking my progress via Github and thought I’d share my results since then. You can skip the background and methodology if you wish by going directly to the <a href="#data">Data</a> or the <a href="#findings">Findings</a>.
@@ -371,36 +371,39 @@
         <!-- FINDINGS -->
         <h2 id="findings">Findings</h2>
         <p>
-            <strong>Smaller PRs equal higher productivity.</strong> I shifted from containing all code into a single PR for a feature to breaking up a single feature into smaller iterative PRs. This single shift was largely responsible for a decrease in time spent per PR (pre-review, post-review, average working time), decrease in comments per PR, and increase in number of PRs deployed. Breaking PRs up into smaller chunks allows reviewers to understand a larger whole piece by piece and catch things that might have otherwise be missed on a larger PR. This is a common practice at Mixpanel and something that we encourage all of our engineers to do.
-        </p>
-        <p>
-            <strong>I improved, probably.</strong> Comparing Eng Path data to now and within projects (KEEP and D2), it’s clear that there are fewer comments, more PRs deployed, and a higher ratio of pre-review to post-review, which does appear to be closer to the “LGTM” state. Even though L2/AL seems to show a slight lower PR deploy cadence and more comments when breaking apart by month, that doesn’t necessarily mean that I’ve taken a step back. For example, AL is a completely new project with its different set of challenges more fitting of my level than of previous projects as on the eng path or L1. However, tying in a difficulty component to each project would confirm this.
-        </p>
-        <p>
-            <strong>Starting new projects at first will look less productive than usual. </strong> When I start a new project, within that month I average more comments per PR, less time spent, a lower pre-review ratio, and less code added to production. Perhaps this is because I'm researching or still figuring things out, which leads to PRs that have more comments and more non-PR work. However, over time when I'm in the zone or know what's going on, these numbers all trend towards the positive.
-        </p>
-        <p>
-            <strong>I spend less time fixing my devbox than I thought.</strong> This surprised me. Our devboxes often error, and it seems like the end of the world when the normal mechanisms of rebooting them don't work. However, it looks like right now I only spend about 14 minutes per day fixing issues or improving my environment, which is about an hour per week. This is less than my predicted 2 hours per week.
-        </p>
-        <p>
-            <strong>I spend more time deploying code than I thought.</strong> Deployment at Mixpanel involves pushing changes to staging (which can take time waiting in line to get the staging locks and running all necessary successful deployment pieces for staging), testing the change on staging, and actually deploying code (which can take more time for the whole cron to complete). And with the increase in the number of PRs deployed, so does the amount of time it takes to go through with the deployment process. I spend 26 minutes per day (2 hours per week), which is even more than fixing my devbox!
-        </p>    
-        <p>
             <strong>I spend on average 5.68 hours per day productively, 4.50 on PRs.</strong> The PR number has decreased lately, while the number of productive hours has increased over time. That means in a typical 8 hour day, 73.3% is spent productively, which...isn’t totally a bad number?
         </p>
         <p>
-            <strong>The average cadence between PRs, average hours spent per PR, and the average number of comments per PR per month are strongly positively correlated. </strong>This implies that the larger or more complicated the PR (as it takes longer to deploy), the more comments are left, which makes sense. What's interesting is that when we look at the raw numbers rather than the averages by month, the correlations between these three factors and the hours it takes to produce are weak to moderate at best.
+            <strong>Did I improve?</strong> Probably. It's clear that there are fewer comments, more PRs deployed, and a higher ratio of pre-review to post-review in general and within projects, which does appear to be closer to the LGTM state. There were some fluctuations in accordance with the start of a new project, which suggests…
+        </p>
+        <p>
+            <strong>Starting new projects at first will look less productive than usual. </strong>When I start a new project, within that month I average more comments per PR, less time spent, a lower pre-review ratio, and less code added to production. Perhaps this is because I'm researching or still figuring things out, which leads to PRs that have more comments and more non-PR work. However, over time when I'm in the zone or know what's going on, these numbers all trend towards the positive.
+        </p>
+        <p>
+            <strong>There's a weak positive correlation between hours of pre-review and post-review per PR.</strong> Just because I spend more time on a PR before submitting for review doesn't necessarily mean that that PR will have a lower post-review time.
+        </p>
+        <p>
+            <strong>Simple PRs on average get code out faster.</strong> This seems obvious, but the data does prove it. Average cadence between PRs, average hours spent per PR, and the average number of comments per PR per month are strongly positive correlated, which implies that (averaged out over a month) the more complicated the PR (as it takes longer to deploy), the more comments are left, and the longer it takes to work on. However…
+        </p>
+        <p>
+            <strong>"Simple PRs" doesn't necessarily mean "small PRs".</strong> When we look at the raw numbers rather than the averages by month from the above, the correlations between these amount of comments, lines of code, and hours spent per PR are weak to moderate at best, which suggests that it's hard to define quantitatively what it means for a PR to be "simple". However, there's a higher chance of simplicity if we break PRs up into smaller chunks, which allows reviewers to understand a larger whole piece by piece and catch things that might have otherwise be missed on a larger PR. This is a common practice at Mixpanel and something that we encourage all of our engineers to do.
+        </p>
+        <p>
+            <strong>I spend more time deploying than fixing my devbox.</strong> This surprised me. Our devboxes often error, and it seems like the end of the world when the normal mechanisms of rebooting them don't work. However it looks like I spend on average 14 minutes per day fixing my devbox (which is less than expected) and on average 26 minutes deploying code to production per day (which is more than expected).
         </p>
 
         <h2 id="conclusion">Conclusion</h2>
         <p>
-            I’ve learned a lot about software engineering over the past year, and there’s a lot more that I have to learn. I definitely have a long way to go before I can create a significant PR with LGTM, but for now I’m happy that I no longer have to see 99 comments on a single PR: fingers crossed.
+            I've learned a lot about software engineering over the past year, and there's always more to learn. I definitely have a long way to go before I can create a significant PR with LGTM, but for now I'm pleased with the fact that there is progress.
         </p>
         <p>
-            I plan to continue breaking up larger features into smaller PRs and spending more time on the pre-review stage (ensuring the methodology is correct and doing research). In addition, I should find some way to decrease the deployment time and increase the amount of productive and coding time.
+            This analysis raised more questions than answers, especially about how to show that productivity has increased. Does it mean that time spent should be increased? Does it mean deploying more PRs (or complete more JIRA tasks), or contributing more lines of code? Each have their pros and cons. For example, increasing time spent could also mean that it takes me longer to produce the same code (thus being not as productive). Deploying more PRs could mean something as small as a one line change or it could mean creating more PRs to fix more bugs, which also isn't good. Contributing more lines of code could just mean more line breaks or comments, and sometimes removing more code is better than creating more of it. Maybe it's a combination of all three?
         </p>
         <p>
-            What do you think about this data and the conclusions I’ve presented here? I encourage all comments and look forward to an open discussion. I welcome anyone who'd like to discuss further about my results to comment and read about more feelings here.
+            For now, I plan to continue breaking up larger features into smaller PRs to decrease the complexity of the overall whole. While the data doesn't necessarily suggest this, I do plan to spend more time on the pre-review stage (ensuring the methodology is correct and doing research) since that doesn't hurt. I'll also continue to ruminate on how to track productivity, and when I figure it out, I'll compare it to all sorts of factors that I happen to have on hand.
+        </p>
+        <p>
+            What do you think about this data and the conclusions I've presented here? How would you define productivity or success quantitatively? Happy to discuss!
         </p>
 
         <h2 id="acknowledgements">Acknowledgements</h2>
@@ -760,7 +763,7 @@
                 containerId: 'code-graph-hours-worked-vs-code-added',
                 hAxisTitle: 'Hours',
                 query: 'SELECT H,J',
-                title: 'Hours of Worked per PR vs Code Added per PR',
+                title: 'Hours Worked per PR vs Code Added per PR',
                 url: RAW_DATA_URL,
                 vAxisTitle: 'Lines of Code',
             });
@@ -770,7 +773,7 @@
                 containerId: 'code-graph-no-outliers-hours-worked-vs-code-added',
                 hAxisTitle: 'Hours',
                 query: 'SELECT H,J WHERE H < 16 AND J < 114 AND J > -66',
-                title: 'Hours of Worked per PR vs Code Added per PR',
+                title: 'Hours Worked per PR vs Code Added per PR Without Outliers',
                 url: RAW_DATA_URL,
                 vAxisTitle: 'Lines of Code',
             });
@@ -790,7 +793,7 @@
                 containerId: 'code-graph-no-outliers-code-added-vs-comments',
                 hAxisTitle: 'Lines of Code',
                 query: 'SELECT J,K WHERE J < 114 AND J > -66 AND K < 21',
-                title: 'Code Added per PR vs Comments per PR',
+                title: 'Code Added per PR vs Comments per PR without Outliers',
                 url: RAW_DATA_URL,
                 vAxisTitle: 'Number of Comments',
             });
