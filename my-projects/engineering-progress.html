@@ -16,7 +16,7 @@
     <div id="navbar">
       <a href="#top" class="navbar-item active">Introduction</a>
       <a href="#methodology" class="navbar-sub-item">Methodology</a>
-      <a href="#dream" class="navbar-sub-item">The Dream</a>
+      <a href="#dream" class="navbar-sub-item">To Become a Better Engineer</a>
       <a href="#data" class="navbar-item">The Data</a>
       <a href="#data-pre-post-review" class="navbar-sub-item">Pre-Review and Post-Review</a>
       <a href="#data-average-working-time" class="navbar-sub-item">Average Working Time</a>
@@ -24,8 +24,9 @@
       <a href="#data-number-of-prs" class="navbar-sub-item">Number of PRs</a>
       <a href="#data-lines-of-code" class="navbar-sub-item">Lines of Code</a>
       <a href="#findings" class="navbar-item">Findings</a>
-      <a href="#conclusion" class="navbar-sub-item">Conclusion</a>
-      <a href="#acknowledgements" class="navbar-sub-item">Acknowledgements</a>
+      <a href="#more-data" class="navbar-item">Data Improvements</a>
+      <a href="#conclusion" class="navbar-item">Conclusion</a>
+      <a href="#acknowledgements" class="navbar-item">Acknowledgements</a>
     </div>
 
     <div class="container">
@@ -34,20 +35,24 @@
         <div class="date">April 2019</div>
 
         <p>
-            I’ve officially been a software engineer at Mixpanel for one year! For the full year, I’ve been tracking my progress via Github and thought I’d share my results since then. You can skip the background and methodology if you wish by going directly to the <a href="#data">Data</a> or the <a href="#findings">Findings</a>.
+            I’ve officially been a software engineer at Mixpanel for one year! For the full year, I’ve been tracking various time and Github data and I thought I’d share my results to start a conversation and be completely transparent about how engineers spend their time, and how some aspects of their code changes over time. You can skip the background and methodology if you wish by going directly to the <a href="#data">Data</a> or the <a href="#findings">Findings</a>.
         </p>
         <p>
             Some background: I started programming in 2014 in my junior year at UC Berkeley. While I was at school, I took a couple of courses in theory (CS 61A, CS 61B, CS 160, and CS 169), and outside of class I taught myself basic web development and worked on side projects (largely on my own). As one does when they first start out, my method of programming was to hack things together via StackOverflow until it worked.
         </p>
         <p>
-            While at Mixpanel, I realized I wanted to work full time as a software engineer. In January 2018, I was the first to go through an official path to engineering, and in April 2018 I became a full fledged software engineer.
+            While at Mixpanel, I realized I wanted to work full time as a software engineer. In January 2018, I was the first to go through an official path to engineering, and in April 2018 I became a full fledged software engineer. You can read about my full journey in "Becoming a Software Engineer".
         </p>
         <p>
-            I had a lot to learn as an engineer for a company, and I still do. For one, the method I used for 4 years, hacking things together until they worked, doesn’t work for people who have worked on a relatively stable and mature codebase and know how to best write software for that codebase. I had to get rid of my JQuery habit, navigate <a href="https://github.com/mixpanel/panel">Panel</a> (a Javascript framework built by Mixpanel) for our new features, and learn how to write clean code that others would approve of.
+            I had a lot to learn as an engineer, and I still do. For one, the method I used for 4 years, hacking things together until they worked, doesn’t work for people who have worked on a relatively stable and mature codebase and know how to best write software for that codebase. I had to get rid of my JQuery habit, navigate <a href="https://github.com/mixpanel/panel">Panel</a> (a Javascript framework built by Mixpanel) for our new features, and learn how to write clean code that others would approve of.
         </p>
         <p>
-            To ensure I was on the right track, I wanted to track my progress, and I figured the most straightforward way to do so would be to record time spent and statistics from Github pull requests (PRs) of different projects.
+            Along the way, I wanted to ensure I was on the right track by logging my progress. It’s not an easy thing to quantify, but it’s something I think is necessary to concretely see improvement over time. I could gather time spent data and statistics from Github pull requests (PRs), and with that hopefully discover a “north star” metric that I would aim for every day towards engineering betterment.
         </p>
+        <p>
+            <strong>Disclaimer</strong>: this is a purely data-driven perspective on progress. Aside from code quality and process, there are many factors that contribute to the success of an engineer, such as the way she solves problems, works with other engineers and project stakeholders, and takes feedback, and I wish I knew how to track or quantify those aspects. For our purposes, I chose time spent and Github statistics because it was quantitative and it’s not something that has been documented before. 
+        </p>
+        <p>I understand that these are surface level metrics, but I hope the data on my own progress sparks a deeper discussion on what a “better” engineer means and what sort of data we can use to prove that and make it mainstream.</p>
 
         <h3 id="methodology">Methodology</h2>
         <p>After each PR was complete, I collected the following information in a Google Spreadsheet:</p>
@@ -55,7 +60,7 @@
             <li><strong>Date information:</strong> month started, date started, date reviewed, and date pushed per PR</li>
             <li><strong>Time spent:</strong> hours and workdays spent on pre-review, post-review, total number of workdays, total hours worked, and the total number of hours per day</li>
             <li><strong>Ratio of pre-review vs post-review</strong></li>
-            <li><strong>Differing lines of code:</strong> lines of code added minus number of lines removed, or the total lines modified</li> 
+            <li><strong>Unique lines of code:</strong> lines of code added minus number of lines removed, or the total lines modified</li> 
             <li><strong>Number of comments</strong></li>
             <li><strong>Project information: </strong> project number, component, title, stack, framework used</li> 
         </ul>
@@ -70,48 +75,50 @@
             A typical week from March 2019.
         </p>
         <p>
-            Note that one piece of information that would have been useful to include is the difficulty of a task. I have not included them here in this calculation because we don't estimate it on the task quantiatively before we begin (unlike some other companies do). Thus, since evaluating difficulty post-mortem is subjective and biased, I did not want to include it in this analysis.
-        </p>
-        <p>
             The following are the different periods of my engineering, the first being my level and the second being the team or project:
         </p>
         <ul>
-            <li><strong>Engineering path & SRFE: </strong>20 work days, 1 month. Worked on small bug fixes before starting on my assigned task.</li>
-            <li><strong>Engineering path & KEEP: </strong>38 work days, 2 months. Joined a team where each member worked on separate unrelated projects. I worked primarily in Backbone during this time.</li>
+            <li><strong>Engineering Path & SRFE: </strong>20 work days, 1 month. Worked on small bug fixes before starting on my assigned task.</li>
+            <li><strong>Engineering Path & KEEP: </strong>38 work days, 2 months. Joined a team where each member worked on separate unrelated projects. I worked primarily in Backbone during this time.</li>
             <li><strong>L1 & KEEP: </strong>43 work days, 2.5 months. After officially becoming a software engineer, I continued on the same team. L1 is a level reserved for internal transfers.</li>
             <li><strong>L1 & D2: </strong>77 work days, 4 months. Our team transitioned to work on a single product: dashboards. I worked primarily in Panel.</li> 
             <li><strong>L2 & D2: </strong>27 work days, 2 months. I transitioned to L2 (new grad status) and continued to work on dashboards.</li> 
             <li><strong>L2 & AL: </strong>70 work days (as of 3/27/2019), 3.5 months. Our team broadened scope, and I began working on a new product. I worked again primarily in Panel and python. The screenshot of the calendar above would fit into this period of time.</li>
         </ul>
 
-        <h3 id="dream">The Dream</h3>
+        <h3 id="dream">To become a better engineer</h3>
         <p>
-            The dream for software engineers is to get a LGTM (“looks good to me”) on a significant PR and an approval to ship from a fellow colleague, or even better, a senior engineer. This single phrase shows that they approve of your process and code quality.
+            There are many facets to progress and being a better engineer, the three main categories being technical problem solving, code quality, and interpersonal skills. For the sake of quantification (and since I’m still a low level individual contributor), I focus this analysis loosely on the first two.
         </p>
         <p>
-            The following factors tracked contribute to this goal:
+            In terms of code quality, the dream is to get a LGTM (“looks good to me”) on a significant PR and an approval to ship from a fellow colleague, or even better, a senior engineer. This single phrase shows that they approve of your process and code.
+        </p>
+        <p>
+            I looked at the following factors to track whether I made “good code”:
         </p>
         <ul>
             <li><strong>Number of comments.</strong> If I’m improving, I should have fewer comments on my PRs.</li> 
-            <li><strong>Ratio between pre-review and post-review. </strong>If I’m improving, I should have a gradually higher pre-review ratio than post-review ratio.</li>
+            <li><strong>Ratio between pre-review and post-review. </strong>If I’m improving, I should have gradually spent more time between time started to review (pre-review) compared to time spent after the review (post-review), assuming the difficulty is the same. (Unfortunately, I have not included difficulty in this analysis because we don't estimate this explicitly, and did not want to evaluate difficulty post-mortem since it would bias the results.)</li>
         </ul>
         <p>
             Other information that I’m interested to gather:
         </p>
         <ul>
             <li><strong>Pre-review and post-review time. </strong>How long do I spend before and after the review?</li>
-            <li><strong>Average working time. </strong>How long do I spend coding? Being productive?</li> 
-            <li><strong>Lines of code added. </strong>How much code do I contribute?</li>
+            <li><strong>Average working time. </strong>How long do I spend coding?</li> 
+            <li><strong>Unique lines of code. </strong>How much code do I contribute?</li>
             <li><strong>Number of PRs and their cadence. </strong>How often do I deploy code to our codebase?</li>
-            <li><strong>Correlations between time, comments, and amount of code. </strong>Can I use correlations to increase my chances of getting a LGTM?</li> 
+            <li><strong>Factor correlations. </strong>Can I use correlations to increase my chances of getting a LGTM?</li> 
         </ul>
 
 
         <!-- DATA -->
         <h2 id="data">The Data</h2>
         <p>
-            Below, I’ll go into more of the specifics of each bullet point I was interested that was contained in the methodology. The following data comes from <strong>275 workdays (14 months), 182 PRs, 8,305 lines of code added, and 1,271 comments</strong>.
-
+            Below, I’ll go into more of the specifics of each bullet point I was interested that was contained in the methodology. The following data comes from <strong>275 workdays (14 months), 182 PRs, 8,305 unique lines of code, and 1,271 comments</strong>.
+        </p>
+        <p>
+            Please note that while I took basic statistics in high school and in college, I do not have a background in data science. Thus, my analysis is limited to the lens of linear correlations and timescales. 
         </p>
 
         <h3 id="data-pre-post-review">Pre-Review and Post-Review</h3>
@@ -128,7 +135,7 @@
             [Average hours spent on pre-review and post-review graph]
         </div>
         <p>
-            In general, you’ll see that the hours spent during pre-review has gone down from its peak of 7.05 in Eng Path/KEEP to L2/AL of 3.9, as well as for post-review from its peak of 7.8 in Eng Path/KEEP to 1.45 in L2/AL. Average workdays during the pre-review has remained steady at around 2 days, while post-review has gone down from 2.91 in Eng Path/KEEP to 0.96 in L2/AL. In addition, if we compare Eng Path/KEEP to L1/KEEP and L1/D2 to L2/D2, we’ll see that average hours and workdays decreased considerably.
+            In general, you’ll see that the hours spent during pre-review per PR has gone down from its peak of 7.05 on the Eng Path to now of 3.9, as well as for post-review from its peak of 7.8 to 1.45 now. Average workdays during the pre-review have remained steady at around two, while post-review has gone down from 2.91 to 0.96. If we compare between projects (KEEP and D2), we’ll see that average hours and workdays decreased considerably.
         </p>
         <div class="graph-tall" id="prpr-graph-month-av-pre-and-post">
             [Average hours spent on pre-review and post-review per month graph]
@@ -155,7 +162,7 @@
             [Max hours of pre-review vs. max hours of post-review graph]
         </div>
         <p>
-            These numbers represent the PR that obtained the most number of hours during pre-review and post-review for each section. Both pre-review and post-review are decreasing, albeit post-review decreasing a bit more unstably. However, if we compare Eng Path/KEEP to L1/KEEP and L1/D2 to L2/D2, max post-review hours have definitely decreased.
+            These numbers represent the PR that obtained the most number of hours during pre-review and post-review for each section. Both pre-review and post-review are decreasing, albeit post-review decreasing a bit more unstably. However, if we compare within projects (KEEP and D2), max post-review hours have definitely decreased.
         </p>
         <div class="graph-short" id="prpr-graph-pre-post-ratio">
             [% Pre-Review vs. % Post-Review graph]
@@ -177,12 +184,12 @@
         </p>
         <p>
             <strong>In summary: </strong>
-            I spent fewer hours and workdays on both pre-review and post-review on average per PR (except post-review workdays remained steady). There is a weak positive linear correlation between the two as well. A start of a new project causes the pre-review to post-review ratio to decrease, but over time within that project it gradually increases, which does suggest an improvement.
+            I spent fewer hours and workdays on both pre-review and post-review on average per PR (except post-review workdays remained steady). There is a weak positive linear correlation between the two as well. In addition, the first half of a project’s pre-review to post-review ratio is lower than the second half, and it could be for a number of reasons, such as getting used to a new project or that I’ve been given a harder task given my level increase. However, within a project the pre-review ratio increases, which does suggest an improvement.
         </p>
 
         <h3 id="data-average-working-time">Average Working Time</h3>
         <p>
-            Here, I’m curious how long I’m spending per PR and in general, as well as whether they have any correlation. Note that items such as meetings, lunch, and non-coding projects are included in an average day but not on the “hours spent” number. Vacations and offsites are removed from the “day” number.
+            Here, I’m curious how long I’m spending per PR and per day. While more coding doesn’t necessarily correlate with better output (since more time could be an inefficiency and less time could mean I spend productive time on other tasks), it’s interesting to note these numbers.Note that items such as meetings, lunch, and non-coding projects are included in an average day but not on the “hours spent” number. Vacations and offsites are removed from the “day” number.
         </p>
         <div class="graph-tall" id="time-graph-av-hours-pr-day">
             [Average total hours worked per PR vs average hours per day spent on PR graph]
@@ -194,7 +201,7 @@
             [average hours coding per day graph]
         </div>
         <p>
-            In terms of the hours spent per day on PRs, I spent the most at L2/D2 of 5.06 hours per day, while L2/AL was 3.98 hours per day. I was working 50/50 during the Eng path, which explains why the number is low on average for Eng Path/SRFE (1.23). I must have pushed myself really hard during Eng Path/KEEP (and maybe neglected other duties) to achieve an average per day of 4.24 hours! Gradually I've increased the time spent on PRs, although the time in L2/AL is below trend.
+            In terms of the hours spent per day on PRs, I spent the most in L2/D2 of 5.06 hours per day, while L2/AL was 3.98 hours per day. During the Eng Path, on paper I was spending 50% on Engineering and 50% on Support, which explains why I spent 1.23 hours per day during Eng Path/SRFE,  but I must have focused more of my energy on engineering to have achieved an average of 4.24 hours during Eng Path/KEEP. Gradually I've increased the time spent on PRs, although the time in L2/AL is below trend.
         </p>
         <div class="graph-short" id="time-graph-month-av-hours-coding">
             [average hours coding per day graph by month]
@@ -212,7 +219,7 @@
             <li><strong>Meetings: </strong>21 minutes per day (L1/D2) to 26 minutes per day (L2/AL)</li>
             <li><strong>Code reviews: </strong>5 minutes per day (L1/KEEP) to 10 minutes per day (L2/AL)</li>
             <li><strong>Deploying: </strong>I didn’t get deploy access until in between L1 and L2. I spent 25 minutes per day (L2/D2) to 26 minutes per day (L2/AL) on deploying code to production.</li>
-            <li><strong>Fixing / improving devbox: </strong>During L2/D2, we were transitioning from Softlayer devboxes to GCP. I spent 25 minutes per day in L2/D2, and 14 minutes per day in L2/AL</li>
+            <li><strong>Fixing / improving devbox: </strong>During L2/D2, we were transitioning from Softlayer devboxes to GCP. I spent 10 minutes per day in L1/KEEP for Softlayer devboxes, 25 minutes when first transitioning (L2/D2), to 14 minutes in L2/AL in GCP.</li>
             <li><strong>Other projects: </strong>6 minutes per day (L1/D2) to 19 minutes per day (L2/AL)</li>
             <li><strong>Opslead: </strong>I’m shadowing to become opslead, which is why it’s only a small sliver in L2/AL. This number will likely grow in the upcoming months.</li>
         </ul>
@@ -221,18 +228,18 @@
         </p>
         <p>
             <strong>In summary: </strong>
-            the amount of time spent on PRs and per day has decreased over time, but the amount of time I’m spending on average on work activities is increasing. Again the time spent on coding initially is low when starting a new project (July 2018, December 2018), but gradually increases.
+            the amount of time spent on PRs and per day has decreased over time, but the amount of time I’m spending on average on work activities is increasing. Again, the time spent on coding initially is low during the first half of a new project (July 2018, December 2018), but gradually increases.
         </p>
 
         <h3 id="data-number-of-comments">Number of Comments</h3>
         <p>
-            I think of number of comments being associated with feedback: the more comments, the more errors. Thus, if the number of comments decrease per PR, that could mean that I’m doing better.
+            I associate comments with feedback: the more comments, the more errors. Thus, if the number of comments decrease per PR, that could mean that I’m doing better. Note: some comments were expressed over Slack and thus were not captured in these numbers. In addition, some comments was my response to other comments, which could have inflated the numbers. Hopefully these numbers balances this out over time.
         </p>
         <div class="graph-short" id="comments-graph-av-most-comments">
             [average comments and max comments per pr graph]
         </div>
         <p>
-            It looks like both the average number of comments per PR and the most comments in a single PR is decreasing, from 22.09 in Eng Path/KEEP to 7.37 in L2/AL, and from a whopping 99 in Eng Path/KEEP to 36 in L2/AL. If we compare Eng Path/KEEP to L1/KEEP and L1/D2 to L2/D2, we’ll see that average comments are decreasing as well.
+            It looks like both the average number of comments per PR and the most comments in a single PR is decreasing, from 22.09 to 7.37 now, and from a whopping 99 to 36 now. If we compare within projects, we’ll see that average comments are decreasing, as well.
         </p>
         <div class="graph-short" id="comments-graph-month-av-comments">
             [average comments per pr graph by month]
@@ -265,22 +272,13 @@
 
         <h3 id="data-number-of-prs">Number of PRs</h3>
         <p>
-            We’ll take a look at PR cadence, PR code type, and the number of large PRs.
-        </p>
-        <p>
-            I define “large” PRs rather loosely: it must have more than 100 lines of code, but after that it’s a bit more subjective. For example, if I wrote a lot of test code to go with it, I don’t consider it a large PR. If for Javascript there’s a lot of comments or adding of a type.ts file for type checking purposes or much copy and pasting of code, I don’t consider it a large PR.
-        </p>
-        <div class="graph-short" id="prs-graph-percent-large-prs">
-            [large prs percentage graph]
-        </div>
-        <p>
-            In this above graph, you’ll see that the number of these large PRs have decreased over time, from 18.18% in Eng Path/KEEP to 5.77% in L2/AL.
+            We’ll take a look at PR cadence and PR code type.
         </p>
         <div class="graph-short" id="prs-graph-cadence">
             [pr every x day graph]
         </div>
         <p>
-            In addition, the cadence of PR has decreased from a PR every 4 days in Eng Path/SRFE to a PR every 1.35 days in L2/AL.PRs are being deployed quicker.  Again, I did not receive deploy access until L1, and so that could also be the reason for longer PR times in Eng Path. This time if we compare Eng Path/KEEP to L1/KEEP and L1/D2 to L2/D2, we’ll see that the cadence lengthens slightly within projects.
+            The cadence of PRs has decreased from a PR every four days to a PR every 1.35 days. Again, I did not receive deploy access until L1, and so that could also be the reason for longer PR times in Eng Path. This time, if we compare within projects, we’ll see that the cadence lengthens slightly.
         </p>
         <div class="graph-short" id="prs-graph-month-cadence">
             [pr every x day graph by month]
@@ -313,13 +311,23 @@
 
         <h3 id="data-lines-of-code">Lines of Code</h3>
         <p>
-            And now for contribution to our code base: how much code am I adding? Generally speaking, more lines of code is more productivity. Again the calculation is the number of lines added minus the number of lines removed. I understand that this could have been the number of lines added <i>plus</i> the number of lines removed, since removed code is also considered productive (if not better than adding code), however this would mean that lines with even the most miniscule changes (such as tabs) would count as double, which I don't believe should be considered productive. Thus, I figured subtracting the two would be sufficient.
+            And now for contribution to our code base: how much code am I adding? Generally speaking, more lines of code is more output. Again the calculation is the number of lines added minus the number of lines removed. I understand that this could have been the number of lines added <i>plus</i> the number of lines removed, since removed code is also considered productive (if not better than adding code), however this would mean that lines with even the most miniscule changes (such as tabs) would count as double, which I don't believe should be considered productive. Thus, I figured subtracting the two would be sufficient.
         </p>
+        <p>
+            I define “large” PRs rather loosely: it must have more than 100 lines of code or have touched more than 30 files, but after that it’s a bit more subjective. For example, if I wrote a lot of test code, created a type.ts file, or much of the code was automatically generated, I don’t consider it a large PR.
+         </p>
+        <div class="graph-short" id="prs-graph-percent-large-prs">
+            [large prs percentage graph]
+        </div>
+        <p>
+            In the above graph, you’ll see that the number of these large PRs has decreased over time, from 18.18% during my path to 5.77% now.
+        </p>
+
         <div class="graph-short" id="code-graph-av-lines-code-day">
             [average lines of code added per day graph]
         </div>
         <p>
-            I’m adding more code per day on average, from 15.79 in L1/KEEP to 38.26 in L2/AL. Again, during my Eng Path I worked 50/50, so this number shouldn’t be as high as the others.
+            The average unique lines of code per PR fluctuates, from 50-80 lines in the first half of a project to 20 lines in the second half, much like the large PR chart. 
         </p>
         <div class="graph-short" id="code-graph-month-av-lines-code-day">
             [average lines of code added per day graph by month]
@@ -337,7 +345,7 @@
             [average different lines of code of pr graph]
         </div>
         <p>
-            Again, this graph is pretty similar to the above two, most likely as a result from the larger PRs that bumped up the amount of code.
+            The average unique lines of code per PR fluctuates, from 50-80 lines in the first half of a project to 20 lines in the second half, much like the large PR chart. 
         </p>
         <div class="graph-short" id="code-graph-hours-worked-vs-code-added">
             [total hours worked vs different lines of code graph]
@@ -349,7 +357,7 @@
             [total hours worked per PR vs different lines of code graph no outliers]
         </div>
         <p>
-            Here's the same graph with the outliers removed. Outliers are defined as the number of hours worked are above 16 and code added is fewer than -66 and more than 114. The coefficient of determination is 0.409, which suggests that the total hours worked per PR and the amount of lines of coded added are still moderately linearly correlated, but not as strong as thought.
+            Here's the same graph with the outliers removed. Outliers are defined as the number of hours worked are above 16 and code added is fewer than -66 and more than 114. The coefficient of determination is 0.409, which suggests that the total hours worked per PR and the amount of lines of coded added are still moderately linearly correlated, but not as strong as initially thought.
         </p>
         <div class="graph-short" id="code-graph-code-added-vs-comments">
             [lines of code per PR vs comments per PR graph]
@@ -365,19 +373,16 @@
         </p>
         <p>
             <strong>In summary: </strong>
-            the lines of code added are also increasing in general and in projects. There is also a moderate positive linear correlation between the number of hours worked and the lines of code added, and a much weaker correlation between amount of comments and lines of code added.
+            the unique lines of code are increasing in general and in projects, while the amount of larger PRs are decreasing. There is also a moderate positive linear correlation between the number of hours worked and the unique lines of code, and a much weaker correlation between amount of comments and unique lines of code.
         </p>
 
         <!-- FINDINGS -->
         <h2 id="findings">Findings</h2>
         <p>
-            <strong>I spend on average 5.68 hours per day productively, 4.50 on PRs.</strong> The PR number has decreased lately, while the number of productive hours has increased over time. That means in a typical 8 hour day, 73.3% is spent productively, which...isn’t totally a bad number?
-        </p>
-        <p>
             <strong>Did I improve?</strong> Probably. It's clear that there are fewer comments, more PRs deployed, and a higher ratio of pre-review to post-review in general and within projects, which does appear to be closer to the LGTM state. There were some fluctuations in accordance with the start of a new project, which suggests…
         </p>
         <p>
-            <strong>Starting new projects at first will look less productive than usual. </strong>When I start a new project, within that month I average more comments per PR, less time spent, a lower pre-review ratio, and less code added to production. Perhaps this is because I'm researching or still figuring things out, which leads to PRs that have more comments and more non-PR work. However, over time when I'm in the zone or know what's going on, these numbers all trend towards the positive.
+            <strong>Starting new projects at first will look less productive than usual. </strong>When I start a project, within that month I average more comments per PR, less time spent, a lower pre-review ratio, and less code added to production. Perhaps this is because I'm researching or still figuring things out, which leads to PRs that have more comments and more non-PR work. However, over time when I'm in the zone or know what's going on, these numbers all trend towards the positive.
         </p>
         <p>
             <strong>There's a weak positive correlation between hours of pre-review and post-review per PR.</strong> Just because I spend more time on a PR before submitting for review doesn't necessarily mean that that PR will have a lower post-review time.
@@ -389,7 +394,39 @@
             <strong>"Simple PRs" doesn't necessarily mean "small PRs".</strong> When we look at the raw numbers rather than the averages by month from the above, the correlations between these amount of comments, lines of code, and hours spent per PR are weak to moderate at best, which suggests that it's hard to define quantitatively what it means for a PR to be "simple". However, there's a higher chance of simplicity if we break PRs up into smaller chunks, which allows reviewers to understand a larger whole piece by piece and catch things that might have otherwise be missed on a larger PR. This is a common practice at Mixpanel and something that we encourage all of our engineers to do.
         </p>
         <p>
-            <strong>I spend more time deploying than fixing my devbox.</strong> This surprised me. Our devboxes often error, and it seems like the end of the world when the normal mechanisms of rebooting them don't work. However it looks like I spend on average 14 minutes per day fixing my devbox (which is less than expected) and on average 26 minutes deploying code to production per day (which is more than expected).
+            <strong>As a full time engineer, I spent on average 5.85 hours per day on work and 5 hours on PRs for the past year.</strong> This means in a typical eight hour day, 73% of time is spent on work and 62% of time is spent on coding. For the past project, these numbers were 5.98 hours on work (meetings, code review, deploying, other projects) and 3.98 hours on coding. This number seems lower than expected, however keep in mind that I aimed to lowball these numbers rather than inflate them. Thus, I did not include lunch, catching up on slack / email, PRs that were not implemented, and I might have forgotten to include spontaneous conversations that were not logged retroactively. I have chatted with my manager about the time spent, and he has emphasized that I should not feel pressure to increase time spent coding and that 4 hours per day is already higher than expected.
+        </p>
+        <p>
+            <strong>If you’re honest with yourself, you don’t spend as much time as you think.</strong> Yes, on average 4-5 hours of coding per day and 5.85-6 hours per day working (excluding some factors that have fell through the cracks as mentioned above) is less than 8 hours. However, is it really possible to spend a full 8 hours a day coding? As my manager points out, I should not try to increase coding because it doesn’t necessarily correlate with better output: I should also spend time on code reviews, syncing up with coworkers, helping out engineers, being opslead, etc - this also makes better engineers. I should also better log time to more accurately represent how I spend my time: not just planned occurrences or time coding.
+        </p>
+
+        <h2 id="more-data">Data Improvements Going Forward</h2>
+        <p>
+            After I asked for my team to provide feedback on this post, I received input on my goals and what makes skilled engineers. I regret not talking to them sooner and asking them before I began to track. Here are some other quantitative metrics to track progress:
+        </p>
+        <p>
+            <strong>Time estimates.</strong> Most prominently is the fact that the more experienced an engineer, the better she is at estimating how long a task or project will take.
+        </p>
+        <p>
+            <strong>PR quality. </strong>While I wrote about PR length, lines of code, and number of comments, there are other factors to track that can make PRs great, such as the following:
+            <ul>
+                <li>Did the PR provide context such as in-depth descriptions and inline comments?</li>
+                <li>Was there a “draft PR” submitted beforehand as a way to check thought process?</li>
+                <li>Were the commits separated out clearly?</li>
+                <li>What kind of comments were received on a PR?</li>                
+            </ul>
+        </p>
+        <p>
+            <strong>Task difficulty.</strong> I mentioned earlier that it would be great to also track difficulty as a way to be in step with the pre-review to post-review ratio, as ideally the pre-review ratio should increase for pull requests of similar difficulty and not necessarily for those that are more difficult or new.
+        </p>
+        <p>
+            <strong>Breaking down the pre-review.</strong>Finally, I’ve realized that my pre-review statistic did not encompass only the pre-review period, and I plan to break it up to account for different such as:
+            <ul>
+                <li>Did I ask for help during the pre-review? How much time did I spend getting feedback?</li>
+                <li>Time spent between a review to change my approach and the review after that changed approach</li>
+                <li>Time to fix tests before ready for deploy</li>
+                <li>Time to fix a deploy</li>
+            </ul>
         </p>
 
         <h2 id="conclusion">Conclusion</h2>
@@ -397,18 +434,25 @@
             I've learned a lot about software engineering over the past year, and there's always more to learn. I definitely have a long way to go before I can create a significant PR with LGTM, but for now I'm pleased with the fact that there is progress.
         </p>
         <p>
-            This analysis raised more questions than answers, especially about how to show that productivity has increased. Does it mean that time spent should be increased? Does it mean deploying more PRs (or complete more JIRA tasks), or contributing more lines of code? Each have their pros and cons. For example, increasing time spent could also mean that it takes me longer to produce the same code (thus being not as productive). Deploying more PRs could mean something as small as a one line change or it could mean creating more PRs to fix more bugs, which also isn't good. Contributing more lines of code could just mean more line breaks or comments, and sometimes removing more code is better than creating more of it. Maybe it's a combination of all three?
+            Even after all this data, there isn’t a “north star metric” I can use to focus on because there are so many factors that contribute to progress. I plan to continue to track these numbers and distill them in a way that can hopefully lead to more insights. In addition, I plan to track time estimates, difficulty, and break down my original pre-review statistic so that I can have more accurate data (more information about this in my original post). I also hope to leverage Github statistics to make useful insights across all of our engineers.
         </p>
         <p>
-            For now, I plan to continue breaking up larger features into smaller PRs to decrease the complexity of the overall whole. While the data doesn't necessarily suggest this, I do plan to spend more time on the pre-review stage (ensuring the methodology is correct and doing research) since that doesn't hurt. I'll also continue to ruminate on how to track productivity, and when I figure it out, I'll compare it to all sorts of factors that I happen to have on hand.
+            In the meantime, my focus for increasing PR quality will be to:
+            <ol>
+                <li>Continue to break up larger features into smaller PRs to decrease the complexity of the overall whole</li>
+                <li>Ask for feedback early and often to ensure that the methodology is correct</li>
+            </ol>
         </p>
         <p>
-            What do you think about this data and the conclusions I've presented here? How would you define productivity or success quantitatively? Happy to discuss!
+            What do you think about the data and the conclusions I've presented there? How would you track progress? I hope the article inspires someone out there to track their data and draw more conclusions that can help the engineering community.
         </p>
 
         <h2 id="acknowledgements">Acknowledgements</h2>
         <p>
-            Thank you to my team: Jordan, Josh, and Jing, for putting up with my code and questions on a daily basis.
+            Thank you to Aniruddha, Noj, Josh, Daniel, and Kristen for reading this behemoth and giving me great feedback.
+        </p>
+        <p>
+            Thank you to my team: Jordan, Josh, and Jing for putting up with my code and questions on a daily basis.
         </p>
         <p>
             Thank you to Bernie, Robert, and Zak for believing in me and giving me the flexibility to pursue my own path.
@@ -723,7 +767,7 @@
                 containerId: 'code-graph-av-lines-code-day',
                 query: 'SELECT A,AC',
                 showLegend: false,
-                title: 'Average Lines of Code Added per Day over Time',
+                title: 'Average Unique Lines of Code per Day over Time',
                 url: SUMMARY_DATA_URL,
                 vAxisTitle: 'Lines of Code',
             });
@@ -733,7 +777,7 @@
                 containerId: 'code-graph-month-av-lines-code-day',
                 query: 'SELECT A,O',
                 showLegend: false,
-                title: 'Average Lines of Code Added per Day by Month',
+                title: 'Average Unique Lines of Code per Day by Month',
                 url: MONTH_DATA_URL,
                 vAxisTitle: 'Lines of Code',
             });
@@ -743,7 +787,7 @@
                 containerId: 'code-graph-max-lines-code-pr',
                 query: 'SELECT A,AD',
                 showLegend: false,
-                title: 'Max Lines of Code Added in a PR over Time',
+                title: 'Max Unique Lines of Code in a PR over Time',
                 url: SUMMARY_DATA_URL,
                 vAxisTitle: 'Lines of Code',
             });
@@ -753,7 +797,7 @@
                 containerId: 'code-graph-av-lines-code-pr',
                 query: 'SELECT A,AE',
                 showLegend: false,
-                title: 'Average Different Lines of Code per PR over Time',
+                title: 'Average Unique Lines of Code per PR over Time',
                 url: SUMMARY_DATA_URL,
                 vAxisTitle: 'Lines of Code',
             });
