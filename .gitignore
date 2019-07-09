@@ -8,3 +8,6 @@ package-lock.json
 base.html
 mixins.html
 photography-base.html
+
+my-projects/mp.py
+my-projects/progress.csv
