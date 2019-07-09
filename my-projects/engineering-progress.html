@@ -35,7 +35,7 @@
         <div class="date">April 2019</div>
 
         <p>
-            I’ve officially been a software engineer at Mixpanel for one year! For the full year, I’ve been tracking various time and Github data and I thought I’d share my results to start a conversation and be completely transparent about how engineers spend their time, and how some aspects of their code changes over time. You can skip the background and methodology if you wish by going directly to the <a href="#data">Data</a> or the <a href="#findings">Findings</a>.
+            I’ve officially been a software engineer at Mixpanel for one year! For the full year, I’ve been tracking various time and Github data and I thought I’d share my results to start a conversation and be completely transparent about how engineers spend their time, and how some aspects of their code changes over time. You can skip the background and methodology if you wish by going directly to the <a href="#data">Data</a> or the <a href="#findings">Findings</a>. You can also check out another version of this post using <a href="#">Mixpanel insights</a>.
         </p>
         <p>
             Some background: I started programming in 2014 in my junior year at UC Berkeley. While I was at school, I took a couple of courses in theory (CS 61A, CS 61B, CS 160, and CS 169), and outside of class I taught myself basic web development and worked on side projects (largely on my own). As one does when they first start out, my method of programming was to hack things together via StackOverflow until it worked.
@@ -47,10 +47,10 @@
             I had a lot to learn as an engineer, and I still do. For one, the method I used for 4 years, hacking things together until they worked, doesn’t work for people who have worked on a relatively stable and mature codebase and know how to best write software for that codebase. I had to get rid of my JQuery habit, navigate <a href="https://github.com/mixpanel/panel">Panel</a> (a Javascript framework built by Mixpanel) for our new features, and learn how to write clean code that others would approve of.
         </p>
         <p>
-            Along the way, I wanted to ensure I was on the right track by logging my progress. It’s not an easy thing to quantify, but it’s something I think is necessary to concretely see improvement over time. I could gather time spent data and statistics from Github pull requests (PRs), and with that hopefully discover a “north star” metric that I would aim for every day towards engineering betterment.
+            Along the way, I wanted to ensure I was on the right track by logging my progress. It’s not an easy thing to quantify, but it’s something I think is necessary to concretely see improvement over time. I could gather time spent data and statistics from Github pull requests (PRs), and with that hopefully discover a personal “north star” metric that I would aim for every day towards engineering betterment.
         </p>
         <p>
-            <strong>Disclaimer</strong>: this is a purely data-driven perspective on progress. Aside from code quality and process, there are many factors that contribute to the success of an engineer, such as the way she solves problems, works with other engineers and project stakeholders, and takes feedback, and I wish I knew how to track or quantify those aspects. For our purposes, I chose time spent and Github statistics because it was quantitative and it’s not something that has been documented before. 
+            <strong>Disclaimer</strong>: this is a purely data-driven perspective on progress. Aside from code quality and process, there are many factors that contribute to the success of an engineer, such as the way she solves problems, works with other engineers and project stakeholders, and takes feedback, and I wish I knew how to track or quantify those aspects. Not letting perfect be the enemy of good, I chose to track time spent and Github statistics because it was quantitative and it’s not something that has been documented before. 
         </p>
         <p>I understand that these are surface level metrics, but I hope the data on my own progress sparks a deeper discussion on what a “better” engineer means and what sort of data we can use to prove that and make it mainstream.</p>
 
@@ -59,7 +59,7 @@
         <ul>
             <li><strong>Date information:</strong> month started, date started, date reviewed, and date pushed per PR</li>
             <li><strong>Time spent:</strong> hours and workdays spent on pre-review, post-review, total number of workdays, total hours worked, and the total number of hours per day</li>
-            <li><strong>Ratio of pre-review vs post-review</strong></li>
+            <li><strong>Ratio of pre-review vs post-review</strong>: “Pre-review” is the period of time in which I spend on beginning research and coding before asking others to review, while “post-review” is that which I spend incorporating comments and feedback from reviewers before shipping code to production</li>
             <li><strong>Unique lines of code:</strong> lines of code added minus number of lines removed, or the total lines modified</li> 
             <li><strong>Number of comments</strong></li>
             <li><strong>Project information: </strong> project number, component, title, stack, framework used</li> 
@@ -88,10 +88,10 @@
 
         <h3 id="dream">To become a better engineer</h3>
         <p>
-            There are many facets to progress and being a better engineer, and at Mixpanel, we highlight technical ability, technical leadership, and teamwork. For the sake of quantification (and since I’m still early in my career), I focus this analysis loosely on technical ability.
+            There are many facets to progress and being a better engineer, and at Mixpanel, we highlight technical ability, technical leadership, and teamwork, which are integrated into our leveling guide. For the sake of quantification (and since I’m still early in my career), I focus this analysis loosely on technical ability.
         </p>
         <p>
-            In terms of technical ability and code quality, the dream is to get a LGTM (“looks good to me”) on a significant PR and an approval to ship from a fellow colleague, or even better, a senior engineer. This single phrase shows that they approve of your process and code.
+            In terms of technical ability and code quality, the goal is to get a LGTM (“looks good to me”) on a significant PR and an approval to ship from a fellow colleague, or even better, a senior engineer. This single phrase shows that they approve of your process and code.
         </p>
         <p>
             In an attempt to quantify my personal progress towards this goal, we’ll take a deep dive into the following points in the data I collected, which are the following:
@@ -101,11 +101,11 @@
             <li><strong>Average working time. </strong>How long do I spend coding?</li> 
             <li><strong>Number of comments.</strong> How many comments do I get on average?</li> 
             <li><strong>Number of PRs and their cadence. </strong>How often do I deploy code to our codebase?</li>
-            <li><strong>Unique lines of code. </strong>How much code do I contribute?</li>
+            <li><strong>Unique lines of code. </strong>How much code do I contribute? (This is by no means the way we evaluate or measure engineers at Mixpanel, but it was a piece of easy to get quantitative data that might be interesting to look at)</li>
             <li><strong>Factor correlations. </strong>Can I use correlations to increase my chances of getting a LGTM?</li> 
         </ul>
 
-        <p>Ultimately, I’m looking to determine if I can use correlations between my time spent at Mixpanel and these statistics to increase my chances of getting a LGTM.</p>
+        <p>Ultimately, I’m looking to determine whether I can use correlations between my time spent at Mixpanel and these statistics to increase my chances of getting a LGTM more quickly.</p>
 
 
         <!-- DATA -->
@@ -120,9 +120,6 @@
         <h3 id="data-pre-post-review">Pre-Review and Post-Review</h3>
         <p>
             Here, I’m curious to see how long I spend in each type and whether or not the amount of time I’m spending on post-review is decreasing. If so, perhaps I’m improving! I’m also interested in whether the two have any correlation.
-        </p>
-        <p>
-            “Pre-review” is the period of time in which I spend on beginning research and coding before asking others to review, while “post-review” is that which I spend incorporating comments and feedback from others before shipping code to production. Deploy time is not added to the post-review unless I needed to revise something that came up during staging.
         </p>
         <p>
             Sometimes pre-review time also includes time redoing a PR when a reviewer lets me know that I either created the wrong feature or have to change the overall approach to account for an extra detail. In this way the wording of this section is a little misleading--my primary goal for this ratio is to determine how much time it takes to refactor or address the comments of others on coding style or existing behavior, and if I started on the wrong foot or did not include something, I don’t feel that’s completely accurate in that representation. However, I do admit that moving some PRs’ post-review time into the pre-review time fudges the numbers a bit, and thus I advise to take this section with a grain of salt.
@@ -263,7 +260,7 @@
         </p>
         <p>
             <strong>In summary: </strong>
-            the number of comments is decreasing in general and within projects, which does suggest somewhat of an improvement (except in L2/AL). The amount of time and number of comments are somewhat linearly correlated as well, but averaged by month the numbers are strongly correlated.
+            the number of comments is decreasing in general and within projects, which does suggest somewhat of an improvement (except in L2/AL). The amount of time and number of comments are somewhat linearly correlated as well, but averaged by month the numbers are strongly correlated. This makes sense because the more comments there are, the more time it takes to address the comments.
         </p>
 
         <h3 id="data-number-of-prs">Number of PRs</h3>
@@ -302,12 +299,12 @@
         </p>
         <p>
             <strong>In summary: </strong>
-            I have deployed more PRs per week and fewer large PRs over time. In addition, the cadence between PRs and the number of comments within that PR are strongly positively correlated. I've also coded more in Panel and less in Backbone.
+            I have deployed more PRs per week and fewer large PRs over time. In addition, the cadence between PRs and the number of comments within that PR are strongly positively correlated, which makes sense because the more comments left, the longer it takes to correct and deploy the PR. I've also coded more in Panel and less in Backbone.
         </p>
 
         <h3 id="data-lines-of-code">Lines of Code</h3>
         <p>
-            And now for contribution to our code base: how much code am I adding? Generally speaking, more lines of code is more output. Again the calculation is the number of lines added minus the number of lines removed. I understand that this could have been the number of lines added <i>plus</i> the number of lines removed, since removed code is also considered productive (if not better than adding code), however this would mean that lines with even the most miniscule changes (such as tabs) would count as double, which I don't believe should be considered productive. Thus, I figured subtracting the two would be sufficient.
+            And now for contribution to our code base: how much code am I adding? Lines of code are not the way we measure or evaluate our engineers, nor are they by any means a good measure of progress, but it is fun to look at and see changes over time. Generally speaking, more lines of code is more output. Again the calculation is the number of lines added minus the number of lines removed. I understand that this could have been the number of lines added <i>plus</i> the number of lines removed, since removed code is also considered productive (if not better than adding code), however this would mean that lines with even the most miniscule changes (such as tabs) would count as double, which I don't believe should be considered productive. Thus, I figured subtracting the two would be sufficient.
         </p>
         <p>
             I define “large” PRs rather loosely: it must have more than 100 lines of code or have touched more than 30 files, but after that it’s a bit more subjective. For example, if I wrote a lot of test code, created a type.ts file, or much of the code was automatically generated, I don’t consider it a large PR.
@@ -384,10 +381,7 @@
             <strong>There's a weak positive correlation between hours of pre-review and post-review per PR.</strong> Just because I spend more time on a PR before submitting for review doesn't necessarily mean that that PR will have a lower post-review time.
         </p>
         <p>
-            <strong>Simple PRs on average get code out faster.</strong> This seems obvious, but the data does prove it. Average cadence between PRs, average hours spent per PR, and the average number of comments per PR per month are strongly positive correlated, which implies that (averaged out over a month) the more complicated the PR (as it takes longer to deploy), the more comments are left, and the longer it takes to work on. However…
-        </p>
-        <p>
-            <strong>"Simple PRs" doesn't necessarily mean "small PRs".</strong> When we look at the raw numbers rather than the averages by month from the above, the correlations between these amount of comments, lines of code, and hours spent per PR are weak to moderate at best, which suggests that it's hard to define quantitatively what it means for a PR to be "simple". However, there's a higher chance of simplicity if we break PRs up into smaller chunks, which allows reviewers to understand a larger whole piece by piece and catch things that might have otherwise be missed on a larger PR. This is a common practice at Mixpanel and something that we encourage all of our engineers to do.
+            <strong>"Simple PRs" get code out faster, but that doesn't necessarily mean "small PRs".</strong> When we look at the raw numbers rather than the averages by month from the above, the correlations between these amount of comments, lines of code, and hours spent per PR are weak to moderate at best, which suggests that it's hard to define quantitatively what it means for a PR to be "simple". However, there's a higher chance of simplicity if we break PRs up into smaller chunks, which allows reviewers to understand a larger whole piece by piece and catch things that might have otherwise be missed on a larger PR. This is a common practice at Mixpanel and something that we encourage all of our engineers to do.
         </p>
         <p>
             <strong>As a full time engineer, I spent on average 5.85 hours per day on work and 5 hours on PRs for the past year.</strong> This means in a typical eight hour day, 73% of time is spent on work and 62% of time is spent on coding. For the past project, these numbers were 5.98 hours on work (meetings, code review, deploying, other projects) and 3.98 hours on coding. These numbers seem lower than expected, but because my tracking method involves retroactive time logs, unfortunately not everything was recorded precisely. For example, I did not log catching up on slack / email, PRs that were not deployed, lunch and breaks, and I might have forgotten to include a few spontaneous conversations.
