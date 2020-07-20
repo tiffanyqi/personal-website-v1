@@ -40,13 +40,13 @@ function drawHumanLanguagesChart() {
 function drawProgrammingLanguagesChart() {
   var data = google.visualization.arrayToDataTable([
     ['', 'Proficiency', {role: 'tooltip'}, {role: 'style'}],
-    ['HTML', 85, '85% Proficiency - 4 years, used at Mixpanel.', '#778fb5'],
-    ['CSS/Sass', 85, '85% Proficiency - 4 years, used at Mixpanel.', '#778fb5'],
-    ['Javascript', 70, '70% Proficiency - 2 years, most used language at Mixpanel. Can use it without breaking anything.', '#778fb5'],
-    ['Python', 70, '70% Proficiency - 3 years, used at Mixpanel, 3 side projects, and my default back-end language.', '#e18f77'],
-    ['Django', 70, '70% Proficiency - 2 years, used at Mixpanel, 3 side projects, and my default web app framework. Can create a working web app from start to finish.', '#e18f77'],
-    ['Jade', 60, '60% Proficiency - 2 years, used at Mixpanel.', '#778fb5'],
-    ['PanelJS', 60, '60% Proficiency - 1 year, primary JS framework at Mixpanel. Can create components and use it without breaking anything.', '#778fb5'],
+    ['HTML', 85, '85% Proficiency - 5 years, used at Mixpanel.', '#778fb5'],
+    ['CSS/Sass', 85, '85% Proficiency - 5 years, used at Mixpanel.', '#778fb5'],
+    ['Javascript', 70, '70% Proficiency - 3 years, most used language at Mixpanel. Can use it without breaking anything.', '#778fb5'],
+    ['Python', 70, '70% Proficiency - 4 years, used at Mixpanel, 3 side projects, and my default back-end language.', '#e18f77'],
+    ['Django', 70, '70% Proficiency - 3 years, used at Mixpanel, 3 side projects, and my default web app framework. Can create a working web app from start to finish.', '#e18f77'],
+    ['Jade', 60, '60% Proficiency - 3 years, used at Mixpanel.', '#778fb5'],
+    ['PanelJS', 60, '60% Proficiency - 2 year, primary JS framework at Mixpanel. Can create components and use it without breaking anything.', '#778fb5'],
     ['Ruby', 50, '50% Proficiency - 1 year, one class and side project. Knows syntax and can use it as a back-end language.', '#e18f77'],
     ['Java', 50, '50% Proficiency - 1 year, one class and side project. Knows syntax and can use it as a back-end language.', '#e18f77'],
     ['AngularJS' , 40, '40% Proficiency - 1/2 year, one side project. Can work with it.', '#778fb5'],
@@ -58,17 +58,13 @@ function drawProgrammingLanguagesChart() {
 function drawTimeSpentChart() {
   var data = google.visualization.arrayToDataTable([
     ['', 'Proficiency'],
-    ['Coding', 33.75],
-    ['Baking' , 7.25],
-    ['Language Learning', 5.5],
-    ['Aerial Silks', 5.00],
-    ['Projects', 4],
-    ['Friends and Family', 20.75],
-    ['Sleep', 52],
-    ['Hygiene and Commute', 14.25],
+    ['Coding and Work', 32.75],
+    ['Baking' , 9.5],
+    ['Aerial Silks and Contortion', 8.25],
+    ['Friends and Family', 9.5],
+    ['Sleep', 55.25],
     ['Planning', 8.00],
-    ['Physical and Mental Health', 4],
-    ['Other', 13.50],
+    ['Other', 31.25],
   ]);
   var options = {
     backgroundColor: '#c5d3de',
@@ -90,15 +86,11 @@ function drawTimeSpentChart() {
     slices: {
       0: {color: '#ea9999'}, // coding
       1: {color: '#e06666'}, // baking
-      2: {color: '#cc0000'}, // language      
-      3: {color: '#990000'}, // aerial
-      4: {color: '#660000'}, // projects
-      5: {}, // friends
-      6: {color: '#ffd966'}, // sleep
-      7: {color: '#f1c232'}, // hygiene
-      8: {color: '#bf9000'}, // planning
-      9: {color: '#7f6000'}, // health
-      10: {}, // other
+      2: {color: '#cc0000'}, // aerial      
+      3: {}, // friends
+      4: {}, // sleep
+      5: {}, // planning
+      6: {color: '#bf9000'}, // other
     },
     width: 900,
   }
