@@ -1,0 +1,33 @@
+include mixins.jade
+extends photography-base.jade
+
+block append head
+  title Tiffany Qi | Contortion
+
+block append content
+  .container
+    h1 Contortion
+    .picture-container
+      - const imgSrc = 'assets/img/reel/contortion-';
+      +largePicture(imgSrc + 'mirror.jpg', 'Splits in the Kusama Mirrors, Toronto')
+      +largePicture(imgSrc + 'lacma-splits.jpg', 'Splits in LACMA, LA')
+      +largePicture(imgSrc + 'couch-splits.jpg', 'Oversplits on a couch')
+      +largePicture(imgSrc + 'splits-3in.jpg', 'Oversplits, 3 inches')
+      +largePicture(imgSrc + 'splits-9in.png', 'Oversplits, 9 inches')
+      +largePicture(imgSrc + 'downward-dog.png', 'Downward dog')
+      +largePicture(imgSrc + 'scale.png', 'Side leg scale, still perfecting')
+      +largePicture(imgSrc + 'pancake.png', 'Full pancake')
+
+      +largePicture(imgSrc + 'backbend-2.png', 'Backbend')
+      +largePicture(imgSrc + 'camel.jpg', 'Camel')
+      +largePicture(imgSrc + 'feet-head.png', 'Touching my feet to my head')
+      +largePicture(imgSrc + 'backbend.png', 'Trying to touch the ground')
+
+      +largePicture(imgSrc + 'chin-stand.png', 'Chin Stand, still perfecting')
+      +largePicture(imgSrc + 'elbow-stand.png', 'Elbow stand, still perfecting')
+      +largePicture(imgSrc + 'elbow-stand-2.png', 'Elbow stand, part two, still perfecting')
+
+block append scripts
+  script.
+    const pageName = "Contortion";
+    trackPageView(pageName);

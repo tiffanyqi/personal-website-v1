@@ -2,15 +2,26 @@ include mixins.jade
 extends photography-base.jade
 
 block append head
-  title Tiffany Qi | Baking and Cooking
+  title Tiffany Qi | Desserts
 
 block append content
   .container
-    h1 Baking
+    h1 Pastry and Desserts
     .picture-container
       - const imgSrc = 'assets/img/reel/homemade-';
       +largePicture(imgSrc + 'five-full.jpg', 'Lemon number five cake with toasted meringue, mint, and raspberries')
       +largePicture(imgSrc + 'five-circle.jpg', 'Lemon number five cake with toasted meringue, mint, and raspberries')
+      +largePicture(imgSrc + 'arb-cake.jpg', 'Arb cake and macarons')
+      +largePicture(imgSrc + 'birthday-cake-slice.jpg', 'Birthday cake, black sesame, barley grass, strawberries, peaches')
+      +largePicture(imgSrc + 'naan-cake.jpg', '"Naan" cake and "saag paneer')
+      +largePicture(imgSrc + 'unicorn.jpg', 'Rainbow unicorn cake')
+      +largePicture(imgSrc + 'alpaca-cake.jpg', 'Alpaca cake')
+      +largePicture(imgSrc + 'cake-swirls.jpg', 'Alpaca cake swirls')
+      +largePicture(imgSrc + 'psyduck-cake.jpeg', 'Psyduck bathtub cake')
+      +largePicture(imgSrc + 'rainbow-cake.jpg', 'Sponge cake with rainbow buttercream')
+      +largePicture(imgSrc + 'crepe-cake.jpg', 'Matcha crêpe cake with orange cream')
+      +largePicture(imgSrc + 'rolls-front.jpeg', 'Sponge Roulades - Coffee & Chocolate, Matcha, and Vanilla Strawberry')
+      +largePicture(imgSrc + 'chiffon-slice.jpg', 'Chocolate chiffon with raspberries')
       +largePicture(imgSrc + 'matcha-cheesecake.jpg', 'Matcha cheesecake')
 
       +largePicture(imgSrc + 'mooncake-egg-yolk-center.jpeg', 'Mooncake with egg yolk and lotus')
@@ -18,43 +29,35 @@ block append content
       +largePicture(imgSrc + 'mooncakes-variety.jpg', 'Mooncake truffles and snowskin mooncakes')
       +largePicture(imgSrc + 'mooncake-truffle-colors.jpeg', 'Mooncake truffles')
       +largePicture(imgSrc + 'moon-cookies.jpg', 'Matcha white chocolate and chocolate chip cookie dough')
-      +largePicture(imgSrc + 'mooncakes.jpg', 'Moon cakes with walnut and date filling')
 
       +largePicture(imgSrc + 'macaron.jpg', 'Birthday macarons with chocolate ganache')
       +largePicture(imgSrc + 'choco-chip.jpg', 'Chocolate chip sea salt cookies, Mixbies')
       +largePicture(imgSrc + 'cookies.jpg', 'Chocolate chip cookies, Mixbies')
       +largePicture(imgSrc + 'confetti.jpg', 'Confetti cookies, Mixbies')
       +largePicture(imgSrc + 'shortbread.jpg', 'Shortbread cookies')
+      +largePicture(imgSrc + 'pusheen-apple.jpg', 'Pusheen shortbread')
 
       +largePicture(imgSrc + 'bbq-buns.jpg', 'Barbeque pork buns')
       +largePicture(imgSrc + 'pineapple-buns-2.jpg', 'Pineapple buns')
+      +largePicture(imgSrc + 'sourdough.jpg', 'Classic Sourdough Loaf')
       +largePicture(imgSrc + 'sourdough-chocolate.jpeg', 'Chocolate Sourdough Loaf')
       +largePicture(imgSrc + 'sourdough-carrot.jpeg', 'Carrot Sourdough Loaf')
-      +largePicture(imgSrc + 'matcha-bread.jpg', 'Matcha and red bean twist loaf')
+      +largePicture(imgSrc + 'focaccia.jpg', 'Focaccia')
+      +largePicture(imgSrc + 'totoro-bread.jpg', 'Totoro Milk Bread')
 
-      +largePicture(imgSrc + 'alpaca-cake.jpg', 'Alpaca cake')
-      +largePicture(imgSrc + 'cake-swirls.jpg', 'Alpaca cake swirls')
+      +largePicture(imgSrc + 'gudetama.jpg', 'Gudetama Pavlova')
       +largePicture(imgSrc + 'pomelo-roulade.jpg', 'Pomelo meringue roulade')
-
-      +largePicture(imgSrc + 'psyduck-cake.jpeg', 'Psyduck bathtub cake')
-      +largePicture(imgSrc + 'rainbow-cake.jpg', 'Sponge cake with rainbow buttercream')
-      +largePicture(imgSrc + 'crepe-cake.jpg', 'Matcha crêpe cake with orange cream')
-      +largePicture(imgSrc + 'rolls-front.jpeg', 'Sponge Roulades - Coffee & Chocolate, Matcha, and Vanilla Strawberry')
-
       +largePicture(imgSrc + 'portuguese-egg-tarts-2.jpg', 'Portuguese egg tarts')
       +largePicture(imgSrc + 'meringue.jpg', 'Lemon meringue pie')
       +largePicture(imgSrc + 'meringue-pie.jpg', 'Pomelo meringue pie')
+      +largePicture(imgSrc + 'bee-pie.jpg', 'Cherry and apricot bee pie')
+      +largePicture(imgSrc + 'pusheen-pie.jpg', 'Cherry pusheen pie')
 
-      +largePicture(imgSrc + 'chiffon-slice.jpg', 'Chocolate chiffon with raspberries')
       +largePicture(imgSrc + 'choux.jpg', 'Choux with green tea craquelin and pastry cream')
-
-      +largePicture(imgSrc + 'chocolate-tart.jpg', 'Chocolate tofu tart')
-      +largePicture(imgSrc + 'crumble-side.jpg', 'Blueberry cobbler')
       +largePicture(imgSrc + 'smores.jpg', 'Smores bars')
-
-      +largePicture(imgSrc + 'liang-pi.jpg', 'Liang pi')
-      +largePicture(imgSrc + 'pork-belly.jpeg', 'Pork belly and vegetables')
-
+      +largePicture(imgSrc + 'hearts.jpg', 'Black Lives Matter')
+      +largePicture(imgSrc + 'hong-shao-rou.jpg', 'Hong Shao Rou')
+      +largePicture(imgSrc + 'wontons.jpg', 'Wontons with homemade wrappers')
 
 block append scripts
   script.
