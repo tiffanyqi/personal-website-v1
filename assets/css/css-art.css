@@ -3,6 +3,23 @@
   padding: 100px;
 }
 
+.css-art-mini-container {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.css-art-roll-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.css-art-title {
+  padding: 20px;
+}
+
 /* sweet rolls */
 .sweet-roll {
   align-items: center;
@@ -22,6 +39,10 @@
 
 .cinnamon .swirl {
   border: 11px groove #602d12;
+}
+
+.egg-yolk .swirl {
+  border: 11px groove orange;
 }
 
 .sweet-roll .swirl-tiny {
