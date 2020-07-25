@@ -10,10 +10,11 @@ block content
     h1 Photography
     .picture-container
       - const imgSrc = 'assets/img/reel/';
+      +linkedPicture('contortion', imgSrc + 'contortion-camel.jpg', 'Contortion', 'contortion')
       +linkedPicture('aerial-silks', imgSrc + 'aerials-half-moon.jpg', 'Aerial Silks', 'aerials')
       +linkedPicture('baking', imgSrc + 'homemade-choco-chip.jpg', 'Baking', 'baking')
-      +linkedPicture('travel', imgSrc + 'japan-nara.jpg', 'Travel', 'travel')
       +linkedPicture('foodie', imgSrc + 'sf-tartine-croissant.jpg', 'Foodie', 'foodie')
+      +linkedPicture('travel', imgSrc + 'japan-nara.jpg', 'Travel', 'travel')
 
 block scripts
   script.
