@@ -28,101 +28,173 @@
 }
 
 .sweet-roll .swirl {
-  border: 11px solid black;
+  border: 24px solid black;
   position: absolute;
-}
-
-.sweet-roll .swirl-outline-type {
-  border: 0px;
-  position: absolute;
-}
-
-.cinnamon .swirl {
-  border: 11px groove #602d12;
-}
-
-.egg-yolk .swirl {
-  border: 11px groove orange;
 }
 
 .sweet-roll .swirl-tiny {
-  border-bottom-left-radius: 17px;
+  border: 18px groove black;
+  border-bottom-left-radius: 23px;
   border-right: 0px;
-  border-top-left-radius: 14px;
-  height: 10px;
-  margin-left: -5px;
-  margin-top: -10px;
+  border-top-left-radius: 22px;
+  height: 5px;
   width: 5px;
   z-index: 4;
 }
 
 .sweet-roll .swirl-smallest {
-  border-bottom-right-radius: 27px;
+  border: 12px groove black;
+  border-bottom-right-radius: 34px;
   border-left: 0px;
-  border-top-right-radius: 20px;
-  height: 30px;
-  margin-left: 13px;
+  border-top-right-radius: 29px;
+  height: 32px;
+  margin-left: 23px;
+  margin-top: 7px;
   width: 15px;
   z-index: 3;
 }
 
-.sweet-roll .swirl-outline-smallest {
-  background: radial-gradient(circle, rgba(240,172,80,1) 22%, rgba(96,45,18,1) 100%);
-  border-radius: 9px;
-  height: 25px;
-  margin-left: 1px;
-  margin-top: -6px;
-  position: absolute;
-  width: 20px;
-  z-index: 2;
-}
-
 .sweet-roll .swirl-middlest {
-  border-bottom-left-radius: 35px;
+  border: 20px groove black;
+  border-bottom-left-radius: 44px;
   border-right: 0px;
-  border-top-left-radius: 37px;
+  border-top-left-radius: 50px;
   height: 60px;
-  margin-left: -17px;
-  margin-top: -15px;
+  margin-left: -15px;
+  margin-top: -7px;
   width: 30px;
   z-index: 2;
 }
 
-.sweet-roll .swirl-outline-middlest {
-  background: radial-gradient(circle, rgba(240,172,80,1) 44%, rgba(96,45,18,1) 100%);
-  border-radius: 30px;
-  height: 58px;
-  margin-left: -5px;
-  margin-top: -7px;
-  width: 64px;
-  z-index: 1;
-}
-
 .sweet-roll .swirl-largest {
-  border-bottom-right-radius: 47px;
+  border: 24px groove black;
+  border-bottom-right-radius: 71px;
   border-left: 0px;
-  border-top-right-radius: 50px;
-  height: 90px;
-  margin-left: 26px;
-  width: 45px;
+  border-top-right-radius: 66px;
+  height: 79px;
+  margin-left: 42px;
+  margin-top: -11px;
+  transform: rotate(-36deg);
+  width: 40px;
   z-index: 1;
 }
 
-.sweet-roll .swirl-outline-largest {
-  background: radial-gradient(circle, rgba(240,172,80,1) 44%, rgba(96,45,18,1) 100%);
-  border-radius: 42px;
-  height: 90px;
-  margin-left: 7px;
-  margin-top: -7px;
-  width: 90px;
+.sweet-roll .swirl-smoother {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 17px;
+  border-top-right-radius: 7px;
+  height: 18px;
+  margin-left: 13px;
+  margin-top: 11px;
+  position: absolute;
+  width: 14px;
+}
+
+.sweet-roll .swirl-spec {
+  border-radius: 5px;
+  height: 10px;
+  position: absolute;
+  width: 10px;
+  z-index: 5;
+}
+
+/* the top one */
+.sweet-roll .swirl-smoother:nth-child(5) {
+  margin-top: -12px;
+}
+
+/* the middle */
+.sweet-roll .swirl-smoother:nth-child(6) {
+  margin-top: 11px;
+}
+
+/* the bottom */
+.sweet-roll .swirl-smoother:nth-child(7) {
+  margin-top: 34px;
+}
+
+.sweet-roll .swirl-smoother:nth-child(8) {
+  border-bottom-left-radius: 21px;
+  height: 13px;
+  margin-left: 46px;
+  margin-top: 56px;
+  transform: rotate(-36deg);
+  width: 13px;
+}
+
+/* top four */
+.sweet-roll .swirl-spec:nth-child(9) {
+  margin-left: -4px;
+  margin-top: -28px;
+}
+
+.sweet-roll .swirl-spec:nth-child(10) {
+  height: 8px;
+  margin-left: -11px;
+  margin-top: -22px;
+  width: 8px;
+}
+
+.sweet-roll .swirl-spec:nth-child(11) {
+  height: 6px;
+  margin-left: -15px;
+  margin-top: -15px;
+  width: 6px;
+}
+
+.sweet-roll .swirl-spec:nth-child(12) {
+  height: 4px;
+  margin-left: -17px;
+  margin-top: -9px;
+  width: 4px;
+}
+
+/* the bottom four */
+.sweet-roll .swirl-spec:nth-child(13) {
+  margin-left: 42px;
+  margin-top: 39px;
+}
+
+.sweet-roll .swirl-spec:nth-child(14) {
+  height: 8px;
+  margin-left: 48px;
+  margin-top: 30px;
+  width: 8px;
+}
+
+.sweet-roll .swirl-spec:nth-child(15) {
+  height: 6px;
+  margin-left: 52px;
+  margin-top: 22px;
+  width: 6px;
+}
+
+.sweet-roll .swirl-spec:nth-child(16) {
+  height: 4px;
+  margin-left: 53px;
+  margin-top: 16px;
+  width: 4px;
 }
 
 .sweet-roll .swirl-outline {
-  background: radial-gradient(circle, rgba(240,172,80,1) 64%, rgba(96,45,18,1) 100%);
+  background: radial-gradient(circle, rgba(240,172,80,1) 54%, rgba(96,45,18,1) 100%);
   border: 3px solid black;
-  border-radius: 47px;
-  height: 123px;
-  margin-left: 15px;
-  margin-top: -14px;
-  width: 123px;
+  border-radius: 60px;
+  height: 125px;
+  margin-left: 31px;
+  margin-top: -2px;
+  width: 131px;
+}
+
+/* sweet roll specifications */
+.cinnamon .swirl {
+  border-color: #602d12;
+}
+
+.cinnamon.sweet-roll .swirl-smoother, .cinnamon.sweet-roll .swirl-spec {
+  background: #602d12;
+}
+
+.egg-yolk .swirl {
+  border-color:orange;
 }
