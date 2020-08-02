@@ -14,7 +14,9 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  height: 200px;
+  padding: 10px;
+  width: 200px;
 }
 
 .css-art-title {
@@ -56,6 +58,12 @@
   z-index: 3;
 }
 
+.sweet-roll .chunk {
+  border-radius: 3px;
+  height: 7px;
+  width: 7px;
+}
+
 .sweet-roll .swirl-tiny {
   border-bottom-left-radius: 23px;
   border-right: 0px;
@@ -63,7 +71,6 @@
   height: 5px;
   width: 5px;
 }
-
 .sweet-roll .swirl-smallest {
   border-bottom-right-radius: 34px;
   border-left: 0px;
@@ -73,7 +80,6 @@
   margin-top: 13px;
   width: 25px;
 }
-
 .sweet-roll .swirl-middlest {
   border-bottom-left-radius: 44px;
   border-right: 0px;
@@ -83,7 +89,6 @@
   margin-top: -1px;
   width: 30px;
 }
-
 .sweet-roll .swirl-largest {
   border-bottom-right-radius: 83px;
   border-left: 0px;
@@ -97,15 +102,12 @@
 .sweet-roll .swirl-colored.swirl-tiny {
   margin-left: -6px;
 }
-
 .sweet-roll .swirl-colored.swirl-smallest {
-  margin-left: 23px;
+  margin-left: 22px;
 }
-
 .sweet-roll .swirl-colored.swirl-middlest {
   margin-left: -24px;
 }
-
 .sweet-roll .swirl-colored.swirl-largest {
   margin-left: 33px;
 }
@@ -114,22 +116,18 @@
   margin-left: 36px;
   margin-top: 5px;
 }
-
 .sweet-roll .dot:nth-child(2) {
   margin-left: -5px;
   margin-top: -41px;
 }
-
 .sweet-roll .dot:nth-child(3) {
   margin-left: 34px;
   margin-top: 21px;
 }
-
 .sweet-roll .dot:nth-child(4) {
   margin-left: -42px;
   margin-top: 5px;
 }
-
 .sweet-roll .dot:nth-child(5) {
   margin-left: -36px;
   margin-top: 10px;
@@ -146,22 +144,154 @@
 }
 
 /* sweet roll specifications */
+.almond-tofu .swirl-colored {
+  border-color: #fff2cc;
+}
+.almond-tofu .smoother {
+  background: #fff2cc;
+}
+.almond-tofu .dot {
+  background: #ff9980;
+}
+
+.black-sesame .swirl-colored {
+  border-color: #34374a;
+}
+.black-sesame .smoother {
+  background: #34374a;
+}
+.black-sesame .dot {
+  background: black;
+}
+
+.char-siu .swirl-colored {
+  border-color: #7e0806;
+}
+.char-siu .smoother {
+  background: #7e0806;
+}
+.char-siu .dot {
+  background: #c1421c;
+}
+
+.chocolate .swirl-colored {
+  border-color: #472b30;
+}
+.chocolate .smoother {
+  background: #472b30;
+}
+.chocolate .dot {
+  background: white;
+}
+
 .cinnamon .swirl-colored {
   border-color: #602d12;
 }
-
 .cinnamon .smoother {
   background: #602d12;
 }
 
-.egg-yolk .swirl-colored {
-  border-color:orange;
+.coconut-peanut .swirl-colored {
+  border-color: #a17141;
+}
+.coconut-peanut .smoother {
+  background: #a17141;
+}
+.coconut-peanut .dot {
+  background: white;
 }
 
+.egg-tart .swirl-colored {
+  border-color: #ffcc00;
+}
+.egg-tart .smoother {
+  background: #ffcc00;
+}
+
+.egg-yolk .swirl-colored {
+  border-color: orange;
+}
 .egg-yolk .smoother {
   background: orange;
 }
-
 .egg-yolk .dot {
+  background: white;
+}
+
+.eight-treasure .swirl-colored {
+  border-color: #7a2312;
+}
+.eight-treasure .smoother {
+  background: #7a2312;
+}
+.eight-treasure .dot {
+  background: #b38600;
+  border: 1px solid #806000;
+}
+
+.lotus-egg-yolk .swirl-colored {
+  border-color :#773914;
+}
+.lotus-egg-yolk .smoother {
+  background: #773914;
+}
+.lotus-egg-yolk .dot {
+  background: #ea601c;
+}
+
+.lychee .swirl-colored {
+  border-color: #edeeee;
+}
+.lychee .smoother {
+  background: #edeeee;
+}
+
+.mango-pudding .swirl-colored {
+  border-color: #ffb84d;
+}
+.mango-pudding .smoother {
+  background: #ffb84d;
+}
+.mango-pudding .dot {
+  background: orange;
+}
+
+.milk-tea .swirl-colored {
+  border-color: #c09252;
+}
+.milk-tea .smoother {
+  background: #c09252;
+}
+.milk-tea .dot {
+  background: #282929;
+}
+
+.mung-bean .swirl-colored {
+  border-color: #6c6534;
+}
+.mung-bean .smoother {
+  background: #6c6534;
+}
+.mung-bean .dot {
+  background: #b9b953;
+}
+
+.osmanthus .swirl-colored {
+  border-color: #feb412;
+}
+.osmanthus .smoother {
+  background: #feb412;
+}
+.osmanthus .dot {
+  background: #8a6841;
+}
+
+.sweet-rice .swirl-colored {
+  border-color: #e9e4d3;
+}
+.sweet-rice .smoother {
+  background: #e9e4d3;
+}
+.sweet-rice .dot {
   background: white;
 }
