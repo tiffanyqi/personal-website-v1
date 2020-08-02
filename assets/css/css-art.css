@@ -1,13 +1,25 @@
-.css-art-container {
-  border: 1px solid black;
-  padding: 50px;
+h1 {
+  color: white;
+}
+body {
+  background: black;
+  font-family: 'Lora', serif;
+  margin: 0;
 }
 
 .css-art-mini-container {
   align-items: center;
+  border: 1px solid black;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px;
+  text-align: center;
+}
+
+.css-art-mini-container.sweet-rolls {
+  background: white;
 }
 
 .css-art-roll-container {
