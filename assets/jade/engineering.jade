@@ -10,6 +10,7 @@ block content
     h1 My Projects
     .picture-container
       - const imgSrc = 'assets/img/work/'
+      +linkedPicture('my-projects/css-art.html', imgSrc + 'rolls.png', "CSS Art, Jul '20", 'table', 'engineering')
       +linkedPicture('https://github.com/tiffanyqi/table-for-two', imgSrc + 'tablefortwo.png', "Table for Two, Apr '17 - Nov '17", 'table', 'engineering')
       +linkedPicture('https://github.com/tiffanyqi/mp-onboarding', imgSrc + 'onboarding.png', "Mixpanel Onboarding, Nov '16 - Dec '16", 'onboarding', 'engineering')
       +linkedPicture('https://github.com/maxfangx/calendar-analytics', '',  "Calendar Analytics, Jun '16 - Dec '16", 'calendar', 'engineering')
