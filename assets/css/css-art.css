@@ -56,8 +56,8 @@ body {
 .sweet-roll .smoother {
   border-radius: 7px;
   height: 19px;
-  margin-left: 6px;
-  margin-top: 12px;
+  margin-left: 10px;
+  margin-top: 24px;
   position: absolute;
   width: 19px;
 }
@@ -88,8 +88,8 @@ body {
   border-left: 0px;
   border-top-right-radius: 29px;
   height: 32px;
-  margin-left: 14px;
-  margin-top: 13px;
+  margin-left: 27px;
+  margin-top: 27px;
   width: 25px;
 }
 .sweet-roll .swirl-middlest {
@@ -97,7 +97,7 @@ body {
   border-right: 0px;
   border-top-left-radius: 50px;
   height: 60px;
-  margin-left: -14px;
+  margin-left: -23px;
   margin-top: -1px;
   width: 30px;
 }
@@ -106,43 +106,43 @@ body {
   border-left: 0px;
   border-top-right-radius: 66px;
   height: 90px;
-  margin-left: 26px;
-  margin-top: 14px;
+  margin-left: 60px;
+  margin-top: 29px;
   width: 56px;
 }
 
 .sweet-roll .swirl-colored.swirl-tiny {
-  margin-left: -6px;
+  margin-left: -13px;
 }
 .sweet-roll .swirl-colored.swirl-smallest {
-  margin-left: 22px;
+  margin-left: 48px;
 }
 .sweet-roll .swirl-colored.swirl-middlest {
-  margin-left: -24px;
+  margin-left: -45px;
 }
 .sweet-roll .swirl-colored.swirl-largest {
-  margin-left: 33px;
+  margin-left: 78px;
 }
 
 .sweet-roll .dot:nth-child(1) {
-  margin-left: 36px;
+  margin-left: 64px;
   margin-top: 5px;
 }
 .sweet-roll .dot:nth-child(2) {
-  margin-left: -5px;
+  margin-left: -62px;
   margin-top: -41px;
 }
 .sweet-roll .dot:nth-child(3) {
-  margin-left: 34px;
+  margin-left: 69px;
   margin-top: 21px;
 }
 .sweet-roll .dot:nth-child(4) {
-  margin-left: -42px;
+  margin-left: -72px;
   margin-top: 5px;
 }
 .sweet-roll .dot:nth-child(5) {
-  margin-left: -36px;
-  margin-top: 10px;
+  margin-left: -5px;
+  margin-top: -79px;
 }
 
 .sweet-roll .swirl-outline {
@@ -150,7 +150,7 @@ body {
   border: 3px solid black;
   border-radius: 60px;
   height: 125px;
-  margin-left: 21px;
+  margin-left: 29px;
   margin-top: -2px;
   width: 131px;
 }
