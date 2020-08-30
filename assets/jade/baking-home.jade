@@ -1,0 +1,24 @@
+include mixins.jade
+extends base.jade
+
+block append head
+  title Tiffany Qi | Baking
+  link(rel='stylesheet', type='text/css', href='assets/css/photography.css')
+
+block content
+  .container
+    h1 Baking
+    .picture-container
+      - const imgSrc = 'assets/img/reel/';
+      +linkedPicture('baking', imgSrc + 'homemade-five-circle.jpg', 'Baking', 'baking')
+      +linkedPicture('cookies', imgSrc + 'homemade-choco-chip.jpg', 'Cookies', 'mixbies')
+      +linkedPicture('babkas', imgSrc + 'homemade-babka-char-siu.jpg', 'Babkas', 'babkas')
+      +linkedPicture('pastry-school', imgSrc + 'homemade-matcha-croissant.jpg', 'Pastry School', 'pastry-school')
+
+block scripts
+  script.
+    const pageName = "Baking Home";
+    trackPageView(pageName);
+    $(".linked-picture-container").on("click", function(event){
+      trackClick(externalLinkView, this.id, pageName);
+    });

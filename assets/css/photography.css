@@ -3,6 +3,9 @@
     visibility: visible;
     width: 400px;
 }
+h2, p {
+    margin-left: 50px;
+}
 
 .btn-container {
     position: fixed;

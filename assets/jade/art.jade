@@ -1,0 +1,51 @@
+include mixins.jade
+extends photography-base.jade
+
+block append head
+  title Tiffany Qi | Art
+
+block append content
+  .container
+    h1 Art
+    h2 Food circus art
+    .picture-container
+      - const imgSrcFood = 'assets/img/reel/art-food-';
+      +largePicture(imgSrcFood + 'silks.jpg', 'Black pasta silks, Jill Franklin')
+      +largePicture(imgSrcFood + 'beets.jpg', 'Beet noodles silks, Thai & Anastasia')
+      +largePicture(imgSrcFood + 'corgi.jpg', 'Tomato contortion, Chelsea')
+      +largePicture(imgSrcFood + 'orange.jpg', 'Orange umbrella, Karisha Abramenko')
+      +largePicture(imgSrcFood + 'chadwick.jpg', 'Tomato and zucchini roses, Chadwick Boseman')
+      +largePicture(imgSrcFood + 'spaghetti.jpg', 'Spaghetti rope, Alex James Allan')
+      +largePicture(imgSrcFood + 'totoro.jpg', 'Shiso umbrella, Totoro')
+    h2 Portraits and people
+    .picture-container
+      - const imgSrc = 'assets/img/reel/art-';
+      +largePicture(imgSrc + 'portrait-glo.jpg', 'Glographics')
+      +largePicture(imgSrc + 'portrait-george.jpg', 'George Floyd')
+      +largePicture(imgSrc + 'portrait-mizuki.jpg', 'Mizuki')
+      +largePicture(imgSrc + 'portrait-self.jpg', 'Self portrait')
+      +largePicture(imgSrc + 'portrait-wheesung.jpg', 'Wheesung')
+      +largePicture(imgSrc + 'portrait-wing.jpg', 'Wing')
+      +largePicture(imgSrc + 'circus-maia.jpg', 'Maia')
+      +largePicture(imgSrc + 'circus-angela.jpg', 'Angela')
+      +largePicture(imgSrc + 'circus-jeyne.jpg', 'Jeyne Butterfly')
+    h2 Hands
+    .picture-container
+      - const imgSrcHand = 'assets/img/reel/art-hand-';
+      +largePicture(imgSrcHand + 'claire.jpg', 'Claire and sourdough')
+      +largePicture(imgSrcHand + 'pudding.jpg', 'Chocolate pudding pie')
+      +largePicture(imgSrcHand + 'croissant.jpg', 'Forming croissants')
+      +largePicture(imgSrcHand + 'cupcake.jpg', 'Constructing cupcakes')
+      +largePicture(imgSrcHand + 'dough.jpg', 'Shaping bread')
+      +largePicture(imgSrcHand + 'dumpling.jpg', 'Crimping dumplings')
+      +largePicture(imgSrcHand + 'wonton.jpg', 'Folding wontons')
+      +largePicture(imgSrcHand + 'xlb.jpg', 'Folding XLB')
+      +largePicture(imgSrcHand + 'heart.jpg', 'Heart')
+      +largePicture(imgSrcHand + 'reaching.jpg', 'Reaching')
+      +largePicture(imgSrcHand + 'silks.jpg', 'Enrobing silks')
+
+
+block append scripts
+  script.
+    const pageName = "Art";
+    trackPageView(pageName);
