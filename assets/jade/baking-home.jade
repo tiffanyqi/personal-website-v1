@@ -10,14 +10,14 @@ block content
     h1 Baking
     .picture-container
       - const imgSrc = 'assets/img/reel/';
-      +linkedPicture('baking', imgSrc + 'homemade-choco-chip.jpg', 'Baking', 'baking')
-      +linkedPicture('cookies', imgSrc + 'homemade-choco-chip.jpg', 'Cookies', 'babkas')
-      +linkedPicture('babkas', imgSrc + 'homemade-choco-chip.jpg', 'Babkas', 'babkas')
-      +linkedPicture('pastry-school', imgSrc + 'homemade-choco-chip.jpg', 'Pastry School', 'pastry-school')
+      +linkedPicture('baking', imgSrc + 'homemade-five-circle.jpg', 'Baking', 'baking')
+      +linkedPicture('cookies', imgSrc + 'homemade-choco-chip.jpg', 'Cookies', 'mixbies')
+      +linkedPicture('babkas', imgSrc + 'homemade-babka-char-siu.jpg', 'Babkas', 'babkas')
+      +linkedPicture('pastry-school', imgSrc + 'homemade-matcha-croissant.jpg', 'Pastry School', 'pastry-school')
 
 block scripts
   script.
-    const pageName = "Baking";
+    const pageName = "Baking Home";
     trackPageView(pageName);
     $(".linked-picture-container").on("click", function(event){
       trackClick(externalLinkView, this.id, pageName);

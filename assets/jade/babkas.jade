@@ -1,0 +1,20 @@
+include mixins.jade
+extends photography-base.jade
+
+block append head
+  title Tiffany Qi | Babkas
+
+block append content
+  .container
+    h1 Babkas
+    .picture-container
+      - const imgSrc = 'assets/img/reel/homemade-babka-';
+      +largePicture(imgSrc + 'black-sesame.jpg', 'Black sesame')
+      +largePicture(imgSrc + 'char-siu.jpg', 'Char siu')
+      +largePicture(imgSrc + 'cinnamon.jpg', 'Cinnamon')
+      +largePicture(imgSrc + 'eight-treasure.jpg', 'Eight treasure: red bean and walnut')
+
+block append scripts
+  script.
+    const pageName = "Babkas";
+    trackPageView(pageName);
