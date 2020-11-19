@@ -7,50 +7,37 @@ block append head
 block append content
   .container
     h1 Art
+    p Contact me on <a href="https://instagram.com/aerial_baker">Instagram</a> for commissions
     h2 Food circus art
     .picture-container
       - const imgSrcFood = 'assets/img/reel/art-food-';
-      +largePicture(imgSrcFood + 'isabella.jpg', 'Flour smoke, Isabella Fonte')
       +largePicture(imgSrcFood + 'spaghetti.jpg', 'Spaghetti rope, Alex James Allan')
+      +largePicture(imgSrcFood + 'isabella.jpg', 'Flour smoke, Isabella Fonte')
       +largePicture(imgSrcFood + 'david.jpg', 'Grapefruit peel lyra, David Nguyen')
-      +largePicture(imgSrcFood + 'air-candy.png', 'Pink milk silks, @air.candy')
+      +largePicture(imgSrcFood + 'air-candy.jpg', 'Pink milk silks, @air.candy')
+      +largePicture(imgSrcFood + 'alex.jpg', 'Licorice and macaron trapeze, Lex Morgan')
       +largePicture(imgSrcFood + 'sugar.jpg', 'Isomalt cage, Tiffany')
       +largePicture(imgSrcFood + 'veronica.jpg', 'Chocolate straps, Veronica Blair')
+      +largePicture(imgSrcFood + 'brownie.jpg', 'Brownie box, Ash Rex')
       +largePicture(imgSrcFood + 'viktor.JPG', 'Blueberry juggling, Viktor')
-      +largePicture(imgSrcFood + 'christine.jpeg', 'Black sesame chiffon cork, Christine Lee')
+      +largePicture(imgSrcFood + 'christine.jpg', 'Black sesame chiffon cork, Christine Lee')
       +largePicture(imgSrcFood + 'orange.jpg', 'Orange umbrella, Karisha Abramenko')
-      +largePicture(imgSrcFood + 'chadwick.jpg', 'Tomato and zucchini roses, Chadwick Boseman')
       +largePicture(imgSrcFood + 'silks.jpg', 'Black pasta silks, Jill Franklin')
       +largePicture(imgSrcFood + 'beets.jpg', 'Beet noodles silks, Thai & Anastasia')
-      +largePicture(imgSrcFood + 'simone.jpg', 'Meringue beams, Simone Biles')
-      +largePicture(imgSrcFood + 'totoro.jpg', 'Shiso umbrella, Totoro')
+      +largePicture(imgSrcFood + 'simone.jpg', 'Choux beams, Simone Biles')
     h2 Portraits and people
     .picture-container
       - const imgSrc = 'assets/img/reel/art-';
       +largePicture(imgSrc + 'portrait-glo.jpg', 'Glographics')
+      +largePicture(imgSrc + 'portrait-chadwick.jpg', 'Chadwick Boseman')
       +largePicture(imgSrc + 'portrait-george.jpg', 'George Floyd')
-      +largePicture(imgSrc + 'portrait-mizuki.jpg', 'Mizuki')
       +largePicture(imgSrc + 'portrait-self.jpg', 'Self portrait')
       +largePicture(imgSrc + 'portrait-wheesung.jpg', 'Wheesung')
       +largePicture(imgSrc + 'portrait-wing.jpg', 'Wing')
+      +largePicture(imgSrc + 'portrait-claire.jpg', 'Claire and sourdough')
       +largePicture(imgSrc + 'circus-maia.jpg', 'Maia')
       +largePicture(imgSrc + 'circus-angela.jpg', 'Angela')
       +largePicture(imgSrc + 'circus-jeyne.jpg', 'Jeyne Butterfly')
-    h2 Hands
-    .picture-container
-      - const imgSrcHand = 'assets/img/reel/art-hand-';
-      +largePicture(imgSrcHand + 'claire.jpg', 'Claire and sourdough')
-      +largePicture(imgSrcHand + 'pudding.jpg', 'Chocolate pudding pie')
-      +largePicture(imgSrcHand + 'croissant.jpg', 'Forming croissants')
-      +largePicture(imgSrcHand + 'cupcake.jpg', 'Constructing cupcakes')
-      +largePicture(imgSrcHand + 'dough.jpg', 'Shaping bread')
-      +largePicture(imgSrcHand + 'dumpling.jpg', 'Crimping dumplings')
-      +largePicture(imgSrcHand + 'wonton.jpg', 'Folding wontons')
-      +largePicture(imgSrcHand + 'xlb.jpg', 'Folding XLB')
-      +largePicture(imgSrcHand + 'heart.jpg', 'Heart')
-      +largePicture(imgSrcHand + 'reaching.jpg', 'Reaching')
-      +largePicture(imgSrcHand + 'silks.jpg', 'Enrobing silks')
-
 
 block append scripts
   script.
