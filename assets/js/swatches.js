@@ -1,4 +1,4 @@
-const colorSwatchButtons = document.querySelectorAll("button");
+const colorSwatchButtons = document.querySelectorAll(".csb");
 const activeColor = `rgb(104, 134, 227)`;
 let activeRule = `or`;
 let activeClasses = [];
@@ -9,9 +9,13 @@ colorSwatchButtons.forEach(btn => {
   btn.addEventListener("click", toggleButtons);
 });
 
+document.querySelector(`.color-swatch-scroll-up`)
+  .addEventListener("click", function () {window.scrollTo(0, 0)});
+
 function toggleButtons(ev) {
   const isActive = ev.target.style.backgroundColor === activeColor;
-  const specificButtonClass = ev.target.classList[0];
+  // class list here is [csb, color-swatch-button-X]
+  const specificButtonClass = ev.target.classList[1];
   const classForSwatch = specificButtonClass.split("color-swatch-button-")[1];
   let category;
   let specificClassForSwatch;
@@ -42,6 +46,7 @@ function toggleButtons(ev) {
           }
         });
       } else if (category === `category`) {
+        // lazy way, better to use the category group
         activeClasses = activeClasses.filter(activeClass => (
           activeClass !== "starter" &&
           activeClass !== "legendary" &&

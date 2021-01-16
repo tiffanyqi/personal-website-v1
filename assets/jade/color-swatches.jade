@@ -20,27 +20,27 @@ html
 
   body
     .color-swatches
-      h1 Color Swatches
+      h1 Pokemon Color Swatches
       .color-swatch-buttons
         .color-swatch-button-group-rule
-          button.color-swatch-button-rule-or OR
-          button.color-swatch-button-rule-and AND
+          button.csb.color-swatch-button-rule-or OR
+          button.csb.color-swatch-button-rule-and AND
         .color-swatch-button-group-category
-          button.color-swatch-button-category-starter Starter
-          button.color-swatch-button-category-legendary Legendary
-          button.color-swatch-button-category-mythical Mythical
-          button.color-swatch-button-category-eeveelution Eeveelution
-          button.color-swatch-button-category-baby Baby
+          button.csb.color-swatch-button-category-starter Starter
+          button.csb.color-swatch-button-category-legendary Legendary
+          button.csb.color-swatch-button-category-mythical Mythical
+          button.csb.color-swatch-button-category-eeveelution Eeveelution
+          button.csb.color-swatch-button-category-baby Baby
         .color-swatch-button-group-type
           each type in pokemonTypes
             - const buttonClass = `color-swatch-button-type-${type}`
-            button(class={[buttonClass]: true}) #{type}
+            button.csb(class={[buttonClass]: true}) #{type}
         .color-swatch-button-group-gen
           each gen in [1, 2, 3, 4, 5, 6, 7, 8]
             - const buttonClass = `color-swatch-button-gen-gen${gen}`
-            button(class={[buttonClass]: true})= `Gen${gen}`
+            button.csb(class={[buttonClass]: true})= `Gen${gen}`
         .color-swatch-button-group-pokemon
-          button.color-swatch-button-pokemon Show all Pokemon
+          button.csb.color-swatch-button-pokemon Show all Pokemon
   
       .color-swatch-container
         +color-swatch('Bulbasaur #1', 'rgba(146, 201, 171)', 'rgba(115, 161, 145)', 'rgba(98, 147, 108)', 'rgba(140, 180, 146)', 'rgba(77, 109, 92)', 'grass poison starter pokemon gen1')
@@ -937,6 +937,11 @@ html
         +color-swatch('Urshifu-single-strike #892', 'rgba(92, 91, 96)', 'rgba(44, 44, 39)', 'rgba(236, 235, 235)', 'rgba(162, 166, 163)', 'rgba(25, 25, 24)', 'fighting dark legendary pokemon gen8')
         +color-swatch('Zarude #893', 'rgba(41, 41, 41)', 'rgba(83, 81, 81)', 'rgba(73, 107, 57)', 'rgba(52, 93, 53)', 'rgba(30, 32, 30)', 'dark grass mythical pokemon gen8')
 
+      .color-swatch-footer
+        | © Tiffany Qi 2021
+
+      button.color-swatch-scroll-up
+        | Back to Top
 
   script(src='assets/js/swatches.js')
   

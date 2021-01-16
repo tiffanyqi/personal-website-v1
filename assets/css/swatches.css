@@ -71,3 +71,14 @@ button {
   padding-top: 10px;
   text-align: center;
 }
+
+.color-swatch-footer {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.color-swatch-scroll-up {
+  bottom: 10px;
+  position: fixed;
+  right: 10px;
+}
