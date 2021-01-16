@@ -890,3 +890,4 @@
 +color-swatch('Eternatus #890', 'rgba(37, 41, 89)', 'rgba(25, 18, 47)', 'rgba(86, 41, 87)', 'rgba(230, 81, 95)', 'rgba(244, 13, 35)', 'poison dragon  pokemon gen8')
 +color-swatch('Kubfu #891', 'rgba(170, 166, 160)', 'rgba(242, 243, 242)', 'rgba(103, 103, 100)', 'rgba(38, 36, 38)', 'rgba(195, 187, 180)', 'fighting  pokemon gen8')
 +color-swatch('Urshifu-single-strike #892', 'rgba(92, 91, 96)', 'rgba(44, 44, 39)', 'rgba(236, 235, 235)', 'rgba(162, 166, 163)', 'rgba(25, 25, 24)', 'fighting dark  pokemon gen8')
++color-swatch('Zarude #893', 'rgba(41, 41, 41)', 'rgba(83, 81, 81)', 'rgba(73, 107, 57)', 'rgba(52, 93, 53)', 'rgba(30, 32, 30)', 'dark grass  pokemon gen8')

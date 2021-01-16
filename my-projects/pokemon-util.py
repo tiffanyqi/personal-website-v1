@@ -80,16 +80,18 @@ class Pokemon:
 
 
 if __name__ == "__main__":
-  total_pokemon_count = 893 + 1
+  total_pokemon_count = 893
 
   with open('my-projects/pokemon_mixins_no_black.txt', 'w') as f:
-    for id in range(1, total_pokemon_count):
+    for id in range(1, total_pokemon_count + 1):
       pokemon_url = "https://pokeapi.co/api/v2/pokemon/{}".format(id)
       response = requests.request("GET", pokemon_url)
       results = json.loads(response.text)
+
       name = results["name"].capitalize()
       image_url = results["sprites"]["other"]["official-artwork"]['front_default']
       types = list(map(lambda x: x["type"]["name"], results["types"]))
       pokemon = Pokemon(name, id, image_url, types)
+
       f.write("%s\n" % pokemon.get_mixin_string())
       print("wrote", name, id)
