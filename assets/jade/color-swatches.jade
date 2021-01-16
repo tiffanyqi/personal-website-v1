@@ -1,0 +1,134 @@
+mixin color-swatch(title, color1, color2, color3, color4, color5, classes)
+  .swatch(class={[classes]: true})
+    .box.box1(style={"background-color": color1})
+    .box.box2(style={"background-color": color2})
+    .box.box3(style={"background-color": color3})
+    .box.box4(style={"background-color": color4})
+    .box.box5(style={"background-color": color5})
+    .title #{title}
+
+// DOCTYPE html
+html
+  head
+    block head
+      meta(charset='UTF-8')
+      link(rel='stylesheet', type='text/css', href='assets/css/swatches.css')
+      link(rel="preconnect" href="https://fonts.gstatic.com")
+      link(href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet")
+
+  body
+    .color-swatches
+      h1 Color Swatches
+      .color-swatch-buttons
+        .color-swatch-button-group-starter-legendary
+          button.color-swatch-button-starter Starter
+        .color-swatch-button-group-type
+          button.color-swatch-button-grass Grass
+          button.color-swatch-button-fire Fire
+        .color-swatch-button-group-gen
+          button.color-swatch-button-gen1 Gen1
+          button.color-swatch-button-gen2 Gen2
+          button.color-swatch-button-gen3 Gen3
+          button.color-swatch-button-gen4 Gen4
+          button.color-swatch-button-gen5 Gen5
+          button.color-swatch-button-gen6 Gen6
+          button.color-swatch-button-gen7 Gen7
+          button.color-swatch-button-gen8 Gen8
+        .color-swatch-button-group-show-all
+          button.color-swatch-button-show-all Show all
+
+      .color-swatch-container
+        // idea for script: find lightest (make white background) and darkest (make border) from top 10
+        +color-swatch("Bulbasaur #1",   "#82b499", "#609268", "#203429", "#a1cdb2", "#65887d", "starter grass pokemon gen1")
+        +color-swatch("Ivysaur #2",     "#5a8d89", "#8ababf", "#111617", "#c06d7a", "#b3a399", "starter grass pokemon gen1")
+        +color-swatch("Venusaur #3",    "#507f75", "#c36e75", "#201e1e", "#87b6b4", "#a19f8c", "starter grass pokemon gen1")
+
+        +color-swatch("Charmander #4",  "#d19870", "#e5bb98", "#f2e4cb", "#2c2724", "#ae8e8c", "starter fire pokemon gen1")
+        +color-swatch("Charmeleon #5",  "#cb6d5d", "#e7cdb4", "#3a231f", "#cda599", "#f8d16f", "starter fire pokemon gen1")
+        +color-swatch("Charizard #6",   "#cd8a58", "#337b88", "#e4cf9a", "#41301f", "#a29889", "starter fire pokemon gen1")
+
+        +color-swatch("Chikorita #152",  "#9bbb84", "#d3e2b0", "#5e8257", "#cbdca3", "#13160c", "starter grass pokemon gen2")
+        +color-swatch("Bayleaf #153",    "#b9b486", "#f8e29b", "#41432d", "#f2e5ae", "#8ca26f", "starter grass pokemon gen2")
+        +color-swatch("Meganium #154",   "#a1b77b", "#e16f83", "#cddea4", "#464531", "#b8cf97", "starter grass pokemon gen2")
+        +color-swatch("Cyndaquil #155",  "#ecd7a3", "#d37e5c", "#477076", "#f6cc51", "#b59e83", "starter fire pokemon gen2")
+        +color-swatch("Quilava #156",    "#cb8a52", "#f2db9e", "#425956", "#f4cf42", "#a69c86", "starter fire pokemon gen2")
+        +color-swatch("Typhlosion #157", "#ecda97", "#bcaa7d", "#da8b42", "#473e3a", "#f9d938", "starter fire pokemon gen2")
+
+        +color-swatch("Treecko #252",    "#cfe48b", "#a0c55b", "#3e512f", "#9cbf8f", "#e39395", "starter grass pokemon gen3")
+        +color-swatch("Grovyle #253",    "#8cb489", "#628963", "#dc8b8b", "#b3d5b2", "#152012", "starter grass pokemon gen3")
+        +color-swatch("Sceptile #254",   "#98cc9d", "#6a976d", "#9ba882", "#152313", "#425741", "starter grass pokemon gen3")
+        +color-swatch("Torchic #255",    "#eea348", "#f3d790", "#f7d558", "#312418", "#958d94", "starter fire pokemon gen3")
+        +color-swatch("Combusken #256",  "#f3dd9a", "#e3895b", "#aa9586", "#362a21", "#f1e6c3", "starter fire pokemon gen3")
+        +color-swatch("Blaziken #257",   "#bf6352", "#e5d19c", "#f0e4c8", "#dab578", "#f4d67b", "starter fire pokemon gen3")
+
+        +color-swatch("Turtwig #387",    "#c3d69a", "#a79c6a", "#34382c", "#5db96c", "#f6da74", "starter grass pokemon gen4")
+        +color-swatch("Grotle #388",     "#a2a561", "#4a7550", "#161709", "#89ae8c", "#7d6c42", "starter grass pokemon gen4")
+        +color-swatch("Torterra #389",   "#51774c", "#927454", "#1c2013", "#bfbfbe", "#9f9c97", "starter grass pokemon gen4")
+        +color-swatch("Chimchar #390",   "#d17d3c", "#eed9a0", "#382619", "#b5a285", "#f6ebc3", "starter fire pokemon gen4")
+        +color-swatch("Monferno #391",   "#de934e", "#39494f", "#ae9889", "#d5bba3", "#946e3e", "starter fire pokemon gen4")
+        +color-swatch("Infernape #392",  "#c8774f", "#42474d", "#ebcd5c", "#a29b9c", "#d4c7a1", "starter fire pokemon gen4")
+
+        +color-swatch("Snivy #495",      "#467d59", "#c9b85f", "#e2e2ad", "#64b565", "#f0f1bf", "starter grass pokemon gen5")
+        +color-swatch("Servine #496",    "#5aa15b", "#b2b96a", "#a9ab92", "#202a16", "#cfceaf", "starter grass pokemon gen5")
+        +color-swatch("Serperior #497",  "#248356", "#97c8aa", "#cfb855", "#122913", "#c7d6cc", "starter grass pokemon gen5")
+        +color-swatch("Tepig #498",      "#d7855c", "#3f3533", "#f3cd60", "#854e45", "#d6969c", "starter fire pokemon gen5")
+        +color-swatch("Pignite #499",    "#d57f4c", "#4f413f", "#f2cd5d", "#a39996", "#98463b", "starter fire pokemon gen5")
+        +color-swatch("Emboar #500",     "#4a4647", "#c97152", "#edc457", "#1d0f0b", '#9f9592', "starter fire pokemon gen5")
+
+        +color-swatch("Chespin #650",    "#aab164", "#453925", "#e0a877", "#d0df9d", "#8c625e", "starter grass pokemon gen6")
+        +color-swatch("Quilladin #651",  "#513a24", "#afac60", "#cad491", "#728f44", "#d3a18c", "starter grass pokemon gen6")
+        +color-swatch("Chesnaught #652", "#a3b583", "#483d29", "#e9e6bf", "#b9b9af", "#98685d", "starter grass pokemon gen6")
+        +color-swatch("Fennekin #653",   "#d97a4b", "#f9e988", "#3c2919", "#e7d36f", "#ac9a8e", "starter fire pokemon gen6")
+        +color-swatch("Braixen #654",    "#4b443d", "#c5844b", "#f6e072", "#f1e292", "#b9422c", "starter fire pokemon gen6")
+        +color-swatch("Delphox #655",    "#b66345", "#593e30", "#efde8b", "#b09c91", "#d9c16c", "starter fire pokemon gen6")
+
+        +color-swatch("Rowlet #722",     "#dec5ae", "#bb8469", "#292420", "#2cad8d", "#f4e0cb", "starter grass pokemon gen7")
+        +color-swatch("Dartrix #723",    "#fbfbfb", "#52442f", "#a2b763", "#c3c2bd", "#926444", "starter grass pokemon gen7")
+        +color-swatch("Decidueye #724",  "#a26d4e", "#1b8766", "#d8a374", "#cfba9d", "#212316", "starter grass pokemon gen7")
+        +color-swatch("Litten #725",     "#424752", "#da5b4a", "#2a1512", "#f1e124", "#d4d3ce", "starter fire pokemon gen7")
+        +color-swatch("Torracat #726",   "#d96f4b", "#453d3a", "#f3eb65", "#b2978e", "#ebe691", "starter fire pokemon gen7")
+        +color-swatch("Incineroar #727", "#463631", "#de574c", "#8f8a8c", "#8b453f", "#ecb64e", "starter fire pokemon gen7")
+
+        +color-swatch("Grookey #810",    "#aca856", "#657240", "#d3d980", "#90592d", "#19140c", "starter grass pokemon gen8")
+        +color-swatch("Thwackey #811",   "#c8c967", "#423a2d", "#e0e28e", "#ba6246", "#eeecc2", "starter grass pokemon gen8")
+        +color-swatch("Rillaboom #812",  "#4b443f", "#07864a", "#a99c8e", "#967d6c", "#0e311a", "starter grass pokemon gen8")
+        +color-swatch("Scorbunny #813",  "#fbfbfb", "#cc693a", "#453432", "#ada0a2", "#8f5243", "starter fire pokemon gen8")
+        +color-swatch("Raboot #814",     "#dbdcdc", "#b85235", "#514d4d", "#190b09", "#9f9793", "starter fire pokemon gen8")
+        +color-swatch("Cinderace #815",  "#fbfbfb", "#282b35", "#b04f31", "#ecca60", "#a1a8ab", "starter fire pokemon gen8")
+
+  script.
+    const colorSwatchButtons = document.querySelectorAll("button");
+    document.querySelector(`.color-swatch-button-show-all`).style.backgroundColor = `#6886E3`;
+
+    colorSwatchButtons.forEach(btn => {
+      btn.addEventListener("click", (ev) => {
+        reset()
+        // set btn color to active
+        ev.target.style.backgroundColor = "#6886E3";
+
+        // display only the ones clicked on
+        const specificClass = ev.target.classList[0];
+        const classForSwatch = specificClass.split("color-swatch-button-")[1];
+
+        if (classForSwatch === `show-all`) {
+          // show all the swatches
+          const allSwatches = document.querySelectorAll(".swatch");
+          allSwatches.forEach(swatch => swatch.style.display = `block`);          
+        } else {
+          // display just the ones selected
+          const allToSwitch = document.querySelectorAll(`.${classForSwatch}`);
+          allToSwitch.forEach(swatch => swatch.style.display = `block`);
+        }
+
+      });
+    });
+
+    function reset() {
+      // hide all the swatches
+      const allSwatches = document.querySelectorAll(".swatch");
+      allSwatches.forEach(swatch => swatch.style.display = `none`);
+      // set all btn colors to non active
+      const colorSwatchButtons = document.querySelectorAll("button");
+      colorSwatchButtons.forEach(btn => btn.style.backgroundColor = ``);
+      document.querySelector(`.color-swatch-button-show-all`).style.backgroundColor = ``;
+    }
