@@ -1,0 +1,84 @@
+body {
+  color: #626366;
+  font-family: 'Noto Sans JP', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 14px;
+  margin: 2px;
+}
+
+.color-swatches {
+  background-color: #EEF2F9;
+  padding: 20px;
+}
+
+.color-swatch-container {
+  border: 1px solid #EEF2F9;
+  border-radius: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 10px;
+  padding: 0 10px;
+}
+
+.color-swatch-buttons {
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.color-swatch-group {
+  display: flex;
+}
+
+.swatch {
+  background-color: white;
+  border: 1px solid #EEF2F9;
+  border-radius: 6px;
+  font-size: 16px;
+  height: 200px;
+  margin: 5px;
+  padding: 10px;
+  width: 200px;
+}
+
+.swatch .box1 {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  height: 45%;
+}
+
+.swatch .box2 {
+  height: 25%;
+}
+
+.swatch .box3, .swatch .box4 {
+  height: 5%;
+}
+
+.swatch .box5 {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  height: 5%;
+}
+
+.swatch .title {
+  color: #626366;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.color-swatch-footer {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.color-swatch-scroll-up {
+  bottom: 10px;
+  position: fixed;
+  right: 10px;
+}

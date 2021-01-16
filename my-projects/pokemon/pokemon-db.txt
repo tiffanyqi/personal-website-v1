@@ -1,0 +1,893 @@
+Bulbasaur, 1, rgba(146, 201, 171), rgba(115, 161, 145), rgba(98, 147, 108), rgba(140, 180, 146), rgba(77, 109, 92), grass poison, gen1
+Ivysaur, 2, rgba(92, 153, 162), rgba(102, 146, 118), rgba(132, 181, 184), rgba(44, 88, 99), rgba(80, 105, 95), grass poison, gen1
+Venusaur, 3, rgba(83, 148, 147), rgba(54, 95, 96), rgba(102, 143, 101), rgba(84, 106, 86), rgba(143, 171, 170), grass poison, gen1
+Charmander, 4, rgba(227, 165, 120), rgba(184, 137, 106), rgba(243, 231, 210), rgba(225, 204, 177), rgba(153, 113, 91), fire, gen1
+Charmeleon, 5, rgba(214, 114, 97), rgba(176, 91, 78), rgba(233, 206, 179), rgba(228, 140, 110), rgba(233, 219, 213), fire, gen1
+Charizard, 6, rgba(221, 148, 89), rgba(233, 215, 157), rgba(76, 146, 160), rgba(168, 111, 74), rgba(17, 90, 104), fire flying, gen1
+Squirtle, 7, rgba(103, 159, 176), rgba(147, 200, 213), rgba(222, 206, 177), rgba(178, 169, 153), rgba(90, 97, 96), water, gen1
+Wartortle, 8, rgba(231, 233, 224), rgba(167, 183, 215), rgba(182, 217, 231), rgba(107, 140, 179), rgba(90, 97, 102), water, gen1
+Blastoise, 9, rgba(109, 92, 81), rgba(217, 217, 224), rgba(109, 137, 176), rgba(92, 115, 150), rgba(145, 171, 208), water, gen1
+Caterpie, 10, rgba(136, 200, 119), rgba(114, 167, 100), rgba(238, 220, 150), rgba(26, 29, 22), rgba(167, 160, 111), bug, gen1
+Metapod, 11, rgba(134, 170, 84), rgba(170, 204, 115), rgba(116, 145, 80), rgba(79, 99, 53), rgba(34, 42, 25), bug, gen1
+Butterfree, 12, rgba(235, 240, 247), rgba(90, 87, 108), rgba(11, 11, 12), rgba(152, 155, 160), rgba(101, 111, 135), bug flying, gen1
+Weedle, 13, rgba(175, 134, 89), rgba(150, 112, 84), rgba(200, 163, 119), rgba(210, 148, 161), rgba(229, 227, 232), bug poison, gen1
+Kakuna, 14, rgba(178, 151, 82), rgba(205, 181, 101), rgba(231, 208, 119), rgba(34, 29, 22), rgba(100, 85, 47), bug poison, gen1
+Beedrill, 15, rgba(224, 228, 232), rgba(154, 156, 162), rgba(93, 90, 101), rgba(202, 164, 84), rgba(230, 200, 93), bug poison, gen1
+Pidgey, 16, rgba(237, 228, 174), rgba(181, 147, 98), rgba(197, 182, 145), rgba(144, 95, 51), rgba(114, 77, 46), normal flying, gen1
+Pidgeotto, 17, rgba(223, 212, 164), rgba(200, 180, 149), rgba(161, 98, 85), rgba(182, 169, 140), rgba(162, 145, 109), normal flying, gen1
+Pidgeot, 18, rgba(220, 208, 168), rgba(221, 101, 72), rgba(162, 142, 103), rgba(142, 114, 84), rgba(110, 97, 80), normal flying, gen1
+Rattata, 19, rgba(163, 137, 168), rgba(141, 112, 146), rgba(215, 197, 174), rgba(101, 85, 97), rgba(239, 228, 218), normal, gen1
+Raticate, 20, rgba(148, 105, 58), rgba(240, 217, 182), rgba(174, 139, 95), rgba(201, 175, 143), rgba(112, 95, 78), normal, gen1
+Spearow, 21, rgba(154, 95, 80), rgba(204, 178, 166), rgba(210, 110, 105), rgba(240, 217, 210), rgba(176, 142, 120), normal flying, gen1
+Fearow, 22, rgba(158, 111, 78), rgba(227, 206, 176), rgba(176, 155, 144), rgba(110, 77, 53), rgba(198, 141, 89), normal flying, gen1
+Ekans, 23, rgba(136, 97, 122), rgba(180, 137, 175), rgba(147, 105, 139), rgba(105, 79, 91), rgba(203, 172, 200), poison, gen1
+Arbok, 24, rgba(155, 144, 163), rgba(109, 98, 109), rgba(50, 45, 45), rgba(132, 120, 135), rgba(186, 173, 196), poison, gen1
+Pikachu, 25, rgba(238, 208, 119), rgba(208, 176, 103), rgba(246, 224, 155), rgba(173, 149, 91), rgba(23, 17, 17), electric, gen1
+Raichu, 26, rgba(213, 169, 92), rgba(245, 235, 212), rgba(242, 210, 118), rgba(178, 144, 85), rgba(106, 78, 47), electric, gen1
+Sandshrew, 27, rgba(170, 149, 102), rgba(233, 202, 122), rgba(231, 212, 159), rgba(234, 231, 214), rgba(109, 101, 79), ground, gen1
+Sandslash, 28, rgba(109, 76, 40), rgba(171, 143, 91), rgba(218, 185, 107), rgba(145, 105, 56), rgba(231, 195, 110), ground, gen1
+Nidoran-f, 29, rgba(206, 217, 236), rgba(164, 180, 209), rgba(187, 201, 229), rgba(49, 139, 149), rgba(97, 103, 152), poison, gen1
+Nidorina, 30, rgba(197, 218, 223), rgba(148, 187, 197), rgba(170, 201, 209), rgba(138, 172, 184), rgba(112, 150, 170), poison, gen1
+Nidoqueen, 31, rgba(101, 142, 173), rgba(134, 174, 199), rgba(88, 115, 140), rgba(88, 92, 95), rgba(217, 207, 176), poison ground, gen1
+Nidoran-m, 32, rgba(151, 110, 153), rgba(114, 86, 113), rgba(183, 144, 186), rgba(38, 136, 130), rgba(198, 161, 199), poison, gen1
+Nidorino, 33, rgba(149, 116, 151), rgba(169, 137, 172), rgba(197, 163, 202), rgba(99, 95, 109), rgba(46, 39, 47), poison, gen1
+Nidoking, 34, rgba(153, 114, 151), rgba(173, 145, 174), rgba(106, 89, 108), rgba(220, 216, 220), rgba(129, 99, 125), poison ground, gen1
+Clefairy, 35, rgba(248, 209, 214), rgba(222, 180, 194), rgba(176, 148, 154), rgba(99, 87, 89), rgba(29, 27, 28), fairy, gen1
+Clefable, 36, rgba(242, 217, 210), rgba(217, 194, 187), rgba(202, 168, 170), rgba(102, 89, 87), rgba(172, 147, 148), fairy, gen1
+Vulpix, 37, rgba(210, 139, 106), rgba(164, 108, 84), rgba(210, 123, 77), rgba(89, 52, 37), rgba(182, 131, 109), fire, gen1
+Ninetales, 38, rgba(233, 220, 159), rgba(249, 244, 216), rgba(197, 182, 137), rgba(159, 149, 110), rgba(185, 172, 136), fire, gen1
+Jigglypuff, 39, rgba(243, 210, 219), rgba(220, 170, 181), rgba(25, 28, 37), rgba(98, 88, 94), rgba(1, 109, 135), normal fairy, gen1
+Wigglytuff, 40, rgba(240, 222, 228), rgba(212, 170, 179), rgba(45, 46, 46), rgba(165, 149, 153), rgba(102, 94, 97), normal fairy, gen1
+Zubat, 41, rgba(155, 105, 155), rgba(107, 80, 108), rgba(81, 143, 174), rgba(182, 142, 184), rgba(50, 83, 102), poison flying, gen1
+Golbat, 42, rgba(161, 105, 162), rgba(33, 35, 36), rgba(103, 79, 104), rgba(182, 140, 185), rgba(72, 142, 173), poison flying, gen1
+Oddish, 43, rgba(85, 165, 71), rgba(82, 118, 147), rgba(94, 133, 158), rgba(81, 112, 81), rgba(141, 188, 123), grass poison, gen1
+Gloom, 44, rgba(156, 93, 77), rgba(106, 141, 167), rgba(206, 110, 74), rgba(58, 100, 136), rgba(82, 115, 148), grass poison, gen1
+Vileplume, 45, rgba(222, 151, 162), rgba(208, 107, 123), rgba(85, 105, 141), rgba(212, 117, 132), rgba(166, 93, 101), grass poison, gen1
+Paras, 46, rgba(223, 150, 95), rgba(220, 155, 157), rgba(161, 107, 82), rgba(38, 32, 30), rgba(227, 231, 240), bug grass, gen1
+Parasect, 47, rgba(212, 146, 169), rgba(221, 147, 89), rgba(165, 105, 98), rgba(171, 102, 133), rgba(232, 175, 54), bug grass, gen1
+Venonat, 48, rgba(102, 97, 154), rgba(156, 148, 168), rgba(204, 103, 151), rgba(217, 143, 171), rgba(89, 83, 102), bug poison, gen1
+Venomoth, 49, rgba(222, 211, 231), rgba(160, 152, 167), rgba(179, 172, 203), rgba(197, 186, 208), rgba(103, 99, 110), bug poison, gen1
+Diglett, 50, rgba(170, 139, 120), rgba(163, 147, 141), rgba(200, 174, 161), rgba(95, 91, 93), rgba(32, 30, 30), ground, gen1
+Dugtrio, 51, rgba(161, 132, 114), rgba(167, 155, 153), rgba(149, 123, 107), rgba(107, 102, 101), rgba(40, 36, 34), ground, gen1
+Meowth, 52, rgba(244, 236, 211), rgba(221, 204, 172), rgba(173, 140, 99), rgba(174, 165, 148), rgba(108, 97, 86), normal, gen1
+Persian, 53, rgba(234, 216, 177), rgba(203, 186, 156), rgba(172, 157, 140), rgba(245, 233, 205), rgba(153, 140, 118), normal, gen1
+Psyduck, 54, rgba(243, 210, 151), rgba(218, 182, 119), rgba(246, 239, 224), rgba(201, 186, 172), rgba(166, 142, 99), water, gen1
+Golduck, 55, rgba(109, 162, 202), rgba(90, 137, 174), rgba(133, 179, 213), rgba(79, 118, 148), rgba(246, 239, 216), water, gen1
+Mankey, 56, rgba(243, 227, 216), rgba(175, 156, 147), rgba(201, 177, 161), rgba(143, 117, 103), rgba(213, 196, 184), fighting, gen1
+Primeape, 57, rgba(138, 111, 101), rgba(241, 224, 213), rgba(181, 164, 158), rgba(197, 170, 155), rgba(179, 145, 122), fighting, gen1
+Growlithe, 58, rgba(228, 206, 177), rgba(210, 181, 154), rgba(216, 152, 103), rgba(97, 91, 86), rgba(167, 134, 107), fire, gen1
+Arcanine, 59, rgba(234, 209, 181), rgba(208, 182, 158), rgba(216, 152, 107), rgba(149, 113, 89), rgba(99, 92, 86), fire, gen1
+Poliwag, 60, rgba(218, 227, 238), rgba(146, 174, 205), rgba(86, 117, 156), rgba(93, 134, 181), rgba(176, 199, 217), water, gen1
+Poliwhirl, 61, rgba(221, 228, 239), rgba(92, 134, 183), rgba(87, 118, 156), rgba(165, 181, 206), rgba(19, 20, 22), water, gen1
+Poliwrath, 62, rgba(221, 227, 238), rgba(85, 115, 155), rgba(92, 134, 183), rgba(151, 174, 204), rgba(15, 16, 17), water fighting, gen1
+Abra, 63, rgba(234, 209, 91), rgba(175, 154, 81), rgba(239, 223, 144), rgba(201, 178, 84), rgba(103, 92, 46), psychic, gen1
+Kadabra, 64, rgba(238, 211, 91), rgba(200, 175, 80), rgba(168, 148, 81), rgba(107, 91, 87), rgba(141, 122, 88), psychic, gen1
+Alakazam, 65, rgba(235, 210, 89), rgba(167, 147, 79), rgba(235, 223, 158), rgba(102, 88, 91), rgba(204, 181, 81), psychic, gen1
+Machop, 66, rgba(145, 164, 171), rgba(168, 199, 208), rgba(92, 101, 105), rgba(118, 138, 145), rgba(207, 213, 215), fighting, gen1
+Machoke, 67, rgba(170, 177, 206), rgba(141, 144, 164), rgba(93, 89, 101), rgba(120, 121, 140), rgba(126, 128, 147), fighting, gen1
+Machamp, 68, rgba(160, 180, 198), rgba(140, 150, 162), rgba(93, 99, 109), rgba(110, 119, 136), rgba(122, 133, 146), fighting, gen1
+Bellsprout, 69, rgba(159, 210, 151), rgba(232, 230, 110), rgba(140, 176, 135), rgba(241, 238, 157), rgba(96, 100, 87), grass poison, gen1
+Weepinbell, 70, rgba(147, 205, 142), rgba(226, 223, 108), rgba(213, 176, 176), rgba(117, 176, 121), rgba(241, 238, 163), grass poison, gen1
+Victreebel, 71, rgba(154, 208, 143), rgba(228, 225, 105), rgba(112, 172, 117), rgba(241, 238, 156), rgba(17, 18, 17), grass poison, gen1
+Tentacool, 72, rgba(95, 177, 212), rgba(20, 20, 21), rgba(146, 206, 231), rgba(167, 157, 150), rgba(86, 139, 163), water poison, gen1
+Tentacruel, 73, rgba(163, 156, 149), rgba(82, 174, 212), rgba(95, 93, 95), rgba(139, 205, 232), rgba(171, 87, 112), water poison, gen1
+Geodude, 74, rgba(169, 167, 160), rgba(109, 106, 107), rgba(129, 124, 129), rgba(212, 212, 211), rgba(27, 26, 26), rock ground, gen1
+Graveler, 75, rgba(173, 173, 162), rgba(101, 107, 106), rgba(197, 197, 187), rgba(205, 204, 195), rgba(20, 21, 20), rock ground, gen1
+Golem, 76, rgba(93, 88, 87), rgba(156, 151, 149), rgba(48, 44, 43), rgba(198, 182, 182), rgba(133, 117, 117), rock ground, gen1
+Ponyta, 77, rgba(249, 242, 207), rgba(229, 218, 180), rgba(231, 109, 70), rgba(238, 166, 40), rgba(248, 203, 30), fire, gen1
+Rapidash, 78, rgba(246, 239, 207), rgba(235, 113, 86), rgba(240, 148, 85), rgba(221, 211, 178), rgba(253, 213, 76), fire, gen1
+Slowpoke, 79, rgba(220, 161, 177), rgba(237, 223, 223), rgba(175, 138, 147), rgba(235, 184, 196), rgba(106, 87, 91), water psychic, gen1
+Slowbro, 80, rgba(216, 162, 173), rgba(164, 151, 157), rgba(226, 220, 215), rgba(102, 93, 95), rgba(184, 203, 210), water psychic, gen1
+Magnemite, 81, rgba(164, 165, 167), rgba(227, 234, 238), rgba(164, 195, 205), rgba(97, 94, 99), rgba(12, 12, 13), electric steel, gen1
+Magneton, 82, rgba(151, 153, 155), rgba(228, 233, 236), rgba(95, 93, 96), rgba(157, 187, 197), rgba(44, 42, 44), electric steel, gen1
+Farfetchd, 83, rgba(163, 149, 144), rgba(197, 182, 171), rgba(98, 98, 87), rgba(212, 201, 174), rgba(230, 229, 220), normal flying, gen1
+Doduo, 84, rgba(173, 132, 106), rgba(210, 174, 149), rgba(159, 122, 98), rgba(204, 151, 117), rgba(96, 88, 83), normal flying, gen1
+Dodrio, 85, rgba(215, 165, 148), rgba(148, 113, 99), rgba(98, 87, 84), rgba(170, 135, 115), rgba(172, 153, 143), normal flying, gen1
+Seel, 86, rgba(218, 225, 234), rgba(156, 156, 163), rgba(98, 99, 102), rgba(10, 10, 11), rgba(187, 195, 209), water, gen1
+Dewgong, 87, rgba(225, 231, 240), rgba(152, 156, 162), rgba(99, 101, 104), rgba(183, 187, 203), rgba(13, 14, 15), water ice, gen1
+Grimer, 88, rgba(141, 121, 149), rgba(96, 82, 105), rgba(182, 159, 197), rgba(157, 139, 169), rgba(199, 179, 209), poison, gen1
+Muk, 89, rgba(164, 149, 174), rgba(103, 93, 106), rgba(132, 118, 137), rgba(42, 41, 42), rgba(186, 171, 195), poison, gen1
+Shellder, 90, rgba(165, 162, 202), rgba(34, 32, 33), rgba(140, 133, 179), rgba(130, 126, 182), rgba(212, 168, 177), water, gen1
+Cloyster, 91, rgba(89, 84, 96), rgba(151, 146, 176), rgba(42, 39, 49), rgba(132, 123, 151), rgba(172, 169, 197), water ice, gen1
+Gastly, 92, rgba(144, 116, 143), rgba(29, 22, 23), rgba(232, 229, 232), rgba(162, 136, 158), rgba(92, 83, 85), ghost poison, gen1
+Haunter, 93, rgba(89, 79, 96), rgba(119, 109, 139), rgba(153, 145, 168), rgba(40, 35, 43), rgba(140, 120, 147), ghost poison, gen1
+Gengar, 94, rgba(120, 116, 154), rgba(85, 81, 106), rgba(151, 147, 179), rgba(130, 124, 166), rgba(203, 212, 219), ghost poison, gen1
+Onix, 95, rgba(90, 88, 99), rgba(150, 149, 159), rgba(186, 187, 200), rgba(200, 202, 213), rgba(41, 40, 45), rock ground, gen1
+Drowzee, 96, rgba(103, 96, 92), rgba(238, 199, 78), rgba(245, 221, 148), rgba(218, 183, 74), rgba(154, 145, 142), psychic, gen1
+Hypno, 97, rgba(243, 214, 87), rgba(208, 183, 81), rgba(228, 228, 228), rgba(178, 159, 80), rgba(248, 229, 147), psychic, gen1
+Krabby, 98, rgba(227, 144, 100), rgba(237, 224, 220), rgba(172, 115, 86), rgba(219, 180, 164), rgba(94, 86, 86), water, gen1
+Kingler, 99, rgba(222, 140, 99), rgba(170, 111, 84), rgba(237, 223, 218), rgba(220, 182, 166), rgba(196, 124, 88), water, gen1
+Voltorb, 100, rgba(225, 156, 152), rgba(181, 187, 203), rgba(183, 123, 131), rgba(221, 222, 227), rgba(22, 18, 19), electric, gen1
+Electrode, 101, rgba(235, 236, 239), rgba(169, 176, 196), rgba(170, 122, 135), rgba(169, 145, 156), rgba(24, 22, 24), electric, gen1
+Exeggcute, 102, rgba(239, 215, 217), rgba(205, 179, 184), rgba(166, 151, 154), rgba(100, 91, 92), rgba(214, 188, 193), grass psychic, gen1
+Exeggutor, 103, rgba(99, 162, 114), rgba(163, 155, 143), rgba(91, 106, 87), rgba(216, 209, 170), rgba(149, 200, 131), grass psychic, gen1
+Cubone, 104, rgba(223, 220, 213), rgba(173, 174, 174), rgba(206, 177, 131), rgba(162, 141, 114), rgba(99, 95, 90), ground, gen1
+Marowak, 105, rgba(221, 220, 219), rgba(165, 163, 167), rgba(143, 116, 89), rgba(200, 161, 114), rgba(102, 95, 90), ground, gen1
+Hitmonlee, 106, rgba(170, 153, 147), rgba(199, 180, 174), rgba(107, 98, 98), rgba(212, 202, 180), rgba(228, 224, 209), fighting, gen1
+Hitmonchan, 107, rgba(166, 154, 153), rgba(212, 176, 164), rgba(102, 94, 94), rgba(211, 207, 224), rgba(153, 105, 99), fighting, gen1
+Lickitung, 108, rgba(224, 166, 173), rgba(242, 215, 211), rgba(183, 143, 149), rgba(232, 187, 200), rgba(106, 85, 92), normal, gen1
+Koffing, 109, rgba(163, 162, 205), rgba(121, 117, 145), rgba(172, 167, 149), rgba(210, 206, 167), rgba(90, 85, 100), poison, gen1
+Weezing, 110, rgba(167, 159, 165), rgba(133, 120, 135), rgba(178, 167, 196), rgba(101, 92, 100), rgba(218, 215, 215), poison, gen1
+Rhyhorn, 111, rgba(146, 159, 169), rgba(94, 99, 107), rgba(115, 122, 129), rgba(38, 39, 43), rgba(122, 131, 140), ground rock, gen1
+Rhydon, 112, rgba(149, 152, 162), rgba(115, 121, 135), rgba(94, 95, 103), rgba(171, 180, 197), rgba(222, 203, 183), ground rock, gen1
+Chansey, 113, rgba(244, 211, 226), rgba(208, 162, 175), rgba(170, 142, 157), rgba(220, 180, 197), rgba(105, 85, 92), normal, gen1
+Tangela, 114, rgba(108, 162, 194), rgba(101, 143, 173), rgba(21, 22, 26), rgba(90, 116, 140), rgba(79, 91, 106), grass, gen1
+Kangaskhan, 115, rgba(171, 149, 142), rgba(218, 206, 164), rgba(139, 117, 117), rgba(109, 95, 95), rgba(153, 132, 123), normal, gen1
+Horsea, 116, rgba(141, 213, 237), rgba(105, 179, 209), rgba(238, 228, 183), rgba(117, 198, 225), rgba(241, 240, 219), water, gen1
+Seadra, 117, rgba(140, 213, 236), rgba(106, 181, 210), rgba(121, 201, 228), rgba(97, 154, 175), rgba(214, 203, 176), water, gen1
+Goldeen, 118, rgba(231, 227, 234), rgba(165, 157, 169), rgba(171, 98, 85), rgba(208, 109, 85), rgba(185, 178, 197), water, gen1
+Seaking, 119, rgba(226, 229, 231), rgba(222, 115, 90), rgba(15, 13, 13), rgba(178, 97, 81), rgba(158, 157, 162), water, gen1
+Staryu, 120, rgba(115, 98, 79), rgba(138, 108, 84), rgba(168, 149, 100), rgba(238, 222, 153), rgba(236, 214, 115), water, gen1
+Starmie, 121, rgba(141, 138, 162), rgba(99, 95, 106), rgba(172, 172, 210), rgba(119, 117, 138), rgba(238, 231, 225), water psychic, gen1
+Mr-mime, 122, rgba(231, 222, 226), rgba(44, 83, 111), rgba(232, 147, 167), rgba(213, 122, 143), rgba(161, 155, 159), psychic fairy, gen1
+Scyther, 123, rgba(233, 233, 226), rgba(156, 208, 144), rgba(109, 142, 109), rgba(150, 169, 148), rgba(134, 173, 123), bug flying, gen1
+Jynx, 124, rgba(170, 91, 89), rgba(218, 106, 104), rgba(237, 231, 209), rgba(217, 207, 166), rgba(163, 148, 163), ice psychic, gen1
+Electabuzz, 125, rgba(172, 149, 98), rgba(9, 32, 52), rgba(250, 218, 137), rgba(238, 205, 123), rgba(206, 178, 111), electric, gen1
+Magmar, 126, rgba(212, 167, 99), rgba(248, 212, 119), rgba(164, 90, 69), rgba(230, 103, 59), rgba(173, 151, 96), fire, gen1
+Pinsir, 127, rgba(106, 95, 94), rgba(172, 160, 162), rgba(219, 216, 219), rgba(42, 39, 39), rgba(134, 120, 119), bug, gen1
+Tauros, 128, rgba(212, 163, 110), rgba(94, 83, 81), rgba(173, 133, 92), rgba(155, 152, 156), rgba(137, 120, 104), normal, gen1
+Magikarp, 129, rgba(236, 232, 233), rgba(171, 98, 79), rgba(233, 117, 94), rgba(226, 155, 110), rgba(247, 195, 115), water, gen1
+Gyarados, 130, rgba(169, 160, 156), rgba(56, 141, 177), rgba(48, 114, 149), rgba(198, 174, 149), rgba(44, 87, 108), water flying, gen1
+Lapras, 131, rgba(161, 160, 169), rgba(87, 177, 217), rgba(74, 149, 182), rgba(182, 184, 198), rgba(141, 200, 229), water ice, gen1
+Ditto, 132, rgba(200, 181, 216), rgba(160, 144, 178), rgba(211, 196, 225), rgba(180, 163, 200), rgba(23, 21, 26), normal, gen1
+Eevee, 133, rgba(198, 148, 97), rgba(154, 116, 80), rgba(231, 211, 174), rgba(176, 135, 94), rgba(114, 89, 76), normal, gen1
+Vaporeon, 134, rgba(121, 204, 224), rgba(99, 157, 172), rgba(222, 225, 218), rgba(48, 86, 103), rgba(150, 212, 226), water, gen1
+Jolteon, 135, rgba(248, 212, 112), rgba(211, 179, 100), rgba(221, 226, 229), rgba(170, 147, 89), rgba(249, 223, 145), electric, gen1
+Flareon, 136, rgba(227, 209, 150), rgba(181, 163, 121), rgba(237, 137, 84), rgba(222, 119, 72), rgba(195, 104, 62), fire, gen1
+Porygon, 137, rgba(220, 213, 217), rgba(82, 159, 167), rgba(226, 96, 111), rgba(75, 109, 114), rgba(152, 76, 84), normal, gen1
+Omanyte, 138, rgba(233, 228, 206), rgba(221, 214, 181), rgba(84, 143, 158), rgba(171, 164, 143), rgba(94, 94, 86), rock water, gen1
+Omastar, 139, rgba(234, 229, 205), rgba(220, 212, 177), rgba(150, 209, 223), rgba(85, 145, 160), rgba(106, 102, 94), rock water, gen1
+Kabuto, 140, rgba(6, 6, 6), rgba(183, 140, 96), rgba(141, 110, 82), rgba(212, 169, 145), rgba(247, 198, 118), rock water, gen1
+Kabutops, 141, rgba(176, 135, 97), rgba(107, 86, 77), rgba(220, 216, 212), rgba(146, 111, 80), rgba(161, 157, 156), rock water, gen1
+Aerodactyl, 142, rgba(156, 147, 168), rgba(201, 200, 217), rgba(102, 91, 103), rgba(176, 159, 196), rgba(133, 117, 144), rock flying, gen1
+Snorlax, 143, rgba(236, 225, 213), rgba(96, 150, 170), rgba(197, 186, 179), rgba(41, 114, 142), rgba(209, 196, 186), normal, gen1
+Articuno, 144, rgba(113, 178, 217), rgba(48, 109, 148), rgba(155, 203, 231), rgba(93, 144, 174), rgba(54, 142, 179), ice flying, gen1
+Zapdos, 145, rgba(210, 178, 114), rgba(244, 209, 122), rgba(175, 151, 102), rgba(250, 222, 139), rgba(8, 10, 12), electric flying, gen1
+Moltres, 146, rgba(239, 159, 113), rgba(249, 200, 117), rgba(251, 209, 134), rgba(174, 142, 90), rgba(152, 113, 79), fire flying, gen1
+Dratini, 147, rgba(227, 225, 224), rgba(151, 175, 216), rgba(163, 165, 176), rgba(177, 200, 233), rgba(92, 93, 101), dragon, gen1
+Dragonair, 148, rgba(227, 231, 231), rgba(118, 171, 219), rgba(82, 114, 153), rgba(99, 138, 173), rgba(162, 200, 232), dragon, gen1
+Dragonite, 149, rgba(233, 175, 106), rgba(244, 233, 202), rgba(174, 135, 96), rgba(231, 206, 164), rgba(48, 163, 150), dragon flying, gen1
+Mewtwo, 150, rgba(218, 213, 222), rgba(171, 156, 174), rgba(149, 120, 147), rgba(107, 94, 106), rgba(193, 186, 194), psychic, gen1
+Mew, 151, rgba(241, 203, 211), rgba(202, 162, 174), rgba(178, 144, 154), rgba(107, 85, 94), rgba(138, 107, 118), psychic, gen1
+Chikorita, 152, rgba(210, 226, 173), rgba(165, 208, 145), rgba(152, 162, 123), rgba(110, 160, 103), rgba(165, 173, 134), grass, gen2
+Bayleef, 153, rgba(236, 222, 156), rgba(164, 161, 116), rgba(101, 107, 77), rgba(198, 179, 133), rgba(180, 171, 132), grass, gen2
+Meganium, 154, rgba(184, 214, 141), rgba(145, 162, 109), rgba(235, 113, 135), rgba(244, 235, 235), rgba(204, 222, 163), grass, gen2
+Cyndaquil, 155, rgba(238, 217, 164), rgba(227, 112, 80), rgba(52, 103, 112), rgba(235, 149, 101), rgba(170, 151, 116), fire, gen2
+Quilava, 156, rgba(250, 225, 159), rgba(172, 150, 112), rgba(238, 109, 49), rgba(80, 111, 108), rgba(240, 146, 54), fire, gen2
+Typhlosion, 157, rgba(247, 227, 156), rgba(186, 166, 119), rgba(195, 174, 124), rgba(205, 182, 131), rgba(243, 149, 48), fire, gen2
+Totodile, 158, rgba(88, 149, 153), rgba(104, 194, 205), rgba(94, 87, 91), rgba(53, 91, 100), rgba(71, 122, 131), water, gen2
+Croconaw, 159, rgba(100, 147, 155), rgba(241, 219, 148), rgba(125, 199, 209), rgba(85, 109, 109), rgba(140, 205, 213), water, gen2
+Feraligatr, 160, rgba(106, 203, 231), rgba(86, 147, 162), rgba(148, 210, 225), rgba(222, 110, 110), rgba(163, 93, 95), water, gen2
+Sentret, 161, rgba(176, 134, 118), rgba(147, 111, 99), rgba(100, 85, 79), rgba(202, 167, 153), rgba(247, 237, 213), normal, gen2
+Furret, 162, rgba(240, 213, 182), rgba(115, 89, 78), rgba(198, 175, 152), rgba(143, 108, 93), rgba(175, 156, 140), normal, gen2
+Hoothoot, 163, rgba(201, 181, 164), rgba(174, 145, 117), rgba(42, 40, 40), rgba(92, 84, 81), rgba(231, 209, 200), normal flying, gen2
+Noctowl, 164, rgba(104, 82, 75), rgba(145, 114, 100), rgba(172, 138, 120), rgba(222, 206, 166), rgba(179, 161, 135), normal flying, gen2
+Ledyba, 165, rgba(230, 215, 164), rgba(240, 236, 221), rgba(34, 32, 31), rgba(175, 170, 148), rgba(93, 92, 90), bug flying, gen2
+Ledian, 166, rgba(226, 236, 224), rgba(239, 221, 163), rgba(89, 86, 83), rgba(211, 77, 99), rgba(172, 70, 84), bug flying, gen2
+Spinarak, 167, rgba(170, 213, 141), rgba(147, 171, 107), rgba(41, 43, 40), rgba(75, 107, 106), rgba(243, 212, 119), bug poison, gen2
+Ariados, 168, rgba(168, 83, 89), rgba(41, 37, 36), rgba(139, 121, 179), rgba(222, 178, 110), rgba(245, 197, 119), bug poison, gen2
+Crobat, 169, rgba(93, 151, 161), rgba(135, 113, 165), rgba(83, 87, 111), rgba(115, 99, 138), rgba(158, 139, 177), poison flying, gen2
+Chinchou, 170, rgba(95, 112, 166), rgba(239, 233, 224), rgba(241, 223, 141), rgba(115, 140, 199), rgba(150, 168, 212), water electric, gen2
+Lanturn, 171, rgba(115, 130, 173), rgba(110, 124, 165), rgba(145, 165, 211), rgba(228, 226, 228), rgba(245, 223, 145), water electric, gen2
+Pichu, 172, rgba(243, 231, 151), rgba(19, 22, 24), rgba(252, 242, 197), rgba(12, 57, 84), rgba(168, 159, 110), electric, gen2
+Cleffa, 173, rgba(248, 212, 201), rgba(215, 180, 176), rgba(109, 88, 71), rgba(96, 76, 60), rgba(139, 114, 94), fairy, gen2
+Igglybuff, 174, rgba(250, 224, 224), rgba(207, 175, 179), rgba(178, 156, 161), rgba(23, 20, 20), rgba(101, 87, 88), normal fairy, gen2
+Togepi, 175, rgba(236, 229, 210), rgba(236, 222, 181), rgba(100, 97, 89), rgba(168, 164, 150), rgba(37, 35, 32), fairy, gen2
+Togetic, 176, rgba(231, 241, 226), rgba(163, 170, 160), rgba(186, 194, 180), rgba(101, 101, 96), rgba(193, 201, 187), fairy flying, gen2
+Natu, 177, rgba(140, 200, 91), rgba(39, 36, 33), rgba(180, 73, 88), rgba(118, 161, 71), rgba(242, 209, 95), psychic flying, gen2
+Xatu, 178, rgba(220, 230, 234), rgba(140, 200, 91), rgba(224, 88, 106), rgba(48, 46, 46), rgba(118, 160, 71), psychic flying, gen2
+Mareep, 179, rgba(196, 183, 154), rgba(247, 235, 198), rgba(229, 216, 178), rgba(186, 175, 149), rgba(77, 112, 150), electric, gen2
+Flaaffy, 180, rgba(218, 148, 168), rgba(215, 227, 226), rgba(171, 178, 179), rgba(46, 45, 46), rgba(102, 90, 94), electric, gen2
+Ampharos, 181, rgba(244, 206, 89), rgba(243, 240, 238), rgba(204, 170, 74), rgba(226, 207, 156), rgba(160, 156, 154), electric, gen2
+Bellossom, 182, rgba(162, 157, 101), rgba(216, 94, 69), rgba(77, 107, 80), rgba(102, 148, 103), rgba(226, 151, 101), grass, gen2
+Marill, 183, rgba(78, 181, 230), rgba(51, 155, 204), rgba(163, 201, 220), rgba(174, 187, 193), rgba(49, 142, 186), water fairy, gen2
+Azumarill, 184, rgba(61, 155, 202), rgba(90, 171, 207), rgba(228, 224, 221), rgba(194, 186, 184), rgba(70, 135, 172), water fairy, gen2
+Sudowoodo, 185, rgba(151, 113, 96), rgba(174, 136, 115), rgba(112, 163, 88), rgba(116, 92, 74), rgba(12, 11, 8), rock, gen2
+Politoed, 186, rgba(144, 201, 96), rgba(247, 235, 141), rgba(114, 155, 72), rgba(153, 162, 90), rgba(87, 109, 57), water, gen2
+Hoppip, 187, rgba(241, 148, 173), rgba(153, 205, 111), rgba(198, 119, 142), rgba(154, 98, 111), rgba(115, 156, 75), grass flying, gen2
+Skiploom, 188, rgba(143, 201, 96), rgba(118, 161, 71), rgba(245, 232, 142), rgba(236, 221, 124), rgba(141, 174, 80), grass flying, gen2
+Jumpluff, 189, rgba(250, 238, 202), rgba(115, 141, 200), rgba(215, 203, 171), rgba(96, 114, 169), rgba(198, 185, 157), grass flying, gen2
+Aipom, 190, rgba(156, 115, 172), rgba(237, 220, 169), rgba(104, 85, 102), rgba(180, 157, 160), rgba(197, 181, 142), normal, gen2
+Sunkern, 191, rgba(234, 212, 109), rgba(39, 37, 31), rgba(68, 58, 50), rgba(109, 164, 93), rgba(140, 183, 132), grass, gen2
+Sunflora, 192, rgba(245, 230, 157), rgba(116, 171, 107), rgba(162, 207, 153), rgba(247, 211, 95), rgba(125, 192, 119), grass, gen2
+Yanma, 193, rgba(235, 236, 239), rgba(212, 99, 81), rgba(149, 203, 105), rgba(230, 118, 53), rgba(89, 86, 101), bug flying, gen2
+Wooper, 194, rgba(156, 203, 227), rgba(145, 157, 176), rgba(29, 31, 35), rgba(139, 180, 201), rgba(90, 90, 99), water ground, gen2
+Quagsire, 195, rgba(130, 165, 180), rgba(154, 207, 227), rgba(116, 151, 165), rgba(138, 182, 199), rgba(82, 95, 103), water ground, gen2
+Espeon, 196, rgba(215, 186, 204), rgba(175, 149, 161), rgba(225, 200, 215), rgba(92, 85, 96), rgba(198, 170, 184), psychic, gen2
+Umbreon, 197, rgba(73, 80, 83), rgba(46, 48, 50), rgba(236, 208, 139), rgba(60, 66, 70), rgba(8, 8, 7), dark, gen2
+Murkrow, 198, rgba(49, 74, 98), rgba(34, 53, 70), rgba(25, 36, 46), rgba(240, 209, 155), rgba(75, 108, 142), dark flying, gen2
+Slowking, 199, rgba(221, 152, 148), rgba(226, 226, 221), rgba(167, 168, 169), rgba(166, 110, 109), rgba(110, 91, 92), water psychic, gen2
+Misdreavus, 200, rgba(54, 90, 113), rgba(92, 137, 155), rgba(79, 118, 139), rgba(23, 26, 31), rgba(148, 156, 176), ghost, gen2
+Unown, 201, rgba(85, 100, 112), rgba(222, 226, 232), rgba(20, 33, 43), rgba(29, 50, 68), rgba(53, 72, 86), psychic, gen2
+Wobbuffet, 202, rgba(98, 180, 216), rgba(88, 146, 173), rgba(130, 196, 220), rgba(47, 47, 50), rgba(108, 87, 92), psychic, gen2
+Girafarig, 203, rgba(235, 171, 58), rgba(49, 35, 32), rgba(70, 48, 42), rgba(148, 112, 49), rgba(157, 98, 101), normal psychic, gen2
+Pineco, 204, rgba(56, 77, 93), rgba(31, 36, 49), rgba(77, 104, 102), rgba(105, 150, 144), rgba(139, 172, 166), bug, gen2
+Forretress, 205, rgba(170, 154, 162), rgba(232, 213, 218), rgba(156, 49, 46), rgba(44, 39, 37), rgba(98, 35, 32), bug steel, gen2
+Dunsparce, 206, rgba(246, 233, 138), rgba(246, 239, 216), rgba(86, 162, 169), rgba(228, 215, 121), rgba(198, 183, 107), normal, gen2
+Gligar, 207, rgba(212, 140, 183), rgba(166, 109, 150), rgba(222, 154, 197), rgba(82, 138, 195), rgba(108, 77, 100), ground flying, gen2
+Steelix, 208, rgba(107, 110, 138), rgba(82, 84, 106), rgba(122, 133, 159), rgba(149, 157, 173), rgba(168, 178, 196), steel ground, gen2
+Snubbull, 209, rgba(238, 150, 159), rgba(197, 119, 131), rgba(49, 47, 47), rgba(107, 96, 96), rgba(165, 104, 112), fairy, gen2
+Granbull, 210, rgba(224, 183, 213), rgba(180, 146, 168), rgba(234, 200, 219), rgba(106, 88, 97), rgba(44, 43, 44), fairy, gen2
+Qwilfish, 211, rgba(177, 184, 138), rgba(75, 117, 115), rgba(209, 226, 168), rgba(104, 149, 149), rgba(54, 85, 86), water poison, gen2
+Scizor, 212, rgba(201, 97, 98), rgba(163, 72, 72), rgba(98, 46, 45), rgba(28, 25, 24), rgba(91, 89, 92), bug steel, gen2
+Shuckle, 213, rgba(243, 205, 88), rgba(235, 217, 170), rgba(204, 168, 146), rgba(204, 169, 73), rgba(154, 58, 54), bug rock, gen2
+Heracross, 214, rgba(94, 135, 164), rgba(56, 97, 135), rgba(77, 118, 149), rgba(48, 78, 103), rgba(135, 162, 182), bug fighting, gen2
+Sneasel, 215, rgba(81, 142, 154), rgba(47, 86, 108), rgba(160, 89, 99), rgba(224, 231, 240), rgba(215, 106, 111), dark ice, gen2
+Teddiursa, 216, rgba(224, 150, 97), rgba(179, 119, 74), rgba(238, 220, 158), rgba(41, 38, 37), rgba(242, 232, 203), normal, gen2
+Ursaring, 217, rgba(152, 109, 90), rgba(92, 68, 56), rgba(117, 88, 73), rgba(171, 137, 114), rgba(175, 149, 137), normal, gen2
+Slugma, 218, rgba(225, 109, 93), rgba(232, 147, 119), rgba(174, 91, 76), rgba(239, 161, 129), rgba(247, 234, 151), fire, gen2
+Magcargo, 219, rgba(217, 100, 93), rgba(167, 86, 79), rgba(111, 116, 138), rgba(229, 142, 116), rgba(95, 93, 103), fire rock, gen2
+Swinub, 220, rgba(147, 115, 100), rgba(177, 139, 120), rgba(202, 161, 144), rgba(76, 50, 35), rgba(39, 29, 23), ice ground, gen2
+Piloswine, 221, rgba(154, 113, 96), rgba(197, 159, 144), rgba(176, 132, 114), rgba(187, 156, 142), rgba(103, 80, 70), ice ground, gen2
+Corsola, 222, rgba(243, 153, 166), rgba(198, 120, 134), rgba(158, 100, 109), rgba(153, 167, 172), rgba(106, 78, 84), water rock, gen2
+Remoraid, 223, rgba(158, 173, 163), rgba(227, 234, 222), rgba(173, 204, 187), rgba(179, 212, 194), rgba(92, 105, 99), water, gen2
+Octillery, 224, rgba(224, 91, 82), rgba(184, 77, 67), rgba(238, 142, 132), rgba(100, 44, 37), rgba(244, 209, 93), water, gen2
+Delibird, 225, rgba(233, 229, 236), rgba(174, 170, 177), rgba(210, 88, 78), rgba(203, 73, 62), rgba(161, 60, 47), ice flying, gen2
+Mantine, 226, rgba(176, 165, 176), rgba(229, 213, 229), rgba(81, 92, 110), rgba(87, 107, 135), rgba(201, 184, 198), water flying, gen2
+Skarmory, 227, rgba(202, 212, 235), rgba(156, 161, 177), rgba(162, 70, 77), rgba(88, 89, 104), rgba(107, 115, 141), steel flying, gen2
+Houndour, 228, rgba(86, 84, 83), rgba(48, 45, 46), rgba(216, 212, 211), rgba(164, 159, 164), rgba(175, 110, 82), dark fire, gen2
+Houndoom, 229, rgba(90, 79, 77), rgba(46, 38, 40), rgba(70, 58, 57), rgba(166, 155, 153), rgba(20, 17, 17), dark fire, gen2
+Kingdra, 230, rgba(88, 145, 171), rgba(98, 180, 214), rgba(178, 179, 171), rgba(73, 117, 140), rgba(54, 88, 104), water dragon, gen2
+Phanpy, 231, rgba(144, 212, 213), rgba(114, 171, 173), rgba(222, 109, 81), rgba(171, 96, 79), rgba(32, 37, 36), ground, gen2
+Donphan, 232, rgba(81, 88, 99), rgba(141, 153, 161), rgba(186, 202, 213), rgba(116, 136, 154), rgba(215, 224, 223), ground, gen2
+Porygon2, 233, rgba(223, 93, 115), rgba(104, 179, 213), rgba(86, 139, 178), rgba(228, 123, 142), rgba(161, 75, 98), normal, gen2
+Stantler, 234, rgba(187, 149, 130), rgba(178, 144, 121), rgba(200, 166, 146), rgba(143, 115, 100), rgba(106, 88, 81), normal, gen2
+Smeargle, 235, rgba(236, 224, 207), rgba(177, 167, 155), rgba(197, 181, 168), rgba(105, 98, 90), rgba(136, 160, 95), normal, gen2
+Tyrogue, 236, rgba(209, 185, 205), rgba(172, 154, 167), rgba(224, 202, 218), rgba(105, 81, 55), rgba(104, 91, 90), fighting, gen2
+Hitmontop, 237, rgba(150, 121, 107), rgba(198, 160, 140), rgba(164, 132, 116), rgba(81, 118, 157), rgba(104, 90, 84), fighting, gen2
+Smoochum, 238, rgba(240, 226, 159), rgba(175, 106, 133), rgba(215, 156, 159), rgba(170, 160, 105), rgba(206, 122, 156), ice psychic, gen2
+Elekid, 239, rgba(249, 225, 145), rgba(208, 183, 108), rgba(169, 150, 96), rgba(232, 205, 121), rgba(52, 51, 50), electric, gen2
+Magby, 240, rgba(218, 117, 121), rgba(171, 96, 99), rgba(230, 145, 146), rgba(236, 224, 148), rgba(111, 84, 78), fire, gen2
+Miltank, 241, rgba(214, 164, 167), rgba(234, 226, 174), rgba(249, 187, 194), rgba(181, 162, 142), rgba(248, 207, 205), normal, gen2
+Blissey, 242, rgba(242, 164, 186), rgba(162, 163, 173), rgba(233, 233, 218), rgba(248, 176, 195), rgba(100, 91, 97), normal, gen2
+Raikou, 243, rgba(244, 206, 92), rgba(169, 152, 165), rgba(95, 91, 92), rgba(229, 226, 227), rgba(178, 152, 74), electric, gen2
+Entei, 244, rgba(117, 71, 41), rgba(155, 160, 156), rgba(149, 89, 49), rgba(93, 95, 97), rgba(84, 52, 39), fire, gen2
+Suicune, 245, rgba(152, 119, 160), rgba(109, 162, 168), rgba(228, 234, 221), rgba(161, 161, 173), rgba(108, 108, 137), water, gen2
+Larvitar, 246, rgba(140, 154, 121), rgba(99, 108, 89), rgba(158, 175, 138), rgba(177, 196, 154), rgba(141, 56, 51), rock ground, gen2
+Pupitar, 247, rgba(134, 144, 170), rgba(160, 176, 210), rgba(184, 194, 216), rgba(83, 88, 103), rgba(14, 15, 15), rock ground, gen2
+Tyranitar, 248, rgba(161, 178, 146), rgba(105, 112, 94), rgba(121, 131, 107), rgba(137, 150, 119), rgba(178, 196, 156), rock dark, gen2
+Lugia, 249, rgba(235, 234, 244), rgba(162, 177, 206), rgba(149, 155, 171), rgba(93, 107, 146), rgba(52, 57, 98), psychic flying, gen2
+Ho-oh, 250, rgba(232, 75, 50), rgba(171, 56, 46), rgba(225, 154, 57), rgba(226, 235, 219), rgba(234, 104, 85), fire flying, gen2
+Celebi, 251, rgba(223, 237, 206), rgba(162, 174, 157), rgba(93, 102, 88), rgba(177, 206, 159), rgba(46, 46, 45), psychic grass, gen2
+Treecko, 252, rgba(206, 227, 137), rgba(152, 189, 138), rgba(165, 207, 85), rgba(142, 177, 86), rgba(235, 149, 152), grass, gen3
+Grovyle, 253, rgba(110, 153, 110), rgba(157, 206, 157), rgba(82, 109, 81), rgba(238, 148, 149), rgba(137, 175, 134), grass, gen3
+Sceptile, 254, rgba(150, 205, 156), rgba(106, 153, 109), rgba(85, 108, 85), rgba(18, 24, 18), rgba(140, 178, 143), grass, gen3
+Torchic, 255, rgba(240, 163, 71), rgba(247, 211, 88), rgba(246, 218, 145), rgba(232, 142, 60), rgba(104, 82, 42), fire, gen3
+Combusken, 256, rgba(247, 226, 158), rgba(233, 144, 95), rgba(160, 152, 142), rgba(155, 141, 114), rgba(234, 229, 214), fire fighting, gen3
+Blaziken, 257, rgba(179, 91, 73), rgba(219, 168, 121), rgba(244, 233, 206), rgba(242, 212, 124), rgba(230, 212, 163), fire fighting, gen3
+Mudkip, 258, rgba(89, 177, 219), rgba(220, 227, 241), rgba(235, 159, 74), rgba(173, 201, 230), rgba(123, 192, 228), water, gen3
+Marshtomp, 259, rgba(150, 208, 212), rgba(108, 162, 168), rgba(76, 94, 108), rgba(235, 158, 119), rgba(247, 197, 175), water ground, gen3
+Swampert, 260, rgba(84, 93, 106), rgba(137, 185, 225), rgba(114, 166, 207), rgba(92, 115, 136), rgba(168, 200, 221), water ground, gen3
+Poochyena, 261, rgba(89, 91, 91), rgba(201, 202, 203), rgba(177, 177, 178), rgba(40, 40, 40), rgba(3, 3, 3), dark, gen3
+Mightyena, 262, rgba(35, 35, 35), rgba(208, 208, 209), rgba(164, 164, 164), rgba(90, 90, 90), rgba(13, 13, 13), dark, gen3
+Zigzagoon, 263, rgba(175, 161, 146), rgba(231, 226, 219), rgba(152, 136, 121), rgba(98, 92, 86), rgba(202, 193, 184), normal, gen3
+Linoone, 264, rgba(228, 218, 213), rgba(169, 157, 149), rgba(204, 194, 187), rgba(159, 138, 121), rgba(138, 121, 107), normal, gen3
+Wurmple, 265, rgba(219, 107, 112), rgba(235, 231, 227), rgba(221, 207, 173), rgba(163, 93, 91), rgba(104, 94, 87), bug, gen3
+Silcoon, 266, rgba(232, 235, 242), rgba(94, 95, 99), rgba(156, 158, 163), rgba(1, 1, 1), rgba(16, 16, 16), bug, gen3
+Beautifly, 267, rgba(100, 97, 97), rgba(247, 201, 95), rgba(226, 220, 220), rgba(44, 43, 42), rgba(218, 176, 97), bug flying, gen3
+Cascoon, 268, rgba(227, 217, 229), rgba(205, 184, 209), rgba(165, 150, 167), rgba(102, 91, 101), rgba(5, 5, 5), bug, gen3
+Dustox, 269, rgba(149, 172, 80), rgba(106, 144, 39), rgba(164, 198, 93), rgba(175, 144, 179), rgba(207, 173, 204), bug poison, gen3
+Lotad, 270, rgba(107, 176, 143), rgba(100, 148, 116), rgba(26, 38, 31), rgba(248, 226, 153), rgba(76, 110, 86), water grass, gen3
+Lombre, 271, rgba(89, 141, 52), rgba(197, 224, 211), rgba(152, 197, 97), rgba(165, 206, 162), rgba(118, 162, 73), water grass, gen3
+Ludicolo, 272, rgba(233, 219, 174), rgba(177, 213, 141), rgba(142, 157, 103), rgba(106, 105, 81), rgba(231, 226, 204), water grass, gen3
+Seedot, 273, rgba(112, 107, 106), rgba(165, 161, 159), rgba(160, 140, 122), rgba(235, 219, 180), rgba(36, 35, 34), grass, gen3
+Nuzleaf, 274, rgba(180, 165, 151), rgba(151, 114, 96), rgba(230, 220, 210), rgba(195, 176, 166), rgba(102, 92, 84), grass dark, gen3
+Shiftry, 275, rgba(230, 231, 240), rgba(182, 140, 108), rgba(151, 112, 82), rgba(82, 167, 112), rgba(106, 97, 85), grass dark, gen3
+Taillow, 276, rgba(87, 90, 114), rgba(235, 236, 240), rgba(58, 64, 97), rgba(32, 33, 44), rgba(218, 116, 134), normal flying, gen3
+Swellow, 277, rgba(61, 68, 97), rgba(82, 84, 107), rgba(216, 220, 235), rgba(166, 84, 105), rgba(48, 52, 72), normal flying, gen3
+Wingull, 278, rgba(245, 246, 248), rgba(151, 209, 238), rgba(156, 158, 161), rgba(101, 103, 104), rgba(17, 17, 17), water flying, gen3
+Pelipper, 279, rgba(247, 225, 165), rgba(240, 242, 241), rgba(120, 184, 213), rgba(150, 203, 226), rgba(98, 100, 97), water flying, gen3
+Ralts, 280, rgba(233, 234, 241), rgba(162, 209, 161), rgba(120, 175, 112), rgba(205, 126, 130), rgba(93, 101, 91), psychic fairy, gen3
+Kirlia, 281, rgba(157, 206, 151), rgba(244, 243, 245), rgba(119, 163, 111), rgba(93, 104, 88), rgba(154, 164, 153), psychic fairy, gen3
+Gardevoir, 282, rgba(245, 244, 246), rgba(162, 209, 158), rgba(112, 155, 105), rgba(151, 169, 150), rgba(91, 110, 87), psychic fairy, gen3
+Surskit, 283, rgba(153, 211, 241), rgba(250, 226, 143), rgba(104, 185, 219), rgba(111, 197, 233), rgba(94, 146, 169), bug water, gen3
+Masquerain, 284, rgba(228, 238, 245), rgba(244, 168, 139), rgba(162, 106, 109), rgba(156, 158, 161), rgba(222, 146, 115), bug flying, gen3
+Shroomish, 285, rgba(223, 205, 182), rgba(233, 217, 200), rgba(152, 177, 156), rgba(96, 100, 91), rgba(203, 187, 167), grass, gen3
+Breloom, 286, rgba(163, 177, 147), rgba(120, 159, 115), rgba(242, 232, 207), rgba(94, 102, 83), rgba(221, 208, 179), grass fighting, gen3
+Slakoth, 287, rgba(228, 219, 208), rgba(207, 196, 180), rgba(108, 94, 84), rgba(200, 178, 165), rgba(166, 157, 149), normal, gen3
+Vigoroth, 288, rgba(235, 235, 236), rgba(162, 158, 159), rgba(103, 95, 94), rgba(157, 108, 103), rgba(30, 29, 29), normal, gen3
+Slaking, 289, rgba(174, 158, 144), rgba(228, 224, 223), rgba(197, 185, 170), rgba(137, 116, 98), rgba(104, 94, 85), normal, gen3
+Nincada, 290, rgba(230, 233, 236), rgba(164, 158, 153), rgba(97, 98, 97), rgba(207, 216, 183), rgba(31, 31, 30), bug ground, gen3
+Ninjask, 291, rgba(236, 235, 240), rgba(42, 40, 40), rgba(159, 158, 160), rgba(99, 95, 95), rgba(246, 219, 138), bug flying, gen3
+Shedinja, 292, rgba(177, 151, 107), rgba(233, 207, 150), rgba(236, 234, 231), rgba(204, 176, 123), rgba(134, 118, 110), bug ghost, gen3
+Whismur, 293, rgba(227, 205, 222), rgba(248, 221, 149), rgba(196, 156, 187), rgba(207, 175, 202), rgba(103, 88, 92), normal, gen3
+Loudred, 294, rgba(161, 163, 203), rgba(144, 143, 181), rgba(234, 211, 146), rgba(94, 83, 96), rgba(17, 16, 17), normal, gen3
+Exploud, 295, rgba(169, 173, 208), rgba(144, 142, 180), rgba(242, 216, 141), rgba(228, 218, 227), rgba(112, 114, 151), normal, gen3
+Makuhita, 296, rgba(248, 224, 152), rgba(93, 92, 98), rgba(253, 238, 195), rgba(133, 136, 149), rgba(119, 122, 136), fighting, gen3
+Hariyama, 297, rgba(180, 139, 118), rgba(249, 219, 122), rgba(234, 167, 135), rgba(236, 230, 222), rgba(80, 81, 107), fighting, gen3
+Azurill, 298, rgba(89, 172, 223), rgba(21, 23, 31), rgba(49, 151, 210), rgba(153, 203, 235), rgba(38, 78, 104), normal fairy, gen3
+Nosepass, 299, rgba(98, 109, 161), rgba(144, 154, 198), rgba(11, 10, 15), rgba(118, 133, 181), rgba(49, 55, 81), rock, gen3
+Skitty, 300, rgba(241, 177, 174), rgba(251, 229, 207), rgba(242, 223, 183), rgba(150, 111, 108), rgba(109, 88, 85), normal, gen3
+Delcatty, 301, rgba(245, 222, 169), rgba(181, 133, 176), rgba(197, 159, 195), rgba(161, 110, 152), rgba(32, 26, 27), normal, gen3
+Sableye, 302, rgba(137, 112, 169), rgba(108, 82, 151), rgba(77, 53, 112), rgba(229, 236, 241), rgba(31, 24, 42), dark ghost, gen3
+Mawile, 303, rgba(98, 96, 96), rgba(245, 221, 155), rgba(52, 51, 51), rgba(151, 106, 118), rgba(166, 152, 108), steel fairy, gen3
+Aron, 304, rgba(217, 217, 217), rgba(14, 15, 16), rgba(85, 90, 93), rgba(166, 166, 166), rgba(54, 69, 78), steel rock, gen3
+Lairon, 305, rgba(227, 226, 227), rgba(155, 153, 155), rgba(96, 96, 96), rgba(27, 27, 27), rgba(15, 15, 15), steel rock, gen3
+Aggron, 306, rgba(89, 91, 95), rgba(149, 149, 153), rgba(231, 231, 232), rgba(44, 45, 48), rgba(14, 14, 14), steel rock, gen3
+Meditite, 307, rgba(225, 225, 226), rgba(144, 207, 239), rgba(168, 165, 168), rgba(87, 177, 214), rgba(95, 96, 99), fighting psychic, gen3
+Medicham, 308, rgba(222, 119, 144), rgba(217, 217, 217), rgba(197, 86, 120), rgba(165, 88, 103), rgba(230, 147, 166), fighting psychic, gen3
+Electrike, 309, rgba(169, 205, 161), rgba(149, 182, 140), rgba(93, 104, 83), rgba(237, 207, 124), rgba(235, 224, 160), electric, gen3
+Manectric, 310, rgba(224, 212, 154), rgba(134, 179, 200), rgba(91, 148, 177), rgba(195, 186, 139), rgba(96, 104, 95), electric, gen3
+Plusle, 311, rgba(253, 243, 201), rgba(217, 94, 102), rgba(236, 226, 179), rgba(230, 148, 151), rgba(159, 90, 94), electric, gen3
+Minun, 312, rgba(253, 243, 198), rgba(109, 185, 227), rgba(236, 226, 178), rgba(158, 207, 237), rgba(118, 192, 234), electric, gen3
+Volbeat, 313, rgba(84, 83, 83), rgba(166, 177, 203), rgba(219, 94, 91), rgba(219, 221, 227), rgba(186, 196, 224), bug, gen3
+Illumise, 314, rgba(89, 88, 89), rgba(157, 206, 226), rgba(172, 142, 182), rgba(213, 233, 242), rgba(202, 173, 204), bug, gen3
+Roselia, 315, rgba(78, 166, 216), rgba(103, 173, 108), rgba(231, 151, 156), rgba(221, 236, 196), rgba(155, 203, 153), grass poison, gen3
+Gulpin, 316, rgba(163, 200, 163), rgba(133, 176, 126), rgba(137, 181, 133), rgba(245, 215, 119), rgba(246, 225, 157), poison, gen3
+Swalot, 317, rgba(140, 123, 174), rgba(172, 156, 197), rgba(46, 45, 46), rgba(151, 134, 183), rgba(91, 84, 97), poison, gen3
+Carvanha, 318, rgba(233, 206, 133), rgba(173, 99, 101), rgba(199, 176, 123), rgba(31, 66, 118), rgba(21, 94, 155), water dark, gen3
+Sharpedo, 319, rgba(5, 75, 115), rgba(221, 219, 232), rgba(9, 96, 142), rgba(149, 79, 104), rgba(6, 53, 81), water dark, gen3
+Wailmer, 320, rgba(249, 228, 182), rgba(35, 105, 155), rgba(246, 239, 217), rgba(82, 141, 178), rgba(113, 165, 195), water, gen3
+Wailord, 321, rgba(165, 161, 158), rgba(199, 194, 189), rgba(43, 118, 160), rgba(216, 211, 207), rgba(45, 130, 175), water, gen3
+Numel, 322, rgba(249, 219, 147), rgba(248, 239, 213), rgba(145, 174, 139), rgba(104, 101, 83), rgba(151, 203, 164), fire ground, gen3
+Camerupt, 323, rgba(218, 144, 121), rgba(214, 169, 152), rgba(174, 165, 155), rgba(166, 109, 88), rgba(198, 118, 87), fire ground, gen3
+Torkoal, 324, rgba(206, 178, 151), rgba(217, 200, 175), rgba(234, 229, 217), rgba(221, 148, 109), rgba(108, 105, 104), fire, gen3
+Spoink, 325, rgba(162, 161, 162), rgba(105, 102, 107), rgba(238, 169, 177), rgba(246, 215, 217), rgba(35, 34, 35), psychic, gen3
+Grumpig, 326, rgba(97, 95, 96), rgba(208, 177, 205), rgba(219, 163, 172), rgba(226, 202, 219), rgba(159, 140, 152), psychic, gen3
+Spinda, 327, rgba(234, 224, 210), rgba(211, 105, 103), rgba(13, 9, 9), rgba(212, 199, 181), rgba(211, 175, 163), normal, gen3
+Trapinch, 328, rgba(230, 150, 114), rgba(243, 171, 140), rgba(158, 105, 81), rgba(213, 213, 218), rgba(108, 72, 56), ground, gen3
+Vibrava, 329, rgba(96, 177, 107), rgba(92, 97, 91), rgba(46, 49, 47), rgba(221, 220, 154), rgba(146, 150, 134), ground dragon, gen3
+Flygon, 330, rgba(177, 209, 152), rgba(199, 224, 174), rgba(115, 153, 112), rgba(153, 175, 138), rgba(233, 132, 139), ground dragon, gen3
+Cacnea, 331, rgba(181, 209, 158), rgba(104, 144, 108), rgba(141, 174, 112), rgba(214, 222, 165), rgba(41, 43, 41), grass, gen3
+Cacturne, 332, rgba(199, 223, 182), rgba(172, 198, 151), rgba(79, 109, 80), rgba(151, 182, 141), rgba(101, 143, 103), grass dark, gen3
+Swablu, 333, rgba(244, 248, 251), rgba(146, 206, 239), rgba(102, 184, 224), rgba(97, 144, 167), rgba(114, 194, 235), normal flying, gen3
+Altaria, 334, rgba(239, 242, 245), rgba(148, 208, 237), rgba(84, 178, 215), rgba(99, 146, 168), rgba(13, 22, 25), dragon flying, gen3
+Zangoose, 335, rgba(236, 238, 245), rgba(219, 91, 105), rgba(157, 156, 160), rgba(165, 84, 95), rgba(99, 93, 95), normal, gen3
+Seviper, 336, rgba(80, 97, 116), rgba(240, 204, 119), rgba(232, 148, 138), rgba(105, 118, 134), rgba(181, 167, 203), poison, gen3
+Lunatone, 337, rgba(199, 185, 144), rgba(219, 208, 167), rgba(21, 21, 20), rgba(183, 173, 138), rgba(239, 230, 198), rock psychic, gen3
+Solrock, 338, rgba(249, 225, 147), rgba(220, 167, 113), rgba(232, 200, 122), rgba(175, 102, 59), rgba(216, 119, 65), rock psychic, gen3
+Barboach, 339, rgba(203, 209, 213), rgba(165, 169, 171), rgba(103, 174, 211), rgba(120, 197, 231), rgba(11, 13, 13), water ground, gen3
+Whiscash, 340, rgba(43, 58, 107), rgba(150, 206, 236), rgba(89, 104, 151), rgba(88, 93, 99), rgba(176, 155, 112), water ground, gen3
+Corphish, 341, rgba(223, 112, 80), rgba(234, 225, 212), rgba(211, 196, 178), rgba(238, 134, 96), rgba(238, 169, 143), water, gen3
+Crawdaunt, 342, rgba(206, 101, 91), rgba(176, 81, 75), rgba(168, 67, 62), rgba(200, 182, 166), rgba(227, 207, 160), water dark, gen3
+Baltoy, 343, rgba(216, 206, 163), rgba(152, 141, 117), rgba(183, 174, 140), rgba(161, 95, 94), rgba(209, 173, 142), ground psychic, gen3
+Claydol, 344, rgba(53, 53, 53), rgba(86, 84, 84), rgba(232, 153, 153), rgba(243, 240, 241), rgba(201, 185, 195), ground psychic, gen3
+Lileep, 345, rgba(225, 168, 168), rgba(246, 202, 183), rgba(178, 169, 204), rgba(156, 137, 177), rgba(138, 118, 173), rock grass, gen3
+Cradily, 346, rgba(161, 204, 160), rgba(221, 163, 169), rgba(142, 179, 135), rgba(234, 219, 205), rgba(246, 221, 155), rock grass, gen3
+Anorith, 347, rgba(96, 97, 96), rgba(149, 161, 150), rgba(231, 234, 238), rgba(224, 112, 118), rgba(37, 37, 36), rock bug, gen3
+Armaldo, 348, rgba(113, 145, 181), rgba(84, 87, 89), rgba(147, 175, 209), rgba(233, 233, 229), rgba(240, 215, 147), rock bug, gen3
+Feebas, 349, rgba(219, 200, 159), rgba(174, 151, 113), rgba(110, 149, 175), rgba(213, 173, 146), rgba(172, 195, 207), water, gen3
+Milotic, 350, rgba(251, 238, 202), rgba(231, 216, 180), rgba(221, 111, 118), rgba(230, 152, 153), rgba(157, 93, 95), water, gen3
+Castform, 351, rgba(220, 220, 224), rgba(188, 187, 196), rgba(160, 160, 164), rgba(94, 94, 96), rgba(25, 25, 26), normal, gen3
+Kecleon, 352, rgba(172, 201, 115), rgba(227, 222, 164), rgba(153, 168, 97), rgba(185, 208, 143), rgba(108, 106, 77), normal, gen3
+Shuppet, 353, rgba(124, 129, 167), rgba(103, 107, 139), rgba(133, 138, 176), rgba(88, 93, 120), rgba(11, 12, 15), ghost, gen3
+Banette, 354, rgba(148, 147, 147), rgba(100, 98, 101), rgba(40, 39, 39), rgba(6, 5, 5), rgba(237, 202, 112), ghost, gen3
+Duskull, 355, rgba(153, 156, 150), rgba(232, 229, 216), rgba(109, 114, 109), rgba(122, 129, 124), rgba(30, 30, 29), ghost, gen3
+Dusclops, 356, rgba(163, 160, 158), rgba(219, 215, 212), rgba(104, 102, 101), rgba(198, 183, 177), rgba(199, 194, 188), ghost, gen3
+Tropius, 357, rgba(101, 159, 108), rgba(177, 160, 138), rgba(87, 108, 82), rgba(166, 143, 122), rgba(201, 183, 168), grass flying, gen3
+Chimecho, 358, rgba(218, 233, 244), rgba(189, 115, 131), rgba(195, 116, 131), rgba(229, 208, 154), rgba(156, 162, 167), psychic, gen3
+Absol, 359, rgba(236, 238, 243), rgba(94, 109, 143), rgba(152, 156, 167), rgba(82, 91, 112), rgba(119, 135, 170), dark, gen3
+Wynaut, 360, rgba(124, 199, 206), rgba(155, 210, 218), rgba(99, 170, 176), rgba(44, 46, 46), rgba(164, 81, 82), psychic, gen3
+Snorunt, 361, rgba(242, 217, 155), rgba(48, 48, 48), rgba(86, 85, 82), rgba(233, 149, 104), rgba(246, 246, 242), ice, gen3
+Glalie, 362, rgba(215, 219, 232), rgba(13, 13, 13), rgba(93, 93, 95), rgba(153, 155, 163), rgba(163, 184, 203), ice, gen3
+Spheal, 363, rgba(247, 240, 224), rgba(147, 172, 214), rgba(104, 142, 200), rgba(235, 221, 185), rgba(80, 118, 173), ice water, gen3
+Sealeo, 364, rgba(243, 236, 225), rgba(220, 203, 181), rgba(119, 196, 235), rgba(85, 179, 222), rgba(51, 163, 208), ice water, gen3
+Walrein, 365, rgba(73, 148, 181), rgba(118, 172, 199), rgba(185, 211, 234), rgba(218, 230, 239), rgba(60, 141, 177), ice water, gen3
+Clamperl, 366, rgba(4, 5, 5), rgba(173, 211, 238), rgba(138, 186, 218), rgba(227, 224, 233), rgba(240, 172, 176), water, gen3
+Huntail, 367, rgba(229, 164, 112), rgba(153, 205, 233), rgba(117, 179, 210), rgba(210, 168, 165), rgba(236, 236, 238), water, gen3
+Gorebyss, 368, rgba(237, 184, 204), rgba(244, 209, 221), rgba(173, 141, 172), rgba(217, 151, 178), rgba(34, 26, 30), water, gen3
+Relicanth, 369, rgba(101, 93, 91), rgba(175, 156, 139), rgba(194, 176, 158), rgba(47, 44, 43), rgba(133, 122, 116), water rock, gen3
+Luvdisc, 370, rgba(231, 148, 155), rgba(247, 224, 224), rgba(24, 18, 19), rgba(156, 104, 108), rgba(0, 0, 0), water, gen3
+Bagon, 371, rgba(145, 188, 209), rgba(213, 213, 213), rgba(117, 163, 184), rgba(167, 169, 169), rgba(158, 198, 217), dragon, gen3
+Shelgon, 372, rgba(228, 228, 229), rgba(161, 160, 163), rgba(101, 99, 100), rgba(188, 186, 193), rgba(42, 41, 41), dragon, gen3
+Salamence, 373, rgba(164, 77, 89), rgba(107, 182, 204), rgba(79, 154, 176), rgba(224, 224, 225), rgba(17, 115, 146), dragon flying, gen3
+Beldum, 374, rgba(112, 156, 181), rgba(150, 183, 202), rgba(10, 12, 14), rgba(84, 118, 139), rgba(123, 170, 193), steel psychic, gen3
+Metang, 375, rgba(48, 80, 96), rgba(104, 150, 171), rgba(71, 116, 139), rgba(224, 224, 225), rgba(83, 101, 110), steel psychic, gen3
+Metagross, 376, rgba(103, 147, 169), rgba(54, 81, 99), rgba(142, 182, 201), rgba(77, 116, 138), rgba(80, 100, 111), steel psychic, gen3
+Regirock, 377, rgba(219, 212, 206), rgba(163, 143, 146), rgba(200, 179, 172), rgba(152, 110, 100), rgba(208, 145, 111), rock, gen3
+Regice, 378, rgba(159, 207, 230), rgba(213, 233, 243), rgba(106, 171, 199), rgba(101, 146, 165), rgba(81, 103, 110), ice, gen3
+Registeel, 379, rgba(155, 152, 159), rgba(99, 98, 99), rgba(213, 213, 214), rgba(43, 43, 43), rgba(14, 14, 14), steel, gen3
+Latias, 380, rgba(216, 224, 237), rgba(170, 99, 112), rgba(208, 110, 109), rgba(223, 150, 147), rgba(157, 155, 162), dragon psychic, gen3
+Latios, 381, rgba(45, 114, 165), rgba(93, 158, 209), rgba(171, 169, 171), rgba(209, 209, 209), rgba(134, 183, 220), dragon psychic, gen3
+Kyogre, 382, rgba(25, 95, 165), rgba(218, 227, 239), rgba(91, 73, 109), rgba(162, 56, 74), rgba(35, 71, 119), water, gen3
+Groudon, 383, rgba(166, 44, 32), rgba(202, 49, 35), rgba(107, 93, 87), rgba(26, 16, 23), rgba(220, 218, 227), ground, gen3
+Rayquaza, 384, rgba(49, 106, 75), rgba(58, 134, 91), rgba(86, 143, 111), rgba(136, 181, 157), rgba(112, 167, 139), dragon flying, gen3
+Jirachi, 385, rgba(248, 232, 154), rgba(241, 240, 229), rgba(89, 189, 198), rgba(97, 194, 202), rgba(101, 105, 93), steel psychic, gen3
+Deoxys-normal, 386, rgba(224, 140, 98), rgba(168, 103, 75), rgba(98, 155, 167), rgba(92, 96, 97), rgba(232, 177, 148), psychic, gen3
+Turtwig, 387, rgba(188, 210, 149), rgba(162, 157, 106), rgba(206, 221, 164), rgba(91, 164, 100), rgba(41, 40, 37), grass, gen4
+Grotle, 388, rgba(151, 166, 104), rgba(98, 150, 106), rgba(77, 113, 78), rgba(206, 178, 82), rgba(100, 91, 47), grass, gen4
+Torterra, 389, rgba(87, 147, 92), rgba(87, 96, 58), rgba(88, 106, 80), rgba(202, 201, 200), rgba(141, 109, 74), grass ground, gen4
+Chimchar, 390, rgba(242, 220, 161), rgba(212, 123, 43), rgba(157, 96, 42), rgba(232, 157, 80), rgba(163, 149, 111), fire, gen4
+Monferno, 391, rgba(229, 153, 76), rgba(160, 110, 53), rgba(174, 153, 137), rgba(209, 183, 161), rgba(107, 95, 85), fire fighting, gen4
+Infernape, 392, rgba(214, 111, 87), rgba(165, 103, 77), rgba(237, 207, 93), rgba(162, 163, 164), rgba(240, 238, 235), fire fighting, gen4
+Piplup, 393, rgba(75, 137, 184), rgba(162, 209, 217), rgba(245, 245, 245), rgba(95, 156, 199), rgba(59, 107, 155), water, gen4
+Prinplup, 394, rgba(59, 93, 139), rgba(162, 207, 212), rgba(137, 165, 168), rgba(39, 53, 84), rgba(78, 110, 145), water, gen4
+Empoleon, 395, rgba(39, 43, 45), rgba(74, 113, 162), rgba(236, 236, 233), rgba(77, 82, 86), rgba(104, 155, 210), water steel, gen4
+Starly, 396, rgba(90, 83, 81), rgba(44, 41, 39), rgba(213, 212, 211), rgba(139, 124, 125), rgba(71, 58, 49), normal flying, gen4
+Staravia, 397, rgba(94, 87, 85), rgba(149, 139, 142), rgba(48, 45, 43), rgba(219, 218, 216), rgba(70, 61, 55), normal flying, gen4
+Staraptor, 398, rgba(92, 84, 82), rgba(137, 116, 112), rgba(221, 219, 216), rgba(51, 48, 46), rgba(163, 156, 155), normal flying, gen4
+Bidoof, 399, rgba(180, 138, 92), rgba(162, 119, 72), rgba(140, 102, 60), rgba(97, 75, 46), rgba(97, 86, 79), normal, gen4
+Bibarel, 400, rgba(184, 139, 87), rgba(92, 80, 72), rgba(194, 142, 87), rgba(59, 51, 47), rgba(243, 222, 164), normal water, gen4
+Kricketot, 401, rgba(95, 95, 96), rgba(235, 214, 161), rgba(182, 91, 71), rgba(214, 103, 82), rgba(149, 74, 48), bug, gen4
+Kricketune, 402, rgba(218, 107, 85), rgba(90, 89, 89), rgba(170, 91, 72), rgba(152, 75, 55), rgba(47, 46, 46), bug, gen4
+Shinx, 403, rgba(124, 182, 201), rgba(107, 149, 162), rgba(41, 42, 42), rgba(75, 88, 92), rgba(228, 175, 53), electric, gen4
+Luxio, 404, rgba(76, 79, 80), rgba(49, 48, 48), rgba(109, 151, 166), rgba(129, 188, 204), rgba(125, 182, 199), electric, gen4
+Luxray, 405, rgba(75, 76, 77), rgba(50, 49, 50), rgba(109, 151, 165), rgba(16, 17, 15), rgba(27, 28, 27), electric, gen4
+Budew, 406, rgba(139, 200, 104), rgba(102, 147, 77), rgba(227, 231, 118), rgba(219, 231, 164), rgba(183, 217, 153), grass poison, gen4
+Roserade, 407, rgba(230, 236, 246), rgba(94, 151, 116), rgba(83, 107, 92), rgba(166, 214, 178), rgba(112, 168, 136), grass poison, gen4
+Cranidos, 408, rgba(108, 158, 198), rgba(96, 101, 110), rgba(140, 148, 158), rgba(99, 123, 147), rgba(105, 134, 161), rock, gen4
+Rampardos, 409, rgba(94, 94, 96), rgba(75, 115, 154), rgba(85, 143, 195), rgba(160, 159, 159), rgba(49, 49, 50), rock, gen4
+Shieldon, 410, rgba(107, 105, 105), rgba(246, 208, 141), rgba(158, 156, 155), rgba(201, 168, 116), rgba(202, 202, 201), rock steel, gen4
+Bastiodon, 411, rgba(97, 96, 97), rgba(141, 141, 144), rgba(219, 219, 219), rgba(51, 51, 51), rgba(246, 210, 141), rock steel, gen4
+Burmy, 412, rgba(99, 162, 74), rgba(103, 110, 102), rgba(70, 105, 57), rgba(143, 177, 109), rgba(52, 81, 43), bug, gen4
+Wormadam-plant, 413, rgba(94, 155, 86), rgba(103, 111, 103), rgba(230, 230, 228), rgba(71, 107, 57), rgba(52, 106, 79), bug grass, gen4
+Mothim, 414, rgba(246, 211, 119), rgba(165, 89, 48), rgba(224, 152, 86), rgba(177, 154, 91), rgba(89, 88, 86), bug flying, gen4
+Combee, 415, rgba(234, 168, 79), rgba(200, 213, 227), rgba(249, 197, 78), rgba(199, 156, 61), rgba(150, 104, 50), bug flying, gen4
+Vespiquen, 416, rgba(137, 97, 57), rgba(79, 78, 78), rgba(221, 171, 74), rgba(53, 52, 51), rgba(248, 195, 79), bug flying, gen4
+Pachirisu, 417, rgba(232, 244, 248), rgba(118, 205, 217), rgba(172, 204, 218), rgba(107, 183, 202), rgba(90, 104, 109), electric, gen4
+Buizel, 418, rgba(232, 144, 80), rgba(169, 99, 58), rgba(179, 156, 107), rgba(245, 230, 170), rgba(168, 111, 73), water, gen4
+Floatzel, 419, rgba(245, 223, 168), rgba(178, 108, 69), rgba(231, 137, 91), rgba(204, 118, 75), rgba(200, 165, 56), water, gen4
+Cherubi, 420, rgba(77, 165, 82), rgba(226, 102, 123), rgba(178, 84, 102), rgba(232, 114, 132), rgba(234, 137, 147), grass, gen4
+Cherrim, 421, rgba(98, 73, 110), rgba(74, 168, 77), rgba(117, 92, 141), rgba(132, 111, 151), rgba(166, 91, 106), grass, gen4
+Shellos, 422, rgba(225, 151, 182), rgba(235, 234, 233), rgba(176, 118, 143), rgba(220, 111, 160), rgba(183, 178, 178), water, gen4
+Gastrodon, 423, rgba(235, 160, 193), rgba(152, 113, 70), rgba(221, 150, 178), rgba(182, 120, 144), rgba(112, 86, 48), water ground, gen4
+Ambipom, 424, rgba(245, 224, 168), rgba(142, 113, 163), rgba(98, 80, 108), rgba(218, 168, 139), rgba(170, 147, 173), normal, gen4
+Drifloon, 425, rgba(162, 140, 178), rgba(245, 242, 239), rgba(135, 112, 146), rgba(234, 203, 101), rgba(99, 88, 107), ghost flying, gen4
+Drifblim, 426, rgba(136, 116, 154), rgba(157, 145, 165), rgba(232, 227, 231), rgba(235, 205, 110), rgba(101, 88, 108), ghost flying, gen4
+Buneary, 427, rgba(160, 112, 89), rgba(243, 222, 168), rgba(200, 174, 139), rgba(176, 139, 112), rgba(115, 91, 73), normal, gen4
+Lopunny, 428, rgba(244, 222, 167), rgba(157, 110, 86), rgba(198, 178, 137), rgba(165, 142, 113), rgba(101, 73, 57), normal, gen4
+Mismagius, 429, rgba(137, 107, 156), rgba(97, 76, 110), rgba(77, 61, 92), rgba(118, 93, 136), rgba(204, 138, 185), ghost, gen4
+Honchkrow, 430, rgba(46, 76, 102), rgba(35, 53, 73), rgba(237, 234, 230), rgba(142, 46, 53), rgba(40, 43, 51), dark flying, gen4
+Glameow, 431, rgba(144, 154, 169), rgba(89, 94, 106), rgba(227, 228, 228), rgba(111, 122, 139), rgba(119, 131, 149), normal, gen4
+Purugly, 432, rgba(157, 152, 174), rgba(240, 237, 234), rgba(92, 96, 107), rgba(119, 122, 135), rgba(124, 130, 143), normal, gen4
+Chingling, 433, rgba(234, 209, 94), rgba(226, 102, 96), rgba(215, 226, 239), rgba(184, 162, 70), rgba(174, 79, 74), psychic, gen4
+Stunky, 434, rgba(98, 76, 106), rgba(246, 231, 200), rgba(76, 57, 79), rgba(228, 213, 183), rgba(49, 37, 53), poison dark, gen4
+Skuntank, 435, rgba(98, 76, 107), rgba(248, 232, 200), rgba(75, 57, 81), rgba(163, 156, 144), rgba(221, 207, 178), poison dark, gen4
+Bronzor, 436, rgba(77, 151, 168), rgba(50, 91, 106), rgba(58, 109, 129), rgba(71, 123, 138), rgba(26, 40, 44), steel psychic, gen4
+Bronzong, 437, rgba(102, 158, 156), rgba(77, 112, 113), rgba(40, 43, 45), rgba(117, 194, 186), rgba(145, 206, 195), steel psychic, gen4
+Bonsly, 438, rgba(106, 102, 84), rgba(176, 142, 105), rgba(83, 163, 115), rgba(142, 115, 90), rgba(171, 204, 146), rock, gen4
+Mime-jr, 439, rgba(244, 218, 229), rgba(90, 91, 103), rgba(165, 146, 152), rgba(113, 130, 159), rgba(103, 116, 140), psychic fairy, gen4
+Happiny, 440, rgba(244, 218, 219), rgba(207, 164, 171), rgba(179, 152, 156), rgba(109, 90, 93), rgba(148, 110, 116), normal, gen4
+Chatot, 441, rgba(81, 83, 82), rgba(46, 46, 45), rgba(166, 172, 174), rgba(217, 228, 231), rgba(61, 138, 186), normal flying, gen4
+Spiritomb, 442, rgba(214, 160, 180), rgba(160, 113, 135), rgba(162, 211, 146), rgba(195, 125, 166), rgba(116, 196, 98), ghost dark, gen4
+Gible, 443, rgba(108, 144, 161), rgba(97, 121, 133), rgba(84, 94, 103), rgba(36, 39, 41), rgba(169, 77, 54), dragon ground, gen4
+Gabite, 444, rgba(103, 114, 155), rgba(78, 83, 110), rgba(143, 144, 172), rgba(216, 105, 83), rgba(119, 132, 174), dragon ground, gen4
+Garchomp, 445, rgba(99, 109, 144), rgba(80, 83, 107), rgba(54, 57, 79), rgba(215, 103, 81), rgba(61, 64, 90), dragon ground, gen4
+Munchlax, 446, rgba(96, 136, 159), rgba(78, 97, 105), rgba(137, 152, 159), rgba(242, 220, 184), rgba(84, 119, 138), normal, gen4
+Riolu, 447, rgba(80, 86, 91), rgba(106, 155, 175), rgba(43, 45, 46), rgba(116, 172, 194), rgba(81, 114, 133), fighting, gen4
+Lucario, 448, rgba(92, 95, 96), rgba(108, 156, 175), rgba(143, 173, 181), rgba(51, 52, 54), rgba(236, 216, 162), fighting steel, gen4
+Hippopotas, 449, rgba(171, 148, 97), rgba(112, 80, 44), rgba(208, 187, 120), rgba(215, 194, 124), rgba(222, 203, 144), ground, gen4
+Hippowdon, 450, rgba(92, 87, 87), rgba(171, 153, 95), rgba(223, 210, 150), rgba(144, 107, 95), rgba(162, 157, 144), ground, gen4
+Skorupi, 451, rgba(106, 109, 147), rgba(80, 78, 110), rgba(144, 154, 198), rgba(235, 232, 230), rgba(154, 155, 173), poison bug, gen4
+Drapion, 452, rgba(145, 103, 149), rgba(174, 140, 176), rgba(80, 51, 92), rgba(100, 79, 112), rgba(111, 90, 137), poison dark, gen4
+Croagunk, 453, rgba(86, 110, 155), rgba(45, 44, 44), rgba(98, 132, 188), rgba(107, 141, 195), rgba(78, 80, 85), poison fighting, gen4
+Toxicroak, 454, rgba(106, 151, 195), rgba(98, 141, 184), rgba(85, 116, 150), rgba(44, 44, 44), rgba(214, 102, 93), poison fighting, gen4
+Carnivine, 455, rgba(145, 171, 111), rgba(182, 209, 139), rgba(109, 154, 86), rgba(202, 219, 160), rgba(96, 112, 74), grass, gen4
+Finneon, 456, rgba(167, 219, 217), rgba(56, 71, 78), rgba(205, 113, 152), rgba(84, 97, 101), rgba(145, 174, 175), water, gen4
+Lumineon, 457, rgba(170, 220, 217), rgba(57, 72, 79), rgba(79, 94, 99), rgba(42, 51, 56), rgba(137, 175, 173), water, gen4
+Mantyke, 458, rgba(165, 210, 226), rgba(42, 113, 178), rgba(134, 165, 180), rgba(95, 154, 200), rgba(114, 149, 167), water flying, gen4
+Snover, 459, rgba(244, 245, 246), rgba(103, 109, 103), rgba(162, 153, 142), rgba(109, 153, 146), rgba(92, 128, 125), grass ice, gen4
+Abomasnow, 460, rgba(246, 245, 247), rgba(88, 110, 111), rgba(109, 152, 144), rgba(185, 182, 197), rgba(150, 161, 164), grass ice, gen4
+Weavile, 461, rgba(208, 99, 105), rgba(89, 89, 105), rgba(110, 117, 151), rgba(146, 146, 163), rgba(159, 57, 79), dark ice, gen4
+Magnezone, 462, rgba(87, 100, 114), rgba(52, 53, 55), rgba(156, 163, 167), rgba(91, 111, 131), rgba(232, 231, 226), electric steel, gen4
+Lickilicky, 463, rgba(222, 140, 153), rgba(166, 105, 118), rgba(241, 238, 233), rgba(184, 115, 131), rgba(200, 122, 141), normal, gen4
+Rhyperior, 464, rgba(100, 89, 92), rgba(156, 144, 147), rgba(161, 86, 48), rgba(214, 112, 50), rgba(142, 126, 129), ground rock, gen4
+Tangrowth, 465, rgba(108, 145, 177), rgba(93, 119, 144), rgba(77, 89, 102), rgba(131, 163, 187), rgba(58, 73, 88), grass, gen4
+Electivire, 466, rgba(45, 44, 44), rgba(237, 207, 135), rgba(172, 150, 100), rgba(93, 89, 82), rgba(205, 179, 116), electric, gen4
+Magmortar, 467, rgba(218, 90, 55), rgba(232, 179, 78), rgba(161, 84, 50), rgba(220, 115, 90), rgba(248, 198, 92), fire, gen4
+Togekiss, 468, rgba(214, 232, 228), rgba(167, 177, 175), rgba(184, 198, 196), rgba(106, 110, 109), rgba(49, 155, 213), fairy flying, gen4
+Yanmega, 469, rgba(88, 99, 72), rgba(243, 243, 237), rgba(79, 91, 54), rgba(225, 103, 96), rgba(50, 49, 47), bug flying, gen4
+Leafeon, 470, rgba(247, 226, 172), rgba(156, 211, 173), rgba(119, 200, 157), rgba(200, 181, 139), rgba(153, 145, 114), grass, gen4
+Glaceon, 471, rgba(181, 223, 220), rgba(84, 147, 154), rgba(48, 97, 104), rgba(146, 176, 174), rgba(59, 132, 141), ice, gen4
+Gliscor, 472, rgba(83, 83, 88), rgba(160, 169, 200), rgba(136, 139, 164), rgba(52, 52, 55), rgba(108, 114, 137), ground flying, gen4
+Mamoswine, 473, rgba(117, 83, 49), rgba(155, 112, 74), rgba(236, 228, 220), rgba(207, 185, 161), rgba(179, 167, 162), ice ground, gen4
+Porygon-z, 474, rgba(100, 172, 198), rgba(78, 145, 174), rgba(211, 90, 109), rgba(170, 74, 88), rgba(72, 122, 147), normal, gen4
+Gallade, 475, rgba(236, 232, 228), rgba(72, 119, 79), rgba(73, 148, 96), rgba(168, 165, 163), rgba(194, 187, 185), psychic fighting, gen4
+Probopass, 476, rgba(42, 41, 41), rgba(199, 113, 110), rgba(84, 79, 94), rgba(101, 138, 172), rgba(159, 92, 90), rock steel, gen4
+Dusknoir, 477, rgba(98, 95, 89), rgba(158, 159, 151), rgba(44, 43, 41), rgba(154, 139, 101), rgba(208, 177, 83), ghost, gen4
+Froslass, 478, rgba(236, 233, 229), rgba(157, 208, 220), rgba(155, 162, 165), rgba(99, 99, 107), rgba(115, 146, 155), ice ghost, gen4
+Rotom, 479, rgba(150, 213, 212), rgba(232, 245, 244), rgba(239, 136, 97), rgba(206, 113, 76), rgba(118, 182, 199), electric ghost, gen4
+Uxie, 480, rgba(140, 159, 178), rgba(244, 214, 139), rgba(183, 212, 237), rgba(163, 147, 96), rgba(89, 96, 97), psychic, gen4
+Mesprit, 481, rgba(228, 146, 179), rgba(178, 208, 233), rgba(141, 159, 176), rgba(166, 111, 137), rgba(157, 184, 207), psychic, gen4
+Azelf, 482, rgba(144, 161, 178), rgba(106, 154, 172), rgba(177, 208, 231), rgba(103, 175, 196), rgba(149, 181, 197), psychic, gen4
+Dialga, 483, rgba(87, 106, 137), rgba(77, 88, 115), rgba(208, 218, 227), rgba(149, 156, 170), rgba(47, 51, 82), steel dragon, gen4
+Palkia, 484, rgba(224, 218, 222), rgba(159, 155, 165), rgba(98, 93, 108), rgba(147, 103, 147), rgba(183, 183, 200), water dragon, gen4
+Heatran, 485, rgba(162, 163, 164), rgba(100, 51, 33), rgba(98, 97, 99), rgba(52, 46, 45), rgba(145, 82, 49), fire steel, gen4
+Regigigas, 486, rgba(227, 229, 234), rgba(169, 170, 174), rgba(201, 172, 96), rgba(39, 39, 39), rgba(90, 102, 92), normal, gen4
+Giratina-altered, 487, rgba(84, 83, 83), rgba(51, 51, 53), rgba(162, 162, 164), rgba(159, 91, 81), rgba(169, 147, 84), ghost dragon, gen4
+Cresselia, 488, rgba(214, 161, 176), rgba(238, 214, 212), rgba(152, 180, 209), rgba(245, 207, 148), rgba(200, 165, 118), psychic, gen4
+Phione, 489, rgba(97, 155, 168), rgba(107, 186, 204), rgba(138, 201, 210), rgba(114, 194, 211), rgba(51, 84, 95), water, gen4
+Manaphy, 490, rgba(107, 197, 216), rgba(81, 147, 161), rgba(89, 188, 211), rgba(144, 208, 217), rgba(52, 96, 106), water, gen4
+Darkrai, 491, rgba(50, 49, 50), rgba(82, 80, 82), rgba(222, 222, 219), rgba(171, 169, 169), rgba(18, 18, 17), dark, gen4
+Shaymin-land, 492, rgba(218, 151, 152), rgba(144, 179, 106), rgba(157, 194, 111), rgba(91, 155, 81), rgba(229, 231, 237), grass, gen4
+Arceus, 493, rgba(220, 219, 218), rgba(155, 161, 173), rgba(90, 92, 93), rgba(95, 87, 46), rgba(164, 148, 83), normal, gen4
+Victini, 494, rgba(248, 229, 171), rgba(176, 157, 118), rgba(239, 120, 76), rgba(245, 151, 110), rgba(110, 96, 83), psychic fire, gen5
+Snivy, 495, rgba(88, 155, 88), rgba(233, 234, 181), rgba(46, 114, 105), rgba(173, 168, 132), rgba(246, 215, 85), grass, gen5
+Servine, 496, rgba(90, 168, 92), rgba(235, 237, 207), rgba(170, 167, 144), rgba(241, 211, 77), rgba(145, 197, 134), grass, gen5
+Serperior, 497, rgba(6, 141, 82), rgba(148, 205, 171), rgba(98, 148, 113), rgba(16, 112, 69), rgba(238, 208, 79), grass, gen5
+Tepig, 498, rgba(234, 145, 95), rgba(69, 59, 56), rgba(45, 39, 37), rgba(171, 104, 78), rgba(102, 79, 73), fire, gen5
+Pignite, 499, rgba(230, 134, 78), rgba(92, 76, 77), rgba(157, 94, 58), rgba(75, 56, 52), rgba(244, 206, 93), fire fighting, gen5
+Emboar, 500, rgba(82, 79, 81), rgba(54, 52, 53), rgba(233, 156, 80), rgba(228, 106, 93), rgba(236, 199, 90), fire fighting, gen5
+Oshawott, 501, rgba(246, 244, 243), rgba(87, 159, 170), rgba(158, 177, 204), rgba(81, 108, 149), rgba(56, 79, 102), water, gen5
+Dewott, 502, rgba(144, 209, 219), rgba(75, 109, 151), rgba(81, 87, 89), rgba(108, 150, 154), rgba(170, 155, 116), water, gen5
+Samurott, 503, rgba(67, 112, 171), rgba(221, 208, 157), rgba(60, 101, 153), rgba(229, 233, 238), rgba(56, 80, 114), water, gen5
+Patrat, 504, rgba(177, 139, 99), rgba(216, 202, 186), rgba(140, 108, 79), rgba(165, 152, 141), rgba(49, 47, 46), normal, gen5
+Watchog, 505, rgba(101, 52, 47), rgba(134, 69, 57), rgba(252, 196, 67), rgba(240, 236, 231), rgba(215, 201, 185), normal, gen5
+Lillipup, 506, rgba(243, 213, 157), rgba(160, 111, 90), rgba(215, 150, 118), rgba(177, 147, 111), rgba(104, 86, 79), normal, gen5
+Herdier, 507, rgba(73, 78, 104), rgba(217, 150, 118), rgba(245, 223, 182), rgba(160, 111, 90), rgba(51, 56, 77), normal, gen5
+Stoutland, 508, rgba(81, 92, 96), rgba(241, 232, 213), rgba(242, 220, 180), rgba(176, 161, 142), rgba(143, 104, 76), normal, gen5
+Purrloin, 509, rgba(117, 95, 137), rgba(95, 80, 103), rgba(133, 110, 147), rgba(248, 245, 204), rgba(214, 113, 162), dark, gen5
+Liepard, 510, rgba(116, 94, 135), rgba(96, 78, 103), rgba(245, 204, 106), rgba(175, 144, 86), rgba(142, 111, 87), dark, gen5
+Pansage, 511, rgba(78, 166, 117), rgba(241, 212, 144), rgba(117, 185, 139), rgba(133, 202, 160), rgba(56, 106, 78), grass, gen5
+Simisage, 512, rgba(72, 174, 119), rgba(239, 210, 143), rgba(54, 111, 81), rgba(141, 204, 162), rgba(59, 144, 98), grass, gen5
+Pansear, 513, rgba(224, 116, 110), rgba(242, 213, 146), rgba(161, 90, 84), rgba(231, 160, 84), rgba(228, 141, 130), fire, gen5
+Simisear, 514, rgba(158, 88, 85), rgba(221, 114, 110), rgba(238, 211, 144), rgba(227, 165, 90), rgba(230, 153, 139), fire, gen5
+Panpour, 515, rgba(242, 213, 143), rgba(105, 197, 218), rgba(73, 188, 214), rgba(79, 147, 158), rgba(172, 148, 103), water, gen5
+Simipour, 516, rgba(71, 187, 213), rgba(241, 212, 144), rgba(84, 194, 220), rgba(171, 148, 103), rgba(80, 149, 161), water, gen5
+Munna, 517, rgba(0, 0, 0), rgba(181, 145, 167), rgba(220, 160, 172), rgba(148, 111, 144), rgba(102, 81, 92), psychic, gen5
+Musharna, 518, rgba(231, 149, 164), rgba(245, 210, 209), rgba(161, 150, 197), rgba(163, 141, 167), rgba(119, 106, 139), psychic, gen5
+Pidove, 519, rgba(213, 210, 207), rgba(163, 161, 161), rgba(45, 45, 45), rgba(109, 98, 98), rgba(212, 166, 163), normal flying, gen5
+Tranquill, 520, rgba(206, 209, 213), rgba(159, 159, 161), rgba(52, 51, 51), rgba(105, 100, 100), rgba(142, 112, 114), normal flying, gen5
+Unfezant, 521, rgba(84, 81, 84), rgba(149, 151, 156), rgba(51, 51, 52), rgba(58, 112, 83), rgba(207, 99, 121), normal flying, gen5
+Blitzle, 522, rgba(87, 85, 85), rgba(240, 236, 230), rgba(51, 50, 49), rgba(170, 163, 157), rgba(23, 23, 21), electric, gen5
+Zebstrika, 523, rgba(84, 81, 81), rgba(235, 237, 240), rgba(54, 52, 52), rgba(159, 154, 153), rgba(31, 31, 29), electric, gen5
+Roggenrola, 524, rgba(40, 50, 71), rgba(50, 69, 101), rgba(106, 81, 58), rgba(30, 33, 39), rgba(87, 93, 109), rock, gen5
+Boldore, 525, rgba(44, 52, 75), rgba(56, 69, 103), rgba(170, 86, 69), rgba(33, 35, 46), rgba(73, 85, 117), rock, gen5
+Gigalith, 526, rgba(73, 78, 105), rgba(38, 36, 48), rgba(226, 107, 100), rgba(158, 79, 74), rgba(49, 50, 70), rock, gen5
+Woobat, 527, rgba(55, 51, 51), rgba(171, 210, 232), rgba(132, 152, 162), rgba(95, 84, 84), rgba(205, 222, 229), psychic flying, gen5
+Swoobat, 528, rgba(76, 73, 75), rgba(49, 48, 48), rgba(134, 154, 166), rgba(168, 210, 237), rgba(74, 107, 143), psychic flying, gen5
+Drilbur, 529, rgba(90, 84, 87), rgba(244, 241, 236), rgba(163, 155, 151), rgba(111, 115, 140), rgba(50, 47, 47), ground, gen5
+Excadrill, 530, rgba(94, 83, 81), rgba(166, 167, 170), rgba(53, 46, 49), rgba(72, 60, 59), rgba(152, 87, 90), ground steel, gen5
+Audino, 531, rgba(232, 166, 168), rgba(245, 224, 185), rgba(185, 165, 141), rgba(251, 232, 204), rgba(186, 124, 131), normal, gen5
+Timburr, 532, rgba(185, 175, 157), rgba(199, 179, 161), rgba(75, 55, 40), rgba(141, 117, 107), rgba(100, 92, 88), fighting, gen5
+Gurdurr, 533, rgba(90, 43, 57), rgba(200, 169, 172), rgba(179, 169, 152), rgba(143, 131, 116), rgba(144, 107, 107), fighting, gen5
+Conkeldurr, 534, rgba(111, 101, 96), rgba(165, 164, 165), rgba(165, 141, 115), rgba(140, 99, 105), rgba(84, 70, 58), fighting, gen5
+Tympole, 535, rgba(238, 212, 169), rgba(42, 42, 42), rgba(89, 89, 89), rgba(95, 148, 167), rgba(114, 204, 241), water, gen5
+Palpitoad, 536, rgba(81, 80, 81), rgba(239, 213, 168), rgba(53, 53, 54), rgba(155, 213, 207), rgba(59, 106, 143), water ground, gen5
+Seismitoad, 537, rgba(61, 105, 140), rgba(83, 85, 85), rgba(98, 151, 151), rgba(50, 80, 105), rgba(149, 212, 206), water ground, gen5
+Throh, 538, rgba(220, 221, 214), rgba(92, 85, 84), rgba(161, 157, 150), rgba(162, 98, 97), rgba(57, 55, 56), fighting, gen5
+Sawk, 539, rgba(50, 49, 50), rgba(156, 210, 210), rgba(109, 146, 154), rgba(75, 111, 144), rgba(85, 96, 97), fighting, gen5
+Sewaddle, 540, rgba(113, 144, 64), rgba(248, 204, 111), rgba(149, 197, 75), rgba(160, 165, 79), rgba(177, 168, 163), bug grass, gen5
+Swadloon, 541, rgba(152, 198, 79), rgba(97, 142, 69), rgba(148, 177, 77), rgba(242, 221, 114), rgba(77, 107, 55), bug grass, gen5
+Leavanny, 542, rgba(103, 144, 72), rgba(151, 170, 82), rgba(150, 196, 83), rgba(241, 221, 115), rgba(85, 106, 55), bug grass, gen5
+Venipede, 543, rgba(176, 80, 102), rgba(195, 103, 119), rgba(80, 85, 81), rgba(46, 45, 47), rgba(85, 45, 52), bug poison, gen5
+Whirlipede, 544, rgba(97, 94, 101), rgba(154, 151, 173), rgba(122, 117, 132), rgba(38, 37, 37), rgba(154, 87, 98), bug poison, gen5
+Scolipede, 545, rgba(167, 80, 102), rgba(112, 58, 75), rgba(91, 80, 88), rgba(55, 56, 54), rgba(151, 95, 148), bug poison, gen5
+Cottonee, 546, rgba(223, 233, 224), rgba(158, 163, 152), rgba(89, 157, 102), rgba(96, 108, 94), rgba(105, 193, 124), grass fairy, gen5
+Whimsicott, 547, rgba(242, 238, 209), rgba(175, 165, 142), rgba(111, 98, 81), rgba(157, 133, 109), rgba(86, 152, 97), grass fairy, gen5
+Petilil, 548, rgba(208, 226, 150), rgba(89, 167, 103), rgba(236, 237, 240), rgba(151, 162, 106), rgba(163, 206, 151), grass, gen5
+Lilligant, 549, rgba(78, 149, 75), rgba(176, 213, 142), rgba(138, 155, 102), rgba(202, 221, 164), rgba(226, 147, 99), grass, gen5
+Basculin-red-striped, 550, rgba(95, 162, 108), rgba(81, 98, 82), rgba(223, 229, 224), rgba(155, 160, 149), rgba(61, 89, 69), water, gen5
+Sandile, 551, rgba(203, 166, 125), rgba(89, 81, 79), rgba(40, 38, 38), rgba(150, 114, 98), rgba(211, 175, 135), ground dark, gen5
+Krokorok, 552, rgba(90, 83, 80), rgba(214, 159, 145), rgba(145, 115, 97), rgba(49, 48, 49), rgba(196, 162, 125), ground dark, gen5
+Krookodile, 553, rgba(156, 95, 109), rgba(89, 77, 83), rgba(43, 41, 43), rgba(188, 206, 224), rgba(146, 152, 158), ground dark, gen5
+Darumaka, 554, rgba(195, 93, 97), rgba(159, 84, 83), rgba(227, 164, 114), rgba(245, 195, 117), rgba(237, 240, 244), fire, gen5
+Darmanitan-standard, 555, rgba(166, 83, 73), rgba(230, 228, 226), rgba(228, 155, 110), rgba(102, 54, 52), rgba(227, 105, 94), fire, gen5
+Maractus, 556, rgba(54, 101, 98), rgba(134, 198, 122), rgba(106, 150, 94), rgba(221, 139, 184), rgba(212, 115, 173), grass, gen5
+Dwebble, 557, rgba(101, 94, 94), rgba(232, 147, 98), rgba(146, 137, 136), rgba(42, 39, 38), rgba(160, 106, 80), bug rock, gen5
+Crustle, 558, rgba(153, 134, 119), rgba(49, 44, 42), rgba(101, 88, 80), rgba(73, 60, 52), rgba(156, 103, 83), bug rock, gen5
+Scraggy, 559, rgba(247, 199, 121), rgba(178, 151, 104), rgba(248, 228, 162), rgba(239, 241, 244), rgba(144, 108, 83), dark fighting, gen5
+Scrafty, 560, rgba(167, 99, 82), rgba(232, 156, 106), rgba(181, 142, 92), rgba(248, 199, 122), rgba(104, 100, 100), dark fighting, gen5
+Sigilyph, 561, rgba(48, 46, 46), rgba(233, 177, 88), rgba(97, 92, 87), rgba(249, 195, 101), rgba(214, 99, 92), psychic flying, gen5
+Yamask, 562, rgba(78, 77, 78), rgba(52, 51, 53), rgba(223, 159, 115), rgba(241, 202, 141), rgba(226, 102, 97), ghost, gen5
+Cofagrigus, 563, rgba(80, 83, 83), rgba(247, 210, 153), rgba(172, 137, 91), rgba(95, 105, 99), rgba(103, 116, 108), ghost, gen5
+Tirtouga, 564, rgba(99, 115, 142), rgba(80, 88, 106), rgba(118, 166, 206), rgba(106, 136, 165), rgba(129, 174, 212), water rock, gen5
+Carracosta, 565, rgba(108, 163, 207), rgba(96, 115, 141), rgba(78, 88, 107), rgba(98, 139, 168), rgba(156, 202, 212), water rock, gen5
+Archen, 566, rgba(250, 204, 138), rgba(222, 115, 110), rgba(160, 91, 85), rgba(49, 156, 215), rgba(92, 167, 216), rock flying, gen5
+Archeops, 567, rgba(52, 113, 148), rgba(47, 155, 213), rgba(246, 202, 139), rgba(157, 96, 86), rgba(178, 143, 100), rock flying, gen5
+Trubbish, 568, rgba(91, 109, 95), rgba(105, 130, 113), rgba(136, 115, 108), rgba(239, 242, 246), rgba(145, 151, 136), poison, gen5
+Garbodor, 569, rgba(92, 107, 92), rgba(173, 159, 144), rgba(134, 118, 107), rgba(146, 134, 120), rgba(210, 158, 169), poison, gen5
+Zorua, 570, rgba(96, 92, 111), rgba(41, 37, 43), rgba(154, 56, 69), rgba(59, 54, 71), rgba(164, 80, 83), dark, gen5
+Zoroark, 571, rgba(89, 86, 97), rgba(150, 53, 67), rgba(47, 41, 50), rgba(94, 41, 50), rgba(59, 54, 68), dark, gen5
+Minccino, 572, rgba(218, 213, 211), rgba(165, 159, 157), rgba(104, 96, 94), rgba(159, 101, 104), rgba(22, 22, 21), normal, gen5
+Cinccino, 573, rgba(225, 223, 225), rgba(155, 156, 168), rgba(178, 186, 217), rgba(183, 193, 227), rgba(102, 99, 104), normal, gen5
+Gothita, 574, rgba(238, 240, 242), rgba(197, 162, 204), rgba(48, 47, 47), rgba(172, 162, 167), rgba(88, 82, 85), psychic, gen5
+Gothorita, 575, rgba(47, 46, 49), rgba(234, 236, 239), rgba(173, 163, 168), rgba(85, 81, 85), rgba(16, 16, 14), psychic, gen5
+Gothitelle, 576, rgba(52, 51, 51), rgba(234, 232, 234), rgba(81, 77, 78), rgba(169, 160, 162), rgba(19, 20, 17), psychic, gen5
+Solosis, 577, rgba(138, 197, 157), rgba(220, 234, 202), rgba(215, 223, 180), rgba(156, 172, 144), rgba(82, 105, 96), psychic, gen5
+Duosion, 578, rgba(140, 197, 160), rgba(213, 231, 201), rgba(158, 167, 143), rgba(115, 171, 140), rgba(104, 140, 119), psychic, gen5
+Reuniclus, 579, rgba(143, 201, 161), rgba(219, 232, 200), rgba(119, 176, 143), rgba(146, 174, 145), rgba(219, 149, 146), psychic, gen5
+Ducklett, 580, rgba(173, 219, 217), rgba(97, 145, 153), rgba(134, 161, 157), rgba(208, 231, 228), rgba(89, 106, 100), water flying, gen5
+Swanna, 581, rgba(235, 240, 233), rgba(167, 196, 220), rgba(151, 157, 163), rgba(94, 99, 107), rgba(28, 30, 29), water flying, gen5
+Vanillite, 582, rgba(233, 239, 245), rgba(163, 178, 211), rgba(176, 215, 238), rgba(150, 157, 164), rgba(91, 100, 109), ice, gen5
+Vanillish, 583, rgba(233, 241, 247), rgba(107, 168, 212), rgba(160, 207, 234), rgba(170, 184, 212), rgba(102, 142, 172), ice, gen5
+Vanilluxe, 584, rgba(225, 239, 247), rgba(170, 181, 212), rgba(107, 168, 211), rgba(165, 205, 230), rgba(104, 142, 175), ice, gen5
+Deerling, 585, rgba(224, 156, 168), rgba(247, 234, 206), rgba(176, 161, 144), rgba(102, 88, 84), rgba(156, 110, 113), normal grass, gen5
+Sawsbuck, 586, rgba(108, 77, 58), rgba(73, 50, 40), rgba(234, 206, 136), rgba(51, 36, 26), rgba(164, 140, 96), normal grass, gen5
+Emolga, 587, rgba(239, 241, 244), rgba(83, 79, 81), rgba(252, 219, 98), rgba(50, 48, 52), rgba(168, 164, 162), electric flying, gen5
+Karrablast, 588, rgba(93, 90, 93), rgba(41, 132, 198), rgba(247, 205, 101), rgba(181, 146, 73), rgba(92, 150, 206), bug, gen5
+Escavalier, 589, rgba(161, 79, 91), rgba(144, 132, 119), rgba(171, 164, 158), rgba(101, 95, 92), rgba(212, 167, 164), bug steel, gen5
+Foongus, 590, rgba(243, 236, 226), rgba(108, 96, 89), rgba(174, 163, 154), rgba(76, 65, 59), rgba(222, 160, 166), grass poison, gen5
+Amoonguss, 591, rgba(93, 93, 96), rgba(149, 151, 138), rgba(193, 204, 189), rgba(52, 49, 49), rgba(209, 107, 138), grass poison, gen5
+Frillish, 592, rgba(204, 235, 237), rgba(165, 217, 224), rgba(118, 174, 201), rgba(97, 150, 173), rgba(145, 182, 205), water ghost, gen5
+Jellicent, 593, rgba(216, 237, 248), rgba(150, 177, 212), rgba(165, 216, 243), rgba(110, 204, 244), rgba(83, 167, 213), water ghost, gen5
+Alomomola, 594, rgba(180, 139, 146), rgba(156, 100, 117), rgba(226, 147, 168), rgba(248, 199, 211), rgba(110, 80, 87), water, gen5
+Joltik, 595, rgba(242, 212, 111), rgba(173, 149, 85), rgba(243, 219, 143), rgba(140, 124, 79), rgba(203, 178, 98), bug electric, gen5
+Galvantula, 596, rgba(253, 223, 146), rgba(248, 213, 123), rgba(96, 92, 104), rgba(172, 145, 90), rgba(169, 150, 176), bug electric, gen5
+Ferroseed, 597, rgba(148, 150, 149), rgba(84, 151, 110), rgba(202, 201, 201), rgba(86, 92, 88), rgba(47, 49, 47), grass steel, gen5
+Ferrothorn, 598, rgba(156, 159, 159), rgba(210, 210, 211), rgba(82, 143, 105), rgba(89, 104, 94), rgba(46, 47, 46), grass steel, gen5
+Klink, 599, rgba(93, 93, 97), rgba(206, 207, 214), rgba(146, 143, 144), rgba(183, 187, 202), rgba(187, 194, 210), steel, gen5
+Klang, 600, rgba(164, 164, 168), rgba(92, 93, 96), rgba(204, 208, 218), rgba(186, 196, 213), rgba(37, 37, 38), steel, gen5
+Klinklang, 601, rgba(154, 156, 162), rgba(97, 98, 103), rgba(204, 209, 221), rgba(186, 195, 212), rgba(180, 187, 202), steel, gen5
+Tynamo, 602, rgba(223, 236, 237), rgba(168, 188, 212), rgba(179, 197, 216), rgba(145, 162, 173), rgba(118, 138, 153), electric, gen5
+Eelektrik, 603, rgba(84, 104, 133), rgba(76, 86, 100), rgba(164, 88, 85), rgba(166, 155, 115), rgba(231, 224, 173), electric, gen5
+Eelektross, 604, rgba(87, 106, 135), rgba(80, 90, 103), rgba(239, 230, 172), rgba(165, 155, 112), rgba(60, 71, 91), electric, gen5
+Elgyem, 605, rgba(160, 216, 211), rgba(112, 153, 146), rgba(78, 93, 91), rgba(50, 52, 52), rgba(84, 148, 117), psychic, gen5
+Beheeyem, 606, rgba(205, 165, 153), rgba(151, 118, 109), rgba(110, 92, 93), rgba(52, 52, 52), rgba(165, 131, 120), psychic, gen5
+Litwick, 607, rgba(155, 169, 206), rgba(237, 241, 246), rgba(119, 119, 177), rgba(182, 199, 230), rgba(116, 151, 206), ghost fire, gen5
+Lampent, 608, rgba(48, 47, 48), rgba(142, 148, 162), rgba(159, 181, 217), rgba(200, 226, 245), rgba(73, 84, 92), ghost fire, gen5
+Chandelure, 609, rgba(45, 44, 44), rgba(116, 116, 174), rgba(75, 75, 79), rgba(178, 202, 229), rgba(162, 172, 209), ghost fire, gen5
+Axew, 610, rgba(137, 157, 134), rgba(95, 105, 89), rgba(69, 80, 52), rgba(49, 56, 36), rgba(110, 141, 104), dragon, gen5
+Fraxure, 611, rgba(99, 102, 101), rgba(100, 142, 100), rgba(160, 90, 90), rgba(44, 46, 42), rgba(144, 140, 142), dragon, gen5
+Haxorus, 612, rgba(162, 153, 72), rgba(109, 102, 53), rgba(80, 78, 78), rgba(51, 49, 50), rgba(156, 54, 48), dragon, gen5
+Cubchoo, 613, rgba(161, 214, 240), rgba(242, 247, 250), rgba(163, 180, 213), rgba(81, 87, 94), rgba(113, 166, 211), ice, gen5
+Beartic, 614, rgba(228, 240, 241), rgba(177, 200, 222), rgba(154, 162, 166), rgba(98, 98, 104), rgba(162, 183, 202), ice, gen5
+Cryogonal, 615, rgba(102, 132, 181), rgba(219, 228, 241), rgba(80, 107, 154), rgba(165, 203, 235), rgba(142, 164, 204), ice, gen5
+Shelmet, 616, rgba(182, 176, 169), rgba(198, 184, 178), rgba(48, 45, 45), rgba(141, 131, 124), rgba(217, 210, 202), bug, gen5
+Accelgor, 617, rgba(87, 94, 110), rgba(134, 152, 181), rgba(103, 113, 132), rgba(171, 88, 100), rgba(234, 118, 137), bug, gen5
+Stunfisk, 618, rgba(210, 148, 114), rgba(98, 85, 77), rgba(252, 228, 132), rgba(155, 112, 88), rgba(217, 163, 131), ground electric, gen5
+Mienfoo, 619, rgba(248, 240, 162), rgba(163, 87, 102), rgba(218, 114, 137), rgba(175, 165, 112), rgba(115, 90, 81), fighting, gen5
+Mienshao, 620, rgba(226, 219, 215), rgba(162, 152, 159), rgba(180, 160, 205), rgba(116, 108, 135), rgba(101, 95, 107), fighting, gen5
+Druddigon, 621, rgba(1, 82, 100), rgba(0, 111, 142), rgba(177, 78, 92), rgba(150, 57, 76), rgba(238, 240, 243), dragon, gen5
+Golett, 622, rgba(105, 163, 167), rgba(94, 109, 100), rgba(56, 91, 99), rgba(92, 129, 125), rgba(246, 222, 164), ground ghost, gen5
+Golurk, 623, rgba(103, 153, 155), rgba(85, 107, 104), rgba(150, 179, 169), rgba(92, 129, 125), rgba(172, 140, 105), ground ghost, gen5
+Pawniard, 624, rgba(95, 95, 97), rgba(159, 81, 82), rgba(229, 232, 236), rgba(97, 48, 49), rgba(155, 156, 158), dark steel, gen5
+Bisharp, 625, rgba(157, 86, 79), rgba(218, 220, 223), rgba(95, 93, 95), rgba(154, 152, 152), rgba(101, 48, 50), dark steel, gen5
+Bouffalant, 626, rgba(103, 92, 86), rgba(106, 84, 57), rgba(145, 114, 75), rgba(225, 205, 166), rgba(166, 160, 153), normal, gen5
+Rufflet, 627, rgba(236, 234, 219), rgba(159, 155, 153), rgba(96, 94, 101), rgba(231, 210, 168), rgba(126, 130, 164), normal flying, gen5
+Braviary, 628, rgba(81, 77, 91), rgba(152, 83, 77), rgba(105, 56, 55), rgba(240, 235, 225), rgba(167, 139, 94), normal flying, gen5
+Vullaby, 629, rgba(96, 88, 85), rgba(156, 144, 135), rgba(240, 227, 203), rgba(72, 64, 61), rgba(51, 47, 48), dark flying, gen5
+Mandibuzz, 630, rgba(98, 87, 85), rgba(171, 155, 139), rgba(138, 115, 108), rgba(53, 50, 52), rgba(205, 154, 152), dark flying, gen5
+Heatmor, 631, rgba(163, 92, 84), rgba(107, 89, 80), rgba(153, 135, 116), rgba(226, 169, 84), rgba(173, 158, 143), fire, gen5
+Durant, 632, rgba(94, 93, 94), rgba(160, 160, 162), rgba(52, 51, 52), rgba(202, 201, 205), rgba(62, 61, 64), bug steel, gen5
+Deino, 633, rgba(98, 91, 93), rgba(89, 110, 136), rgba(107, 143, 184), rgba(49, 48, 49), rgba(15, 16, 15), dark dragon, gen5
+Zweilous, 634, rgba(94, 87, 88), rgba(88, 109, 133), rgba(49, 46, 47), rgba(108, 142, 183), rgba(29, 29, 28), dark dragon, gen5
+Hydreigon, 635, rgba(89, 84, 90), rgba(147, 84, 116), rgba(97, 52, 79), rgba(87, 110, 135), rgba(106, 140, 180), dark dragon, gen5
+Larvesta, 636, rgba(235, 237, 239), rgba(172, 167, 165), rgba(167, 106, 88), rgba(214, 115, 95), rgba(56, 54, 54), bug fire, gen5
+Volcarona, 637, rgba(242, 138, 98), rgba(209, 112, 96), rgba(92, 89, 89), rgba(173, 99, 94), rgba(232, 234, 236), bug fire, gen5
+Cobalion, 638, rgba(51, 157, 174), rgba(147, 156, 158), rgba(88, 91, 92), rgba(56, 55, 56), rgba(48, 95, 105), steel fighting, gen5
+Terrakion, 639, rgba(146, 143, 142), rgba(97, 89, 86), rgba(143, 121, 104), rgba(47, 45, 45), rgba(150, 133, 116), rock fighting, gen5
+Virizion, 640, rgba(162, 208, 121), rgba(95, 107, 88), rgba(233, 237, 217), rgba(118, 147, 89), rgba(156, 155, 146), grass fighting, gen5
+Tornadus-incarnate, 641, rgba(90, 92, 97), rgba(150, 148, 157), rgba(222, 226, 236), rgba(139, 106, 173), rgba(103, 152, 96), flying, gen5
+Thundurus-incarnate, 642, rgba(85, 86, 92), rgba(223, 227, 235), rgba(109, 116, 142), rgba(146, 145, 155), rgba(105, 144, 160), electric flying, gen5
+Reshiram, 643, rgba(227, 236, 239), rgba(157, 171, 207), rgba(187, 201, 221), rgba(150, 157, 171), rgba(107, 116, 143), dragon fire, gen5
+Zekrom, 644, rgba(38, 38, 41), rgba(72, 79, 81), rgba(59, 72, 73), rgba(23, 25, 27), rgba(31, 32, 34), dragon electric, gen5
+Landorus-incarnate, 645, rgba(103, 90, 82), rgba(223, 227, 236), rgba(158, 102, 83), rgba(113, 119, 142), rgba(239, 149, 98), ground flying, gen5
+Kyurem, 646, rgba(92, 96, 103), rgba(151, 159, 160), rgba(205, 227, 231), rgba(181, 202, 206), rgba(122, 132, 135), dragon ice, gen5
+Keldeo-ordinary, 647, rgba(143, 211, 244), rgba(247, 241, 176), rgba(231, 95, 58), rgba(72, 93, 145), rgba(221, 159, 113), water fighting, gen5
+Meloetta-aria, 648, rgba(238, 243, 229), rgba(155, 151, 144), rgba(216, 230, 184), rgba(98, 97, 95), rgba(135, 124, 124), normal psychic, gen5
+Genesect, 649, rgba(109, 78, 117), rgba(149, 111, 167), rgba(166, 137, 168), rgba(78, 56, 91), rgba(121, 86, 132), bug steel, gen5
+Chespin, 650, rgba(222, 167, 118), rgba(169, 208, 100), rgba(155, 112, 89), rgba(101, 83, 51), rgba(207, 227, 156), grass, gen6
+Quilladin, 651, rgba(100, 76, 44), rgba(76, 50, 30), rgba(164, 204, 91), rgba(220, 161, 111), rgba(118, 146, 68), grass, gen6
+Chesnaught, 652, rgba(243, 242, 222), rgba(179, 173, 150), rgba(147, 144, 114), rgba(136, 199, 116), rgba(215, 211, 176), grass fighting, gen6
+Fennekin, 653, rgba(246, 226, 122), rgba(252, 235, 140), rgba(217, 154, 92), rgba(228, 92, 55), rgba(244, 246, 247), fire, gen6
+Braixen, 654, rgba(244, 223, 114), rgba(242, 243, 245), rgba(83, 83, 81), rgba(178, 157, 83), rgba(220, 81, 48), fire, gen6
+Delphox, 655, rgba(163, 75, 55), rgba(217, 91, 57), rgba(174, 109, 80), rgba(174, 154, 87), rgba(225, 145, 97), fire psychic, gen6
+Froakie, 656, rgba(94, 195, 234), rgba(243, 244, 228), rgba(78, 147, 167), rgba(183, 177, 159), rgba(246, 237, 151), water, gen6
+Frogadier, 657, rgba(72, 142, 170), rgba(243, 244, 244), rgba(20, 87, 142), rgba(77, 111, 156), rgba(36, 77, 109), water, gen6
+Greninja, 658, rgba(53, 70, 150), rgba(41, 49, 95), rgba(104, 107, 159), rgba(239, 238, 229), rgba(228, 119, 140), water dark, gen6
+Bunnelby, 659, rgba(167, 168, 169), rgba(105, 71, 35), rgba(133, 99, 61), rgba(107, 100, 99), rgba(145, 111, 96), normal, gen6
+Diggersby, 660, rgba(167, 167, 168), rgba(134, 103, 71), rgba(203, 202, 200), rgba(103, 76, 52), rgba(109, 99, 96), normal ground, gen6
+Fletchling, 661, rgba(236, 131, 88), rgba(51, 49, 48), rgba(228, 234, 242), rgba(106, 99, 94), rgba(146, 152, 167), normal flying, gen6
+Fletchinder, 662, rgba(48, 46, 46), rgba(236, 115, 72), rgba(104, 97, 92), rgba(240, 156, 113), rgba(229, 233, 239), fire flying, gen6
+Talonflame, 663, rgba(93, 88, 87), rgba(231, 111, 66), rgba(235, 151, 105), rgba(162, 87, 53), rgba(221, 103, 60), fire flying, gen6
+Scatterbug, 664, rgba(100, 98, 98), rgba(156, 150, 144), rgba(35, 30, 29), rgba(196, 181, 157), rgba(236, 236, 237), bug, gen6
+Spewpa, 665, rgba(240, 241, 242), rgba(103, 101, 101), rgba(161, 155, 154), rgba(137, 125, 151), rgba(222, 206, 177), bug, gen6
+Vivillon, 666, rgba(224, 120, 170), rgba(99, 91, 87), rgba(234, 162, 195), rgba(202, 102, 120), rgba(237, 214, 227), bug flying, gen6
+Litleo, 667, rgba(89, 78, 72), rgba(215, 172, 124), rgba(68, 55, 50), rgba(48, 41, 39), rgba(220, 180, 133), fire normal, gen6
+Pyroar, 668, rgba(219, 55, 38), rgba(207, 166, 117), rgba(52, 43, 40), rgba(245, 200, 58), rgba(168, 43, 33), fire normal, gen6
+Flabebe, 669, rgba(229, 139, 129), rgba(243, 244, 240), rgba(250, 241, 148), rgba(223, 100, 101), rgba(171, 79, 78), fairy, gen6
+Floette, 670, rgba(171, 73, 75), rgba(242, 243, 245), rgba(133, 60, 69), rgba(95, 115, 87), rgba(170, 169, 164), fairy, gen6
+Florges, 671, rgba(1, 164, 133), rgba(21, 115, 92), rgba(225, 150, 147), rgba(240, 236, 239), rgba(219, 97, 99), fairy, gen6
+Skiddo, 672, rgba(100, 89, 82), rgba(1, 117, 70), rgba(242, 243, 247), rgba(1, 146, 83), rgba(43, 43, 40), grass, gen6
+Gogoat, 673, rgba(155, 133, 105), rgba(98, 92, 88), rgba(1, 146, 83), rgba(1, 117, 70), rgba(142, 92, 44), grass, gen6
+Pancham, 674, rgba(249, 244, 216), rgba(85, 85, 92), rgba(115, 118, 132), rgba(49, 48, 51), rgba(169, 163, 147), fighting, gen6
+Pangoro, 675, rgba(89, 89, 97), rgba(113, 118, 132), rgba(236, 237, 225), rgba(171, 166, 157), rgba(56, 57, 68), fighting dark, gen6
+Furfrou, 676, rgba(230, 237, 224), rgba(165, 165, 155), rgba(96, 96, 92), rgba(34, 34, 31), rgba(94, 94, 89), normal, gen6
+Espurr, 677, rgba(159, 160, 179), rgba(123, 119, 134), rgba(183, 183, 197), rgba(93, 90, 100), rgba(129, 123, 136), psychic, gen6
+Meowstic-male, 678, rgba(54, 86, 147), rgba(244, 245, 246), rgba(48, 72, 115), rgba(170, 169, 173), rgba(103, 116, 161), psychic, gen6
+Honedge, 679, rgba(108, 96, 84), rgba(166, 210, 227), rgba(47, 99, 146), rgba(131, 113, 96), rgba(152, 143, 119), steel ghost, gen6
+Doublade, 680, rgba(229, 115, 168), rgba(109, 94, 83), rgba(174, 163, 142), rgba(173, 95, 156), rgba(137, 103, 105), steel ghost, gen6
+Aegislash-shield, 681, rgba(166, 150, 159), rgba(159, 145, 98), rgba(94, 87, 85), rgba(219, 208, 164), rgba(179, 160, 202), steel ghost, gen6
+Spritzee, 682, rgba(236, 149, 166), rgba(174, 100, 113), rgba(222, 223, 238), rgba(90, 77, 80), rgba(163, 156, 163), fairy, gen6
+Aromatisse, 683, rgba(167, 100, 157), rgba(232, 154, 173), rgba(176, 106, 119), rgba(104, 76, 94), rgba(224, 225, 240), fairy, gen6
+Swirlix, 684, rgba(243, 238, 242), rgba(162, 153, 159), rgba(109, 96, 100), rgba(22, 20, 21), rgba(208, 154, 171), fairy, gen6
+Slurpuff, 685, rgba(237, 220, 228), rgba(211, 183, 196), rgba(207, 155, 171), rgba(166, 85, 110), rgba(106, 89, 95), fairy, gen6
+Inkay, 686, rgba(239, 235, 234), rgba(227, 166, 171), rgba(122, 164, 207), rgba(97, 123, 149), rgba(91, 95, 101), dark psychic, gen6
+Malamar, 687, rgba(155, 150, 168), rgba(118, 113, 152), rgba(227, 227, 237), rgba(97, 84, 107), rgba(208, 83, 144), dark psychic, gen6
+Binacle, 688, rgba(229, 230, 218), rgba(96, 108, 140), rgba(143, 109, 72), rgba(226, 228, 178), rgba(104, 80, 54), rock water, gen6
+Barbaracle, 689, rgba(101, 93, 84), rgba(222, 225, 221), rgba(153, 95, 82), rgba(81, 68, 58), rgba(152, 159, 150), rock water, gen6
+Skrelp, 690, rgba(140, 96, 71), rgba(106, 71, 52), rgba(174, 214, 228), rgba(81, 54, 45), rgba(131, 88, 62), poison water, gen6
+Dragalge, 691, rgba(147, 100, 82), rgba(89, 56, 45), rgba(105, 73, 52), rgba(202, 91, 106), rgba(112, 90, 84), poison dragon, gen6
+Clauncher, 692, rgba(144, 210, 243), rgba(90, 92, 92), rgba(103, 151, 169), rgba(243, 200, 89), rgba(116, 178, 206), water, gen6
+Clawitzer, 693, rgba(2, 109, 178), rgba(86, 88, 87), rgba(43, 48, 51), rgba(101, 145, 169), rgba(33, 77, 103), water, gen6
+Helioptile, 694, rgba(250, 229, 120), rgba(98, 97, 95), rgba(253, 234, 136), rgba(198, 173, 90), rgba(151, 142, 102), electric normal, gen6
+Heliolisk, 695, rgba(95, 91, 90), rgba(250, 228, 106), rgba(215, 164, 84), rgba(169, 148, 83), rgba(154, 113, 92), electric normal, gen6
+Tyrunt, 696, rgba(112, 93, 87), rgba(140, 110, 104), rgba(152, 131, 118), rgba(228, 228, 228), rgba(168, 166, 164), rock dragon, gen6
+Tyrantrum, 697, rgba(158, 88, 82), rgba(234, 235, 235), rgba(167, 164, 163), rgba(108, 85, 86), rgba(91, 54, 55), rock dragon, gen6
+Amaura, 698, rgba(157, 208, 238), rgba(242, 221, 169), rgba(116, 150, 167), rgba(210, 229, 238), rgba(235, 185, 178), rock ice, gen6
+Aurorus, 699, rgba(221, 226, 220), rgba(120, 149, 200), rgba(236, 234, 173), rgba(93, 111, 146), rgba(147, 170, 208), rock ice, gen6
+Sylveon, 700, rgba(246, 243, 244), rgba(234, 155, 171), rgba(166, 157, 160), rgba(167, 218, 242), rgba(227, 184, 195), fairy, gen6
+Hawlucha, 701, rgba(245, 246, 248), rgba(82, 140, 113), rgba(77, 113, 101), rgba(204, 78, 43), rgba(99, 181, 151), fighting flying, gen6
+Dedenne, 702, rgba(227, 160, 38), rgba(49, 47, 47), rgba(245, 245, 200), rgba(185, 178, 139), rgba(234, 183, 90), electric fairy, gen6
+Carbink, 703, rgba(155, 157, 173), rgba(235, 242, 247), rgba(174, 182, 195), rgba(119, 119, 131), rgba(98, 97, 105), rock fairy, gen6
+Goomy, 704, rgba(224, 215, 227), rgba(137, 111, 136), rgba(169, 149, 175), rgba(97, 92, 95), rgba(105, 158, 98), dragon, gen6
+Sliggoo, 705, rgba(223, 214, 230), rgba(164, 149, 165), rgba(181, 154, 196), rgba(137, 113, 139), rgba(100, 93, 100), dragon, gen6
+Goodra, 706, rgba(222, 213, 229), rgba(165, 152, 164), rgba(181, 153, 196), rgba(140, 118, 143), rgba(107, 97, 106), dragon, gen6
+Klefki, 707, rgba(216, 224, 229), rgba(159, 161, 163), rgba(89, 81, 87), rgba(51, 45, 50), rgba(160, 107, 90), steel fairy, gen6
+Phantump, 708, rgba(111, 99, 89), rgba(47, 46, 46), rgba(162, 141, 116), rgba(10, 8, 7), rgba(25, 24, 21), ghost grass, gen6
+Trevenant, 709, rgba(109, 99, 88), rgba(164, 144, 119), rgba(46, 132, 93), rgba(179, 166, 146), rgba(41, 109, 78), ghost grass, gen6
+Pumpkaboo-average, 710, rgba(103, 90, 70), rgba(83, 71, 55), rgba(150, 117, 96), rgba(219, 151, 119), rgba(231, 168, 140), ghost grass, gen6
+Gourgeist-average, 711, rgba(92, 77, 55), rgba(225, 150, 110), rgba(237, 178, 147), rgba(151, 112, 88), rgba(183, 145, 84), ghost grass, gen6
+Bergmite, 712, rgba(219, 234, 245), rgba(159, 180, 205), rgba(183, 199, 216), rgba(140, 157, 179), rgba(119, 138, 164), ice, gen6
+Avalugg, 713, rgba(225, 240, 249), rgba(156, 174, 202), rgba(135, 150, 184), rgba(121, 140, 178), rgba(135, 112, 172), ice, gen6
+Noibat, 714, rgba(140, 103, 152), rgba(98, 79, 98), rgba(185, 164, 199), rgba(167, 141, 178), rgba(200, 183, 208), flying dragon, gen6
+Noivern, 715, rgba(85, 75, 82), rgba(138, 101, 165), rgba(73, 54, 55), rgba(53, 49, 52), rgba(222, 223, 224), flying dragon, gen6
+Xerneas, 716, rgba(84, 82, 81), rgba(220, 213, 166), rgba(39, 50, 42), rgba(93, 112, 171), rgba(154, 152, 110), fairy, gen6
+Yveltal, 717, rgba(91, 84, 93), rgba(46, 47, 55), rgba(235, 106, 92), rgba(86, 49, 49), rgba(226, 54, 36), dark flying, gen6
+Zygarde, 718, rgba(88, 81, 72), rgba(75, 73, 58), rgba(54, 49, 45), rgba(177, 203, 102), rgba(144, 185, 61), dragon ground, gen6
+Diancie, 719, rgba(245, 235, 241), rgba(157, 155, 171), rgba(213, 185, 198), rgba(203, 150, 170), rgba(96, 90, 104), rock fairy, gen6
+Hoopa, 720, rgba(147, 141, 156), rgba(206, 206, 229), rgba(169, 52, 98), rgba(236, 229, 110), rgba(99, 93, 99), psychic ghost, gen6
+Volcanion, 721, rgba(104, 31, 36), rgba(145, 50, 57), rgba(172, 96, 90), rgba(43, 29, 34), rgba(47, 82, 90), fire water, gen6
+Rowlet, 722, rgba(247, 245, 242), rgba(237, 201, 172), rgba(181, 177, 172), rgba(36, 172, 137), rgba(206, 148, 118), grass flying, gen7
+Dartrix, 723, rgba(247, 247, 246), rgba(151, 196, 104), rgba(108, 81, 54), rgba(165, 164, 160), rgba(193, 192, 187), grass flying, gen7
+Decidueye, 724, rgba(158, 107, 77), rgba(3, 163, 118), rgba(240, 238, 219), rgba(217, 163, 114), rgba(19, 100, 78), grass ghost, gen7
+Litten, 725, rgba(71, 80, 94), rgba(234, 92, 73), rgba(47, 46, 51), rgba(59, 70, 84), rgba(239, 223, 19), fire, gen7
+Torracat, 726, rgba(227, 112, 74), rgba(77, 74, 74), rgba(158, 79, 54), rgba(48, 44, 43), rgba(88, 55, 45), fire, gen7
+Incineroar, 727, rgba(224, 85, 73), rgba(140, 137, 139), rgba(97, 53, 50), rgba(49, 45, 42), rgba(71, 65, 60), fire dark, gen7
+Popplio, 728, rgba(75, 109, 171), rgba(70, 83, 122), rgba(162, 203, 225), rgba(108, 156, 170), rgba(56, 72, 109), water, gen7
+Brionne, 729, rgba(244, 248, 249), rgba(86, 166, 209), rgba(186, 215, 220), rgba(155, 168, 174), rgba(102, 154, 174), water, gen7
+Primarina, 730, rgba(226, 228, 236), rgba(91, 156, 168), rgba(141, 206, 225), rgba(156, 158, 170), rgba(156, 168, 197), water fairy, gen7
+Pikipek, 731, rgba(246, 245, 242), rgba(83, 82, 78), rgba(43, 42, 40), rgba(176, 168, 167), rgba(69, 69, 62), normal flying, gen7
+Trumbeak, 732, rgba(77, 78, 72), rgba(248, 248, 245), rgba(44, 44, 41), rgba(167, 164, 163), rgba(23, 23, 22), normal flying, gen7
+Toucannon, 733, rgba(53, 48, 47), rgba(248, 248, 245), rgba(84, 83, 81), rgba(207, 90, 50), rgba(74, 56, 52), normal flying, gen7
+Yungoos, 734, rgba(185, 139, 112), rgba(146, 104, 89), rgba(195, 145, 118), rgba(246, 217, 131), rgba(112, 85, 74), normal, gen7
+Gumshoos, 735, rgba(150, 123, 99), rgba(219, 203, 115), rgba(160, 138, 96), rgba(107, 88, 74), rgba(87, 74, 58), normal, gen7
+Grubbin, 736, rgba(245, 210, 123), rgba(217, 113, 74), rgba(225, 231, 237), rgba(163, 170, 176), rgba(214, 152, 95), bug, gen7
+Charjabug, 737, rgba(123, 154, 110), rgba(88, 105, 77), rgba(210, 207, 207), rgba(140, 156, 112), rgba(48, 118, 170), bug electric, gen7
+Vikavolt, 738, rgba(46, 81, 107), rgba(239, 240, 246), rgba(36, 56, 72), rgba(242, 225, 90), rgba(98, 148, 173), bug electric, gen7
+Crabrawler, 739, rgba(13, 178, 212), rgba(42, 115, 134), rgba(76, 60, 94), rgba(137, 99, 167), rgba(92, 77, 101), fighting, gen7
+Crabominable, 740, rgba(240, 243, 245), rgba(90, 84, 115), rgba(179, 199, 207), rgba(159, 166, 167), rgba(91, 144, 165), fighting ice, gen7
+Oricorio-baile, 741, rgba(230, 83, 92), rgba(160, 56, 57), rgba(42, 37, 33), rgba(99, 46, 46), rgba(164, 83, 88), fire flying, gen7
+Cutiefly, 742, rgba(248, 249, 247), rgba(239, 227, 150), rgba(204, 170, 119), rgba(46, 39, 36), rgba(227, 199, 107), bug fairy, gen7
+Ribombee, 743, rgba(248, 249, 249), rgba(204, 173, 142), rgba(237, 217, 106), rgba(44, 38, 35), rgba(144, 111, 69), bug fairy, gen7
+Rockruff, 744, rgba(212, 185, 172), rgba(229, 226, 221), rgba(106, 91, 85), rgba(170, 163, 151), rgba(148, 118, 113), rock, gen7
+Lycanroc-midday, 745, rgba(248, 247, 247), rgba(212, 186, 172), rgba(104, 94, 87), rgba(209, 195, 183), rgba(168, 159, 152), rock, gen7
+Wishiwashi-solo, 746, rgba(237, 238, 239), rgba(148, 153, 152), rgba(105, 108, 108), rgba(57, 105, 174), rgba(88, 158, 209), water, gen7
+Mareanie, 747, rgba(148, 209, 215), rgba(174, 138, 184), rgba(100, 146, 153), rgba(86, 100, 111), rgba(215, 199, 225), poison water, gen7
+Toxapex, 748, rgba(166, 217, 230), rgba(103, 100, 152), rgba(115, 143, 162), rgba(59, 56, 83), rgba(82, 81, 108), poison water, gen7
+Mudbray, 749, rgba(154, 115, 98), rgba(103, 88, 83), rgba(236, 202, 187), rgba(55, 55, 56), rgba(243, 218, 207), ground, gen7
+Mudsdale, 750, rgba(156, 107, 90), rgba(73, 76, 83), rgba(224, 110, 90), rgba(90, 58, 51), rgba(43, 44, 48), ground, gen7
+Dewpider, 751, rgba(95, 149, 167), rgba(81, 108, 117), rgba(95, 174, 203), rgba(141, 156, 54), rgba(89, 99, 44), water bug, gen7
+Araquanid, 752, rgba(213, 231, 240), rgba(98, 144, 159), rgba(189, 215, 228), rgba(80, 95, 106), rgba(169, 204, 220), water bug, gen7
+Fomantis, 753, rgba(119, 189, 160), rgba(245, 219, 221), rgba(93, 150, 108), rgba(123, 195, 166), rgba(224, 107, 118), grass, gen7
+Lurantis, 754, rgba(247, 226, 228), rgba(225, 110, 120), rgba(149, 86, 91), rgba(220, 158, 162), rgba(168, 150, 151), grass, gen7
+Morelull, 755, rgba(245, 231, 232), rgba(162, 152, 159), rgba(197, 155, 195), rgba(186, 172, 202), rgba(102, 90, 100), grass fairy, gen7
+Shiinotic, 756, rgba(244, 221, 220), rgba(218, 228, 177), rgba(144, 105, 146), rgba(177, 150, 169), rgba(194, 147, 185), grass fairy, gen7
+Salandit, 757, rgba(94, 89, 87), rgba(68, 61, 58), rgba(45, 42, 41), rgba(18, 17, 16), rgba(31, 29, 29), poison fire, gen7
+Salazzle, 758, rgba(95, 91, 93), rgba(118, 116, 142), rgba(53, 47, 50), rgba(228, 95, 138), rgba(26, 23, 24), poison fire, gen7
+Stufful, 759, rgba(251, 250, 250), rgba(234, 166, 180), rgba(57, 41, 32), rgba(95, 66, 47), rgba(148, 103, 112), normal fighting, gen7
+Bewear, 760, rgba(57, 52, 51), rgba(235, 164, 178), rgba(64, 60, 59), rgba(248, 248, 246), rgba(171, 161, 158), normal fighting, gen7
+Bounsweet, 761, rgba(172, 207, 135), rgba(208, 96, 135), rgba(217, 226, 225), rgba(161, 77, 109), rgba(117, 140, 99), grass, gen7
+Steenee, 762, rgba(241, 243, 242), rgba(175, 208, 124), rgba(110, 147, 89), rgba(164, 85, 117), rgba(99, 106, 83), grass, gen7
+Tsareena, 763, rgba(179, 210, 130), rgba(106, 142, 87), rgba(168, 79, 111), rgba(237, 240, 240), rgba(152, 168, 95), grass, gen7
+Comfey, 764, rgba(222, 91, 82), rgba(244, 244, 241), rgba(225, 224, 151), rgba(159, 176, 108), rgba(242, 233, 104), fairy, gen7
+Oranguru, 765, rgba(240, 240, 242), rgba(164, 162, 166), rgba(101, 153, 86), rgba(135, 82, 151), rgba(104, 101, 102), normal psychic, gen7
+Passimian, 766, rgba(93, 92, 85), rgba(246, 247, 241), rgba(53, 53, 45), rgba(170, 172, 161), rgba(219, 228, 143), fighting, gen7
+Wimpod, 767, rgba(208, 226, 216), rgba(145, 112, 150), rgba(101, 89, 101), rgba(151, 151, 154), rgba(21, 17, 21), bug water, gen7
+Golisopod, 768, rgba(214, 225, 218), rgba(95, 96, 95), rgba(156, 160, 154), rgba(47, 50, 48), rgba(31, 33, 31), bug water, gen7
+Sandygast, 769, rgba(216, 211, 184), rgba(147, 139, 119), rgba(70, 60, 48), rgba(171, 166, 147), rgba(158, 85, 82), ghost ground, gen7
+Palossand, 770, rgba(248, 196, 136), rgba(180, 116, 81), rgba(212, 158, 109), rgba(80, 50, 34), rgba(228, 183, 136), ghost ground, gen7
+Pyukumuku, 771, rgba(80, 76, 75), rgba(47, 42, 41), rgba(220, 99, 144), rgba(154, 75, 94), rgba(240, 241, 242), water, gen7
+Type-null, 772, rgba(151, 152, 154), rgba(97, 92, 91), rgba(41, 40, 36), rgba(76, 68, 60), rgba(175, 131, 108), normal, gen7
+Silvally, 773, rgba(233, 236, 241), rgba(85, 96, 97), rgba(43, 40, 37), rgba(161, 164, 168), rgba(71, 65, 60), normal, gen7
+Minior-red-meteor, 774, rgba(114, 89, 89), rgba(175, 143, 139), rgba(52, 50, 50), rgba(141, 111, 109), rgba(74, 56, 54), rock flying, gen7
+Komala, 775, rgba(169, 198, 215), rgba(95, 89, 84), rgba(231, 203, 165), rgba(138, 109, 90), rgba(118, 142, 150), normal, gen7
+Turtonator, 776, rgba(231, 93, 101), rgba(241, 216, 72), rgba(155, 77, 77), rgba(94, 68, 56), rgba(87, 55, 52), fire dragon, gen7
+Togedemaru, 777, rgba(232, 229, 229), rgba(158, 156, 156), rgba(248, 230, 116), rgba(103, 97, 91), rgba(46, 43, 40), electric steel, gen7
+Mimikyu-disguised, 778, rgba(163, 148, 117), rgba(216, 208, 173), rgba(35, 34, 31), rgba(90, 74, 60), rgba(102, 91, 74), ghost fairy, gen7
+Bruxish, 779, rgba(152, 95, 158), rgba(213, 109, 166), rgba(149, 212, 226), rgba(174, 169, 77), rgba(239, 231, 90), water psychic, gen7
+Drampa, 780, rgba(237, 239, 227), rgba(101, 160, 160), rgba(170, 168, 153), rgba(187, 203, 169), rgba(196, 207, 175), normal dragon, gen7
+Dhelmise, 781, rgba(38, 80, 93), rgba(58, 136, 144), rgba(85, 53, 52), rgba(138, 94, 51), rgba(227, 203, 77), ghost grass, gen7
+Jangmo-o, 782, rgba(223, 223, 221), rgba(95, 93, 91), rgba(242, 229, 167), rgba(239, 218, 112), rgba(158, 157, 155), dragon, gen7
+Hakamo-o, 783, rgba(174, 172, 172), rgba(103, 100, 97), rgba(224, 205, 97), rgba(209, 187, 78), rgba(152, 140, 100), dragon fighting, gen7
+Kommo-o, 784, rgba(162, 157, 154), rgba(107, 99, 91), rgba(218, 204, 102), rgba(160, 147, 80), rgba(154, 105, 85), dragon fighting, gen7
+Tapu-koko, 785, rgba(104, 104, 52), rgba(44, 45, 41), rgba(81, 81, 75), rgba(239, 131, 56), rgba(223, 217, 73), electric fairy, gen7
+Tapu-lele, 786, rgba(150, 86, 98), rgba(91, 77, 79), rgba(220, 104, 122), rgba(225, 156, 180), rgba(166, 109, 133), psychic fairy, gen7
+Tapu-bulu, 787, rgba(208, 84, 78), rgba(43, 43, 40), rgba(78, 77, 72), rgba(175, 160, 53), rgba(97, 47, 49), grass fairy, gen7
+Tapu-fini, 788, rgba(80, 77, 88), rgba(113, 102, 153), rgba(43, 44, 45), rgba(135, 113, 171), rgba(160, 187, 220), water fairy, gen7
+Cosmog, 789, rgba(24, 158, 218), rgba(44, 53, 119), rgba(26, 35, 41), rgba(105, 65, 146), rgba(41, 94, 157), psychic, gen7
+Cosmoem, 790, rgba(172, 149, 100), rgba(232, 229, 144), rgba(39, 49, 104), rgba(98, 90, 84), rgba(37, 40, 43), psychic, gen7
+Solgaleo, 791, rgba(247, 246, 243), rgba(88, 97, 97), rgba(40, 40, 38), rgba(164, 163, 159), rgba(160, 149, 90), psychic steel, gen7
+Lunala, 792, rgba(50, 38, 110), rgba(170, 174, 110), rgba(92, 49, 135), rgba(239, 232, 152), rgba(241, 241, 215), psychic ghost, gen7
+Nihilego, 793, rgba(224, 233, 233), rgba(146, 153, 175), rgba(164, 180, 198), rgba(110, 116, 149), rgba(143, 168, 197), rock poison, gen7
+Buzzwole, 794, rgba(34, 26, 24), rgba(95, 44, 40), rgba(235, 70, 67), rgba(149, 50, 49), rgba(243, 170, 109), bug fighting, gen7
+Pheromosa, 795, rgba(241, 238, 234), rgba(250, 249, 249), rgba(220, 204, 174), rgba(166, 155, 152), rgba(182, 173, 169), bug fighting, gen7
+Xurkitree, 796, rgba(40, 42, 38), rgba(228, 237, 235), rgba(81, 83, 77), rgba(76, 68, 58), rgba(156, 169, 165), electric, gen7
+Celesteela, 797, rgba(145, 172, 163), rgba(98, 165, 152), rgba(87, 105, 99), rgba(37, 91, 86), rgba(170, 206, 174), steel flying, gen7
+Kartana, 798, rgba(240, 241, 239), rgba(167, 169, 166), rgba(186, 192, 188), rgba(246, 206, 56), rgba(225, 101, 35), grass steel, gen7
+Guzzlord, 799, rgba(73, 78, 84), rgba(33, 37, 45), rgba(245, 211, 97), rgba(65, 147, 175), rgba(52, 73, 86), dark dragon, gen7
+Necrozma, 800, rgba(40, 39, 40), rgba(87, 83, 82), rgba(239, 237, 222), rgba(246, 243, 240), rgba(105, 101, 99), psychic, gen7
+Magearna, 801, rgba(224, 220, 218), rgba(161, 154, 150), rgba(107, 99, 96), rgba(148, 139, 107), rgba(136, 120, 108), steel fairy, gen7
+Marshadow, 802, rgba(99, 102, 113), rgba(42, 45, 46), rgba(10, 9, 10), rgba(121, 122, 131), rgba(30, 30, 32), fighting ghost, gen7
+Poipole, 803, rgba(96, 71, 152), rgba(55, 42, 89), rgba(212, 88, 155), rgba(85, 61, 143), rgba(80, 47, 99), poison, gen7
+Naganadel, 804, rgba(49, 43, 106), rgba(112, 94, 155), rgba(74, 46, 137), rgba(221, 209, 231), rgba(83, 46, 108), poison dragon, gen7
+Stakataka, 805, rgba(92, 93, 88), rgba(43, 44, 42), rgba(138, 139, 134), rgba(125, 128, 124), rgba(69, 67, 61), rock steel, gen7
+Blacephalon, 806, rgba(247, 246, 247), rgba(169, 165, 161), rgba(197, 182, 180), rgba(204, 96, 161), rgba(14, 13, 13), fire ghost, gen7
+Zeraora, 807, rgba(239, 220, 95), rgba(168, 149, 70), rgba(86, 88, 88), rgba(103, 89, 49), rgba(208, 181, 59), electric, gen7
+Meltan, 808, rgba(228, 228, 226), rgba(245, 219, 149), rgba(241, 203, 102), rgba(157, 157, 157), rgba(93, 88, 84), steel, gen7
+Melmetal, 809, rgba(143, 142, 140), rgba(93, 89, 88), rgba(228, 227, 223), rgba(53, 50, 52), rgba(159, 137, 85), steel, gen7
+Grookey, 810, rgba(161, 198, 104), rgba(109, 138, 73), rgba(147, 90, 44), rgba(233, 225, 122), rgba(217, 122, 57), grass, gen8
+Thwackey, 811, rgba(220, 223, 111), rgba(161, 161, 89), rgba(72, 54, 46), rgba(96, 81, 56), rgba(230, 228, 172), grass, gen8
+Rillaboom, 812, rgba(97, 82, 77), rgba(51, 42, 42), rgba(0, 135, 73), rgba(168, 153, 137), rgba(31, 92, 55), grass, gen8
+Scorbunny, 813, rgba(247, 247, 247), rgba(171, 164, 166), rgba(209, 89, 42), rgba(215, 122, 67), rgba(225, 159, 97), fire, gen8
+Raboot, 814, rgba(220, 220, 219), rgba(91, 90, 93), rgba(211, 82, 39), rgba(162, 157, 154), rgba(150, 78, 73), fire, gen8
+Cinderace, 815, rgba(245, 246, 246), rgba(180, 73, 41), rgba(20, 47, 77), rgba(23, 33, 49), rgba(163, 166, 166), fire, gen8
+Sobble, 816, rgba(217, 233, 238), rgba(151, 200, 222), rgba(236, 218, 97), rgba(99, 137, 157), rgba(131, 190, 217), water, gen8
+Drizzile, 817, rgba(78, 149, 175), rgba(252, 252, 252), rgba(48, 94, 112), rgba(158, 179, 107), rgba(40, 103, 143), water, gen8
+Inteleon, 818, rgba(97, 151, 175), rgba(75, 78, 78), rgba(50, 50, 50), rgba(214, 214, 102), rgba(226, 226, 152), water, gen8
+Skwovet, 819, rgba(102, 92, 85), rgba(160, 146, 133), rgba(154, 139, 124), rgba(211, 205, 198), rgba(137, 119, 105), normal, gen8
+Greedent, 820, rgba(151, 97, 87), rgba(101, 58, 56), rgba(200, 152, 139), rgba(181, 133, 120), rgba(116, 75, 71), normal, gen8
+Rookidee, 821, rgba(48, 44, 33), rgba(75, 108, 161), rgba(60, 95, 146), rgba(45, 76, 114), rgba(162, 151, 70), flying, gen8
+Corvisquire, 822, rgba(42, 44, 48), rgba(53, 91, 136), rgba(54, 76, 98), rgba(84, 115, 148), rgba(52, 60, 68), flying, gen8
+Corviknight, 823, rgba(49, 49, 81), rgba(69, 69, 107), rgba(34, 34, 49), rgba(93, 101, 156), rgba(64, 62, 98), flying steel, gen8
+Blipbug, 824, rgba(102, 98, 144), rgba(82, 80, 99), rgba(247, 247, 247), rgba(167, 158, 156), rgba(213, 176, 96), bug, gen8
+Dottler, 825, rgba(97, 80, 42), rgba(168, 134, 46), rgba(237, 186, 48), rgba(242, 200, 91), rgba(245, 220, 154), bug psychic, gen8
+Orbeetle, 826, rgba(206, 57, 39), rgba(99, 80, 83), rgba(49, 52, 93), rgba(98, 47, 48), rgba(47, 41, 46), bug psychic, gen8
+Nickit, 827, rgba(176, 89, 56), rgba(75, 57, 52), rgba(44, 37, 32), rgba(139, 76, 68), rgba(119, 70, 69), dark, gen8
+Thievul, 828, rgba(175, 87, 55), rgba(45, 38, 32), rgba(76, 57, 51), rgba(134, 72, 68), rgba(227, 222, 226), dark, gen8
+Gossifleur, 829, rgba(245, 216, 42), rgba(250, 228, 89), rgba(168, 73, 57), rgba(212, 92, 60), rgba(215, 184, 40), grass, gen8
+Eldegoss, 830, rgba(253, 252, 248), rgba(238, 226, 173), rgba(165, 163, 51), rgba(123, 134, 54), rgba(155, 152, 86), grass, gen8
+Wooloo, 831, rgba(244, 242, 243), rgba(168, 165, 164), rgba(95, 80, 79), rgba(206, 194, 189), rgba(205, 184, 182), normal, gen8
+Dubwool, 832, rgba(97, 89, 91), rgba(246, 245, 246), rgba(76, 57, 56), rgba(50, 40, 41), rgba(146, 147, 150), normal, gen8
+Chewtle, 833, rgba(178, 206, 201), rgba(107, 154, 152), rgba(164, 94, 44), rgba(145, 171, 168), rgba(211, 225, 224), water, gen8
+Drednaw, 834, rgba(35, 109, 100), rgba(99, 164, 161), rgba(151, 89, 49), rgba(220, 172, 76), rgba(152, 112, 80), water rock, gen8
+Yamper, 835, rgba(240, 229, 107), rgba(164, 144, 101), rgba(207, 182, 141), rgba(247, 246, 244), rgba(238, 230, 147), electric, gen8
+Boltund, 836, rgba(96, 110, 94), rgba(248, 247, 245), rgba(240, 213, 87), rgba(158, 157, 148), rgba(242, 223, 149), electric, gen8
+Rolycoly, 837, rgba(45, 43, 42), rgba(93, 88, 84), rgba(71, 61, 58), rgba(141, 138, 135), rgba(225, 113, 37), rock, gen8
+Carkol, 838, rgba(42, 41, 42), rgba(86, 85, 83), rgba(88, 49, 46), rgba(9, 9, 9), rgba(152, 52, 40), rock fire, gen8
+Coalossal, 839, rgba(46, 46, 44), rgba(90, 89, 85), rgba(93, 54, 51), rgba(155, 48, 43), rgba(29, 29, 28), rock fire, gen8
+Applin, 840, rgba(182, 44, 70), rgba(209, 101, 112), rgba(180, 204, 115), rgba(161, 114, 82), rgba(216, 225, 137), grass dragon, gen8
+Flapple, 841, rgba(172, 150, 97), rgba(144, 55, 59), rgba(162, 88, 73), rgba(102, 114, 69), rgba(87, 89, 54), grass dragon, gen8
+Appletun, 842, rgba(90, 115, 79), rgba(220, 174, 104), rgba(162, 150, 96), rgba(232, 215, 149), rgba(117, 148, 100), grass dragon, gen8
+Silicobra, 843, rgba(114, 106, 71), rgba(171, 168, 142), rgba(158, 147, 107), rgba(239, 236, 218), rgba(52, 50, 46), ground, gen8
+Sandaconda, 844, rgba(88, 83, 41), rgba(30, 28, 20), rgba(164, 160, 146), rgba(237, 234, 217), rgba(106, 94, 76), ground, gen8
+Cramorant, 845, rgba(1, 97, 163), rgba(138, 139, 168), rgba(21, 71, 110), rgba(188, 192, 213), rgba(17, 56, 89), flying water, gen8
+Arrokuda, 846, rgba(108, 93, 80), rgba(233, 228, 172), rgba(241, 239, 224), rgba(158, 147, 113), rgba(171, 162, 141), water, gen8
+Barraskewda, 847, rgba(112, 97, 82), rgba(152, 142, 102), rgba(160, 73, 53), rgba(220, 95, 58), rgba(142, 116, 87), water, gen8
+Toxel, 848, rgba(151, 105, 165), rgba(113, 79, 138), rgba(181, 158, 198), rgba(232, 227, 227), rgba(173, 138, 178), electric poison, gen8
+Toxtricity-amped, 849, rgba(109, 89, 134), rgba(156, 203, 216), rgba(93, 75, 115), rgba(75, 57, 102), rgba(147, 117, 162), electric poison, gen8
+Sizzlipede, 850, rgba(93, 48, 50), rgba(212, 79, 72), rgba(150, 50, 58), rgba(164, 56, 66), rgba(164, 83, 54), fire bug, gen8
+Centiskorch, 851, rgba(83, 45, 48), rgba(237, 165, 39), rgba(240, 204, 47), rgba(153, 48, 55), rgba(226, 101, 76), fire bug, gen8
+Clobbopus, 852, rgba(234, 224, 213), rgba(178, 156, 141), rgba(230, 103, 58), rgba(52, 51, 76), rgba(225, 171, 151), fighting, gen8
+Grapploct, 853, rgba(44, 48, 82), rgba(41, 77, 148), rgba(42, 38, 58), rgba(90, 80, 86), rgba(65, 60, 85), fighting, gen8
+Sinistea, 854, rgba(171, 216, 218), rgba(95, 168, 169), rgba(151, 96, 160), rgba(230, 231, 237), rgba(162, 153, 175), ghost, gen8
+Polteageist, 855, rgba(170, 216, 217), rgba(232, 237, 239), rgba(163, 159, 176), rgba(150, 96, 159), rgba(174, 144, 94), ghost, gen8
+Hatenna, 856, rgba(227, 220, 225), rgba(147, 160, 175), rgba(183, 210, 226), rgba(97, 96, 102), rgba(202, 169, 172), psychic, gen8
+Hattrem, 857, rgba(183, 210, 226), rgba(229, 230, 235), rgba(136, 157, 178), rgba(153, 179, 198), rgba(120, 143, 162), psychic, gen8
+Hatterene, 858, rgba(232, 224, 230), rgba(144, 159, 178), rgba(123, 152, 176), rgba(181, 211, 230), rgba(236, 184, 197), psychic fairy, gen8
+Impidimp, 859, rgba(217, 115, 161), rgba(184, 88, 138), rgba(57, 53, 85), rgba(229, 144, 180), rgba(151, 78, 112), dark fairy, gen8
+Morgrem, 860, rgba(210, 67, 114), rgba(154, 46, 90), rgba(55, 52, 87), rgba(80, 84, 99), rgba(30, 36, 55), dark fairy, gen8
+Grimmsnarl, 861, rgba(80, 78, 111), rgba(47, 52, 84), rgba(113, 106, 136), rgba(44, 96, 81), rgba(74, 166, 115), dark fairy, gen8
+Obstagoon, 862, rgba(88, 89, 92), rgba(156, 156, 157), rgba(42, 48, 53), rgba(233, 232, 232), rgba(26, 27, 27), dark normal, gen8
+Perrserker, 863, rgba(169, 167, 164), rgba(99, 92, 87), rgba(46, 52, 50), rgba(220, 220, 219), rgba(60, 68, 66), steel, gen8
+Cursola, 864, rgba(234, 230, 231), rgba(240, 238, 245), rgba(167, 164, 167), rgba(197, 187, 211), rgba(204, 196, 216), ghost, gen8
+Sirfetchd, 865, rgba(234, 232, 229), rgba(172, 169, 165), rgba(169, 203, 107), rgba(40, 75, 57), rgba(51, 87, 68), fighting, gen8
+Mr-rime, 866, rgba(86, 82, 113), rgba(236, 231, 234), rgba(78, 106, 145), rgba(56, 54, 75), rgba(103, 150, 197), ice psychic, gen8
+Runerigus, 867, rgba(96, 89, 92), rgba(176, 164, 161), rgba(217, 209, 206), rgba(50, 52, 53), rgba(88, 101, 93), ground ghost, gen8
+Milcery, 868, rgba(239, 233, 206), rgba(217, 205, 174), rgba(200, 186, 153), rgba(164, 146, 102), rgba(177, 159, 119), fairy, gen8
+Alcremie, 869, rgba(248, 234, 216), rgba(217, 93, 93), rgba(241, 184, 196), rgba(220, 151, 171), rgba(228, 172, 183), fairy, gen8
+Falinks, 870, rgba(40, 42, 42), rgba(152, 38, 41), rgba(248, 208, 77), rgba(172, 141, 61), rgba(99, 40, 38), fighting, gen8
+Pincurchin, 871, rgba(88, 71, 86), rgba(49, 39, 51), rgba(60, 47, 65), rgba(229, 187, 68), rgba(70, 56, 72), electric, gen8
+Snom, 872, rgba(232, 241, 249), rgba(180, 201, 230), rgba(154, 178, 217), rgba(44, 92, 169), rgba(156, 158, 164), ice bug, gen8
+Frosmoth, 873, rgba(232, 235, 242), rgba(200, 202, 208), rgba(153, 157, 164), rgba(178, 178, 182), rgba(168, 177, 208), ice bug, gen8
+Stonjourner, 874, rgba(170, 170, 170), rgba(95, 88, 92), rgba(146, 117, 94), rgba(117, 115, 132), rgba(205, 205, 204), rock, gen8
+Eiscue-ice, 875, rgba(183, 215, 225), rgba(234, 241, 244), rgba(139, 168, 179), rgba(122, 160, 171), rgba(47, 50, 49), ice, gen8
+Indeedee-male, 876, rgba(91, 84, 111), rgba(249, 249, 249), rgba(150, 144, 159), rgba(119, 112, 135), rgba(22, 21, 24), psychic normal, gen8
+Morpeko, 877, rgba(239, 235, 155), rgba(105, 104, 101), rgba(179, 156, 101), rgba(195, 166, 111), rgba(222, 177, 159), electric dark, gen8
+Cufant, 878, rgba(237, 167, 117), rgba(16, 96, 103), rgba(204, 110, 83), rgba(247, 214, 170), rgba(158, 98, 79), steel, gen8
+Copperajah, 879, rgba(10, 87, 85), rgba(17, 56, 56), rgba(164, 164, 158), rgba(169, 91, 48), rgba(87, 112, 107), steel, gen8
+Dracozolt, 880, rgba(22, 95, 82), rgba(215, 76, 85), rgba(165, 84, 89), rgba(232, 226, 157), rgba(236, 148, 147), electric dragon, gen8
+Arctozolt, 881, rgba(229, 237, 240), rgba(166, 205, 218), rgba(19, 108, 154), rgba(72, 170, 213), rgba(151, 185, 209), electric ice, gen8
+Dracovish, 882, rgba(3, 93, 80), rgba(156, 197, 223), rgba(92, 135, 158), rgba(97, 44, 52), rgba(225, 230, 236), water dragon, gen8
+Arctovish, 883, rgba(160, 199, 224), rgba(224, 231, 237), rgba(146, 187, 214), rgba(73, 107, 151), rgba(106, 142, 168), water ice, gen8
+Duraludon, 884, rgba(224, 225, 232), rgba(171, 169, 171), rgba(46, 53, 76), rgba(92, 93, 105), rgba(35, 40, 55), steel dragon, gen8
+Dreepy, 885, rgba(101, 134, 118), rgba(150, 205, 179), rgba(82, 105, 93), rgba(119, 154, 135), rgba(31, 31, 29), dragon ghost, gen8
+Drakloak, 886, rgba(78, 102, 107), rgba(107, 163, 165), rgba(55, 72, 76), rgba(101, 122, 136), rgba(232, 228, 174), dragon ghost, gen8
+Dragapult, 887, rgba(110, 196, 194), rgba(78, 90, 96), rgba(148, 208, 207), rgba(97, 164, 163), rgba(234, 244, 244), dragon ghost, gen8
+Zacian-hero, 888, rgba(75, 138, 196), rgba(145, 89, 77), rgba(42, 79, 109), rgba(105, 96, 98), rgba(156, 139, 120), fairy, gen8
+Zamazenta-hero, 889, rgba(113, 40, 44), rgba(33, 44, 89), rgba(139, 140, 147), rgba(99, 97, 106), rgba(170, 60, 66), fighting, gen8
+Eternatus, 890, rgba(37, 41, 89), rgba(25, 18, 47), rgba(86, 41, 87), rgba(230, 81, 95), rgba(244, 13, 35), poison dragon, gen8
+Kubfu, 891, rgba(170, 166, 160), rgba(242, 243, 242), rgba(103, 103, 100), rgba(38, 36, 38), rgba(195, 187, 180), fighting, gen8
+Urshifu-single-strike, 892, rgba(92, 91, 96), rgba(44, 44, 39), rgba(236, 235, 235), rgba(162, 166, 163), rgba(25, 25, 24), fighting dark, gen8
+Zarude, 893, rgba(41, 41, 41), rgba(83, 81, 81), rgba(73, 107, 57), rgba(52, 93, 53), rgba(30, 32, 30), dark grass, gen8
