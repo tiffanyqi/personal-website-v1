@@ -92,6 +92,9 @@ if __name__ == "__main__":
       image_url = results["sprites"]["other"]["official-artwork"]['front_default']
       types = list(map(lambda x: x["type"]["name"], results["types"]))
       pokemon = Pokemon(name, id, image_url, types)
+      # incorporate is_starter?
+      # can also incorporate is_baby, is_mythical, is_legendary from https://pokeapi.co/api/v2/pokemon-species/id
+      # or genera, habitat, shape
 
       f.write("%s\n" % pokemon.get_mixin_string())
       print("wrote", name, id)

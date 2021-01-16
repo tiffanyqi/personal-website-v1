@@ -22,17 +22,22 @@ html
     .color-swatches
       h1 Color Swatches
       .color-swatch-buttons
-        .color-swatch-button-group-starter-legendary
-          button.color-swatch-button-starter Starter
-          button.color-swatch-button-legendary Legendary
-          button.color-swatch-button-eeveelution Eeveelution
+        .color-swatch-button-group-rule
+          button.color-swatch-button-rule-or OR
+          button.color-swatch-button-rule-and AND
+        .color-swatch-button-group-category
+          button.color-swatch-button-category-starter Starter
+          button.color-swatch-button-category-legendary Legendary
+          button.color-swatch-button-category-mythical Mythical
+          button.color-swatch-button-category-eeveelution Eeveelution
+          button.color-swatch-button-category-baby Baby
         .color-swatch-button-group-type
           each type in pokemonTypes
-            - const buttonClass = `color-swatch-button-${type}`
+            - const buttonClass = `color-swatch-button-type-${type}`
             button(class={[buttonClass]: true}) #{type}
         .color-swatch-button-group-gen
           each gen in [1, 2, 3, 4, 5, 6, 7, 8]
-            - const buttonClass = `color-swatch-button-gen${gen}`
+            - const buttonClass = `color-swatch-button-gen-gen${gen}`
             button(class={[buttonClass]: true})= `Gen${gen}`
         .color-swatch-button-group-pokemon
           button.color-swatch-button-pokemon Show all Pokemon
@@ -188,7 +193,7 @@ html
         +color-swatch('Dragonair #148', 'rgba(227, 231, 231)', 'rgba(118, 171, 219)', 'rgba(82, 114, 153)', 'rgba(99, 138, 173)', 'rgba(162, 200, 232)', 'dragon  pokemon gen1')
         +color-swatch('Dragonite #149', 'rgba(233, 175, 106)', 'rgba(244, 233, 202)', 'rgba(174, 135, 96)', 'rgba(231, 206, 164)', 'rgba(48, 163, 150)', 'dragon flying  pokemon gen1')
         +color-swatch('Mewtwo #150', 'rgba(218, 213, 222)', 'rgba(171, 156, 174)', 'rgba(149, 120, 147)', 'rgba(107, 94, 106)', 'rgba(193, 186, 194)', 'psychic legendary pokemon gen1')
-        +color-swatch('Mew #151', 'rgba(241, 203, 211)', 'rgba(202, 162, 174)', 'rgba(178, 144, 154)', 'rgba(107, 85, 94)', 'rgba(138, 107, 118)', 'psychic legendary pokemon gen1')
+        +color-swatch('Mew #151', 'rgba(241, 203, 211)', 'rgba(202, 162, 174)', 'rgba(178, 144, 154)', 'rgba(107, 85, 94)', 'rgba(138, 107, 118)', 'psychic mythical pokemon gen1')
         +color-swatch('Chikorita #152', 'rgba(210, 226, 173)', 'rgba(165, 208, 145)', 'rgba(152, 162, 123)', 'rgba(110, 160, 103)', 'rgba(165, 173, 134)', 'grass starter pokemon gen2')
         +color-swatch('Bayleef #153', 'rgba(236, 222, 156)', 'rgba(164, 161, 116)', 'rgba(101, 107, 77)', 'rgba(198, 179, 133)', 'rgba(180, 171, 132)', 'grass starter pokemon gen2')
         +color-swatch('Meganium #154', 'rgba(184, 214, 141)', 'rgba(145, 162, 109)', 'rgba(235, 113, 135)', 'rgba(244, 235, 235)', 'rgba(204, 222, 163)', 'grass starter pokemon gen2')
@@ -209,10 +214,10 @@ html
         +color-swatch('Crobat #169', 'rgba(93, 151, 161)', 'rgba(135, 113, 165)', 'rgba(83, 87, 111)', 'rgba(115, 99, 138)', 'rgba(158, 139, 177)', 'poison flying  pokemon gen2')
         +color-swatch('Chinchou #170', 'rgba(95, 112, 166)', 'rgba(239, 233, 224)', 'rgba(241, 223, 141)', 'rgba(115, 140, 199)', 'rgba(150, 168, 212)', 'water electric  pokemon gen2')
         +color-swatch('Lanturn #171', 'rgba(115, 130, 173)', 'rgba(110, 124, 165)', 'rgba(145, 165, 211)', 'rgba(228, 226, 228)', 'rgba(245, 223, 145)', 'water electric  pokemon gen2')
-        +color-swatch('Pichu #172', 'rgba(243, 231, 151)', 'rgba(19, 22, 24)', 'rgba(252, 242, 197)', 'rgba(12, 57, 84)', 'rgba(168, 159, 110)', 'electric  pokemon gen2')
-        +color-swatch('Cleffa #173', 'rgba(248, 212, 201)', 'rgba(215, 180, 176)', 'rgba(109, 88, 71)', 'rgba(96, 76, 60)', 'rgba(139, 114, 94)', 'fairy  pokemon gen2')
-        +color-swatch('Igglybuff #174', 'rgba(250, 224, 224)', 'rgba(207, 175, 179)', 'rgba(178, 156, 161)', 'rgba(23, 20, 20)', 'rgba(101, 87, 88)', 'normal fairy  pokemon gen2')
-        +color-swatch('Togepi #175', 'rgba(236, 229, 210)', 'rgba(236, 222, 181)', 'rgba(100, 97, 89)', 'rgba(168, 164, 150)', 'rgba(37, 35, 32)', 'fairy  pokemon gen2')
+        +color-swatch('Pichu #172', 'rgba(243, 231, 151)', 'rgba(19, 22, 24)', 'rgba(252, 242, 197)', 'rgba(12, 57, 84)', 'rgba(168, 159, 110)', 'electric baby pokemon gen2')
+        +color-swatch('Cleffa #173', 'rgba(248, 212, 201)', 'rgba(215, 180, 176)', 'rgba(109, 88, 71)', 'rgba(96, 76, 60)', 'rgba(139, 114, 94)', 'fairy baby pokemon gen2')
+        +color-swatch('Igglybuff #174', 'rgba(250, 224, 224)', 'rgba(207, 175, 179)', 'rgba(178, 156, 161)', 'rgba(23, 20, 20)', 'rgba(101, 87, 88)', 'normal fairy baby pokemon gen2')
+        +color-swatch('Togepi #175', 'rgba(236, 229, 210)', 'rgba(236, 222, 181)', 'rgba(100, 97, 89)', 'rgba(168, 164, 150)', 'rgba(37, 35, 32)', 'fairy baby pokemon gen2')
         +color-swatch('Togetic #176', 'rgba(231, 241, 226)', 'rgba(163, 170, 160)', 'rgba(186, 194, 180)', 'rgba(101, 101, 96)', 'rgba(193, 201, 187)', 'fairy flying  pokemon gen2')
         +color-swatch('Natu #177', 'rgba(140, 200, 91)', 'rgba(39, 36, 33)', 'rgba(180, 73, 88)', 'rgba(118, 161, 71)', 'rgba(242, 209, 95)', 'psychic flying  pokemon gen2')
         +color-swatch('Xatu #178', 'rgba(220, 230, 234)', 'rgba(140, 200, 91)', 'rgba(224, 88, 106)', 'rgba(48, 46, 46)', 'rgba(118, 160, 71)', 'psychic flying  pokemon gen2')
@@ -273,11 +278,11 @@ html
         +color-swatch('Porygon2 #233', 'rgba(223, 93, 115)', 'rgba(104, 179, 213)', 'rgba(86, 139, 178)', 'rgba(228, 123, 142)', 'rgba(161, 75, 98)', 'normal  pokemon gen2')
         +color-swatch('Stantler #234', 'rgba(187, 149, 130)', 'rgba(178, 144, 121)', 'rgba(200, 166, 146)', 'rgba(143, 115, 100)', 'rgba(106, 88, 81)', 'normal  pokemon gen2')
         +color-swatch('Smeargle #235', 'rgba(236, 224, 207)', 'rgba(177, 167, 155)', 'rgba(197, 181, 168)', 'rgba(105, 98, 90)', 'rgba(136, 160, 95)', 'normal  pokemon gen2')
-        +color-swatch('Tyrogue #236', 'rgba(209, 185, 205)', 'rgba(172, 154, 167)', 'rgba(224, 202, 218)', 'rgba(105, 81, 55)', 'rgba(104, 91, 90)', 'fighting  pokemon gen2')
-        +color-swatch('Hitmontop #237', 'rgba(150, 121, 107)', 'rgba(198, 160, 140)', 'rgba(164, 132, 116)', 'rgba(81, 118, 157)', 'rgba(104, 90, 84)', 'fighting  pokemon gen2')
-        +color-swatch('Smoochum #238', 'rgba(240, 226, 159)', 'rgba(175, 106, 133)', 'rgba(215, 156, 159)', 'rgba(170, 160, 105)', 'rgba(206, 122, 156)', 'ice psychic  pokemon gen2')
-        +color-swatch('Elekid #239', 'rgba(249, 225, 145)', 'rgba(208, 183, 108)', 'rgba(169, 150, 96)', 'rgba(232, 205, 121)', 'rgba(52, 51, 50)', 'electric  pokemon gen2')
-        +color-swatch('Magby #240', 'rgba(218, 117, 121)', 'rgba(171, 96, 99)', 'rgba(230, 145, 146)', 'rgba(236, 224, 148)', 'rgba(111, 84, 78)', 'fire  pokemon gen2')
+        +color-swatch('Tyrogue #236', 'rgba(209, 185, 205)', 'rgba(172, 154, 167)', 'rgba(224, 202, 218)', 'rgba(105, 81, 55)', 'rgba(104, 91, 90)', 'fighting baby pokemon gen2')
+        +color-swatch('Hitmontop #237', 'rgba(150, 121, 107)', 'rgba(198, 160, 140)', 'rgba(164, 132, 116)', 'rgba(81, 118, 157)', 'rgba(104, 90, 84)', 'fighting baby pokemon gen2')
+        +color-swatch('Smoochum #238', 'rgba(240, 226, 159)', 'rgba(175, 106, 133)', 'rgba(215, 156, 159)', 'rgba(170, 160, 105)', 'rgba(206, 122, 156)', 'ice psychic baby pokemon gen2')
+        +color-swatch('Elekid #239', 'rgba(249, 225, 145)', 'rgba(208, 183, 108)', 'rgba(169, 150, 96)', 'rgba(232, 205, 121)', 'rgba(52, 51, 50)', 'electric baby pokemon gen2')
+        +color-swatch('Magby #240', 'rgba(218, 117, 121)', 'rgba(171, 96, 99)', 'rgba(230, 145, 146)', 'rgba(236, 224, 148)', 'rgba(111, 84, 78)', 'fire baby pokemon gen2')
         +color-swatch('Miltank #241', 'rgba(214, 164, 167)', 'rgba(234, 226, 174)', 'rgba(249, 187, 194)', 'rgba(181, 162, 142)', 'rgba(248, 207, 205)', 'normal  pokemon gen2')
         +color-swatch('Blissey #242', 'rgba(242, 164, 186)', 'rgba(162, 163, 173)', 'rgba(233, 233, 218)', 'rgba(248, 176, 195)', 'rgba(100, 91, 97)', 'normal  pokemon gen2')
         +color-swatch('Raikou #243', 'rgba(244, 206, 92)', 'rgba(169, 152, 165)', 'rgba(95, 91, 92)', 'rgba(229, 226, 227)', 'rgba(178, 152, 74)', 'electric legendary pokemon gen2')
@@ -288,7 +293,7 @@ html
         +color-swatch('Tyranitar #248', 'rgba(161, 178, 146)', 'rgba(105, 112, 94)', 'rgba(121, 131, 107)', 'rgba(137, 150, 119)', 'rgba(178, 196, 156)', 'rock dark  pokemon gen2')
         +color-swatch('Lugia #249', 'rgba(235, 234, 244)', 'rgba(162, 177, 206)', 'rgba(149, 155, 171)', 'rgba(93, 107, 146)', 'rgba(52, 57, 98)', 'psychic flying legendary pokemon gen2')
         +color-swatch('Ho-oh #250', 'rgba(232, 75, 50)', 'rgba(171, 56, 46)', 'rgba(225, 154, 57)', 'rgba(226, 235, 219)', 'rgba(234, 104, 85)', 'fire flying legendary pokemon gen2')
-        +color-swatch('Celebi #251', 'rgba(223, 237, 206)', 'rgba(162, 174, 157)', 'rgba(93, 102, 88)', 'rgba(177, 206, 159)', 'rgba(46, 46, 45)', 'psychic grass legendary pokemon gen2')
+        +color-swatch('Celebi #251', 'rgba(223, 237, 206)', 'rgba(162, 174, 157)', 'rgba(93, 102, 88)', 'rgba(177, 206, 159)', 'rgba(46, 46, 45)', 'psychic grass mythical pokemon gen2')
         +color-swatch('Treecko #252', 'rgba(206, 227, 137)', 'rgba(152, 189, 138)', 'rgba(165, 207, 85)', 'rgba(142, 177, 86)', 'rgba(235, 149, 152)', 'grass starter pokemon gen3')
         +color-swatch('Grovyle #253', 'rgba(110, 153, 110)', 'rgba(157, 206, 157)', 'rgba(82, 109, 81)', 'rgba(238, 148, 149)', 'rgba(137, 175, 134)', 'grass starter pokemon gen3')
         +color-swatch('Sceptile #254', 'rgba(150, 205, 156)', 'rgba(106, 153, 109)', 'rgba(85, 108, 85)', 'rgba(18, 24, 18)', 'rgba(140, 178, 143)', 'grass starter pokemon gen3')
@@ -335,7 +340,7 @@ html
         +color-swatch('Exploud #295', 'rgba(169, 173, 208)', 'rgba(144, 142, 180)', 'rgba(242, 216, 141)', 'rgba(228, 218, 227)', 'rgba(112, 114, 151)', 'normal  pokemon gen3')
         +color-swatch('Makuhita #296', 'rgba(248, 224, 152)', 'rgba(93, 92, 98)', 'rgba(253, 238, 195)', 'rgba(133, 136, 149)', 'rgba(119, 122, 136)', 'fighting  pokemon gen3')
         +color-swatch('Hariyama #297', 'rgba(180, 139, 118)', 'rgba(249, 219, 122)', 'rgba(234, 167, 135)', 'rgba(236, 230, 222)', 'rgba(80, 81, 107)', 'fighting  pokemon gen3')
-        +color-swatch('Azurill #298', 'rgba(89, 172, 223)', 'rgba(21, 23, 31)', 'rgba(49, 151, 210)', 'rgba(153, 203, 235)', 'rgba(38, 78, 104)', 'normal fairy  pokemon gen3')
+        +color-swatch('Azurill #298', 'rgba(89, 172, 223)', 'rgba(21, 23, 31)', 'rgba(49, 151, 210)', 'rgba(153, 203, 235)', 'rgba(38, 78, 104)', 'normal fairy baby pokemon gen3')
         +color-swatch('Nosepass #299', 'rgba(98, 109, 161)', 'rgba(144, 154, 198)', 'rgba(11, 10, 15)', 'rgba(118, 133, 181)', 'rgba(49, 55, 81)', 'rock  pokemon gen3')
         +color-swatch('Skitty #300', 'rgba(241, 177, 174)', 'rgba(251, 229, 207)', 'rgba(242, 223, 183)', 'rgba(150, 111, 108)', 'rgba(109, 88, 85)', 'normal  pokemon gen3')
         +color-swatch('Delcatty #301', 'rgba(245, 222, 169)', 'rgba(181, 133, 176)', 'rgba(197, 159, 195)', 'rgba(161, 110, 152)', 'rgba(32, 26, 27)', 'normal  pokemon gen3')
@@ -397,7 +402,7 @@ html
         +color-swatch('Tropius #357', 'rgba(101, 159, 108)', 'rgba(177, 160, 138)', 'rgba(87, 108, 82)', 'rgba(166, 143, 122)', 'rgba(201, 183, 168)', 'grass flying  pokemon gen3')
         +color-swatch('Chimecho #358', 'rgba(218, 233, 244)', 'rgba(189, 115, 131)', 'rgba(195, 116, 131)', 'rgba(229, 208, 154)', 'rgba(156, 162, 167)', 'psychic  pokemon gen3')
         +color-swatch('Absol #359', 'rgba(236, 238, 243)', 'rgba(94, 109, 143)', 'rgba(152, 156, 167)', 'rgba(82, 91, 112)', 'rgba(119, 135, 170)', 'dark  pokemon gen3')
-        +color-swatch('Wynaut #360', 'rgba(124, 199, 206)', 'rgba(155, 210, 218)', 'rgba(99, 170, 176)', 'rgba(44, 46, 46)', 'rgba(164, 81, 82)', 'psychic  pokemon gen3')
+        +color-swatch('Wynaut #360', 'rgba(124, 199, 206)', 'rgba(155, 210, 218)', 'rgba(99, 170, 176)', 'rgba(44, 46, 46)', 'rgba(164, 81, 82)', 'psychic baby pokemon gen3')
         +color-swatch('Snorunt #361', 'rgba(242, 217, 155)', 'rgba(48, 48, 48)', 'rgba(86, 85, 82)', 'rgba(233, 149, 104)', 'rgba(246, 246, 242)', 'ice  pokemon gen3')
         +color-swatch('Glalie #362', 'rgba(215, 219, 232)', 'rgba(13, 13, 13)', 'rgba(93, 93, 95)', 'rgba(153, 155, 163)', 'rgba(163, 184, 203)', 'ice  pokemon gen3')
         +color-swatch('Spheal #363', 'rgba(247, 240, 224)', 'rgba(147, 172, 214)', 'rgba(104, 142, 200)', 'rgba(235, 221, 185)', 'rgba(80, 118, 173)', 'ice water  pokemon gen3')
@@ -422,8 +427,8 @@ html
         +color-swatch('Kyogre #382', 'rgba(25, 95, 165)', 'rgba(218, 227, 239)', 'rgba(91, 73, 109)', 'rgba(162, 56, 74)', 'rgba(35, 71, 119)', 'water legendary pokemon gen3')
         +color-swatch('Groudon #383', 'rgba(166, 44, 32)', 'rgba(202, 49, 35)', 'rgba(107, 93, 87)', 'rgba(26, 16, 23)', 'rgba(220, 218, 227)', 'ground legendary pokemon gen3')
         +color-swatch('Rayquaza #384', 'rgba(49, 106, 75)', 'rgba(58, 134, 91)', 'rgba(86, 143, 111)', 'rgba(136, 181, 157)', 'rgba(112, 167, 139)', 'dragon flying legendary pokemon gen3')
-        +color-swatch('Jirachi #385', 'rgba(248, 232, 154)', 'rgba(241, 240, 229)', 'rgba(89, 189, 198)', 'rgba(97, 194, 202)', 'rgba(101, 105, 93)', 'steel psychic legendary pokemon gen3')
-        +color-swatch('Deoxys-normal #386', 'rgba(224, 140, 98)', 'rgba(168, 103, 75)', 'rgba(98, 155, 167)', 'rgba(92, 96, 97)', 'rgba(232, 177, 148)', 'psychic legendary pokemon gen3')
+        +color-swatch('Jirachi #385', 'rgba(248, 232, 154)', 'rgba(241, 240, 229)', 'rgba(89, 189, 198)', 'rgba(97, 194, 202)', 'rgba(101, 105, 93)', 'steel psychic mythical pokemon gen3')
+        +color-swatch('Deoxys-normal #386', 'rgba(224, 140, 98)', 'rgba(168, 103, 75)', 'rgba(98, 155, 167)', 'rgba(92, 96, 97)', 'rgba(232, 177, 148)', 'psychic mythical pokemon gen3')
         +color-swatch('Turtwig #387', 'rgba(188, 210, 149)', 'rgba(162, 157, 106)', 'rgba(206, 221, 164)', 'rgba(91, 164, 100)', 'rgba(41, 40, 37)', 'grass starter pokemon gen4')
         +color-swatch('Grotle #388', 'rgba(151, 166, 104)', 'rgba(98, 150, 106)', 'rgba(77, 113, 78)', 'rgba(206, 178, 82)', 'rgba(100, 91, 47)', 'grass starter pokemon gen4')
         +color-swatch('Torterra #389', 'rgba(87, 147, 92)', 'rgba(87, 96, 58)', 'rgba(88, 106, 80)', 'rgba(202, 201, 200)', 'rgba(141, 109, 74)', 'grass ground starter pokemon gen4')
@@ -443,7 +448,7 @@ html
         +color-swatch('Shinx #403', 'rgba(124, 182, 201)', 'rgba(107, 149, 162)', 'rgba(41, 42, 42)', 'rgba(75, 88, 92)', 'rgba(228, 175, 53)', 'electric  pokemon gen4')
         +color-swatch('Luxio #404', 'rgba(76, 79, 80)', 'rgba(49, 48, 48)', 'rgba(109, 151, 166)', 'rgba(129, 188, 204)', 'rgba(125, 182, 199)', 'electric  pokemon gen4')
         +color-swatch('Luxray #405', 'rgba(75, 76, 77)', 'rgba(50, 49, 50)', 'rgba(109, 151, 165)', 'rgba(16, 17, 15)', 'rgba(27, 28, 27)', 'electric  pokemon gen4')
-        +color-swatch('Budew #406', 'rgba(139, 200, 104)', 'rgba(102, 147, 77)', 'rgba(227, 231, 118)', 'rgba(219, 231, 164)', 'rgba(183, 217, 153)', 'grass poison  pokemon gen4')
+        +color-swatch('Budew #406', 'rgba(139, 200, 104)', 'rgba(102, 147, 77)', 'rgba(227, 231, 118)', 'rgba(219, 231, 164)', 'rgba(183, 217, 153)', 'grass poison baby pokemon gen4')
         +color-swatch('Roserade #407', 'rgba(230, 236, 246)', 'rgba(94, 151, 116)', 'rgba(83, 107, 92)', 'rgba(166, 214, 178)', 'rgba(112, 168, 136)', 'grass poison  pokemon gen4')
         +color-swatch('Cranidos #408', 'rgba(108, 158, 198)', 'rgba(96, 101, 110)', 'rgba(140, 148, 158)', 'rgba(99, 123, 147)', 'rgba(105, 134, 161)', 'rock  pokemon gen4')
         +color-swatch('Rampardos #409', 'rgba(94, 94, 96)', 'rgba(75, 115, 154)', 'rgba(85, 143, 195)', 'rgba(160, 159, 159)', 'rgba(49, 49, 50)', 'rock  pokemon gen4')
@@ -470,21 +475,21 @@ html
         +color-swatch('Honchkrow #430', 'rgba(46, 76, 102)', 'rgba(35, 53, 73)', 'rgba(237, 234, 230)', 'rgba(142, 46, 53)', 'rgba(40, 43, 51)', 'dark flying  pokemon gen4')
         +color-swatch('Glameow #431', 'rgba(144, 154, 169)', 'rgba(89, 94, 106)', 'rgba(227, 228, 228)', 'rgba(111, 122, 139)', 'rgba(119, 131, 149)', 'normal  pokemon gen4')
         +color-swatch('Purugly #432', 'rgba(157, 152, 174)', 'rgba(240, 237, 234)', 'rgba(92, 96, 107)', 'rgba(119, 122, 135)', 'rgba(124, 130, 143)', 'normal  pokemon gen4')
-        +color-swatch('Chingling #433', 'rgba(234, 209, 94)', 'rgba(226, 102, 96)', 'rgba(215, 226, 239)', 'rgba(184, 162, 70)', 'rgba(174, 79, 74)', 'psychic  pokemon gen4')
+        +color-swatch('Chingling #433', 'rgba(234, 209, 94)', 'rgba(226, 102, 96)', 'rgba(215, 226, 239)', 'rgba(184, 162, 70)', 'rgba(174, 79, 74)', 'psychic baby pokemon gen4')
         +color-swatch('Stunky #434', 'rgba(98, 76, 106)', 'rgba(246, 231, 200)', 'rgba(76, 57, 79)', 'rgba(228, 213, 183)', 'rgba(49, 37, 53)', 'poison dark  pokemon gen4')
         +color-swatch('Skuntank #435', 'rgba(98, 76, 107)', 'rgba(248, 232, 200)', 'rgba(75, 57, 81)', 'rgba(163, 156, 144)', 'rgba(221, 207, 178)', 'poison dark  pokemon gen4')
         +color-swatch('Bronzor #436', 'rgba(77, 151, 168)', 'rgba(50, 91, 106)', 'rgba(58, 109, 129)', 'rgba(71, 123, 138)', 'rgba(26, 40, 44)', 'steel psychic  pokemon gen4')
         +color-swatch('Bronzong #437', 'rgba(102, 158, 156)', 'rgba(77, 112, 113)', 'rgba(40, 43, 45)', 'rgba(117, 194, 186)', 'rgba(145, 206, 195)', 'steel psychic  pokemon gen4')
-        +color-swatch('Bonsly #438', 'rgba(106, 102, 84)', 'rgba(176, 142, 105)', 'rgba(83, 163, 115)', 'rgba(142, 115, 90)', 'rgba(171, 204, 146)', 'rock  pokemon gen4')
-        +color-swatch('Mime-jr #439', 'rgba(244, 218, 229)', 'rgba(90, 91, 103)', 'rgba(165, 146, 152)', 'rgba(113, 130, 159)', 'rgba(103, 116, 140)', 'psychic fairy  pokemon gen4')
-        +color-swatch('Happiny #440', 'rgba(244, 218, 219)', 'rgba(207, 164, 171)', 'rgba(179, 152, 156)', 'rgba(109, 90, 93)', 'rgba(148, 110, 116)', 'normal  pokemon gen4')
+        +color-swatch('Bonsly #438', 'rgba(106, 102, 84)', 'rgba(176, 142, 105)', 'rgba(83, 163, 115)', 'rgba(142, 115, 90)', 'rgba(171, 204, 146)', 'rock baby pokemon gen4')
+        +color-swatch('Mime-jr #439', 'rgba(244, 218, 229)', 'rgba(90, 91, 103)', 'rgba(165, 146, 152)', 'rgba(113, 130, 159)', 'rgba(103, 116, 140)', 'psychic fairy baby pokemon gen4')
+        +color-swatch('Happiny #440', 'rgba(244, 218, 219)', 'rgba(207, 164, 171)', 'rgba(179, 152, 156)', 'rgba(109, 90, 93)', 'rgba(148, 110, 116)', 'normal baby pokemon gen4')
         +color-swatch('Chatot #441', 'rgba(81, 83, 82)', 'rgba(46, 46, 45)', 'rgba(166, 172, 174)', 'rgba(217, 228, 231)', 'rgba(61, 138, 186)', 'normal flying  pokemon gen4')
         +color-swatch('Spiritomb #442', 'rgba(214, 160, 180)', 'rgba(160, 113, 135)', 'rgba(162, 211, 146)', 'rgba(195, 125, 166)', 'rgba(116, 196, 98)', 'ghost dark  pokemon gen4')
         +color-swatch('Gible #443', 'rgba(108, 144, 161)', 'rgba(97, 121, 133)', 'rgba(84, 94, 103)', 'rgba(36, 39, 41)', 'rgba(169, 77, 54)', 'dragon ground  pokemon gen4')
         +color-swatch('Gabite #444', 'rgba(103, 114, 155)', 'rgba(78, 83, 110)', 'rgba(143, 144, 172)', 'rgba(216, 105, 83)', 'rgba(119, 132, 174)', 'dragon ground  pokemon gen4')
         +color-swatch('Garchomp #445', 'rgba(99, 109, 144)', 'rgba(80, 83, 107)', 'rgba(54, 57, 79)', 'rgba(215, 103, 81)', 'rgba(61, 64, 90)', 'dragon ground  pokemon gen4')
-        +color-swatch('Munchlax #446', 'rgba(96, 136, 159)', 'rgba(78, 97, 105)', 'rgba(137, 152, 159)', 'rgba(242, 220, 184)', 'rgba(84, 119, 138)', 'normal  pokemon gen4')
-        +color-swatch('Riolu #447', 'rgba(80, 86, 91)', 'rgba(106, 155, 175)', 'rgba(43, 45, 46)', 'rgba(116, 172, 194)', 'rgba(81, 114, 133)', 'fighting  pokemon gen4')
+        +color-swatch('Munchlax #446', 'rgba(96, 136, 159)', 'rgba(78, 97, 105)', 'rgba(137, 152, 159)', 'rgba(242, 220, 184)', 'rgba(84, 119, 138)', 'normal baby pokemon gen4')
+        +color-swatch('Riolu #447', 'rgba(80, 86, 91)', 'rgba(106, 155, 175)', 'rgba(43, 45, 46)', 'rgba(116, 172, 194)', 'rgba(81, 114, 133)', 'fighting baby pokemon gen4')
         +color-swatch('Lucario #448', 'rgba(92, 95, 96)', 'rgba(108, 156, 175)', 'rgba(143, 173, 181)', 'rgba(51, 52, 54)', 'rgba(236, 216, 162)', 'fighting steel  pokemon gen4')
         +color-swatch('Hippopotas #449', 'rgba(171, 148, 97)', 'rgba(112, 80, 44)', 'rgba(208, 187, 120)', 'rgba(215, 194, 124)', 'rgba(222, 203, 144)', 'ground  pokemon gen4')
         +color-swatch('Hippowdon #450', 'rgba(92, 87, 87)', 'rgba(171, 153, 95)', 'rgba(223, 210, 150)', 'rgba(144, 107, 95)', 'rgba(162, 157, 144)', 'ground  pokemon gen4')
@@ -495,7 +500,7 @@ html
         +color-swatch('Carnivine #455', 'rgba(145, 171, 111)', 'rgba(182, 209, 139)', 'rgba(109, 154, 86)', 'rgba(202, 219, 160)', 'rgba(96, 112, 74)', 'grass  pokemon gen4')
         +color-swatch('Finneon #456', 'rgba(167, 219, 217)', 'rgba(56, 71, 78)', 'rgba(205, 113, 152)', 'rgba(84, 97, 101)', 'rgba(145, 174, 175)', 'water  pokemon gen4')
         +color-swatch('Lumineon #457', 'rgba(170, 220, 217)', 'rgba(57, 72, 79)', 'rgba(79, 94, 99)', 'rgba(42, 51, 56)', 'rgba(137, 175, 173)', 'water  pokemon gen4')
-        +color-swatch('Mantyke #458', 'rgba(165, 210, 226)', 'rgba(42, 113, 178)', 'rgba(134, 165, 180)', 'rgba(95, 154, 200)', 'rgba(114, 149, 167)', 'water flying  pokemon gen4')
+        +color-swatch('Mantyke #458', 'rgba(165, 210, 226)', 'rgba(42, 113, 178)', 'rgba(134, 165, 180)', 'rgba(95, 154, 200)', 'rgba(114, 149, 167)', 'water flying baby pokemon gen4')
         +color-swatch('Snover #459', 'rgba(244, 245, 246)', 'rgba(103, 109, 103)', 'rgba(162, 153, 142)', 'rgba(109, 153, 146)', 'rgba(92, 128, 125)', 'grass ice  pokemon gen4')
         +color-swatch('Abomasnow #460', 'rgba(246, 245, 247)', 'rgba(88, 110, 111)', 'rgba(109, 152, 144)', 'rgba(185, 182, 197)', 'rgba(150, 161, 164)', 'grass ice  pokemon gen4')
         +color-swatch('Weavile #461', 'rgba(208, 99, 105)', 'rgba(89, 89, 105)', 'rgba(110, 117, 151)', 'rgba(146, 146, 163)', 'rgba(159, 57, 79)', 'dark ice  pokemon gen4')
@@ -526,12 +531,12 @@ html
         +color-swatch('Regigigas #486', 'rgba(227, 229, 234)', 'rgba(169, 170, 174)', 'rgba(201, 172, 96)', 'rgba(39, 39, 39)', 'rgba(90, 102, 92)', 'normal legendary pokemon gen4')
         +color-swatch('Giratina-altered #487', 'rgba(84, 83, 83)', 'rgba(51, 51, 53)', 'rgba(162, 162, 164)', 'rgba(159, 91, 81)', 'rgba(169, 147, 84)', 'ghost dragon legendary pokemon gen4')
         +color-swatch('Cresselia #488', 'rgba(214, 161, 176)', 'rgba(238, 214, 212)', 'rgba(152, 180, 209)', 'rgba(245, 207, 148)', 'rgba(200, 165, 118)', 'psychic legendary pokemon gen4')
-        +color-swatch('Phione #489', 'rgba(97, 155, 168)', 'rgba(107, 186, 204)', 'rgba(138, 201, 210)', 'rgba(114, 194, 211)', 'rgba(51, 84, 95)', 'water legendary pokemon gen4')
-        +color-swatch('Manaphy #490', 'rgba(107, 197, 216)', 'rgba(81, 147, 161)', 'rgba(89, 188, 211)', 'rgba(144, 208, 217)', 'rgba(52, 96, 106)', 'water legendary pokemon gen4')
-        +color-swatch('Darkrai #491', 'rgba(50, 49, 50)', 'rgba(82, 80, 82)', 'rgba(222, 222, 219)', 'rgba(171, 169, 169)', 'rgba(18, 18, 17)', 'dark legendary pokemon gen4')
-        +color-swatch('Shaymin-land #492', 'rgba(218, 151, 152)', 'rgba(144, 179, 106)', 'rgba(157, 194, 111)', 'rgba(91, 155, 81)', 'rgba(229, 231, 237)', 'grass legendary pokemon gen4')
-        +color-swatch('Arceus #493', 'rgba(220, 219, 218)', 'rgba(155, 161, 173)', 'rgba(90, 92, 93)', 'rgba(95, 87, 46)', 'rgba(164, 148, 83)', 'normal legendary pokemon gen4')
-        +color-swatch('Victini #494', 'rgba(248, 229, 171)', 'rgba(176, 157, 118)', 'rgba(239, 120, 76)', 'rgba(245, 151, 110)', 'rgba(110, 96, 83)', 'psychic fire legendary pokemon gen5')
+        +color-swatch('Phione #489', 'rgba(97, 155, 168)', 'rgba(107, 186, 204)', 'rgba(138, 201, 210)', 'rgba(114, 194, 211)', 'rgba(51, 84, 95)', 'water mythical pokemon gen4')
+        +color-swatch('Manaphy #490', 'rgba(107, 197, 216)', 'rgba(81, 147, 161)', 'rgba(89, 188, 211)', 'rgba(144, 208, 217)', 'rgba(52, 96, 106)', 'water mythical pokemon gen4')
+        +color-swatch('Darkrai #491', 'rgba(50, 49, 50)', 'rgba(82, 80, 82)', 'rgba(222, 222, 219)', 'rgba(171, 169, 169)', 'rgba(18, 18, 17)', 'dark mythical pokemon gen4')
+        +color-swatch('Shaymin-land #492', 'rgba(218, 151, 152)', 'rgba(144, 179, 106)', 'rgba(157, 194, 111)', 'rgba(91, 155, 81)', 'rgba(229, 231, 237)', 'grass mythical pokemon gen4')
+        +color-swatch('Arceus #493', 'rgba(220, 219, 218)', 'rgba(155, 161, 173)', 'rgba(90, 92, 93)', 'rgba(95, 87, 46)', 'rgba(164, 148, 83)', 'normal mythical pokemon gen4')
+        +color-swatch('Victini #494', 'rgba(248, 229, 171)', 'rgba(176, 157, 118)', 'rgba(239, 120, 76)', 'rgba(245, 151, 110)', 'rgba(110, 96, 83)', 'psychic fire mythical pokemon gen5')
         +color-swatch('Snivy #495', 'rgba(88, 155, 88)', 'rgba(233, 234, 181)', 'rgba(46, 114, 105)', 'rgba(173, 168, 132)', 'rgba(246, 215, 85)', 'grass starter pokemon gen5')
         +color-swatch('Servine #496', 'rgba(90, 168, 92)', 'rgba(235, 237, 207)', 'rgba(170, 167, 144)', 'rgba(241, 211, 77)', 'rgba(145, 197, 134)', 'grass starter pokemon gen5')
         +color-swatch('Serperior #497', 'rgba(6, 141, 82)', 'rgba(148, 205, 171)', 'rgba(98, 148, 113)', 'rgba(16, 112, 69)', 'rgba(238, 208, 79)', 'grass starter pokemon gen5')
@@ -684,9 +689,9 @@ html
         +color-swatch('Zekrom #644', 'rgba(38, 38, 41)', 'rgba(72, 79, 81)', 'rgba(59, 72, 73)', 'rgba(23, 25, 27)', 'rgba(31, 32, 34)', 'dragon electric legendary pokemon gen5')
         +color-swatch('Landorus-incarnate #645', 'rgba(103, 90, 82)', 'rgba(223, 227, 236)', 'rgba(158, 102, 83)', 'rgba(113, 119, 142)', 'rgba(239, 149, 98)', 'ground flying legendary pokemon gen5')
         +color-swatch('Kyurem #646', 'rgba(92, 96, 103)', 'rgba(151, 159, 160)', 'rgba(205, 227, 231)', 'rgba(181, 202, 206)', 'rgba(122, 132, 135)', 'dragon ice legendary pokemon gen5')
-        +color-swatch('Keldeo-ordinary #647', 'rgba(143, 211, 244)', 'rgba(247, 241, 176)', 'rgba(231, 95, 58)', 'rgba(72, 93, 145)', 'rgba(221, 159, 113)', 'water fighting legendary pokemon gen5')
-        +color-swatch('Meloetta-aria #648', 'rgba(238, 243, 229)', 'rgba(155, 151, 144)', 'rgba(216, 230, 184)', 'rgba(98, 97, 95)', 'rgba(135, 124, 124)', 'normal psychic legendary pokemon gen5')
-        +color-swatch('Genesect #649', 'rgba(109, 78, 117)', 'rgba(149, 111, 167)', 'rgba(166, 137, 168)', 'rgba(78, 56, 91)', 'rgba(121, 86, 132)', 'bug steel legendary pokemon gen5')
+        +color-swatch('Keldeo-ordinary #647', 'rgba(143, 211, 244)', 'rgba(247, 241, 176)', 'rgba(231, 95, 58)', 'rgba(72, 93, 145)', 'rgba(221, 159, 113)', 'water fighting mythical pokemon gen5')
+        +color-swatch('Meloetta-aria #648', 'rgba(238, 243, 229)', 'rgba(155, 151, 144)', 'rgba(216, 230, 184)', 'rgba(98, 97, 95)', 'rgba(135, 124, 124)', 'normal psychic mythical pokemon gen5')
+        +color-swatch('Genesect #649', 'rgba(109, 78, 117)', 'rgba(149, 111, 167)', 'rgba(166, 137, 168)', 'rgba(78, 56, 91)', 'rgba(121, 86, 132)', 'bug steel mythical pokemon gen5')
         +color-swatch('Chespin #650', 'rgba(222, 167, 118)', 'rgba(169, 208, 100)', 'rgba(155, 112, 89)', 'rgba(101, 83, 51)', 'rgba(207, 227, 156)', 'grass starter pokemon gen6')
         +color-swatch('Quilladin #651', 'rgba(100, 76, 44)', 'rgba(76, 50, 30)', 'rgba(164, 204, 91)', 'rgba(220, 161, 111)', 'rgba(118, 146, 68)', 'grass starter pokemon gen6')
         +color-swatch('Chesnaught #652', 'rgba(243, 242, 222)', 'rgba(179, 173, 150)', 'rgba(147, 144, 114)', 'rgba(136, 199, 116)', 'rgba(215, 211, 176)', 'grass fighting starter pokemon gen6')
@@ -756,9 +761,9 @@ html
         +color-swatch('Xerneas #716', 'rgba(84, 82, 81)', 'rgba(220, 213, 166)', 'rgba(39, 50, 42)', 'rgba(93, 112, 171)', 'rgba(154, 152, 110)', 'fairy legendary pokemon gen6')
         +color-swatch('Yveltal #717', 'rgba(91, 84, 93)', 'rgba(46, 47, 55)', 'rgba(235, 106, 92)', 'rgba(86, 49, 49)', 'rgba(226, 54, 36)', 'dark flying legendary pokemon gen6')
         +color-swatch('Zygarde #718', 'rgba(88, 81, 72)', 'rgba(75, 73, 58)', 'rgba(54, 49, 45)', 'rgba(177, 203, 102)', 'rgba(144, 185, 61)', 'dragon ground legendary pokemon gen6')
-        +color-swatch('Diancie #719', 'rgba(245, 235, 241)', 'rgba(157, 155, 171)', 'rgba(213, 185, 198)', 'rgba(203, 150, 170)', 'rgba(96, 90, 104)', 'rock fairy legendary pokemon gen6')
-        +color-swatch('Hoopa #720', 'rgba(147, 141, 156)', 'rgba(206, 206, 229)', 'rgba(169, 52, 98)', 'rgba(236, 229, 110)', 'rgba(99, 93, 99)', 'psychic ghost legendary pokemon gen6')
-        +color-swatch('Volcanion #721', 'rgba(104, 31, 36)', 'rgba(145, 50, 57)', 'rgba(172, 96, 90)', 'rgba(43, 29, 34)', 'rgba(47, 82, 90)', 'fire water legendary pokemon gen6')
+        +color-swatch('Diancie #719', 'rgba(245, 235, 241)', 'rgba(157, 155, 171)', 'rgba(213, 185, 198)', 'rgba(203, 150, 170)', 'rgba(96, 90, 104)', 'rock fairy mythical pokemon gen6')
+        +color-swatch('Hoopa #720', 'rgba(147, 141, 156)', 'rgba(206, 206, 229)', 'rgba(169, 52, 98)', 'rgba(236, 229, 110)', 'rgba(99, 93, 99)', 'psychic ghost mythical pokemon gen6')
+        +color-swatch('Volcanion #721', 'rgba(104, 31, 36)', 'rgba(145, 50, 57)', 'rgba(172, 96, 90)', 'rgba(43, 29, 34)', 'rgba(47, 82, 90)', 'fire water mythical pokemon gen6')
         +color-swatch('Rowlet #722', 'rgba(247, 245, 242)', 'rgba(237, 201, 172)', 'rgba(181, 177, 172)', 'rgba(36, 172, 137)', 'rgba(206, 148, 118)', 'grass flying starter pokemon gen7')
         +color-swatch('Dartrix #723', 'rgba(247, 247, 246)', 'rgba(151, 196, 104)', 'rgba(108, 81, 54)', 'rgba(165, 164, 160)', 'rgba(193, 192, 187)', 'grass flying starter pokemon gen7')
         +color-swatch('Decidueye #724', 'rgba(158, 107, 77)', 'rgba(3, 163, 118)', 'rgba(240, 238, 219)', 'rgba(217, 163, 114)', 'rgba(19, 100, 78)', 'grass ghost starter pokemon gen7')
@@ -838,15 +843,15 @@ html
         +color-swatch('Kartana #798', 'rgba(240, 241, 239)', 'rgba(167, 169, 166)', 'rgba(186, 192, 188)', 'rgba(246, 206, 56)', 'rgba(225, 101, 35)', 'grass steel legendary pokemon gen7')
         +color-swatch('Guzzlord #799', 'rgba(73, 78, 84)', 'rgba(33, 37, 45)', 'rgba(245, 211, 97)', 'rgba(65, 147, 175)', 'rgba(52, 73, 86)', 'dark dragon legendary pokemon gen7')
         +color-swatch('Necrozma #800', 'rgba(40, 39, 40)', 'rgba(87, 83, 82)', 'rgba(239, 237, 222)', 'rgba(246, 243, 240)', 'rgba(105, 101, 99)', 'psychic legendary pokemon gen7')
-        +color-swatch('Magearna #801', 'rgba(224, 220, 218)', 'rgba(161, 154, 150)', 'rgba(107, 99, 96)', 'rgba(148, 139, 107)', 'rgba(136, 120, 108)', 'steel fairy legendary pokemon gen7')
-        +color-swatch('Marshadow #802', 'rgba(99, 102, 113)', 'rgba(42, 45, 46)', 'rgba(10, 9, 10)', 'rgba(121, 122, 131)', 'rgba(30, 30, 32)', 'fighting ghost legendary pokemon gen7')
+        +color-swatch('Magearna #801', 'rgba(224, 220, 218)', 'rgba(161, 154, 150)', 'rgba(107, 99, 96)', 'rgba(148, 139, 107)', 'rgba(136, 120, 108)', 'steel fairy mythical pokemon gen7')
+        +color-swatch('Marshadow #802', 'rgba(99, 102, 113)', 'rgba(42, 45, 46)', 'rgba(10, 9, 10)', 'rgba(121, 122, 131)', 'rgba(30, 30, 32)', 'fighting ghost mythical pokemon gen7')
         +color-swatch('Poipole #803', 'rgba(96, 71, 152)', 'rgba(55, 42, 89)', 'rgba(212, 88, 155)', 'rgba(85, 61, 143)', 'rgba(80, 47, 99)', 'poison legendary pokemon gen7')
         +color-swatch('Naganadel #804', 'rgba(49, 43, 106)', 'rgba(112, 94, 155)', 'rgba(74, 46, 137)', 'rgba(221, 209, 231)', 'rgba(83, 46, 108)', 'poison dragon legendary pokemon gen7')
         +color-swatch('Stakataka #805', 'rgba(92, 93, 88)', 'rgba(43, 44, 42)', 'rgba(138, 139, 134)', 'rgba(125, 128, 124)', 'rgba(69, 67, 61)', 'rock steel legendary pokemon gen7')
         +color-swatch('Blacephalon #806', 'rgba(247, 246, 247)', 'rgba(169, 165, 161)', 'rgba(197, 182, 180)', 'rgba(204, 96, 161)', 'rgba(14, 13, 13)', 'fire ghost legendary pokemon gen7')
-        +color-swatch('Zeraora #807', 'rgba(239, 220, 95)', 'rgba(168, 149, 70)', 'rgba(86, 88, 88)', 'rgba(103, 89, 49)', 'rgba(208, 181, 59)', 'electric legendary pokemon gen7')
-        +color-swatch('Meltan #808', 'rgba(228, 228, 226)', 'rgba(245, 219, 149)', 'rgba(241, 203, 102)', 'rgba(157, 157, 157)', 'rgba(93, 88, 84)', 'steel legendary pokemon gen7')
-        +color-swatch('Melmetal #809', 'rgba(143, 142, 140)', 'rgba(93, 89, 88)', 'rgba(228, 227, 223)', 'rgba(53, 50, 52)', 'rgba(159, 137, 85)', 'steel legendary pokemon gen7')
+        +color-swatch('Zeraora #807', 'rgba(239, 220, 95)', 'rgba(168, 149, 70)', 'rgba(86, 88, 88)', 'rgba(103, 89, 49)', 'rgba(208, 181, 59)', 'electric mythical pokemon gen7')
+        +color-swatch('Meltan #808', 'rgba(228, 228, 226)', 'rgba(245, 219, 149)', 'rgba(241, 203, 102)', 'rgba(157, 157, 157)', 'rgba(93, 88, 84)', 'steel mythical pokemon gen7')
+        +color-swatch('Melmetal #809', 'rgba(143, 142, 140)', 'rgba(93, 89, 88)', 'rgba(228, 227, 223)', 'rgba(53, 50, 52)', 'rgba(159, 137, 85)', 'steel mythical pokemon gen7')
         +color-swatch('Grookey #810', 'rgba(161, 198, 104)', 'rgba(109, 138, 73)', 'rgba(147, 90, 44)', 'rgba(233, 225, 122)', 'rgba(217, 122, 57)', 'grass starter pokemon gen8')
         +color-swatch('Thwackey #811', 'rgba(220, 223, 111)', 'rgba(161, 161, 89)', 'rgba(72, 54, 46)', 'rgba(96, 81, 56)', 'rgba(230, 228, 172)', 'grass starter pokemon gen8')
         +color-swatch('Rillaboom #812', 'rgba(97, 82, 77)', 'rgba(51, 42, 42)', 'rgba(0, 135, 73)', 'rgba(168, 153, 137)', 'rgba(31, 92, 55)', 'grass starter pokemon gen8')
@@ -885,7 +890,7 @@ html
         +color-swatch('Cramorant #845', 'rgba(1, 97, 163)', 'rgba(138, 139, 168)', 'rgba(21, 71, 110)', 'rgba(188, 192, 213)', 'rgba(17, 56, 89)', 'flying water  pokemon gen8')
         +color-swatch('Arrokuda #846', 'rgba(108, 93, 80)', 'rgba(233, 228, 172)', 'rgba(241, 239, 224)', 'rgba(158, 147, 113)', 'rgba(171, 162, 141)', 'water  pokemon gen8')
         +color-swatch('Barraskewda #847', 'rgba(112, 97, 82)', 'rgba(152, 142, 102)', 'rgba(160, 73, 53)', 'rgba(220, 95, 58)', 'rgba(142, 116, 87)', 'water  pokemon gen8')
-        +color-swatch('Toxel #848', 'rgba(151, 105, 165)', 'rgba(113, 79, 138)', 'rgba(181, 158, 198)', 'rgba(232, 227, 227)', 'rgba(173, 138, 178)', 'electric poison  pokemon gen8')
+        +color-swatch('Toxel #848', 'rgba(151, 105, 165)', 'rgba(113, 79, 138)', 'rgba(181, 158, 198)', 'rgba(232, 227, 227)', 'rgba(173, 138, 178)', 'electric poison baby pokemon gen8')
         +color-swatch('Toxtricity-amped #849', 'rgba(109, 89, 134)', 'rgba(156, 203, 216)', 'rgba(93, 75, 115)', 'rgba(75, 57, 102)', 'rgba(147, 117, 162)', 'electric poison  pokemon gen8')
         +color-swatch('Sizzlipede #850', 'rgba(93, 48, 50)', 'rgba(212, 79, 72)', 'rgba(150, 50, 58)', 'rgba(164, 56, 66)', 'rgba(164, 83, 54)', 'fire bug  pokemon gen8')
         +color-swatch('Centiskorch #851', 'rgba(83, 45, 48)', 'rgba(237, 165, 39)', 'rgba(240, 204, 47)', 'rgba(153, 48, 55)', 'rgba(226, 101, 76)', 'fire bug  pokemon gen8')
@@ -930,7 +935,7 @@ html
         +color-swatch('Eternatus #890', 'rgba(37, 41, 89)', 'rgba(25, 18, 47)', 'rgba(86, 41, 87)', 'rgba(230, 81, 95)', 'rgba(244, 13, 35)', 'poison dragon legendary pokemon gen8')
         +color-swatch('Kubfu #891', 'rgba(170, 166, 160)', 'rgba(242, 243, 242)', 'rgba(103, 103, 100)', 'rgba(38, 36, 38)', 'rgba(195, 187, 180)', 'fighting legendary pokemon gen8')
         +color-swatch('Urshifu-single-strike #892', 'rgba(92, 91, 96)', 'rgba(44, 44, 39)', 'rgba(236, 235, 235)', 'rgba(162, 166, 163)', 'rgba(25, 25, 24)', 'fighting dark legendary pokemon gen8')
-        +color-swatch('Zarude #893', 'rgba(41, 41, 41)', 'rgba(83, 81, 81)', 'rgba(73, 107, 57)', 'rgba(52, 93, 53)', 'rgba(30, 32, 30)', 'dark grass legendary pokemon gen8')
+        +color-swatch('Zarude #893', 'rgba(41, 41, 41)', 'rgba(83, 81, 81)', 'rgba(73, 107, 57)', 'rgba(52, 93, 53)', 'rgba(30, 32, 30)', 'dark grass mythical pokemon gen8')
 
 
   script(src='assets/js/swatches.js')
