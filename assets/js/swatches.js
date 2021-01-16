@@ -1,3 +1,5 @@
+trackPageView("Swatches");
+
 const colorSwatchButtons = document.querySelectorAll(".csb");
 const activeColor = `rgb(104, 134, 227)`;
 let activeRule = `or`;
